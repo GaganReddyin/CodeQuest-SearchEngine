@@ -1,0 +1,27 @@
+G. Xor-MST
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a complete undirected graph with n vertices. A number ai is assigned to each vertex, and the weight of an edge between vertices i and j is equal to ai xor aj.
+Calculate the weight of the minimum spanning tree in this graph.
+Input
+The first line contains n (1 ≤ n ≤ 200000) — the number of vertices in the graph.
+The second line contains n integers a1, a2, ..., an (0 ≤ ai < 230) — the numbers assigned to the vertices.
+Output
+Print one number — the weight of the minimum spanning tree in the graph.
+Examples
+input
+Copy
+5
+1 2 3 4 5
+output
+Copy
+8
+input
+Copy
+4
+1 2 3 4
+output
+Copy
+8

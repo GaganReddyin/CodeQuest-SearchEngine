@@ -1,0 +1,113 @@
+Interactive Tree
+Problem
+This is an interactive task
+You are given a tree consisting of
+N nodes, numbered from
+1 to
+N. The edges are numbered from
+1 to
+N−1. Chef selected an arbitrary node and marked it, but the marked node is unknown to you.
+Chef gave you an interactor to play with, using which you can ask queries about the given tree.
+In each query, you can print a subset (possibly empty) of edges. Those edges will be deleted from the tree. Now, the interactor will return the maximum distance of the marked node from any other node in the forest to which it belongs currently.
+After each query, the tree will be reset to its original state, i.e, deleted edges will be recovered.
+You have to find the marked node.
+For each test case, you can use at most 11 queries.
+Interaction
+Begin the interaction by reading a single integer
+T denoting the number of test cases. The description of interaction for
+T test cases follows.
+For each test case, first read a single integer
+N, denoting the number of nodes in the tree.
+N−1 lines follow. The
+i
+th
+of these lines contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between the nodes
+u
+i
+and
+v
+i
+.
+Now you may begin asking queries. To ask a query about a set
+S of
+k edges with indices
+x
+1
+,x
+2
+,…,x
+k
+(
+0≤k≤N−1,1≤x
+i
+≤N−1, all
+x
+i
+are distinct), output:
+? k x
+1
+ x
+2
+ … x
+k
+You will then receive an integer
+d.
+d is the maximum distance of the marked node from any other node in forest to which it belongs currently.
+When you have found the marked node (say
+v), print the answer in the following format:
+! v
+Outputting the answer doesn't count towards the limit of
+11 queries.
+Do not output extra space and newline, or it may cause Wrong Answer verdict.
+If at any time you make an invalid query or exceed the query limit, the interaction is terminated and you will receive a Wrong Answer verdict.
+If you receive a Judge Error verdict, that means your program actually has one of many possible errors: an Idleness Limit Exceeded error (it is waiting for input that does not exist), a Runtime error, you asked an invalid query, or possibly some other error.
+Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤10
+3
+3≤N≤10
+3
+The input graph is a tree
+The sum of
+N across all test cases does not exceed
+2⋅10
+4
+.
+At most
+11 queries can be made for each test case.
+Sample Interaction
+Grader                You
+1
+3
+1 2
+2 3
+                      ? 1 1
+1
+                      ? 1 2
+1
+                      ! 2
+Explanation
+Test case
+1: The marked node is
+2. The interaction proceeds as follows:
+The first query deletes the edge with index
+1, i.e, edge
+(1,2). The interactor returns
+1 since
+dist(2,3)=1 is the maximum distance from
+2 in this forest.
+The second query deletes the edge with index
+2, i.e, edge
+(2,3). The interactor returns
+1 since
+dist(2,1)=1 is the maximum distance from
+2 in this forest.
+Finally, we answer with
+2, after which interaction ends.
+Note: The above queries are just to demonstrate the interaction. They may or may not be sufficient to deduce the final answer.

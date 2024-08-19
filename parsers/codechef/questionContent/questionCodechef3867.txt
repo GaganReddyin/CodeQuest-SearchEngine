@@ -1,0 +1,106 @@
+Tsetso Subarrays
+Problem
+Tsetso likes to play with arrays.
+An Array
+A[1,2,…,N] is said to be a Tsetso array if
+A[1]⋅A[N]=max(A
+1
+,A
+2
+,…,A
+N−1
+,A
+N
+).
+Bedo, his teammate, likes to solve problems so much, so Tsetso gave him an array
+A of
+N
+distinct integers
+A
+1
+,A
+2
+,…,A
+N
+and
+Q queries of the form
+[L,R] and asked him to count the number of Tsetso subarrays in the given range.
+A subarray
+[L,R] is to be a Tsetso subarray if
+A[L]⋅A[R]=max(A
+L
+,A
+L+1
+,....,A
+R−1
+,A
+R
+).
+Bedo spent a lot of time trying to solve it, but he couldn't, can you?
+Note: A sequence
+a is a subarray of a sequence
+b if
+a can be obtained from
+b by deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.
+Input Format
+First-line will contain
+T, the number of test cases. Then the test cases follow.
+The first line of input contains two space-separated integers
+N and
+Q, the number of elements in the array, and the number of queries.
+The second line contains
+N
+distinct space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Then
+Q lines follow each line containing two space-separated integers
+L,R.
+Output Format
+For each query, output in a single line the number of Tsetso subarrays in the given range
+[L,R].
+Constraints
+1≤T≤10
+2≤N≤10
+5
+1≤A
+i
+≤10
+18
+1≤Q≤5⋅10
+5
+1≤L≤R≤N
+Sum of
+N over all testcases is atmost
+10
+5
+.
+Sum of
+Q over all testcases is atmost
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+7 3
+3 6 24 4 1 8 2
+1 7
+2 5
+4 7
+7
+4
+4
+Explanation:
+All the valid subarrays are
+[1,6],[2,4],[3,5],[4,5],[5,5],[5,6],[4,7].
+One of the invalid subarrays is
+[1,3],3⋅24
+
+=max(3,6,24)

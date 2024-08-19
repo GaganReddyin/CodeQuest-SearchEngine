@@ -1,0 +1,143 @@
+Ada Bishop 2
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Ada is training for her match against Magnus Carlsen in the World Chess Championship 2020.
+Ada took a standard chessboard with
+8 rows (numbered
+1 through
+8) and
+8 columns (numbered
+1 through
+8); let's denote a cell in row
+r and column
+c by
+(r,c). Then, Ada placed a bishop in a cell
+(r
+0
+,c
+0
+); it is guaranteed that this cell is black. Ada's goal is to move the bishop in such a way that it visits all black cells.
+Remember that a bishop is a piece that moves diagonally ― formally, the bishop may move from a cell
+(r
+s
+,c
+s
+) to a cell
+(r
+t
+,c
+t
+) if and only if either
+r
+s
++c
+s
+=r
+t
++c
+t
+or
+r
+s
+−c
+s
+=r
+t
+−c
+t
+. In such a move, the bishop visits all cells between
+(r
+s
+,c
+s
+) and
+(r
+t
+,c
+t
+) on this diagonal (inclusive).
+Help Ada find a sequence of at most
+64 moves for the bishop such that when the bishop follows this route, it visits all black cells on the chessboard. Note that each cell may be visited multiple times and it is not necessary to return to the starting point.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+r
+0
+and
+c
+0
+.
+Output
+For each test case:
+First, print a line containing a single integer
+M (
+M≤64) ― the number of moves in the bishop's route.
+Then, print
+M lines. For each
+i (
+1≤i≤M), the
+i-th of these lines should contain two space-separated integers
+r
+i
+and
+c
+i
+, where the route followed by the bishop is
+(r
+0
+,c
+0
+)→(r
+1
+,c
+1
+)→(r
+2
+,c
+2
+)→…→(r
+M
+,c
+M
+).
+Constraints
+1≤T≤32
+1≤r
+0
+,c
+0
+≤8
+(r
+0
+,c
+0
+) is a black cell, i.e.
+r
+0
++c
+0
+is even
+Subtasks
+Subtask #1 (99 points):
+r
+0
+=c
+0
+=1
+Subtask #2 (1 points): original constraints
+Sample 1:
+Input
+Output
+1
+5 3
+31
+3 5
+4 6
+7 3
+5 1
+1 5
+[26 more lines follow]
+Explanation:
+Example case 1: The first five moves of the bishop are shown in the figure below.

@@ -1,0 +1,83 @@
+Distances
+Problem
+###Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+Arya and Aryan live in a country called Nadaca. Nadaca consists of
+N cities numbered
+1 through
+N, which are connected by some bidirectional roads. Each road has a positive (not necessarily integer) length. Arya lives in city
+1 and Aryan lives in city
+N.
+Arya claims that for each city
+v, the shortest path from city
+1 to city
+v has length
+a
+v
+. Aryan does not disagree, but claims that for each city
+v, the shortest path from city
+N to city
+v has length
+b
+v
+. You are the wisest person they know, so they asked you to tell them if it is possible for their claims to be true, i.e. if a road network which fully satisfies their claims exists. Help them!
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+The third line contains
+N space-separated integers
+b
+1
+,b
+2
+,…,b
+N
+.
+Output
+For each test case, print a single line containing the string "Yes" if Arya's and Aryan's claims can be true or "No" otherwise.
+Constraints
+1≤T≤10
+3
+2≤N≤10
+6
+0≤a
+i
+,b
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (50 points): the sum of
+N over all test cases does not exceed
+10
+3
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+3
+0 1 1
+1 1 0
+3
+0 1 5
+5 1 0
+Yes
+No

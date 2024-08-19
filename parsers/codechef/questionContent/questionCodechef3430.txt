@@ -1,0 +1,205 @@
+Disgust Minimization
+Problem
+You have a matrix
+A with dimensions
+N×N. Let the disgust of the matrix be defined as:
+∑
+i=1
+N
+∑
+j=1
+N
+(A
+(i,j)
+−A
+(j,i)
+)
+2
+You also have
+M tuples with you. Each tuple consists of
+3 integers
+X
+i
+,Y
+i
+, ans
+Z
+i
+(1≤i≤M). In one operation, you can:
+Choose an element
+(p,q)
+(1≤p,q≤N) such that the value of the element
+A
+(p,q)
+=X
+i
+.
+Change the value of the chosen element to
+Y
+i
+.
+The cost of applying the above operation is
+Z
+i
+. Note that
+(1≤i≤M) and thus, the operation might correspond to any one of the given tuples.
+Find the minimum value of
+(totalCost
++ disgust
+) after applying the given operation any (possibly zero) number of times.
+Input Format
+The first line contains one integer
+T - the number of test cases. Then
+T test cases follow.
+The first line of each test case consists of two integer
+N and
+M, the row size and the number of tuples.
+N lines follow, each consisting of
+N space-separated integers - the matrix
+A.
+M lines follow, each consisting of
+3 space-separated integers - each tuple
+X
+i
+,Y
+i
+,Z
+i
+.
+Output Format
+For each test case, output the minimum value of
+(totalCost
++ disgust
+) after applying the given operation any (possibly zero) number of times.
+Constraints
+1≤T≤100
+1≤N≤500
+1≤M≤10
+5
+1≤A
+(i,j)
+≤N for
+(1≤i,j≤N)
+1≤X
+i
+,Y
+i
+≤N for
+(1≤i≤M)
+1≤Z
+i
+≤10
+9
+for
+(1≤i≤M)
+It is guaranteed that the sum of
+N over all test cases does not exceed
+500.
+It is guaranteed that the sum of
+M over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+3 2
+3 3 1
+1 2 1
+3 2 1
+3 2 2
+1 2 3
+2 1
+2 2
+2 2
+1 1 3
+3 2
+3 3 1
+1 2 1
+3 2 1
+2 1 1
+3 2 1
+10
+0
+5
+Explanation:
+Test case
+1: We convert
+A
+(1,2)
+to
+2 for a cost of
+2 and we convert
+A
+(3,1)
+to
+2 for a cost of
+2. The total cost is
+2+2=4 and disgust is
+(3−3)
+2
++(2−1)
+2
++(1−2)
+2
++(1−2)
+2
++(2−2)
+2
++(1−2)
+2
++(2−1)
+2
++(2−1)
+2
++(1−1)
+2
+=6. Thus, the value
+(totalCost
++ disgust
+) for the new matrix is
+4+6=10. We can show that this is the minimum value possible.
+Test case
+2: We do not need to perform any operations. Thus, the value:
+(totalCost
++ disgust
+)=0+(2−2)
+2
++(2−2)
+2
++(2−2)
+2
++(2−2)
+2
+=0.
+Test case
+3: We perform the following operations:
+We choose
+A
+(1,2)
+and change it to
+2 for a cost of
+1. Then, we further change it to
+1 for a cost of
+1.
+We choose
+A
+(3,1)
+and change it to
+2 for a cost of
+1. Then, we further change it to
+1 for a cost of
+1.
+We choose
+A
+(3,2)
+and change it to
+1 for a cost of
+1. The new disgust is
+0 while the cost is
+5. The value
+(totalCost
++ disgust
+) for the new matrix is
+5. We can verify that this is the minimum possible value.

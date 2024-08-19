@@ -1,0 +1,194 @@
+D. Ceil Divisions
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+where
+a
+i
+=i
+.
+In one step, you can choose two indices
+x
+and
+y
+(
+x≠y
+) and set
+a
+x
+=⌈
+a
+x
+a
+y
+⌉
+(ceiling function).
+Your goal is to make array
+a
+consist of
+n−1
+ones and
+1
+two in no more than
+n+5
+steps. Note that you don't have to minimize the number of steps.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first and only line of each test case contains the single integer
+n
+(
+3≤n≤2⋅
+10
+5
+) — the length of array
+a
+.
+It's guaranteed that the sum of
+n
+over test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print the sequence of operations that will make
+a
+as
+n−1
+ones and
+1
+two in the following format: firstly, print one integer
+m
+(
+m≤n+5
+) — the number of operations; next print
+m
+pairs of integers
+x
+and
+y
+(
+1≤x,y≤n
+;
+x≠y
+) (
+x
+may be greater or less than
+y
+) — the indices of the corresponding operation.
+It can be proven that for the given constraints it's always possible to find a correct sequence of operations.
+Example
+input
+Copy
+2
+3
+4
+output
+Copy
+2
+3 2
+3 2
+3
+3 4
+4 2
+4 2
+Note
+In the first test case, you have array
+a=[1,2,3]
+. For example, you can do the following:
+choose
+3
+,
+2
+:
+a
+3
+=⌈
+a
+3
+a
+2
+⌉=2
+and array
+a=[1,2,2]
+;
+choose
+3
+,
+2
+:
+a
+3
+=⌈
+2
+2
+⌉=1
+and array
+a=[1,2,1]
+.
+You've got array with
+2
+ones and
+1
+two in
+2
+steps.
+In the second test case,
+a=[1,2,3,4]
+. For example, you can do the following:
+choose
+3
+,
+4
+:
+a
+3
+=⌈
+3
+4
+⌉=1
+and array
+a=[1,2,1,4]
+;
+choose
+4
+,
+2
+:
+a
+4
+=⌈
+4
+2
+⌉=2
+and array
+a=[1,2,1,2]
+;
+choose
+4
+,
+2
+:
+a
+4
+=⌈
+2
+2
+⌉=1
+and array
+a=[1,2,1,1]
+.

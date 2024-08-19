@@ -1,0 +1,1 @@
+Prime in a binary string

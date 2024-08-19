@@ -1,0 +1,167 @@
+B. Maximum Product
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Find the maximum possible value of
+a
+i
+a
+j
+a
+k
+a
+l
+a
+t
+among all five indices
+(i,j,k,l,t)
+(
+i<j<k<l<t
+).
+Input
+The input consists of multiple test cases. The first line contains an integer
+t
+(
+1≤t≤2⋅
+10
+4
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+5≤n≤
+10
+5
+) — the size of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−3×
+10
+3
+≤
+a
+i
+≤3×
+10
+3
+) — given array.
+It's guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer — the answer to the problem.
+Example
+input
+Copy
+4
+5
+-1 -2 -3 -4 -5
+6
+-1 -2 -3 1 2 -1
+6
+-1 0 0 0 -1 -1
+6
+-9 -7 -5 -3 -2 1
+output
+Copy
+-120
+12
+0
+945
+Note
+In the first test case, choosing
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+5
+is a best choice:
+(−1)⋅(−2)⋅(−3)⋅(−4)⋅(−5)=−120
+.
+In the second test case, choosing
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+5
+,
+a
+6
+is a best choice:
+(−1)⋅(−2)⋅(−3)⋅2⋅(−1)=12
+.
+In the third test case, choosing
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+5
+is a best choice:
+(−1)⋅0⋅0⋅0⋅(−1)=0
+.
+In the fourth test case, choosing
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+6
+is a best choice:
+(−9)⋅(−7)⋅(−5)⋅(−3)⋅1=945
+.

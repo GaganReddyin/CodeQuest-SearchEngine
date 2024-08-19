@@ -1,0 +1,122 @@
+F. October 18, 2017
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+It was October 18, 2017. Shohag, a melancholic soul, made a strong determination that he will pursue Competitive Programming seriously, by heart, because he found it fascinating. Fast forward to 4 years, he is happy that he took this road. He is now creating a contest on Codeforces. He found an astounding problem but has no idea how to solve this. Help him to solve the final problem of the round.
+You are given three integers
+n
+,
+k
+and
+x
+. Find the number, modulo
+998244353
+, of integer sequences
+a
+1
+,
+a
+2
+,…,
+a
+n
+such that the following conditions are satisfied:
+0≤
+a
+i
+<
+2
+k
+for each integer
+i
+from
+1
+to
+n
+.
+There is no non-empty subsequence in
+a
+such that the bitwise XOR of the elements of the subsequence is
+x
+.
+A sequence
+b
+is a subsequence of a sequence
+c
+if
+b
+can be obtained from
+c
+by deletion of several (possibly, zero or all) elements.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+)  — the number of test cases.
+The first and only line of each test case contains three space-separated integers
+n
+,
+k
+, and
+x
+(
+1≤n≤
+10
+9
+,
+0≤k≤
+10
+7
+,
+0≤x<
+2
+min(20,k)
+).
+It is guaranteed that the sum of
+k
+over all test cases does not exceed
+5⋅
+10
+7
+.
+Output
+For each test case, print a single integer — the answer to the problem.
+Example
+input
+Copy
+6
+2 2 0
+2 1 1
+3 2 3
+69 69 69
+2017 10 18
+5 7 0
+output
+Copy
+6
+1
+15
+699496932
+892852568
+713939942
+Note
+In the first test case, the valid sequences are
+[1,2]
+,
+[1,3]
+,
+[2,1]
+,
+[2,3]
+,
+[3,1]
+and
+[3,2]
+.
+In the second test case, the only valid sequence is
+[0,0]
+.

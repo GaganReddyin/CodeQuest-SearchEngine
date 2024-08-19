@@ -1,0 +1,138 @@
+Game of Length
+Problem
+Alice and Bob are given an array of length of
+N. They decide to play a game with it.
+Initially, Alice randomly shuffles the array, and then Bob takes
+N turns. In each turn, Bob chooses an index which he has not already chosen and then Alice reveals the number on that index to Bob. If this number is either the first number to be chosen or strictly larger than previously chosen numbers by Bob then he takes it and adds to his array else he throws it.
+You only know the initial unshuffled array and want to know the expected length of Bob's array at the end of the game.
+The final expected length can be represented as a fraction of the form
+Q
+P
+. You are required to print
+P⋅Q
+−1
+mod998244353.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains two lines of input.
+The first line contains
+N the length of the array.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,...,A
+N
+representing the initial array.
+Output Format
+For each testcase, output in a single line the expected length of Bob's array at the end of the game modulo
+998244353.
+Constraints
+1≤T≤2⋅10
+4
+1≤N≤5⋅10
+5
+1≤A
+i
+≤5⋅10
+5
+Sum of
+N does not exceeds
+5⋅10
+5
+over all testcases.
+Sample 1:
+Input
+Output
+4
+2
+1 2
+3
+1 2 3
+3
+1 1 1
+3
+2 3 2
+499122178
+831870296
+1
+665496237
+Explanation:
+Test case
+1: The possible final arrays will be
+[2,1] or
+[1,2]. If Bob chooses indexes in the order
+[2,1] then he will end up with
+2 elements in the first case and
+1 element in the second case, if he chooses indexes in the order
+[1,2] then he will end up with
+1 element in the first case and
+2 elements in the case. Hence his probability ending up with
+2 elements is
+2
+1
+and with
+1 element is also
+2
+1
+. Hence the final answer will be calculated as
+2⋅
+2
+1
++1⋅
+2
+1
+which is equal to
+2
+3
+.
+Test case
+2: The probability of Bob ending up with all three elements is
+6
+1
+, the probability that he ends up with any two elements is
+2
+1
+and the probability that he ends with only a single element is
+3
+1
+. Hence the final answer is calculated as
+3⋅
+6
+1
++2⋅
+2
+1
++1⋅
+3
+1
+which is equal to
+6
+11
+.
+Test case
+3: No matter what index Bob chooses initially he will only end up with
+1 element in his final array. Hence the final expected value is equal to
+1.
+Test case
+4: The probability of Bob ending up with all three elements is
+0, the probability that he ends up with any two elements is
+3
+2
+and the probability that he ends with only a single element is
+3
+1
+. Hence the final answer is calculated as
+2⋅
+3
+2
++1⋅
+3
+1
+which is equal to
+3
+5
+.

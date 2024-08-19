@@ -1,0 +1,119 @@
+E. Excitation of Atoms
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mr. Chanek is currently participating in a science fair that is popular in town. He finds an exciting puzzle in the fair and wants to solve it.
+There are
+N
+atoms numbered from
+1
+to
+N
+. These atoms are especially quirky. Initially, each atom is in normal state. Each atom can be in an excited. Exciting atom
+i
+requires
+D
+i
+energy. When atom
+i
+is excited, it will give
+A
+i
+energy. You can excite any number of atoms (including zero).
+These atoms also form a peculiar one-way bond. For each
+i
+,
+(1≤i<N)
+, if atom
+i
+is excited, atom
+E
+i
+will also be excited at no cost. Initially,
+E
+i
+=
+i+1
+. Note that atom
+N
+cannot form a bond to any atom.
+Mr. Chanek must change exactly
+K
+bonds. Exactly
+K
+times, Mr. Chanek chooses an atom
+i
+,
+(1≤i<N)
+and changes
+E
+i
+to a different value other than
+i
+and the current
+E
+i
+. Note that an atom's bond can remain unchanged or changed more than once. Help Mr. Chanek determine the maximum energy that he can achieve!
+note: You must first change exactly
+K
+bonds before you can start exciting atoms.
+Input
+The first line contains two integers
+N
+K
+(4≤N≤
+10
+5
+,0≤K<N)
+, the number of atoms, and the number of bonds that must be changed.
+The second line contains
+N
+integers
+A
+i
+(1≤
+A
+i
+≤
+10
+6
+)
+, which denotes the energy given by atom
+i
+when on excited state.
+The third line contains
+N
+integers
+D
+i
+(1≤
+D
+i
+≤
+10
+6
+)
+, which denotes the energy needed to excite atom
+i
+.
+Output
+A line with an integer that denotes the maximum number of energy that Mr. Chanek can get.
+Example
+input
+Copy
+6 1
+5 6 7 8 10 2
+3 5 6 7 1 10
+output
+Copy
+35
+Note
+An optimal solution to change
+E
+5
+to 1 and then excite atom 5 with energy 1. It will cause atoms 1, 2, 3, 4, 5 be excited. The total energy gained by Mr. Chanek is (5 + 6 + 7 + 8 + 10) - 1 = 35.
+Another possible way is to change
+E
+3
+to 1 and then exciting atom 3 (which will excite atom 1, 2, 3) and exciting atom 4 (which will excite atom 4, 5, 6). The total energy gained by Mr. Chanek is (5 + 6 + 7 + 8 + 10 + 2) - (6 + 7) = 25 which is not optimal.

@@ -1,0 +1,13 @@
+H. Cross-Language Program
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Write a program that is compilable simultaneously in two languages: C++ (GCC 10.3.1, -std=c++11) and FreePascal (3.0.4).
+It absolutely does not matter what this program does, the only requirement is that it successfully compiles into an executable file in both C++ and Pascal.
+Please use the language Text to submit your solution. Just choose Text as a language in the submission form.
+The submitted file can't exceed 2048 bytes. It should compile fast on both compilers.
+Input
+No input.
+Output
+No output.

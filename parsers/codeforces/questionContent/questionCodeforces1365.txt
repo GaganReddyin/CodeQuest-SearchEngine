@@ -1,0 +1,131 @@
+F. RBS
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+A bracket sequence is a string containing only characters "(" and ")". A regular bracket sequence (or, shortly, an RBS) is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters "1" and "+" between the original characters of the sequence. For example:
+bracket sequences "()()" and "(())" are regular (the resulting expressions are: "(1)+(1)" and "((1+1)+1)");
+bracket sequences ")(", "(" and ")" are not.
+Let's denote the concatenation of two strings
+x
+and
+y
+as
+x+y
+. For example, "()()" 
++
+ ")(" 
+=
+ "()())(".
+You are given
+n
+bracket sequences
+s
+1
+,
+s
+2
+,…,
+s
+n
+. You can rearrange them in any order (you can rearrange only the strings themselves, but not the characters in them).
+Your task is to rearrange the strings in such a way that the string
+s
+1
++
+s
+2
++⋯+
+s
+n
+has as many non-empty prefixes that are RBS as possible.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤20
+).
+Then
+n
+lines follow, the
+i
+-th of them contains
+s
+i
+ — a bracket sequence (a string consisting of characters "(" and/or ")". All sequences
+s
+i
+are non-empty, their total length does not exceed
+4⋅
+10
+5
+.
+Output
+Print one integer — the maximum number of non-empty prefixes that are RBS for the string
+s
+1
++
+s
+2
++⋯+
+s
+n
+, if the strings
+s
+1
+,
+s
+2
+,…,
+s
+n
+can be rearranged arbitrarily.
+Examples
+input
+Copy
+2
+(
+)
+output
+Copy
+1
+input
+Copy
+4
+()()())
+(
+(
+)
+output
+Copy
+4
+input
+Copy
+1
+(())
+output
+Copy
+1
+input
+Copy
+1
+)(()
+output
+Copy
+0
+Note
+In the first example, you can concatenate the strings as follows: "(" 
++
+ ")" 
+=
+ "()", the resulting string will have one prefix, that is an RBS: "()".
+In the second example, you can concatenate the strings as follows: "(" 
++
+ ")" 
++
+ "()()())" 
++
+ "(" 
+=
+ "()()()())(", the resulting string will have four prefixes that are RBS: "()", "()()", "()()()", "()()()()".
+The third and the fourth examples contain only one string each, so the order is fixed.

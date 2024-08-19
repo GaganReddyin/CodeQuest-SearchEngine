@@ -1,0 +1,23 @@
+B1. Distinguish zero state and W state
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given N qubits (2 ≤ N ≤ 8) which are guaranteed to be in one of the two states:
+state, or
+state.
+Your task is to perform necessary operations and measurements to figure out which state it was and to return 0 if it was state or 1 if it was W state. The state of the qubits after the operations does not matter.
+You have to implement an operation which takes an array of N qubits as an input and returns an integer.
+Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Solve (qs : Qubit[]) : Int
+    {
+        body
+        {
+            // your code here
+        }
+    }
+}

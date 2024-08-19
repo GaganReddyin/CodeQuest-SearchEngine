@@ -1,0 +1,105 @@
+Beautiful Subsequence
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+An array
+A consisting of
+N integers is called
+K-beautiful if it holds the following property: The number of adjacent indices with different values is at most
+K. More formally, there are at most
+K indices
+i (
+1≤i<N) such that
+A
+i
+
+=A
+i+1
+. Note that according to this definition, if an array
+A is
+K-beautiful, then
+A is also
+(K+1)-beautiful.
+You are given an array
+A consisting of
+N integers and an integer
+K. Find the length of the longest
+K-beautiful subsequence of
+A, where a subsequence is defined below.
+For example, consider the array
+A=[1,1,2,3,2,4]. The subsequences
+[1,1] and
+[1,1,2] are
+1-beautiful, and the subsequences
+[1,2,3] and
+[1,2,2,4] are
+2-beautiful.
+Note: A sequence
+a is a subsequence of a sequence
+b if
+a can be obtained from
+b by deletion of several (possibly, zero) elements. For example,
+[3,1] is a subsequence of
+[3,2,1] and
+[4,3,1], but not a subsequence of
+[1,3,3,7] and
+[3,10,4].
+Input Format
+The first line contains an integer
+T - the number of test cases. Then
+T test cases follow.
+The first line of each test case contains two integers
+N,
+K - the length of array
+A and the parameter for a beautiful sequence.
+The second line of each testcase contains
+N integers
+A
+1
+,…,A
+N
+.
+Output Format
+For each test case, output the maximum possible length of a
+K-beautiful subsequence of
+A.
+Constraints
+1≤T≤100
+1≤N≤10
+3
+1≤K≤10
+3
+1≤A
+i
+≤10
+3
+Sample 1:
+Input
+Output
+4
+4 1
+1 1 2 3
+9 2
+1 2 3 2 4 5 6 7 5
+5 5
+1 1 1 1 1
+10 1
+1 2 1 2 1 2 1 2 1 2
+3
+5
+5
+6
+Explanation:
+Test Case 1 : You can either choose
+[1,1,2] or
+[1,1,3] as a subsequence. Both of the subsequences are
+1-beautiful. So the maximum length of a
+1-beautiful subsequence is
+3.
+Test Case 2 : It is optimal to choose the subsequence
+[1,2,2,5,5]. So the maximum length of a
+2-beautiful subsequence is
+5.
+Test Case 3 : You can choose the entire array as a subsequence because the given array is
+K-beautiful for any
+K≥0, which includes
+K=5.

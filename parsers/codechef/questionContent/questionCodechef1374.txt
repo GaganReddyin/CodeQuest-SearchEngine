@@ -1,0 +1,52 @@
+Crushed Apples and a Balance Scale
+Problem
+You are preparing for meals ahead of your busy night at Restaurant Deep Dishes. An essential ingredient is apples.
+In your inventory, you have
+M kilograms of crushed apples. Head Chef Sandeep needs exactly
+N kilograms of crushed apples, but Chef Pal has lost the weighing machine. Instead, all that is left is a balance pan with two scales. You do not have any measuring weights with you either.
+So you can only place some crushed apples on both sides of the balance, and the balance will tell you whether or not they are of equal weight. You don't get any more information from it.
+And peculiarly, it gives out an error if both sides are not integers. You don't know if they are equal or not in this case.
+In other words, this is what you can do:
+You can take a known weight of apples and divide into two equal parts using the balance, if the two halves have integer weights.
+You can take crushed apples of a known integer weight and get another portion of crushed apples that weighs the same, using the balance. Of course you cannot do this if are exceeding the available
+M kilograms.
+And of course, even without using the balance, you can combine together known weights to get a heavier known weight.
+Chef Pal is asking for your help. Under these constraints, is it possible to get exactly
+N kilograms of crushed apples? Note that when you start out, the only weight that you know is that the entire crushed apples weights
+M kilograms.
+Input Format
+The first line of the input contains one integer
+T, the number of test cases. The test cases follow.
+The only line of each testcase contains two integers
+M and
+N, the kilograms of apples you have, and the kilograms of apples that you need to make, respectively.
+Output Format
+For each test case, if it is possible to use the balance scale to get exactly
+N kilograms from
+M kilograms, output YES.
+If it is not possible, output NO.
+Note: You can output the answer in any case (upper or lower). For example, the strings yEs, yes, Yes, and YES will be recognized as positive responses.
+Constraints
+1≤T≤2⋅10
+5
+1≤M≤10
+18
+1≤N≤10
+18
+Sample 1:
+Input
+Output
+4
+2 1
+1 1
+5 1
+4 9
+YES
+YES
+NO
+NO
+Explanation:
+Testcase 1: You can take the
+2 kilograms of crushed apples, halve it to get two portions of
+1 kilogram each. And so you've got the
+1 kilogram needed. So the answer is "YES".

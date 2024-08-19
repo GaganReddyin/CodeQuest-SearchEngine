@@ -1,0 +1,72 @@
+K-Foldable String
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well
+You are given a binary string
+S with length
+N and an integer
+K, which is a divisor of
+N. A string is said to be
+K-foldable if it can be changed to a string with length
+K by repeating the following process without any collisions (defined below):
+Select the prefix of the current string
+S with length
+2K. (Note that as long as the length of
+S is greater than
+K, this prefix always exists.)
+For each
+i (
+1≤i≤K), check if the
+2K−i+1-th character of
+S is equal to the
+i-th character of
+S ― if they are not equal, there is a collision and the process is invalid.
+Erase the prefix of
+S with length
+K.
+Your goal is to reorder the characters of
+S (possibly leaving this string unchanged) in such a way that the resulting string
+S is a
+K-foldable string. Find a way to do that or determine that it is impossible. If there are multiple solutions, find the lexicographically smallest rearranged string which is
+K-foldable.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains a single string
+S with length
+N.
+Output
+For each test case, print a single line containing the smallest rearranged string or the string "IMPOSSIBLE" if it is impossible to rearrange
+S.
+Constraints
+1≤T≤100
+1≤K≤N≤10
+3
+N is divisible by
+K
+S contains only characters '0' and '1'
+Sample 1:
+Input
+Output
+2
+8 2
+00011101
+6 2
+100111
+01100110
+IMPOSSIBLE
+Explanation:
+Example case 1: If the given string "00011101" is rearranged to "01100110", it becomes
+2-foldable:
+Initially,
+S is "01100110".
+After the first folding, it becomes "100110".
+After the second folding, it becomes "0110".
+After the third folding, it becomes "10". This string has length
+2, so we are done.
+Example case 2: It is impossible to rearrange
+S into a
+2-foldable string.

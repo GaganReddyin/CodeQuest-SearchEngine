@@ -1,0 +1,94 @@
+Sort a String
+Problem
+You are given a string
+S of length
+N.
+You can apply the following operation on the string any number of times:
+Choose an index
+i
+(1≤i<N), and swap
+S
+i
+with
+S
+i+1
+, if
+S
+i
+and
+S
+i+1
+contain adjacent characters.
+For example, a and b are adjacent, z and y are adjacent, x and y are adjacent, while c and e are not adjacent. Note that a and z are not considered adjacent.
+Find the lexicographically smallest string you can obtain, by applying the above operation any number of times.
+Note: String
+X is lexicographically smaller than string
+Y if
+X
+i
+<Y
+i
+, where
+i is the first index where
+X and
+Y differ.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the length of the string.
+The second line contains the string
+S, consisting of lowercase english alphabets.
+Output Format
+For each test case, output on a new line - the lexicographically smallest string that we can obtain from the given string using any number of operations.
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+S consists of lowercase english alphabets only.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Subtasks
+Sample 1:
+Input
+Output
+2
+5
+cbaba
+6
+dbbced
+bbcaa
+cdbbde
+Explanation:
+Test case
+1: For the given string cbaba:
+We swap c and b at indices
+1 and
+2 and the string becomes: bcaba.
+Swap a and b at indices
+3 and
+4 and the string becomes: bcbaa.
+Finally swap c and b at indices
+2 and
+3 and the string becomes: bbcaa.
+Note that this is the lexicographically smallest string we can obtain using any number of operations.
+Test case
+2: For the given string dbbced:
+We swap b and c at indices
+3 and
+4 and the string becomes: dbcbed.
+Swap b and c at indices
+2 and
+3 and the string becomes: dcbbed.
+Swap d and c at indices
+1 and
+2 and the string becomes: cdbbed.
+Finally swap e and d at indices
+5 and
+6 and the string becomes: cdbbde.
+Note that this is the lexicographically smallest string we can obtain using any number of operations.

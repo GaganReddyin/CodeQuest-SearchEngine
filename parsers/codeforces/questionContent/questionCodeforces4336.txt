@@ -1,0 +1,145 @@
+D. Sonya and Matrix
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Since Sonya has just learned the basics of matrices, she decided to play with them a little bit.
+Sonya imagined a new type of matrices that she called rhombic matrices. These matrices have exactly one zero, while all other cells have the Manhattan distance to the cell containing the zero. The cells with equal numbers have the form of a rhombus, that is why Sonya called this type so.
+The Manhattan distance between two cells (
+x
+1
+,
+y
+1
+) and (
+x
+2
+,
+y
+2
+) is defined as
+|
+x
+1
+−
+x
+2
+|+|
+y
+1
+−
+y
+2
+|
+. For example, the Manhattan distance between the cells
+(5,2)
+and
+(7,1)
+equals to
+|5−7|+|2−1|=3
+.
+Example of a rhombic matrix.
+Note that rhombic matrices are uniquely defined by
+n
+,
+m
+, and the coordinates of the cell containing the zero.
+She drew a
+n×m
+rhombic matrix. She believes that you can not recreate the matrix if she gives you only the elements of this matrix in some arbitrary order (i.e., the sequence of
+n⋅m
+numbers). Note that Sonya will not give you
+n
+and
+m
+, so only the sequence of numbers in this matrix will be at your disposal.
+Write a program that finds such an
+n×m
+rhombic matrix whose elements are the same as the elements in the sequence in some order.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+6
+) — the number of cells in the matrix.
+The second line contains
+t
+integers
+a
+1
+,
+a
+2
+,…,
+a
+t
+(
+0≤
+a
+i
+<t
+) — the values in the cells in arbitrary order.
+Output
+In the first line, print two positive integers
+n
+and
+m
+(
+n×m=t
+) — the size of the matrix.
+In the second line, print two integers
+x
+and
+y
+(
+1≤x≤n
+,
+1≤y≤m
+) — the row number and the column number where the cell with
+0
+is located.
+If there are multiple possible answers, print any of them. If there is no solution, print the single integer
+−1
+.
+Examples
+input
+Copy
+20
+1 0 2 3 5 3 2 1 3 2 3 1 4 2 1 4 2 3 2 4
+output
+Copy
+4 5
+2 2
+input
+Copy
+18
+2 2 3 2 4 3 3 3 0 2 4 2 1 3 2 1 1 1
+output
+Copy
+3 6
+2 3
+input
+Copy
+6
+2 1 0 2 1 2
+output
+Copy
+-1
+Note
+You can see the solution to the first example in the legend. You also can choose the cell
+(2,2)
+for the cell where
+0
+is located. You also can choose a
+5×4
+matrix with zero at
+(4,2)
+.
+In the second example, there is a
+3×6
+matrix, where the zero is located at
+(2,3)
+there.
+In the third example, a solution does not exist.

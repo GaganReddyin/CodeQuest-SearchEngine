@@ -1,0 +1,128 @@
+And Equals Or
+Problem
+Chef has a (
+0-indexed) binary string
+S of length
+N such that
+N is a power of
+2.
+Chef wants to find the number of pairs
+(i,j) such that:
+0≤i,j<N
+S
+i∣j
+=S
+i&j
+(Here
+∣ denotes the bitwise OR operation and
+& denotes the bitwise AND operation)
+Can you help Chef to do so?
+Input Format
+The first line of input contains a single integer
+T - the number of test cases. The description of
+T test cases follow.
+The first line of each test case contains an integer
+N - the length of the string
+S (
+N is a power of
+2).
+The second line of each test case contains a binary string
+S of length
+N.
+Output Format
+For each test case, output the number of pairs that satisfy the given conditions.
+Constraints
+1≤T≤1000
+2≤N≤2
+20
+N is a power of
+2.
+Sum of
+N over all test cases do not exceed
+2
+20
+.
+Sample 1:
+Input
+Output
+3
+2
+01
+4
+1001
+8
+00010001
+2
+8
+32
+Explanation:
+Test Case
+1: The valid
+(i,j) pairs are
+(0,0) and
+(1,1).
+(0,0) is a valid pair because
+S
+0∣0
+=S
+0
+=0 and
+S
+0&0
+=S
+0
+=0. Therefore
+S
+0∣0
+=S
+0&0
+(1,1) is a valid pair because
+S
+1∣1
+=S
+1
+=1 and
+S
+1&1
+=S
+1
+=1. Therefore
+S
+1∣1
+=S
+1&1
+Test Case
+2: The valid
+(i,j) pairs are
+(0,0),(0,3),(1,1),(1,2),(2,1),(2,2),(3,0),(3,3).
+(0,3) is a valid pair because
+S
+0∣3
+=S
+3
+=1 and
+S
+0&3
+=S
+0
+=1. Therefore
+S
+0∣3
+=S
+0&3
+(2,1) is a valid pair because
+S
+2∣1
+=S
+3
+=1 and
+S
+2&1
+=S
+0
+=1. Therefore
+S
+2∣1
+=S
+2&1
+Similarly, we can check for other pairs also.

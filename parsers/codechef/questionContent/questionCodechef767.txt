@@ -1,0 +1,56 @@
+Hello Equation
+Problem
+You are given a positive integer
+X. Your task is to tell whether there exist two positive integers
+a and
+b
+(a>0,b>0) such that
+2⋅a+2⋅b+a⋅b=X
+If there exist positive integers
+a and
+b satisfying the above condition print YES, otherwise print NO.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of single line containing a positive integer
+X.
+Output Format
+For each test case, output on a new line YES or NO.
+You may print each character of the string in either uppercase or lowercase (for example, the strings yes, YES, Yes, and yeS will all be treated as identical).
+Constraints
+1≤T≤100
+1≤X≤10
+9
+Sample 1:
+Input
+Output
+4
+2
+5
+6
+12
+NO
+YES
+NO
+YES
+Explanation:
+Test case
+1: There do not exist any positive integers
+a and
+b such that
+2⋅a+2⋅b+a⋅b=2.
+Test case
+2: Let
+a=1 and
+b=1, then
+2⋅a+2⋅b+a⋅b=5.
+Test case
+3: There do not exist any positive integers
+a and
+b such that
+2⋅a+2⋅b+a⋅b=6.
+Test case
+4: Let
+a=2 and
+b=2, then
+2⋅a+2⋅b+a⋅b=12.

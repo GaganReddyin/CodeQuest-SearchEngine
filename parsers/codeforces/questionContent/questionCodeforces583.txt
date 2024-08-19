@@ -1,0 +1,327 @@
+E. Rectangular Congruence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a prime number
+n
+, and an array of
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+, where
+0≤
+b
+i
+<n
+for each
+1≤i≤n
+.
+You have to find a matrix
+a
+of size
+n×n
+such that all of the following requirements hold:
+0≤
+a
+i,j
+<n
+for all
+1≤i,j≤n
+.
+a
+r
+1
+,
+c
+1
++
+a
+r
+2
+,
+c
+2
+≢
+a
+r
+1
+,
+c
+2
++
+a
+r
+2
+,
+c
+1
+(modn)
+for all positive integers
+r
+1
+,
+r
+2
+,
+c
+1
+, and
+c
+2
+such that
+1≤
+r
+1
+<
+r
+2
+≤n
+and
+1≤
+c
+1
+<
+c
+2
+≤n
+.
+a
+i,i
+=
+b
+i
+for all
+1≤i≤n
+.
+Here
+x≢y(modm)
+denotes that
+x
+and
+y
+give different remainders when divided by
+m
+.
+If there are multiple solutions, output any. It can be shown that such a matrix always exists under the given constraints.
+Input
+The first line contains a single positive integer
+n
+(
+2≤n<350
+).
+The second line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+0≤
+b
+i
+<n
+) — the required values on the main diagonal of the matrix.
+It is guaranteed that
+n
+is prime.
+Output
+Print
+n
+lines. On the
+i
+-th line, print
+n
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,n
+, each separated with a space.
+If there are multiple solutions, output any.
+Examples
+input
+Copy
+2
+0 0
+output
+Copy
+0 1 
+0 0
+input
+Copy
+3
+1 1 1
+output
+Copy
+1 2 2
+1 1 0
+1 0 1
+input
+Copy
+5
+1 4 1 2 4
+output
+Copy
+1 0 1 3 4
+1 4 3 1 0
+2 4 1 0 2
+1 2 2 2 2
+2 2 0 1 4
+Note
+In the first example, the answer is valid because all entries are non-negative integers less than
+n=2
+, and
+a
+1,1
++
+a
+2,2
+≢
+a
+1,2
++
+a
+2,1
+(mod2)
+(because
+a
+1,1
++
+a
+2,2
+=0+0≡0(mod2)
+and
+a
+1,2
++
+a
+2,1
+=1+0≡1(mod2)
+). Moreover, the values on the main diagonals are equal to
+0,0
+as required.
+In the second example, the answer is correct because all entries are non-negative integers less than
+n=3
+, and the second condition is satisfied for all quadruplets
+(
+r
+1
+,
+r
+2
+,
+c
+1
+,
+c
+2
+)
+. For example:
+When
+r
+1
+=1
+,
+r
+2
+=2
+,
+c
+1
+=1
+and
+c
+2
+=2
+,
+a
+1,1
++
+a
+2,2
+≢
+a
+1,2
++
+a
+2,1
+(mod3)
+because
+a
+1,1
++
+a
+2,2
+=1+1≡2(mod3)
+and
+a
+1,2
++
+a
+2,1
+=2+1≡0(mod3)
+.
+When
+r
+1
+=2
+,
+r
+2
+=3
+,
+c
+1
+=1
+, and
+c
+2
+=3
+,
+a
+2,1
++
+a
+3,3
+≢
+a
+2,3
++
+a
+3,1
+(mod3)
+because
+a
+2,1
++
+a
+3,3
+=1+1≡2(mod3)
+and
+a
+2,3
++
+a
+3,1
+=0+1≡1(mod3)
+.
+Moreover, the values on the main diagonal are equal to
+1,1,1
+as required.

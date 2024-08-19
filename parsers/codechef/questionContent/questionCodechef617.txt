@@ -1,0 +1,76 @@
+Maximise XOR
+Problem
+Chef has two binary strings
+A and
+B, each of length
+N.
+Chef can rearrange both the strings in any way. Find the maximum bitwise XOR he can achieve if he rearranges the strings optimally.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines:
+The first line of each test case contains binary string
+A.
+The second line of each test case contains binary string
+B.
+Output Format
+For each test case, output the maximum bitwise XOR of the strings in binary representation.
+Constraints
+1≤T≤1000
+1≤N≤5⋅10
+5
+Strings
+A and
+B consist only of
+0 and
+1.
+The sum of
+N over all test cases do not exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+0011
+1011
+100
+100
+11111
+11101
+1
+0
+1110
+110
+10000
+1
+Explanation:
+Test case
+1: Rearranging string
+A as
+0011 and string
+B as
+1101, the XOR of the strings is
+0011⊕1101=1110. It can be shown that this is the maximum XOR that can be achieved by rearranging the strings.
+Test case
+2: Rearranging string
+A as
+010 and string
+B as
+100, the XOR of the strings is
+010⊕100=110. It can be shown that this is the maximum XOR that can be achieved by rearranging the strings.
+Test case
+3: Rearranging string
+A as
+11111 and string
+B as
+01111, the XOR of the strings is
+11111⊕01111=10000. It can be shown that this is the maximum XOR that can be achieved by rearranging the strings.
+Test case
+4: Rearranging string
+A as
+1 and string
+B as
+0, the XOR of the strings is
+1⊕0=1. It can be shown that this is the maximum XOR that can be achieved by rearranging the strings.

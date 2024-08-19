@@ -1,0 +1,118 @@
+Circle Coloring
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given
+N sets of integers
+A
+1
+,A
+2
+,…,A
+N
+. For each valid
+i, let's denote the elements of the set
+A
+i
+by
+{c
+i,1
+,c
+i,2
+,…,c
+i,∣A
+i
+∣
+}.
+Find the number of ways to choose a sequence
+(a
+1
+,a
+2
+,…,a
+N
+) such that:
+a
+i
+∈A
+i
+for each valid
+i
+a
+i
+
+=a
+i+1
+for each valid
+i and
+a
+1
+
+=a
+N
+Since this number may be large, compute it modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+N.
+N lines follow. For each valid
+i, the
+i-th of these lines contains an integer
+∣A
+i
+∣ followed by a space and
+∣A
+i
+∣ space-separated non-negative integers
+c
+i,1
+,c
+i,2
+,…,c
+i,∣A
+i
+∣
+.
+Output
+Print a single line containing one integer ― the number of ways to choose
+(a
+1
+,a
+2
+,…,a
+N
+), modulo
+998,244,353.
+Constraints
+2≤N≤200,000
+∣A
+i
+∣≥1 for each valid
+i
+∣A
+1
+∣+∣A
+2
+∣+…+∣A
+N
+∣≤200,000
+1≤c
+i,j
+≤200000 for each valid
+i,j
+Subtasks
+Subtask #1 (20 points):
+N≤100
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+3
+3 1 2 3
+2 1 2
+2 2 3
+3
+Explanation:
+There are three possible sequences:
+(1,2,3),
+(2,1,3) and
+(3,1,2).

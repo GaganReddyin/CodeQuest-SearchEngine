@@ -1,0 +1,64 @@
+E. Cakewalk
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A mouse encountered a nice big cake and decided to take a walk across it, eating the berries on top of the cake on its way. The cake is rectangular, neatly divided into squares; some of the squares have a berry in them, and some don't.
+The mouse is in a bit of a hurry, though, so once she enters the cake from its northwest corner (the top left cell in the input data), she will only go east (right) or south (down), until she reaches the southeast corner (the bottom right cell). She will eat every berry in the squares she passes through, but not in the other squares.
+The mouse tries to choose her path so as to maximize the number of berries consumed. However, her haste and hunger might be clouding her judgement, leading her to suboptimal decisions...
+Input
+The first line of input contains two integers
+H
+and
+W
+(
+1≤H,W≤5
+), separated by a space, — the height and the width of the cake.
+The next
+H
+lines contain a string of
+W
+characters each, representing the squares of the cake in that row: '.' represents an empty square, and '*' represents a square with a berry.
+Output
+Output the number of berries the mouse will eat following her strategy.
+Examples
+input
+Copy
+4 3
+*..
+.*.
+..*
+...
+output
+Copy
+3
+input
+Copy
+4 4
+.*..
+*...
+...*
+..*.
+output
+Copy
+2
+input
+Copy
+3 4
+..**
+*...
+....
+output
+Copy
+1
+input
+Copy
+5 5
+..*..
+.....
+**...
+**...
+**...
+output
+Copy
+1

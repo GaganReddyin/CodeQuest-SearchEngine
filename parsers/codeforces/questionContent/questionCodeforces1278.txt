@@ -1,0 +1,218 @@
+E. Messages
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Monocarp is a tutor of a group of
+n
+students. He communicates with them using a conference in a popular messenger.
+Today was a busy day for Monocarp — he was asked to forward a lot of posts and announcements to his group, that's why he had to write a very large number of messages in the conference. Monocarp knows the students in the group he is tutoring quite well, so he understands which message should each student read: Monocarp wants the student
+i
+to read the message
+m
+i
+.
+Of course, no one's going to read all the messages in the conference. That's why Monocarp decided to pin some of them. Monocarp can pin any number of messages, and if he wants anyone to read some message, he should pin it — otherwise it will definitely be skipped by everyone.
+Unfortunately, even if a message is pinned, some students may skip it anyway. For each student
+i
+, Monocarp knows that they will read at most
+k
+i
+messages. Suppose Monocarp pins
+t
+messages; if
+t≤
+k
+i
+, then the
+i
+-th student will read all the pinned messages; but if
+t>
+k
+i
+, the
+i
+-th student will choose exactly
+k
+i
+random pinned messages (all possible subsets of pinned messages of size
+k
+i
+are equiprobable) and read only the chosen messages.
+Monocarp wants to maximize the expected number of students that read their respective messages (i.e. the number of such indices
+i
+that student
+i
+reads the message
+m
+i
+). Help him to choose how many (and which) messages should he pin!
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of students in the conference.
+Then
+n
+lines follow. The
+i
+-th line contains two integers
+m
+i
+and
+k
+i
+(
+1≤
+m
+i
+≤2⋅
+10
+5
+;
+1≤
+k
+i
+≤20
+) — the index of the message which Monocarp wants the
+i
+-th student to read and the maximum number of messages the
+i
+-th student will read, respectively.
+Output
+In the first line, print one integer
+t
+(
+1≤t≤2⋅
+10
+5
+) — the number of messages Monocarp should pin. In the second line, print
+t
+distinct integers
+c
+1
+,
+c
+2
+, ...,
+c
+t
+(
+1≤
+c
+i
+≤2⋅
+10
+5
+) — the indices of the messages Monocarp should pin. The messages can be listed in any order.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+3
+10 1
+10 2
+5 2
+output
+Copy
+2
+5 10 
+input
+Copy
+3
+10 1
+5 2
+10 1
+output
+Copy
+1
+10 
+input
+Copy
+4
+1 1
+2 2
+3 3
+4 4
+output
+Copy
+3
+2 3 4 
+input
+Copy
+3
+13 2
+42 2
+37 2
+output
+Copy
+3
+42 13 37
+Note
+Let's consider the examples from the statement.
+In the first example, Monocarp pins the messages
+5
+and
+10
+.
+if the first student reads the message
+5
+, the second student reads the messages
+5
+and
+10
+, and the third student reads the messages
+5
+and
+10
+, the number of students which have read their respective messages will be
+2
+;
+if the first student reads the message
+10
+, the second student reads the messages
+5
+and
+10
+, and the third student reads the messages
+5
+and
+10
+, the number of students which have read their respective messages will be
+3
+.
+So, the expected number of students which will read their respective messages is
+5
+2
+.
+In the second example, Monocarp pins the message
+10
+.
+if the first student reads the message
+10
+, the second student reads the message
+10
+, and the third student reads the message
+10
+, the number of students which have read their respective messages will be
+2
+.
+So, the expected number of students which will read their respective messages is
+2
+. If Monocarp had pinned both messages
+5
+and
+10
+, the expected number of students which read their respective messages would have been
+2
+as well.
+In the third example, the expected number of students which will read their respective messages is
+8
+3
+.
+In the fourth example, the expected number of students which will read their respective messages is
+2
+.

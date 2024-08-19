@@ -1,0 +1,152 @@
+F. Towers
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a tree with
+n
+vertices numbered from
+1
+to
+n
+. The height of the
+i
+-th vertex is
+h
+i
+. You can place any number of towers into vertices, for each tower you can choose which vertex to put it in, as well as choose its efficiency. Setting up a tower with efficiency
+e
+costs
+e
+coins, where
+e>0
+.
+It is considered that a vertex
+x
+gets a signal if for some pair of towers at the vertices
+u
+and
+v
+(
+u≠v
+, but it is allowed that
+x=u
+or
+x=v
+) with efficiencies
+e
+u
+and
+e
+v
+, respectively, it is satisfied that
+min(
+e
+u
+,
+e
+v
+)≥
+h
+x
+and
+x
+lies on the path between
+u
+and
+v
+.
+Find the minimum number of coins required to set up towers so that you can get a signal at all vertices.
+Input
+The first line contains an integer
+n
+(
+2≤n≤200000
+) — the number of vertices in the tree.
+The second line contains
+n
+integers
+h
+i
+(
+1≤
+h
+i
+≤
+10
+9
+) — the heights of the vertices.
+Each of the next
+n−1
+lines contain a pair of numbers
+v
+i
+,
+u
+i
+(
+1≤
+v
+i
+,
+u
+i
+≤n
+) — an edge of the tree. It is guaranteed that the given edges form a tree.
+Output
+Print one integer — the minimum required number of coins.
+Examples
+input
+Copy
+3
+1 2 1
+1 2
+2 3
+output
+Copy
+4
+input
+Copy
+5
+1 3 3 1 3
+1 3
+5 4
+4 3
+2 3
+output
+Copy
+7
+input
+Copy
+2
+6 1
+1 2
+output
+Copy
+12
+Note
+In the first test case it's optimal to install two towers with efficiencies
+2
+at vertices
+1
+and
+3
+.
+In the second test case it's optimal to install a tower with efficiency
+1
+at vertex
+1
+and two towers with efficiencies
+3
+at vertices
+2
+and
+5
+.
+In the third test case it's optimal to install two towers with efficiencies
+6
+at vertices
+1
+and
+2
+.

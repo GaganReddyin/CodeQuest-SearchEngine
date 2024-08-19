@@ -1,0 +1,74 @@
+F. Cards
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider the following experiment. You have a deck of
+m
+cards, and exactly one card is a joker.
+n
+times, you do the following: shuffle the deck, take the top card of the deck, look at it and return it into the deck.
+Let
+x
+be the number of times you have taken the joker out of the deck during this experiment. Assuming that every time you shuffle the deck, all
+m!
+possible permutations of cards are equiprobable, what is the expected value of
+x
+k
+? Print the answer modulo
+998244353
+.
+Input
+The only line contains three integers
+n
+,
+m
+and
+k
+(
+1≤n,m<998244353
+,
+1≤k≤5000
+).
+Output
+Print one integer — the expected value of
+x
+k
+, taken modulo
+998244353
+(the answer can always be represented as an irreducible fraction
+a
+b
+, where
+bmod998244353≠0
+; you have to print
+a⋅
+b
+−1
+mod998244353
+).
+Examples
+input
+Copy
+1 1 1
+output
+Copy
+1
+input
+Copy
+1 1 5000
+output
+Copy
+1
+input
+Copy
+2 2 2
+output
+Copy
+499122178
+input
+Copy
+998244352 1337 5000
+output
+Copy
+326459680

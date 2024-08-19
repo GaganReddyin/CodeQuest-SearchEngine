@@ -1,0 +1,162 @@
+I. Cyclic Shifts
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a matrix consisting of
+n
+rows and
+m
+columns. The matrix contains lowercase letters of the Latin alphabet.
+You can perform the following operation any number of times you want to: choose two integers
+i
+(
+1≤i≤m
+) and
+k
+(
+0<k<n
+), and shift every column
+j
+such that
+i≤j≤m
+cyclically by
+k
+. The shift is performed upwards.
+For example, if you have a matrix
+⎛
+⎝
+⎜
+a
+d
+g
+b
+e
+h
+c
+f
+i
+⎞
+⎠
+⎟
+and perform an operation with
+i=2
+,
+k=1
+, then it becomes:
+⎛
+⎝
+⎜
+a
+d
+g
+e
+h
+b
+f
+i
+c
+⎞
+⎠
+⎟
+You have to process
+q
+queries. Each of the queries is a string of length
+m
+consisting of lowercase letters of the Latin alphabet. For each query, you have to calculate the minimum number of operations described above you have to perform so that at least one row of the matrix is equal to the string from the query. Note that all queries are independent, that is, the operations you perform in a query don't affect the initial matrix in other queries.
+Input
+The first line contains three integers
+n
+,
+m
+,
+q
+(
+2≤n,m,q≤2.5⋅
+10
+5
+;
+n⋅m≤5⋅
+10
+5
+;
+q⋅m≤5⋅
+10
+5
+) — the number of rows and columns in the matrix and the number of queries, respectively.
+The next
+n
+lines contains
+m
+lowercase Latin letters each — elements of the matrix.
+The following
+q
+lines contains a description of queries — strings of length
+m
+consisting of lowercase letters of the Latin alphabet.
+Output
+Print
+q
+integers. The
+i
+-th integer should be equal to the minimum number of operations you have to perform so that the matrix contains a string from the
+i
+-th query or
+−1
+if the specified string cannot be obtained.
+Examples
+input
+Copy
+3 5 4
+abacc
+ccbba
+ccabc
+abacc
+acbbc
+ababa
+acbbc
+output
+Copy
+0
+2
+1
+2
+input
+Copy
+6 4 4
+daac
+bcba
+acad
+cbdc
+aaaa
+bcbb
+dcdd
+acba
+bbbb
+dbcd
+output
+Copy
+3
+1
+2
+-1
+input
+Copy
+5 10 5
+ltjksdyfgg
+cbhpsereqn
+ijndtzbzcf
+ghgcgeadep
+bfzdgxqmqe
+ibgcgzyfep
+bbhdgxqmqg
+ltgcgxrzep
+ljnpseldgn
+ghhpseyzcf
+output
+Copy
+5
+3
+5
+-1
+3

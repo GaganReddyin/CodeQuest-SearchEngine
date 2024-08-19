@@ -1,0 +1,137 @@
+F. Pairs of Paths
+time limit per test6 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a tree consisting of
+n
+vertices, and
+m
+simple vertex paths. Your task is to find how many pairs of those paths intersect at exactly one vertex. More formally you have to find the number of pairs
+(i,j)
+(1≤i<j≤m)
+such that
+pat
+h
+i
+and
+pat
+h
+j
+have exactly one vertex in common.
+Input
+First line contains a single integer
+n
+(1≤n≤3⋅
+10
+5
+)
+.
+Next
+n−1
+lines describe the tree. Each line contains two integers
+u
+and
+v
+(1≤u,v≤n)
+describing an edge between vertices
+u
+and
+v
+.
+Next line contains a single integer
+m
+(1≤m≤3⋅
+10
+5
+)
+.
+Next
+m
+lines describe paths. Each line describes a path by it's two endpoints
+u
+and
+v
+(1≤u,v≤n)
+. The given path is all the vertices on the shortest path from
+u
+to
+v
+(including
+u
+and
+v
+).
+Output
+Output a single integer — the number of pairs of paths that intersect at exactly one vertex.
+Examples
+input
+Copy
+5
+1 2
+1 3
+1 4
+3 5
+4
+2 3
+2 4
+3 4
+3 5
+output
+Copy
+2
+input
+Copy
+1
+3
+1 1
+1 1
+1 1
+output
+Copy
+3
+input
+Copy
+5
+1 2
+1 3
+1 4
+3 5
+6
+2 3
+2 4
+3 4
+3 5
+1 1
+1 2
+output
+Copy
+7
+Note
+The tree in the first example and paths look like this. Pairs
+(1,4)
+and
+(3,4)
+intersect at one vertex.
+In the second example all three paths contain the same single vertex, so all pairs
+(1,2)
+,
+(1,3)
+and
+(2,3)
+intersect at one vertex.
+The third example is the same as the first example with two additional paths. Pairs
+(1,4)
+,
+(1,5)
+,
+(2,5)
+,
+(3,4)
+,
+(3,5)
+,
+(3,6)
+and
+(5,6)
+intersect at one vertex.

@@ -1,0 +1,77 @@
+Chef 2 Chef
+Problem
+Read problems statements in Mandarin Chinese, Russian, and Bengali as well.
+Chef gives you an array
+A of length
+N, consisting of integers. He asks you to choose a subarray with at least 2 elements of the given array. Following, out of your chosen subarray, Chef will pick out any two elements.
+Your net score would be the sum of the remaining elements of the subarray. Obviously, Chef adopts a strategy to minimize your score. Find the maximum score you can have.
+Input Format
+The first line of input contains
+T denoting the number of test cases.
+Each test case is as follows:
+The first line contains
+N denoting the size of the array.
+The second line contains
+N space-separated integers denoting the contents of the array
+A.
+Output Format
+For each test case, output a single integer denoting your maximum score.
+Constraints
+1≤T≤10
+4
+2≤N≤10
+5
+−10
+9
+≤A
+i
+≤10
+9
+The sum of
+N over all test cases doesn't exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+5
+6
+6 -7 5 9 1 -1
+5
+-1 1 1 1 -1
+5
+1 2 3 4 5
+2
+1 2
+10
+-1 4 4 4 0 2 0 0 -1 2
+1
+1
+6
+0
+7
+Explanation:
+Test case
+1: you choose subarray
+[5,9,1], and Chef chooses elements
+5 and
+9. So your net score is
+1.
+Test case
+2: you choose subarray
+[1,1,1], and Chef chooses elements
+1 and
+1. So your net score is
+1.
+Test case
+3: you choose subarray
+[1,2,3,4,5], and Chef chooses elements
+5 and
+4. So your net score is
+1+2+3=6.
+Test case
+4: you can only choose the subarray
+[1,2], and Chef chooses elements
+1 and
+2. So your net score is
+0 as no elements remain in your chosen subarray.

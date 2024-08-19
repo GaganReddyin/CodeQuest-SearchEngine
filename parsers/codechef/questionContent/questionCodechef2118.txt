@@ -1,0 +1,90 @@
+Largest Square in the garden
+Problem
+Chef has a garden of size
+N×N. The garden is divided into
+N
+2
+squares of size
+1×1 each.
+Chef has plants in some unit squares of the garden, because of which, that part looks green.
+Formally, for the
+i
+th
+row
+(0≤i<N), Chef has plants in all the columns from
+A
+i
+to
+B
+i
+(both inclusive) where
+0≤A
+i
+≤B
+i
+<N.
+Help Chef find the length of the side of the largest square that is green.
+Input Format
+The first line contains an integer
+N, the size of the garden.
+The next
+N lines contain two space-separated integers
+A
+i
+and
+B
+i
+, representing that plants are present in all the columns from
+A
+i
+to
+B
+i
+(both inclusive) of the
+i
+th
+row.
+Output Format
+Output a single integer denoting the length of the side of the largest square that is green. In other words, output the length of the side of the square with maximum size, inside which all unit squares have plants.
+Constraints
+1≤N≤10
+6
+0≤A
+i
+≤B
+i
+<N
+Sample 1:
+Input
+Output
+3
+1 1
+0 2
+1 2
+2
+Sample 2:
+Input
+Output
+8
+2 4
+2 4
+1 4
+0 7
+0 3
+1 2
+1 2
+1 1
+3
+Explanation:
+Sample Explanation
+1: The garden looks like:
+The largest green square has vertices
+(1,1),(1,2),(2,2),(2,1). Thus, the length of the side of the largest green square is
+2.
+Sample Explanation
+2: The garden looks like:
+One of the largest green squares has vertices
+(0,2),(0,4),(2,4),(2,2). Thus, the length of the side of the largest green square is
+3.
+There may be other squares with same size but it can be proven that no square with length more than
+3 is green.

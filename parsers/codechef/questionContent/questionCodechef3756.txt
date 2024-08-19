@@ -1,0 +1,121 @@
+Mex On Subtrees
+Problem
+You are given a rooted tree with
+N nodes numbered from
+1 to
+N. The root of the tree is node
+1. The
+i
+th
+node has parent
+P
+i
+for all
+2≤i≤N.
+You need to assign a value to each of the nodes such that the MEX of the subtree of node
+i is
+B
+i
+. Note that the
+MEX of a subtree is the
+MEX of the values of all nodes that lie in the subtree.
+Find the minimum possible sum of the values of all the nodes in the tree such that the given condition is satisfied. Print
+−1 if a valid assignment of values does not exist for all the nodes.
+Note that, the subtree of a node
+V is the set of all nodes
+U such that
+V lies on the simple path from
+U to the root.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - number of nodes in a tree.
+The second line of each test case contains
+N space-separated integers
+B
+1
+,
+B
+2
+, \ldots,
+B
+N
+denoting the array
+B.
+The third line of each test case contains
+N−1 space-separated integers
+P
+2
+, \ldots,
+P
+N
+, where
+P
+i
+represents parent of node
+i and
+P
+i
+<i.
+Output Format
+For each test case, output the minimum possible sum of the values of all the nodes in the tree such that the given condition is satisfied. Print
+−1 if a valid assignment of values does not exist for all the nodes.
+Constraints
+1≤T≤10
+5
+2≤N≤2⋅10
+5
+0≤B
+i
+≤N
+1≤P
+i
+<i
+The sum of
+N over all test cases doesn't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+2
+0 0
+1
+2
+0 1
+1
+5
+2 2 1 0 0
+1 2 3 4
+6
+2 2 1 1 1 0
+1 2 2 2 3
+2
+-1
+7
+4
+Explanation:
+Test case
+1: We can assign the value
+1 to nodes
+1 and
+2. Thus,
+MEX for both subtrees will be equal to
+0.
+Test case
+2: It is impossible to assign values to satisfy all the conditions.
+Test case
+3: We can assign the values
+0,1,0,3, and
+3 to nodes
+1,2,3,4, and
+5 respectively.
+Test case
+4: We can assign the values
+0,0,1,0,0, and
+3 to nodes
+1,2,3,4,5, and
+6 respectively.

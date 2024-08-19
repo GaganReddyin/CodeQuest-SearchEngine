@@ -1,0 +1,225 @@
+C. Elemental Decompress
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of
+n
+integers.
+Find two permutations
+†
+†
+p
+and
+q
+of length
+n
+such that
+max(
+p
+i
+,
+q
+i
+)=
+a
+i
+for all
+1≤i≤n
+or report that such
+p
+and
+q
+do not exist.
+†
+†
+A permutation of length
+n
+is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array), and
+[1,3,4]
+is also not a permutation (
+n=3
+but there is
+4
+in the array).
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — the array
+a
+.
+It is guaranteed that the total sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, if there do not exist
+p
+and
+q
+that satisfy the conditions, output "NO" (without quotes).
+Otherwise, output "YES" (without quotes) and then output
+2
+lines. The first line should contain
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+and the second line should contain
+n
+integers
+q
+1
+,
+q
+2
+,…,
+q
+n
+.
+If there are multiple solutions, you may output any of them.
+You can output "YES" and "NO" in any case (for example, strings "yEs", "yes" and "Yes" will be recognized as a positive response).
+Example
+input
+Copy
+3
+1
+1
+5
+5 3 4 2 5
+2
+1 1
+output
+Copy
+YES
+1 
+1 
+YES
+1 3 4 2 5 
+5 2 3 1 4 
+NO
+Note
+In the first test case,
+p=q=[1]
+. It is correct since
+a
+1
+=max(
+p
+1
+,
+q
+1
+)=1
+.
+In the second test case,
+p=[1,3,4,2,5]
+and
+q=[5,2,3,1,4]
+. It is correct since:
+a
+1
+=max(
+p
+1
+,
+q
+1
+)=max(1,5)=5
+,
+a
+2
+=max(
+p
+2
+,
+q
+2
+)=max(3,2)=3
+,
+a
+3
+=max(
+p
+3
+,
+q
+3
+)=max(4,3)=4
+,
+a
+4
+=max(
+p
+4
+,
+q
+4
+)=max(2,1)=2
+,
+a
+5
+=max(
+p
+5
+,
+q
+5
+)=max(5,4)=5
+.
+In the third test case, one can show that no such
+p
+and
+q
+exist.

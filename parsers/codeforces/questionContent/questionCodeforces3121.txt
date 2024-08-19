@@ -1,0 +1,161 @@
+D. Find String in a Grid
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a grid
+G
+containing
+R
+rows (numbered from
+1
+to
+R
+, top to bottom) and
+C
+columns (numbered from
+1
+to
+C
+, left to right) of uppercase characters. The character in the
+r
+th
+row and the
+c
+th
+column is denoted by
+G
+r,c
+. You also have
+Q
+strings containing uppercase characters. For each of the string, you want to find the number of occurrences of the string in the grid.
+An occurrence of string
+S
+in the grid is counted if
+S
+can be constructed by starting at one of the cells in the grid, going right
+0
+or more times, and then going down
+0
+or more times. Two occurrences are different if the set of cells used to construct the string is different. Formally, for each string
+S
+, you would like to count the number of tuples
+⟨r,c,Δr,Δc⟩
+such that:
+1≤r≤R
+and
+r≤r+Δr≤R
+1≤c≤C
+and
+c≤c+Δc≤C
+S=
+G
+r,c
+G
+r,c+1
+…
+G
+r,c+Δc
+G
+r+1,c+Δc
+…
+G
+r+Δr,c+Δc
+Input
+Input begins with a line containing three integers:
+R
+C
+Q
+(
+1≤R,C≤500
+;
+1≤Q≤200000
+) representing the size of the grid and the number of strings, respectively. The next
+R
+lines each contains
+C
+uppercase characters representing the grid. The
+c
+th
+character on the
+r
+th
+line is
+G
+r,c
+. The next
+Q
+lines each contains a string
+S
+containing uppercase characters. The length of this string is a positive integer not more than
+200000
+. The sum of the length of all
+Q
+strings combined is not more than
+200000
+.
+Output
+For each query in the same order as input, output in a line an integer representing the number of occurrences of the string in the grid.
+Examples
+input
+Copy
+3 3 5
+ABC
+BCD
+DAB
+ABC
+BC
+BD
+AC
+A
+output
+Copy
+2
+3
+1
+0
+2
+input
+Copy
+2 3 3
+AAA
+AAA
+A
+AAA
+AAAAA
+output
+Copy
+6
+4
+0
+Note
+Explanation for the sample input/output #1
+There are
+2
+occurrences of "ABC", represented by the tuples
+⟨1,1,1,1⟩
+and
+⟨1,1,0,2⟩
+.
+There are
+3
+occurrences of "BC", represented by the tuples
+⟨1,2,0,1⟩
+,
+⟨1,2,1,0⟩
+, and
+⟨2,1,0,1⟩
+.
+There is
+1
+occurrence of "BD", represented by the tuple
+⟨2,1,1,0⟩
+.
+There is no occurrence of "AC".
+There are
+2
+occurrences of "A", represented by the tuples
+⟨1,1,0,0⟩
+and
+⟨3,2,0,0⟩
+.

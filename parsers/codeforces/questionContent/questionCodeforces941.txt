@@ -1,0 +1,136 @@
+F1. Array Shuffling
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+oolimry has an array
+a
+of length
+n
+which he really likes. Today, you have changed his array to
+b
+, a permutation of
+a
+, to make him sad.
+Because oolimry is only a duck, he can only perform the following operation to restore his array:
+Choose two integers
+i,j
+such that
+1≤i,j≤n
+.
+Swap
+b
+i
+and
+b
+j
+.
+The sadness of the array
+b
+is the minimum number of operations needed to transform
+b
+into
+a
+.
+Given the array
+a
+, find any array
+b
+which is a permutation of
+a
+that has the maximum sadness over all permutations of the array
+a
+.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+)  — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+)  — the length of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+)  — elements of the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+— describing the array
+b
+. If there are multiple answers, you may print any.
+Example
+input
+Copy
+2
+2
+2 1
+4
+1 2 3 3
+output
+Copy
+1 2
+3 3 2 1
+Note
+In the first test case, the array
+[1,2]
+has sadness
+1
+. We can transform
+[1,2]
+into
+[2,1]
+using one operation with
+(i,j)=(1,2)
+.
+In the second test case, the array
+[3,3,2,1]
+has sadness
+2
+. We can transform
+[3,3,2,1]
+into
+[1,2,3,3]
+with two operations with
+(i,j)=(1,4)
+and
+(i,j)=(2,3)
+respectively.

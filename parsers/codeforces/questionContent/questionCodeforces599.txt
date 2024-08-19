@@ -1,0 +1,119 @@
+B. Ugu
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A binary string is a string consisting only of the characters 0 and 1. You are given a binary string
+s
+1
+s
+2
+…
+s
+n
+. It is necessary to make this string non-decreasing in the least number of operations. In other words, each character should be not less than the previous. In one operation, you can do the following:
+Select an arbitrary index
+1≤i≤n
+in the string;
+For all
+j≥i
+, change the value in the
+j
+-th position to the opposite, that is, if
+s
+j
+=1
+, then make
+s
+j
+=0
+, and vice versa.
+What is the minimum number of operations needed to make the string non-decreasing?
+Input
+Each test consists of multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first line of each test cases a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the string.
+The second line of each test case contains a binary string
+s
+of length
+n
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer — the minimum number of operations that are needed to make the string non-decreasing.
+Example
+input
+Copy
+8
+1
+1
+2
+10
+3
+101
+4
+1100
+5
+11001
+6
+100010
+10
+0000110000
+7
+0101010
+output
+Copy
+0
+1
+2
+1
+2
+3
+1
+5
+Note
+In the first test case, the string is already non-decreasing.
+In the second test case, you can select
+i=1
+and then
+s=01
+.
+In the third test case, you can select
+i=1
+and get
+s=010
+, and then select
+i=2
+. As a result, we get
+s=001
+, that is, a non-decreasing string.
+In the sixth test case, you can select
+i=5
+at the first iteration and get
+s=100001
+. Then choose
+i=2
+, then
+s=111110
+. Then we select
+i=1
+, getting the non-decreasing string
+s=000001
+.

@@ -1,0 +1,169 @@
+D. Fixed Prefix Permutations
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+permutations
+a
+1
+,
+a
+2
+,…,
+a
+n
+, each of length
+m
+. Recall that a permutation of length
+m
+is a sequence of
+m
+distinct integers from
+1
+to
+m
+.
+Let the beauty of a permutation
+p
+1
+,
+p
+2
+,…,
+p
+m
+be the largest
+k
+such that
+p
+1
+=1,
+p
+2
+=2,…,
+p
+k
+=k
+. If
+p
+1
+≠1
+, then the beauty is
+0
+.
+The product of two permutations
+p⋅q
+is a permutation
+r
+such that
+r
+j
+=
+q
+p
+j
+.
+For each
+i
+from
+1
+to
+n
+, print the largest beauty of a permutation
+a
+i
+⋅
+a
+j
+over all
+j
+from
+1
+to
+n
+(possibly,
+i=j
+).
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains two integers
+n
+and
+m
+(
+1≤n≤5⋅
+10
+4
+;
+1≤m≤10
+) — the number of permutations and the length of each permutation.
+The
+i
+-th of the next
+n
+lines contains a permutation
+a
+i
+ —
+m
+distinct integers from
+1
+to
+m
+.
+The sum of
+n
+doesn't exceed
+5⋅
+10
+4
+over all testcases.
+Output
+For each testcase, print
+n
+integers. The
+i
+-th value should be equal to the largest beauty of a permutation
+a
+i
+⋅
+a
+j
+over all
+j
+(
+1≤j≤n
+).
+Example
+input
+Copy
+3
+3 4
+2 4 1 3
+1 2 4 3
+2 1 3 4
+2 2
+1 2
+2 1
+8 10
+3 4 9 6 10 2 7 8 1 5
+3 9 1 8 5 7 4 10 2 6
+3 10 1 7 5 9 6 4 2 8
+1 2 3 4 8 6 10 7 9 5
+1 2 3 4 10 6 8 5 7 9
+9 6 1 2 10 4 7 8 3 5
+7 9 3 2 5 6 4 8 1 10
+9 4 3 7 5 6 1 10 8 2
+output
+Copy
+1 4 4 
+2 2 
+10 8 1 6 8 10 1 7 

@@ -1,0 +1,57 @@
+Room Of Requirement
+Problem
+"It is a room that a person can only enter when they have real need of it. Sometimes it is there, and sometimes it is not, but when it appears, it is always equipped for the seeker's needs."
+- Hermione
+During the tyrannous ruling of Dolores Umbridge, the Army of Dumbledore is formed. But they all need a secret place to practice their spells. Here comes the Room of Requirement to aid!! But to their much surprise they have to solve a problem as well as perform a perfect spell combo of Invoker, who happens to be a legendary hero in DOTA 2(To know the secret for perfect spell combo of Invoker, contact the author *laughs*). As everyone is either a wizard or witch, they ask you to solve the problem which is stated below.
+You are given an undirected graph of N vertices having M edges. Also you are given a list of O operations and Q queries.
+Initial connected component of any vertex is its connected component before applying any operation.
+In every operation an existing edge is removed. Hence the graph changes after every operation.
+Queries are of two types:
+u 1 - maximize integer X such that after applying exactly the first X operations in the given order, the connected component of vertex u contains atleast one loop.
+If before applying any operation, the connected component of vertex u has no loop, then answer -1.
+u 2 z - minimize integer Y such that after applying exactly the first Y operations in the given order, the initial connected component of vertex u is divided to atleast z disjoint connected components.
+If even after applying all operations, there aren't atleast z disjoint connected components, then answer is O+1.
+Input
+The first line of input contains four space separated integers N, M, O and Q.
+Next M lines contain two space separated integers x and y denoting an undirected edge between vertices x and y.
+Next O lines contain two space separated integers a and b denoting an operation, meaning the edge between vertices a and b is to be removed from graph.
+Next Q lines contain queries either of first type or second type.
+Note : It is guaranteed that in every operation exactly one edge will be removed. Hence, no two operations are same. Also graph doesn't contain multiple edges or self loops and the order of applying operations is strictly from first to last operation.
+Output
+For each query output the required number of operations in a separate line.
+Constraints
+1 ≤ N ≤ 100000
+1 ≤ M ≤ min( N*(N - 1)/2 , 200000)
+1 ≤ O ≤ M
+1 ≤ Q ≤ 100000
+1 ≤ u ≤ N
+1 ≤ z ≤ 109
+1 ≤ a, b, x, y ≤ N
+Example
+Input:
+6 6 5 5
+1 2
+2 3
+1 3
+3 4
+2 4
+3 5
+1 2
+3 5
+1 3
+2 3
+2 4
+1 1
+1 2 2
+1 2 5
+2 1
+6 1
+Output:
+2
+2
+6
+3
+-1
+Explanation
+In first query, after applying 2 operations, connected component of vertex 1 still has a loop consisting of vertices 2, 3 & 4. But after applying 3rd operation, vertex 1 gets separated and hence has no loop in its connected component. Hence we can apply maximum 2 operations so that connected component of vertex 1 contains atleast one loop.
+In second query, after applying two operations, the initial connected component of vertex 1 which consisted of vertices {1,2,3,4,5} gets divided into two disjoint connected components which are {1,2,3,4} and {5}.

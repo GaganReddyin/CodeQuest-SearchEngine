@@ -1,0 +1,103 @@
+Good Arrangement
+Problem
+An array
+B=[B
+1
+,B
+2
+,B
+3
+,…,B
+N
+] is called a good array if the following condition holds for every
+1≤i≤N:
+B
+i
+is either the maximum or the minimum element in the subarray
+[B
+1
+,B
+2
+,…,B
+i
+].
+You are given an array
+A containing
+N integers. Find the number of its distinct rearrangements that are good.
+Two rearrangements
+B and
+C are considered different if there exists an index
+i such that
+B
+i
+
+=C
+i
+.
+In particular,
+A=[1,2,2] has three distinct rearrangements:
+[1,2,2],[2,1,2],[2,2,1].
+Since the answer can be very large, print it modulo
+10
+9
++7.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the size of the array.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,A
+3
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line the number of good rearrangements, modulo
+10
+9
++7.
+Constraints
+1≤T≤1000
+1≤N≤10
+6
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+3
+3
+1 2 3
+4
+4 3 8 3
+2
+1 1
+4
+7
+1
+Explanation:
+Test case
+1: The good rearrangements are:
+[1,2,3],
+[2,1,3],
+[3,2,1],
+[2,3,1].
+Test case
+2: The good rearrangements are:
+[3,3,4,8],[3,4,8,3],[3,4,3,8],[4,8,3,3],[4,3,8,3],[4,3,3,8],[8,4,3,3].
+[3,3,8,4] for example is not a good rearrangement, because
+4 is neither the maximum nor the minimum of all the elements before it.

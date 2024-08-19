@@ -1,0 +1,29 @@
+C. Remove Extra One
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a permutation p of length n. Remove one element from permutation to make the number of records the maximum possible.
+We remind that in a sequence of numbers a1, a2, ..., ak the element ai is a record if for every integer j (1 ≤ j < i) the following holds: aj < ai.
+Input
+The first line contains the only integer n (1 ≤ n ≤ 105) — the length of the permutation.
+The second line contains n integers p1, p2, ..., pn (1 ≤ pi ≤ n) — the permutation. All the integers are distinct.
+Output
+Print the only integer — the element that should be removed to make the number of records the maximum possible. If there are multiple such elements, print the smallest one.
+Examples
+input
+Copy
+1
+1
+output
+Copy
+1
+input
+Copy
+5
+5 1 2 3 4
+output
+Copy
+5
+Note
+In the first example the only element can be removed.

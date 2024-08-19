@@ -1,0 +1,132 @@
+F. Yet Another Problem About Pairs Satisfying an Inequality
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…
+a
+n
+. Count the number of pairs of indices
+1≤i,j≤n
+such that
+a
+i
+<i<
+a
+j
+<j
+.
+Input
+The first line contains an integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains an integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the length of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+) — the elements of the array.
+It is guaranteed that the sum of
+n
+across all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer — the number of pairs of indices satisfying the condition in the statement.
+Please note, that the answer for some test cases won't fit into 32-bit integer type, so you should use at least 64-bit integer type in your programming language (like long long for C++).
+Example
+input
+Copy
+5
+8
+1 1 2 3 8 2 1 4
+2
+1 2
+10
+0 2 1 6 3 4 1 2 8 3
+2
+1 1000000000
+3
+0 1000000000 2
+output
+Copy
+3
+0
+10
+0
+1
+Note
+For the first test cases the pairs are
+(i,j)
+=
+{(2,4),(2,8),(3,8)}
+.
+The pair
+(2,4)
+is true because
+a
+2
+=1
+,
+a
+4
+=3
+and
+1<2<3<4
+.
+The pair
+(2,8)
+is true because
+a
+2
+=1
+,
+a
+8
+=4
+and
+1<2<4<8
+.
+The pair
+(3,8)
+is true because
+a
+3
+=2
+,
+a
+8
+=4
+and
+2<3<4<8
+.

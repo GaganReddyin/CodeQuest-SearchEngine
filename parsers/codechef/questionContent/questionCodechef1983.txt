@@ -1,0 +1,99 @@
+Palindrome Partition
+Problem
+JJ has a binary string
+S of length
+2⋅N. He wants to partition it into
+M substrings such that:
+1≤M≤2⋅N
+Each
+S
+i
+belongs to exactly one partition
+None of the partitioned substrings is a palindrome
+For example: One of the valid partitions of
+10010011 is
+100
+ 10
+ 011
+.
+Can you find any partition satisfying the above conditions? If no such partition exists, output
+−1.
+A string is called palindrome if it reads the same backwards and forwards, for e.g.
+1001 and
+00100 are palindromic strings.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — half the length of the binary string
+S.
+The second line of each test case contains a binary string
+S of length
+2⋅N containing
+0s and
+1s only.
+Output Format
+For each test case,
+In the first line, output:
+M
+(1≤M≤2⋅N) - the number of partitions
+In the second line, output
+M integers:
+L
+1
+,L
+2
+,…,L
+M
+- where
+L
+i
+denotes the length of the
+i
+th
+partitioned substring. (Note that
+L
+1
++L
+2
++⋯+L
+M
+=2⋅N and
+L
+i
+≥1 for all
+i)
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+10010011
+1
+00
+3
+101101
+3
+3 2 3
+-1
+2
+2 4
+Explanation:
+Test Case 1: Explained in the problem statement.
+Test Case 2: It can be proven that no valid partition of
+00 exists.
+Test Case 3: One of the valid partitions of
+101101 is
+10
+ 1101
+.

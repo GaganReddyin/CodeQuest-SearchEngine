@@ -1,0 +1,226 @@
+D1. RPD and Rap Sheet (Easy Version)
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The only difference is that here
+k=2
+. You can make hacks only if both the versions of the problem are solved.
+This is an interactive problem.
+Every decimal number has a base
+k
+equivalent. The individual digits of a base
+k
+number are called
+k
+-its. Let's define the
+k
+-itwise XOR of two
+k
+-its
+a
+and
+b
+as
+(a+b)modk
+.
+The
+k
+-itwise XOR of two base
+k
+numbers is equal to the new number formed by taking the
+k
+-itwise XOR of their corresponding
+k
+-its. The
+k
+-itwise XOR of two decimal numbers
+a
+and
+b
+is denoted by
+a
+⊕
+k
+b
+and is equal to the decimal representation of the
+k
+-itwise XOR of the base
+k
+representations of
+a
+and
+b
+. All further numbers used in the statement below are in decimal unless specified. When
+k=2
+(it is always true in this version), the
+k
+-itwise XOR is the same as the bitwise XOR.
+You have hacked the criminal database of Rockport Police Department (RPD), also known as the Rap Sheet. But in order to access it, you require a password. You don't know it, but you are quite sure that it lies between
+0
+and
+n−1
+inclusive. So, you have decided to guess it. Luckily, you can try at most
+n
+times without being blocked by the system. But the system is adaptive. Each time you make an incorrect guess, it changes the password. Specifically, if the password before the guess was
+x
+, and you guess a different number
+y
+, then the system changes the password to a number
+z
+such that
+x
+⊕
+k
+z=y
+. Guess the password and break into the system.
+Input
+The first line of input contains a single integer
+t
+(
+1≤t≤10000
+) denoting the number of test cases.
+t
+test cases follow.
+The first line of each test case contains two integers
+n
+(
+1≤n≤2⋅
+10
+5
+) and
+k
+(
+k=2
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Interaction
+For each test case, first read two integers
+n
+and
+k
+. Then you may ask up to
+n
+queries.
+For each query, print a single integer
+y
+(
+0≤y≤2⋅
+10
+7
+). Let the current password be
+x
+. After that, read an integer
+r
+.
+If
+x=y
+, you will read
+r=1
+and the test case is solved. You must then continue solving the remaining test cases.
+Else, you will read
+r=0
+. At this moment the password is changed to a number
+z
+such that
+x
+⊕
+k
+z=y
+.
+After printing a query, do not forget to output the end of line and flush the output. Otherwise, you will get the Idleness limit exceeded verdict.
+To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see documentation for other languages.
+If you ask an invalid query or exceed
+n
+queries, you will read
+r=−1
+and you will receive the Wrong Answer verdict. Make sure to exit immediately to avoid unexpected verdicts.
+Note that the interactor is adaptive. That is, the original password is not fixed in the beginning and may depend on your queries. But it is guaranteed that at any moment there is at least one initial password such that all the answers to the queries are consistent.
+Hacks:
+To use hacks, use the following format of tests:
+The first line should contain a single integer
+t
+(
+1≤t≤10000
+) — the number of test cases.
+The first and only line of each test case should contain two integers
+n
+(
+1≤n≤2⋅
+10
+5
+) and
+k
+(
+k=2
+) denoting the number of queries and the base respectively. The optimal original password is automatically decided by the adaptive interactor.
+You must ensure that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Example
+input
+Copy
+1
+5 2
+
+0
+
+0
+
+1
+output
+Copy
+3
+
+4
+
+5
+Note
+In the example test case, the hidden password is
+2
+.
+The first query is
+3
+. It is not equal to the current password. So,
+0
+is returned, and the password is changed to
+1
+since
+2
+⊕
+2
+1=3
+.
+The second query is
+4
+. It is not equal to the current password. So,
+0
+is returned, and the password is changed to
+5
+since
+1
+⊕
+2
+5=4
+.
+The third query is
+5
+. It is equal to the current password. So,
+1
+is returned, and the job is done.
+Note that this initial password is taken just for the sake of explanation. When you submit, the interactor might behave differently because it is adaptive.

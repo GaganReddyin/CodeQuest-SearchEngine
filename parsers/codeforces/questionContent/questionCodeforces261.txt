@@ -1,0 +1,349 @@
+F. Inverse Transformation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A permutation scientist is studying a self-transforming permutation
+a
+consisting of
+n
+elements
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+A permutation is a sequence of integers from
+1
+to
+n
+of length
+n
+containing each number exactly once. For example,
+[1]
+,
+[4,3,5,1,2]
+are permutations, while
+[1,1]
+,
+[4,3,1]
+are not.
+The permutation transforms day by day. On each day, each element
+x
+becomes
+a
+x
+, that is,
+a
+x
+becomes
+a
+a
+x
+. Specifically:
+on the first day, the permutation becomes
+b
+, where
+b
+x
+=
+a
+a
+x
+;
+on the second day, the permutation becomes
+c
+, where
+c
+x
+=
+b
+b
+x
+;
+…
+For example, consider permutation
+a=[2,3,1]
+. On the first day, it becomes
+[3,1,2]
+. On the second day, it becomes
+[2,3,1]
+.
+You're given the permutation
+a
+′
+on the
+k
+-th day.
+Define
+σ(x)=
+a
+x
+, and define
+f(x)
+as the minimal positive integer
+m
+such that
+σ
+m
+(x)=x
+, where
+σ
+m
+(x)
+denotes
+σ(σ(…σ
+
+
+
+
+
+
+
+
+
+m times
+(x)…))
+.
+For example, if
+a=[2,3,1]
+, then
+σ(1)=2
+,
+σ
+2
+(1)=σ(σ(1))=σ(2)=3
+,
+σ
+3
+(1)=σ(σ(σ(1)))=σ(3)=1
+, so
+f(1)=3
+. And if
+a=[4,2,1,3]
+,
+σ(2)=2
+so
+f(2)=1
+;
+σ(3)=1
+,
+σ
+2
+(3)=4
+,
+σ
+3
+(3)=3
+so
+f(3)=3
+.
+Find the initial permutation
+a
+such that
+∑
+i=1
+n
+1
+f(i)
+is minimum possible.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+;
+1≤k≤
+10
+9
+) — the length of
+a
+, and the last day.
+The second line contains
+n
+integers
+a
+′
+1
+,
+a
+′
+2
+,…,
+a
+′
+n
+(
+1≤
+a
+′
+i
+≤n
+) — the permutation on the
+k
+-th day.
+It's guaranteed that the sum of
+n
+does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, if at least one initial
+a
+consistent with the given
+a
+′
+exists, print "YES", then print
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+— the initial permutation with the smallest sum
+∑
+i=1
+n
+1
+f(i)
+. If there are multiple answers with the smallest sum, print any.
+If there are no valid permutations, print "NO".
+Example
+input
+Copy
+10
+5 3
+1 2 3 4 5
+7 2
+1 2 3 4 5 6 7
+8 998
+1 2 3 4 5 6 7 8
+6 1
+6 3 5 4 1 2
+4 8
+4 2 1 3
+9 1
+1 5 4 8 7 6 3 2 9
+5 9999999
+2 3 4 5 1
+7 97843220
+4 6 1 2 7 5 3
+3 1000000000
+2 1 3
+12 3
+8 9 10 1 5 3 11 4 7 6 12 2
+output
+Copy
+YES
+2 3 4 1 5
+YES
+6 2 5 7 1 3 4
+YES
+2 3 4 5 6 7 8 1
+YES
+3 1 6 4 2 5
+YES
+4 2 1 3
+NO
+YES
+3 4 5 1 2
+YES
+2 5 4 6 3 7 1
+NO
+YES
+3 7 8 6 5 1 12 10 11 4 2 9
+Note
+In the second test case, the initial permutation can be
+a=[6,2,5,7,1,3,4]
+, which becomes
+[3,2,1,4,6,5,7]
+on the first day and
+a
+′
+=[1,2,3,4,5,6,7]
+on the second day (the
+k
+-th day). Also, among all the permutations satisfying that, it has the minimum
+∑
+i=1
+n
+1
+f(i)
+, which is
+1
+4
++
+1
+1
++
+1
+4
++
+1
+2
++
+1
+4
++
+1
+4
++
+1
+2
+=3
+.
+In the fifth test case, the initial permutation can be
+a=[4,2,1,3]
+, which becomes
+[3,2,4,1]
+on the first day,
+[4,2,1,3]
+on the second day, and so on. So it finally becomes
+a
+′
+=[4,2,1,3]
+on the
+8
+-th day (the
+k
+-th day). And it has the minimum
+∑
+i=1
+n
+1
+f(i)
+=
+1
+3
++
+1
+1
++
+1
+3
++
+1
+3
+=2
+.

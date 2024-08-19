@@ -1,0 +1,165 @@
+A Pizza Slice
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+ChefX showed ChefY his new pizza slice design. The design is a planar figure that can be drawn in the following way:
+Draw a point
+A
+0
+and two rays from this point such that the angle between them is
+α<π/2.
+Mark
+N points
+A
+1
+,A
+2
+,A
+3
+,…,A
+N
+on one ray in this order (
+A
+1
+is closest to
+A
+0
+).
+Mark
+N points
+B
+1
+,B
+2
+,B
+3
+,…,B
+N
+on the other ray in this order (
+B
+1
+is closest to
+A
+0
+).
+For each valid
+i, draw a line segment between points
+A
+i
+and
+B
+i+1
+.
+For each valid
+i, draw a line segment between points
+B
+i
+and
+A
+i+1
+.
+Finally, draw a line segment between points
+A
+N
+and
+B
+N
+.
+All these
+2N−1 line segments must have equal lengths, which must also be equal to
+∣A
+0
+A
+1
+∣=∣A
+0
+B
+1
+∣.
+The result should look roughly like this:
+ChefY wants to show ChefX that he does not know his own design very well. He asks ChefX to compute the angle between three of the marked points in this figure. It is clear that there are only four types of angles:
+∠A
+x
+A
+y
+B
+z
+∠A
+x
+B
+y
+A
+z
+∠A
+x
+B
+y
+B
+z
+∠B
+x
+A
+y
+B
+z
+Can you help ChefX find the angle ChefY asks for? It can be proved that under the given constraints, each angle can be written as
+π⋅m/n, where
+m and
+n are coprime integers; you should find
+m and
+n.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains five space-separated integers
+N,
+t,
+x,
+y and
+z. Here,
+t denotes the type of the angle as listed above.
+Output
+For each query, print a single line containing two space-separated integers
+m and
+n.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+9
+1≤t≤4
+each angle is between three of the points
+A
+0
+,A
+1
+,…,A
+N
+,B
+1
+,…,B
+N
+∣x−y∣=1
+∣y−z∣=1
+each angle is non-zero
+Subtasks
+Subtask #1 (10 points):
+1≤T≤10
+Subtask #2 (90 points): original constraints
+Sample 1:
+Input
+Output
+1
+175456798 1 151163203 151163204 151163205
+66583464 116971199
+Explanation:
+Example case 1: The type is
+1, so the angle we want is
+A
+151163203
+A
+151163204
+B
+151163205
+. The angle is
+(66583464/116971199)π≐1.7883.

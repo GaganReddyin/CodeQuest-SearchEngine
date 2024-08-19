@@ -1,0 +1,176 @@
+E. Sliding Doors
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Imagine that you are the CEO of a big old-fashioned company. Unlike any modern and progressive company (such as JetBrains), your company has a dress code. That's why you have already allocated a spacious room for your employees where they can change their clothes. Moreover, you've already purchased an
+m
+-compartment wardrobe, so the
+i
+-th employee can keep his/her belongings in the
+i
+-th cell (of course, all compartments have equal widths).
+The issue has occurred: the wardrobe has sliding doors! More specifically, the wardrobe has
+n
+doors (numbered from left to right) and the
+j
+-th door has width equal to
+a
+j
+wardrobe's cells. The wardrobe has single rails so that no two doors can slide past each other.
+Extremely schematic example of a wardrobe:
+m=9
+,
+n=2
+,
+a
+1
+=2
+,
+a
+2
+=3
+.
+The problem is as follows: sometimes to open some cells you must close some other cells (since all doors are placed on the single track). For example, if you have a
+4
+-compartment wardrobe (i.e.
+m=4
+) with
+n=2
+one-cell doors (i.e.
+a
+1
+=
+a
+2
+=1
+) and you need to open the
+1
+-st and the
+3
+-rd cells, you have to close the
+2
+-nd and the
+4
+-th cells.
+As CEO, you have a complete schedule for the next
+q
+days. Now you are wondering: is it possible that all employees who will come on the
+k
+-th day can access their cells simultaneously?
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤2⋅
+10
+5
+,
+1≤m≤4⋅
+10
+5
+) — the number of doors and compartments respectively.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤m
+,
+∑
+a
+i
+≤m
+) — the corresponding widths of the doors.
+The third line contains a single integer
+q
+(
+1≤q≤2⋅
+10
+5
+) — the number of days you have to process.
+The next
+q
+lines describe schedule of each day. Each schedule is represented as an integer
+c
+k
+followed by
+c
+k
+integers
+w
+1
+,
+w
+2
+,…,
+w
+c
+k
+(
+1≤
+c
+k
+≤2⋅
+10
+5
+,
+1≤
+w
+1
+<
+w
+2
+<⋯<
+w
+c
+k
+≤m
+) — the number of employees who will come on the
+k
+-th day, and their indices in ascending order.
+It's guaranteed that
+∑
+c
+k
+doesn't exceed
+2⋅
+10
+5
+.
+Output
+Print
+q
+answers. Each answer is "YES" or "NO" (case insensitive). Print "YES" if it is possible, that all employees on the corresponding day can access their compartments simultaneously.
+Example
+input
+Copy
+3 10
+2 3 2
+6
+1 5
+2 1 10
+2 2 9
+2 5 6
+3 1 7 8
+4 1 2 3 4
+output
+Copy
+YES
+YES
+NO
+NO
+YES
+NO

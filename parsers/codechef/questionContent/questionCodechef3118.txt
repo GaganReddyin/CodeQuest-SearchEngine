@@ -1,0 +1,35 @@
+Lucas Theorem
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef is tired of solving boring math problems by hand. One of these problems is summing up the products of elements from each k-subset of the set [n]. Here, a k-subset is a subset containing exactly k elements and [n] refers to the set which contains all integers between 1 and n (inclusive). More formally:
+Let’s denote this number by f(n, k). Note that f(n, 0) = 1.
+Since calculating f(n, k) is too boring, Chef wants to know how the divisibility of f(n, k) by a given prime p depends on k. Specifically, for a fixed n, you should compute the number of ways to select k (0 ≤ k ≤ n) so that f(n, k) isn't divisible by p. After a while of thinking, Chef realized there might be too many ways to do that. Therefore, you should compute this number modulo 109+7.
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first and only line of each test case contains two space-separated integers n and p.
+Output
+For each test case, print a single line containing one number — the number of ways to select k, modulo 109+7.
+Constraints
+1 ≤ T ≤ 4
+1 ≤ n < 10501
+n does not contain leading zeroes
+2 ≤ p ≤ 100,000
+p is prime
+Subtasks
+Subtask #1 (10 points): n ≤ 5,000
+Subtask #2 (40 points): n ≤ 100,000
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+4 2
+2
+Explanation:
+Example case 1: The values of f(4, k) are as follows:
+f(4, 0) = 1
+f(4, 1) = 1+2+3+4 = 10
+f(4, 2) = 1·2+2·3+3·4+4·1+1·3+2·4 = 35
+f(4, 3) = 1·2·3+2·3·4+1·3·4+1·2·4 = 50
+f(4, 4) = 1·2·3·4 = 24
+Only k = 0 and k = 2 give numbers indivisible by p = 2, so the answer is 2.

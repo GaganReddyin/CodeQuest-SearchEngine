@@ -1,0 +1,103 @@
+F2. Magician and Pigs (Hard Version)
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the hard version of the problem. The only difference between the two versions is the constraint on
+n
+and
+x
+. You can make hacks only if both versions of the problem are solved.
+Little09 has been interested in magic for a long time, and it's so lucky that he meets a magician! The magician will perform
+n
+operations, each of them is one of the following three:
+1 x
+: Create a pig with
+x
+Health Points.
+2 x
+: Reduce the Health Point of all living pigs by
+x
+.
+3
+: Repeat all previous operations. Formally, assuming that this is the
+i
+-th operation in the operation sequence, perform the first
+i−1
+operations (including "Repeat" operations involved) in turn.
+A pig will die when its Health Point is less than or equal to
+0
+.
+Little09 wants to know how many living pigs there are after all the operations. Please, print the answer modulo
+998244353
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤8⋅
+10
+5
+)  — the number of operations.
+Each of the following
+n
+lines contains an operation given in the form described in the problem statement. It's guaranteed that
+1≤x≤
+10
+9
+in operations of the first two types.
+Output
+Print a single integer  — the number of living pigs after all the operations, modulo
+998244353
+.
+Examples
+input
+Copy
+4
+1 8
+2 3
+3
+3
+output
+Copy
+2
+input
+Copy
+6
+1 5
+1 6
+2 2
+3
+1 4
+3
+output
+Copy
+5
+input
+Copy
+12
+2 1
+1 15
+1 9
+3
+1 12
+2 2
+1 13
+3
+2 1
+1 9
+1 8
+3
+output
+Copy
+17
+Note
+In the first example, the operations are equivalent to repeating four times: create a pig with
+8
+Health Points and then reduce the Health Points of all living pigs by
+3
+. It is easy to find that there are two living pigs in the end with
+2
+and
+5
+Health Points.

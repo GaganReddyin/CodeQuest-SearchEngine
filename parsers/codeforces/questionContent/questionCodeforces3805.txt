@@ -1,0 +1,64 @@
+B2. Not A, not B or not C?
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a qubit which is guaranteed to be in one of the following states:
+|A⟩=
+1
+2
+√
+(|0⟩+|1⟩)
+,
+|B⟩=
+1
+2
+√
+(|0⟩+ω|1⟩)
+, or
+|C⟩=
+1
+2
+√
+(|0⟩+
+ω
+2
+|1⟩)
+, where
+ω=
+e
+2iπ/3
+.
+These states are not orthogonal, and thus can not be distinguished perfectly. Your task is to figure out in which state the qubit is not. More formally:
+If the qubit was in state
+|A⟩
+, you have to return 1 or 2.
+If the qubit was in state
+|B⟩
+, you have to return 0 or 2.
+If the qubit was in state
+|C⟩
+, you have to return 0 or 1.
+In other words, return 0 if you're sure the qubit was not in state
+|A⟩
+, return 1 if you're sure the qubit was not in state
+|B⟩
+, and return 2 if you're sure the qubit was not in state
+|C⟩
+.
+Your solution will be called 1000 times, each time the state of the qubit will be chosen as
+|A⟩
+,
+|B⟩
+or
+|C⟩
+with equal probability. The state of the qubit after the operations does not matter.
+You have to implement an operation which takes a qubit as an input and returns an integer. Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Solve (q : Qubit) : Int {
+        // your code here
+    }
+}

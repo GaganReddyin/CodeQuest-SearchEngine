@@ -1,0 +1,162 @@
+Scalar Product Tree
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef has a tree with
+N vertices (numbered
+1 through
+N). The tree is rooted at the vertex
+1. For each valid
+i, the weight of the
+i-th vertex is
+w
+i
+.
+For a vertex
+u with depth
+d (the root has depth
+1), let's denote the sequence of vertices on the path from
+u to the root by
+(v
+1
+,v
+2
+,…,v
+d
+), where
+v
+1
+=u and
+v
+d
+=1. Then, let
+F
+u
+be the vector (i.e. sequence)
+(w
+v
+1
+,w
+v
+2
+,…,w
+v
+d
+), where the
+i-th element is
+F
+u,i
+=w
+v
+i
+for each valid
+i.
+For any two vertices
+u and
+v with the same depth
+d, let's define the dot product
+F
+u
+⋅F
+v
+=∑
+i=1
+d
+F
+u,i
+⋅F
+v,i
+.
+Your task is to answer
+Q queries. In each query, you are given two vertices
+u and
+v with the same depth, and you should find
+F
+u
+⋅F
+v
+. Since the dot product can be large, compute it modulo
+2
+32
+.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+w
+1
+,w
+2
+,…,w
+N
+.
+Each of the next
+N−1 lines contains two space-separated integers
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+Q lines follow. Each of these lines contains two space-separated integers
+u and
+v describing a query.
+Output
+For each query, print a single line containing one integer
+F
+u
+⋅F
+v
+modulo
+2
+32
+.
+Constraints
+1≤N,Q≤3⋅10
+5
+1≤w
+i
+≤10
+9
+for each valid
+i
+1≤u,v≤N
+in each query,
+u and
+v have the same depth
+Subtasks
+Subtask #1 (15 points, time limit 1 second):
+N,Q≤1,000
+Subtask #2 (45 points, time limit 2 seconds):
+N,Q≤10
+5
+Subtask #3 (40 points, time limit 3.5 seconds): original constraints
+Sample 1:
+Input
+Output
+5 2
+5 4 3 2 1
+1 2
+1 3
+2 4
+2 5
+2 3
+4 5
+37
+43
+Explanation:
+In the first query,
+F
+2
+=(4,5) and
+F
+3
+=(3,5), so the scalar product is
+4⋅3+5⋅5=37.
+In the second query,
+F
+4
+=(2,4,5) and
+F
+5
+=(1,4,5), so the scalar product is
+2⋅1+4⋅4+5⋅5=43.

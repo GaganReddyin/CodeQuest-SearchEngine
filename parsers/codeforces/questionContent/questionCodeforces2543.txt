@@ -1,0 +1,174 @@
+B. Shuffle
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array consisting of
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+. Initially
+a
+x
+=1
+, all other elements are equal to
+0
+.
+You have to perform
+m
+operations. During the
+i
+-th operation, you choose two indices
+c
+and
+d
+such that
+l
+i
+≤c,d≤
+r
+i
+, and swap
+a
+c
+and
+a
+d
+.
+Calculate the number of indices
+k
+such that it is possible to choose the operations so that
+a
+k
+=1
+in the end.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. Then the description of
+t
+testcases follow.
+The first line of each test case contains three integers
+n
+,
+x
+and
+m
+(
+1≤n≤
+10
+9
+;
+1≤m≤100
+;
+1≤x≤n
+).
+Each of next
+m
+lines contains the descriptions of the operations; the
+i
+-th line contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+).
+Output
+For each test case print one integer — the number of indices
+k
+such that it is possible to choose the operations so that
+a
+k
+=1
+in the end.
+Example
+input
+Copy
+3
+6 4 3
+1 6
+2 3
+5 5
+4 1 2
+2 4
+1 2
+3 3 2
+2 3
+1 2
+output
+Copy
+6
+2
+3
+Note
+In the first test case, it is possible to achieve
+a
+k
+=1
+for every
+k
+. To do so, you may use the following operations:
+swap
+a
+k
+and
+a
+4
+;
+swap
+a
+2
+and
+a
+2
+;
+swap
+a
+5
+and
+a
+5
+.
+In the second test case, only
+k=1
+and
+k=2
+are possible answers. To achieve
+a
+1
+=1
+, you have to swap
+a
+1
+and
+a
+1
+during the second operation. To achieve
+a
+2
+=1
+, you have to swap
+a
+1
+and
+a
+2
+during the second operation.

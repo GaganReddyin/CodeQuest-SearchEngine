@@ -1,0 +1,228 @@
+D. Flipping Range
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of
+n
+integers and a set
+B
+of
+m
+positive integers such that
+1≤
+b
+i
+≤⌊
+n
+2
+⌋
+for
+1≤i≤m
+, where
+b
+i
+is the
+i
+-th element of
+B
+.
+You can make the following operation on
+a
+:
+Select some
+x
+such that
+x
+appears in
+B
+.
+Select an interval from array
+a
+of size
+x
+and multiply by
+−1
+every element in the interval. Formally, select
+l
+and
+r
+such that
+1≤l≤r≤n
+and
+r−l+1=x
+, then assign
+a
+i
+:=−
+a
+i
+for every
+i
+such that
+l≤i≤r
+.
+Consider the following example, let
+a=[0,6,−2,1,−4,5]
+and
+B={1,2}
+:
+[0,6,−2,−1,4,5]
+is obtained after choosing size
+2
+and
+l=4
+,
+r=5
+.
+[0,6,2,−1,4,5]
+is obtained after choosing size
+1
+and
+l=3
+,
+r=3
+.
+Find the maximum
+∑
+i=1
+n
+a
+i
+you can get after applying such operation any number of times (possibly zero).
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n≤
+10
+6
+,
+1≤m≤⌊
+n
+2
+⌋
+) — the number of elements of
+a
+and
+B
+respectively.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+).
+The third line of each test case contains
+m
+distinct positive integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+(
+1≤
+b
+i
+≤⌊
+n
+2
+⌋
+) — the elements in the set
+B
+.
+It's guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+6
+.
+Output
+For each test case print a single integer — the maximum possible sum of all
+a
+i
+after applying such operation any number of times.
+Example
+input
+Copy
+3
+6 2
+0 6 -2 1 -4 5
+1 2
+7 1
+1 -1 1 -1 1 -1 1
+2
+5 1
+-1000000000 -1000000000 -1000000000 -1000000000 -1000000000
+1
+output
+Copy
+18
+5
+5000000000
+Note
+In the first test, you can apply the operation
+x=1
+,
+l=3
+,
+r=3
+, and the operation
+x=1
+,
+l=5
+,
+r=5
+, then the array becomes
+[0,6,2,1,4,5]
+.
+In the second test, you can apply the operation
+x=2
+,
+l=2
+,
+r=3
+, and the array becomes
+[1,1,−1,−1,1,−1,1]
+, then apply the operation
+x=2
+,
+l=3
+,
+r=4
+, and the array becomes
+[1,1,1,1,1,−1,1]
+. There is no way to achieve a sum bigger than
+5
+.

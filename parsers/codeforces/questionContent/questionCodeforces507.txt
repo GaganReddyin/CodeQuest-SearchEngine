@@ -1,0 +1,118 @@
+E1. Joking (Easy Version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between this problem and the hard version is the maximum number of questions.
+This is an interactive problem.
+There is a hidden integer
+1≤x≤n
+which you have to find. In order to find it you can ask at most
+82
+questions.
+In each question you can choose a non-empty integer set
+S
+and ask if
+x
+belongs to
+S
+or not, after each question, if
+x
+belongs to
+S
+, you'll receive "YES", otherwise "NO".
+But the problem is that not all answers are necessarily true (some of them are joking), it's just guaranteed that for each two consecutive questions, at least one of them is answered correctly.
+Additionally to the questions, you can make at most
+2
+guesses for the answer
+x
+. Each time you make a guess, if you guess
+x
+correctly, you receive ":)" and your program should terminate, otherwise you'll receive ":(".
+As a part of the joking, we will not fix the value of
+x
+in the beginning. Instead, it can change throughout the interaction as long as all the previous responses are valid as described above.
+Note that your answer guesses are always answered correctly. If you ask a question before and after a guess, at least one of these two questions is answered correctly, as normal.
+Input
+The only line of the input contains a single integer
+n
+(
+1≤n≤
+10
+5
+), the maximum possible value of
+x
+.
+Interaction
+For each question, if you want to ask about a set
+S
+, first print the character '?', then print the size of
+S
+and then print the elements of
+S
+one by one. Each element should be an integer between
+1
+and
+n
+, the elements must be distinct. After each question, read a string "YES" or "NO", as explained in the statement. You can make at most
+82
+such questions.
+If you want to guess for
+x
+, first print the character '!' and then print your guess. After each guess, read ":)" or ":(". If you guess
+x
+correctly, the answer is ":)" and your program should terminate immediately, otherwise you'll receive ":(". You can make at most
+2
+such guesses.
+After printing a query do not forget to output end of line and flush the output. Otherwise, you will get Idleness limit exceeded. To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see documentation for other languages.
+Hacking is not allowed in this problem.
+Example
+input
+Copy
+6
+
+NO
+
+:(
+
+NO
+
+:)
+output
+Copy
+? 5 1 2 5 4 3
+
+! 6
+
+? 4 1 2 3 4
+
+! 5
+Note
+If the answer of the first question were correct, then
+x
+would have been equal to
+6
+, but as we can see in the first guess,
+6
+is not the answer.
+So the answer of the first question is joking. As we know, the answer of at least one of our two questions is correct, since the answer of the first question was joking, the answer of the second question should be correct.
+So we will understand that
+x
+is not equal to
+1,2,3
+or
+4
+, and we also knew that
+x
+is not equal to
+6
+either. Hence
+x
+should be equal to
+5
+.

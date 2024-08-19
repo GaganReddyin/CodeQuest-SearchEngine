@@ -1,0 +1,133 @@
+Range  Array
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+Chef has an array
+A of length
+N. Chef constructs the range-array
+A
+L,R
+as follows:
+First, Chef considers the subarray
+A
+L
+,A
+L+1
+,...,A
+R
+.
+Then Chef removes the integers that do not belong to the range
+[L,R] from the subarray to finally create the range-array
+A
+L,R
+.
+For example, consider the array
+A=[1,3,2,4], then the range-arrays are:
+A
+1,1
+=[1],A
+1,2
+=[1],A
+1,3
+=[1,3,2],A
+1,4
+=[1,3,2,4],
+A
+2,2
+=[],
+A
+2,3
+=[3,2],
+A
+2,4
+=[3,2,4] and so on.
+Chef is given a permutation
+A
+1
+,A
+2
+,…,A
+N
+of length
+N. A pair of integers
+(L,R)(1≤L≤R≤N) is called good if all the elements in the range array
+A
+L,R
+are sorted in increasing order. In case, a range array is an empty list, it is considered to be sorted. Chef tries to find the number of good pairs
+(L,R), but fails. Can you help him?
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integer
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer - the number of good pairs.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+5
+1≤A
+i
+≤N
+A
+1
+,A
+2
+,…,A
+N
+is a permutation.
+Sum of
+N over all test cases does not exceed
+5⋅10
+5
+.
+Subtasks
+Subtask 1 (5 points):
+1≤T≤20
+1≤N≤100
+Sum of
+N over all test cases does not exceed
+200.
+Subtask 2 (20 points):
+1≤T≤20
+1≤N≤2500
+Sum of
+N over all test cases does not exceed
+2500.
+Subtask 3 (75 points):
+Original constraints
+Sample 1:
+Input
+Output
+3
+2
+2 1
+3 
+1 2 3
+4
+1 3 2 4
+2
+6
+6
+Explanation:
+Test case
+1: The range arrays are
+A
+1,1
+=[],A
+2,2
+=[],A
+1,2
+=[2,1]. The first two of them are empty lists and hence sorted.
+Test case
+2: Elements in all the six range arrays are sorted in increasing order.

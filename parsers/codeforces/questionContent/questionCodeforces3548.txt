@@ -1,0 +1,105 @@
+I. Good Subsets
+time limit per test6 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+segments on the
+Ox
+axis. The
+i
+-th segment is given as a pair
+l
+i
+,
+r
+i
+, where
+l
+i
+is the position of the left end of the
+i
+-th segment and
+r
+i
+is the position of the right end of the
+i
+-th segment. Segments may intersect, overlap, or even coincide. A segment is a set of numbers (including floating-point numbers) lying between the segment ends or coinciding with them. Formally, the segment
+[l,r]={x | x∈R, l≤x≤r}
+.
+Let the union of segments be the set of all axis points covered by the set of segments. Let's call a subset of the given segments good if its union equals the union of all
+n
+segments.
+Your task is to calculate the number of good subsets of the given
+n
+segments. Since the answer may be very large, print it modulo
+998244353
+.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of segments.
+The next
+n
+lines contain segments. The
+i
+-th segment is given as a pair
+l
+i
+,
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤
+10
+9
+), where
+l
+i
+is the left border of the segment and
+r
+i
+is the right border of the segment. Segments may intersect, overlap, or even coincide.
+Output
+Print the number of good subsets of the given set of segments. Since the answer may be very large, print it modulo
+998244353
+.
+Examples
+input
+Copy
+3
+1 1
+2 6
+1 6
+output
+Copy
+4
+input
+Copy
+2
+3 4
+2 5
+output
+Copy
+2
+input
+Copy
+4
+1 2
+5 5
+2 3
+1 3
+output
+Copy
+5

@@ -1,0 +1,193 @@
+E. You Are Given Some Strings...
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+t
+and
+n
+strings
+s
+1
+,
+s
+2
+,…,
+s
+n
+. All strings consist of lowercase Latin letters.
+Let
+f(t,s)
+be the number of occurences of string
+s
+in string
+t
+. For example,
+f
+(
+′
+aaabacaa
+′
+,
+′
+aa
+′
+)=3
+, and
+f
+(
+′
+ababa
+′
+,
+′
+aba
+′
+)=2
+.
+Calculate the value of
+∑
+i=1
+n
+∑
+j=1
+n
+f(t,
+s
+i
++
+s
+j
+)
+, where
+s+t
+is the concatenation of strings
+s
+and
+t
+. Note that if there are two pairs
+i
+1
+,
+j
+1
+and
+i
+2
+,
+j
+2
+such that
+s
+i
+1
++
+s
+j
+1
+=
+s
+i
+2
++
+s
+j
+2
+, you should include both
+f(t,
+s
+i
+1
++
+s
+j
+1
+)
+and
+f(t,
+s
+i
+2
++
+s
+j
+2
+)
+in answer.
+Input
+The first line contains string
+t
+(
+1≤|t|≤2⋅
+10
+5
+).
+The second line contains integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+Each of next
+n
+lines contains string
+s
+i
+(
+1≤|
+s
+i
+|≤2⋅
+10
+5
+).
+It is guaranteed that
+∑
+i=1
+n
+|
+s
+i
+|≤2⋅
+10
+5
+. All strings consist of lowercase English letters.
+Output
+Print one integer — the value of
+∑
+i=1
+n
+∑
+j=1
+n
+f(t,
+s
+i
++
+s
+j
+)
+.
+Examples
+input
+Copy
+aaabacaa
+2
+a
+aa
+output
+Copy
+5
+input
+Copy
+aaabacaa
+4
+a
+a
+a
+b
+output
+Copy
+33

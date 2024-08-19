@@ -1,0 +1,48 @@
+D. Cartons of milk
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Olya likes milk very much. She drinks k cartons of milk each day if she has at least k and drinks all of them if she doesn't. But there's an issue — expiration dates. Each carton has a date after which you can't drink it (you still can drink it exactly at the date written on the carton). Due to this, if Olya's fridge contains a carton past its expiry date, she throws it away.
+Olya hates throwing out cartons, so when she drinks a carton, she chooses the one which expires the fastest. It's easy to understand that this strategy minimizes the amount of cartons thrown out and lets her avoid it if it's even possible.
+Milk. Best before: 20.02.2017.
+The main issue Olya has is the one of buying new cartons. Currently, there are n cartons of milk in Olya's fridge, for each one an expiration date is known (how soon does it expire, measured in days). In the shop that Olya visited there are m cartons, and the expiration date is known for each of those cartons as well.
+Find the maximum number of cartons Olya can buy so that she wouldn't have to throw away any cartons. Assume that Olya drank no cartons today.
+Input
+In the first line there are three integers n, m, k (1 ≤ n, m ≤ 106, 1 ≤ k ≤ n + m) — the amount of cartons in Olya's fridge, the amount of cartons in the shop and the number of cartons Olya drinks each day.
+In the second line there are n integers f1, f2, ..., fn (0 ≤ fi ≤ 107) — expiration dates of the cartons in Olya's fridge. The expiration date is expressed by the number of days the drinking of this carton can be delayed. For example, a 0 expiration date means it must be drunk today, 1 — no later than tomorrow, etc.
+In the third line there are m integers s1, s2, ..., sm (0 ≤ si ≤ 107) — expiration dates of the cartons in the shop in a similar format.
+Output
+If there's no way for Olya to drink the cartons she already has in her fridge, print -1.
+Otherwise, in the first line print the maximum number x of cartons which Olya can buy so that she wouldn't have to throw a carton away. The next line should contain exactly x integers — the numbers of the cartons that should be bought (cartons are numbered in an order in which they are written in the input, starting with 1). Numbers should not repeat, but can be in arbitrary order. If there are multiple correct answers, print any of them.
+Examples
+input
+Copy
+3 6 2
+1 0 1
+2 0 2 0 0 2
+output
+Copy
+3
+1 2 3
+input
+Copy
+3 1 2
+0 0 0
+1
+output
+Copy
+-1
+input
+Copy
+2 1 2
+0 1
+0
+output
+Copy
+1
+1 
+Note
+In the first example k = 2 and Olya has three cartons with expiry dates 0, 1 and 1 (they expire today, tomorrow and tomorrow), and the shop has 3 cartons with expiry date 0 and 3 cartons with expiry date 2. Olya can buy three cartons, for example, one with the expiry date 0 and two with expiry date 2.
+In the second example all three cartons Olya owns expire today and it means she would have to throw packets away regardless of whether she buys an extra one or not.
+In the third example Olya would drink k = 2 cartons today (one she alreay has in her fridge and one from the shop) and the remaining one tomorrow.

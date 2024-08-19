@@ -1,0 +1,255 @@
+C. Train and Queries
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Along the railroad there are stations indexed from
+1
+to
+10
+9
+. An express train always travels along a route consisting of
+n
+stations with indices
+u
+1
+,
+u
+2
+,…,
+u
+n
+, where (
+1≤
+u
+i
+≤
+10
+9
+). The train travels along the route from left to right. It starts at station
+u
+1
+, then stops at station
+u
+2
+, then at
+u
+3
+, and so on. Station
+u
+n
+ — the terminus.
+It is possible that the train will visit the same station more than once. That is, there may be duplicates among the values
+u
+1
+,
+u
+2
+,…,
+u
+n
+.
+You are given
+k
+queries, each containing two different integers
+a
+j
+and
+b
+j
+(
+1≤
+a
+j
+,
+b
+j
+≤
+10
+9
+). For each query, determine whether it is possible to travel by train from the station with index
+a
+j
+to the station with index
+b
+j
+.
+For example, let the train route consist of
+6
+of stations with indices [
+3,7,1,5,1,4
+] and give
+3
+of the following queries:
+a
+1
+=3
+,
+b
+1
+=5
+It is possible to travel from station
+3
+to station
+5
+by taking a section of the route consisting of stations [
+3,7,1,5
+]. Answer: YES.
+a
+2
+=1
+,
+b
+2
+=7
+You cannot travel from station
+1
+to station
+7
+because the train cannot travel in the opposite direction. Answer: NO.
+a
+3
+=3
+,
+b
+3
+=10
+It is not possible to travel from station
+3
+to station
+10
+because station
+10
+is not part of the train's route. Answer: NO.
+Input
+The first line of the input contains an integer
+t
+(
+1≤t≤
+10
+4
+) —the number of test cases in the test.
+The descriptions of the test cases follow.
+The first line of each test case is empty.
+The second line of each test case contains two integers:
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+,1≤k≤2⋅
+10
+5
+) —the number of stations the train route consists of and the number of queries.
+The third line of each test case contains exactly
+n
+integers
+u
+1
+,
+u
+2
+,…,
+u
+n
+(
+1≤
+u
+i
+≤
+10
+9
+). The values
+u
+1
+,
+u
+2
+,…,
+u
+n
+are not necessarily different.
+The following
+k
+lines contain two different integers
+a
+j
+and
+b
+j
+(
+1≤
+a
+j
+,
+b
+j
+≤
+10
+9
+) describing the query with index
+j
+.
+It is guaranteed that the sum of
+n
+values over all test cases in the test does not exceed
+2⋅
+10
+5
+. Similarly, it is guaranteed that the sum of
+k
+values over all test cases in the test also does not exceed
+2⋅
+10
+5
+Output
+For each test case, output on a separate line:
+YES, if you can travel by train from the station with index
+a
+j
+to the station with index
+b
+j
+NO otherwise.
+You can output YES and NO in any case (for example, strings yEs, yes, Yes and YES will be recognized as a positive response).
+Example
+input
+Copy
+3
+
+6 3
+3 7 1 5 1 4
+3 5
+1 7
+3 10
+
+3 3
+1 2 1
+2 1
+1 2
+4 5
+
+7 5
+2 1 1 1 2 4 4
+1 3
+1 4
+2 1
+4 1
+1 2
+output
+Copy
+YES
+NO
+NO
+YES
+YES
+NO
+NO
+YES
+YES
+NO
+YES
+Note
+The first test case is explained in the problem statement.

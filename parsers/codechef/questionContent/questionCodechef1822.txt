@@ -1,0 +1,109 @@
+Nil Xor
+Problem
+Chef has two non negative integers
+N and
+X. He now wants to find the number of integers
+K such that
+0≤K<N, and
+(N⊕K)&X=0.
+Note that
+⊕ denotes the bitwise XOR operator and
+& denotes the bitwise AND operator.
+Help Chef in finding the total required count.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input containing
+N and
+X denoting the two integers as described in the statement.
+Output Format
+For each test case, output the total number of integers
+K which satisfy the requirements mentioned.
+Constraints
+1≤T≤10
+5
+1≤N,X≤2
+30
+−1
+Subtasks
+Subtask 1 (10 points):
+1≤M≤10
+Subtask 2 (20 points): The sum of
+N across all test cases won't exceed
+20.
+Subtask 3 (70 points): No further constraints.
+Sample 1:
+Input
+Output
+3
+4 5
+8 4
+1 2
+0
+4
+1
+Explanation:
+Testcase 1:
+N=4,X=5. So we need to find the number of
+K, which satisfy
+0≤K<4, and
+(4⊕K)&5=0.
+(100
+2
+⊕000
+2
+)&101
+2
+=100
+2
+&101
+2
+=100
+2
+
+=0
+(100
+2
+⊕001
+2
+)&101
+2
+=101
+2
+&101
+2
+=101
+2
+
+=0
+(100
+2
+⊕010
+2
+)&101
+2
+=110
+2
+&101
+2
+=100
+2
+
+=0
+(100
+2
+⊕011
+2
+)&101
+2
+=111
+2
+&101
+2
+=101
+2
+
+=0
+So, we have looked at all values of
+K, and found no value which satisfies the requirements. So the answer is
+0.

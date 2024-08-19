@@ -1,0 +1,114 @@
+Chef and DAG
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given
+K permutations of integers
+1 through
+N. For each
+i (
+1≤i≤K), the
+i-th permutation is denoted by
+A
+i,1
+,A
+i,2
+,…,A
+i,N
+.
+Construct a directed acyclic graph with
+N nodes (numbered
+1 through
+N) such that:
+Each of the given permutations is a valid topological sort of the graph. Formally, for each valid
+k and each
+i,j (
+1≤i<j≤N), there is no edge from the node
+A
+k,j
+to the node
+A
+k,i
+.
+The outdegree of each node is at most
+1.
+The number of nodes with indegree
+0 is the smallest possible.
+If there are multiple solutions, you may find any one.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+K lines follow. For each
+i (
+1≤i≤K), the
+i-th of these lines contains
+N space-separated integers
+A
+i,1
+,A
+i,2
+,…,A
+i,N
+.
+Output
+For each test case, print two lines.
+The first of these lines should contain one integer ― the minimum number of nodes with indegree
+0.
+The second line should contain
+N space-separated integers
+v
+1
+,v
+2
+,…,v
+N
+describing your graph in the following way: for each valid
+i, if
+v
+i
+=0, there is no outgoing edge from the
+i-th node; otherwise, there is an edge from the
+i-th node to the
+v
+i
+-th node.
+Constraints
+1≤T≤100
+1≤N≤500
+1≤K≤100
+1≤A
+i,j
+≤N for each valid
+i,j
+the sum of
+N over all test cases does not exceed
+2,000
+Subtasks
+Subtask #1 (20 points):
+N≤20
+K≤10
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2
+2 2
+1 2
+2 1
+2 2
+1 2
+1 2
+2
+0 0
+1
+2 0
+Explanation:
+Example case 1: The graph must consist of just two disconnected nodes, since no edges are allowed. Hence, there are two nodes with indegree
+0.
+Example case 2: The graph may contain an edge from node
+1 to node
+2. Then, there is only one node with indegree
+0.

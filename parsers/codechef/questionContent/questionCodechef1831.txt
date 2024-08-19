@@ -1,0 +1,27 @@
+Chef and Line
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef has a sequence A with length N and a line given by the equation y(x) = k · x + b. Let us say that an element Aj is reachable from another element Ai if the point (Ai, Aj) is lying above or on the line y(x), i.e. if Aj ≥ k · Ai + b.
+Consider an arbitrary subsequence of A; let's denote it by B. Subsequence B is called good if its elements can be reordered in such a way that for each valid i, Bi+1 is reachable from Bi.
+Chef asked you to compute the maximum possible length of a good subsequence. Can you help him?
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains three space-separated integers N, k and b.
+The second line contains N space-separated integers A1, A2, ..., AN.
+Output
+For each test case, print a single line containing one integer — the length of the longest good subsequence of A.
+Constraints
+1 ≤ T ≤ 5000
+1 ≤ N ≤ 100000
+0 ≤ k, b ≤ 109
+0 ≤ Ai ≤ 109 for each valid i
+1 ≤ sum of N over all test cases ≤ 200000
+Sample 1:
+Input
+Output
+1
+5 4 1
+100 2 4 17 8
+3
+Explanation:
+Example case 1: We can choose the subsequence (100, 4, 17) and reorder it to get the sequence (4, 17, 100). In this sequence, 17 is reachable from 4 because 4 · 4 + 1 = 17 ? 17 and 100 is reachable from 17 because 4 · 17 + 1 = 69 ? 100. Hence, (100, 4, 17) is a good subsequence; there is no good subsequence of A with length 4 or more, so the answer is 3.

@@ -1,0 +1,69 @@
+All Roads Lead To Rome
+Problem
+The country of Chefland is a group of
+N cities having
+M directed roads between its cities. It takes
+1 second to travel on any road.
+Chef has decided to travel through this country. His travel plan goes as follows -
+He will randomly choose a starting city.
+While there are outgoing roads in his current city, he will randomly choose one of them and travel it. He can choose roads he has already traveled through and visit cities multiple times.
+He will stop if there are no outgoing roads in the current city or
+N seconds have passed.
+Chef will be disappointed if after traveling he does not end up in the capital city.
+The ministers have not yet decided upon the capital city. They would like to choose it in such a way that Chef is not disappointed by his trip. To make their decision a bit easier, they can build some new roads between cities.
+Find the minimum number of roads that need to be built such that the ministers can choose a capital city that doesn't disappoint Chef no matter where his trip starts or how it progresses.
+It is possible that the current road system is such that no matter which roads are added, a capital that doesn't disappoint Chef cannot be chosen. In this case, print
+−1 instead.
+Input Format
+The first line will contain
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N, denoting the number of cities.
+The second line of each test case contains a single integer
+M, denoting the number of roads in the city initially.
+Then
+M lines follow each containing two integers
+A and
+B, denoting a road from city
+A to city
+B.
+Output Format
+For each test case, output a single line denoting the minimum number of roads you have to build, or
+−1 if it is not possible to satisfy the given condition.
+Constraints
+1≤T≤5⋅10
+4
+1≤N≤2⋅10
+5
+0≤M≤min(N⋅(N−1),4⋅10
+5
+)
+The sum of
+N+M does not exceed
+10
+6
+over all testcases
+The graph has no self loops or duplicate edges
+Sample 1:
+Input
+Output
+2
+3
+2
+1 2
+2 3
+2
+2
+1 2
+2 1
+0
+-1
+Explanation:
+Test case
+1: No matter where Chef starts, he will end up in city
+3, so it can be made the capital city and we do not need to construct any roads.
+Test case
+2: No new roads can be constructed. Chef will always end up in whichever city he starts from, so the ministers cannot decide upon a capital — choosing city
+1 as the capital would disappoint Chef if his trip started from city
+2 and vice versa.

@@ -1,0 +1,87 @@
+Music Shopping
+Problem
+###Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+As everybody knows, Reza Shiri is the favourite Iranian artist. Since we love Reza Shiri and his songs, we never download them for free. Reza Shiri’s songs must be purchased from authorised stores. However, what if there is not enough money to buy all the songs?
+There are
+N songs (numbered
+1 through
+N) and
+M albums (numbered
+1 through
+M) available. For each valid
+i, the
+i-th song has greatness
+v
+i
+, price
+p
+i
+and belongs to the album
+a
+i
+. For each valid
+i, the
+i-th album has price
+b
+i
+. If we buy an album, then all songs from this album count as bought. It is also possible to buy any songs individually.
+Your task is simple ― given the budget
+P (the amount of money we have), calculate the maximum total greatness of songs we can buy. The total greatness is defined as the sum of greatness values of all distinct songs that are bought (either individually or as part of albums).
+Input
+The first line of the input contains three space-separated integers
+N,
+M and
+P.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains three space-separated integers
+a
+i
+,
+p
+i
+and
+v
+i
+.
+The last line contains
+M space-separated integers
+b
+1
+,b
+2
+,…,b
+M
+.
+Output
+Print a single line containing one integer ― the maximum total greatness of songs we can afford to buy.
+Constraints
+1≤N,M,P≤1,000
+1≤b
+i
+,p
+i
+≤P for each valid
+i
+1≤v
+i
+≤10
+6
+for each valid
+i
+1≤a
+i
+≤M for each valid
+i
+Sample 1:
+Input
+Output
+5 2 24
+1 7 2
+1 5 2
+1 4 1
+2 9 1
+2 13 2
+10 15
+7

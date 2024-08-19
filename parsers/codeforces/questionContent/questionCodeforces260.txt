@@ -1,0 +1,156 @@
+G. Colorful Tree Again
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+An edge-weighted tree of
+n
+nodes is given with each edge colored in some color. Each node of this tree can be blocked or unblocked, all nodes are unblocked initially.
+A simple path is a path in a graph that does not have repeating nodes. The length of a path is defined as the sum of weights of all edges on the path.
+A path is good when it is a simple path consisting of edges of the same color
+c
+, all edges of color
+c
+are on this path, and every node on the path is unblocked.
+You need to operate
+2
+kinds of queries:
+block a node,
+unblock a node.
+After each query, print the maximum length among all good paths. If there are no good paths, print
+0
+.
+Input
+The first line contains two integers
+n
+,
+q
+(
+1≤n,q≤2⋅
+10
+5
+) — the number of nodes and the number of queries.
+Then
+n−1
+lines follow, each containing four integers
+u
+,
+v
+,
+w
+and
+c
+(
+1≤u,v,w,c≤n
+;
+u≠v
+), denoting a weighted edge connecting node
+u
+and node
+v
+with weight
+w
+and color
+c
+. It is guaranteed that these edges form a tree.
+Then
+q
+lines follow, each containing two integers
+p
+and
+x
+(
+p=0
+or
+p=1
+,
+1≤x≤n
+), denoting a query:
+if
+p=0
+, block the node
+x
+. It's guaranteed that it's not blocked at this time;
+if
+p=1
+, unblock the node
+x
+. It's guaranteed that it's blocked at this time.
+Output
+For each query, print the maximum length of a good path. If there are no good paths, print
+0
+.
+Examples
+input
+Copy
+5 4
+4 1 3 4
+5 2 4 4
+3 1 3 2
+1 2 5 1
+0 4
+0 3
+0 2
+1 3
+output
+Copy
+5
+5
+0
+3
+input
+Copy
+5 5
+4 1 4 4
+4 5 2 2
+3 1 2 4
+3 2 3 1
+0 3
+0 4
+1 3
+1 4
+0 1
+output
+Copy
+2
+0
+3
+6
+3
+input
+Copy
+6 9
+3 2 2 3
+2 4 4 2
+3 1 5 5
+6 4 3 2
+5 3 1 3
+0 2
+0 4
+0 5
+0 6
+1 2
+1 4
+1 5
+0 3
+1 6
+output
+Copy
+5
+5
+5
+5
+5
+5
+5
+0
+7
+input
+Copy
+1 2
+0 1
+1 1
+output
+Copy
+0
+0

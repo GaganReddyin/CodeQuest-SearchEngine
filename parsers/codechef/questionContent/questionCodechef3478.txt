@@ -1,0 +1,184 @@
+Cheapest Office
+Problem
+There is a tech park, which consists of
+N rooms, numbered
+1,2,…,N. The
+i-th room has a cost of
+A
+i
+associated with it. There are
+M bi-directional passages between these rooms.
+Chef wants to create an office in this tech park, for which she will select exactly
+K out of these
+N rooms. These
+K rooms must be selected such that every selected room is reachable from every other selected room using some number of passages, and without passing through an unselected room.
+The cost of creating the office is not the sum of the individual costs of the rooms, but rather the difference of the bitwise ORs and bitwise ANDs of the individual costs of the
+K rooms.
+Formally, let
+x
+1
+,x
+2
+,x
+3
+,...,x
+K
+be the selected rooms. The cost of creating the office is
+(A
+x
+1
+∣A
+x
+2
+∣…∣A
+x
+K
+) -
+(A
+x
+1
+&A
+x
+2
+&…&A
+x
+K
+),
+where '
+∣' represents the bitwise OR operator, and '
+&' represents the bitwise AND operator.
+What is the minimum cost that must be incurred to create this office, if Chef selects the
+K rooms optimally? If it is not possible to select
+K rooms satisfying the given conditions, print
+−1.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains three space-separated integers
+N,
+M and
+K — the number of rooms, passages and required number of rooms in the office respectively.
+The next line contains
+N integers,
+A
+1
+,A
+2
+,…,A
+N
+, denoting the cost associated with each of the rooms.
+The next
+M lines describe the passages. The
+i-th of these
+M lines contains two space-separated integers,
+u
+i
+and
+v
+i
+, denoting a passage between rooms
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, output on a new line the minimum possible cost for that test case. Or output -1 if it is not possible to select
+K rooms.
+Constraints
+1≤T≤1000
+1≤K≤N≤2⋅10
+5
+0≤M≤min(2⋅10
+5
+,
+2
+N⋅(N−1)
+)
+0≤A
+i
+≤10
+9
+1≤u
+i
+,v
+i
+≤N
+u
+i
+
+=v
+i
+for each
+1≤i≤M.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+The sum of
+M over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+3 2 2
+5 6 7
+1 2
+2 3
+4 4 3
+1 2 4 8
+1 2
+2 3
+3 4
+4 1
+8 10 5
+221 373 34 344 2344 9848 6666 2323
+1 2
+1 3
+1 4
+2 3
+2 5
+2 6
+7 8
+6 7
+5 6
+4 5
+3 2 1
+5 6 7
+1 2
+2 3
+1
+7
+2559
+0
+Explanation:
+Testcase 1: We can select nodes
+2 and
+3.
+A
+2
+is 6 and
+A
+3
+is
+7. The cost is
+((6∣7)−(6&7))=7−6=1.
+Testcase 2: We can select nodes
+1,
+2 and
+3.
+A
+1
+=1,A
+2
+=2, and
+A
+3
+=4. The cost is
+((1∣2∣4)−(1&2&4))=7−0=7. It can be proven that a lower cost is not possible.

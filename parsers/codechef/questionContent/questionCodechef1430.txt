@@ -1,0 +1,68 @@
+Distinct Elements
+Problem
+You are given an array
+A containing
+N integers. A subsequence of this array is called good if all the elements of this subsequence are distinct.
+Find the number of good non-empty subsequences of
+A. This number can be large, so report it modulo
+10
+9
++7.
+Note that two subsequences are considered different if they differ in the indices chosen. For example, in the array
+[1,1] there are 3 different non-empty subsequences:
+[1] (the first element),
+[1] (the second element) and
+[1,1]. Out of these three subsequences, the first two are good and the third is not.
+Input Format
+The first line contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N, denoting the number of elements in
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer — the number of good subsequences modulo
+10
+9
++7
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤A
+i
+≤10
+6
+The sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+2
+2
+1 1
+2
+1 2
+2
+3
+Explanation:
+Test Case
+1: Explained in the problem statement.
+Test Case
+2: There are 3 non-empty subsequences:
+[1],
+[2] and
+[1,2]. All three subsequences are good.

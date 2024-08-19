@@ -1,0 +1,187 @@
+D. Time to Run
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Bashar was practicing for the national programming contest. Because of sitting too much in front of the computer without doing physical movements and eating a lot Bashar became much fatter. Bashar is going to quit programming after the national contest and he is going to become an actor (just like his father), so he should lose weight.
+In order to lose weight, Bashar is going to run for
+k
+kilometers. Bashar is going to run in a place that looks like a grid of
+n
+rows and
+m
+columns. In this grid there are two one-way roads of one-kilometer length between each pair of adjacent by side cells, one road is going from the first cell to the second one, and the other road is going from the second cell to the first one. So, there are exactly
+(4nm−2n−2m)
+roads.
+Let's take, for example,
+n=3
+and
+m=4
+. In this case, there are
+34
+roads. It is the picture of this case (arrows describe roads):
+Bashar wants to run by these rules:
+He starts at the top-left cell in the grid;
+In one move Bashar may go up (the symbol 'U'), down (the symbol 'D'), left (the symbol 'L') or right (the symbol 'R'). More formally, if he stands in the cell in the row
+i
+and in the column
+j
+, i.e. in the cell
+(i,j)
+he will move to:
+in the case 'U' to the cell
+(i−1,j)
+;
+in the case 'D' to the cell
+(i+1,j)
+;
+in the case 'L' to the cell
+(i,j−1)
+;
+in the case 'R' to the cell
+(i,j+1)
+;
+He wants to run exactly
+k
+kilometers, so he wants to make exactly
+k
+moves;
+Bashar can finish in any cell of the grid;
+He can't go out of the grid so at any moment of the time he should be on some cell;
+Bashar doesn't want to get bored while running so he must not visit the same road twice. But he can visit the same cell any number of times.
+Bashar asks you if it is possible to run by such rules. If it is possible, you should tell him how should he run.
+You should give him
+a
+steps to do and since Bashar can't remember too many steps,
+a
+should not exceed
+3000
+. In every step, you should give him an integer
+f
+and a string of moves
+s
+of length at most
+4
+which means that he should repeat the moves in the string
+s
+for
+f
+times. He will perform the steps in the order you print them.
+For example, if the steps are
+2
+RUD,
+3
+UUL then the moves he is going to move are RUD
++
+RUD
++
+UUL
++
+UUL
++
+UUL
+=
+RUDRUDUULUULUUL.
+Can you help him and give him a correct sequence of moves such that the total distance he will run is equal to
+k
+kilometers or say, that it is impossible?
+Input
+The only line contains three integers
+n
+,
+m
+and
+k
+(
+1≤n,m≤500
+,
+1≤k≤
+10
+9
+), which are the number of rows and the number of columns in the grid and the total distance Bashar wants to run.
+Output
+If there is no possible way to run
+k
+kilometers, print "NO" (without quotes), otherwise print "YES" (without quotes) in the first line.
+If the answer is "YES", on the second line print an integer
+a
+(
+1≤a≤3000
+) — the number of steps, then print
+a
+lines describing the steps.
+To describe a step, print an integer
+f
+(
+1≤f≤
+10
+9
+) and a string of moves
+s
+of length at most
+4
+. Every character in
+s
+should be 'U', 'D', 'L' or 'R'.
+Bashar will start from the top-left cell. Make sure to move exactly
+k
+moves without visiting the same road twice and without going outside the grid. He can finish at any cell.
+We can show that if it is possible to run exactly
+k
+kilometers, then it is possible to describe the path under such output constraints.
+Examples
+input
+Copy
+3 3 4
+output
+Copy
+YES
+2
+2 R
+2 L
+input
+Copy
+3 3 1000000000
+output
+Copy
+NO
+input
+Copy
+3 3 8
+output
+Copy
+YES
+3
+2 R
+2 D
+1 LLRR
+input
+Copy
+4 4 9
+output
+Copy
+YES
+1
+3 RLD
+input
+Copy
+3 4 16
+output
+Copy
+YES
+8
+3 R
+3 L
+1 D
+3 R
+1 D
+1 U
+3 L
+1 D
+Note
+The moves Bashar is going to move in the first example are: "RRLL".
+It is not possible to run
+1000000000
+kilometers in the second example because the total length of the roads is smaller and Bashar can't run the same road twice.
+The moves Bashar is going to move in the third example are: "RRDDLLRR".
+The moves Bashar is going to move in the fifth example are: "RRRLLLDRRRDULLLD". It is the picture of his run (the roads on this way are marked with red and numbered in the order of his running):

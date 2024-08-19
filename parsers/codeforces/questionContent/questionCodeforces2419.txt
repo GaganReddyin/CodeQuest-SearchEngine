@@ -1,0 +1,350 @@
+D. Segment Intersections
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two lists of segments
+[a
+l
+1
+,a
+r
+1
+],[a
+l
+2
+,a
+r
+2
+],…,[a
+l
+n
+,a
+r
+n
+]
+and
+[b
+l
+1
+,b
+r
+1
+],[b
+l
+2
+,b
+r
+2
+],…,[b
+l
+n
+,b
+r
+n
+]
+.
+Initially, all segments
+[a
+l
+i
+,a
+r
+i
+]
+are equal to
+[
+l
+1
+,
+r
+1
+]
+and all segments
+[b
+l
+i
+,b
+r
+i
+]
+are equal to
+[
+l
+2
+,
+r
+2
+]
+.
+In one step, you can choose one segment (either from the first or from the second list) and extend it by
+1
+. In other words, suppose you've chosen segment
+[x,y]
+then you can transform it either into
+[x−1,y]
+or into
+[x,y+1]
+.
+Let's define a total intersection
+I
+as the sum of lengths of intersections of the corresponding pairs of segments, i.e.
+∑
+i=1
+n
+intersection_length([a
+l
+i
+,a
+r
+i
+],[b
+l
+i
+,b
+r
+i
+])
+. Empty intersection has length
+0
+and length of a segment
+[x,y]
+is equal to
+y−x
+.
+What is the minimum number of steps you need to make
+I
+greater or equal to
+k
+?
+Input
+The first line contains the single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+;
+1≤k≤
+10
+9
+) — the length of lists and the minimum required total intersection.
+The second line of each test case contains two integers
+l
+1
+and
+r
+1
+(
+1≤
+l
+1
+≤
+r
+1
+≤
+10
+9
+) — the segment all
+[a
+l
+i
+,a
+r
+i
+]
+are equal to initially.
+The third line of each test case contains two integers
+l
+2
+and
+r
+2
+(
+1≤
+l
+2
+≤
+r
+2
+≤
+10
+9
+) — the segment all
+[b
+l
+i
+,b
+r
+i
+]
+are equal to initially.
+It's guaranteed that the sum of
+n
+doesn't exceed
+2⋅
+10
+5
+.
+Output
+Print
+t
+integers — one per test case. For each test case, print the minimum number of step you need to make
+I
+greater or equal to
+k
+.
+Example
+input
+Copy
+3
+3 5
+1 2
+3 4
+2 1000000000
+1 1
+999999999 999999999
+10 3
+5 10
+7 8
+output
+Copy
+7
+2000000000
+0
+Note
+In the first test case, we can achieve total intersection
+5
+, for example, using next strategy:
+make
+[a
+l
+1
+,a
+r
+1
+]
+from
+[1,2]
+to
+[1,4]
+in
+2
+steps;
+make
+[a
+l
+2
+,a
+r
+2
+]
+from
+[1,2]
+to
+[1,3]
+in
+1
+step;
+make
+[b
+l
+1
+,b
+r
+1
+]
+from
+[3,4]
+to
+[1,4]
+in
+2
+steps;
+make
+[b
+l
+2
+,b
+r
+2
+]
+from
+[3,4]
+to
+[1,4]
+in
+2
+steps.
+In result,
+I=intersection_length([a
+l
+1
+,a
+r
+1
+],[b
+l
+1
+,b
+r
+1
+])+intersection_length([a
+l
+2
+,a
+r
+2
+],[b
+l
+2
+,b
+r
+2
+])+
++intersection_length([a
+l
+3
+,a
+r
+3
+],[b
+l
+3
+,b
+r
+3
+])=3+2+0=5
+In the second test case, we can make
+[a
+l
+1
+,a
+r
+1
+]=[0,1000000000]
+in
+1000000000
+steps and
+[b
+l
+1
+,b
+r
+1
+]=[0,1000000000]
+in
+1000000000
+steps.
+In the third test case, the total intersection
+I
+is already equal to
+10>3
+, so we don't need to do any steps.

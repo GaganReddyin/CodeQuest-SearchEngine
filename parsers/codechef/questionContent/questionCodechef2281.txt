@@ -1,0 +1,153 @@
+X AND Y Tree
+Problem
+Chef has a tree consisting of
+N nodes, rooted at node
+1. Every node of this tree can be assigned a binary value
+(0 or
+1). Initially, every node is assigned 0.
+We define AND-value of a set of nodes as the bitwise AND of all the values of the nodes in it.
+An edge in the tree is called good, if after removing this edge, the two trees obtained have the same AND-value.
+You have to process
+Q queries. Each query is one of the following types :
+1
+u : If node
+u is a leaf, change its value to
+1, else, change its value to the AND-value of its descendants.
+2 : Find the total number of good edges in the tree.
+Note: Descendants of some node
+X, are all the nodes in its subtree except
+X.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N — the number of nodes in the tree.
+The next
+N−1 lines describe the edges. The
+i
+th
+line contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+.
+The next line contains a single integer
+Q — the number of queries.
+Then,
+Q lines follow. Each of these lines describes a query in the format described above.
+Output Format
+For each query of the second type, print a single line containing one integer — the number of good edges in the tree.
+Constraints
+1≤T≤10
+4
+1≤N≤3⋅10
+5
+1≤Q≤3⋅10
+5
+1≤u
+i
+,v
+i
+≤N and
+u
+i
+
+=v
+i
+.
+The sum of
+N and
+Q over all test cases won't exceed
+3⋅10
+5
+.
+Atleast one query of type
+2 is present.
+Sample 1:
+Input
+Output
+1
+5
+1 2
+1 3
+2 4
+2 5
+5
+1 1
+1 3
+2
+1 5
+2
+3
+2
+Explanation:
+Query
+1: Node
+1 is not a leaf node. Thus, we change its value to the AND-value of its descendants. Descendants of node
+1 are
+{2,3,4,5}. All these nodes have value
+0. Thus, the bitwise AND of all values is also
+0. Hence, node
+1 is assigned
+0.
+Query
+2: Node
+3 is assigned
+1 since it is a leaf node.
+Query
+3: Edges between nodes
+(1,2),(2,4), and
+(2,5) are good edges.
+Edge
+(1,2): On removing the edge the set of nodes in the two trees are
+{1,3} and
+{2,4,5}. The AND-values of the respective set of nodes is
+0
+&
+1=0 and
+0
+&
+0
+&
+0=0, which is equal.
+Edge
+(2,4): On removing the edge the set of nodes in the two trees are
+{4} and
+{1,2,3,5}. The AND-values of the respective set of nodes is
+0 and
+0
+&
+0
+&
+1
+&
+0=0, which is equal.
+Edge
+(2,5): On removing the edge the set of nodes in the two trees are
+{5} and
+{1,2,3,4}. The AND-values of the respective set of nodes is
+0 and
+0
+&
+0
+&
+1
+&
+0=0, which is equal.
+Query
+4: Node
+5 is assigned
+1 since it is a leaf node.
+Query
+5: Edges between nodes
+(1,2) and
+(2,4) are good edges.

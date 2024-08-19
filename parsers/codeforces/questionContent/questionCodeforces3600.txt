@@ -1,0 +1,251 @@
+C. Permutation recovery
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vasya has written some permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+of integers from
+1
+to
+n
+, so for all
+1≤i≤n
+it is true that
+1≤
+p
+i
+≤n
+and all
+p
+1
+,
+p
+2
+,…,
+p
+n
+are different. After that he wrote
+n
+numbers
+nex
+t
+1
+,nex
+t
+2
+,…,nex
+t
+n
+. The number
+nex
+t
+i
+is equal to the minimal index
+i<j≤n
+, such that
+p
+j
+>
+p
+i
+. If there is no such
+j
+let's let's define as
+nex
+t
+i
+=n+1
+.
+In the evening Vasya went home from school and due to rain, his notebook got wet. Now it is impossible to read some written numbers. Permutation and some values
+nex
+t
+i
+are completely lost! If for some
+i
+the value
+nex
+t
+i
+is lost, let's say that
+nex
+t
+i
+=−1
+.
+You are given numbers
+nex
+t
+1
+,nex
+t
+2
+,…,nex
+t
+n
+(maybe some of them are equal to
+−1
+). Help Vasya to find such permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+of integers from
+1
+to
+n
+, that he can write it to the notebook and all numbers
+nex
+t
+i
+, which are not equal to
+−1
+, will be correct.
+Input
+The first line contains one integer
+t
+ — the number of test cases (
+1≤t≤100000
+).
+Next
+2⋅t
+lines contains the description of test cases,two lines for each. The first line contains one integer
+n
+ — the length of the permutation, written by Vasya (
+1≤n≤500000
+). The second line contains
+n
+integers
+nex
+t
+1
+,nex
+t
+2
+,…,nex
+t
+n
+, separated by spaces (
+nex
+t
+i
+=−1
+or
+i<nex
+t
+i
+≤n+1
+).
+It is guaranteed, that the sum of
+n
+in all test cases doesn't exceed
+500000
+.
+In hacks you can only use one test case, so
+T=1
+.
+Output
+Print
+T
+lines, in
+i
+-th of them answer to the
+i
+-th test case.
+If there is no such permutations
+p
+1
+,
+p
+2
+,…,
+p
+n
+of integers from
+1
+to
+n
+, that Vasya could write, print the only number
+−1
+.
+In the other case print
+n
+different integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+, separated by spaces (
+1≤
+p
+i
+≤n
+). All defined values of
+nex
+t
+i
+which are not equal to
+−1
+should be computed correctly
+p
+1
+,
+p
+2
+,…,
+p
+n
+using defenition given in the statement of the problem. If there exists more than one solution you can find any of them.
+Example
+input
+Copy
+6
+3
+2 3 4
+2
+3 3
+3
+-1 -1 -1
+3
+3 4 -1
+1
+2
+4
+4 -1 4 5
+output
+Copy
+1 2 3
+2 1
+2 1 3
+-1
+1
+3 2 1 4
+Note
+In the first test case for permutation
+p=[1,2,3]
+Vasya should write
+next=[2,3,4]
+, because each number in permutation is less than next. It's easy to see, that it is the only satisfying permutation.
+In the third test case, any permutation can be the answer because all numbers
+nex
+t
+i
+are lost.
+In the fourth test case, there is no satisfying permutation, so the answer is
+−1
+.

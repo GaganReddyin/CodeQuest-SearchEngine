@@ -1,0 +1,42 @@
+Puppy and Triangles
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Puppy Tuzik has recently found two triangles and a quadrilateral cut out from a large sheet of paper. Being a curious puppy, Tuzik started thinking of a game with these three geometric figures. All of a sudden, a thrilling idea crossed his mind! He wonders whether it's possible to combine these triangles by moving, flipping and/or rotating them, and cover exactly the quadrilateral with no overlap between the two triangles. Giving the coordinates of the triangles and the quadrilateral, your task is to answer the question: whether it's possible to combine the triangles to cover exactly the given quadrilateral?
+Input
+The first line contains one integer T denoting the number of test cases.
+The description of each test case consists of ten lines, each containing two integers denoting the coordinates of a point on the Cartesian plane. The first three lines of the test case description contain the points forming the first triangle. The next three lines describe the points forming the second triangle. The last four give the points forming the quadrilateral and are given in either a clockwise order, or a counterclockwise order.
+It's guaranted that all the figures have a non-zero area and do not self-intersect or self-touch.
+Output
+For each test case, output a line with the string Yes or No, denoting the answer to the question.
+Constraints
+1 ≤ T ≤ 600
+-20000 ≤ x, y ≤ 20000 for each point in the input
+Sample 1:
+Input
+Output
+2
+0 0 
+1 0
+1 1 
+3 3 
+2 2 
+3 2 
+5 5 
+5 4 
+4 4 
+4 5 
+0 0
+2 2
+2 0
+1 1 
+1 2
+2 2
+0 0
+0 1
+1 1
+1 0
+Yes
+No
+Explanation:
+The figures from the first test case of the sample:
+The figures from the second test case of the sample:

@@ -1,0 +1,228 @@
+F. Halve or Subtract
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have an array of positive integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+, of length
+n
+. You are also given a positive integer
+b
+.
+You are allowed to perform the following operations (possibly several) times in any order:
+Choose some
+1≤i≤n
+, and replace
+a
+i
+with
+⌈
+a
+i
+2
+⌉
+. Here,
+⌈x⌉
+denotes the smallest integer not less than
+x
+.
+Choose some
+1≤i≤n
+, and replace
+a
+i
+with
+max(
+a
+i
+−b,0)
+.
+However, you must also follow these rules:
+You can perform at most
+k
+1
+operations of type 1 in total.
+You can perform at most
+k
+2
+operations of type 2 in total.
+For all
+1≤i≤n
+, you can perform at most
+1
+operation of type 1 on element
+a
+i
+.
+For all
+1≤i≤n
+, you can perform at most
+1
+operation of type 2 on element
+a
+i
+.
+The cost of an array is the sum of its elements. Find the minimum cost of
+a
+you can achieve by performing these operations.
+Input
+Input consists of multiple test cases. The first line contains a single integer
+t
+, the number of test cases (
+1≤t≤5000
+).
+The first line of each test case contains
+n
+,
+b
+,
+k
+1
+, and
+k
+2
+(
+1≤n≤5000
+,
+1≤b≤
+10
+9
+,
+0≤
+k
+1
+,
+k
+2
+≤n
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+describing the array
+a
+(
+1≤
+a
+i
+≤
+10
+9
+).
+It is guaranteed the sum of
+n
+over all test cases does not exceed
+5000
+.
+Output
+For each test case, print the minimum cost of
+a
+you can achieve by performing the operations.
+Example
+input
+Copy
+7
+3 2 1 1
+9 3 5
+2 1 2 0
+1000000000 1
+5 3 1 1
+2 8 3 19 3
+6 9 4 2
+1 2 3 4 5 6
+3 10 3 3
+1 2 3
+5 1 0 0
+999999999 999999999 999999999 999999999 999999999
+5 5 4 3
+5 9 10 7 4
+output
+Copy
+11
+500000001
+23
+6
+0
+4999999995
+6
+Note
+In the first test case, you can do the following:
+Perform operation 2 on element
+a
+3
+. It changes from
+5
+to
+3
+.
+Perform operation 1 on element
+a
+1
+. It changes from
+9
+to
+5
+.
+After these operations, the array is
+a=[5,3,3]
+has a cost
+5+3+3=11
+. We can show that this is the minimum achievable cost.
+In the second test case, note that we are not allowed to perform operation 1 more than once on
+a
+1
+. So it is optimal to apply operation 1 once to each
+a
+1
+and
+a
+2
+. Alternatively we could apply operation 1 only once to
+a
+1
+, since it has no effect on
+a
+2
+.
+In the third test case, here is one way to achieve a cost of
+23
+:
+Apply operation 1 to
+a
+4
+. It changes from
+19
+to
+10
+.
+Apply operation 2 to
+a
+4
+. It changes from
+10
+to
+7
+.
+After these operations,
+a=[2,8,3,7,3]
+. The cost of
+a
+is
+2+8+3+7+3=23
+. We can show that this is the minimum achievable cost.

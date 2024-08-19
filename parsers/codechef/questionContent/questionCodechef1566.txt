@@ -1,0 +1,56 @@
+Divisors and Reciprocals
+Problem
+Alice is teaching Bob maths via a game called
+N-guesser.
+Alice has a positive integer
+N which Bob needs to guess. She gives him two pieces of information with which to do this:
+A positive integer
+X, which denotes the sum of divisors of
+N.
+Two positive integers
+A and
+B, which denote that the sum of reciprocals of divisors of
+N is
+A/B.
+Bob either needs to guess
+N or tell that no such number exists.
+It can be shown that if a valid
+N exists, it is unique.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line of input, containing three space-separated integers
+X,A,B.
+Output Format
+For each test case, output a new line containing the answer — Alice's number
+N, or
+−1 if no such number exists.
+Constraints
+1≤T≤1000
+1≤X≤10
+9
+1≤A,B≤10
+9
+gcd(A,B)=1
+Sample 1:
+Input
+Output
+2
+4 4 3
+4 1 1
+3
+-1
+Explanation:
+Test case
+1: The divisors of
+3 are
+1 and
+3. Their sum is
+4 and the sum of their reciprocals is
+4/3.
+Test case
+2: It can be proved that no positive integer
+N exists whose divisors sum to
+4 and reciprocals of divisors sum to
+1.

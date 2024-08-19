@@ -1,0 +1,221 @@
+E. Alternating Tree
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a tree with
+n
+nodes numbered from
+1
+to
+n
+. Each node
+i
+has an associated value
+V
+i
+.
+If the simple path from
+u
+1
+to
+u
+m
+consists of
+m
+nodes namely
+u
+1
+→
+u
+2
+→
+u
+3
+→…
+u
+m−1
+→
+u
+m
+, then its alternating function
+A(
+u
+1
+,
+u
+m
+)
+is defined as
+A(
+u
+1
+,
+u
+m
+)=
+∑
+i=1
+m
+(−1
+)
+i+1
+⋅
+V
+u
+i
+. A path can also have
+0
+edges, i.e.
+u
+1
+=
+u
+m
+.
+Compute the sum of alternating functions of all unique simple paths. Note that the paths are directed: two paths are considered different if the starting vertices differ or the ending vertices differ. The answer may be large so compute it modulo
+10
+9
++7
+.
+Input
+The first line contains an integer
+n
+(2≤n≤2⋅
+10
+5
+)
+— the number of vertices in the tree.
+The second line contains
+n
+space-separated integers
+V
+1
+,
+V
+2
+,…,
+V
+n
+(
+−
+10
+9
+≤
+V
+i
+≤
+10
+9
+) — values of the nodes.
+The next
+n−1
+lines each contain two space-separated integers
+u
+and
+v
+(1≤u,v≤ n,u≠v)
+denoting an edge between vertices
+u
+and
+v
+. It is guaranteed that the given graph is a tree.
+Output
+Print the total sum of alternating functions of all unique simple paths modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+4
+-4 1 5 -2
+1 2
+1 3
+1 4
+output
+Copy
+40
+input
+Copy
+8
+-2 6 -4 -4 -9 -3 -7 23
+8 2
+2 3
+1 4
+6 5
+7 6
+4 7
+5 8
+output
+Copy
+4
+Note
+Consider the first example.
+A simple path from node
+1
+to node
+2
+:
+1→2
+has alternating function equal to
+A(1,2)=1⋅(−4)+(−1)⋅1=−5
+.
+A simple path from node
+1
+to node
+3
+:
+1→3
+has alternating function equal to
+A(1,3)=1⋅(−4)+(−1)⋅5=−9
+.
+A simple path from node
+2
+to node
+4
+:
+2→1→4
+has alternating function
+A(2,4)=1⋅(1)+(−1)⋅(−4)+1⋅(−2)=3
+.
+A simple path from node
+1
+to node
+1
+has a single node
+1
+, so
+A(1,1)=1⋅(−4)=−4
+.
+Similarly,
+A(2,1)=5
+,
+A(3,1)=9
+,
+A(4,2)=3
+,
+A(1,4)=−2
+,
+A(4,1)=2
+,
+A(2,2)=1
+,
+A(3,3)=5
+,
+A(4,4)=−2
+,
+A(3,4)=7
+,
+A(4,3)=7
+,
+A(2,3)=10
+,
+A(3,2)=10
+. So the answer is
+(−5)+(−9)+3+(−4)+5+9+3+(−2)+2+1+5+(−2)+7+7+10+10=40
+.
+Similarly
+A(1,4)=−2,A(2,2)=1,A(2,1)=5,A(2,3)=10,A(3,3)=5,A(3,1)=9,A(3,2)=10,A(3,4)=7,A(4,4)=−2,A(4,1)=2,A(4,2)=3,A(4,3)=7
+which sums upto 40.

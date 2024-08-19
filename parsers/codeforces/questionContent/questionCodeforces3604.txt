@@ -1,0 +1,173 @@
+F. Maximum Balanced Circle
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+people in a row. The height of the
+i
+-th person is
+a
+i
+. You can choose any subset of these people and try to arrange them into a balanced circle.
+A balanced circle is such an order of people that the difference between heights of any adjacent people is no more than
+1
+. For example, let heights of chosen people be
+[
+a
+i
+1
+,
+a
+i
+2
+,…,
+a
+i
+k
+]
+, where
+k
+is the number of people you choose. Then the condition
+|
+a
+i
+j
+−
+a
+i
+j+1
+|≤1
+should be satisfied for all
+j
+from
+1
+to
+k−1
+and the condition
+|
+a
+i
+1
+−
+a
+i
+k
+|≤1
+should be also satisfied.
+|x|
+means the absolute value of
+x
+. It is obvious that the circle consisting of one person is balanced.
+Your task is to choose the maximum number of people and construct a balanced circle consisting of all chosen people. It is obvious that the circle consisting of one person is balanced so the answer always exists.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of people.
+The second line of the input contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+), where
+a
+i
+is the height of the
+i
+-th person.
+Output
+In the first line of the output print
+k
+— the number of people in the maximum balanced circle.
+In the second line print
+k
+integers
+re
+s
+1
+,re
+s
+2
+,…,re
+s
+k
+, where
+re
+s
+j
+is the height of the
+j
+-th person in the maximum balanced circle. The condition
+|re
+s
+j
+−re
+s
+j+1
+|≤1
+should be satisfied for all
+j
+from
+1
+to
+k−1
+and the condition
+|re
+s
+1
+−re
+s
+k
+|≤1
+should be also satisfied.
+Examples
+input
+Copy
+7
+4 3 5 1 2 2 1
+output
+Copy
+5
+2 1 1 2 3
+input
+Copy
+5
+3 7 5 1 5
+output
+Copy
+2
+5 5 
+input
+Copy
+3
+5 1 4
+output
+Copy
+2
+4 5 
+input
+Copy
+7
+2 2 3 2 1 2 2
+output
+Copy
+7
+1 2 2 2 2 3 2 

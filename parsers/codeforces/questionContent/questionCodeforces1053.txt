@@ -1,0 +1,197 @@
+A. Good Pairs
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of positive integers. A good pair is a pair of indices
+(i,j)
+with
+1≤i,j≤n
+such that, for all
+1≤k≤n
+, the following equality holds:
+|
+a
+i
+−
+a
+k
+|+|
+a
+k
+−
+a
+j
+|=|
+a
+i
+−
+a
+j
+|,
+|
+|
+|
+|
+|
+|
+where
+|x|
+denotes the absolute value of
+x
+.
+Find a good pair. Note that
+i
+can be equal to
+j
+.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) where
+a
+i
+is the
+i
+-th element of the array.
+The sum of
+n
+for all test cases is at most
+2⋅
+10
+5
+.
+Output
+For each test case, print a single line with two space-separated indices
+i
+and
+j
+which form a good pair of the array. The case
+i=j
+is allowed. It can be shown that such a pair always exists. If there are multiple good pairs, print any of them.
+Example
+input
+Copy
+3
+3
+5 2 7
+5
+1 4 2 2 3
+1
+2
+output
+Copy
+2 3
+1 2
+1 1
+Note
+In the first case, for
+i=2
+and
+j=3
+the equality holds true for all
+k
+:
+k=1
+:
+|
+a
+2
+−
+a
+1
+|+|
+a
+1
+−
+a
+3
+|=|2−5|+|5−7|=5=|2−7|=|
+a
+2
+−
+a
+3
+|
+,
+k=2
+:
+|
+a
+2
+−
+a
+2
+|+|
+a
+2
+−
+a
+3
+|=|2−2|+|2−7|=5=|2−7|=|
+a
+2
+−
+a
+3
+|
+,
+k=3
+:
+|
+a
+2
+−
+a
+3
+|+|
+a
+3
+−
+a
+3
+|=|2−7|+|7−7|=5=|2−7|=|
+a
+2
+−
+a
+3
+|
+.

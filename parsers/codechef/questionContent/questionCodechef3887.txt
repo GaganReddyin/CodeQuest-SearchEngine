@@ -1,0 +1,143 @@
+Adjacent Pair Swaps
+Problem
+Chef has a binary array
+A of length
+N.
+An operation on the array is defined as:
+Choose two indices
+i and
+j such that
+(1≤i,j<N) and
+j>(i+1);
+Swap
+A
+i
+with
+A
+j
+;
+Swap
+A
+(i+1)
+with
+A
+(j+1)
+.
+Sort the array in non-decreasing order using at most
+N operations or determine whether it is not possible to do so.
+It is guaranteed that if the array can sorted, it can be done using at most
+N operations.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N - denoting the length of the array
+A.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…A
+N
+- denoting the array
+A.
+Output Format
+For each test case, output
+−1 if the array cannot be sorted.
+If the array can be sorted, output
+K+1 lines:
+The first line should contain
+K
+(0≤K≤N), the number of operations you are going to perform.
+Then, following
+K lines contain two space-separated integers, the values of
+i and
+j for each operation.
+Constraints
+1≤T≤1000
+7≤N≤10
+5
+A
+i
+is either
+0 or
+1.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+7
+0 1 1 0 1 1 1
+8
+0 1 0 1 0 0 1 1
+1
+2 4
+2
+3 5
+1 4
+Explanation:
+Test case
+1: We can sort the array using
+1 operation:
+Operation
+1: Choose
+i=2 and
+j=4. Thus we swap
+A
+2
+and
+A
+4
+as well as
+A
+3
+and
+A
+5
+. The final array is
+[0,0,1,1,1,1,1], which is sorted.
+Test case
+2: We can sort the array using
+2 operations:
+Operation
+1: Choose
+i=3 and
+j=5. Thus we swap
+A
+3
+and
+A
+5
+as well as
+A
+4
+and
+A
+6
+. The array is
+[0,1,0,0,0,1,1,1].
+Operation
+2: Choose
+i=1 and
+j=4. Thus we swap
+A
+1
+and
+A
+4
+as well as
+A
+2
+and
+A
+5
+. The array is
+[0,0,0,0,1,1,1,1], which is sorted.

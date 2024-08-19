@@ -1,0 +1,190 @@
+Good Sequence
+Problem
+Suppose you have a binary array
+B of length
+N.
+A sequence
+x
+1
+,x
+2
+,…,x
+k
+is called good with respect to
+B if it satisfies the following conditions:
+1≤x
+1
+<x
+2
+<…<x
+k
+≤N+1
+For every pair
+(i,j) such that
+1≤i<j≤k, the subarray
+B[x
+i
+:x
+j
+−1] contains
+(j−i) more ones than zeros.
+That is, if
+B[x
+i
+:x
+j
+−1] contains
+c
+1
+ones and
+c
+0
+zeros, then
+c
+1
+−c
+0
+=j−i must hold.
+Here,
+B[L:R] denotes the subarray consisting of elements
+[B
+L
+,B
+L+1
+,B
+L+2
+,…,B
+R
+].
+Note that in particular, a sequence of size
+1 is always good.
+For example, suppose
+B=[0,1,1,0,1,1]. Then,
+The sequence
+[1,4,7] is a good sequence. The subarrays that need to be checked are
+B[1:3],B[1:6] and
+B[4:6], which all satisfy the condition.
+The sequence
+[1,5] is not good, because
+B[1:4]=[0,1,1,0] contains an equal number of zeros and ones (when it should contain one extra
+1).
+Alice gave Bob a binary array
+A of size
+N and asked him to find the longest sequence that is good with respect to
+A. Help Bob find one such sequence.
+If multiple possible longest sequences exist, you may print any of them.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the size of the binary array.
+The second line contains
+N space-separated numbers —
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+Each test case requires two lines of output:
+First, print on a new line a single integer
+K — the maximum length of a sequence that is good with respect to
+A
+On the next line, print
+K space-separated integers in increasing order, denoting the indices of one such sequence.
+If there are multiple possible good sequences with maximum size, output any of them.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+0≤A
+i
+≤1
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+4
+6
+0 1 1 0 1 1
+5
+0 1 0 1 0
+4
+1 1 1 1
+3
+1 0 0
+4
+2 5 6 7
+2
+4 5
+5
+1 2 3 4 5
+2
+1 2
+Explanation:
+Test case
+1: We have
+A=[0,1,1,0,1,1]. The sequence
+[2,5,6,7] requires us to check
+6 subarrays:
+A[2:4]=[1,1,0] which has
+c
+1
+−c
+0
+=1 and corresponds to
+i=1,j=2
+A[2:5]=[1,1,0,1] which has
+c
+1
+−c
+0
+=2 and corresponds to
+i=1,j=3
+A[2:6]=[1,1,0,1,1] which has
+c
+1
+−c
+0
+=3 and corresponds to
+i=1,j=4
+A[5:5]=[1], which has
+c
+1
+−c
+0
+=1 and corresponds to
+i=2,j=3
+A[5:6]=[1,1], which has
+c
+1
+−c
+0
+=2 and corresponds to
+i=2,j=4
+A[6:6]=[1], which has
+c
+1
+−c
+0
+=1 and corresponds to
+i=3,j=4
+As you can see, all
+6 pairs satisfy the condition.
+Test case
+2: The only subarray that needs to be checked is
+A[4:4]=[1], which has
+c
+1
+−c
+0
+=1 as needed. It can be verified that no good sequence of length greater than
+2 exists.

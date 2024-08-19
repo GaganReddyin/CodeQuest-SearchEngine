@@ -1,0 +1,197 @@
+Energetic Node(Easy Version)
+Problem
+This is the easy version of the problem. The only difference is that, in this version,
+K
+i
+≤10
+4
+.
+There’s a tree having
+N nodes, out of which, some nodes are energetic.
+Initially, energy of all the nodes is
+0. In the
+i
+th
+second, every energetic node will make the energy of itself and all its neighbours increase by
+i.
+You need to answer
+Q queries. For the
+i
+th
+query, you are given three integers:
+X
+i
+T
+i
+K
+i
+: Find the minimum number of seconds after which, there are at least
+T
+i
+nodes with energy not less than
+K
+i
+on the path from node
+1 to node
+X
+i
+. If it is not possible to have at least
+T
+i
+nodes with energy not less than
+K
+i
+on the path from node
+1 to node
+X
+i
+after any amount of time, print
+−1 instead.
+Input Format
+The first line contains an integer
+N — the number of nodes.
+The second line contains
+N space-separated integers, the array
+A denoting whether the nodes are energetic. If
+A
+i
+=1, it means that the
+i
+th
+node is energetic, otherwise the
+i
+th
+node is not energetic.
+The next
+N−1 lines describe the edges. The
+i
+th
+of these
+N−1 lines contains two space-separated integers
+U
+i
+and
+V
+i
+, denoting an edge between
+U
+i
+and
+V
+i
+.
+The next line contains an integer
+Q — the number of queries.
+The next
+Q lines contain three space-separated integers
+X
+i
+,T
+i
+,K
+i
+, the query.
+Output Format
+For each query, output on a new line: the minimum number of seconds after which, there are at least
+T
+i
+nodes with energy not less than
+K
+i
+on the path from node
+1 to node
+X
+i
+.
+If it is not possible to have at least
+T
+i
+nodes with energy not less than
+K
+i
+on the path from node
+1 to node
+X
+i
+after any amount of time, print
+−1 instead.
+Constraints
+1≤N,Q≤4⋅10
+4
+0≤A
+i
+≤1
+1≤U
+i
+,V
+i
+,X
+i
+,T
+i
+≤N
+1≤K
+i
+≤10
+4
+Sample 1:
+Input
+Output
+7
+1 0 1 0 0 1 0
+1 2
+1 3
+1 4
+3 5
+3 6
+4 7
+4
+7 3 1
+6 3 2
+7 2 3
+5 3 5
+-1
+1
+2
+3
+Explanation:
+Query
+1: No matter how long, there will not be at least
+3 nodes having energy not less than
+1 on the path from node
+1 to node
+7. Thus, the answer is
+−1.
+Query
+2: In the
+1
+st
+second, the energy of nodes
+1,3, and
+6 becomes
+2,3, and
+2 respectively. Thus, there are at least
+3 nodes with energy not less than
+2.
+Query
+3: In the
+2
+nd
+second, the energy of nodes
+1,4, and
+7 becomes
+6,3, and
+0 respectively. Thus, there are at least
+2 nodes with energy not less than
+3.
+Query
+4: In the
+3
+rd
+second, the energy of nodes
+1,3, and
+5 is
+12,18, and
+6 respectively. Thus, there are at least
+3 nodes with energy not less than
+5.

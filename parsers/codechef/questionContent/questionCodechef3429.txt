@@ -1,0 +1,82 @@
+Blackjack
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is playing a card game called Blackjack. He starts with a deck of
+N cards (numbered
+1 through
+N), where for each valid
+i, the
+i-th card has an integer
+A
+i
+written on it. Then he starts dealing the cards one by one in the order from card
+1 to card
+N. Chef wins if at some moment in time, the sum of all the cards dealt so far is between
+X and
+Y inclusive; if this never happens, Chef loses.
+We want Chef to win the game, so without him noticing, we will swap some pairs of cards (possibly none) before the game starts. Find the smallest number of swaps we need so that Chef would win the game, or determine that it is impossible to make Chef win.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+X and
+Y.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer ― the smallest required number of swaps or
+−1 if Chef cannot win.
+Constraints
+1≤T≤100
+1≤N,X,Y≤10
+3
+X≤Y
+1≤A
+i
+≤10
+3
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+4
+Subtasks
+Subtask #1 (22 points): Chef can win if we make up to
+2 swaps
+Subtask #2 (34 points):
+1≤N,X,Y≤400
+1≤A
+i
+≤400 for each valid
+i
+the sum of
+N over all test cases does not exceed
+4,000
+Subtask #3 (44 points): original constraints
+Sample 1:
+Input
+Output
+3
+3 4 5
+1 2 3
+3 3 4
+1 2 3
+2 20 30
+40 10
+1
+0
+-1
+Explanation:
+Example case 1: We can swap the last card with one of the first two cards.
+Example case 2: No swaps are necessary, Chef wins after dealing the first two cards.
+Example case 3: The order of the cards in the deck does not matter, Chef cannot win.

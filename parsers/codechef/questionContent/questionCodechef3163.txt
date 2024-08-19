@@ -1,0 +1,124 @@
+Precious Stones 
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chefland consists of
+N villages connected by
+N−1 roads in such a way that the road network is a tree, i.e. there are no cycles and each village is reachable from any other village. A well known legend says that in the middle of each road, there is a hidden precious stone. There are
+K different colours of stones, conveniently numbered
+1 through
+K, and for each road, we also know the colour of the stone hidden there.
+King Chef wants a new beautiful crown, so he organises an expedition to find some stones in the following way:
+Chef chooses a set of
+M villages to be the expedition basis, in such a way that they form a connected subgraph of Chefland, i.e. for any two villages in the basis, the path between them must not visit any village that is not in the basis.
+The expedition gathers the stones in all roads which lie on the "frontier" of the expedition basis, i.e. all edges for which one endpoint lies in the basis and the other endpoint does not.
+For each of the
+2
+K
+possible sets of colours, Chef wants to know if it is possible that the expedition will return with exactly this set, i.e. there is a basis such that the expedition returns with at least one stone of each colour in this set and no stones with colours that are not in this set.
+Since Chef is not sure about the size of the expedition crew, he also wants you to find these answers for each possible value of
+M.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+Each of the following
+N−1 lines contains three space-separated integers
+u,
+v and
+c, denoting that villages
+u and
+v are connected by a road and in this road, there is a stone with colour
+c.
+Output
+Let's associate a set
+S of colours with a bitmask
+∑
+c∈S
+2
+c−1
+.
+For each test case, print
+N lines. For each
+i (
+1≤i≤N), the
+i-th of these lines should contain
+2
+K
+integers but not separated by spaces; for each
+j (
+0≤j<2
+K
+), the
+j+1-th integer should be
+1 if it is possible to obtain the set with bitmask
+j for
+M=i or
+0 if it is impossible.
+Constraints
+1≤T≤500
+1≤N≤100
+1≤K≤12
+1≤u,v≤N
+1≤c≤K
+the graph described on the input is a tree
+the sum of
+N over all test cases does not exceed
+500
+Subtasks
+Subtask #1 (10 points): for each valid
+i, the
+i-th edge connects vertices
+i and
+i+1 (in other words, the tree is a line)
+Subtask #2 (15 points):
+K≤4
+Subtask #3 (25 points):
+K≤8
+Subtask #4 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+3 2
+1 2 1
+2 3 2
+3 1
+1 2 1
+2 3 1
+0111
+0110
+1000
+01
+01
+10
+Explanation:
+Example case 1: For
+M=1, there are three subtrees:
+only vertex
+1: we obtain the set
+{1} with bitmask
+1
+only vertex
+2: we obtain the set
+{1,2} with bitmask
+3
+only vertex
+3: we obtain the set
+{2} with bitmask
+2
+For
+M=2, there are two possible subtrees:
+vertices
+{1,2}: we obtain the set
+{2} with bitmask
+2
+vertices
+{2,3}: we obtain the set
+{1} with bitmask
+1
+For
+M=3, we can only choose the whole tree, which generates the empty set (with bitmask
+0).

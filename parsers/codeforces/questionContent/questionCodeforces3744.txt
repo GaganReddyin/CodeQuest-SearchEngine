@@ -1,0 +1,160 @@
+D. Stressful Training
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Berland SU holds yet another training contest for its students today.
+n
+students came, each of them brought his laptop. However, it turned out that everyone has forgot their chargers!
+Let students be numbered from
+1
+to
+n
+. Laptop of the
+i
+-th student has charge
+a
+i
+at the beginning of the contest and it uses
+b
+i
+of charge per minute (i.e. if the laptop has
+c
+charge at the beginning of some minute, it becomes
+c−
+b
+i
+charge at the beginning of the next minute). The whole contest lasts for
+k
+minutes.
+Polycarp (the coach of Berland SU) decided to buy a single charger so that all the students would be able to successfully finish the contest. He buys the charger at the same moment the contest starts.
+Polycarp can choose to buy the charger with any non-negative (zero or positive) integer power output. The power output is chosen before the purchase, it can't be changed afterwards. Let the chosen power output be
+x
+. At the beginning of each minute (from the minute contest starts to the last minute of the contest) he can plug the charger into any of the student's laptops and use it for some integer number of minutes. If the laptop is using
+b
+i
+charge per minute then it will become
+b
+i
+−x
+per minute while the charger is plugged in. Negative power usage rate means that the laptop's charge is increasing. The charge of any laptop isn't limited, it can become infinitely large. The charger can be plugged in no more than one laptop at the same time.
+The student successfully finishes the contest if the charge of his laptop never is below zero at the beginning of some minute (from the minute contest starts to the last minute of the contest, zero charge is allowed). The charge of the laptop of the minute the contest ends doesn't matter.
+Help Polycarp to determine the minimal possible power output the charger should have so that all the students are able to successfully finish the contest. Also report if no such charger exists.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+,
+1≤k≤2⋅
+10
+5
+) — the number of students (and laptops, correspondigly) and the duration of the contest in minutes.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+12
+) — the initial charge of each student's laptop.
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+7
+) — the power usage of each student's laptop.
+Output
+Print a single non-negative integer — the minimal possible power output the charger should have so that all the students are able to successfully finish the contest.
+If no such charger exists, print -1.
+Examples
+input
+Copy
+2 4
+3 2
+4 2
+output
+Copy
+5
+input
+Copy
+1 5
+4
+2
+output
+Copy
+1
+input
+Copy
+1 6
+4
+2
+output
+Copy
+2
+input
+Copy
+2 2
+2 10
+3 15
+output
+Copy
+-1
+Note
+Let's take a look at the state of laptops in the beginning of each minute on the first example with the charger of power
+5
+:
+charge:
+[3,2]
+, plug the charger into laptop 1;
+charge:
+[3−4+5,2−2]=[4,0]
+, plug the charger into laptop 2;
+charge:
+[4−4,0−2+5]=[0,3]
+, plug the charger into laptop 1;
+charge:
+[0−4+5,3−2]=[1,1]
+.
+The contest ends after the fourth minute.
+However, let's consider the charger of power
+4
+:
+charge:
+[3,2]
+, plug the charger into laptop 1;
+charge:
+[3−4+4,2−2]=[3,0]
+, plug the charger into laptop 2;
+charge:
+[3−4,0−2+4]=[−1,2]
+, the first laptop has negative charge, thus, the first student doesn't finish the contest.
+In the fourth example no matter how powerful the charger is, one of the students won't finish the contest.

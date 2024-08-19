@@ -1,0 +1,138 @@
+D. Minimum Euler Cycle
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a complete directed graph
+K
+n
+with
+n
+vertices: each pair of vertices
+u≠v
+in
+K
+n
+have both directed edges
+(u,v)
+and
+(v,u)
+; there are no self-loops.
+You should find such a cycle in
+K
+n
+that visits every directed edge exactly once (allowing for revisiting vertices).
+We can write such cycle as a list of
+n(n−1)+1
+vertices
+v
+1
+,
+v
+2
+,
+v
+3
+,…,
+v
+n(n−1)−1
+,
+v
+n(n−1)
+,
+v
+n(n−1)+1
+=
+v
+1
+— a visiting order, where each
+(
+v
+i
+,
+v
+i+1
+)
+occurs exactly once.
+Find the lexicographically smallest such cycle. It's not hard to prove that the cycle always exists.
+Since the answer can be too large print its
+[l,r]
+segment, in other words,
+v
+l
+,
+v
+l+1
+,…,
+v
+r
+.
+Input
+The first line contains the single integer
+T
+(
+1≤T≤100
+) — the number of test cases.
+Next
+T
+lines contain test cases — one per line. The first and only line of each test case contains three integers
+n
+,
+l
+and
+r
+(
+2≤n≤
+10
+5
+,
+1≤l≤r≤n(n−1)+1
+,
+r−l+1≤
+10
+5
+) — the number of vertices in
+K
+n
+, and segment of the cycle to print.
+It's guaranteed that the total sum of
+n
+doesn't exceed
+10
+5
+and the total sum of
+r−l+1
+doesn't exceed
+10
+5
+.
+Output
+For each test case print the segment
+v
+l
+,
+v
+l+1
+,…,
+v
+r
+of the lexicographically smallest cycle that visits every edge exactly once.
+Example
+input
+Copy
+3
+2 1 3
+3 3 6
+99995 9998900031 9998900031
+output
+Copy
+1 2 1 
+1 3 2 3 
+1 
+Note
+In the second test case, the lexicographically minimum cycle looks like:
+1,2,1,3,2,3,1
+.
+In the third test case, it's quite obvious that the cycle should start and end in vertex
+1
+.

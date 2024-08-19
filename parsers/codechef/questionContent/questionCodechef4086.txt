@@ -1,0 +1,100 @@
+Maximal GCD
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Chef has found an integer array
+A of length
+N. He defines the beauty of an array as the maximal value of
+gcd(A
+l
+,A
+l+1
+,…,A
+r
+)⋅(r−l+1) over all the subsegments
+[l,r] of the array
+A.
+Chef loves to explore, so aside from the beauty of the initial array, he wants to know the beauty of the array after performing each of
+Q updates. Each update replaces a subsegment of the array with an arithmetic progression. Updates are cumulative.
+Formally, in each update you are given four integers
+l,
+r,
+x, and
+y. Then for each
+i∈[l,r], you must replace
+A
+i
+with
+x+y(i−l).
+Input Format
+The first line contains an integer
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+Q - the length of the array and the number of updates.
+The second line contains
+N integers - the array
+A.
+The next
+Q lines each contains four integers
+l,
+r,
+x,
+y - the description of an update: an arithmetic progression with the initial term
+x and the common difference
+y on the subsegment
+[l,r].
+Output Format
+For each test case, output
+Q+1 lines. In the first line for each test case output the beauty of the initial array, in the
+i-th (
+2≤i≤Q+1) line for each test case output the beauty of the array after performing
+i−1 changes.
+Constraints
+1≤N,Q≤10
+5
+1≤A
+i
+,x≤10
+9
+0≤y≤10
+9
+1≤l≤r≤N
+It is guaranteed that after each update, no element of
+A is greater than
+10
+9
+.
+The sum of
+N over all test cases does not exceed
+10
+5
+.
+The sum of
+Q over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+1
+6 5
+2 6 4 10 9 12
+4 5 12 6
+2 5 2 4
+2 6 6 3
+1 5 7 3
+1 6 4 0
+12
+18
+14
+18
+19
+24
+Explanation:
+After the first operation
+A=[2,6,4,12,18,12]. The maximum value is reached on the segment
+[4,6].
+After the second operation
+A=[2,2,6,10,14,12]. The maximum value is reached on the segment
+[5,5].

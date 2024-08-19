@@ -1,0 +1,42 @@
+B. Gleb And Pizza
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Gleb ordered pizza home. When the courier delivered the pizza, he was very upset, because several pieces of sausage lay on the crust, and he does not really like the crust.
+The pizza is a circle of radius r and center at the origin. Pizza consists of the main part — circle of radius r - d with center at the origin, and crust around the main part of the width d. Pieces of sausage are also circles. The radius of the i -th piece of the sausage is ri, and the center is given as a pair (xi, yi).
+Gleb asks you to help determine the number of pieces of sausage caught on the crust. A piece of sausage got on the crust, if it completely lies on the crust.
+Input
+First string contains two integer numbers r and d (0 ≤ d < r ≤ 500) — the radius of pizza and the width of crust.
+Next line contains one integer number n — the number of pieces of sausage (1 ≤ n ≤ 105).
+Each of next n lines contains three integer numbers xi, yi and ri ( - 500 ≤ xi, yi ≤ 500, 0 ≤ ri ≤ 500), where xi and yi are coordinates of the center of i-th peace of sausage, ri — radius of i-th peace of sausage.
+Output
+Output the number of pieces of sausage that lay on the crust.
+Examples
+input
+Copy
+8 4
+7
+7 8 1
+-7 3 2
+0 2 1
+0 -2 2
+-3 -3 1
+0 6 2
+5 3 1
+output
+Copy
+2
+input
+Copy
+10 8
+4
+0 0 9
+0 0 10
+1 0 1
+1 0 2
+output
+Copy
+0
+Note
+Below is a picture explaining the first example. Circles of green color denote pieces of sausage lying on the crust.

@@ -1,0 +1,105 @@
+Chef and Digits of Large Numbers
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef and Abhishek are two friends. Abhishek really appreciates Chef's skills and wants to learn the secret formula behind Chef's tasty dishes. Chef will tell his secret formula only to a competent person. So to check Abhishek's competency, Chef asked him to solve the following problem.
+Find the number of integers between
+0 and
+N (inclusive) such that the product of digits of the integer is greater than or equal to
+K!, where
+K is the number of digits present in the integer.
+Example: Consider
+N=1000.
+The only digit present in the integer
+0 is
+0. So the product of digit is also
+0 and
+1!=1. So
+0 will be not counted in the answer because
+0≯1.
+The digits present in the integer
+25 are
+2,5. So the product of digits is
+(2⋅5)=10 and
+2!=2. So
+25 will be counted in the answer because
+10≥2.
+The digits present in the integer
+11 are
+1,1. So the product of digits is
+(1⋅1)=1 and
+2!=2. So
+11 will be not counted in the answer because
+1≯2.
+The digits present in the integer
+157 are
+1,5,7. So the product of digits is
+(1⋅5⋅7)=35 and
+3!=6. So
+157 will be counted in the answer because
+35≥6.
+Since Abhishek is a lazy person, he wants your help to solve the problem.
+Note:
+K! represents the factorial of
+K and
+K!=1⋅2⋅3⋅…⋅(K−1)⋅K .
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output Format
+For each test case, output in a single line the answer for given integer
+N
+Constraints
+1≤T≤10145
+0≤N≤10
+100
+Subtasks
+Subtask #1 (10 points):
+1≤T≤200
+0≤N≤44000000
+Subtask #2 (90 points): Original constraints
+Sample 1:
+Input
+Output
+3
+13
+54
+198
+11
+48
+159
+Explanation:
+Test case
+1: The only one-digit number that will not be included in the answer is
+0. The two-digit numbers that will not be included in the answer are
+10,11 because their product of digits is less than
+2!=2. So the answer is
+=14−1−2=11.
+Test case
+3:
+The one-digit number that will not be counted in the answer is
+0.
+The two-digit digit numbers that will not be counted in the answer are
+10,11,
+20,30,
+40,50,60,
+70,80,90 because their product of digits is less than
+2!=2.
+The three-digit numbers that will not be counted in the answer are
+100,
+101,102,
+103,104,105,
+106,107,108,
+109,110,111,
+112,113,114,
+115,120,
+121,
+122,130,131,
+140,141,150,
+151,160,170,
+180,190 because their product of digits is less than
+3!=6.
+So the answer is
+=199−1−10−29=159.

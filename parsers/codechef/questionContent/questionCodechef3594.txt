@@ -1,0 +1,97 @@
+Permutation Split
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+For a sequence of positive integers
+A
+1
+,A
+2
+,…,A
+K
+, let's define the number of inversions in it as the number of pairs of integers
+(i,j) such that
+1≤i<j≤K and
+A
+i
+>A
+j
+.
+You are given a permutation
+P
+1
+,P
+2
+,…,P
+N
+of the integers
+1 through
+N. Determine if it is possible to partition this permutation into two subsequences (possibly empty or non-contiguous) such that:
+Each element of
+P appears in exactly one of these subsequences.
+The numbers of inversions in one subsequence is equal to the number of inversions in the other subsequence.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output
+For each test case, print a single line containing the string "YES" if it is possible to partition the permutation in a given way or "NO" if it is impossible.
+Constraints
+1≤N≤100
+1≤P
+i
+≤N for each valid
+i
+P
+1
+,P
+2
+,…,P
+N
+are pairwise distinct
+the sum of
+N over all test cases does not exceed
+200
+Subtasks
+Subtask #1 (20 points):
+N≤16
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+4
+1
+1
+3
+3 2 1
+4
+4 3 2 1
+5 
+1 4 3 2 5
+YES
+NO
+YES
+NO
+Explanation:
+Example case 1: We can split
+(1) into
+(1) and
+(). There are
+0 inversions in each of these sequences.
+Example case 3: We can split
+(4,3,2,1) into
+(4,3) and
+(2,1). There is
+1 inversion in each of them. Note that this is not the only solution ? we could also split the permutation into sequences
+(4,1) and
+(3,2).

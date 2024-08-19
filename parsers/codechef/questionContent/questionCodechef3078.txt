@@ -1,0 +1,71 @@
+War in Treeland Again
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+There is a full-scale war taking place in Treeland. Chef needs to travel between cities in Treeland to work, but during the war, it is not safe.
+In Treeland, there are
+N cities (numbered
+1 through
+N) and
+N−1 bidirectional roads connecting them in such a way that Chef can reach each city from any other city using these roads. Each road is occupied by a unique faction that assigned a positive integer code to it.
+Let
+f(A,B) denote the greatest positive integer which divides the code of each road on the shortest path between cities
+A and
+B (the GCD of these codes). If Chef wants to go from city
+A to city
+B safely, he needs to pay
+f(A,B) units of money.
+Since Chef is not sure between which pairs of cities he is going to travel, he wants to know
+S=
+i=1
+∑
+N
+j=i+1
+∑
+N
+f(i,j).
+Help Chef calculate
+S.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+Each of the next
+N−1 lines contains three space-separated integers
+X,
+Y and
+Z denoting that cities
+X and
+Y are connected by a road with code
+Z.
+Output
+For each test case, print a single line containing one integer
+S.
+Constraints
+1≤T≤10
+1≤N,Z≤10
+5
+1≤X,Y≤N
+Sample 1:
+Input
+Output
+1
+5
+1 2 4
+1 3 3
+2 4 1
+2 5 2
+17
+Explanation:
+Example case 1:
+f(1,2)=GCD(4)=4
+f(1,3)=GCD(3)=3
+f(1,4)=GCD(4,1)=1
+f(1,5)=GCD(4,2)=2
+f(2,3)=GCD(4,3)=1
+f(2,4)=GCD(1)=1
+f(2,5)=GCD(2)=2
+f(3,4)=GCD(3,4,1)=1
+f(3,5)=GCD(3,4,2)=1
+f(4,5)=GCD(1,2)=1

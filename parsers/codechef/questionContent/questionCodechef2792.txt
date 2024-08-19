@@ -1,0 +1,97 @@
+Xor Becoming Uncanny
+Problem
+We define
+f(x)={
+f(x⊕reverse(x))+1
+0
+if x
+
+=0
+otherwise
+Here,
+⊕ denotes the bitwise XOR operation and
+reverse is a function that takes a postive integer, reverses its binary representation (without any leading zeros) and returns the resulting number. For example
+reverse(2)=1,
+reverse(6)=3,
+reverse(7)=7
+Given an integer
+N, find out the value of
+∑
+i=1
+2
+N
+−1
+f(i) modulo
+998244353 or claim that there exists a positive integer
+x
+<2
+N
+for which
+f is undefined.
+Input Format
+The first line of input contains a single integer
+T - the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output Format
+For each test case output a single line containing one integer :
+−1 if there exists a positive integer
+x such that
+x<2
+N
+and
+f(x) is undefined
+∑
+i=1
+2
+N
+−1
+f(i) modulo
+998244353 otherwise
+Constraints
+1≤T≤3⋅10
+5
+1≤N≤10
+9
+Sample 1:
+Input
+Output
+8
+1
+2
+3
+5
+8
+13
+21
+34
+1
+4
+10
+58
+578
+20098
+5236738
+24641495
+Explanation:
+Note that:
+f(1)=f(1⊕1)+1=f(0)+1=1
+f(2)=f(2⊕1)+1=f(3)+1=(f(3⊕3)+1)+1=(f(0)+1)+1=2
+f(3)=f(3⊕3)+1=f(0)+1=1
+Test case-1:
+∑
+i=1
+2
+1
+−1
+f(i)=f(1)=1. So answer is
+1 mod 998244353=1.
+Test case-2:
+∑
+i=1
+2
+2
+−1
+f(i)=f(1)+f(2)+f(3)=1+2+1=4. So answer is
+4 mod 998244353=4.

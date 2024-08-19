@@ -1,0 +1,63 @@
+The One Where Joey Dates Rachel
+Problem
+Everybody is sad, most of all Monica as Chandler must spend Christmas and New Years in Tulsa, where his staff is all depressed they can't be with their families. He arranged for the head office to send a bonus, but even that's another bummer: donations in their name to the New York ballet. Chandler sends a message to the head office in the form of a binary code, which somehow gets changed on the way.
+Chef is given two binary strings
+S and
+T of lengths
+N and
+M respectively. We can perform the following operations on string
+S.
+Select two adjacent characters of the string
+S and flip these two characters. ( Flipping the character
+1 is equivalent to replacing the character
+1 with
+0, and vice-versa )
+Add a character, either
+0 or
+1 to any of the ends ( either the front or the back ) of the string
+S.
+Find the minimum number of operations needed to convert
+S to
+T. If it is impossible to convert
+S to
+T, print -1.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+First line of each testcase contains of a single line of input, two integers
+N,M.
+Second line of each testcase contains a binary string
+S.
+Third line of each testcase contains a binary string
+T.
+Output Format
+For each testcase, output in a single line the minimum number of operations needed to convert
+S to
+T. If it is impossible to convert, print -1.
+Constraints
+1≤T≤20
+1≤N,M≤1000
+S,T contain
+0,1 only.
+Sample 1:
+Input
+Output
+2
+3 3
+101
+000
+4 3
+0100
+000
+2
+-1
+Explanation:
+Test case 1: Flip the first two bits in one move and second two bits in second move.
+101
+→
+011
+→
+000.
+Test case 2: It is impossible to convert
+S to
+T using any sequence of moves.

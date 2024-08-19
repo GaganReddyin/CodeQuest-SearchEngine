@@ -1,0 +1,130 @@
+B. Count Pairs
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a prime number
+p
+,
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+, and an integer
+k
+.
+Find the number of pairs of indexes
+(i,j)
+(
+1≤i<j≤n
+) for which
+(
+a
+i
++
+a
+j
+)(
+a
+2
+i
++
+a
+2
+j
+)≡kmodp
+.
+Input
+The first line contains integers
+n,p,k
+(
+2≤n≤3⋅
+10
+5
+,
+2≤p≤
+10
+9
+,
+0≤k≤p−1
+).
+p
+is guaranteed to be prime.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤p−1
+). It is guaranteed that all elements are different.
+Output
+Output a single integer — answer to the problem.
+Examples
+input
+Copy
+3 3 0
+0 1 2
+output
+Copy
+1
+input
+Copy
+6 7 2
+1 2 3 4 5 6
+output
+Copy
+3
+Note
+In the first example:
+(0+1)(
+0
+2
++
+1
+2
+)=1≡1mod3
+.
+(0+2)(
+0
+2
++
+2
+2
+)=8≡2mod3
+.
+(1+2)(
+1
+2
++
+2
+2
+)=15≡0mod3
+.
+So only
+1
+pair satisfies the condition.
+In the second example, there are
+3
+such pairs:
+(1,5)
+,
+(2,3)
+,
+(4,6)
+.

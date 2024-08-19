@@ -1,0 +1,74 @@
+Counting Pairs
+Problem
+Given an integer
+N, find the number of tuples
+(w,x,y,z) such that
+1≤w,x,y,z≤N and
+x
+w
++
+z
+y
+is an integer.
+For example, if
+N=2, the tuple
+(1,2,1,2) satisfies both conditions, i.e.
+2
+1
++
+2
+1
+=1 is an integer, however
+(1,1,1,2) does not since
+1
+1
++
+2
+1
+=1.5 is not an integer.
+Input Format
+The first line of input contains an integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line of input containing one integer,
+N.
+Output Format
+For each test case, print a new line containing a single integer, the answer to that test case.
+Constraints
+1≤T≤150
+1≤N≤1000
+The sum of
+N over all test cases does not exceed
+10
+4
+Sample 1:
+Input
+Output
+3
+2
+3
+7
+10
+31
+355
+Explanation:
+Test Case
+1: There are
+2
+4
+=16 tuples to consider, out of them the only ones that are invalid are those where one of the fractions is
+2
+1
+and the other is an integer. The valid tuples are
+{(1,1,1,1),(1,1,2,1),(1,1,2,2),(1,2,1,2),(2,1,1,1),(2,1,2,1),(2,1,2,2),(2,2,1,1),(2,2,2,1),(2,2,2,2)}.
+Test Cases
+2 and
+3: There are too many tuples to list them in these cases. However, you may verify that among the
+3
+4
+=81 and
+7
+4
+=4901 tuples respectively only
+31 and
+355 of them satisfy the conditions in the problem statement.

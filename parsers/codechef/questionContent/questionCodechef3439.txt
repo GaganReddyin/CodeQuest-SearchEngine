@@ -1,0 +1,173 @@
+Unusual Sorting
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+You are given a sequence of distinct non-negative integers
+A
+1
+,A
+2
+,…,A
+N
+.
+For every non-negative integer
+x<2
+K
+, let's define a function
+f(x) as the number of inversions in the sequence
+A
+1
+⊕x,A
+2
+⊕x,…,A
+N
+⊕x. (An inversion in a sequence
+X
+1
+,X
+2
+,…,X
+N
+is a pair of indices
+(i,j) such that
+i<j and
+X
+i
+>X
+j
+.)
+Consider the sorted sequence of pairs
+(f(x),x) for all integers
+x∈[0,2
+K
+−1]; a pair
+(f(x
+1
+),x
+1
+) is earlier than
+(f(x
+2
+),x
+2
+) in this sequence if
+f(x
+1
+)<f(x
+2
+), or if
+f(x
+1
+)=f(x
+2
+) and
+x
+1
+<x
+2
+. You should find the second element (i.e. the number
+x) of the
+P-th pair in this sequence. The sequence is indexed from 1.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+K and
+P.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the number
+x generating the
+P-th pair in the sorted sequence.
+Constraints
+1≤T≤20
+1≤N≤10
+6
+1≤K≤30
+1≤P≤2
+K
+0≤A
+i
+<2
+K
+for each valid
+i
+the elements of
+A are pairwise distinct
+the sum of
+N for all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (10 points):
+1≤T≤10
+1≤K≤10
+1≤N≤100
+Subtask #2 (20 points):
+1≤T≤10
+1≤K≤18
+the sum of
+N for all test cases does not exceed
+10
+5
+Subtask #3 (20 points):
+1≤T≤5
+1≤K≤30
+the sum of
+N for all test cases does not exceed
+10
+5
+Subtask #4 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+4 3 5
+2 0 3 7
+2 2 1
+2 0
+4
+2
+Explanation:
+Example case 1: The values of
+f(x) for all
+0≤x≤7 are as follows:
+x=0:
+f(0)= number of inversions in
+[2,0,3,7]=1
+x=1:
+f(1)= number of inversions in
+[3,1,2,6]=2
+x=2:
+f(2)= number of inversions in
+[0,2,1,5]=1
+x=3:
+f(3)= number of inversions in
+[1,3,0,4]=2
+x=4:
+f(4)= number of inversions in
+[6,4,7,3]=4
+x=5:
+f(5)= number of inversions in
+[7,5,6,2]=5
+x=6:
+f(6)= number of inversions in
+[4,6,5,1]=4
+x=7:
+f(7)= number of inversions in
+[5,7,4,0]=5
+The sorted sequence of pairs
+(f(x),x) is
+[(1,0),(1,2),(2,1),(2,3),(4,4),(4,6),(5,5),(5,7)]. We should find the
+P=5-th pair, which is
+(4,4), so the answer is
+4.

@@ -1,0 +1,32 @@
+Courses in an university
+Problem
+Read problems statements in mandarin chinese, russian and vietnamese as well.
+There are n courses in a university being offered. These courses are numbered from 1 to n in the increasing order of their difficulty. For each course, you can have some courses as prerequisites. The prerequisite courses for a course should be of lower difficulty than it. You are given an array a of size n, where ai denotes that there should be at least ai prerequisite courses for i-th course.
+The university wants to estimate the efficiency of the allocation of prerequisites of courses by maximizing the number of courses that are not prerequisites for any other course. Find out what's the maximum such number of courses possible. It is guaranteed that ai < i, thus making sure that it is possible to allocate the prerequisites for each of the course.
+Input
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains an integer n.
+The second line of each test case contains n space separated integers denoting array a.
+Output
+For each test case, output a single line containing an integer corresponding to the maximum number of possible courses which are not prerequisite for any other course.
+Constraints
+1 ≤ T ≤ 10
+1 ≤ n ≤ 105
+0 ≤ ai < i
+Subtasks
+Subtask #1 (40 points) : 1 ≤ n ≤ 100
+Subtask #2 (60 points) : original constraints
+Sample 1:
+Input
+Output
+2
+3
+0 1 1
+3
+0 1 2
+2
+1
+Explanation:
+Example case 1. Both the courses 2 and 3 can have course 1 as a prerequisite. In this case, course 2 and course 3 are not prerequisites for any course. So, we have two such courses.
+Other possibility could be following. Course 2 has course 1 as a prerequisite, and course 3 has course 2 as a prerequisite. Thus only course 3 is the only course that is not the prerequisite of any other course.
+Thus answer is 2.

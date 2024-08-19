@@ -1,0 +1,28 @@
+Too Many Candies
+Problem
+Luke, an intergalactic traveller went on a trip across the universe and got candies from the different planets he visited. He comes back with
+N candies and decides to distribute them among his
+M friends. However, Luke only wants a fair distribution of the candies as he loves everyone equally. (A fair distribution is one in which each of his friends receive an equal number of candies and each friend receives at least one candy.) If a fair distribution is not possible, he might throw away some candies and try to distribute the remaining candies in a similar manner.
+If he can throw away exactly
+K candies at a time (he can throw away candies multiple times), what is the minimum number of times he will need to throw away candies before achieving a fair distribution?
+###Input:
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, three integers
+N,M,K.
+###Output: For each testcase, output a single integer denoting the minimum number of times he will need to throw away candies before achieving a fair distribution. If a fair distribution is not possible, print -1.
+###Constraints
+1≤T≤10
+5
+2≤N,M,K≤10
+9
+Sample 1:
+Input
+Output
+2 
+28 6 2 
+78 5 3
+2
+1
+Explanation:
+Test case 1: There are 28 candies and 6 friends. He can distribute 24 candies fairly among his friends, each getting 4 candies. He then throws away the remaining 4 candies 2 at a time.

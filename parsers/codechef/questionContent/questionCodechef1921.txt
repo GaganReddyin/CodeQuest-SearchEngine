@@ -1,0 +1,96 @@
+Flipping Failure
+Problem
+Chef has a binary string
+S with him and he wants to modify it using the following two types of operations -
+Type 1 : Choose any two indices
+i and
+j such that
+1≤i,j≤∣S∣ and swap
+S
+i
+and
+S
+j
+. This operation costs
+1 rupee and can be performed any number of times.
+Type 2 : Choose any prefix of length
+i, where
+1≤i≤∣S∣, and reverse this prefix of the binary string. This operation is free of cost and can be performed at most once.
+Chef wants to obtain the lexicographically smallest string. Can you help him find the minimum cost to obtain the lexicographically smallest string?
+Note:
+∣S∣ denotes the length of the string
+S.
+A string
+A is lexicographically smaller than string
+B, if
+A
+i
+<B
+i
+, where
+i is the first index where
+A and
+B differ.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input denoting
+S, the original string.
+Output Format
+For each test case, output the minimum cost to obtain the lexicographically minimal string.
+Constraints
+1≤T≤5⋅10
+4
+1≤∣S∣≤10
+5
+The sum of
+∣S∣ over all test cases won't exceed
+5⋅10
+5
+.
+Subtasks
+Subtask 1 (10 points):
+1≤M≤10
+Subtask 2 (20 points): The sum of
+N across all test cases won't exceed
+20.
+Subtask 3 (70 points): No further constraints.
+Sample 1:
+Input
+Output
+3
+1010
+101
+100100
+1
+0
+1
+Explanation:
+Test case 1: You can perform an operation of Type 1 by choosing
+i=2 and
+j=3. So from
+1010, you get
+1100, and it has cost you
+1 rupee so far. Then, you perform an operation of Type 2, by choosing
+i=4. So you reverse the entire string, and so from
+1100, you get
+0011. This operation is free of cost. This is the lexicographically smallest string that you can achieve, and it cost us
+1 rupee to get there. So the answer is
+1.
+Test case 2: You can perform an operation of Type 2, by choosing
+i=2. So you reverse the prefix of length 2, and so from
+101, you get
+011. This operation is free of cost. This is the lexicographically smallest string that you can achieve, and it cost us
+0 rupees to get there. So the answer is
+0.
+Test case 3: You can perform an operation of Type 1 by choosing
+i=4 and
+j=6. So from
+100100, you get
+100001, and it has cost you
+1 rupee so far. Then, you perform an operation of Type 2, by choosing
+i=5. So you reverse the prefix of length 5, and so from
+100001, you get
+000011. This operation is free of cost. This is the lexicographically smallest string that you can achieve, and it cost us
+1 rupee to get there. So the answer is
+1.

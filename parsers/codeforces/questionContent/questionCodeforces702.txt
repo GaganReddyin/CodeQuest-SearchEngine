@@ -1,0 +1,132 @@
+F. Lost Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+My orzlers, we can optimize this problem from
+O(S3)
+to
+O(T
+5
+9
+)
+!
+— Spyofgame, founder of Orzlim religion
+A long time ago, Spyofgame invented the famous array
+a
+(
+1
+-indexed) of length
+n
+that contains information about the world and life. After that, he decided to convert it into the matrix
+b
+(
+0
+-indexed) of size
+(n+1)×(n+1)
+which contains information about the world, life and beyond.
+Spyofgame converted
+a
+into
+b
+with the following rules.
+bi,0=0
+if
+0≤i≤n
+;
+b0,i=ai
+if
+1≤i≤n
+;
+bi,j=bi,j−1⊕bi−1,j
+if
+1≤i,j≤n
+.
+Here
+⊕
+denotes the bitwise XOR operation.
+Today, archaeologists have discovered the famous matrix
+b
+. However, many elements of the matrix has been lost. They only know the values of
+bi,n
+for
+1≤i≤n
+(note that these are some elements of the last column, not the last row).
+The archaeologists want to know what a possible array of
+a
+is. Can you help them reconstruct any array that could be
+a
+?
+Input
+The first line contains a single integer
+n
+(
+1≤n≤5⋅105
+).
+The second line contains
+n
+integers
+b1,n,b2,n,…,bn,n
+(
+0≤bi,n<230
+).
+Output
+If some array
+a
+is consistent with the information, print a line containing
+n
+integers
+a1,a2,…,an
+. If there are multiple solutions, output any.
+If such an array does not exist, output
+−1
+instead.
+Examples
+input
+Copy
+3
+0 2 1
+output
+Copy
+1 2 3 
+input
+Copy
+1
+199633
+output
+Copy
+199633 
+input
+Copy
+10
+346484077 532933626 858787727 369947090 299437981 416813461 865836801 141384800 157794568 691345607
+output
+Copy
+725081944 922153789 481174947 427448285 516570428 509717938 855104873 280317429 281091129 1050390365 
+Note
+If we let
+a=[1,2,3]
+, then
+b
+will be:
+0
+1
+2
+3
+0
+1
+3
+0
+0
+1
+2
+2
+0
+1
+3
+1
+The values of
+b1,n,b2,n,…,bn,n
+generated are
+[0,2,1]
+which is consistent with what the archaeologists have discovered.

@@ -1,0 +1,138 @@
+D. Excellent Arrays
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call an integer array
+a
+1
+,
+a
+2
+,…,
+a
+n
+good if
+a
+i
+≠i
+for each
+i
+.
+Let
+F(a)
+be the number of pairs
+(i,j)
+(
+1≤i<j≤n
+) such that
+a
+i
++
+a
+j
+=i+j
+.
+Let's say that an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+is excellent if:
+a
+is good;
+l≤
+a
+i
+≤r
+for each
+i
+;
+F(a)
+is the maximum possible among all good arrays of size
+n
+.
+Given
+n
+,
+l
+and
+r
+, calculate the number of excellent arrays modulo
+10
+9
++7
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first and only line of each test case contains three integers
+n
+,
+l
+, and
+r
+(
+2≤n≤2⋅
+10
+5
+;
+−
+10
+9
+≤l≤1
+;
+n≤r≤
+10
+9
+).
+It's guaranteed that the sum of
+n
+doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print the number of excellent arrays modulo
+10
+9
++7
+.
+Example
+input
+Copy
+4
+3 0 3
+4 -3 5
+42 -33 55
+69 -42 146
+output
+Copy
+4
+10
+143922563
+698570404
+Note
+In the first test case, it can be proven that the maximum
+F(a)
+among all good arrays
+a
+is equal to
+2
+. The excellent arrays are:
+[2,1,2]
+;
+[0,3,2]
+;
+[2,3,2]
+;
+[3,0,1]
+.

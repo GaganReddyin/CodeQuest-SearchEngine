@@ -1,0 +1,36 @@
+A Short Counting Problem
+Problem
+Given two integers
+A and
+B, find the count of integers
+X∈[L,R] such that at least one of the following is true:
+X and
+A are coprime
+X and
+B are coprime
+Input Format
+The first and only line of input contains four integers
+A,B,L, and
+R: as given in the problem statement.
+Output Format
+Print a single integer denoting the count of integers
+X satisfying the condition.
+Constraints
+1≤A,B≤10
+9
+1≤L≤R≤10
+18
+Sample 1:
+Input
+Output
+6 15 1 10
+6
+Explanation:
+There are
+6 numbers that satisfy the condition:
+1,2,4,5,7,8.
+Sample 2:
+Input
+Output
+235714494 193478285 2 100000000000
+65435081000

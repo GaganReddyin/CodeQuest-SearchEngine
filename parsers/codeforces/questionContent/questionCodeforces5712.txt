@@ -1,0 +1,19 @@
+E2. Photographs (II)
+time limit per test15 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Zombies seem to have become much more intelligent lately – a few have somehow wandered into the base through the automatic gate. Heidi has had to beef up security, and a new gate has been installed. Unfortunately, now the questions being asked are more complicated, and even humans have trouble answering them. Can you still program the robot army to do this reliably?
+The new questions are of the following form: a grayscale photograph has been divided into several horizontal pieces, which have been arbitrarily rearranged. The task is to assemble the original image back from these pieces (somewhat like in a jigsaw puzzle). To further delay the zombies, significant Gaussian-distributed noise has been added to the image.
+Input
+The input format is the same as in the previous version, except that the first line of every question now contains three space-separated numbers h, w and k (1 ≤ h, w ≤ 600, 2 ≤ k ≤ 16) – the height (number of rows) and width (number of columns) of the photograph and the number of pieces, respectively. The number of pieces evenly divides the height, and each piece is of the same height h / k.
+Again, there is only one input file to be processed, and the same resources are provided to you as in the previous version (except that now you are given all input images in .bmp format, rather than the first 50).
+Output
+Your program should print q lines. The i-th line should contain your answer for the i-th question: a space-separated sequence of k numbers π1, π2, ..., πk such that:
+π is a permutation of {1, 2, ..., k}, that is, each number from 1 to k appears exactly once in π,
+for each j = 1, ..., k, πj is the position (index), in the original image, of the piece which is at position j in the input image. (See the illustration below for clarity.)
+The second image from the test set. If the three pieces in the original image are numbered 1, 2, 3 from top to bottom, then the numbering in the image on the right should be 2, 3, 1. The correct answer for this image is thus 2 3 1.
+Again, your answers will be accepted if they conform to this format and if at least 75% of them are correct.
+Again, you may process the input locally and submit just your precomputed answers (i.e., a program which just prints your output for the input file all.in).
+Note
+The link to download all the necessary materials is http://assets.codeforces.com/files/690/medium_contestant_package.zip

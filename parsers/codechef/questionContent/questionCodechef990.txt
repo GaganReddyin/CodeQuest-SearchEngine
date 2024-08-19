@@ -1,0 +1,50 @@
+Chef and GCD
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Chef has two positive integers
+X and
+Y. Now Chef wants to perform some number of operations (possibly zero) on them. In each operation, Chef can choose either
+X or
+Y and increment it by
+1. Find the minimum number of operations Chef needs to perform so that there is a positive integer strictly greater than
+1 which divides both
+X and
+Y (In other words, the greatest common divisor of
+X and
+Y should be greater than
+1).
+Input Format
+The first line contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two integers
+X and
+Y.
+Output Format
+For each test case, print a single line containing one integer — the minimum number of operations Chef needs to perform.
+Constraints
+1≤T≤10
+5
+1≤X,Y≤10
+9
+Sample 1:
+Input
+Output
+2
+4 16
+4 55
+0
+1
+Explanation:
+Test Case 1: The greatest common divisor of
+4 and
+16 is
+4 which is already greater than
+1, so Chef will not perform any operations.
+Test Case 2: Chef will perform one operation and add
+1 to
+55. Now the greatest common divisor of
+4 and
+56 is
+4 which is greater than
+1.

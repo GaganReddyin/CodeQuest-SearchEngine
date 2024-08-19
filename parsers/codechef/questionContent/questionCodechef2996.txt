@@ -1,0 +1,40 @@
+Break the Balance
+Problem
+JJ found a balanced parenthesis sequence. He does not like balanced parentheses so he will make the parenthesis sequence unbalanced by swapping adjacent characters in the sequence.
+JJ is lazy and wants to know minimum number of adjacent swaps required to make the given balanced parenthesis sequence unbalanced.
+A parenthesis sequence is called balanced if one can turn it into a valid mathematical expression by adding characters + and 1. Sequences such as (())() and ()() are balanced whereas sequences such as ())( and )() are unbalanced.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains
+S - a balanced parenthesis sequence.
+Output Format
+For each test case, output the minimum number of adjacent swaps required to make the parenthesis sequence unbalanced.
+Constraints
+1≤T≤5⋅10
+4
+2≤∣S∣≤10
+5
+Sum of
+S does not exceeds
+10
+6
+over all test cases
+S is a balanced parentheses sequence
+Sample 1:
+Input
+Output
+4
+()
+(())
+()()
+((()))(())
+1
+2
+1
+2
+Explanation:
+Test case
+1: Swap the first and second character to get the unbalanced sequence )(.
+Test case
+2: Swap the second and third character first to obtain the bracket sequence ()(). Now you can swap the first and second character to obtain the sequence )(() which is unbalanced.

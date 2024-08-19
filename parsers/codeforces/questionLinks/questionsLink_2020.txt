@@ -1,0 +1,1 @@
+https://codeforces.com/problemset/problem/1471/A

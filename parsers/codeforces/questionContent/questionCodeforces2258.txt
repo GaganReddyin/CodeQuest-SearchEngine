@@ -1,0 +1,140 @@
+F. Boring Queries
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Yura owns a quite ordinary and boring array
+a
+of length
+n
+. You think there is nothing more boring than that, but Vladik doesn't agree!
+In order to make Yura's array even more boring, Vladik makes
+q
+boring queries. Each query consists of two integers
+x
+and
+y
+. Before answering a query, the bounds
+l
+and
+r
+for this query are calculated:
+l=(last+x)modn+1
+,
+r=(last+y)modn+1
+, where
+last
+is the answer on the previous query (zero initially), and
+mod
+is the remainder operation. Whenever
+l>r
+, they are swapped.
+After Vladik computes
+l
+and
+r
+for a query, he is to compute the least common multiple (LCM) on the segment
+[l;r]
+of the initial array
+a
+modulo
+10
+9
++7
+. LCM of a multiset of integers is the smallest positive integer that is divisible by all the elements of the multiset. The obtained LCM is the answer for this query.
+Help Vladik and compute the answer for each query!
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the array.
+The second line contains
+n
+integers
+a
+i
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+) — the elements of the array.
+The third line contains a single integer
+q
+(
+1≤q≤
+10
+5
+) — the number of queries.
+The next
+q
+lines contain two integers
+x
+and
+y
+each (
+1≤x,y≤n
+) — the description of the corresponding query.
+Output
+Print
+q
+integers — the answers for the queries.
+Example
+input
+Copy
+3
+2 3 5
+4
+1 3
+3 3
+2 3
+2 3
+output
+Copy
+6
+2
+15
+30
+Note
+Consider the example:
+boundaries for first query are
+(0+1)mod3+1=2
+and
+(0+3)mod3+1=1
+. LCM for segment
+[1,2]
+is equal to
+6
+;
+boundaries for second query are
+(6+3)mod3+1=1
+and
+(6+3)mod3+1=1
+. LCM for segment
+[1,1]
+is equal to
+2
+;
+boundaries for third query are
+(2+2)mod3+1=2
+and
+(2+3)mod3+1=3
+. LCM for segment
+[2,3]
+is equal to
+15
+;
+boundaries for fourth query are
+(15+2)mod3+1=3
+and
+(15+3)mod3+1=1
+. LCM for segment
+[1,3]
+is equal to
+30
+.

@@ -1,0 +1,179 @@
+D. Yet Another Problem
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of
+n
+integers
+a
+1
+,
+a
+2
+,
+a
+3
+,…,
+a
+n
+.
+You have to answer
+q
+independent queries, each consisting of two integers
+l
+and
+r
+.
+Consider the subarray
+a[l:r]
+=
+[
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+]
+. You can apply the following operation to the subarray any number of times (possibly zero)-
+Choose two integers
+L
+,
+R
+such that
+l≤L≤R≤r
+and
+R−L+1
+is odd.
+Replace each element in the subarray from
+L
+to
+R
+with the XOR of the elements in the subarray
+[L,R]
+.
+The answer to the query is the minimum number of operations required to make all elements of the subarray
+a[l:r]
+equal to
+0
+or
+−1
+if it is impossible to make all of them equal to
+0
+.
+You can find more details about XOR operation here.
+Input
+The first line contains two integers
+n
+and
+q
+(1≤n,q≤2⋅
+10
+5
+)
+ — the length of the array
+a
+and the number of queries.
+The next line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(0≤
+a
+i
+<
+2
+30
+)
+ — the elements of the array
+a
+.
+The
+i
+-th of the next
+q
+lines contains two integers
+l
+i
+and
+r
+i
+(1≤
+l
+i
+≤
+r
+i
+≤n)
+ — the description of the
+i
+-th query.
+Output
+For each query, output a single integer  — the answer to that query.
+Example
+input
+Copy
+7 6
+3 0 3 3 1 2 3
+3 4
+4 6
+3 7
+5 6
+1 6
+2 2
+output
+Copy
+-1
+1
+1
+-1
+2
+0
+Note
+In the first query,
+l=3,r=4
+, subarray =
+[3,3]
+. We can apply operation only to the subarrays of length
+1
+, which won't change the array; hence it is impossible to make all elements equal to
+0
+.
+In the second query,
+l=4,r=6
+, subarray =
+[3,1,2]
+. We can choose the whole subarray
+(L=4,R=6)
+and replace all elements by their XOR
+(3⊕1⊕2)=0
+, making the subarray
+[0,0,0]
+.
+In the fifth query,
+l=1,r=6
+, subarray =
+[3,0,3,3,1,2]
+. We can make the operations as follows:
+Choose
+L=4,R=6
+, making the subarray
+[3,0,3,0,0,0]
+.
+Choose
+L=1,R=5
+, making the subarray
+[0,0,0,0,0,0]
+.

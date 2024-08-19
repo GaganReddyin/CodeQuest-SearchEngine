@@ -1,0 +1,151 @@
+Maximum Tree Jumps
+Problem
+Read problems statements in Mandarin Chinese, Russian, and Bengali as well.
+Some cooking competitions going on to be held in various cities and the Chef wants to participate in them. There are
+N cities numbered from
+1 to
+N and they are connected by
+N−1 roads such that every city is connected to every other city. But traveling is a bit different here. Every city
+i is assigned a travel value,
+A
+i
+. From a city numbered
+X, one can only travel to another city
+Y such that the simple path from
+X to
+Y has exactly
+A
+X
+roads.
+To participate in a city's competition, the Chef just has to visit it. Help the Chef by finding the maximum number of competitions he can participate in if he can start from any city and visit any city multiple times.
+Formally, given a tree in which every node
+i is assigned a value
+A
+i
+, you have to find the maximum number of distinct nodes that can be visited, if we can start from any node and visit any node multiple times. The only condition is that you can only move from node
+i to
+j if the number of edges between
+i and
+j is exactly
+A
+i
+.
+Note: Usually, there is no bound on the stack memory, and is equal to the total memory limit of 1.5 GB. But due to a system configuration issue, the stack limit for C++ is temporarily set to 8MB. So, if you believe that your code requires larger stack limit, please include this in your code.
+Input Format
+The first line contains a single integer
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains a single integer
+N (
+1≤N≤10
+5
+).
+Next
+N−1 lines contain 2 integers each,
+u
+i
+and
+v
+i
+, denoting a road between cities
+u
+i
+and
+v
+i
+.
+Next line contains
+N space separated integers,
+A
+1
+⋅⋅⋅A
+N
+.
+Output Format
+In a single line, output the maximum number of cities that can be visited, starting from any one and visiting any city any number of times.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤u
+i
+,v
+i
+≤N and
+u
+i
+
+=v
+i
+1≤A
+i
+≤10
+9
+It is guaranteed that the given edges form a tree.
+It is also guaranteed that the sum of
+N for all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+5
+1 3
+3 5
+1 4
+4 2
+1 2 3 3 1
+6
+1 2
+1 3
+2 4
+2 5
+3 6
+1 1 1 1 1 1
+8
+1 5
+1 6
+1 7
+1 8
+1 2
+2 3
+3 4
+1 2 3 4 5 6 7 8
+5
+6
+4
+Explanation:
+In example case
+1,
+From city
+1, Chef can move only to cities
+3 or
+4.
+From city
+2, Chef can move only to city
+1.
+From city
+3, Chef can move only to city
+2.
+From city
+4, Chef can move only to city
+5.
+From city
+5, Chef can move only to city
+3.
+Chef can follow the path
+1→3→2→1→4→5, and visit every city.
+In example case
+2,
+Chef can follow any path to visit all the vertices eventually. since every
+A
+i
+=
+1.
+In example case
+3,
+Chef can follow the path
+1→2→4→5.
+There are other paths as well, but the maximum number would be 4 only.

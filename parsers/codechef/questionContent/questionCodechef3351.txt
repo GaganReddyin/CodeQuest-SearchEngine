@@ -1,0 +1,101 @@
+Series Sum
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+You are given
+N integers
+a
+1
+,a
+2
+,…,a
+N
+. Let's define functions
+f and
+g:
+f(x,k)=(x+a
+1
+)
+k
++(x+a
+2
+)
+k
++⋯+(x+a
+N
+)
+k
+g(t,k)=f(0,k)+f(1,k)+⋯+f(t,k)
+You are also given integers
+T and
+K. Calculate
+g(T,i) modulo
+10
+9
++7 for each
+i between
+0 and
+K inclusive.
+Input
+The first line of the input contains three space-separated integers
+N,
+K and
+T.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Output
+Print a single line containing
+K+1 space-separated integers — the values of
+g(T,0),g(T,1),…,g(T,K) modulo
+10
+9
++7.
+Constraints
+1≤N≤10
+5
+1≤K≤5⋅10
+4
+1≤T≤10
+18
+0≤a
+i
+<10
+9
++7
+Subtasks
+Subtask #1 (10 points):
+N=1
+Subtask #2 (10 points):
+a
+i
+=a
+1
+i
+modulo
+10
+9
++7 for each valid
+i
+Subtask #3 (10 points):
+a
+i
+=a
+1
++i−1 modulo
+10
+9
++7 for each valid
+i
+Subtask #4 (70 points): original constraints
+Sample 1:
+Input
+Output
+2 3 4
+0 1
+10 25 85 325

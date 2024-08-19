@@ -1,0 +1,140 @@
+A. Difference Operations
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+positive integers.
+You are allowed to perform this operation any number of times (possibly, zero):
+choose an index
+i
+(
+2≤i≤n
+), and change
+a
+i
+to
+a
+i
+−
+a
+i−1
+.
+Is it possible to make
+a
+i
+=0
+for all
+2≤i≤n
+?
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤100
+)  — the number of test cases. The description of the test cases follows.
+The first line contains one integer
+n
+(
+2≤n≤100
+) — the length of array
+a
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+Output
+For each test case, print "YES" (without quotes), if it is possible to change
+a
+i
+to
+0
+for all
+2≤i≤n
+, and "NO" (without quotes) otherwise.
+You can print letters in any case (upper or lower).
+Example
+input
+Copy
+4
+2
+5 10
+3
+1 2 3
+4
+1 1 1 1
+9
+9 9 8 2 4 4 3 5 3
+output
+Copy
+YES
+YES
+YES
+NO
+Note
+In the first test case, the initial array is
+[5,10]
+. You can perform
+2
+operations to reach the goal:
+Choose
+i=2
+, and the array becomes
+[5,5]
+.
+Choose
+i=2
+, and the array becomes
+[5,0]
+.
+In the second test case, the initial array is
+[1,2,3]
+. You can perform
+4
+operations to reach the goal:
+Choose
+i=3
+, and the array becomes
+[1,2,1]
+.
+Choose
+i=2
+, and the array becomes
+[1,1,1]
+.
+Choose
+i=3
+, and the array becomes
+[1,1,0]
+.
+Choose
+i=2
+, and the array becomes
+[1,0,0]
+.
+In the third test case, you can choose indices in the order
+4
+,
+3
+,
+2
+.

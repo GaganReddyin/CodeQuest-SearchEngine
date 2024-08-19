@@ -1,0 +1,124 @@
+E. Replace With the Previous, Minimize
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+s
+of lowercase Latin letters.
+The following operation can be used:
+select one character (from 'a' to 'z') that occurs at least once in the string. And replace all such characters in the string with the previous one in alphabetical order on the loop. For example, replace all 'c' with 'b' or replace all 'a' with 'z'.
+And you are given the integer
+k
+ — the maximum number of operations that can be performed. Find the minimum lexicographically possible string that can be obtained by performing no more than
+k
+operations.
+The string
+a=
+a
+1
+a
+2
+…
+a
+n
+is lexicographically smaller than the string
+b=
+b
+1
+b
+2
+…
+b
+n
+if there exists an index
+k
+(
+1≤k≤n
+) such that
+a
+1
+=
+b
+1
+,
+a
+2
+=
+b
+2
+, ...,
+a
+k−1
+=
+b
+k−1
+, but
+a
+k
+<
+b
+k
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) —the number of test cases in the test.
+This is followed by descriptions of the test cases.
+The first line of each test case contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+,
+1≤k≤
+10
+9
+) — the size of the string
+s
+and the maximum number of operations that can be performed on the string
+s
+.
+The second line of each test case contains a string
+s
+of length
+n
+consisting of lowercase Latin letters.
+It is guaranteed that the sum
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output the lexicographically minimal string that can be obtained from the string
+s
+by performing no more than
+k
+operations.
+Example
+input
+Copy
+4
+3 2
+cba
+4 5
+fgde
+7 5
+gndcafb
+4 19
+ekyv
+output
+Copy
+aaa
+agaa
+bnbbabb
+aapp

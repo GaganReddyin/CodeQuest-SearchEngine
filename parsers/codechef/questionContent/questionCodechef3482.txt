@@ -1,0 +1,100 @@
+Chef and Divisors
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Given an integer N, you can apply a operation on
+N multiple times(possibly 0).
+Operation is defined as follows:
+Choose a positive integer
+K such that
+K has exactly
+4 divisors and
+K is a divisor of
+N.
+Change
+N to
+N/K.
+Find the minimum number of divisors possible of the resulting number
+N.
+Input:
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains an integers
+N.
+Output:
+For each test case, output a single line containing one integer — the minimum number of divisors possible of the resulting number.
+Constraints
+1≤T≤10
+6
+1≤N≤10
+6
+Subtasks
+100 points : original constraints
+Sample 1:
+Input
+Output
+5
+3
+64
+30
+120
+45
+2
+1
+2
+1
+2
+Explanation:
+Example case 1: We cannot divide
+N=3 by any valid
+K and hence output is
+2 as
+N=3 has exactly two divisors
+1 and
+3.
+Example case 2:
+N=64 can be divided by
+8 twice as
+8 has exactly
+4 divisors (
+1,
+2,
+4,
+8 ) and hence the resultant value of
+N will be
+1 and
+1 has only
+1 divisor hence answer is
+1.
+Example case 3: We can divide
+N=30 by
+6,
+10 or
+15 as all three of them have exactly
+4 divisors. In each case resultant value of
+N will be either
+5,
+3 or
+2. And all three of them has exactly
+2 divisors and they cannot be divided further. Hence the output is
+2.
+Example case 4: One of the optimal ways to divide
+N=120 is divide
+120 by
+8 followed by dividing by
+15. The resultant value will be
+120/8=15 and
+15/15=1. The number
+1 has exactly one divisor and hence output is
+1.
+Note that, If we divided
+N=120 by
+6 then we won't get the optimal answer.
+Example case 5: We can divide
+N=45 by
+15 and resultant value of
+N will be
+3. The number
+3 has exactly
+2 divisors and hence output is
+2

@@ -1,0 +1,100 @@
+Chefs Homework Dilemma
+Problem
+Read problem statements in Russian, Mandarin Chinese, Bengali, and Vietnamese as well.
+Chef's school semester lasts for
+n days. Chef's teacher gives the students some homework every day and it is compulsory to turn in the homework by the very next day. Chef knows that the number of minutes needed to complete the homework on the
+i-th day is
+H
+i
+.
+Chef hates homework and wants to spend the minimum amount of time possible in doing homework. Luckily, he has a few tricks up his sleeve. Chef can hack the school records on any given day to make it show that the assigned homework is complete. However to avoid suspicion, Chef will not hack the records strictly more than
+k days consecutively.
+Can you help Chef find the minimum possible total number of minutes that Chef needs to spend on homework?
+Note:
+There are multiple test cases in a single file, refer to Input section for more details.
+Since the input is large, it is recommended to use fast input/output methods.
+Input Format
+The first line contains a single integer
+T, the number of test cases. The description of the
+T test cases follow.
+The first line of each test case contains two integers
+n and
+k - the number of days in Chef's semester and the maximum number of consecutive days Chef can hack the school's record system.
+The second line of each test case contains
+n integers,
+H
+1
+,H
+2
+,…H
+n
+, where
+H
+i
+is the number of minutes Chef needs to complete the homework given on the
+i-th day.
+Output Format
+For each test case, print a single line containing an integer, the minimum number of minutes Chef needs to spend on homework.
+Constraints
+1≤T≤10
+6
+1≤n≤10
+6
+1≤k≤n
+0≤H
+i
+≤10
+3
+for all
+1≤i≤n
+The sum of
+n over all test cases is at most
+10
+6
+Sample 1:
+Input
+Output
+3
+7 3
+213 124 156 263 149 6 62
+7 1
+476 457 232 130 849 95 749
+7 2
+601 35 45 304 449 452 190
+130
+682
+484
+Explanation:
+In the first test case, Chef does his homework on days
+2 and
+6, taking a total of
+H
+2
++H
+6
+=124+6=130 minutes. The maximum number of consecutive days that Chef hacks is
+3 (days
+3,
+4, and
+5), which is not more than
+k=3.
+In the second test case, Chef does his homework on days
+2,
+4, and
+6, taking a total of
+H
+2
++H
+4
++H
+6
+=457+130+95=682 minutes.
+In the third test case, Chef does his homework on days
+2 and
+5, taking a total of
+H
+2
++H
+5
+=35+449=484 minutes.
+You can verify that these are indeed the optimal solutions.

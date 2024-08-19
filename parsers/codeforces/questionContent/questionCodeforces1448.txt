@@ -1,0 +1,57 @@
+F. Framing Pictures
+time limit per test2 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Life has been discovered on Venus! What is more, the life forms appear to be convex polygons. An international consortium is designing a probe to send to Venus to take pictures, but they need to estimate the bandwidth needed to send back pictures.
+When the probe takes a picture of a life form and wishes to send it back to Earth, the bandwidth required is proportional to the area of the bounding box (in other words, the smallest axis-aligned rectangle that contains the life-form). The shape and size of the life forms are known, but the orientation relative to the camera is random. You must thus determine the expected (average) area of the bounding box across all orientations.
+Input
+The input describes the shape of a life form as a convex polygon in two dimensions.
+The first line of input contains an integer
+n
+(
+3≤n≤200000
+) — the number of vertices. The remaining
+n
+lines each contain two integers
+x
+and
+y
+(
+−
+10
+9
+≤x,y≤
+10
+9
+) — the coordinates of a vertex. The vertices are given in counterclockwise order, and no three vertices lie on a straight line.
+Output
+Output a single line containing the expected area of the bounding box of the polygon. Your answer should have an absolute or relative error of at most
+10
+−6
+.
+Examples
+input
+Copy
+4
+0 0
+10 0
+10 10
+0 10
+output
+Copy
+163.661977237
+input
+Copy
+5
+0 0
+10 0
+15 8
+5 20
+-5 7
+output
+Copy
+365.666028588
+Note
+The pictures show example life forms and various camera orientations.
+   

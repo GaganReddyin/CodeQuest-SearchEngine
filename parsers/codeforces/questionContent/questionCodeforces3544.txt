@@ -1,0 +1,218 @@
+C2. Nauuo and Pictures (hard version)
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between easy and hard versions is constraints.
+Nauuo is a girl who loves random picture websites.
+One day she made a random picture website by herself which includes
+n
+pictures.
+When Nauuo visits the website, she sees exactly one picture. The website does not display each picture with equal probability. The
+i
+-th picture has a non-negative weight
+w
+i
+, and the probability of the
+i
+-th picture being displayed is
+w
+i
+∑
+n
+j=1
+w
+j
+. That is to say, the probability of a picture to be displayed is proportional to its weight.
+However, Nauuo discovered that some pictures she does not like were displayed too often.
+To solve this problem, she came up with a great idea: when she saw a picture she likes, she would add
+1
+to its weight; otherwise, she would subtract
+1
+from its weight.
+Nauuo will visit the website
+m
+times. She wants to know the expected weight of each picture after all the
+m
+visits modulo
+998244353
+. Can you help her?
+The expected weight of the
+i
+-th picture can be denoted by
+q
+i
+p
+i
+where
+gcd(
+p
+i
+,
+q
+i
+)=1
+, you need to print an integer
+r
+i
+satisfying
+0≤
+r
+i
+<998244353
+and
+r
+i
+⋅
+p
+i
+≡
+q
+i
+(mod998244353)
+. It can be proved that such
+r
+i
+exists and is unique.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤2⋅
+10
+5
+,
+1≤m≤3000
+) — the number of pictures and the number of visits to the website.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+a
+i
+is either
+0
+or
+1
+) — if
+a
+i
+=0
+, Nauuo does not like the
+i
+-th picture; otherwise Nauuo likes the
+i
+-th picture. It is guaranteed that there is at least one picture which Nauuo likes.
+The third line contains
+n
+positive integers
+w
+1
+,
+w
+2
+,…,
+w
+n
+(
+w
+i
+≥1
+) — the initial weights of the pictures. It is guaranteed that the sum of all the initial weights does not exceed
+998244352−m
+.
+Output
+The output contains
+n
+integers
+r
+1
+,
+r
+2
+,…,
+r
+n
+— the expected weights modulo
+998244353
+.
+Examples
+input
+Copy
+2 1
+0 1
+2 1
+output
+Copy
+332748119
+332748119
+input
+Copy
+1 2
+1
+1
+output
+Copy
+3
+input
+Copy
+3 3
+0 1 1
+4 3 5
+output
+Copy
+160955686
+185138929
+974061117
+Note
+In the first example, if the only visit shows the first picture with a probability of
+2
+3
+, the final weights are
+(1,1)
+; if the only visit shows the second picture with a probability of
+1
+3
+, the final weights are
+(2,2)
+.
+So, both expected weights are
+2
+3
+⋅1+
+1
+3
+⋅2=
+4
+3
+.
+Because
+332748119⋅3≡4(mod998244353)
+, you need to print
+332748119
+instead of
+4
+3
+or
+1.3333333333
+.
+In the second example, there is only one picture which Nauuo likes, so every time Nauuo visits the website,
+w
+1
+will be increased by
+1
+.
+So, the expected weight is
+1+2=3
+.
+Nauuo is very naughty so she didn't give you any hint of the third example.

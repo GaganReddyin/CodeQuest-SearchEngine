@@ -1,0 +1,197 @@
+Sorting Array
+Problem
+Given an array
+A of length
+N.
+You are allowed to perform the following operation on the array
+A atmost
+20 times:
+Select a non-empty subsequence
+S of the array
+[1,2,3,…,N] and an integer
+X
+(0≤X≤10
+6
+);
+Change
+A
+i
+to
+A
+i
++X for all
+i∈S.
+You have to sort the array
+A in strictly increasing order by performing atmost
+20 operations.
+It is guaranteed that we can always sort the array
+A under given constraints.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follow.
+The first line of each test case contains an integer
+N - the length of the array.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+representing the initial array
+A.
+Output Format
+For each test case print
+(2⋅Q+1) lines. Here
+Q denotes the number of operations you performed to sort the array
+A. Note that,
+Q must be less than or equal to
+20. For each test case,
+In the first line, print
+Q, the number of operations you perform.
+Then, print
+2⋅Q lines. The
+(2⋅i−1)
+th
+and
+(2⋅i)
+th
+of these lines denote the
+i
+th
+(1≤i≤Q) operation.
+To describe the
+i
+th
+operation, print two space-separated integers
+K
+i
+(1≤K
+i
+≤N) and
+X
+i
+(0≤X
+i
+≤10
+6
+) on
+(2⋅i−1)
+th
+line and print
+K
+i
+space-separated integers describing subsequence
+S
+i
+on
+(2⋅i)
+th
+line.
+Constraints
+1≤T≤5⋅10
+4
+2≤N≤10
+5
+1≤A
+i
+≤10
+5
+Sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+4 4 4
+5
+8 8 5 2 1
+3
+4 8 9
+2
+1 1
+2
+1 2
+3
+4
+1 20
+2
+1 30
+3
+1 40
+4
+1 50
+5
+0
+Explanation:
+Test case
+1: We can sort the array using
+2 operations:
+First operation: Choose
+S=[2] and
+X=1. Thus, we perform
+A
+2
+=A
+2
++1. The array becomes
+[4,5,4].
+Second operation: Choose
+S=[3] and
+X=2. Thus, we perform
+A
+3
+=A
+3
++2. The final array is
+[4,5,6].
+The array is now sorted in strictly increasing order.
+Test case
+2: We can sort the array using
+4 operations:
+First operation: Choose
+S=[2] and
+X=20. Thus, we perform
+A
+2
+=A
+2
++20. The array becomes
+[8,28,5,2,1].
+Second operation: Choose
+S=[3] and
+X=30. Thus, we perform
+A
+3
+=A
+3
++30. The array becomes
+[8,28,35,2,1].
+Third operation: Choose
+S=[4] and
+X=40. Thus, we perform
+A
+4
+=A
+4
++40. The array becomes
+[8,28,35,42,1].
+Fourth operation: Choose
+S=[5] and
+X=50. Thus, we perform
+A
+5
+=A
+5
++50. The final array is
+[8,28,35,42,51].
+The array is now sorted in strictly increasing order.
+Test case
+3: The array is already sorted. Thus, we require
+0 operation.

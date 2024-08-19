@@ -1,0 +1,236 @@
+Maximize an Expression
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef had three sequences of real numbers
+k
+1
+,k
+2
+,…,k
+N
+,
+c
+1
+,c
+2
+,…,c
+N
+and
+x
+1
+,x
+2
+,…,x
+N
+. Unfortunately, he lost the sequence
+x; the only thing he remembers about it is that
+x
+1
+⋅k
+1
++x
+2
+⋅k
+2
++…+x
+N
+⋅k
+N
+=0.
+Chef's favourite expression is
+x
+1
++c
+1
++
+x
+2
++c
+2
++…+
+x
+N
++c
+N
+. Its value is defined only if
+x
+i
++c
+i
+≥0 for each valid
+i. Let's denote the maximum value of this expression
+(over all sequences
+x such that it is defined) by
+F.
+Help Chef find
+F and a sequence
+x
+1
+,x
+2
+,…,x
+N
+such that the value of Chef's expression is
+F, or determine that there is no solution (the value of Chef's expression is always undefined).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N real numbers
+k
+1
+,k
+2
+,…,k
+N
+.
+The third line contains
+N real numbers
+c
+1
+,c
+2
+,…,c
+N
+.
+All real numbers are given with exactly two digits after the decimal point.
+Output
+For each test case, if there is no solution, print a single line containing one integer
+−1. Otherwise, print a single line containing
+N+1 space-separated real numbers
+F,x
+1
+,x
+2
+,…,x
+N
+.
+It can be proved that if a solution exists, then it is unique. Your answer will be considered correct if the absolute or relative error of each number on the output does not exceed
+10
+−2
+.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+0<k
+i
+≤2,000 for each valid
+i
+∣c
+i
+∣≤2,000 for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (15 points):
+N=2
+Subtask #2 (15 points):
+k
+i
+=1 and
+c
+i
+=0 for each valid
+i
+Subtask #3 (15 points):
+k
+i
+=1 for each valid
+i
+Subtask #4 (15 points):
+c
+i
+=0 for each valid
+i
+Subtask #5 (40 points): original constraints
+Sample 1:
+Input
+Output
+5
+4
+1.00 2.00 3.00 4.00
+5.00 6.00 7.00 8.00
+3
+1.23 8.90 5.67
+-2.34 -9.01 -6.78
+3
+1.00 1.00 1.00
+1.23 8.90 -5.67
+2
+1.23 8.90
+-5.67 2.34
+2
+1.23 8.90
+5.67 -2.34
+12.0761472885 28.6000000000 2.4000000000 -3.2666666667 -5.9000000000
+-1
+3.6578682316 0.2566666667 -7.4133333333 7.1566666667
+3.5802375027 15.5642936942 -2.1510203645
+-1
+Explanation:
+Example case 1: The optimal solution is
+x=(28.6,2.4,−49/15,−5.9). Then,
+x
+1
+⋅k
+1
++x
+2
+⋅k
+2
++x
+3
+⋅k
+3
++x
+4
+⋅k
+4
+=28.6⋅1+2.4⋅2−49⋅3/15+(−5.9)⋅4=0, and
+F=
+28.6+5
++
+2.4+6
++
+−49/15+7
++
+−5.9+8
+≐12.076. This is the maximum value of Chef's expression.
+Example case 2: For each
+i,
+c
+i
+is negative, but
+x
+i
++c
+i
+must be non-negative, so
+x
+i
+must be positive. However, all
+k
+i
+are also positive, so
+x
+1
+k
+1
++x
+2
+k
+2
++…+x
+N
+k
+N
+cannot be
+0. There is no solution.

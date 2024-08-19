@@ -1,0 +1,131 @@
+Elephants in a Pond
+Problem
+###Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Some elephants have decided to drink water from a pond. The pond may be considered a grid with
+N rows (numbered
+1 through
+N) and
+N columns (numbered
+1 through
+N). There are
+4N elephants and they stand at the perimeter of the pond in such a way that there is exactly one elephant at the top and bottom of each column and at the left and right end of each row.
+Since elephants can only see straight, in order to drink, an elephant must stretch its trunk over and into the pond. If an elephant's trunk has length
+L, it covers
+L nearest cells to the elephant in the elephant's row or column. For example, for an elephant with trunk length
+3 standing at the south side of column
+2, its trunk should cover cells
+(N,2),
+(N−1,2) and
+(N−2,2).
+Since elephant herds have a strict hierarchy, the elephants on each side of the pond order themselves in such a way that their trunk lengths are either non-increasing or non-decreasing.
+It is guaranteed that the trunks of elephants at the opposite ends of a row or column will never touch each other. But it is still possible for the trunks of some elephants (which are on adjacent sides) to touch or intersect in this scenario. The trunks of two elephants touch if there is at least one cell they both cover. The elephants do not want this to happen, so some of them have to leave. Your task is to find the minimum number of elephants that have to be removed from this arrangement so that no two remaining elephants' trunks touch each other.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+L
+n,1
+,L
+n,2
+,…,L
+n,N
+, where
+L
+n,i
+denotes the length of the trunk of the elephant at the north side of column
+i.
+The third line contains
+N space-separated integers
+L
+s,1
+,L
+s,2
+,…,L
+s,N
+, where
+L
+s,i
+denotes the length of the trunk of the elephant at the south side of column
+i.
+The fourth line contains
+N space-separated integers
+L
+e,1
+,L
+e,2
+,…,L
+e,N
+, where
+L
+e,i
+denotes the length of the trunk of the elephant at the east side of row
+i.
+The fifth line contains
+N space-separated integers
+L
+w,1
+,L
+w,2
+,…,L
+w,N
+, where
+L
+w,i
+denotes the length of the trunk of the elephant at the west side of row
+i.
+Output
+For each test case, print a single line containing one integer — the minimum number of elephants to remove.
+Constraints
+1≤T≤1,000
+1≤N≤10,000
+0≤L
+d,i
+≤N for each valid
+i and direction
+d
+for each direction
+d, the sequence
+L
+d,1
+,L
+d,2
+,…,L
+d,N
+is monotonous (ie. either monotonically increasing, or monotonically decreasing)
+L
+n,i
++L
+s,i
+≤N for each valid
+i
+L
+e,i
++L
+w,i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+10,000
+Sample 1:
+Input
+Output
+2
+2
+1 1
+1 1
+1 1
+1 1
+2
+1 2
+1 0
+0 0
+0 0
+4
+0
+Explanation:
+Example case 1: The elephant on the North side at column 1 and the elephant on the West side at row 1 have their trunks touching each other. Similarly, there are three other intersections. You can check that you need to remove at least 4 elephants.

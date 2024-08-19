@@ -1,0 +1,215 @@
+C1. Sheikh (Easy version)
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The only difference is that in this version
+q=1
+.
+You are given an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+The cost of a subsegment of the array
+[l,r]
+,
+1≤l≤r≤n
+, is the value
+f(l,r)=sum(l,r)−xor(l,r)
+, where
+sum(l,r)=
+a
+l
++
+a
+l+1
++…+
+a
+r
+, and
+xor(l,r)=
+a
+l
+⊕
+a
+l+1
+⊕…⊕
+a
+r
+(
+⊕
+stands for bitwise XOR).
+You will have
+q=1
+query. Each query is given by a pair of numbers
+L
+i
+,
+R
+i
+, where
+1≤
+L
+i
+≤
+R
+i
+≤n
+. You need to find the subsegment
+[l,r]
+,
+L
+i
+≤l≤r≤
+R
+i
+, with maximum value
+f(l,r)
+. If there are several answers, then among them you need to find a subsegment with the minimum length, that is, the minimum value of
+r−l+1
+.
+Input
+Each test consists of multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains two integers
+n
+and
+q
+(
+1≤n≤
+10
+5
+,
+q=1
+) — the length of the array and the number of queries.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+) — array elements.
+i
+-th of the next
+q
+lines of each test case contains two integers
+L
+i
+and
+R
+i
+(
+1≤
+L
+i
+≤
+R
+i
+≤n
+) — the boundaries in which we need to find the segment.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+It is guaranteed that
+L
+1
+=1
+and
+R
+1
+=n
+.
+Output
+For each test case print
+q
+pairs of numbers
+L
+i
+≤l≤r≤
+R
+i
+such that the value
+f(l,r)
+is maximum and among such the length
+r−l+1
+is minimum. If there are several correct answers, print any of them.
+Example
+input
+Copy
+6
+1 1
+0
+1 1
+2 1
+5 10
+1 2
+3 1
+0 2 4
+1 3
+4 1
+0 12 8 3
+1 4
+5 1
+21 32 32 32 10
+1 5
+7 1
+0 1 0 1 0 1 0
+1 7
+output
+Copy
+1 1
+1 1
+1 1
+2 3
+2 3
+2 4
+Note
+In the first test case,
+f(1,1)=0−0=0
+.
+In the second test case,
+f(1,1)=5−5=0
+,
+f(2,2)=10−10=0
+. Note that
+f(1,2)=(10+5)−(10⊕5)=0
+, but we need to find a subsegment with the minimum length among the maximum values of
+f(l,r)
+. So, only segments
+[1,1]
+and
+[2,2]
+are the correct answers.
+In the fourth test case,
+f(2,3)=(12+8)−(12⊕8)=16
+.
+There are two correct answers in the fifth test case, since
+f(2,3)=f(3,4)
+and their lengths are equal.

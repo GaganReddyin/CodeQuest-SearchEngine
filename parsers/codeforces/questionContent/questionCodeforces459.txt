@@ -1,0 +1,160 @@
+E. The Humanoid
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+astronauts working on some space station. An astronaut with the number
+i
+(
+1≤i≤n
+) has power
+a
+i
+.
+An evil humanoid has made his way to this space station. The power of this humanoid is equal to
+h
+. Also, the humanoid took with him two green serums and one blue serum.
+In one second , a humanoid can do any of three actions:
+to absorb an astronaut with power strictly less humanoid power;
+to use green serum, if there is still one left;
+to use blue serum, if there is still one left.
+When an astronaut with power
+a
+i
+is absorbed, this astronaut disappears, and power of the humanoid increases by
+⌊
+a
+i
+2
+⌋
+, that is, an integer part of
+a
+i
+2
+. For example, if a humanoid absorbs an astronaut with power
+4
+, its power increases by
+2
+, and if a humanoid absorbs an astronaut with power
+7
+, its power increases by
+3
+.
+After using the green serum, this serum disappears, and the power of the humanoid doubles, so it increases by
+2
+times.
+After using the blue serum, this serum disappears, and the power of the humanoid triples, so it increases by
+3
+times.
+The humanoid is wondering what the maximum number of astronauts he will be able to absorb if he acts optimally.
+Input
+The first line of each test contains an integer
+t
+(
+1≤t≤
+10
+4
+) — number of test cases.
+The first line of each test case contains integers
+n
+(
+1≤n≤2⋅
+10
+5
+) — number of astronauts and
+h
+(
+1≤h≤
+10
+6
+) — the initial power of the humanoid.
+The second line of each test case contains
+n
+integers
+a
+i
+(
+1≤
+a
+i
+≤
+10
+8
+) — powers of astronauts.
+It is guaranteed that the sum of
+n
+for all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, in a separate line, print the maximum number of astronauts that a humanoid can absorb.
+Example
+input
+Copy
+8
+4 1
+2 1 8 9
+3 3
+6 2 60
+4 5
+5 1 100 5
+3 2
+38 6 3
+1 1
+12
+4 6
+12 12 36 100
+4 1
+2 1 1 15
+3 5
+15 1 13
+output
+Copy
+4
+3
+3
+3
+0
+4
+4
+3
+Note
+In the first case, you can proceed as follows:
+use green serum.
+h=1⋅2=2
+absorb the cosmonaut
+2
+.
+h=2+⌊
+1
+2
+⌋=2
+use green serum.
+h=2⋅2=4
+absorb the spaceman
+1
+.
+h=4+⌊
+2
+2
+⌋=5
+use blue serum.
+h=5⋅3=15
+absorb the spaceman
+3
+.
+h=15+⌊
+8
+2
+⌋=19
+absorb the cosmonaut
+4
+.
+h=19+⌊
+9
+2
+⌋=23

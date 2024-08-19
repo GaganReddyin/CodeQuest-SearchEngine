@@ -1,0 +1,211 @@
+G. The Awesomest Vertex
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a rooted tree on
+n
+vertices. The vertices are numbered from
+1
+to
+n
+; the root is the vertex number
+1
+.
+Each vertex has two integers associated with it:
+a
+i
+and
+b
+i
+. We denote the set of all ancestors of
+v
+(including
+v
+itself) by
+R(v)
+. The awesomeness of a vertex
+v
+is defined as
+∣
+∣
+∣
+∣
+∑
+w∈R(v)
+a
+w
+∣
+∣
+∣
+∣
+⋅
+∣
+∣
+∣
+∣
+∑
+w∈R(v)
+b
+w
+∣
+∣
+∣
+∣
+,
+|
+∑
+|
+|
+∑
+b
+|
+where
+|x|
+denotes the absolute value of
+x
+.
+Process
+q
+queries of one of the following forms:
+1 v x — increase
+a
+v
+by a positive integer
+x
+.
+2 v — report the maximum awesomeness in the subtree of vertex
+v
+.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤2⋅
+10
+5
+,1≤q≤
+10
+5
+) — the number of vertices in the tree and the number of queries, respectively.
+The second line contains
+n−1
+integers
+p
+2
+,
+p
+3
+,…,
+p
+n
+(
+1≤
+p
+i
+<i
+), where
+p
+i
+means that there is an edge between vertices
+i
+and
+p
+i
+.
+The third line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−5000≤
+a
+i
+≤5000
+), the initial values of
+a
+i
+for each vertex.
+The fourth line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−5000≤
+b
+i
+≤5000
+), the values of
+b
+i
+for each vertex.
+Each of the next
+q
+lines describes a query. It has one of the following forms:
+1 v x  (
+1≤v≤n
+,
+1≤x≤5000
+).
+2 v  (
+1≤v≤n
+).
+Output
+For each query of the second type, print a single line with the maximum awesomeness in the respective subtree.
+Example
+input
+Copy
+5 6
+1 1 2 2
+10 -3 -7 -3 -10
+10 3 9 3 6
+2 1
+2 2
+1 2 6
+2 1
+1 2 5
+2 1
+output
+Copy
+100
+91
+169
+240
+Note
+The initial awesomeness of the vertices is
+[100,91,57,64,57]
+. The most awesome vertex in the subtree of vertex
+1
+(the first query) is
+1
+, and the most awesome vertex in the subtree of vertex
+2
+(the second query) is
+2
+.
+After the first update (the third query), the awesomeness changes to
+[100,169,57,160,57]
+and thus the most awesome vertex in the whole tree (the fourth query) is now
+2
+.
+After the second update (the fifth query), the awesomeness becomes
+[100,234,57,240,152]
+, hence the most awesome vertex (the sixth query) is now
+4
+.

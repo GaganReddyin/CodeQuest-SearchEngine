@@ -1,0 +1,123 @@
+Alice Potter And Dumbledore Army
+Problem
+Dumbledore's Army consists of
+N members. Alice Potter is planning to hold
+M Dumbledore's Army sessions, where the members will perform training tasks to improve their skills in Defense Against the Dark Arts.
+Initially, each member of the Army has no tasks. Before the
+i-th training session, Alice gives the
+P
+i
+-th participant a task that he can complete in
+T
+i
+seconds. And each subsequent session Alice will add more and more difficult tasks, i.e.
+T
+i
+≤T
+i+1
+.
+Let's assume that by the
+i-th session, the
+j-th participant has accumulated
+C
+j
+tasks. Alice knows that sometimes there is not enough time to complete all the tasks in a single session, so instead of forcing them to complete all
+C
+1
++C
+2
++…+C
+N
+tasks, she can allow them to complete only a certain number
+k of them. In this case, each participant can choose a subset of their tasks (in total, they have to choose
+k tasks) and perform only those tasks. Each participant performs his tasks sequentially and spends time equal to the sum of the times of his tasks. However, different participants can perform tasks in parallel, so the total time of the session is equal to the maximum of the times of each participant. We denote the minimum possible value of this time by
+ans
+i,k
+.
+In order to optimally train participants, for each session
+i Alice needs to know the value of
+ans
+i,1
++ans
+i,2
++…+ans
+i,i
+. Help Alice — calculate these sums for her.
+Input Format
+The first line contains two integers
+N and
+M — the number of members of Dumbledore's Army and the number of classes.
+The
+i-th of the next
+M lines contains two integers
+P
+i
+and
+T
+i
+— the participant who will receive the next task and the amount of time it will take to complete it.
+Output Format
+Print
+M integers. The
+i-th of them should be equal to
+ans
+i,1
++ans
+i,2
++…+ans
+i,i
+.
+Constraints
+1≤N,M≤10
+6
+1≤P
+i
+≤N,
+1≤T
+i
+≤10
+6
+T
+1
+≤T
+2
+≤…≤T
+M
+Sample 1:
+Input
+Output
+5 12
+5 1
+3 2
+5 2
+1 2
+4 3
+4 3
+4 3
+5 3
+1 5
+3 5
+1 8
+2 10
+1
+3
+6
+8
+11
+17
+26
+32
+39
+46
+61
+71
+Explanation:
+Consider the third session in the example. The fifth participant has tasks with
+T=1 and
+T=2, and the third participant has a single task with
+T=2. It takes
+1 unit of time to complete one task (only the fifth participant will complete the task with
+T=1),
+2 unit of time to complete two tasks, and
+3 unit of time to complete all three tasks. Therefore, the third number in the answer is
+1+2+3=6.

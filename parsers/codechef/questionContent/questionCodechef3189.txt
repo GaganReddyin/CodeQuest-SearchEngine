@@ -1,0 +1,118 @@
+Chess Kings Chasing Game
+Problem
+Read problems statements in Russian.
+There's an
+N×N grid where each cell of the grid contains a positive integer. Let
+V
+i,j
+be the positive integer on the cell positioned
+i-th rows from the top and
+j-th columns from the left.
+Initially, Alice is at position
+(A
+x
+,A
+y
+) and Bob is at
+(B
+x
+,B
+y
+). Both players can move like a chess king on the grid: one step horizontally, vertically or diagonally. They can't move out of the grid or stay in the same cell.
+Alice starts with an initial score of
+0. The game proceeds as follows:
+Alice moves to a neighboring cell of her choice (horizontally, vertically or diagonally). Her score increases by the integer on the cell she just moved to.
+If Alice and Bob are in the same cell, then the game ends, else Bob moves to a neighboring cell of his choice.
+If Alice and Bob are in the same cell, then the game ends, else go to step 1.
+The goal of Alice is to maximize her score. The goal of Bob is to minimize Alice's score. Both players play optimally. It can be proven that the game will end in a finite number of iterations.
+You need to find the maximum score Alice can achieve.
+Note: Over the course of the game, Alice can revisit cells multiple times. She gets the corresponding value added to her score each time she visits it.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains four integers
+N,A
+x
+,A
+y
+,B
+x
+,B
+y
+denoting the size of the grid, the row coordinate of Alice's position, the column coordinate of Alice's position, the row coordinate of Bob's position, and the column coordinate of Bob's position respectively.
+The next
+N lines of each test case have
+N integers each. The
+j-th integer in the
+i-th line denotes
+V
+i,j
+.
+Output Format
+For each test case, output on one line the score Alice will have if both Alice and Bob play optimally.
+Constraints
+1≤T≤60
+2≤N≤300
+1≤V
+i,j
+≤10
+9
+1≤A
+x
+,A
+y
+,B
+x
+,B
+y
+≤N
+(A
+x
+,A
+y
+)
+
+=(B
+x
+,B
+y
+)
+Sum of
+N over all test cases does not exceed
+300
+Sample 1:
+Input
+Output
+3
+2 1 1 2 2
+1 10
+5 6
+4 4 4 1 1
+1 1 1 1
+1 1 1 1
+1 1 10 1
+1 1 1 10
+4 1 3 1 4
+1 2 3 4
+2 1 4 3
+3 4 1 2
+4 3 2 1
+10
+30
+8
+Explanation:
+For the first test case, Alice moves to position
+(1,2) and gets
+10 points. Bob then moves to
+(1,2) and catches Alice. This is the optimal gameplay.
+For the second test case, Alice moves to
+(3,3) and gets
+10 points. Bob moves to
+(2,2). Then Alice moves to
+(4,4) and gets another
+10 points. Bob them moves to
+(3,3). Finally, Alice moves to
+(3,3) gaining a total of
+30 points. The game ends as Alice and Bob are in the same cell. This is a possible optimal gameplay.
+For the third test case, the GIF below shows a possible optimal gameplay

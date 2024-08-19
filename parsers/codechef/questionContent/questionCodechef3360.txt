@@ -1,0 +1,74 @@
+Carry Bed
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef has a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Let's define a function
+f(l,r) in the following way:
+If
+1≤l≤r≤N, then
+f(l,r) is the maximum of
+A
+l
+,A
+l+1
+,…,A
+r
+.
+Otherwise,
+f(l,r) is
+0.
+Chef wants to choose a subset
+S of the set of indices
+{1,2,…,N} such that
+∣S∣≥K. Let's define
+C=∑
+i∈S
+∑
+j∈S
+f(i,j).
+Can you help Chef find the smallest value of
+C he can get?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer ― the minimum value of
+C.
+Constraints
+1≤T≤1,000
+1≤K≤N≤5,000
+1≤A
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10,000
+Sample 1:
+Input
+Output
+1
+5 3
+1 2 3 4 5
+14

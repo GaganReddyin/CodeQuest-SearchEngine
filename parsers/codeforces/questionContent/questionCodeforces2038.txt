@@ -1,0 +1,171 @@
+I. Plane Tiling
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given five integers
+n
+,
+d
+x
+1
+,
+d
+y
+1
+,
+d
+x
+2
+and
+d
+y
+2
+. You have to select
+n
+distinct pairs of integers
+(
+x
+i
+,
+y
+i
+)
+in such a way that, for every possible pair of integers
+(x,y)
+, there exists exactly one triple of integers
+(a,b,i)
+meeting the following constraints:
+{
+x=
+x
+i
++a⋅d
+x
+1
++b⋅d
+x
+2
+,
+y=
+y
+i
++a⋅d
+y
+1
++b⋅d
+y
+2
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+The second line contains two integers
+d
+x
+1
+and
+d
+y
+1
+(
+−
+10
+6
+≤d
+x
+1
+,d
+y
+1
+≤
+10
+6
+).
+The third line contains two integers
+d
+x
+2
+and
+d
+y
+2
+(
+−
+10
+6
+≤d
+x
+2
+,d
+y
+2
+≤
+10
+6
+).
+Output
+If it is impossible to correctly select
+n
+pairs of integers, print NO.
+Otherwise, print YES in the first line, and then
+n
+lines, the
+i
+-th of which contains two integers
+x
+i
+and
+y
+i
+(
+−
+10
+9
+≤
+x
+i
+,
+y
+i
+≤
+10
+9
+).
+If there are multiple solutions, print any of them.
+Examples
+input
+Copy
+4
+2 0
+0 2
+output
+Copy
+YES
+0 0
+0 1
+1 0
+1 1
+input
+Copy
+5
+2 6
+1 5
+output
+Copy
+NO
+input
+Copy
+2
+3 4
+1 2
+output
+Copy
+YES
+0 0
+0 1

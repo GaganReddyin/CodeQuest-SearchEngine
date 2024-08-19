@@ -1,0 +1,202 @@
+D. Constructing the Dungeon
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Polycarp is developing an RPG game where the main character fights monsters and searches for treasure in dungeons. Now Polycarp is making one of the dungeons the character can explore.
+The dungeon consists of
+n
+rooms connected by
+m
+two-way tunnels, and it is possible to reach every room from every other room using tunnels. The rooms are guarded by monsters (the number of monsters in the
+i
+-th room is
+a
+i
+), and the tunnels contain gold coins (the number of coins in the
+i
+-th tunnel is
+w
+i
+). The
+i
+-th two-way tunnel connects rooms
+v
+i
+and
+u
+i
+.
+Polycarp has already fixed the number of coins in each tunnel (the values of
+w
+i
+are already known), and now he tries to place the monsters in the rooms (the values of
+a
+i
+are not known yet). Polycarp wants to choose the number of monsters in each room in such a way that the following two conditions are met:
+the number of coins for the tunnel connecting the rooms
+x
+and
+y
+should be equal to the minimum of
+a
+x
+and
+a
+y
+. That is, for each tunnel
+i
+,
+w
+i
+=min(
+a
+v
+i
+,
+a
+u
+i
+)
+;
+the number of monsters in the dungeon is as small as possible. That is, the value of
+a
+1
++
+a
+2
++⋯+
+a
+n
+is minimum possible.
+Help Polycarp to choose the values
+a
+1
+,
+a
+2
+, ...,
+a
+n
+, or tell him that it is impossible and he has to change something in his dungeon plan.
+Input
+The first line contains one integer
+t
+(
+1≤t≤100000
+) — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n≤200000
+;
+n−1≤m≤min(200000,
+n(n−1)
+2
+)
+) — the number of rooms and tunnels in the dungeon, respectively.
+Then
+m
+lines follow, each line describing one of the tunnels in the dungeon. The
+i
+-th line contains three integers
+v
+i
+,
+u
+i
+and
+w
+i
+(
+1≤
+v
+i
+,
+u
+i
+≤n
+;
+v
+i
+≠
+u
+i
+;
+1≤
+w
+i
+≤
+10
+9
+) denoting a two-way tunnel that connects rooms
+v
+i
+and
+u
+i
+, and contains
+w
+i
+coins. The tunnel system is connected in each test case (it is possible to reach every room from every other room using the tunnels). Each pair of rooms is connected by at most one tunnel.
+The sum of
+n
+over all test cases does not exceed
+200000
+. Similarly, the sum of
+m
+over all test cases does not exceed
+200000
+.
+Output
+For each test case, print the answer as follows:
+If it is impossible to find the values of
+a
+1
+,
+a
+2
+, ...,
+a
+n
+satisfying all the constraints, print one single string NO on a separate line. Otherwise, print YES in the first line, and
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+in the second line. If there are multiple valid answers, print any of them.
+Example
+input
+Copy
+3
+3 2
+1 2 1
+2 3 1
+5 7
+3 2 7
+3 4 9
+1 5 5
+1 2 5
+4 1 5
+4 2 7
+3 1 5
+4 4
+1 2 5
+3 2 2
+4 1 3
+3 4 4
+output
+Copy
+YES
+1 1 1
+YES
+5 7 9 9 5
+NO

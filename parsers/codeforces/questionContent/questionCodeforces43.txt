@@ -1,0 +1,145 @@
+B. LuoTianyi and the Table
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+LuoTianyi gave an array
+b
+of
+n⋅m
+integers. She asks you to construct a table
+a
+of size
+n×m
+, filled with these
+n⋅m
+numbers, and each element of the array must be used exactly once. Also she asked you to maximize the following value:
+∑
+i=1
+n
+∑
+j=1
+m
+(
+max
+1≤x≤i,1≤y≤j
+a
+x,y
+−
+min
+1≤x≤i,1≤y≤j
+a
+x,y
+)
+This means that we consider
+n⋅m
+subtables with the upper left corner in
+(1,1)
+and the bottom right corner in
+(i,j)
+(
+1≤i≤n
+,
+1≤j≤m
+), for each such subtable calculate the difference of the maximum and minimum elements in it, then sum up all these differences. You should maximize the resulting sum.
+Help her find the maximal possible value, you don't need to reconstruct the table itself.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤200
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n,m≤100
+) — the number of rows and columns of the table.
+The second line of each test case contains
+n⋅m
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n⋅m
+(
+−
+10
+5
+≤
+b
+i
+≤
+10
+5
+) — the numbers you can put in the table.
+Note, that integers in the array
+b
+can be negative.
+It is guaranteed that the sum of
+n⋅m
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer — the maximal value, that can be obtained.
+Example
+input
+Copy
+5
+2 2
+1 3 1 4
+2 2
+-1 -1 -1 -1
+2 3
+7 8 9 -3 10 8
+3 2
+4 8 -3 0 -7 1
+4 3
+-32030 59554 16854 -85927 68060 -64460 -79547 90932 85063 82703 -12001 38762
+output
+Copy
+9
+0
+64
+71
+1933711
+Note
+In the first test case, the table is follows:
+4 1
+1 3
+In the subtable with the bottom right corner in
+(1,1)
+, the difference of the maximal and minimal elements is
+4−4=0
+.
+In the subtable with the bottom right corner in
+(1,2)
+, the difference of the maximal and minimal elements is
+4−1=3
+.
+In the subtable with the bottom right corner in
+(2,1)
+, the difference of the maximal and minimal elements is
+4−1=3
+.
+In the subtable with the bottom right corner in
+(2,2)
+, the difference of the maximal and minimal elements is
+4−1=3
+.
+Then the maximum possible value is
+0+3+3+3=9
+.
+In the second test case, all elements are equal, so all differences are
+0
+, and the answer is
+0
+.

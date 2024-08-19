@@ -1,0 +1,111 @@
+E. Split
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+One day, BThero decided to play around with arrays and came up with the following problem:
+You are given an array
+a
+, which consists of
+n
+positive integers. The array is numerated
+1
+through
+n
+. You execute the following procedure exactly once:
+You create a new array
+b
+which consists of
+2n
+positive integers, where for each
+1≤i≤n
+the condition
+b
+2i−1
++
+b
+2i
+=
+a
+i
+holds. For example, for the array
+a=[6,8,2]
+you can create
+b=[2,4,4,4,1,1]
+.
+You merge consecutive equal numbers in
+b
+. For example,
+b=[2,4,4,4,1,1]
+becomes
+b=[2,4,1]
+.
+Find and print the minimum possible value of
+|b|
+(size of
+b
+) which can be achieved at the end of the procedure. It can be shown that under the given constraints there is at least one way to construct
+b
+.
+Input
+The first line of the input file contains a single integer
+T
+(
+1≤T≤5⋅
+10
+5
+) denoting the number of test cases. The description of
+T
+test cases follows.
+The first line of each test contains a single integer
+n
+(
+1≤n≤5⋅
+10
+5
+).
+The second line contains
+n
+space-separated integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+(
+2≤
+a
+i
+≤
+10
+9
+).
+It is guaranteed that
+∑n
+over all test cases does not exceed
+5⋅
+10
+5
+.
+Output
+For each test case, print a single line containing one integer — the minimum possible value of
+|b|
+.
+Example
+input
+Copy
+3
+3
+6 8 2
+1
+4
+3
+5 6 6
+output
+Copy
+3
+1
+2

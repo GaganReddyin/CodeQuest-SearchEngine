@@ -1,0 +1,217 @@
+D. Number Of Permutations
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a sequence of
+n
+pairs of integers:
+(
+a
+1
+,
+b
+1
+),(
+a
+2
+,
+b
+2
+),…,(
+a
+n
+,
+b
+n
+)
+. This sequence is called bad if it is sorted in non-descending order by first elements or if it is sorted in non-descending order by second elements. Otherwise the sequence is good. There are examples of good and bad sequences:
+s=[(1,2),(3,2),(3,1)]
+is bad because the sequence of first elements is sorted:
+[1,3,3]
+;
+s=[(1,2),(3,2),(1,2)]
+is bad because the sequence of second elements is sorted:
+[2,2,2]
+;
+s=[(1,1),(2,2),(3,3)]
+is bad because both sequences (the sequence of first elements and the sequence of second elements) are sorted;
+s=[(1,3),(3,3),(2,2)]
+is good because neither the sequence of first elements
+([1,3,2])
+nor the sequence of second elements
+([3,3,2])
+is sorted.
+Calculate the number of permutations of size
+n
+such that after applying this permutation to the sequence
+s
+it turns into a good sequence.
+A permutation
+p
+of size
+n
+is a sequence
+p
+1
+,
+p
+2
+,…,
+p
+n
+consisting of
+n
+distinct integers from
+1
+to
+n
+(
+1≤
+p
+i
+≤n
+). If you apply permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+to the sequence
+s
+1
+,
+s
+2
+,…,
+s
+n
+you get the sequence
+s
+p
+1
+,
+s
+p
+2
+,…,
+s
+p
+n
+. For example, if
+s=[(1,2),(1,3),(2,3)]
+and
+p=[2,3,1]
+then
+s
+turns into
+[(1,3),(2,3),(1,2)]
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤3⋅
+10
+5
+).
+The next
+n
+lines contains description of sequence
+s
+. The
+i
+-th line contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+) — the first and second elements of
+i
+-th pair in the sequence.
+The sequence
+s
+may contain equal elements.
+Output
+Print the number of permutations of size
+n
+such that after applying this permutation to the sequence
+s
+it turns into a good sequence. Print the answer modulo
+998244353
+(a prime number).
+Examples
+input
+Copy
+3
+1 1
+2 2
+3 1
+output
+Copy
+3
+input
+Copy
+4
+2 3
+2 2
+2 1
+2 4
+output
+Copy
+0
+input
+Copy
+3
+1 1
+1 1
+2 3
+output
+Copy
+4
+Note
+In first test case there are six permutations of size
+3
+:
+if
+p=[1,2,3]
+, then
+s=[(1,1),(2,2),(3,1)]
+— bad sequence (sorted by first elements);
+if
+p=[1,3,2]
+, then
+s=[(1,1),(3,1),(2,2)]
+— bad sequence (sorted by second elements);
+if
+p=[2,1,3]
+, then
+s=[(2,2),(1,1),(3,1)]
+— good sequence;
+if
+p=[2,3,1]
+, then
+s=[(2,2),(3,1),(1,1)]
+— good sequence;
+if
+p=[3,1,2]
+, then
+s=[(3,1),(1,1),(2,2)]
+— bad sequence (sorted by second elements);
+if
+p=[3,2,1]
+, then
+s=[(3,1),(2,2),(1,1)]
+— good sequence.

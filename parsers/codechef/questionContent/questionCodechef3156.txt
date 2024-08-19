@@ -1,0 +1,103 @@
+Xor Separation
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Find the number of ways to split it into one or more non-empty contiguous subsequences
+B
+1
+,B
+2
+,…,B
+k
+such that the following condition is satisfied: for each
+i (
+1≤i≤k), the XOR of all elements in
+B
+i
+is divisible by
+2
+i−1
+.
+Since this number can be enormous, compute it modulo
+1,000,000,007 (
+10
+9
++7).
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer — the number of ways to split
+A modulo
+1,000,000,007 (
+10
+9
++7).
+Constraints
+1≤T≤1,000
+1≤N≤10
+5
+0≤A
+i
+≤10
+16
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (10 points):
+N≤20
+the sum of
+N over all test cases does not exceed
+100
+Subtask #2 (30 points):
+N≤200
+the sum of
+N over all test cases does not exceed
+1,000
+Subtask #3 (30 points):
+N≤2,500
+the sum of
+N over all test cases does not exceed
+2,500
+Subtask #4 (30 points): original constraints
+Sample 1:
+Input
+Output
+3
+4
+4 5 6 4
+4
+121 122 121 126
+6
+1 1 1 1 1 1
+4
+2
+4
+Explanation:
+Example case 1: The sequence can be split in the following ways:
+(4,5,6,4)
+(4,5),(6,4)
+(4,5,6),(4)
+(4,5),(6),(4)

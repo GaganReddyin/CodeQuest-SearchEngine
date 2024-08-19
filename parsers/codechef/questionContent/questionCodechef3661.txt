@@ -1,0 +1,103 @@
+Avoid The Landmines
+Problem
+You are given an integer array
+A of size
+N and a positive integer
+M. This array contains a hidden message which can be decoded by the following algorithm:
+int ox[N+1], oy[N+1];
+for(int i = 1; i ≤ N; i++) {
+    ox[i] = A[i] / M;
+    oy[i] = A[i] % M;
+}
+There are
+N landmines on the xy-plane, such that the
+i
+th
+landmine
+(1≤i≤N) is located at
+(ox
+i
+,oy
+i
+).
+Initially, you are at point
+(0,0) and you must go to point
+(X,Y). At each step, you can either move to the right by
+1 unit or move up by
+1 unit.
+Formally, if you are standing at
+(x,y), then you can either move to
+(x+1,y) or to
+(x,y+1).
+A path is called safe if there aren't any landmines on that path. Count the number of safe paths which you can take to reach the destination. As the answer can be quite large, output it modulo
+10
+9
++7.
+Input Format
+The first line contains
+4 integers
+N,
+M,
+X, and
+Y where
+(X,Y) are the coordinates of your destination on the xy-plane.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+representing the initial array
+A.
+Output Format
+Output, in a single line, the number of safe paths modulo
+10
+9
++7.
+Constraints
+1≤N≤2⋅10
+5
+1≤M≤10
+6
+0≤X,Y≤10
+6
+1≤A
+i
+≤10
+6
+Sample 1:
+Input
+Output
+3 4 2 3
+5 6 5
+2
+Explanation:
+For the given array
+A=[5,6,5], the location of the landmines are given by
+ox=[
+4
+5
+,
+4
+6
+,
+4
+5
+]=[1,1,1] and
+oy=[5%4,6%4,5%4]=[1,2,1]. Thus, landmines are at
+(1,1) and
+(1,2).
+There are
+2 safe paths to reach the destination. The safe paths are highlighted in the figure bellow:
+Sample 2:
+Input
+Output
+2 3 3 3
+4 8
+4
+Explanation:
+Landmines are located at
+(1,1) and
+(2,2).

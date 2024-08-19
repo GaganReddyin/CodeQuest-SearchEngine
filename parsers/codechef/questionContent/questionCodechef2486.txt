@@ -1,0 +1,49 @@
+Construct Array
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given two integers
+N and
+M. Find the number of sequences
+A
+1
+,A
+2
+,…,A
+N
+, where each element is an integer between
+1 and
+M (inclusive) and no three consecutive elements are equal. Since this number could be very large, compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N and
+M.
+Output
+For each test case, print a single line containing one integer ― the number of valid sequences modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+5
+1≤N,M≤10
+18
+Subtasks
+Subtask #1 (50 points):
+T≤20
+N≤10
+5
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+2 
+2 2
+3 4
+4
+60

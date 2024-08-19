@@ -1,0 +1,264 @@
+B. Curiosity Has No Limits
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+When Masha came to math classes today, she saw two integer sequences of length
+n−1
+on the blackboard. Let's denote the elements of the first sequence as
+a
+i
+(
+0≤
+a
+i
+≤3
+), and the elements of the second sequence as
+b
+i
+(
+0≤
+b
+i
+≤3
+).
+Masha became interested if or not there is an integer sequence of length
+n
+, which elements we will denote as
+t
+i
+(
+0≤
+t
+i
+≤3
+), so that for every
+i
+(
+1≤i≤n−1
+) the following is true:
+a
+i
+=
+t
+i
+|
+t
+i+1
+(where
+|
+denotes the bitwise OR operation) and
+b
+i
+=
+t
+i
+&
+t
+i+1
+(where
+&
+denotes the bitwise AND operation).
+The question appeared to be too difficult for Masha, so now she asked you to check whether such a sequence
+t
+i
+of length
+n
+exists. If it exists, find such a sequence. If there are multiple such sequences, find any of them.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the length of the sequence
+t
+i
+.
+The second line contains
+n−1
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n−1
+(
+0≤
+a
+i
+≤3
+) — the first sequence on the blackboard.
+The third line contains
+n−1
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n−1
+(
+0≤
+b
+i
+≤3
+) — the second sequence on the blackboard.
+Output
+In the first line print "YES" (without quotes), if there is a sequence
+t
+i
+that satisfies the conditions from the statements, and "NO" (without quotes), if there is no such sequence.
+If there is such a sequence, on the second line print
+n
+integers
+t
+1
+,
+t
+2
+,…,
+t
+n
+(
+0≤
+t
+i
+≤3
+) — the sequence that satisfies the statements conditions.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+4
+3 3 2
+1 2 0
+output
+Copy
+YES
+1 3 2 0 
+input
+Copy
+3
+1 3
+3 2
+output
+Copy
+NO
+Note
+In the first example it's easy to see that the sequence from output satisfies the given conditions:
+t
+1
+|
+t
+2
+=(
+01
+2
+)|(
+11
+2
+)=(
+11
+2
+)=3=
+a
+1
+and
+t
+1
+&
+t
+2
+=(
+01
+2
+)&(
+11
+2
+)=(
+01
+2
+)=1=
+b
+1
+;
+t
+2
+|
+t
+3
+=(
+11
+2
+)|(
+10
+2
+)=(
+11
+2
+)=3=
+a
+2
+and
+t
+2
+&
+t
+3
+=(
+11
+2
+)&(
+10
+2
+)=(
+10
+2
+)=2=
+b
+2
+;
+t
+3
+|
+t
+4
+=(
+10
+2
+)|(
+00
+2
+)=(
+10
+2
+)=2=
+a
+3
+and
+t
+3
+&
+t
+4
+=(
+10
+2
+)&(
+00
+2
+)=(
+00
+2
+)=0=
+b
+3
+.
+In the second example there is no such sequence.

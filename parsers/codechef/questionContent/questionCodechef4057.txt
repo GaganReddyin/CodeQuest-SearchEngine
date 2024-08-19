@@ -1,0 +1,113 @@
+(Challenge) Dynamic Hull
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N points in a plane (numbered
+1 through
+N). For each valid
+i, the coordinates of the
+i-th point are
+(X
+i
+,Y
+i
+).
+We want to remove all the points one by one; you should choose the order in which they are removed.
+Whenever a point is removed, we compute the area of the convex hull of the remaining points. Then, we define a penalty
+P as twice the sum of all these areas. It can be proved that
+P is an integer.
+Let
+M be the penalty of an algorithm that always greedily chooses the point that minimises the area of the convex hull of the remaining points (if there is more than one such point, the point with the smallest
+X-coordinate is chosen; if there is still more than one point, then the point with the smallest
+Y-coordinate is chosen). You are given this penalty. Your goal is to find a removal order that results in a smaller penalty.
+Input
+The first line of the input contains a single integer
+N.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+X
+i
+and
+Y
+i
+.
+The last line contains a single integer
+M.
+Output
+Print a single line containing
+N space-separated integers ― a permutation of the integers
+1 through
+N denoting the points in the order in which they should be removed.
+Constraints
+N=1024
+0≤X
+i
+,Y
+i
+≤512 for each valid
+i
+Example Input
+6
+1 0
+0 0
+0 1
+1 2
+2 1
+1 1
+5
+Example Output
+5 2 3 1 4 6
+Explanation
+The points
+1 through
+6 are marked
+A through
+F in the following figure.
+After removing the point marked
+E, the convex hull of the remaining points is the quadrilateral
+ABCD.
+After the points
+B and
+C are also removed, the remaining points
+A,
+F and
+D are collinear, so the convex hull has zero area.
+The penalty
+P is
+2⋅(3/2+1+0+0+0)=5.
+Test Generation
+There are four groups of test files and two test files in each group.
+In each file in group 1, the coordinates of all points are chosen uniformly randomly and independently between
+1 and
+512 inclusive.
+In each file in group 2, the points are chosen in the following way:
+Consider the square
+S whose lower left corner is
+(0,0) and upper right corner is
+(512,512).
+Generate a set of points by repeating the following process:
+Choose two points
+P and
+Q with integer coordinates on the perimeter of
+S uniformly randomly.
+Consider all points with integer coordinates on the line segment
+PQ.
+Sort these points first by non-decreasing
+X-coordinate and then by non-decreasing
+Y-coordinate.
+Add these points to the set, in this order.
+The process stops as soon as the set contains
+N pairwise distinct points.
+In each file in group 3, the points are generated similarly to group 2, but the points
+P and
+Q are always chosen uniformly randomly among all points with integer coordinates inside or on the perimeter of the square
+S.
+In each file in group 4, the points are generated similarly to group 2, but
+P is always the point
+(256,256).
+Scoring
+If
+P>M, you will receive the Wrong Answer verdict; otherwise, the score of a test file is
+M−P. The score of a submission is the sum of scores of all test files. Your goal is to maximise the score of your submission.
+There are eight test files. During the contest, the displayed score will account for exactly one test file from each group, i.e. your score reflects your submission's performance on 50% (4/8) of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other 4 test files.

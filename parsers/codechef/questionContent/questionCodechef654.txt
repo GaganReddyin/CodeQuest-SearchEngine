@@ -1,0 +1,116 @@
+Good Pairs
+Problem
+You are given an array
+A of length
+N.
+A pair
+(i,j)
+(1≤i<j≤N) is said to be good if
+gcd(A
+i
+,A
+j
+)=lcm(A
+i
+,A
+j
+). Here
+gcd denotes the greatest common divisor and
+lcm denotes least common multiple.
+Find the total number of good pairs present in the given array.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first line of each test case contains an integer
+N - the length of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line the total number of such good pairs possible in the given array.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+5
+2
+5 9
+5
+1 5 5 5 9
+8
+2 5 5 2 9 9 9 12
+4
+12 12 18 18
+5
+12 15 10 5 9
+0
+3
+5
+2
+0
+Explanation:
+Test case
+1: No good pair is present.
+Test case
+2: The good pairs
+(i,j) are:
+(2,3),(3,4), and
+(2,4). To elaborate,
+gcd(A
+2
+,A
+3
+)=lcm(A
+2
+,A
+3
+)=5.
+Test case
+3: The good pairs
+(i,j) are:
+(1,4),(2,3),(5,6),(6,7), and
+(5,7). To elaborate,
+gcd(A
+1
+,A
+4
+)=lcm(A
+1
+,A
+4
+)=2.
+Test case
+4: The good pair
+(i,j) are:
+(1,2), and
+(3,4). To elaborate,
+gcd(A
+3
+,A
+4
+)=lcm(A
+3
+,A
+4
+)=18.
+Test case
+5: No good pair is present.

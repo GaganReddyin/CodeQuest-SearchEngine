@@ -1,0 +1,79 @@
+Balancing Game
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Two of your friends (let's denote them by
+P and
+Q) are playing a game and you are acting as their dealer. The rules of the game are as follows:
+There are
+N bracket sequences, denoted by
+S
+1
+,S
+2
+,…,S
+N
+.
+Initially, both players do not have any sequences. They play up to
+N turns. For each valid
+i, in the
+i-th turn, you have to choose one player and give the bracket sequence
+S
+i
+to this player.
+After each turn, if it is possible to arrange all the sequences of one player in some order and concatenate them in such a way that the resulting bracket sequence is non-empty and balanced, that player immediately wins and the game ends. Note that it is impossible for both players to form non-empty balanced sequences at the same time.
+You like
+P more and hence want
+P to win. Find the smallest number of turns you need in order to make
+P win or determine that it is impossible to achieve this.
+Notes:
+A bracket sequence is an arbitrary string containing only characters '(' and ')'.
+A balanced bracket sequence is one of the following:
+An empty string.
+A concatenation of two non-empty balanced bracket sequences.
+A string formed by adding '(' to the beginning and ')' to the end of a balanced bracket sequence.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each valid
+i, the
+i-th of these lines contains a single string
+S
+i
+.
+Output
+For each test case, print a single line containing one integer ― the smallest number of turns needed to make
+P win or
+−1 if it is impossible.
+Constraints
+1≤T≤15
+1≤N≤200
+1≤∣S
+i
+∣≤200 for each valid
+i
+Sample 1:
+Input
+Output
+1
+4
+())
+((
+()))
+()((
+3
+Explanation:
+Example case 1: You can give
+S
+1
+to
+Q and
+S
+2
+and
+S
+3
+to
+P.

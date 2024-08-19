@@ -1,0 +1,407 @@
+B. The Forbidden Permutation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a permutation
+p
+of length
+n
+, an array of
+m
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+(
+1≤
+a
+i
+≤n
+), and an integer
+d
+.
+Let
+pos(x)
+be the index of
+x
+in the permutation
+p
+. The array
+a
+is not good if
+pos(
+a
+i
+)<pos(
+a
+i+1
+)≤pos(
+a
+i
+)+d
+for all
+1≤i<m
+.
+For example, with the permutation
+p=[4,2,1,3,6,5]
+and
+d=2
+:
+a=[2,3,6]
+is a not good array.
+a=[2,6,5]
+is good because
+pos(
+a
+1
+)=2
+,
+pos(
+a
+2
+)=5
+, so the condition
+pos(
+a
+2
+)≤pos(
+a
+1
+)+d
+is not satisfied.
+a=[1,6,3]
+is good because
+pos(
+a
+2
+)=5
+,
+pos(
+a
+3
+)=4
+, so the condition
+pos(
+a
+2
+)<pos(
+a
+3
+)
+is not satisfied.
+In one move, you can swap two adjacent elements of the permutation
+p
+. What is the minimum number of moves needed such that the array
+a
+becomes good? It can be shown that there always exists a sequence of moves so that the array
+a
+becomes good.
+A permutation is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array) and
+[1,3,4]
+is also not a permutation (
+n=3
+, but there is
+4
+in the array).
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains three integers
+n
+,
+m
+and
+d
+(
+2≤n≤
+10
+5
+,
+2≤m≤n
+,
+1≤d≤n
+), the length of the permutation
+p
+, the length of the array
+a
+and the value of
+d
+.
+The second line contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+,
+p
+i
+≠
+p
+j
+for
+i≠j
+).
+The third line contains
+m
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+(
+1≤
+a
+i
+≤n
+,
+a
+i
+≠
+a
+j
+for
+i≠j
+).
+The sum of
+n
+over all test cases doesn't exceed
+5⋅
+10
+5
+.
+Output
+For each test case, print the minimum number of moves needed such that the array
+a
+becomes good.
+Example
+input
+Copy
+5
+4 2 2
+1 2 3 4
+1 3
+5 2 4
+5 4 3 2 1
+5 2
+5 3 3
+3 4 1 5 2
+3 1 2
+2 2 1
+1 2
+2 1
+6 2 4
+1 2 3 4 5 6
+2 5
+output
+Copy
+1
+3
+2
+0
+2
+Note
+In the first case,
+pos(
+a
+1
+)=1
+,
+pos(
+a
+2
+)=3
+. To make the array good, one way is to swap
+p
+3
+and
+p
+4
+. After that, the array
+a
+will be good because the condition
+pos(
+a
+2
+)≤pos(
+a
+1
+)+d
+won't be satisfied.
+In the second case,
+pos(
+a
+1
+)=1
+,
+pos(
+a
+2
+)=4
+. The
+3
+moves could be:
+Swap
+p
+3
+and
+p
+4
+.
+Swap
+p
+2
+and
+p
+3
+.
+Swap
+p
+1
+and
+p
+2
+.
+After these moves, the permutation
+p
+will be
+[2,5,4,3,1]
+. The array
+a
+will be good because the condition
+pos(
+a
+1
+)<pos(
+a
+2
+)
+won't be satisfied. It can be shown that you can't make the array
+a
+good with fewer moves.
+In the third case,
+pos(
+a
+1
+)=1
+,
+pos(
+a
+2
+)=3
+,
+pos(
+a
+3
+)=5
+. The
+2
+moves can be:
+Swap
+p
+4
+and
+p
+5
+.
+Swap
+p
+3
+and
+p
+4
+.
+After these moves, the permutation
+p
+will be
+[3,4,2,1,5]
+. The array
+a
+will be good because the condition
+pos(
+a
+2
+)<pos(
+a
+3
+)
+won't be satisfied. It can be shown that you can't make the array
+a
+good with fewer moves.
+In the fourth case,
+pos(
+a
+1
+)=2
+,
+pos(
+a
+2
+)=1
+. The array
+a
+is already good.
+In the fifth case,
+pos(
+a
+1
+)=2
+,
+pos(
+a
+2
+)=5
+. The
+2
+moves are:
+Swap
+p
+1
+and
+p
+2
+.
+Swap
+p
+5
+and
+p
+6
+.

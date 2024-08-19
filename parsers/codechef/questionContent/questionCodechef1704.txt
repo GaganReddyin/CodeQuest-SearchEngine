@@ -1,0 +1,63 @@
+Strange Minimization
+Problem
+You are given an integer
+N. Find another integer
+X(X>N) such that the following conditions are satisfied :
+X is not a multiple of
+N.
+The value
+∣gcd(N,X)−lcm(N,X)∣ is as small as possible.
+If there are multiple answers for
+X, print any.
+For reference,
+gcd(u,v) is the greatest common divisor between
+u and
+v, while
+lcm(u,v) refers to the least common multiple.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N.
+Output Format
+For each testcase, print any suitable
+X satisfying the above two conditions for the given
+N.
+Constraints
+1≤T≤1000
+2≤N≤10
+12
+.
+Sum of
+N over all testcases won't exceed
+5∗10
+12
+.
+Subtasks
+Subtask 1 (10 points):
+2≤N≤1000
+Subtask 2 (20 points):
+2≤N≤10
+6
+Subtask 3 (70 points):
+2≤N≤10
+12
+Sample 1:
+Input
+Output
+2
+3
+4
+4
+6
+Explanation:
+1.In first case ,
+GCD(3,4) =
+1 and
+LCM(3,4)=
+12 ,
+∣1−12∣=
+11.
+11 is the smallest value we can get by choosing
+X as 4.

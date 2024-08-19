@@ -1,0 +1,147 @@
+C. Koxia and Number Theory
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Joi has an array
+a
+of
+n
+positive integers. Koxia wants you to determine whether there exists a positive integer
+x>0
+such that
+gcd(
+a
+i
++x,
+a
+j
++x)=1
+for all
+1≤i<j≤n
+.
+Here
+gcd(y,z)
+denotes the greatest common divisor (GCD) of integers
+y
+and
+z
+.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains an integer
+n
+(
+2≤n≤100
+) — the size of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+18
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+1000
+.
+Output
+For each test case, output "YES" (without quotes) if there exists a positive integer
+x
+such that
+gcd(
+a
+i
++x,
+a
+j
++x)=1
+for all
+1≤i<j≤n
+, and "NO" (without quotes) otherwise.
+You can output the answer in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Example
+input
+Copy
+2
+3
+5 7 10
+3
+3 3 4
+output
+Copy
+YES
+NO
+Note
+In the first test case, we can set
+x=4
+. This is valid because:
+When
+i=1
+and
+j=2
+,
+gcd(
+a
+i
++x,
+a
+j
++x)=gcd(5+4,7+4)=gcd(9,11)=1
+.
+When
+i=1
+and
+j=3
+,
+gcd(
+a
+i
++x,
+a
+j
++x)=gcd(5+4,10+4)=gcd(9,14)=1
+.
+When
+i=2
+and
+j=3
+,
+gcd(
+a
+i
++x,
+a
+j
++x)=gcd(7+4,10+4)=gcd(11,14)=1
+.
+In the second test case, any choice of
+x
+makes
+gcd(
+a
+1
++x,
+a
+2
++x)=gcd(3+x,3+x)=3+x
+. Therefore, no such
+x
+exists.

@@ -1,0 +1,48 @@
+Back to Campus
+Problem
+Finally, College has started calling students back to campus. There are so many students and thus due to some safety measures the college can’t call back all the students on the same day. It currently has the capacity of screening
+K students on a single day. There is a total of
+N students. What's the minimum number of days required for all the students to be back on the campus?
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N,K.
+Output Format
+For each test case, print a single line containing one integer - the minimum number of days required for all the students to be back on the campus.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+2
+1≤K≤10
+2
+Sample 1:
+Input
+Output
+3
+3 3
+3 2
+4 3
+1
+2
+2
+Explanation:
+Test case 1: Since
+K=3 and
+N=3, we can call all
+3 students back to campus on the first day itself. Hence it requires only
+1 day for all students to be back on campus.
+Test case 2: We have
+K=2 and
+N=3>K, so we can't call all the students back to campus on a single day. But we can call
+1 student on the first day and the remaining
+2 students on the second day. Therefore, we require a minimum of
+2 days for all students to be back on campus.
+Test case 3: We have
+K=3 and
+N=4>K, so we can't call all the students back to campus on a single day. But we can call
+2 students on the first day and the remaining
+2 students on the second day. Therefore, we require a minimum of
+2 days for all students to be back on campus.

@@ -1,0 +1,179 @@
+F1. Marek and Matching (easy version)
+time limit per test7 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an easier version of the problem. In this version,
+n≤6
+.
+Marek is working hard on creating strong testcases to his new algorithmic problem. You want to know what it is? Nah, we're not telling you. However, we can tell you how he generates the testcases.
+Marek chooses an integer
+n
+and
+n
+2
+integers
+p
+ij
+(
+1≤i≤n
+,
+1≤j≤n
+). He then generates a random bipartite graph with
+2n
+vertices. There are
+n
+vertices on the left side:
+ℓ
+1
+,
+ℓ
+2
+,…,
+ℓ
+n
+, and
+n
+vertices on the right side:
+r
+1
+,
+r
+2
+,…,
+r
+n
+. For each
+i
+and
+j
+, he puts an edge between vertices
+ℓ
+i
+and
+r
+j
+with probability
+p
+ij
+percent.
+It turns out that the tests will be strong only if a perfect matching exists in the generated graph. What is the probability that this will occur?
+It can be shown that this value can be represented as
+P
+Q
+where
+P
+and
+Q
+are coprime integers and
+Q≢0(mod
+10
+9
++7)
+. Let
+Q
+−1
+be an integer for which
+Q⋅
+Q
+−1
+≡1(mod
+10
+9
++7)
+. Print the value of
+P⋅
+Q
+−1
+modulo
+10
+9
++7
+.
+Input
+The first line of the input contains a single integer
+n
+(
+1≤n≤6
+). The following
+n
+lines describe the probabilities of each edge appearing in the graph. The
+i
+-th of the lines contains
+n
+integers
+p
+i1
+,
+p
+i2
+,…,
+p
+in
+(
+0≤
+p
+ij
+≤100
+);
+p
+ij
+denotes the probability, in percent, of an edge appearing between
+ℓ
+i
+and
+r
+j
+.
+Output
+Print a single integer — the probability that the perfect matching exists in the bipartite graph, written as
+P⋅
+Q
+−1
+(mod
+10
+9
++7)
+for
+P
+,
+Q
+defined above.
+Examples
+input
+Copy
+2
+50 50
+50 50
+output
+Copy
+937500007
+input
+Copy
+3
+3 1 4
+1 5 9
+2 6 5
+output
+Copy
+351284554
+Note
+In the first sample test, each of the
+16
+graphs below is equally probable. Out of these,
+7
+have a perfect matching:
+Therefore, the probability is equal to
+7
+16
+. As
+16⋅562500004=1(mod
+10
+9
++7)
+, the answer to the testcase is
+7⋅562500004mod(
+10
+9
++7)=937500007
+.

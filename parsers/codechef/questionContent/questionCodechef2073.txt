@@ -1,0 +1,143 @@
+Increasing Addition
+Problem
+You have an array
+A of length
+N. In one operation, you can do the following:
+Select any subarray
+A
+L…R
+(1≤L≤R≤N) and then add
+i to the
+i-th element of this subarray. Formally, we set
+A
+j
+:=A
+j
++(j−L+1) for all
+L≤j≤R.
+For example: if
+A=[2,1,5,2] and we apply operation on
+A
+2…4
+then
+A becomes
+[2,1+1,5+2,2+3]=[2,2,7,5].
+The minimum number of such operations required to sort
+A in non-decreasing order is termed as the goodness of
+A.
+We want to process
+Q updates on
+A of the following form:
+i x : Set
+A
+i
+:=x where (
+1≤i≤N).
+Determine the goodness of
+A after each update.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+Q — the size of the array
+A and the number of updates.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+The next
+Q lines each contain two integers
+i and
+x denoting the parameters of the update.
+Output Format
+For each test case, output
+Q integers, the goodness of the array after each update.
+Constraints
+1≤T≤10
+4
+2≤N≤10
+5
+1≤Q≤N
+1≤A
+i
+≤10
+9
+1≤x≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Subtasks
+Subtask 1 (50 points):
+1≤Q≤min(5,N)
+Subtask 2 (50 points): Original constraints.
+Sample 1:
+Input
+Output
+2
+3 2
+3 2 1
+3 10
+2 1
+4 2
+2 2 2 2
+4 2
+4 1
+1
+2
+0
+1
+Explanation:
+Test Case 1: Initially
+A=[3,2,1].
+After first update:
+A=[3,2,10].
+Now we can apply the operation on
+A
+1…2
+. Then
+A becomes
+[4,4,10]. Therefore the goodness of
+A is
+1.
+After second update:
+A=[3,1,10].
+Now we can apply the operation on
+A
+2…2
+.
+A becomes
+[3,2,10]. Now again we can apply the operation
+A
+2…2
+.
+A becomes
+[3,3,10]. Therefore the goodness of
+A is
+2.
+Test Case 2: Initially
+A=[2,2,2,2].
+After first update:
+A=[2,2,2,2].
+A is already in sorted order. Therefore the goodness of
+A is
+0.
+After second update:
+A=[2,2,2,1].
+Now we can apply the operation on
+A
+3…4
+.
+A becomes
+[2,2,3,3]. Therefore the goodness of
+A is
+1.

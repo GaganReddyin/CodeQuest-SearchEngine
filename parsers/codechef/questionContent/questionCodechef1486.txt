@@ -1,0 +1,170 @@
+Digit Operation
+Problem
+You are given arrays
+A and
+B, each consisting of
+N strings, and a positive integer
+K.
+For all
+1≤i≤N, both
+A
+i
+and
+B
+i
+consist of characters from
+0 to
+9 (both inclusive).
+You can perform the following types of operations on array
+A:
+Type
+1: Choose two indices
+i and
+j
+(i
+
+=j) and swap any character of
+A
+i
+with any character of
+A
+j
+. The cost of this operation is
+0.
+Type
+2: Choose an index
+i and replace one character of
+A
+i
+with any character from
+0 to
+9 (both inclusive). The cost of this operation is
+1.
+For example, let
+A=[24,30,51]. A valid sequence of operations can be:
+Swap
+4 in
+A
+1
+=24 with
+0 in
+A
+2
+=30 to obtain
+[20,34,51].
+Swap
+0 in
+A
+1
+=20 with
+5 in
+A
+3
+=51 to obtain
+[25,34,01].
+Replace
+0 in
+A
+3
+=01 with
+1 to obtain
+[25,34,11].
+The cost of the above sequence of operations is
+1.
+Find whether we can convert the array
+A to array
+B using any (possibly zero) number of operations with cost
+≤K.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K, the size of array and the maximum cost of operations.
+The second line of each test case contains
+N space-separated strings
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line of each test case contains
+N space-separated strings
+B
+1
+,B
+2
+,…,B
+N
+.
+Output Format
+For each test case, print YES if it is possible to convert array
+A to
+B using any (possibly zero) number of operations with cost
+≤K. Else, print NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings yEs, yes, Yes, and YES will all be treated as identical).
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+1≤K≤10
+18
+1≤∣A
+i
+∣,∣B
+i
+∣≤19
+A
+i
+and
+B
+i
+consist of characters from
+0 to
+9 (both inclusive).
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+2 2
+1 9
+9 1
+2 2
+1 11
+11 1
+4 1
+22 13 12 89
+28 98 21 31
+YES
+NO
+YES
+Explanation:
+Test case
+1: We can use one operation of type
+1 to swap
+1 in
+A
+1
+with
+9 in
+A
+2
+. Thus,
+A becomes
+[9,1], which is equal to
+B. We are able to do this with
+0 cost, which is
+≤2.
+Test case
+2: It is impossible to convert
+A to
+B with at most
+2 cost.

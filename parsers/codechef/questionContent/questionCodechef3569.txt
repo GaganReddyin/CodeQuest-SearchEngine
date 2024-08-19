@@ -1,0 +1,67 @@
+Swap Sort
+Problem
+You are given a permutation of
+n
+a
+1
+,a
+2
+,...a
+n
+. You will also be given another integer
+x between
+1 and
+n. In one move, you can swap the element
+x with an element at an odd number of places to the left or right of it. For example, if
+x is at position
+i, then you can swap it with
+a
+i+1
+,a
+i+3
+,... and
+a
+i−1
+,a
+i−3
+,...
+Your task is to sort the array in at most
+10n moves or determine that it is impossible to sort the array ###Input:
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains two lines of input.
+The first line contains two integers
+n and
+x.
+The second line contains
+n space separated numbers
+a
+1
+,a
+2
+,...a
+n
+###Output:
+For each test case, output in the first line "YES" if it is possible to sort the array otherwise "NO."
+If it is possible to sort the array, then in the next line output the number of moves
+m.
+Then output
+m lines, consisting of two indexes
+i and
+j to be swapped. (Note that either
+i or
+j should be the index of
+x.
+###Constraints
+1≤T≤1000
+1≤n≤10
+5
+1≤a
+i
+≤n
+1≤x≤n
+Sum of
+n over all testcases is less than
+10
+5
+###Sample Input: 2 3 2 2 1 3 3 3 2 1 3 ###Sample Output: YES 1 1 2 NO ###EXPLANATION: In the first test case, swapping 2 with 1 will sort the array. It is not possible to sort the array in the second test case.

@@ -1,0 +1,146 @@
+I. Excursions
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Irina works in an excursion company in Saratov. Today, she is going to organize excursions in the cities of Saratov and Engels.
+There are
+n
+1
+sights in Saratov and
+n
+2
+sights in Engels. The cities are separated by a river, but there are
+m
+bus routes that go along the bridges and allow tourists to go from Saratov to Engels and vice versa. The
+i
+-th bus route goes from the
+x
+i
+-th sight in Saratov to the
+y
+i
+-th sight in Engels, and in the opposite direction as well.
+Irina wants to plan excursions for the current day. The excursion trips start in Saratov in the morning, continue in Engels in the afternoon, and finish in Saratov in the evening.
+Each tourist starts their excursion day at some sight in Saratov,
+k
+i
+tourists start at the
+i
+-th sight. Then the tour guides lead them to Engels: at each sight in Saratov, a tour guide chooses a bus route leading from this sight to Engels, and all the tourists starting from this sight transfer to Engels along this bus route. After the excursions in Engels are finished, the same thing happens: at each sight in Engels, a tour guide chooses a bus route leading from this sight to Saratov, and all the tourists at this sight transfer to Saratov along this bus route.
+This process can lead to a situation such that some tourists return to the same sight in Saratov where they started in the morning. Obviously, tourists don't like it; so Irina wants to choose where the tour guides take the tourists (both on the way from Saratov to Engels and on the way from Engels to Saratov), so that the minimum possible number of tourists return to the same sight where they started. Help Irina to find an optimal plan!
+Input
+The first line contains three integers
+n
+1
+,
+n
+2
+and
+m
+(
+1≤
+n
+1
+,
+n
+2
+≤100
+;
+max(
+n
+1
+,
+n
+2
+)≤m≤
+n
+1
+⋅
+n
+2
+) — the number of sights in Saratov, the number of sights in Engels, and the number of bus routes, respectively.
+The second line contains
+n
+1
+integers
+k
+1
+,
+k
+2
+,…,
+k
+n
+1
+(
+1≤
+k
+i
+≤
+10
+6
+), where
+k
+i
+is the number of tourists starting at the
+i
+-th sight in Saratov.
+Then
+m
+lines follow, each describing a bus route: the
+i
+-th line contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+≤
+n
+1
+;
+1≤
+y
+i
+≤
+n
+2
+) meaning that the
+i
+-th bus route connects the
+x
+i
+-th sight in Saratov and the
+y
+i
+-th sight in Engels. All these bus routes are distinct, and each sight has at least one bus route leading to/from it.
+Output
+Print one integer — the minimum possible number of tourists that will return to the same sight where they started.
+Examples
+input
+Copy
+2 1 2
+10 20
+1 1
+2 1
+output
+Copy
+10
+input
+Copy
+3 3 6
+10 20 30
+1 3
+3 1
+2 3
+2 1
+3 2
+1 2
+output
+Copy
+0

@@ -1,0 +1,123 @@
+F2. Slime and Sequences (Hard Version)
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Note that the only differences between easy and hard versions are the constraints on
+n
+and the time limit. You can make hacks only if all versions are solved.
+Slime is interested in sequences. He defined good positive integer sequences
+p
+of length
+n
+as follows:
+For each
+k>1
+that presents in
+p
+, there should be at least one pair of indices
+i,j
+, such that
+1≤i<j≤n
+,
+p
+i
+=k−1
+and
+p
+j
+=k
+.
+For the given integer
+n
+, the set of all good sequences of length
+n
+is
+s
+n
+. For the fixed integer
+k
+and the sequence
+p
+, let
+f
+p
+(k)
+be the number of times that
+k
+appears in
+p
+. For each
+k
+from
+1
+to
+n
+, Slime wants to know the following value:
+(
+∑
+p∈
+s
+n
+f
+p
+(k)) mod 998244353
+(
+∑
+f
+(
+k
+)
+)
+mod
+998
+244
+353
+Input
+The first line contains one integer
+n (1≤n≤100000)
+.
+Output
+Print
+n
+integers, the
+i
+-th of them should be equal to
+(
+∑
+p∈
+s
+n
+f
+p
+(i)) mod 998244353
+.
+Examples
+input
+Copy
+2
+output
+Copy
+3 1 
+input
+Copy
+3
+output
+Copy
+10 7 1 
+input
+Copy
+1
+output
+Copy
+1 
+Note
+In the first example,
+s={[1,1],[1,2]}
+.
+In the second example,
+s={[1,1,1],[1,1,2],[1,2,1],[1,2,2],[2,1,2],[1,2,3]}
+.
+In the third example,
+s={[1]}
+.

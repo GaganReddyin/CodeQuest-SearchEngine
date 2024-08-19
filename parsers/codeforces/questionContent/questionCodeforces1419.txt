@@ -1,0 +1,136 @@
+F1. Korney Korneevich and XOR (easy version)
+time limit per test1.5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This is an easier version of the problem with smaller constraints.
+Korney Korneevich dag up an array
+a
+of length
+n
+. Korney Korneevich has recently read about the operation bitwise XOR, so he wished to experiment with it. For this purpose, he decided to find all integers
+x≥0
+such that there exists an increasing subsequence of the array
+a
+, in which the bitwise XOR of numbers is equal to
+x
+.
+It didn't take a long time for Korney Korneevich to find all such
+x
+, and he wants to check his result. That's why he asked you to solve this problem!
+A sequence
+s
+is a subsequence of a sequence
+b
+if
+s
+can be obtained from
+b
+by deletion of several (possibly, zero or all) elements.
+A sequence
+s
+1
+,
+s
+2
+,…,
+s
+m
+is called increasing if
+s
+1
+<
+s
+2
+<…<
+s
+m
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤500
+) — the elements of the array
+a
+.
+Output
+In the first line print a single integer
+k
+— the number of found
+x
+values.
+In the second line print
+k
+integers in increasing order
+x
+1
+,
+x
+2
+,…
+x
+k
+(
+0≤
+x
+1
+<…<
+x
+k
+) — found
+x
+values.
+Examples
+input
+Copy
+4
+4 2 2 4
+output
+Copy
+4
+0 2 4 6 
+input
+Copy
+8
+1 0 1 7 12 5 3 2
+output
+Copy
+12
+0 1 2 3 4 5 6 7 10 11 12 13 
+Note
+In the first test case:
+To get value
+x=0
+it is possible to choose and empty subsequence
+To get value
+x=2
+it is possible to choose a subsequence
+[2]
+To get value
+x=4
+it is possible to choose a subsequence
+[4]
+To get value
+x=6
+it is possible to choose a subsequence
+[2,4]

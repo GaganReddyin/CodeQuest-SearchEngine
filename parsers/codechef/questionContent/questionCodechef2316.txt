@@ -1,0 +1,65 @@
+Guests like slippers
+Problem
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+Miana and Serdenopis have guests for dinner tonight and thus they have prepared
+N pairs of slippers for their guests (who shall take off their shoes before entering the house). The slippers are on a line and the
+i-th pair of slippers has size
+S
+i
+.
+When a guest enters, he takes the first pair of slippers which are still in the line (i.e., they are not taken by a previous guest) and are big enough for him (that is, the slippers' size must be larger or equal than his shoes' size) and does not touch any other pair of slippers. If he cannot find any fitting slippers, he does not take any pair of slippers.
+Miana and Serdenopis do not remember how many guests they will have for dinner (and of course, they don't know their shoes' sizes either), but they are interested in the possible subsets of taken slippers.
+A (possibly empty) subset of the slippers is interesting if there is a configuration of guests such that all the slippers in the subset are taken and all the slippers not in the subset are not taken.
+Count the number of interesting subsets. Since this number may be very large, compute it modulo
+998244353.
+Input Format
+The first line contains a single integer
+N, the number of pairs of slippers.
+The second line contains
+N integers
+S
+1
+,S
+2
+,…,S
+N
+, where the
+i-th pair of slippers in the line has size
+S
+i
+.
+Output Format
+Print the number of interesting subsets modulo
+998244353.
+Constraints
+1≤N≤200000
+1≤S
+i
+≤200000
+Sample 1:
+Input
+Output
+3
+38 43 41
+6
+Explanation:
+Explanation of the first testcase: The sizes of the slippers are, in order, $[38, 43, 41]$.
+The
+6 interesting subsets are (the slippers in the interesting subset are given in bold):
+$[38, 43, 41]$ (the empty subset is interesting)
+$[\textbf{38}, 43, 41]$ (only the first pair of slippers is taken)
+$[38, \textbf{43}, 41]$ (only the second pair of slippers is taken)
+$[\textbf{38}, \textbf{43}, 41]$
+$[38, \textbf{43}, \textbf{41}]$
+$[\textbf{38}, \textbf{43}, \textbf{41}]$ (all slippers are taken)
+Let us describe, for certain configurations of guests, which slippers are taken:
+If there is only one guest and his shoes' size is $44$, he will not take any pair of slippers because they are too small for him. The subset of taken slippers is the empty set in this case.
+Assume that there are two guests, the first one has shoes' size $41$ and the second one has shoes' size $42$. The first guest takes the second pair of slippers (with size $43$) and the second guest does not take any pair of slippers because the remaining slippers are too small for him. The subset of taken slippers is $[38, \textbf{43}, 41]$ in this case.
+Assume that there are two guests, the first one has shoes' size $42$ and the second one has shoes' size $41$. The first guest takes the second pair of slippers (with size $43$) and the second guest takes the third pair of slippers (with size $41$). The subset of taken slippers is $[38, \textbf{43}, \textbf{41}]$ in this case.
+Assume that there are $100$ guests, all with shoes' size equal to $36$. The first three guests take, in order, the three available pairs of slippers and the remaining guests take no slippers. The subset of taken slippers is $[\textbf{38}, \textbf{43}, \textbf{41}]$ in this case.
+Sample 2:
+Input
+Output
+8
+42 42 43 37 38 38 41 42
+29

@@ -1,0 +1,44 @@
+Product of Diameters
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Chef had a tree T with weighted nodes.
+One day he decided that he wants to have two trees instead of one. So, he removed one of the edges of T.
+The next day, he decided to have three trees instead of two. So, he removed one more edge from some of the trees he had.
+And so on. Every day, Chef was removing one, not yet removed edge, util he once got a forest, consisting of N single-node trees.
+Chef thinks that the main characteristic of a tree is its' diameter. So he asks you to calculate the product of the diameters in obtained set of trees.
+Since the overall product might be quite large, output it modulo 109+7.
+Note
+In this problem, we consider the diameter of the tree as the maximum sum of weights of the nodes over all simple paths in this tree.
+Input
+The first line of the input contains an integer N denoting the number of nodes in the tree T.
+The following line contains N space-separated integers Wi, denoting the weights of the nodes.
+Each of the following (N-1) lines contain two space-separated integers Xi Yi.
+Each of the following (N-1) lines contain a single integer Kj, denoting the number of the edge that will be deleted on the jth day.
+Output
+Output N lines.
+On the ith line, output the product of the diameters of all the trees after (i-1) days modulo 109+7. Formally, if i > 1, output the product of the diameters of the obtained trees after deleting the edges K1, K2, ..., Ki - 1, modulo 109+7, otherwise output the diameter of the initial tree.
+Constraints
+1 ≤ N ≤ 105
+1 ≤ Wi ≤ 104
+1 ≤ Xi, Yi ≤ N
+K is a permutation of the integers from the range [1; N-1].
+Subtasks
+Subtask #1 (16 points): 1 ≤ N ≤ 100
+Subtask #2 (24 points): 1 ≤ N ≤ 5000
+Subtask #3 (60 points): no additional constraints
+Example
+Input:
+3
+1 2 3
+1 2
+1 3
+2
+1
+Output:
+6
+9
+6
+Explanation
+The diameter of the initial tree is 6 (node 2 to node 1 to node 3).
+After the first day (the deletion of the 2nd edge, i.e. 1 3), we get two trees, both with diameters 3.
+After the second day (the deletion of the 1st edge, i.e. 1 2), we get three trees with diameters 1, 2, 3, and their product equals to 6.

@@ -1,0 +1,148 @@
+Array Sorting
+Problem
+Let
+A be a permutation of
+{1,2,3,…,N}.
+We define a function
+f(A) as the minimum number of increasing subarrays into which the permutation
+A can be partitioned.
+For example
+f({5,1,4,2,3})=3, as the minimum number of increasing subarrays it can be partitioned into is
+3. The partitions are:
+{5},{1,4}, and
+{2,3}.
+Chef has a permutation
+P of
+{1,2,3,…,N}.
+Chef wants to sort the permutation
+P. For that, he can choose any two indices
+(i,j)
+(1≤i<j≤N) and swap the elements
+P
+i
+and
+P
+j
+such that the value of
+f(P) does not increase after the swap.
+Help Chef sort the permutation in at most
+N
+2
+swaps.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Description of each test case:
+First line contains a single integer
+N denoting the length of the permutation
+P.
+Second line contains
+N space-separated integers
+P
+1
+,P
+2
+,P
+3
+,…,P
+N
+- denoting the permutation
+P.
+Output Format
+For each test case:
+In the first line, output
+K
+(0≤K≤N
+2
+) - denoting the number of swaps you are going to perform.
+Now for the next
+K lines:
+Output two space-separated integers
+i,j
+(1≤i<j≤N) - denoting the indices to be swapped.
+Constraints
+1≤T≤1000
+2≤N≤1000
+Sum of
+N over all test cases do not exceed
+1000.
+P is a permutation of
+{1,2,3,…,N}.
+Sample 1:
+Input
+Output
+3
+3
+3 2 1
+2
+1 2
+4
+4 1 2 3
+1
+1 3
+0
+3
+1 2
+2 3
+3 4
+Explanation:
+Test Case
+1: Initially
+P={3,2,1},
+f(P)=3. The partitions are:
+{3},{2}, and
+{1}.
+After swapping
+P
+1
+and
+P
+3
+,
+P={1,2,3} and
+f(P)=1≤3.
+Also, after this swap, the permutation
+P is sorted.
+Test Case
+2:
+P is already sorted so we do not require any swaps.
+Test Case
+3: Initially
+P={4,1,2,3},
+f(P)=2. The partitions are:
+{4} and
+{1,2,3}.
+After swapping
+P
+1
+and
+P
+2
+,
+P={1,4,2,3} and
+f(P)=2≤2. Partitions are:
+{1,4} and
+{2,3}.
+After swapping
+P
+2
+and
+P
+3
+,
+P={1,2,4,3} and
+f(P)=2≤2. Partitions are:
+{1,2,4} and
+{3}.
+After swapping
+P
+3
+and
+P
+4
+,
+P={1,2,3,4} and
+f(P)=1≤2. Partition is:
+{1,2,3,4}.
+Also, after this swap, the permutation
+P is sorted.

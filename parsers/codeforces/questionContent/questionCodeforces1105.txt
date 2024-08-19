@@ -1,0 +1,142 @@
+D. Two Arrays
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Sam changed his school and on the first biology lesson he got a very interesting task about genes.
+You are given
+n
+arrays, the
+i
+-th of them contains
+m
+different integers —
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,m
+. Also you are given an array of integers
+w
+of length
+n
+.
+Find the minimum value of
+w
+i
++
+w
+j
+among all pairs of integers
+(i,j)
+(
+1≤i,j≤n
+), such that the numbers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,m
+,
+a
+j,1
+,
+a
+j,2
+,…,
+a
+j,m
+are distinct.
+Input
+The first line contains two integers
+n
+,
+m
+(
+2≤n≤
+10
+5
+,
+1≤m≤5
+).
+The
+i
+-th of the next
+n
+lines starts with
+m
+distinct integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,m
+and then
+w
+i
+follows (
+1≤
+a
+i,j
+≤
+10
+9
+,
+1≤
+w
+i
+≤
+10
+9
+).
+Output
+Print a single number — the answer to the problem.
+If there are no suitable pairs
+(i,j)
+, print
+−1
+.
+Examples
+input
+Copy
+4 2
+1 2 5
+4 3 1
+2 3 2
+4 5 3
+output
+Copy
+5
+input
+Copy
+4 3
+1 2 3 5
+2 3 4 2
+3 4 5 3
+1 3 10 10
+output
+Copy
+-1
+Note
+In the first test the minimum value is
+5=
+w
+3
++
+w
+4
+, because numbers
+{2,3,4,5}
+are distinct.
+In the second test case, there are no suitable pair
+(i,j)
+.

@@ -1,0 +1,109 @@
+C. Sum on Subarrays
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+For an array
+a=[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+, let's denote its subarray
+a[l,r]
+as the array
+[
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+]
+.
+For example, the array
+a=[1,−3,1]
+has
+6
+non-empty subarrays:
+a[1,1]=[1]
+;
+a[1,2]=[1,−3]
+;
+a[1,3]=[1,−3,1]
+;
+a[2,2]=[−3]
+;
+a[2,3]=[−3,1]
+;
+a[3,3]=[1]
+.
+You are given two integers
+n
+and
+k
+. Construct an array
+a
+consisting of
+n
+integers such that:
+all elements of
+a
+are from
+−1000
+to
+1000
+;
+a
+has exactly
+k
+subarrays with positive sums;
+the rest
+(n+1)⋅n
+2
+−k
+subarrays of
+a
+have negative sums.
+Input
+The first line contains one integer
+t
+(
+1≤t≤5000
+) — the number of test cases.
+Each test case consists of one line containing two integers
+n
+and
+k
+(
+2≤n≤30
+;
+0≤k≤
+(n+1)⋅n
+2
+).
+Output
+For each test case, print
+n
+integers — the elements of the array meeting the constraints. It can be shown that the answer always exists. If there are multiple answers, print any of them.
+Example
+input
+Copy
+4
+3 2
+2 0
+2 2
+4 6
+output
+Copy
+1 -3 1
+-13 -42
+-13 42
+-3 -4 10 -2

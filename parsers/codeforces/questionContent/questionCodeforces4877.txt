@@ -1,0 +1,51 @@
+E. Binary Matrix
+time limit per test3 seconds
+memory limit per test16 megabytes
+inputstandard input
+outputstandard output
+You are given a matrix of size n × m. Each element of the matrix is either 1 or 0. You have to determine the number of connected components consisting of 1's. Two cells belong to the same component if they have a common border, and both elements in these cells are 1's.
+Note that the memory limit is unusual!
+Input
+The first line contains two numbers n and m (1 ≤ n ≤ 212, 4 ≤ m ≤ 214) — the number of rows and columns, respectively. It is guaranteed that m is divisible by 4.
+Then the representation of matrix follows. Each of n next lines contains one-digit hexadecimal numbers (that is, these numbers can be represented either as digits from 0 to 9 or as uppercase Latin letters from A to F). Binary representation of each of these numbers denotes next 4 elements of the matrix in the corresponding row. For example, if the number B is given, then the corresponding elements are 1011, and if the number is 5, then the corresponding elements are 0101.
+Elements are not separated by whitespaces.
+Output
+Print the number of connected components consisting of 1's.
+Examples
+input
+Copy
+3 4
+1
+A
+8
+output
+Copy
+3
+input
+Copy
+2 8
+5F
+E3
+output
+Copy
+2
+input
+Copy
+1 4
+0
+output
+Copy
+0
+Note
+In the first example the matrix is:
+
+0001
+1010
+1000
+It is clear that it has three components.
+The second example:
+
+01011111
+11100011
+It is clear that the number of components is 2.
+There are no 1's in the third example, so the answer is 0.

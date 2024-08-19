@@ -1,0 +1,67 @@
+Perfect Power Divisors
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+For a positive integer
+m, let's define a function
+f(m) as the sum of all perfect powers which divide
+m. We call a positive integer
+k a perfect power if there are integers
+x and
+y such that
+k=x
+y
+and
+y>1.
+You need to calculate the sum
+f(1)+f(2)+…+f(N). Since the answer might be quite big, compute it modulo
+1,000,000,007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output
+For each test case, print a single line containing one integer ― the sum modulo
+1,000,000,007 (
+10
+9
++7).
+Constraints
+1≤T≤100
+1≤N≤10
+18
+Subtasks
+Subtask #1 (5 points):
+N≤100
+Subtask #2 (10 points):
+N≤10
+6
+Subtask #3 (15 points):
+N≤10
+12
+Subtask #4 (30 points):
+T≤3
+Subtask #5 (40 points):
+T≤15
+Sample 1:
+Input
+Output
+5
+1
+2
+4
+14
+23
+1
+2
+8
+43
+93
+Explanation:
+Example case 3: We have
+f(4)=1+4=5, so
+f(1)+f(2)+f(3)+f(4)=1+1+1+5=8.

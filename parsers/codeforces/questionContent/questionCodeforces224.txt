@@ -1,0 +1,120 @@
+F2. Graph Coloring (hard version)
+time limit per test5.5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+The only difference between the easy and the hard version is the constraint on
+n
+.
+You are given an undirected complete graph on
+n
+vertices. A complete graph is a graph where each pair of vertices is connected by an edge. You have to paint the edges of the graph into two colors, red and blue (each edge will have one color).
+A set of vertices
+S
+is red-connected if, for every pair of vertices
+(
+v
+1
+,
+v
+2
+)
+such that
+v
+1
+∈S
+and
+v
+2
+∈S
+, there exists a path from
+v
+1
+to
+v
+2
+that goes only through red edges and vertices from
+S
+. Similarly, a set of vertices
+S
+is blue-connected if, for every pair of vertices
+(
+v
+1
+,
+v
+2
+)
+such that
+v
+1
+∈S
+and
+v
+2
+∈S
+, there exists a path from
+v
+1
+to
+v
+2
+that goes only through blue edges and vertices from
+S
+.
+You have to paint the graph in such a way that:
+there is at least one red edge;
+there is at least one blue edge;
+for each set of vertices
+S
+such that
+|S|≥2
+,
+S
+is either red-connected or blue-connected, but not both.
+Calculate the number of ways to paint the graph, and print it modulo
+998244353
+.
+Input
+The first (and only) line contains one integer
+n
+(
+3≤n≤5⋅
+10
+4
+).
+Output
+Print one integer — the number of ways to paint the graph, taken modulo
+998244353
+.
+Examples
+input
+Copy
+3
+output
+Copy
+6
+input
+Copy
+4
+output
+Copy
+50
+input
+Copy
+100
+output
+Copy
+878752271
+input
+Copy
+1337
+output
+Copy
+520628749
+input
+Copy
+42013
+output
+Copy
+906821221

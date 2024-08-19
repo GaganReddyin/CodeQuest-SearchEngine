@@ -1,0 +1,67 @@
+Coprime Components
+Problem
+###Read problems statements Hindi ,Bengali , Mandarin chinese , Russian and Vietnamese as well.
+Consider an undirected graph
+G with
+N vertices, numbered
+1 through
+N. You are given an integer sequence
+A
+1
+,A
+2
+,…,A
+N
+describing the edges of this graph — for each pair of vertices
+u and
+v, there is an edge between those vertices if and only if
+A
+u
+and
+A
+v
+are coprime. Find the number of connected components of
+G.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing one integer — the number of connected components.
+Constraints
+1≤N≤2⋅10
+5
+1≤A
+i
+≤2⋅10
+5
+for each valid
+i
+Subtasks
+Subtask #1 (5 points):
+1≤N≤500
+Subtask #2 (25 points):
+1≤N≤5,000
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+5
+6 2 3 24 10
+3
+Explanation:
+There are two edges
+(2,3) and
+(3,5). There are
+3 connected components
+(1),
+(2,3,5) and
+(4).

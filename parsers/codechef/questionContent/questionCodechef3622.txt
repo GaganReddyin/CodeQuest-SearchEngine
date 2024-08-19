@@ -1,0 +1,70 @@
+MEX-ception
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given two integers
+N and
+M. You have to construct a matrix with
+N rows and
+M columns. Consider a multiset
+S which contains
+N+M integers: for each row and each column of this matrix, the MEX of the elements of this row/column belongs to
+S. Then, in the matrix you construct, the MEX of
+S must be maximum possible.
+Note: The MEX of a multiset of integers is the smallest non-negative integer that is not present in this multiset. For example,
+MEX({4,9,0,1,1,5})=2 and
+MEX({1,2,3})=0.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N and
+M.
+Output
+For each test case, print
+N lines. For each
+i (
+1≤i≤N), the
+i-th of these lines should contain
+M space-separated integers ― the elements in the
+i-th row of your matrix. Each element of the matrix must be non-negative and must not exceed
+10
+9
+.
+If there are multiple solutions, you may find any one of them.
+Constraints
+1≤T≤400
+1≤N,M≤100
+the sum of
+N⋅M over all test cases does not exceed
+10
+5
+Example Input
+2
+3 3
+4 2
+Example Output
+9 1 0
+1 0 2
+7 5 8
+2 2
+3 0
+1 1
+0 1
+Explanation
+Example case 1: The MEXs of the rows
+{9,1,0},
+{1,0,2} and
+{7,5,8} are
+2,
+3 and
+0 respectively. The MEXs of the columns
+{9,1,7},
+{1,0,5} and
+{0,2,8} are
+0,
+2 and
+1 respectively. Therefore, the multiset which contains the MEX of each row and each column is
+S={0,0,1,2,2,3} and
+MEX(S)=4. We can show that this is the largest MEX that can be obtained for a
+3×3 matrix.

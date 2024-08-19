@@ -1,0 +1,80 @@
+Gamer
+Problem
+Read problem statements in Russian
+In a game, you can choose when to enter and exit, but you can only do this exactly once. Choosing to enter and exit the game at time
+l and
+r respectively will cost you
+k⋅(r−l) coins.
+The game has
+n items. Item
+i is valued at
+v
+i
+coins. You can only collect item
+v
+i
+if you are in the game during the whole time period of
+[x
+i
+,y
+i
+]; that is,
+l≤x
+i
+≤y
+i
+≤r. Your profit after the game is the total value of the items collected minus the cost of entering and exiting the game.
+You want to enter and exit the game so that your profit is maximized. Find that maximized profit.
+###Input:
+The first line contains two integers,
+n and
+k.
+Then,
+n lines follow. The
+i-th line of these contains three integers,
+x
+i
+,y
+i
+,v
+i
+.
+###Output: Print a single line containing the maximized profit.
+###Constraints
+1≤n≤10
+5
+1≤v
+i
+,k≤10
+9
+−10
+9
+≤x
+i
+,y
+i
+≤10
+9
+x
+i
+≤y
+i
+###Subtasks: Subtask #1 (15 points):
+n≤20
+Subtask #2 (25 points):
+n≤1000
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+3 2
+ 1 3 3
+ 1 2 5
+ 4 7 1
+4
+Explanation:
+It is optimal to enter at time
+1 and exit at time
+3 to get item number
+1 and
+2.

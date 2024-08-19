@@ -1,0 +1,27 @@
+Maximum Grid
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+There is an infinite grid given to you. Some of the cells in this infinite grid have gems in them. Each gem a parameter beauty associated with it which is given by a positive integer.
+You will be given an integer L. You have to find maximum sum of beauties inside any square sub-grid with its side length being less than or equal to L. Let S be that number, i.e. the maximum sum of beauties for some sub-grid with side length no greater than L. You also have to find minimum side length such that there exists some sqaure sub-grid with that given side length with sum of beauties of gems inside it being equal to S.
+Input
+First line of the input contains two space separated N and L, denoting the number of gems and the maximum allowed size of the sub-grid, respectively.
+Each of the next N lines contains three space separated integers - xi, yi and ci denoting the x-coordinate, y-coordinate and the value of the ith gem respectively.
+Output
+Output a single line containing two space separated integers: the maximum value of the sum of beauties of gem in some square sub-grid of the length not greater than L and the minimum side length of the square-grid which contains that much sum of beauties of gems inside it, respectively.
+Constraints
+1 ≤ L ≤ 105
+1 ≤ ci ≤ 109
+Subtasks
+Subtask #1 (15 points): 1 ≤ N ≤ 1000, 1 ≤ xi, yi ≤ 2000
+Subtask #2 (25 points): 1 ≤ N ≤ 105, 1 ≤ xi, yi ≤ 2000
+Subtask #3 (60 points): 1 ≤ N ≤ 105, 1 ≤ xi, yi ≤ 105
+Example
+Input:
+3 2
+1 1 1
+2 1 1
+3 1 5
+Output:
+6 2
+Explanation
+In the given example, you can create a 2X2 sub-grid with top-left corner as (2,1) and bottom right corner as (3,2) with value 6. All other sub-grids have value lower than or equal to this sub-grid.

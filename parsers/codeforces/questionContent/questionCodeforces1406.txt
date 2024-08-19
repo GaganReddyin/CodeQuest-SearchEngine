@@ -1,0 +1,175 @@
+C. Two Arrays
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two arrays of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+and
+b
+1
+,
+b
+2
+,…,
+b
+n
+.
+Let's define a transformation of the array
+a
+:
+Choose any non-negative integer
+k
+such that
+0≤k≤n
+.
+Choose
+k
+distinct array indices
+1≤
+i
+1
+<
+i
+2
+<…<
+i
+k
+≤n
+.
+Add
+1
+to each of
+a
+i
+1
+,
+a
+i
+2
+,…,
+a
+i
+k
+, all other elements of array
+a
+remain unchanged.
+Permute the elements of array
+a
+in any order.
+Is it possible to perform some transformation of the array
+a
+exactly once, so that the resulting array is equal to
+b
+?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. Descriptions of test cases follow.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤100
+) — the size of arrays
+a
+and
+b
+.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−100≤
+a
+i
+≤100
+).
+The third line of each test case contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−100≤
+b
+i
+≤100
+).
+Output
+For each test case, print "YES" (without quotes) if it is possible to perform a transformation of the array
+a
+, so that the resulting array is equal to
+b
+. Print "NO" (without quotes) otherwise.
+You can print each letter in any case (upper or lower).
+Example
+input
+Copy
+3
+3
+-1 1 0
+0 0 2
+1
+0
+2
+5
+1 2 3 4 5
+1 2 3 4 5
+output
+Copy
+YES
+NO
+YES
+Note
+In the first test case, we can make the following transformation:
+Choose
+k=2
+.
+Choose
+i
+1
+=1
+,
+i
+2
+=2
+.
+Add
+1
+to
+a
+1
+and
+a
+2
+. The resulting array is
+[0,2,0]
+.
+Swap the elements on the second and third positions.
+In the second test case there is no suitable transformation.
+In the third test case we choose
+k=0
+and do not change the order of elements.

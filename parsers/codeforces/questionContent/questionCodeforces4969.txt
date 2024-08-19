@@ -1,0 +1,30 @@
+F. Ordering T-Shirts
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It's another Start[c]up, and that means there are T-shirts to order. In order to make sure T-shirts are shipped as soon as possible, we've decided that this year we're going to order all of the necessary T-shirts before the actual competition. The top C contestants are going to be awarded T-shirts, but we obviously don't know which contestants that will be. The plan is to get the T-Shirt sizes of all contestants before the actual competition, and then order enough T-shirts so that no matter who is in the top C we'll have T-shirts available in order to award them.
+In order to get the T-shirt sizes of the contestants, we will send out a survey. The survey will allow contestants to either specify a single desired T-shirt size, or two adjacent T-shirt sizes. If a contestant specifies two sizes, it means that they can be awarded either size.
+As you can probably tell, this plan could require ordering a lot of unnecessary T-shirts. We'd like your help to determine the minimum number of T-shirts we'll need to order to ensure that we'll be able to award T-shirts no matter the outcome of the competition.
+Input
+Input will begin with two integers N and C (1 ≤ N ≤ 2·105, 1 ≤ C), the number of T-shirt sizes and number of T-shirts to be awarded, respectively.
+Following this is a line with 2·N - 1 integers, s1 through s2·N - 1 (0 ≤ si ≤ 108). For odd i, si indicates the number of contestants desiring T-shirt size ((i + 1) / 2). For even i, si indicates the number of contestants okay receiving either of T-shirt sizes (i / 2) and (i / 2 + 1). C will not exceed the total number of contestants.
+Output
+Print the minimum number of T-shirts we need to buy.
+Examples
+input
+Copy
+2 200
+100 250 100
+output
+Copy
+200
+input
+Copy
+4 160
+88 69 62 29 58 52 44
+output
+Copy
+314
+Note
+In the first example, we can buy 100 of each size.

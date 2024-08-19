@@ -1,0 +1,299 @@
+F. Optimal Encoding
+time limit per test7 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Touko's favorite sequence of numbers is a permutation
+a
+1
+,
+a
+2
+,…,
+a
+n
+of
+1,2,…,n
+, and she wants some collection of permutations that are similar to her favorite permutation.
+She has a collection of
+q
+intervals of the form
+[
+l
+i
+,
+r
+i
+]
+with
+1≤
+l
+i
+≤
+r
+i
+≤n
+. To create permutations that are similar to her favorite permutation, she coined the following definition:
+A permutation
+b
+1
+,
+b
+2
+,…,
+b
+n
+allows an interval
+[
+l
+′
+,
+r
+′
+]
+to holds its shape if for any pair of integers
+(x,y)
+such that
+l
+′
+≤x<y≤
+r
+′
+, we have
+b
+x
+<
+b
+y
+if and only if
+a
+x
+<
+a
+y
+.
+A permutation
+b
+1
+,
+b
+2
+,…,
+b
+n
+is
+k
+-similar if
+b
+allows all intervals
+[
+l
+i
+,
+r
+i
+]
+for all
+1≤i≤k
+to hold their shapes.
+Yuu wants to figure out all
+k
+-similar permutations for Touko, but it turns out this is a very hard task; instead, Yuu will encode the set of all
+k
+-similar permutations with directed acylic graphs (DAG). Yuu also coined the following definitions for herself:
+A permutation
+b
+1
+,
+b
+2
+,…,
+b
+n
+satisfies a DAG
+G
+′
+if for all edge
+u→v
+in
+G
+′
+, we must have
+b
+u
+<
+b
+v
+.
+A
+k
+-encoding is a DAG
+G
+k
+on the set of vertices
+1,2,…,n
+such that a permutation
+b
+1
+,
+b
+2
+,…,
+b
+n
+satisfies
+G
+k
+if and only if
+b
+is
+k
+-similar.
+Since Yuu is free today, she wants to figure out the minimum number of edges among all
+k
+-encodings for each
+k
+from
+1
+to
+q
+.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤25000
+,
+1≤q≤100000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+which form a permutation of
+1,2,…,n
+.
+The
+i
+-th of the following
+q
+lines contains two integers
+l
+i
+and
+r
+i
+. (
+1≤
+l
+i
+≤
+r
+i
+≤n
+).
+Output
+Print
+q
+lines. The
+k
+-th of them should contain a single integer  — The minimum number of edges among all
+k
+-encodings.
+Examples
+input
+Copy
+4 3
+2 4 1 3
+1 3
+2 4
+1 4
+output
+Copy
+2
+4
+3
+input
+Copy
+8 4
+3 7 4 8 1 5 2 6
+3 6
+1 6
+3 8
+1 8
+output
+Copy
+3
+5
+9
+7
+input
+Copy
+10 10
+10 5 1 2 7 3 9 4 6 8
+2 2
+4 5
+6 8
+4 10
+4 4
+2 7
+2 2
+7 8
+3 7
+2 10
+output
+Copy
+0
+1
+3
+6
+6
+9
+9
+9
+9
+8
+Note
+For the first test case:
+All
+1
+-similar permutations must allow the interval
+[1,3]
+to hold its shape. Therefore, the set of all
+1
+-similar permutations is
+{[3,4,2,1],[3,4,1,2],[2,4,1,3],[2,3,1,4]}
+. The optimal encoding of these permutations is
+All
+2
+-similar permutations must allow the intervals
+[1,3]
+and
+[2,4]
+to hold their shapes. Therefore, the set of all
+2
+-similar permutations is
+{[3,4,1,2],[2,4,1,3]}
+. The optimal encoding of these permutations is
+All
+3
+-similar permutations must allow the intervals
+[1,3]
+,
+[2,4]
+, and
+[1,4]
+to hold their shapes. Therefore, the set of all
+3
+-similar permutations only includes
+[2,4,1,3]
+. The optimal encoding of this permutation is

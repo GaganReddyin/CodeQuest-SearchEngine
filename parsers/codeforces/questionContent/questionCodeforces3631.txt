@@ -1,0 +1,115 @@
+F. Serval and Bonus Problem
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Getting closer and closer to a mathematician, Serval becomes a university student on math major in Japari University. On the Calculus class, his teacher taught him how to calculate the expected length of a random subsegment of a given segment. Then he left a bonus problem as homework, with the award of a garage kit from IOI. The bonus is to extend this problem to the general case as follows.
+You are given a segment with length
+l
+. We randomly choose
+n
+segments by choosing two points (maybe with non-integer coordinates) from the given segment equiprobably and the interval between the two points forms a segment. You are given the number of random segments
+n
+, and another integer
+k
+. The
+2n
+endpoints of the chosen segments split the segment into
+(2n+1)
+intervals. Your task is to calculate the expected total length of those intervals that are covered by at least
+k
+segments of the
+n
+random segments.
+You should find the answer modulo
+998244353
+.
+Input
+First line contains three space-separated positive integers
+n
+,
+k
+and
+l
+(
+1≤k≤n≤2000
+,
+1≤l≤
+10
+9
+).
+Output
+Output one integer — the expected total length of all the intervals covered by at least
+k
+segments of the
+n
+random segments modulo
+998244353
+.
+Formally, let
+M=998244353
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Examples
+input
+Copy
+1 1 1
+output
+Copy
+332748118
+input
+Copy
+6 2 1
+output
+Copy
+760234711
+input
+Copy
+7 5 3
+output
+Copy
+223383352
+input
+Copy
+97 31 9984524
+output
+Copy
+267137618
+Note
+In the first example, the expected total length is
+∫
+1
+0
+∫
+1
+0
+|x−y|dxdy=
+1
+3
+, and
+3
+−1
+modulo
+998244353
+is
+332748118
+.

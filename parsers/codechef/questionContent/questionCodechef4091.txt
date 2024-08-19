@@ -1,0 +1,57 @@
+Clamp Paths on Tree
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+You are given a tree with
+N vertices (numbered
+1 through
+N).
+A simple path between two different vertices
+a and
+b (
+a<b) is called a clamp path if it does not contain any vertices with numbers smaller then
+a or greater than
+b.
+Calculate the number of clamp paths in the given tree.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+p
+1
+,p
+2
+,…,p
+N
+. For each valid
+i, if
+p
+i
+
+=0, then there is an edge between vertices
+i and
+p
+i
+.
+Output
+Print a single line containing one integer - the number of clamp paths.
+Constraints
+2≤N≤2
+20
+0≤p
+i
+≤N for each valid
+i
+there is exactly one vertex
+i with
+p
+i
+=0
+the graph described on the input is a tree
+Example Input
+7
+0 5 5 1 4 1 4
+Example Output
+10
+Explanation
+The clamp paths are 1 - 4, 1 - 5, 1 - 6, 1 - 7, 2 - 5, 2 - 7, 3 - 5, 3 - 7, 4 - 5 and 4 - 7.

@@ -1,0 +1,106 @@
+Binary String Happiness
+Problem
+For a binary string
+S, define its beauty to be the maximum number of substrings
+S can be partitioned into, such that each substring has strictly more ones than zeroes. For example, the beauty of
+11011 is
+3, as it can be partitioned as
+[110][1][1]. If such a partition doesn't exist, the beauty is defined to be
+0.
+Also, define the happiness of a binary string to be the maximum beauty over all its substrings. For example, the happiness of the string
+S=010011011 is
+3, which is the beauty of its substring
+11011.
+You are given
+N binary strings
+S
+1
+,S
+2
+,…,S
+N
+. You have to process
+Q queries:
+Each query consists of two integers
+L,R, where
+1≤L≤R≤N.
+The result of the query is the maximum possible happiness of
+S
+p
+1
++S
+p
+2
++…S
+p
+(R−L+1)
+, where
+p is some permutation of
+{L,L+1,…,R−1,R} and
++ denotes the concatenation operation.
+Input Format
+The first line of input contains two space-separated integers
+N and
+Q, the number of strings and the number of queries. Then,
+2N+Q lines follow:
+For each
+1≤i≤N,
+S
+i
+is represented by two lines. The first line contains the length of
+S
+i
+and the second line contains
+S
+i
+itself.
+Each of the next
+Q lines contains two integers,
+L and
+R, denoting the query parameters
+Output Format
+For each query, print the maximum possible happiness of the concatenation of some permutation of the given interval on a new line.
+Constraints
+1≤N,Q≤10
+5
+∣S
+i
+∣≥1 for each valid
+i.
+Every string consists of characters which are either '0' or '1'.
+The sum of the lengths of all the input strings doesn't exceed
+10
+6
+.
+Subtasks
+Subtask 1 (30 points): The sum of
+R−L+1 over all queries doesn't exceed
+10
+6
+.
+Subtask 3 (70 points): No further constraints.
+Sample 1:
+Input
+Output
+4 1
+1
+0
+2
+11
+3
+010
+4
+0110
+2 4
+3
+Explanation:
+It is optimal to concatenate as
+S
+3
++S
+4
++S
+2
+to get
+010011011 with a happiness value of
+3.

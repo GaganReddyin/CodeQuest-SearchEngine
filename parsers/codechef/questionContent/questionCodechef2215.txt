@@ -1,0 +1,104 @@
+Stable Mex
+Problem
+Chef gives you a sequence
+A of length
+N.
+Let
+X denote the
+MEX of the sequence
+A. Chef is interested in the count of positive values
+k, such that, if every element
+A
+i
+of
+A is replaced by
+max(A
+i
+−k,0), the
+MEX of the sequence still remains
+X.
+Find the count of such values. If there are infinite such values, print
+−1 instead.
+As a friendly reminder, the
+MEX of a sequence is the smallest non-negative integer that does not belong to the sequence. For instance:
+The
+MEX of
+[2,2,1] is
+0 because
+0 does not belong to the sequence.
+The
+MEX of
+[3,1,0,1] is
+2 because
+0 and
+1 belong to the sequence, but
+2 does not.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N - the length of the sequence
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case print a single integer — the count of positive values
+k satisfying the given condition. If there are infinite such values, print
+−1 instead.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+0≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+1 2 3 5
+1
+0
+7
+5 10 2 4 0 6 1
+0
+-1
+1
+Explanation:
+Test case
+1: There doesn't exist any value of
+k satisfying the given condition.
+Test case
+2: There are infinite values of
+k satisfying the given condition.
+Test case
+3: There is only
+1 value of
+k satisfying the given condition:
+k=4. The
+MEX of the given sequence is
+3. When every element
+A
+i
+of the given sequence is replaced by
+max(A
+i
+−4,0), the sequence becomes
+[1,6,0,0,0,2,0], which also has
+MEX=3.

@@ -1,0 +1,78 @@
+G. Tree-Tac-Toe
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The tic-tac-toe game is starting on a tree of
+n
+vertices. Some vertices are already colored in white while the remaining are uncolored.
+There are two players — white and black. The players make moves alternatively. The white player starts the game. In his turn, a player must select one uncolored vertex and paint it in his color.
+The player wins if he paints some path of three vertices in his color. In case all vertices are colored and neither player won, the game ends in a draw.
+Could you please find who will win the game or whether it ends as a draw, assuming both players play optimally?
+Input
+The first line contains a single integer
+T
+(
+1≤T≤50000
+) — the number of test cases. Then descriptions of
+T
+test cases follow.
+The first line of each test contains a single integer
+n
+(
+1≤n≤5⋅
+10
+5
+) — the number of vertices in the tree.
+Each of the following
+n−1
+lines contains integers
+v
+,
+u
+(
+1≤v,u≤n
+) denoting an edge of the tree connecting vertices
+v
+and
+u
+.
+The last line of a test case contains a string of letters 'W' (for white) and 'N' (for not colored) of length
+n
+denoting already colored vertices. Vertexes already colored in white are denoted as 'W'.
+It's guaranteed that the given edges form a tree, that there is at least one uncolored vertex and that there is no path of three white vertices.
+It's guaranteed that sum of all
+n
+among all test cases is at most
+5⋅
+10
+5
+.
+Output
+For every test case, print either "White", "Draw" or "Black", depending on the result of the game.
+Example
+input
+Copy
+2
+4
+1 2
+1 3
+1 4
+NNNW
+5
+1 2
+2 3
+3 4
+4 5
+NNNNN
+output
+Copy
+White
+Draw
+Note
+In the first example, vertex
+4
+is already colored in white. The white player can win by coloring the vertex
+1
+in white first and the remaining vertex on his second turn. The process is illustrated with the pictures below.
+In the second example, we can show that no player can enforce their victory.

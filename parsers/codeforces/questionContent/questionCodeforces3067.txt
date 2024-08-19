@@ -1,0 +1,104 @@
+D2. Beautiful Bracket Sequence (hard version)
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the hard version of this problem. The only difference is the limit of
+n
+- the length of the input string. In this version,
+1≤n≤
+10
+6
+.
+Let's define a correct bracket sequence and its depth as follow:
+An empty string is a correct bracket sequence with depth
+0
+.
+If "s" is a correct bracket sequence with depth
+d
+then "(s)" is a correct bracket sequence with depth
+d+1
+.
+If "s" and "t" are both correct bracket sequences then their concatenation "st" is a correct bracket sequence with depth equal to the maximum depth of
+s
+and
+t
+.
+For a (not necessarily correct) bracket sequence
+s
+, we define its depth as the maximum depth of any correct bracket sequence induced by removing some characters from
+s
+(possibly zero). For example: the bracket sequence
+s=
+"())(())" has depth
+2
+, because by removing the third character we obtain a correct bracket sequence "()(())" with depth
+2
+.
+Given a string
+a
+consists of only characters '(', ')' and '?'. Consider all (not necessarily correct) bracket sequences obtained by replacing all characters '?' in
+a
+by either '(' or ')'. Calculate the sum of all the depths of all these bracket sequences. As this number can be large, find it modulo
+998244353
+.
+Hacks in this problem can be done only if easy and hard versions of this problem was solved.
+Input
+The only line contains a non-empty string consist of only '(', ')' and '?'. The length of the string is at most
+10
+6
+.
+Output
+Print the answer modulo
+998244353
+in a single line.
+Examples
+input
+Copy
+??
+output
+Copy
+1
+input
+Copy
+(?(?))
+output
+Copy
+9
+Note
+In the first test case, we can obtain
+4
+bracket sequences by replacing all characters '?' with either '(' or ')':
+"((". Its depth is
+0
+;
+"))". Its depth is
+0
+;
+")(". Its depth is
+0
+;
+"()". Its depth is
+1
+.
+So, the answer is
+1=0+0+0+1
+.
+In the second test case, we can obtain
+4
+bracket sequences by replacing all characters '?' with either '(' or ')':
+"(((())". Its depth is
+2
+;
+"()()))". Its depth is
+2
+;
+"((()))". Its depth is
+3
+;
+"()(())". Its depth is
+2
+.
+So, the answer is
+9=2+2+3+2
+.

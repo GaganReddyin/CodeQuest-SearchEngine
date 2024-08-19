@@ -1,0 +1,143 @@
+Hidden Sequence
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+It's not always easy to make up stories around problems ― like this one.
+We know that there is a hidden sequence
+A
+1
+,A
+2
+,…,A
+N
+which contains only integers between
+1 and
+K inclusive. We have acquired
+M triplets
+(X
+1
+,Y
+1
+,Z
+1
+),(X
+2
+,Y
+2
+,Z
+2
+),…,(X
+M
+,Y
+M
+,Z
+M
+). A very reliable source has given us intel that for each valid
+i, the
+Y
+i
+-th occurrence of the integer
+X
+i
+in the sequence
+A is
+A
+Z
+i
+, i.e.
+A
+Z
+i
+=X
+i
+and there are
+Y
+i
+−1 indices
+j<Z
+i
+such that
+A
+j
+=X
+i
+.
+Find any sequence
+A consistent with this information or determine that no such sequence exists.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+K and
+M.
+M lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains three space-separated integers
+X
+i
+,Y
+i
+and
+Z
+i
+.
+Output
+For each test case:
+If no valid sequence exists, print a single line containing the string "No".
+Otherwise, print two lines.
+The first of these lines should contain the string "Yes".
+The second line should contain
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Constraints
+1≤T≤5⋅10
+5
+1≤N,K,M≤5⋅10
+5
+1≤X
+i
+≤K for each valid
+i
+1≤Y
+i
+,Z
+i
+≤N for each valid
+i
+all triplets are pairwise distinct
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+the sum of
+K over all test cases does not exceed
+5⋅10
+5
+the sum of
+M over all test cases does not exceed
+5⋅10
+5
+Sample 1:
+Input
+Output
+3
+3 3 2
+1 1 2
+2 2 3
+3 1 1
+1 1 1
+3 1 1
+1 1 2
+Yes
+2 1 2 
+Yes
+1 1 1 
+No

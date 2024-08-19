@@ -1,0 +1,189 @@
+E. Arithmetic Operations
+time limit per test5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You are given an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+You can do the following operation any number of times (possibly zero):
+Choose any index
+i
+and set
+a
+i
+to any integer (positive, negative or
+0
+).
+What is the minimum number of operations needed to turn
+a
+into an arithmetic progression? The array
+a
+is an arithmetic progression if
+a
+i+1
+−
+a
+i
+=
+a
+i
+−
+a
+i−1
+for any
+2≤i≤n−1
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+5
+).
+Output
+Print a single integer: the minimum number of operations needed to turn
+a
+into an arithmetic progression.
+Examples
+input
+Copy
+9
+3 2 7 8 6 9 5 4 1
+output
+Copy
+6
+input
+Copy
+14
+19 2 15 8 9 14 17 13 4 14 4 11 15 7
+output
+Copy
+10
+input
+Copy
+10
+100000 1 60000 2 20000 4 8 16 32 64
+output
+Copy
+7
+input
+Copy
+4
+10000 20000 10000 1
+output
+Copy
+2
+Note
+In the first test, you can get the array
+a=[11,10,9,8,7,6,5,4,3]
+by performing
+6
+operations:
+Set
+a
+3
+to
+9
+: the array becomes
+[3,2,9,8,6,9,5,4,1]
+;
+Set
+a
+2
+to
+10
+: the array becomes
+[3,10,9,8,6,9,5,4,1]
+;
+Set
+a
+6
+to
+6
+: the array becomes
+[3,10,9,8,6,6,5,4,1]
+;
+Set
+a
+9
+to
+3
+: the array becomes
+[3,10,9,8,6,6,5,4,3]
+;
+Set
+a
+5
+to
+7
+: the array becomes
+[3,10,9,8,7,6,5,4,3]
+;
+Set
+a
+1
+to
+11
+: the array becomes
+[11,10,9,8,7,6,5,4,3]
+.
+a
+is an arithmetic progression: in fact,
+a
+i+1
+−
+a
+i
+=
+a
+i
+−
+a
+i−1
+=−1
+for any
+2≤i≤n−1
+.
+There is no sequence of less than
+6
+operations that makes
+a
+an arithmetic progression.
+In the second test, you can get the array
+a=[−1,2,5,8,11,14,17,20,23,26,29,32,35,38]
+by performing
+10
+operations.
+In the third test, you can get the array
+a=[100000,80000,60000,40000,20000,0,−20000,−40000,−60000,−80000]
+by performing
+7
+operations.

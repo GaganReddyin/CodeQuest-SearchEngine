@@ -1,0 +1,38 @@
+D. Round Subset
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call the roundness of the number the number of zeros to which it ends.
+You have an array of n numbers. You need to choose a subset of exactly k numbers so that the roundness of the product of the selected numbers will be maximum possible.
+Input
+The first line contains two integer numbers n and k (1 ≤ n ≤ 200, 1 ≤ k ≤ n).
+The second line contains n space-separated integer numbers a1, a2, ..., an (1 ≤ ai ≤ 1018).
+Output
+Print maximal roundness of product of the chosen subset of length k.
+Examples
+input
+Copy
+3 2
+50 4 20
+output
+Copy
+3
+input
+Copy
+5 3
+15 16 3 25 9
+output
+Copy
+3
+input
+Copy
+3 3
+9 77 13
+output
+Copy
+0
+Note
+In the first example there are 3 subsets of 2 numbers. [50, 4] has product 200 with roundness 2, [4, 20] — product 80, roundness 1, [50, 20] — product 1000, roundness 3.
+In the second example subset [15, 16, 25] has product 6000, roundness 3.
+In the third example all subsets has product with roundness 0.

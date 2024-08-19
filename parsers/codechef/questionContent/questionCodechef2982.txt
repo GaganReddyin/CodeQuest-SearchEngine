@@ -1,0 +1,88 @@
+Flip to Invert
+Problem
+JJ has a binary string
+S of length
+N. JJ can perform the following operation on
+S:
+Select an
+i such that
+1≤i≤N, and flip
+S
+i
+(i.e. change
+0 to
+1 and
+1 to
+0)
+JJ wants to minimize the number of inversions in
+S by performing the above operation at most
+K times. Can you help JJ do so?
+Recall that a pair of indices
+(i,j) in
+S is called an inversion if
+i<j and
+S
+i
+>S
+j
+.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+K - the length of the binary string
+S and the maximum number of times JJ can perform the given operation.
+The second line of each test case contains a binary string
+S of length
+N containing
+0s and
+1s only.
+Output Format
+For each test case, output the minimum number of inversions possible after performing the given operation at most
+K times.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+0≤K≤N
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+8 3
+00010111
+5 1
+10100
+6 2
+111000
+0
+2
+3
+Explanation:
+Test case 1: We are allowed to perform at most
+3 operations. We can perform the following operation on
+S:
+0001
+0
+111→00011111 which has
+0 inversions. Therefore
+0 is the answer.
+Test case 2: We can perform the following operation on
+S:
+1
+0100→00100 which has
+2 inversions. It can be proven that this is the minimum number of inversions possible.
+Test case 3: We can perform the following operations on
+S:
+1110
+0
+0→11101
+0
+→111011 which has
+3 inversions. It can be proven that this is the minimum number of inversions possible.

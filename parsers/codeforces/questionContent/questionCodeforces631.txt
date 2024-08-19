@@ -1,0 +1,148 @@
+D. Edge Split
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a connected, undirected and unweighted graph with
+n
+vertices and
+m
+edges. Notice the limit on the number of edges:
+m≤n+2
+.
+Let's say we color some of the edges red and the remaining edges blue. Now consider only the red edges and count the number of connected components in the graph. Let this value be
+c
+1
+. Similarly, consider only the blue edges and count the number of connected components in the graph. Let this value be
+c
+2
+.
+Find an assignment of colors to the edges such that the quantity
+c
+1
++
+c
+2
+is minimised.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n≤2⋅
+10
+5
+;
+n−1≤m≤min(n+2,
+n⋅(n−1)
+2
+)
+) — the number of vertices and the number of edges respectively.
+m
+lines follow. The
+i
+-th line contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+) denoting that the
+i
+-th edge goes between vertices
+u
+i
+and
+v
+i
+. The input is guaranteed to have no multiple edges or self loops. The graph is also guaranteed to be connected.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+6
+. It is guaranteed that the sum of
+m
+over all test cases does not exceed
+2⋅
+10
+6
+.
+Output
+For each test case, output a binary string of length
+m
+. The
+i
+-th character of the string should be 1 if the
+i
+-th edge should be colored red, and 0 if it should be colored blue. If there are multiple ways to assign colors to edges that give the minimum answer, you may output any.
+Example
+input
+Copy
+4
+5 7
+1 2
+2 3
+3 4
+4 5
+5 1
+1 3
+3 5
+4 4
+1 2
+2 3
+1 4
+3 4
+6 7
+1 2
+1 3
+3 4
+4 5
+1 4
+5 6
+6 2
+2 1
+1 2
+output
+Copy
+0111010
+1001
+0001111
+0
+Note
+The corresponding graph of the first test case is:
+c
+1
++
+c
+2
+=1+2=3
+The corresponding graph of the second test case is:
+c
+1
++
+c
+2
+=2+2=4

@@ -1,0 +1,86 @@
+Body Mass Index
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Vietnamese, and Bengali as well.
+You are given the height
+H (in metres) and mass
+M (in kilograms) of Chef. The Body Mass Index (BMI) of a person is computed as
+H
+2
+M
+.
+Report the category into which Chef falls, based on his BMI:
+Category 1: Underweight if BMI
+≤18
+Category 2: Normal weight if BMI
+∈{19,
+20,
+…,
+24}
+Category 3: Overweight if BMI
+∈{25,
+26,
+…,
+29}
+Category 4: Obesity if BMI
+≥30
+###Input:
+The first line of input will contain an integer,
+T, which denotes the number of testcases. Then the testcases follow.
+Each testcase contains a single line of input, with two space separated integers,
+M,H, which denote the mass and height of Chef respectively.
+###Output: For each testcase, output in a single line,
+1,2,3 or
+4, based on the category in which Chef falls.
+###Constraints
+1≤T≤2∗10
+4
+1≤M≤10
+4
+1≤H≤10
+2
+Its guaranteed that
+H
+2
+divides
+M.
+Sample 1:
+Input
+Output
+3
+72 2
+80 2
+120 2
+1
+2
+4
+Explanation:
+Case 1: Since
+H
+2
+M
+=
+2
+2
+72
+=18, therefore person falls in category
+1.
+Case 2: Since
+H
+2
+M
+=
+2
+2
+80
+=20, therefore person falls in category
+2.
+Case 3: Since
+H
+2
+M
+=
+2
+2
+120
+=30, therefore person falls in category
+4.

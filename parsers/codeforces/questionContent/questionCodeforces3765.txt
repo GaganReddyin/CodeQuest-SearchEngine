@@ -1,0 +1,114 @@
+B. Mike and Children
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mike decided to teach programming to children in an elementary school. He knows that it is not an easy task to interest children in that age to code. That is why he decided to give each child two sweets.
+Mike has
+n
+sweets with sizes
+a
+1
+,
+a
+2
+,…,
+a
+n
+. All his sweets have different sizes. That is, there is no such pair
+(i,j)
+(
+1≤i,j≤n
+) such that
+i≠j
+and
+a
+i
+=
+a
+j
+.
+Since Mike has taught for many years, he knows that if he gives two sweets with sizes
+a
+i
+and
+a
+j
+to one child and
+a
+k
+and
+a
+p
+to another, where
+(
+a
+i
++
+a
+j
+)≠(
+a
+k
++
+a
+p
+)
+, then a child who has a smaller sum of sizes will be upset. That is, if there are two children who have different sums of sweets, then one of them will be upset. Apparently, Mike does not want somebody to be upset.
+Mike wants to invite children giving each of them two sweets. Obviously, he can't give one sweet to two or more children. His goal is to invite as many children as he can.
+Since Mike is busy preparing to his first lecture in the elementary school, he is asking you to find the maximum number of children he can invite giving each of them two sweets in such way that nobody will be upset.
+Input
+The first line contains one integer
+n
+(
+2≤n≤1000
+) — the number of sweets Mike has.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+5
+) — the sizes of the sweets. It is guaranteed that all integers are distinct.
+Output
+Print one integer — the maximum number of children Mike can invite giving each of them two sweets in such way that nobody will be upset.
+Examples
+input
+Copy
+8
+1 8 3 11 4 9 2 7
+output
+Copy
+3
+input
+Copy
+7
+3 1 7 11 9 2 12
+output
+Copy
+2
+Note
+In the first example, Mike can give
+9+2=11
+to one child,
+8+3=11
+to another one, and
+7+4=11
+to the third child. Therefore, Mike can invite three children. Note that it is not the only solution.
+In the second example, Mike can give
+3+9=12
+to one child and
+1+11
+to another one. Therefore, Mike can invite two children. Note that it is not the only solution.

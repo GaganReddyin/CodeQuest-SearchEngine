@@ -1,0 +1,179 @@
+Village Road Network
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+In the nation of Chefland there are villages at co-ordinates
+(x,y) whenever
+x and
+y are non-zero odd co-prime integers.
+x can be either positive or negative, but
+y is always positive.
+In each village
+(x,y) there is a crossroads, with the roads marked North, South, East, West.
+Road East leads to
+(x+2y,y).
+Road West leads to
+(x−2y,y).
+Road North leads to either
+(x,y+2x) or
+(−x,−(y+2x)), chosen so that the new
+y co-ordinate is positive.
+Road South leads to either
+(x,y−2x) or
+(−x,−(y−2x)), chosen so that the new
+y co-ordinate is positive.
+Some citizens of Chefland prefer these equivalent definitions for the North and South roads:
+Road North leads to
+{
+(x,y+2x)
+(−x,−(y+2x))
+when y+2x>0
+when y+2x<0
+Road South leads to
+{
+(x,y−2x)
+(−x,−(y−2x))
+when y−2x>0
+when y−2x<0
+The cost to travel a road between two adjacent villages is 1 pound. Determine the minimum cost to travel between villages at
+(x
+1
+,y
+1
+) and
+(x
+2
+,y
+2
+).
+Notes:
+The road network is defined so that the villages form an undirected graph.
+There are two roads joining
+(−1,1) and
+(1,1), but otherwise there is a single road between any adjacent pair of villages.
+The road network does not form a simple grid - that would be too easy!
+###Input:
+First line will contain
+T, the number of testcases. Then the testcases follow.
+Each testcase contains a single line of input, which has four integers
+x
+1
+,y
+1
+,x
+2
+,y
+2
+.
+###Output: For each testcase, output in a single line, the answer. That is, the minimum cost in pounds to travel from
+(x
+1
+,y
+1
+) to
+(x
+2
+,y
+2
+).
+###Constraints
+T≤1000
+The co-ordinates
+(x
+1
+,y
+1
+) and
+(x
+2
+,y
+2
+) of the villages satisfy
+−10
+15
+<x
+1
+,x
+2
+<10
+15
+and
+0<y
+1
+,y
+2
+<10
+15
+###Subtasks
+10 points :
+−10<x
+1
+,x
+2
+<10 and
+0<y
+1
+,y
+2
+<10
+10 points : original constraints, but the villages are selected so that the minimum cost for each testcase is
+<6
+30 points:
+−10
+6
+<x
+1
+,x
+2
+<10
+6
+and
+0<y
+1
+,y
+2
+<10
+6
+50 points: original constraints
+Sample 1:
+Input
+Output
+5
+7 5 7 5
+1 1 -1 1
+3 7 5 9
+113 167 361765 170831
+24844359 74532371 14673633991 3057007029
+0
+1
+6
+78
+278031
+Explanation:
+In the first test case, the start and end village co-ordinates are both
+(7,5), so the cost is 0.
+In the second test case:
+From
+(1,1) go West to
+(−1,1) in one step. So the cost is 1.
+Note that the South road from
+(1,1) also goes to
+(−1,1).
+In the third test case:
+From
+(3,7) go South to
+(3,1).
+From
+(3,1) go West to
+(1,1).
+From
+(1,1) go West to
+(−1,1).
+From
+(−1,1) go West to
+(−3,1).
+From
+(−3,1) go West to
+(−5,1).
+From
+(−5,1) go North to
+(5,9).

@@ -1,0 +1,83 @@
+Expected GCD
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef loves to make dishes. Currently, he has
+N ingredients (numbered
+1 through
+N) which he can use to cook various dishes.
+To make a dish, Chef must use exactly
+K ingredients in a correct order. Therefore, a dish is a sequence of
+K distinct integers between
+1 and
+N. The tastiness of that dish is defined as the GCD of these integers (all the ingredients in that dish). Chef wants to choose a dish uniformly randomly and cook it.
+You should answer
+Q queries.
+K is the same for all queries. In each query, you are given
+N and you should find the expected value of the tastiness of Chef's dish or determine that Chef cannot cook any dish.
+If Chef can cook at least one dish, it can be proven that this expected value is a fraction in the form
+P/D, where
+P and
+D are coprime positive integers and
+D is coprime with
+10
+9
++7. You should compute
+P⋅D
+−1
+modulo
+10
+9
++7, where
+D
+−1
+denotes the multiplicative inverse of
+D modulo
+10
+9
++7.
+Input
+The first line of the input contains two space-separated integers
+Q and
+K.
+Each of the next
+Q lines contains a single integer
+N describing a query.
+Output
+For each query, print a single line containing one integer ―
+P⋅D
+−1
+modulo
+10
+9
++7, or
+0 if Chef cannot cook any dish.
+Constraints
+1≤Q,N≤2⋅10
+5
+2≤K≤10
+5
+Subtasks
+Subtask #1 (10 points):
+K=2
+1≤N≤1,000
+Subtask #2 (15 points):
+K=2
+Subtask #3 (75 points): original constraints
+Sample 1:
+Input
+Output
+3 2
+1
+2
+4
+0
+1
+166666669
+Explanation:
+In the first query, it is impossible to cook a dish with two ingredients if
+N=1.
+In the second query, Chef can cook two dishes:
+(1,2) and
+(2,1). The tastiness of each of these dishes is
+1, so the expected value of tastiness is
+1.

@@ -1,0 +1,78 @@
+Add smallest prime factor
+Problem
+Chef's current score is
+X. Each second, Chef will find the smallest prime factor of his score and add it to his score.
+Determine the minimum time in seconds, after which his score becomes
+≥Y.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line containing two integers
+X and
+Y, the initial and required score of Chef.
+Output Format
+For each test case, output the minimum time in seconds, after which Chef's score becomes
+≥Y.
+Constraints
+1≤T≤1000
+2≤X≤10
+20≤Y≤10
+9
+Sample 1:
+Input
+Output
+4
+2 23
+9 20
+5 100
+6 89
+11
+5
+46
+42
+Explanation:
+Test case
+1: The initial score is
+2. Chef needs the score to be at least
+23.
+The smallest prime factor of
+2 is
+2. Thus, the score increase to
+2+2=4.
+The smallest prime factor of
+4 is
+2. Thus, the score increase to
+4+2=6.
+Similarly, each time the score would be increased by
+2. Thus, after
+11 seconds, the score becomes
+24, which is
+≥23.
+Test case
+2: The initial score is
+9. Chef needs the score to be at least
+20.
+The smallest prime factor of
+9 is
+3. Thus, the score increase to
+9+3=12.
+The smallest prime factor of
+12 is
+2. Thus, the score increase to
+12+2=14.
+The smallest prime factor of
+14 is
+2. Thus, the score increase to
+14+2=16.
+The smallest prime factor of
+16 is
+2. Thus, the score increase to
+16+2=18.
+The smallest prime factor of
+18 is
+2. Thus, the score increase to
+18+2=20.
+Thus, after
+5 seconds, the score becomes
+20, which is
+≥20.

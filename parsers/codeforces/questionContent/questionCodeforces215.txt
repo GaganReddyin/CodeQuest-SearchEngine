@@ -1,0 +1,209 @@
+C. Scoring Subsequences
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The score of a sequence
+[
+s
+1
+,
+s
+2
+,…,
+s
+d
+]
+is defined as
+s
+1
+⋅
+s
+2
+⋅…⋅
+s
+d
+d!
+, where
+d!=1⋅2⋅…⋅d
+. In particular, the score of an empty sequence is
+1
+.
+For a sequence
+[
+s
+1
+,
+s
+2
+,…,
+s
+d
+]
+, let
+m
+be the maximum score among all its subsequences. Its cost is defined as the maximum length of a subsequence with a score of
+m
+.
+You are given a non-decreasing sequence
+[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+of integers of length
+n
+. In other words, the condition
+a
+1
+≤
+a
+2
+≤…≤
+a
+n
+is satisfied. For each
+k=1,2,…,n
+, find the cost of the sequence
+[
+a
+1
+,
+a
+2
+,…,
+a
+k
+]
+.
+A sequence
+x
+is a subsequence of a sequence
+y
+if
+x
+can be obtained from
+y
+by deletion of several (possibly, zero or all) elements.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the given sequence.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — the given sequence. It is guaranteed that its elements are in non-decreasing order.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+5⋅
+10
+5
+.
+Output
+For each test case, output
+n
+integers — the costs of sequences
+[
+a
+1
+,
+a
+2
+,…,
+a
+k
+]
+in ascending order of
+k
+.
+Example
+input
+Copy
+3
+3
+1 2 3
+2
+1 1
+5
+5 5 5 5 5
+output
+Copy
+1 1 2 
+1 1 
+1 2 3 4 5 
+Note
+In the first test case:
+The maximum score among the subsequences of
+[1]
+is
+1
+. The subsequences
+[1]
+and
+[]
+(the empty sequence) are the only ones with this score. Thus, the cost of
+[1]
+is
+1
+.
+The maximum score among the subsequences of
+[1,2]
+is
+2
+. The only subsequence with this score is
+[2]
+. Thus, the cost of
+[1,2]
+is
+1
+.
+The maximum score among the subsequences of
+[1,2,3]
+is
+3
+. The subsequences
+[2,3]
+and
+[3]
+are the only ones with this score. Thus, the cost of
+[1,2,3]
+is
+2
+.
+Therefore, the answer to this case is
+112
+, which are the costs of
+[1],[1,2]
+and
+[1,2,3]
+in this order.

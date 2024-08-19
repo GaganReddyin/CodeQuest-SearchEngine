@@ -1,0 +1,177 @@
+E. Make It Connected
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a simple undirected graph consisting of
+n
+vertices. The graph doesn't contain self-loops, there is at most one edge between each pair of vertices. Your task is simple: make the graph connected.
+You can do the following operation any number of times (possibly zero):
+Choose a vertex
+u
+arbitrarily.
+For each vertex
+v
+satisfying
+v≠u
+in the graph individually, if
+v
+is adjacent to
+u
+, remove the edge between
+u
+and
+v
+, otherwise add an edge between
+u
+and
+v
+.
+Find the minimum number of operations required to make the graph connected. Also, find any sequence of operations with the minimum length that makes the graph connected.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤800
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+2≤n≤4000
+) — the number of vertices in the graph.
+Then
+n
+lines follow. The
+i
+-th row contains a binary string
+s
+i
+of length
+n
+, where
+s
+i,j
+is '1' if there is an edge between vertex
+i
+and
+j
+initially, otherwise
+s
+i,j
+is '0'.
+It is guaranteed that
+s
+i,i
+is always '0' and
+s
+i,j
+=
+s
+j,i
+for
+1≤i,j≤n
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+4000
+.
+Output
+For each test case, in the first line, output an integer
+m
+ — the minimum number of operations required.
+If
+m
+is greater than zero, then print an extra line consisting of
+m
+integers — the vertices chosen in the operations in your solution. If there are multiple solutions with the minimum number of operations, print any.
+Example
+input
+Copy
+4
+3
+011
+100
+100
+3
+000
+001
+010
+4
+0100
+1000
+0001
+0010
+6
+001100
+000011
+100100
+101000
+010001
+010010
+output
+Copy
+0
+1
+1
+2
+3 4 
+3
+2 5 6 
+Note
+In the first test case, the graph is connected at the beginning, so the answer is
+0
+.
+In the second test case, if we do the operation with vertex
+1
+, we will get the following graph represented by an adjacency matrix:
+⎡
+⎣
+⎢
+0
+1
+1
+1
+0
+1
+1
+1
+0
+⎤
+⎦
+⎥
+It's obvious that the graph above is connected.
+In the third test case, if we do the operation with vertex
+3
+and
+4
+, we will get the following graph represented by an adjacency matrix:
+⎡
+⎣
+⎢
+⎢
+⎢
+0
+1
+1
+1
+1
+0
+1
+1
+1
+1
+0
+1
+1
+1
+1
+0
+⎤
+⎦
+⎥
+⎥
+⎥
+It's obvious that the graph above is connected, and it can be proven that we can't perform less than
+2
+operations to make the graph connected.

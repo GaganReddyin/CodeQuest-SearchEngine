@@ -1,0 +1,45 @@
+Almost Palindromic
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+A string is almost palindromic if we can rearrange its characters in such a way that it becomes a palindrome. A positive integer is almost palindromic if its decimal representation without leading zeros is an almost palindromic string.
+You are given two integers
+L and
+R. Find the number of almost palindromic integers between
+L and
+R (inclusive). Since this number could be very large, compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+L and
+R (without leading zeros).
+Output
+For each test case, print a single line containing one integer — the number of almost palindromic integers modulo
+10
+9
++7.
+Constraints
+1≤T≤100
+1≤L≤R<10
+10
+6
+the sum of lengths of
+R over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+4
+1 10
+1 100
+1 2020
+123456789 1000000000
+9
+19
+300
+40137232

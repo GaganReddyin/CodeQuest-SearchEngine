@@ -1,0 +1,220 @@
+B. Berland Music
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Berland Music is a music streaming service built specifically to support Berland local artist. Its developers are currently working on a song recommendation module.
+So imagine Monocarp got recommended
+n
+songs, numbered from
+1
+to
+n
+. The
+i
+-th song had its predicted rating equal to
+p
+i
+, where
+1≤
+p
+i
+≤n
+and every integer from
+1
+to
+n
+appears exactly once. In other words,
+p
+is a permutation.
+After listening to each of them, Monocarp pressed either a like or a dislike button. Let his vote sequence be represented with a string
+s
+, such that
+s
+i
+=0
+means that he disliked the
+i
+-th song, and
+s
+i
+=1
+means that he liked it.
+Now the service has to re-evaluate the song ratings in such a way that:
+the new ratings
+q
+1
+,
+q
+2
+,…,
+q
+n
+still form a permutation (
+1≤
+q
+i
+≤n
+; each integer from
+1
+to
+n
+appears exactly once);
+every song that Monocarp liked should have a greater rating than every song that Monocarp disliked (formally, for all
+i,j
+such that
+s
+i
+=1
+and
+s
+j
+=0
+,
+q
+i
+>
+q
+j
+should hold).
+Among all valid permutations
+q
+find the one that has the smallest value of
+∑
+i=1
+n
+|
+p
+i
+−
+q
+i
+|
+, where
+|x|
+is an absolute value of
+x
+.
+Print the permutation
+q
+1
+,
+q
+2
+,…,
+q
+n
+. If there are multiple answers, you can print any of them.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of songs.
+The second line of each testcase contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the permutation of the predicted ratings.
+The third line contains a single string
+s
+, consisting of
+n
+characters. Each character is either a
+0
+or a
+1
+.
+0
+means that Monocarp disliked the song, and
+1
+means that he liked it.
+The sum of
+n
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a permutation
+q
+ — the re-evaluated ratings of the songs. If there are multiple answers such that
+∑
+i=1
+n
+|
+p
+i
+−
+q
+i
+|
+is minimum possible, you can print any of them.
+Example
+input
+Copy
+3
+2
+1 2
+10
+3
+3 1 2
+111
+8
+2 3 1 8 5 4 7 6
+01110001
+output
+Copy
+2 1
+3 1 2
+1 6 5 8 3 2 4 7
+Note
+In the first testcase, there exists only one permutation
+q
+such that each liked song is rating higher than each disliked song: song
+1
+gets rating
+2
+and song
+2
+gets rating
+1
+.
+∑
+i=1
+n
+|
+p
+i
+−
+q
+i
+|=|1−2|+|2−1|=2
+.
+In the second testcase, Monocarp liked all songs, so all permutations could work. The permutation with the minimum sum of absolute differences is the permutation equal to
+p
+. Its cost is
+0
+.

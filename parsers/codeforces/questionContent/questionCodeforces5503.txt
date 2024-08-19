@@ -1,0 +1,80 @@
+D. Recover a functional graph
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Functional graph is a directed graph in which all vertices have outdegree equal to 1. Loops are allowed.
+Some vertices of a functional graph lay on a cycle. From the others we can come to a cycle by making a finite number of steps along the edges (we consider only finite functional graphs in this problem).
+Let's compute two values for each vertex. precyclei is the amount of edges we should pass to get to a vertex which is a part of some cycle (zero, if i itself lies on a cycle), cyclei is the length of the cycle we get to.
+You are given the information about these values for some functional graph. For each vertex you know the values precyclei and cyclei, however, instead of some values there can be the question mark. It means that these values are unknown.
+Build any functional graph that suits the description or determine that there is no such graph.
+Input
+The first line contains single integer n (1 ≤ n ≤ 300) — the number of vertices in the graph.
+Each of the next n lines contain two integers — precyclei (0 ≤ precyclei ≤ n - 1) and cyclei (1 ≤ cyclei ≤ n). There could be question marks instead of some of these values.
+Output
+In case there is no solution, print -1.
+Otherwise, print n integers. i-th of them is the number of vertex to which the edge form the i-th vertex go.
+The vertices should be in the same order as they go in input data.
+If there are multiple solutions, print any of them.
+Examples
+input
+Copy
+3
+0 3
+0 3
+? ?
+output
+Copy
+2 3 1 
+input
+Copy
+5
+3 2
+? ?
+? ?
+? ?
+? ?
+output
+Copy
+5 3 2 2 4 
+input
+Copy
+8
+? 3
+? ?
+0 2
+0 2
+0 3
+0 3
+0 3
+3 3
+output
+Copy
+5 1 4 3 6 7 5 2 
+input
+Copy
+1
+? ?
+output
+Copy
+1 
+input
+Copy
+6
+0 3
+0 3
+0 3
+0 3
+0 3
+0 3
+output
+Copy
+2 3 1 5 6 4 
+input
+Copy
+2
+1 1
+1 1
+output
+Copy
+-1

@@ -1,0 +1,33 @@
+A. Uncowed Forces
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Kevin Sun has just finished competing in Codeforces Round #334! The round was 120 minutes long and featured five problems with maximum point values of 500, 1000, 1500, 2000, and 2500, respectively. Despite the challenging tasks, Kevin was uncowed and bulldozed through all of them, distinguishing himself from the herd as the best cowmputer scientist in all of Bovinia. Kevin knows his submission time for each problem, the number of wrong submissions that he made on each problem, and his total numbers of successful and unsuccessful hacks. Because Codeforces scoring is complicated, Kevin wants you to write a program to compute his final score.
+Codeforces scores are computed as follows: If the maximum point value of a problem is x, and Kevin submitted correctly at minute m but made w wrong submissions, then his score on that problem is . His total score is equal to the sum of his scores for each problem. In addition, Kevin's total score gets increased by 100 points for each successful hack, but gets decreased by 50 points for each unsuccessful hack.
+All arithmetic operations are performed with absolute precision and no rounding. It is guaranteed that Kevin's final score is an integer.
+Input
+The first line of the input contains five space-separated integers m1, m2, m3, m4, m5, where mi (0 ≤ mi ≤ 119) is the time of Kevin's last submission for problem i. His last submission is always correct and gets accepted.
+The second line contains five space-separated integers w1, w2, w3, w4, w5, where wi (0 ≤ wi ≤ 10) is Kevin's number of wrong submissions on problem i.
+The last line contains two space-separated integers hs and hu (0 ≤ hs, hu ≤ 20), denoting the Kevin's numbers of successful and unsuccessful hacks, respectively.
+Output
+Print a single integer, the value of Kevin's final score.
+Examples
+input
+Copy
+20 40 60 80 100
+0 1 2 3 4
+1 0
+output
+Copy
+4900
+input
+Copy
+119 119 119 119 119
+0 0 0 0 0
+10 0
+output
+Copy
+4930
+Note
+In the second sample, Kevin takes 119 minutes on all of the problems. Therefore, he gets of the points on each problem. So his score from solving problems is . Adding in 10·100 = 1000 points from hacks, his total score becomes 3930 + 1000 = 4930.

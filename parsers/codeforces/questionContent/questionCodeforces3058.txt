@@ -1,0 +1,332 @@
+D. Decreasing Debts
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+people in this world, conveniently numbered
+1
+through
+n
+. They are using burles to buy goods and services. Occasionally, a person might not have enough currency to buy what he wants or needs, so he borrows money from someone else, with the idea that he will repay the loan later with interest. Let
+d(a,b)
+denote the debt of
+a
+towards
+b
+, or
+0
+if there is no such debt.
+Sometimes, this becomes very complex, as the person lending money can run into financial troubles before his debtor is able to repay his debt, and finds himself in the need of borrowing money.
+When this process runs for a long enough time, it might happen that there are so many debts that they can be consolidated. There are two ways this can be done:
+Let
+d(a,b)>0
+and
+d(c,d)>0
+such that
+a≠c
+or
+b≠d
+. We can decrease the
+d(a,b)
+and
+d(c,d)
+by 
+z
+and increase
+d(c,b)
+and
+d(a,d)
+by 
+z
+, where
+0<z≤min(d(a,b),d(c,d))
+.
+Let
+d(a,a)>0
+. We can set
+d(a,a)
+to
+0
+.
+The total debt is defined as the sum of all debts:
+Σ
+d
+=
+∑
+a,b
+d(a,b)
+Σ
+∑
+d
+(
+b
+)
+Your goal is to use the above rules in any order any number of times, to make the total debt as small as possible. Note that you don't have to minimise the number of non-zero debts, only the total debt.
+Input
+The first line contains two space separated integers
+n
+ (
+1≤n≤
+10
+5
+) and
+m
+ (
+0≤m≤3⋅
+10
+5
+), representing the number of people and the number of debts, respectively.
+m
+lines follow, each of which contains three space separated integers
+u
+i
+,
+v
+i
+ (
+1≤
+u
+i
+,
+v
+i
+≤n,
+u
+i
+≠
+v
+i
+),
+d
+i
+ (
+1≤
+d
+i
+≤
+10
+9
+), meaning that the person
+u
+i
+borrowed
+d
+i
+burles from person
+v
+i
+.
+Output
+On the first line print an integer
+m
+′
+ (
+0≤
+m
+′
+≤3⋅
+10
+5
+), representing the number of debts after the consolidation. It can be shown that an answer always exists with this additional constraint.
+After that print
+m
+′
+lines,
+i
+-th of which contains three space separated integers
+u
+i
+,
+v
+i
+,
+d
+i
+, meaning that the person
+u
+i
+owes the person
+v
+i
+exactly
+d
+i
+burles. The output must satisfy
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+and
+0<
+d
+i
+≤
+10
+18
+.
+For each pair
+i≠j
+, it should hold that
+u
+i
+≠
+u
+j
+or
+v
+i
+≠
+v
+j
+. In other words, each pair of people can be included at most once in the output.
+Examples
+input
+Copy
+3 2
+1 2 10
+2 3 5
+output
+Copy
+2
+1 2 5
+1 3 5
+input
+Copy
+3 3
+1 2 10
+2 3 15
+3 1 10
+output
+Copy
+1
+2 3 5
+input
+Copy
+4 2
+1 2 12
+3 4 8
+output
+Copy
+2
+1 2 12
+3 4 8
+input
+Copy
+3 4
+2 3 1
+2 3 2
+2 3 4
+2 3 8
+output
+Copy
+1
+2 3 15
+Note
+In the first example the optimal sequence of operations can be the following:
+Perform an operation of the first type with
+a=1
+,
+b=2
+,
+c=2
+,
+d=3
+and
+z=5
+. The resulting debts are:
+d(1,2)=5
+,
+d(2,2)=5
+,
+d(1,3)=5
+, all other debts are
+0
+;
+Perform an operation of the second type with
+a=2
+. The resulting debts are:
+d(1,2)=5
+,
+d(1,3)=5
+, all other debts are
+0
+.
+In the second example the optimal sequence of operations can be the following:
+Perform an operation of the first type with
+a=1
+,
+b=2
+,
+c=3
+,
+d=1
+and
+z=10
+. The resulting debts are:
+d(3,2)=10
+,
+d(2,3)=15
+,
+d(1,1)=10
+, all other debts are
+0
+;
+Perform an operation of the first type with
+a=2
+,
+b=3
+,
+c=3
+,
+d=2
+and
+z=10
+. The resulting debts are:
+d(2,2)=10
+,
+d(3,3)=10
+,
+d(2,3)=5
+,
+d(1,1)=10
+, all other debts are
+0
+;
+Perform an operation of the second type with
+a=2
+. The resulting debts are:
+d(3,3)=10
+,
+d(2,3)=5
+,
+d(1,1)=10
+, all other debts are
+0
+;
+Perform an operation of the second type with
+a=3
+. The resulting debts are:
+d(2,3)=5
+,
+d(1,1)=10
+, all other debts are
+0
+;
+Perform an operation of the second type with
+a=1
+. The resulting debts are:
+d(2,3)=5
+, all other debts are
+0
+.

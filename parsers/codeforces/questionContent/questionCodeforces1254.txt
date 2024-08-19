@@ -1,0 +1,115 @@
+B. Mirror in the String
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a string
+s
+1
+s
+2
+…
+s
+n
+and you stand on the left of the string looking right. You want to choose an index
+k
+(
+1≤k≤n
+) and place a mirror after the
+k
+-th letter, so that what you see is
+s
+1
+s
+2
+…
+s
+k
+s
+k
+s
+k−1
+…
+s
+1
+. What is the lexicographically smallest string you can see?
+A string
+a
+is lexicographically smaller than a string
+b
+if and only if one of the following holds:
+a
+is a prefix of
+b
+, but
+a≠b
+;
+in the first position where
+a
+and
+b
+differ, the string
+a
+has a letter that appears earlier in the alphabet than the corresponding letter in
+b
+.
+Input
+The first line of input contains one integer
+t
+(
+1≤t≤10000
+): the number of test cases.
+The next
+t
+lines contain the description of the test cases, two lines per a test case.
+In the first line you are given one integer
+n
+(
+1≤n≤
+10
+5
+): the length of the string.
+The second line contains the string
+s
+consisting of
+n
+lowercase English characters.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case print the lexicographically smallest string you can see.
+Example
+input
+Copy
+4
+10
+codeforces
+9
+cbacbacba
+3
+aaa
+4
+bbaa
+output
+Copy
+cc
+cbaabc
+aa
+bb
+Note
+In the first test case choose
+k=1
+to obtain "cc".
+In the second test case choose
+k=3
+to obtain "cbaabc".
+In the third test case choose
+k=1
+to obtain "aa".
+In the fourth test case choose
+k=1
+to obtain "bb".

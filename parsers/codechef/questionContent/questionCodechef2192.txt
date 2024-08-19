@@ -1,0 +1,70 @@
+Remove Balance
+Problem
+A string consisting only of parentheses
+( and
+) is called a parentheses string. The balanced parentheses strings are defined recursively as follows:
+An empty string is a balanced parentheses string.
+If
+s is a balanced parentheses string, then
+(s) is also a balanced parentheses string.
+If
+s and
+t are balanced parentheses strings, then
+st (concatenation of
+s and
+t) is also a balanced parentheses string.
+For a parentheses string, an operation on this string is defined as follows:
+Choose any substring of this string which is balanced.
+Remove this substring and concatenate the remaining parts.
+Given a parentheses string
+S, find the minimum length of the string one can get by applying the above operation any number of times. Also find the minimum number of operations required to achieve this minimum length.
+Input Format
+The first line of the input contains
+T, the number of test cases. Then the test cases follow.
+Each test case contains string
+S in a single line, which consists only of the characters
+( and
+).
+Output Format
+For each test case, in a single line output the minimum length of the string we can get by applying the given operation any number of times and the minimum number of operations required to achieve this minimum length separated by a single space.
+Constraints
+1≤T≤10
+6
+1≤∣S∣≤2⋅10
+6
+Sum of
+∣S∣ over all test cases does not exceed
+2⋅10
+6
+.
+Sample 1:
+Input
+Output
+3
+(())
+)()(
+()(()
+0 1
+2 1
+1 2
+Explanation:
+Test Case
+1: The given string is balanced and hence we can choose the whole string for the operation and remove it. So, the minimum length of the string we can achieve is equal to
+0 and it requires a minimum of
+1 operation to achieve this.
+Test Case
+2: The only non-empty balanced substring of
+)()( is
+(). By applying the operation once, the string changes to
+)(. This string has no non-empty balanced substring. Therefore, the minimum length of the string we can achieve is equal to
+2 and it requires a minimum of
+1 operation to achieve this.
+Test Case
+3: Apply the operation on the string
+S=()(() by removing the substring
+S[1,2]=() to get
+((). Now, apply the operation by removing the substring
+() to get
+(. Therefore, the minimum length of the string we can achieve is equal to
+1 and it requires a minimum of
+2 operations to achieve this.

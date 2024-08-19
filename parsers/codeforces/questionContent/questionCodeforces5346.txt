@@ -1,0 +1,43 @@
+F. Test Data Generation
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Test data generation is not an easy task! Often, generating big random test cases is not enough to ensure thorough testing of solutions for correctness.
+For example, consider a problem from an old Codeforces round. Its input format looks roughly as follows:
+The first line contains a single integer n (1 ≤ n ≤ maxn) — the size of the set. The second line contains n distinct integers a1, a2, ..., an (1 ≤ ai ≤ maxa) — the elements of the set in increasing order.
+If you don't pay attention to the problem solution, it looks fairly easy to generate a good test case for this problem. Let n = maxn, take random distinct ai from 1 to maxa, sort them... Soon you understand that it's not that easy.
+Here is the actual problem solution. Let g be the greatest common divisor of a1, a2, ..., an. Let x = an / g - n. Then the correct solution outputs "Alice" if x is odd, and "Bob" if x is even.
+Consider two wrong solutions to this problem which differ from the correct one only in the formula for calculating x.
+The first wrong solution calculates x as x = an / g (without subtracting n).
+The second wrong solution calculates x as x = an - n (without dividing by g).
+A test case is interesting if it makes both wrong solutions output an incorrect answer.
+Given maxn, maxa and q, find the number of interesting test cases satisfying the constraints, and output it modulo q.
+Input
+The only line contains three integers maxn, maxa and q (1 ≤ maxn ≤ 30 000; maxn ≤ maxa ≤ 109; 104 ≤ q ≤ 105 + 129).
+Output
+Output a single integer — the number of test cases which satisfy the constraints and make both wrong solutions output an incorrect answer, modulo q.
+Examples
+input
+Copy
+3 6 100000
+output
+Copy
+4
+input
+Copy
+6 21 100129
+output
+Copy
+154
+input
+Copy
+58 787788 50216
+output
+Copy
+46009
+Note
+In the first example, interesting test cases look as follows:
+
+1              1              1              3
+2              4              6              2 4 6

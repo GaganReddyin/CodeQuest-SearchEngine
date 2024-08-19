@@ -1,0 +1,25 @@
+Chef and Subsequences
+Problem
+Read problems statements in mandarin chinese, russian and vietnamese as well.
+Though our Head Chef retired from sport programming long back, but that did not affect his passion to contribute to the programming community. He still remains engaged by creating new problems and passing it on to the online judges. Last Night, he thought of a following problem for which he could not figure out a solution. You being his friend from the older days of programming decide to help him.
+Find the number of non-empty subsequences in the given list of N integers such that the product of the values in the subsequences does not exceed K
+Input
+First line of the input will contain two space separated integers N and K. Next and last line of the input contains N space separated integers
+Output
+Print the answer to the given test case in a separate line.
+Constraints
+1 ≤ N ≤ 30
+1 ≤ K, Ai ≤ 10^18
+Subtasks
+Subtask #1 : (30 points)
+1 ≤ N ≤ 10
+Subtask #2 : (70 points)
+1 ≤ N ≤ 30
+Sample 1:
+Input
+Output
+3 4
+1 2 3
+5
+Explanation:
+For the given sample case, there are 7 non-empty subsequences out of which 2 have their product > 4. Those include {2, 3} and {1, 2, 3}. Hence, the answer is 7 - 2 = 5.

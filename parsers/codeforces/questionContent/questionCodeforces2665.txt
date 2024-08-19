@@ -1,0 +1,193 @@
+H. Game with Segments
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Alice and Bob are playing a game (yet again).
+They have two sequences of segments of the coordinate axis: a sequence of
+n
+initial segments:
+[
+l
+1
+,
+r
+1
+]
+,
+[
+l
+2
+,
+r
+2
+]
+, ...,
+[
+l
+n
+,
+r
+n
+]
+, and a sequence of
+m
+terminal segments:
+[
+L
+1
+,
+R
+1
+]
+,
+[
+L
+2
+,
+R
+2
+]
+, ...,
+[
+L
+m
+,
+R
+m
+]
+. At the beginning of the game, they choose one of the initial segments and set it as the current segment.
+Alice and Bob make alternating moves: Alice makes the first move, Bob makes the second move, Alice makes the third one, and so on. During each move, the current player must shrink the current segment either by increasing its left endpoint by
+1
+, or by decreasing its right endpoint by
+1
+. So, if the current segment is
+[
+c
+l
+,
+c
+r
+]
+, it becomes either
+[
+c
+l
++1,
+c
+r
+]
+, or
+[
+c
+l
+,
+c
+r
+−1]
+.
+If at the beginning of the game or after Bob's move the current segment coincides with one of the terminal segments, Bob wins. If the current segment becomes degenerate (
+c
+l
+=
+c
+r
+), and Bob hasn't won yet, Alice wins. If the current segment coincides with one of the terminal segments after Alice's move, nothing happens — the game continues.
+Both players play optimally — if they can win, they always use a strategy that leads them to victory in the minimum number of turns, and if they cannot win, they try to prolong the game, using the strategy allowing them to make the maximum possible number of moves until their defeat.
+For each of the initial segments you have to determine who will win the game if this segment is chosen as the current segment at the beginning of the game. If Bob wins, you also have to calculate the number of moves Alice will make before her defeat.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+) — the number of initial segments and terminal segments, respectively.
+Then
+n
+lines follow, the
+i
+-th line contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+<
+r
+i
+≤
+10
+6
+) — the endpoints of the
+i
+-th initial segment.
+Then
+m
+lines follow, the
+i
+-th line contains two integers
+L
+i
+and
+R
+i
+(
+1≤
+L
+i
+<
+R
+i
+≤
+10
+6
+) — the endpoints of the
+i
+-th terminal segment.
+Note that some of the segments given in the input may coincide.
+Output
+Print
+n
+integers, the
+i
+-th of them should describe the result of the game if the
+i
+-th initial segment is chosen at the beginning of the game:
+if Alice wins, print
+−1
+;
+if Bob wins, print the number of moves Alice will make before she is defeated.
+Examples
+input
+Copy
+1 1
+4 7
+4 7
+output
+Copy
+0
+input
+Copy
+1 2
+2 5
+2 4
+3 5
+output
+Copy
+-1
+input
+Copy
+2 1
+1 5
+1 4
+2 3
+output
+Copy
+-1 1

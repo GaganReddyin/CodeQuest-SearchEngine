@@ -1,0 +1,29 @@
+A. Johny Likes Numbers
+time limit per test0.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Johny likes numbers n and k very much. Now Johny wants to find the smallest integer x greater than n, so it is divisible by the number k.
+Input
+The only line contains two integers n and k (1 ≤ n, k ≤ 109).
+Output
+Print the smallest integer x > n, so it is divisible by the number k.
+Examples
+input
+Copy
+5 3
+output
+Copy
+6
+input
+Copy
+25 13
+output
+Copy
+26
+input
+Copy
+26 13
+output
+Copy
+39

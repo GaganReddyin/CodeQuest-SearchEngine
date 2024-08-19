@@ -1,0 +1,59 @@
+Binary String MEX
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a binary string
+S. Chef defines
+MEX(S) as the smallest non-negative integer such that its binary representation (without leading '0'-s; in particular, the binary representation of
+0 is "0") is not a subsequence of
+S.
+Chef is asking you to find
+MEX(S). Since this integer could be very large, find its binary representation (without leading '0'-s).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single string
+S.
+Output
+For each test case, print a single line containing one string:
+MEX(S) in binary representation.
+Constraints
+1≤T≤10
+5
+1≤∣S∣≤10
+6
+S contains only characters '0' and '1'
+the sum of
+∣S∣ over all test cases does not exceed
+2⋅10
+6
+Subtasks
+Subtask #1 (20 points):
+1≤T≤2⋅10
+3
+∣S∣≤10
+Subtask #2 (20 points):
+1≤T≤10
+5
+∣S∣≤60
+Subtask #2 (60 points):
+original constraints
+Sample 1:
+Input
+Output
+2
+1001011
+1111
+1100
+0
+Explanation:
+Example case 1: All integers between
+0 and
+11 inclusive, in binary representation, appear in
+S as subsequences. However, the binary representation of
+12 (which is "1100") is not a subsequence of
+S.
+Example case 2: Since
+S contains only '1'-s, the string "0" is not a subsequence of
+S and therefore
+MEX(S)=0.

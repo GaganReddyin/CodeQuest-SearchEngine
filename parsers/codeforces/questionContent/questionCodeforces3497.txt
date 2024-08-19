@@ -1,0 +1,100 @@
+E1. A Story of One Country (Easy)
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This problem differs from the next problem only in constraints.
+Petya decided to visit Byteland during the summer holidays. It turned out that the history of this country is quite unusual.
+Initially, there were
+n
+different countries on the land that is now Berland. Each country had its own territory that was represented as a rectangle on the map. The sides of the rectangle were parallel to the axes, and the corners were located at points with integer coordinates. Territories of no two countries intersected, but it was possible that some territories touched each other. As time passed, sometimes two countries merged into one. It only happened if the union of their territories was also a rectangle. In the end only one country remained — Byteland.
+Initially, each country had a rectangular castle inside its territory. Its sides were parallel to the axes and its corners had integer coordinates. Some castles might touch the border of the corresponding country and sides or other castles. Miraculously, after all the unions the castles are still intact. Unfortunately, their locations are the only information we have to restore the initial territories of the countries.
+The possible formation of Byteland. The castles are shown in blue.
+Petya wonders why no information about the initial countries remained. He suspected that the whole story is a fake. You were recommended to him as a smart person. Please check whether or not there exists a possible set of initial territories that could make the story true.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤1000
+) — the number of countries and castles.
+Each of the next
+n
+lines contains four integers
+a
+i
+,
+b
+i
+,
+c
+i
+,
+d
+i
+(
+0≤
+a
+i
+<
+c
+i
+≤
+10
+9
+,
+0≤
+b
+i
+<
+d
+i
+≤
+10
+9
+) — the coordinates of the
+i
+-th castle, where
+(
+a
+i
+,
+b
+i
+)
+are the coordinates of the lower left corner and
+(
+c
+i
+,
+d
+i
+)
+are the coordinates of the upper right corner.
+It is guaranteed, that no two castles intersect, however, they may touch.
+Output
+If there exists a possible set of territories that satisfies the story, print "YES", otherwise print "NO".
+You can print each letter in any case (upper or lower).
+Examples
+input
+Copy
+4
+0 0 1 2
+0 2 1 3
+1 0 2 1
+1 1 2 3
+output
+Copy
+YES
+input
+Copy
+4
+0 0 2 1
+1 2 3 3
+2 0 3 2
+0 1 1 3
+output
+Copy
+NO
+Note
+The castles in the first and second examples are shown on the pictures below.
+ 

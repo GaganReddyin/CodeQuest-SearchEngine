@@ -1,0 +1,146 @@
+C. Sequence Master
+time limit per test1 second
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+For some positive integer
+m
+, YunQian considers an array
+q
+of
+2m
+(possibly negative) integers good, if and only if for every possible subsequence of
+q
+that has length
+m
+, the product of the
+m
+elements in the subsequence is equal to the sum of the
+m
+elements that are not in the subsequence. Formally, let
+U={1,2,…,2m}
+. For all sets
+S⊆U
+such that
+|S|=m
+,
+∏
+i∈S
+q
+i
+=
+∑
+i∈U∖S
+q
+i
+.
+Define the distance between two arrays
+a
+and
+b
+both of length
+k
+to be
+∑
+i=1
+k
+|
+a
+i
+−
+b
+i
+|
+.
+You are given a positive integer
+n
+and an array
+p
+of
+2n
+integers.
+Find the minimum distance between
+p
+and
+q
+over all good arrays
+q
+of length
+2n
+. It can be shown for all positive integers
+n
+, at least one good array exists. Note that you are not required to construct the array
+q
+that achieves this minimum distance.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The second line of each test case contains
+2n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+2n
+(
+|
+p
+i
+|≤
+10
+9
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output the minimum distance between
+p
+and a good
+q
+.
+Example
+input
+Copy
+4
+1
+6 9
+2
+1 2 2 1
+2
+-2 -2 2 2
+4
+-3 -2 -1 0 1 2 3 4
+output
+Copy
+3
+2
+5
+13
+Note
+In the first test case, it is optimal to let
+q=[6,6]
+.
+In the second test case, it is optimal to let
+q=[2,2,2,2]
+.

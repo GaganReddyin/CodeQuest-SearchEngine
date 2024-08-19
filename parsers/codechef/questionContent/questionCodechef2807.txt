@@ -1,0 +1,94 @@
+Hiring Chefs
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef Shahhoud wants to hire new chefs for his restaurant. Shahhoud posted a job offer on Chef Rami's paper "Fast Food Times".
+N candidates (numbered
+1 through
+N) have applied for the job. There are
+M traits that define how good a chef is. You are given
+N strings
+S
+1
+,S
+2
+,…,S
+N
+describing the traits of the candidates. Each of these strings has length
+M. For each valid
+i and
+j, the
+j-th character of
+S
+i
+is '1' if the
+i-th chef has the
+j-th trait or '0' if this chef does not have this trait.
+Shahhoud wants to choose a non-empty subsequence
+H (not necessarily contiguous) of the sequence
+(1,2,…,N) and hire all candidates from
+H. However, the sequence
+H must satisfy an additional condition: for any two consecutive elements of
+H (let's denote them by
+x and
+y), candidates
+x and
+y have no common traits, to prevent fights between them.
+Now, Shahhoud is wondering: how many such valid subsequences exist? Find this number modulo
+1,000,000,007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains a single string
+S
+i
+.
+Output
+For each test case, print a single line containing one integer — the number of valid subsequences modulo
+1,000,000,007.
+Constraints
+1≤T≤100
+1≤M≤16
+1≤N≤100,000
+∣S
+i
+∣=M for each valid
+i
+S
+1
+,S
+2
+,…,S
+M
+contain only characters '0' and '1'
+the sum of
+N over all test cases does not exceed
+500,000
+Sample 1:
+Input
+Output
+1
+4 2
+10
+01
+11
+10
+7
+Explanation:
+Example case 1: The valid subsequences are
+(1),
+(2),
+(3),
+(4),
+(1,2),
+(2,4) and
+(1,2,4).

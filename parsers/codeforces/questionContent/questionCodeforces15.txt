@@ -1,0 +1,202 @@
+E. Combinatorics Problem
+time limit per test4 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Recall that the binomial coefficient
+(
+x
+y
+)
+is calculated as follows (
+x
+and
+y
+are non-negative integers):
+if
+x<y
+, then
+(
+x
+y
+)=0
+;
+otherwise,
+(
+x
+y
+)=
+x!
+y!⋅(x−y)!
+.
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+and an integer
+k
+. You have to calculate a new array
+b
+1
+,
+b
+2
+,…,
+b
+n
+, where
+b
+1
+=((
+1
+k
+)⋅
+a
+1
+)mod998244353
+;
+b
+2
+=((
+2
+k
+)⋅
+a
+1
++(
+1
+k
+)⋅
+a
+2
+)mod998244353
+;
+b
+3
+=((
+3
+k
+)⋅
+a
+1
++(
+2
+k
+)⋅
+a
+2
++(
+1
+k
+)⋅
+a
+3
+)mod998244353
+, and so on.
+Formally,
+b
+i
+=(
+∑
+j=1
+i
+(
+i−j+1
+k
+)⋅
+a
+j
+)mod998244353
+.
+Note that the array is given in a modified way, and you have to output it in a modified way as well.
+Input
+The only line of the input contains six integers
+n
+,
+a
+1
+,
+x
+,
+y
+,
+m
+and
+k
+(
+1≤n≤
+10
+7
+;
+0≤
+a
+1
+,x,y<m
+;
+2≤m≤998244353
+;
+1≤k≤5
+).
+The array
+[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+is generated as follows:
+a
+1
+is given in the input;
+for
+2≤i≤n
+,
+a
+i
+=(
+a
+i−1
+⋅x+y)modm
+.
+Output
+Since outputting up to
+10
+7
+integers might be too slow, you have to do the following:
+Let
+c
+i
+=
+b
+i
+⋅i
+(without taking modulo
+998244353
+after the multiplication). Print the integer
+c
+1
+⊕
+c
+2
+⊕⋯⊕
+c
+n
+, where
+⊕
+denotes the bitwise XOR operator.
+Example
+input
+Copy
+5 8 2 3 100 2
+output
+Copy
+1283

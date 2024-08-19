@@ -1,0 +1,25 @@
+Old Farmer
+Problem
+Old Farmer Ranjan works on the farm of landlord Mittal Sahab. On the occasion of Diwali, Mittal Sahab decided to give some bonus to the hardworking farmer Ranjan. Mittal Sahab promised him to offer all the dragon fruits that Ranjan collects in one go from the right side of the farm returning back to the same side, such that he can take exactly 2 left turns. Ranjan farmer can start plowing from any cell
+A[i][N] where 1 <=
+i <= N. The farm is represented as a 2D matrix, each cell consisting of some units of dragon fruit. Ranjan farmer wants to collect as much amount of dragon fruits as possible, but he is illiterate so he gave this job to his son, the great coder Rishi. Please refer to the image below for more clarification on how to traverse the farm.
+###Input
+The first line contains single integer
+T, denoting the number of test cases.
+The next line consists of 2 space separated integers
+N and
+M, denoting the dimension of the farm.
+The next
+N lines consist of
+M space separated integers each denoting the amount of dragon fruit in the cell.
+###Output: Output a single integer denoting the maximum amount of vegetable Ranjan farmer could collect.
+###Constraints
+1≤T≤5
+2≤N,M≤10
+3
+2≤A[i][j]≤10
+9
+for
+1≤i,j≤N,Mrespectively
+###Sample Input: 2 3 3 1 2 3 3 3 1 4 1 6 3 3 3 7 4 1 9 6 1 7 7
+###Sample Output: 20 34

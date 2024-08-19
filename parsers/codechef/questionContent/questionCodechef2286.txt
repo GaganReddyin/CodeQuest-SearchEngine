@@ -1,0 +1,111 @@
+Angry Grandfather
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Every time Rami comes up with an idea for a nice problem, his grandfather Saeed rejects it, claiming that it takes a lot of work to write tests for such a problem. Therefore, Rami spent days thinking about a problem with only three numbers as the input. Finally, he thought up such a problem and ran happily to his grandfather, shouting:
+You are given three integers
+N,
+M and
+K. Find the number of sequences
+A
+1
+,A
+2
+,…,A
+N
+such that:
+For each valid
+i,
+A
+i
+is an integer in the range
+[0,M−1].
+Let's define
+N prefix sums of
+A as
+S
+i
+=∑
+j=1
+i
+A
+j
+, where
+1≤i≤N. At least
+K of these prefix sums are divisible by
+M.
+Let's see if you can solve this simple problem! Rami knows that the answer could be really large, so you should compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+N,
+M and
+K.
+Output
+For each test case, print a single line containing one integer — the number of valid sequences modulo
+10
+9
++7.
+Constraints
+1≤T≤100
+1≤K≤N≤10
+5
+1≤M≤10
+9
+the sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+2
+3 2 2
+3 2 1
+4
+7
+Explanation:
+For
+N=3 and
+M=2, there are eight possible sequences satisfying the first condition:
+[0,0,0],
+[0,0,1],
+[0,1,0],
+[0,1,1],
+[1,0,0],
+[1,0,1],
+[1,1,0] and
+[1,1,1]. Their prefix sums are
+[0,0,0],
+[0,0,1],
+[0,1,1],
+[0,1,2],
+[1,1,1],
+[1,1,2],
+[1,2,2] and
+[1,2,3] respectively.
+As we can see, there are:
+one sequence with
+0 prefix sums divisible by
+2:
+[1,0,0]
+three sequences with exactly
+1 prefix sum divisible by
+2:
+[0,1,0],
+[1,0,1],
+[1,1,1]
+three sequences with
+2 prefix sums divisible by
+2:
+[0,0,1],
+[0,1,1],
+[1,1,0]
+one sequence with
+3 prefix sums divisible by
+2:
+[0,0,0]

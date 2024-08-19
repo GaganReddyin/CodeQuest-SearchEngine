@@ -1,0 +1,152 @@
+G. Cow and Exercise
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Farmer John is obsessed with making Bessie exercise more!
+Bessie is out grazing on the farm, which consists of
+n
+fields connected by
+m
+directed roads. Each road takes some time
+w
+i
+to cross. She is currently at field
+1
+and will return to her home at field
+n
+at the end of the day.
+Farmer John has plans to increase the time it takes to cross certain roads. He can increase the time it takes to cross each road by a nonnegative amount, but the total increase cannot exceed
+x
+i
+for the
+i
+-th plan.
+Determine the maximum he can make the shortest path from
+1
+to
+n
+for each of the
+q
+independent plans.
+Input
+The first line contains integers
+n
+and
+m
+(
+2≤n≤50
+,
+1≤m≤n⋅(n−1)
+) — the number of fields and number of roads, respectively.
+Each of the following
+m
+lines contains
+3
+integers,
+u
+i
+,
+v
+i
+, and
+w
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+1≤
+w
+i
+≤
+10
+6
+), meaning there is an road from field
+u
+i
+to field
+v
+i
+that takes
+w
+i
+time to cross.
+It is guaranteed that there exists a way to get to field
+n
+from field
+1
+. It is guaranteed that the graph does not contain self-loops or parallel edges. It is possible to have a road from
+u
+to
+v
+and a road from
+v
+to
+u
+.
+The next line contains a single integer
+q
+(
+1≤q≤
+10
+5
+), the number of plans.
+Each of the following
+q
+lines contains a single integer
+x
+i
+, the query (
+0≤
+x
+i
+≤
+10
+5
+).
+Output
+For each query, output the maximum Farmer John can make the shortest path if the total increase does not exceed
+x
+i
+.
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is accepted if and only if
+|a−b|
+max(1,|b|)
+≤
+10
+−6
+.
+Example
+input
+Copy
+3 3
+1 2 2
+2 3 2
+1 3 3
+5
+0
+1
+2
+3
+4
+output
+Copy
+3.0000000000
+4.0000000000
+4.5000000000
+5.0000000000
+5.5000000000

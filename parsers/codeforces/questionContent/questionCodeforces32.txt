@@ -1,0 +1,147 @@
+D. Two Centroids
+time limit per test1.5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You are given a tree (an undirected connected acyclic graph) which initially only contains vertex
+1
+. There will be several queries to the given tree. In the
+i
+-th query, vertex
+i+1
+will appear and be connected to vertex
+p
+i
+(
+1≤
+p
+i
+≤i
+).
+After each query, please find out the least number of operations required to make the current tree has two centroids. In one operation, you can add one vertex and one edge to the tree such that it remains a tree.
+A vertex is called a centroid if its removal splits the tree into subtrees with at most
+⌊
+n
+2
+⌋
+vertices each, with
+n
+as the number of vertices of the tree. For example, the centroid of the following tree is
+3
+because the biggest subtree after removing the centroid has
+2
+vertices.
+In the next tree, vertex
+1
+and
+2
+are both centroids.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+2≤n≤5⋅
+10
+5
+) — the number of nodes of the final tree.
+The second line of each test case contains
+n−1
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n−1
+(
+1≤
+p
+i
+≤i
+) — the index of the vertex that is connected to vertex
+i+1
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+5⋅
+10
+5
+.
+Output
+For each test case, output
+n−1
+integers. The
+i
+-th integer is the answer to the
+i
+-th query — the least number of operations required to make the current tree have two centroids.
+We can show that an answer always exists.
+Example
+input
+Copy
+5
+2
+1
+3
+1 1
+4
+1 2 3
+7
+1 2 3 2 5 2
+10
+1 2 2 4 5 5 7 8 9
+output
+Copy
+0
+0 1
+0 1 0
+0 1 0 1 2 3
+0 1 2 1 0 1 0 1 2
+Note
+The illustrations below are of the fourth example test case.
+After the third query:
+The tree already has vertices
+2
+and
+3
+as centroids, so no operations are needed.
+After the fourth query:
+Adding vertex
+x
+to the tree makes vertices
+2
+and
+3
+centroids. Only one operation is needed.
+After the fifth query:
+Adding vertex
+x
+and
+y
+to the tree makes vertices
+5
+and
+2
+centroids. Two operations are needed.
+After the sixth query:
+Adding vertex
+x
+,
+y
+, and
+z
+to the tree makes vertices
+5
+and
+2
+centroids. Three operations are needed.

@@ -1,0 +1,121 @@
+XOR Game
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given an odd integer
+N and two integer sequences
+A
+1
+,A
+2
+,…,A
+N
+and
+B
+1
+,B
+2
+,…,B
+N
+.
+Your task is to reorder the elements of
+B, forming a new sequence
+C
+1
+,C
+2
+,…,C
+N
+(i.e. choose a permutation
+P
+1
+,P
+2
+,…,P
+N
+of the integers
+1 through
+N, where
+C
+i
+=B
+P
+i
+for each valid
+i), in such a way that the following condition holds:
+(A
+1
+⊕C
+1
+)=(A
+2
+⊕C
+2
+)=…=(A
+N
+⊕C
+N
+), where
+⊕ denotes bitwise XOR. Find one such reordered sequence or determine that it is impossible.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Output
+For each test case:
+If there is no valid way to reorder the sequence
+B, print a single line containing the integer
+−1.
+Otherwise, print a single line containing
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+. If there are multiple solutions, you may find any one.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+N is odd
+0≤A
+i
+≤10
+6
+for each valid
+i
+0≤B
+i
+≤10
+6
+for each valid
+i
+Sample 1:
+Input
+Output
+1
+5
+3 1 2 4 5
+2 4 5 1 3
+3 1 2 4 5

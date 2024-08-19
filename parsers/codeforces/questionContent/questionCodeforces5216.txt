@@ -1,0 +1,32 @@
+B. Distances to Zero
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given the array of integer numbers a0, a1, ..., an - 1. For each element find the distance to the nearest zero (to the element which equals to zero). There is at least one zero element in the given array.
+Input
+The first line contains integer n (1 ≤ n ≤ 2·105) — length of the array a. The second line contains integer elements of the array separated by single spaces ( - 109 ≤ ai ≤ 109).
+Output
+Print the sequence d0, d1, ..., dn - 1, where di is the difference of indices between i and nearest j such that aj = 0. It is possible that i = j.
+Examples
+input
+Copy
+9
+2 1 0 3 0 0 3 2 4
+output
+Copy
+2 1 0 1 0 0 1 2 3 
+input
+Copy
+5
+0 1 2 3 4
+output
+Copy
+0 1 2 3 4 
+input
+Copy
+7
+5 6 0 1 -2 3 4
+output
+Copy
+2 1 0 1 2 3 4 

@@ -1,0 +1,52 @@
+I. Deja vu
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an unusual problem in an unusual contest, here is the announcement: http://codeforces.com/blog/entry/73543
+You run a string shop. During a day your customers want to buy strings of certain lengths and sometimes satisfying other properties.
+Today your first customer asked you if you have a string of length
+k
+. In fact, you have a string of length
+n
+and can cut a string of length
+k
+starting at any position out of it. You wonder how many distinct values this string can equal.
+Please note that in your shop strings are over an alphabet of size
+2
+.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤k≤n≤200000
+). The second line contains a binary string
+s
+of length
+n
+.
+Output
+In the only line print the number of distinct substrings of length
+k
+of the string
+s
+.
+Examples
+input
+Copy
+5 2
+01101
+output
+Copy
+3
+input
+Copy
+10 3
+1110001011
+output
+Copy
+8
+Note
+The second sample test represents the de Bruijn sequence of order 3.

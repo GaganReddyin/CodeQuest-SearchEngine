@@ -1,0 +1,84 @@
+D. Perfect Groups
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+SaMer has written the greatest test case of all time for one of his problems. For a given array of integers, the problem asks to find the minimum number of groups the array can be divided into, such that the product of any pair of integers in the same group is a perfect square.
+Each integer must be in exactly one group. However, integers in a group do not necessarily have to be contiguous in the array.
+SaMer wishes to create more cases from the test case he already has. His test case has an array
+A
+of
+n
+integers, and he needs to find the number of contiguous subarrays of
+A
+that have an answer to the problem equal to
+k
+for each integer
+k
+between
+1
+and
+n
+(inclusive).
+Input
+The first line of input contains a single integer
+n
+(
+1≤n≤5000
+), the size of the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,
+…
+,
+a
+n
+(
+−
+10
+8
+≤
+a
+i
+≤
+10
+8
+), the values of the array.
+Output
+Output
+n
+space-separated integers, the
+k
+-th integer should be the number of contiguous subarrays of
+A
+that have an answer to the problem equal to
+k
+.
+Examples
+input
+Copy
+2
+5 5
+output
+Copy
+3 0
+input
+Copy
+5
+5 -4 2 1 8
+output
+Copy
+5 5 3 2 0
+input
+Copy
+1
+0
+output
+Copy
+1

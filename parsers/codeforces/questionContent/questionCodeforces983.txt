@@ -1,0 +1,262 @@
+B. Budget Distribution
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Distributing budgeted money with limited resources and many constraints is a hard problem. A budget plan consists of
+t
+topics;
+i
+-th topic consists of
+n
+i
+items. For each topic, the optimal relative money distribution is known. The optimal relative distribution for the topic
+i
+is a list of real numbers
+p
+i,j
+, where
+∑
+j=1
+n
+i
+p
+i,j
+=1
+.
+Let's denote the amount of money assigned to
+j
+-th item of the topic
+i
+as
+c
+i,j
+; the total amount of money for the topic is
+C
+i
+=
+∑
+j=1
+n
+i
+c
+i,j
+. A non-optimality of the plan for the topic
+i
+is defined as
+∑
+j=1
+n
+i
+∣
+∣
+c
+i,j
+C
+i
+−
+p
+i,j
+∣
+∣
+. Informally, the non-optimality is the total difference between the optimal and the actual ratios of money assigned to all the items in the topic. The total plan non-optimality is the sum of non-optimalities of all
+t
+topics. Your task is to minimize the total plan non-optimality.
+However, the exact amount of money available is not known yet.
+j
+-th item of
+i
+-th topic already has
+c
+^
+i,j
+^
+dollars assigned to it and they cannot be taken back. Also, there are
+q
+possible values of the extra unassigned amounts of money available
+x
+k
+. For each of them, you need to calculate the minimal possible total non-optimality among all ways to distribute this extra money. You don't need to assign an integer amount of money to an item, any real number is possible, but all the extra money must be distributed among all the items in addition to
+c
+^
+i,j
+^
+already assigned. Formally, for each value of extra money
+x
+k
+you'll need to find its distribution
+d
+i,j
+such that
+d
+i,j
+≥0
+and
+∑
+i=1
+t
+∑
+j=1
+n
+i
+d
+i,j
+=
+x
+k
+, giving the resulting budget assignments
+c
+i,j
+=
+c
+^
+i,j
++
+d
+i,j
+that minimize the total plan non-optimality.
+Input
+The first line contains two integers
+t
+(
+1≤t≤5⋅
+10
+4
+) and
+q
+(
+1≤q≤3⋅
+10
+5
+) — the number of topics in the budget and the number of possible amounts of extra money.
+The next
+t
+lines contain descriptions of topics. Each line starts with an integer
+n
+i
+(
+2≤
+n
+i
+≤5
+) — the number of items in
+i
+-th topic; it is followed by
+n
+i
+integers
+c
+^
+i,j
+^
+(
+0≤
+c
+^
+i,j
+≤
+10
+5
+; for any
+i
+, at least one of
+c
+^
+i,j
+>0
+^
+) — the amount of money already assigned to
+j
+-th item in
+i
+-th topic; they are followed by
+n
+i
+ integers
+p
+′
+i,j
+(
+1≤
+p
+′
+i,j
+≤1000
+) — they determine the values of
+p
+i,j
+as
+p
+i,j
+=
+p
+′
+i,j
+/
+∑
+j=1
+n
+i
+p
+′
+i,j
+with
+∑
+j=1
+n
+i
+p
+i,j
+=1
+.
+The next line contains
+q
+integers
+x
+k
+(
+0≤
+x
+k
+≤
+10
+12
+) —
+k
+-th possible amount of extra money.
+Output
+Output
+q
+real numbers — the minimal possible non-optimality for the corresponding amount of extra money
+x
+k
+. An absolute or a relative error of the answer must not exceed
+10
+−6
+.
+Examples
+input
+Copy
+1 5
+3 1 7 10 700 400 100
+0 2 10 50 102
+output
+Copy
+1.0555555555555556
+0.8666666666666667
+0.5476190476190478
+0.12745098039215708
+0.0
+input
+Copy
+2 5
+3 10 70 100 700 400 100
+3 10 30 100 700 400 100
+2 10 50 70 110
+output
+Copy
+2.2967032967032974
+2.216776340655188
+1.8690167362600323
+1.7301587301587305
+1.5271317829457367

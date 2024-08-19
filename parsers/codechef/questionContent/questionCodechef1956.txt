@@ -1,0 +1,27 @@
+Infinite polygons
+Problem
+IPL 2021 final is yet again between MI and CSK. It's already been two super overs and the last bowl of the third super over is left. MS Dhoni hits the ball and it gets lofted high. You, being an MI fan, want MSD to get caught.
+There are infinite players in the stadium and any player will always catch the ball within his area. The outermost player has an access to the whole ground which is a $n$ sided regular polygon. New $n$ sided regular polygons are recursively formed by using the midpoints of the previous polygon as shown in the figure below, where the area inside each polygon represents, the ground covered by a single player. Now, assuming the ball is a point object which can land anywhere on the ground (equal to the outermost $n$ sided regular polygon) with the same probability, what is the expected number of players who can take the catch?
+Infinite regular polygons having number of sides $n = 4$.
+
+Formally, your task is to find the expected value of the number of polygons a randomly chosen point (within the outermost $n$ sided regular polygon) will be inside.
+Input
+The first line contains a single integer $T$, which denotes the number of test cases. The description of each test case follows.
+<li>The first and the one line of each test case contains a positive 
+    integer $n$  - number of sides of the polygon
+</li>
+Output
+For each test case, print a single line containing one real number corresponding 
+to the expected number of polygons the ball will be inside. Your answer 
+will be considered correct if it has an absolute or relative error $≤ 10^{-6}$.
+Constraints
+$1 ≤ T ≤ 10^{4}$
+$3 ≤ n ≤ 10^{5}$
+Sample 1:
+Input
+Output
+2
+3
+4
+1.33333333
+2.00000000

@@ -1,0 +1,113 @@
+Longest Unfriendly Subsequence
+Problem
+Let's call sequence
+B
+1
+,B
+2
+,…,B
+M
+unfriendly, if the following condition holds:
+If
+1≤i<j≤M and
+j−i≤2, then
+B
+i
+
+=B
+j
+.
+In other words, a sequence is unfriendly if any two elements on the distance at most
+2 are different.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Find the length of its longest unfriendly subsequence.
+A sequence
+C is a subsequence of a sequence
+D if
+C can be obtained from
+D by deletion of several (possibly, zero or all) elements. For example,
+(1,3,5) is a subsequence of
+(1,2,3,4,5) while
+(3,1) is not.
+Input Format
+The first line contains a single integer
+T
+− the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+N
+− the length of the sequence.
+The second line of each test case contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+− the elements of the sequence
+A.
+Output Format
+For each test case, output a single integer
+− the length of the longest unfriendly subsequence of
+A.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases doesn't exceed
+2⋅10
+5
+.
+Subtasks
+Subtask 1 (8 points): The sum of
+N over all test cases doesn't exceed
+500
+Subtask 2 (11 points):
+A
+i
+≤3
+Subtask 3 (12 points):
+A
+i
+≤10
+Subtask 4 (24 points): The sum of
+N over all test cases doesn't exceed
+10000
+Subtask 5 (45 points): No additional constraints
+Sample 1:
+Input
+Output
+3
+5
+1 2 1 2 1
+7
+1 2 3 2 1 2 3
+8
+1 10 10 1 1 100 100 1
+2
+6
+4
+Explanation:
+In the first test case, the longest unfriendly subsequences are
+(1,2) and
+(2,1). The subsequence
+(1,2,1), for example, is not unfriendly, as its
+1-st and
+3-rd elements are equal.
+In the second test case, the longest unfriendly subsequence is
+(1,2,3,1,2,3). It's clear that the subsequence which consists of the whole sequence is not unfriendly, so the answer is
+6.
+In the third test case, the longest unfriendly subsequence is
+(1,10,100,1).

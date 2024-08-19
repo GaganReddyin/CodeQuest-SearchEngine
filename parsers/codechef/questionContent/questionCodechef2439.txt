@@ -1,0 +1,153 @@
+Friend Groups In A Line
+Problem
+Read problem statements in Mandarin Chinese and Bengali.
+There are
+N positions in a queue. Given a binary string
+S of length
+N, where
+S
+i
+= '$1$' denotes, there is a person standing in the
+i
+th
+position.
+The distance between two people standing in the
+i
+th
+and
+j
+th
+positions respectively in the queue is
+∣i−j∣, where
+∣x∣ denotes the absolute value of
+x. Now, two people are considered to be friends if they are at a distance less than or equal to
+K.
+Let's say, there are
+M people,
+P
+1
+,P
+2
+,…,P
+M
+standing one after another in a queue such that for each
+1≤i<M,
+P
+i
+and
+P
+i+1
+are friends, then all the
+M people are considered to be in a friend group.
+For example, consider the string
+S= "$1101001$" and
+K=2.
+Let's denote the people standing in the
+1
+st
+,
+2
+nd
+,
+4
+th
+and
+7
+th
+positions in the queue by
+P
+1
+,P
+2
+,P
+3
+,P
+4
+respectively. Now,
+P
+1
+and
+P
+2
+are friends as the distance between them is
+1,
+P
+2
+and
+P
+3
+are also friends as the distance between them is
+2.
+P
+4
+is not friend with anyone. Hence
+P
+1
+,P
+2
+,P
+3
+form a friend group and
+P
+4
+forms a separate friend group.
+Now each person can move one position right or one position left or stay in the same position. However, they can't move out of the queue. Find the minimum number of friend groups they can form if they move optimally.
+It is possible that there is more than one person standing in the same position after the movements.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two integers
+N,K.
+The second line of each test case contains a string
+S.
+Output Format
+For each test case, print a single line containing one integer - the minimum number of friend groups.
+Constraints
+1≤T≤5⋅10
+4
+1≤N≤10
+5
+0≤K≤N
+S contains only characters '
+0` and '
+1'
+The sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+3
+6 2
+010010
+4 0
+1001
+7 2
+1101001
+1
+2
+1
+Explanation:
+Test case
+1: If the person standing in the
+5
+th
+position moves one position left, the distance between the two people becomes
+2 which is equal to
+K. So they form a friend group.
+Test case
+2: If the person standing in the
+1
+st
+position moves one position right and the person standing in the
+4
+th
+position moves one position left, the string becomes "
+0110", still the distance between them is greater than
+K=0. So they form two separate friend groups.
+Test case
+3: Initially first three people form a friend group and the fourth person forms a separate friend group. Now if the fourth person moves one position left, he becomes a friend of the third person as the distance between these two people is equal to
+2, and hence all the four people belong to one friend group.

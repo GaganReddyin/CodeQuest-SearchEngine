@@ -1,0 +1,27 @@
+Chef and Numbers
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+You are given some integers in the range between 1 and N. You have to answer Q queries, each query is given by number X, you have to tell whether you can write number X as a sum of allowed numbers. You can use an allowed integer zero or multiple times.
+Input
+The first line contains three integer numbers N and K, Q, where K denotes number of allowed integers, Q denotes number of queries. The second line containing K distinct integers Fi - allowed numbers.
+Each of the next Q lines containing one integer number X.
+Output
+For each query output "Yes" or "No" (without quotess) in separate line.
+Constraints
+1 ≤ N, K, Q, X ≤ 200,000
+1 ≤ Fi ≤ N
+Sample 1:
+Input
+Output
+4 2 3
+2 4
+2
+8
+5
+Yes
+Yes
+No
+Explanation:
+Example case 1. 2 = 2
+Example case 2. 8 = 2 + 2 + 4
+Example case 3. 5 can't be sum of any number of addends 2 and 4

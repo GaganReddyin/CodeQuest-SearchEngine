@@ -1,0 +1,189 @@
+Sequence Creation
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef has two sequences of integers
+(A
+1
+,A
+2
+,…,A
+N
+) and
+(B
+1
+,B
+2
+,…,B
+N
+).
+A sequence of integers is beautiful if it contains only distinct integers. For each valid
+i:
+Chef wants to create a beautiful sequence
+S
+i
+. Let's denote the length of this sequence by
+L
+i
+and the sequence by
+S
+i,1
+,S
+i,2
+,…,S
+i,L
+i
+.
+The sequence
+S
+i
+is good if for each valid
+j,
+S
+i,j
+is either equal to
+A
+i+j−1
+or
+B
+i+j−1
+. Note that this means
+L
+i
+must be at most
+N−i+1.
+Let's denote the maximum possible value of
+L
+i
+(the maximum value such that some good sequence
+S
+i
+with this length exists) by
+M
+i
+.
+Help Chef find the number of good sequences
+S
+i
+that have the maximum possible length
+M
+i
+. Since this number may be enormous, compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Output
+For each test case, print a single line containing
+N space-separated integers. For each valid
+i, the
+i-th of these integers should be the number of possible sequences
+S
+i
+modulo
+10
+9
++7.
+Constraints
+1≤T≤1,000
+1≤N≤10
+5
+∣A
+i
+∣,∣B
+i
+∣≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Subtasks
+Subtask #1 (20 points):
+N≤1,000
+the sum of
+N over all test cases does not exceed
+5⋅10
+3
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2
+4
+2 2 3 2
+2 3 4 4
+5
+1 2 2 3 3
+2 1 2 3 1
+1 2 3 2
+2 1 1 1 2
+Explanation:
+Example case 1:
+S
+1
+can only be
+(2,3,4).
+S
+2
+can be
+(2,3,4) or
+(3,4,2).
+S
+3
+can be
+(3,2),
+(3,4) or
+(4,2).
+S
+4
+can be
+(2) or
+(4).
+Example case 2:
+S
+1
+can be
+(1,2) or
+(2,1).
+S
+2
+can only be
+(1,2,3).
+S
+3
+can only be
+(2,3,1).
+S
+4
+can only be
+(3,1).
+S
+5
+can be
+(3) or
+(1).

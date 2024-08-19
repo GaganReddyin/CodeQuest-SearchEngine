@@ -1,0 +1,247 @@
+C. Continuous City
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Some time ago Homer lived in a beautiful city. There were
+n
+blocks numbered from
+1
+to
+n
+and
+m
+directed roads between them. Each road had a positive length, and each road went from the block with the smaller index to the block with the larger index. For every two (different) blocks, there was at most one road between them.
+Homer discovered that for some two numbers
+L
+and
+R
+the city was
+(L,R)
+-continuous.
+The city is said to be
+(L,R)
+-continuous, if
+all paths from block
+1
+to block
+n
+are of length between
+L
+and
+R
+(inclusive); and
+for every
+L≤d≤R
+, there is exactly one path from block
+1
+to block
+n
+whose length is
+d
+.
+A path from block
+u
+to block
+v
+is a sequence
+u=
+x
+0
+→
+x
+1
+→
+x
+2
+→⋯→
+x
+k
+=v
+, where there is a road from block
+x
+i−1
+to block
+x
+i
+for every
+1≤i≤k
+. The length of a path is the sum of lengths over all roads in the path. Two paths
+x
+0
+→
+x
+1
+→⋯→
+x
+k
+and
+y
+0
+→
+y
+1
+→⋯→
+y
+l
+are different, if
+k≠l
+or
+x
+i
+≠
+y
+i
+for some
+0≤i≤min{k,l}
+.
+After moving to another city, Homer only remembers the two special numbers
+L
+and
+R
+but forgets the numbers
+n
+and
+m
+of blocks and roads, respectively, and how blocks are connected by roads. However, he believes the number of blocks should be no larger than
+32
+(because the city was small).
+As the best friend of Homer, please tell him whether it is possible to find a
+(L,R)
+-continuous city or not.
+Input
+The single line contains two integers
+L
+and
+R
+(
+1≤L≤R≤
+10
+6
+).
+Output
+If it is impossible to find a
+(L,R)
+-continuous city within
+32
+blocks, print "NO" in a single line.
+Otherwise, print "YES" in the first line followed by a description of a
+(L,R)
+-continuous city.
+The second line should contain two integers
+n
+(
+2≤n≤32
+) and
+m
+(
+1≤m≤
+n(n−1)
+2
+), where
+n
+denotes the number of blocks and
+m
+denotes the number of roads.
+Then
+m
+lines follow. The
+i
+-th of the
+m
+lines should contain three integers
+a
+i
+,
+b
+i
+(
+1≤
+a
+i
+<
+b
+i
+≤n
+) and
+c
+i
+(
+1≤
+c
+i
+≤
+10
+6
+) indicating that there is a directed road from block
+a
+i
+to block
+b
+i
+of length
+c
+i
+.
+It is required that for every two blocks, there should be no more than 1 road connecting them. That is, for every
+1≤i<j≤m
+, either
+a
+i
+≠
+a
+j
+or
+b
+i
+≠
+b
+j
+.
+Examples
+input
+Copy
+1 1
+output
+Copy
+YES
+2 1
+1 2 1
+input
+Copy
+4 6
+output
+Copy
+YES
+5 6
+1 2 3
+1 3 4
+1 4 5
+2 5 1
+3 5 1
+4 5 1
+Note
+In the first example there is only one path from block
+1
+to block
+n=2
+, and its length is
+1
+.
+In the second example there are three paths from block
+1
+to block
+n=5
+, which are
+1→2→5
+of length
+4
+,
+1→3→5
+of length
+5
+and
+1→4→5
+of length
+6
+.

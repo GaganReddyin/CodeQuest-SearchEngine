@@ -1,0 +1,61 @@
+Ada Bishop
+Problem
+###Read problems statements in Hindi, Spanish, Mandarin chinese, Russian, Vietnamese and Bengali as well.
+Ada has the biggest chessboard in ChefLand. It has
+N rows (numbered
+1 through
+N) and
+M columns (numbered
+1 through
+M), where
+M≥2N. As training for her upcoming world chess championship match, she placed one bishop at row
+r and column
+c of her board. The remaining squares of the board are empty. Now, she is calculating the number of squares that can be reached by the bishop in at most
+K moves. Help Ada verify her answers.
+Remember that in one move, a bishop at row
+r and column
+c can move to another square at row
+r
+′
+and column
+c
+′
+if and only if either
+r+c=r
+′
++c
+′
+or
+r−c=r
+′
+−c
+′
+.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains five space-separated integers
+N,
+M,
+r,
+c and
+K.
+Output
+For each test case, print a single line containing one integer — the number of reachable squares.
+Constraints
+1≤T≤5⋅10
+5
+1≤N,K≤10
+9
+2N≤M≤10
+9
+1≤r≤N
+1≤c≤M
+Sample 1:
+Input
+Output
+1
+3 7 1 1 2
+7
+Explanation:

@@ -1,0 +1,159 @@
+Dodgers
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Duck Dodgers is hosting a party to make friends throughout the galaxy. He has already invited
+N people (numbered
+1 through
+N). Initially, none of them are friends with Duck Dodgers, but he plans to become friends with everyone. Each friendship is between two people and bidirectional.
+Among these
+N guests,
+M friendships have already been made. You are given these
+M pairs of people who have become friends, in chronological order. During the party, no more frienships will be made among the guests; each of them can only become friends with Dodgers.
+In order to become friends with everyone, Dodgers follows a specific process.
+As long as there is a guest that is not his friend, Dodgers goes to the first such guest (the one with the smallest number; let's name him Brick) and becomes friends with this guest; then, Brick considers all his friends in the order in which he became friends with them, chooses the first (oldest) friend that Dodgers has not become friends with yet (let's name her Savannah) and introduces Dodgers to Savannah.
+Then, Dodgers goes to Savannah, becomes her friend and repeats this ― Savannah introduces Dodgers to her oldest friend which Dodgers has not become friends with, Dodgers becomes friends with this person and so forth, repeating the same step recursively.
+When Dodgers is friends with all of Savannah's friends, he leaves Savannah and goes back to Brick. Brick again considers all his friends in the same order and chooses the next friend that Dodgers has not become friends with until he returned to Brick, introduces Dodgers to this friend, Dodgers becomes friends with this person and repeats the same process as with Savannah.
+This happens with all people Dodgers becomes friends with ― for example, whenever he returns to Savannah, she also chooses her next oldest friend that Dodgers has not become friends with yet (or sends Dodgers back to Brick if there is no such person), introduces Dodgers to this person, Dodgers repeats the same process as with Brick, Savannah and everyone else, and when it's done, returns to Savannah again.
+When Dodgers returns to Brick and Brick finds out that Dodgers is already a friend of all of Brick's friends, Dodgers moves to the guest with the smallest index that has not become his friend yet and continues this process just like with Brick.
+When Dodgers knows everyone, he starts playing some games with the guests. For each game, he chooses two integers
+l and
+r and invites the guests
+l through
+r (inclusive) to play a game. A guest
+g
+1
+thinks that a game is fair if this guest is invited to play this game and there is no guest
+g
+2
+who satisfies the following conditions:
+g
+2
+is invited to play this game
+g
+1
+and
+g
+2
+are friends
+g
+2
+became Dodgers' friend strictly earlier than
+g
+1
+(since Dodgers would support his older friends more)
+You should process
+Q queries. In each query, you are given the parameters
+l and
+r of a game, and you should find the number of guests who think it is fair. The queries are encoded so that you have to process them online.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains four space-separated integers
+N,
+M,
+Q and
+s. Here,
+s is a parameter which is only used when decoding queries.
+M lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains two space-separated integers
+a
+i
+and
+b
+i
+denoting that the
+i-th friendship made before the party was between guests
+a
+i
+and
+b
+i
+(friendship
+1 is the oldest).
+The next
+Q lines describe queries. Each of these lines contains two space-separated integers
+x and
+y. The parameters
+l and
+r for this query can be computed as follows:
+Let
+last be the answer to the previous query, or
+0 if this is the first query in this test case.
+Set
+l to
+(x+s⋅last−1) modulo
+N+1.
+Set
+r to
+(y+s⋅last−1) modulo
+N+1.
+If
+l>r, swap
+l and
+r.
+Output
+For each query, print a single line containing one integer ― the number of guests who think the given game is fair.
+Constraints
+1≤N,Q≤10
+6
+0≤M≤10
+6
+1≤a
+i
+,b
+i
+≤N for each valid
+i
+1≤x,y≤N
+the sum of
+N over all test cases does not exceed
+10
+6
+the sum of
+M over all test cases does not exceed
+10
+6
+the sum of
+Q over all test cases does not exceed
+10
+6
+Subtasks
+Subtask 1 (49 points):
+s=0, i.e. the queries do not have to be processed online
+Subtask 2 (51 points):
+s=1
+Sample 1:
+Input
+Output
+1
+4 3 5 0
+1 2
+1 3
+2 4
+3 4
+1 3
+1 4
+3 2
+3 2
+2
+1
+1
+2
+2
+Explanation:
+Example case 1: Dodgers first meets and befriends guest
+1. Then, guest
+1 introduces Dodgers to his oldest friend, which is guest
+2. Guest
+2 introduces Dodgers to his oldest friend that Dodgers hasn't met yet, which is guest
+4. Since Dodgers is already friends with all the friends of guest
+4, he goes back to guest
+2. Again, all the friends of guest
+2 are also Dodgers' friends, so he goes back to guest
+1. Then, guest
+1 introduces him to guest
+3 and Dodgers becomes friends with guest
+3. Now, all guests are his friends.

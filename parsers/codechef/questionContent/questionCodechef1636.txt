@@ -1,0 +1,47 @@
+Dr Geros lab
+Problem
+Gohan has found his way into Dr. Gero's lab. There, he finds a circuit. He starts to toy with it. He finds the inverse transverse function
+(V
+in
+/V
+out
+) i.e (itf) of the circuit.
+Dr. Gero finds out about this. He gives Gohan an
+s-controller, through which he can randomly change the values of
+s. He finds out that each value of itf can be achieved through multiple values of
+s. But for a single particular value of itf, he finds out that this is not true. That is, just for this particular value of itf, there is only a single value of
+s which achieves it.
+To avoid punishment, Gohan must complete a task given to him by Dr.Gero, which is to find this particular value of itf. He needs your help in doing that.
+HINT to solve these type of circuits. In these circuits, the capacitor and the inductor can be treated as normal resistors, with resistances as follows: The resistance of inductor is directly taken as (s * L) and that of capacitor is 1/(s * C).
+###Input:
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains 4 integers
+R,L,C,V
+in
+, separated by single spaces.
+###Output: For each test case, print a single line containing the answer. Your answer will be judged right if it is at most
+10
+−2
+away from the correct answer.
+###Constraints
+1≤T≤2
+1≤R≤10
+5
+1≤L≤10
+5
+1≤C≤10
+5
+1≤V
+in
+≤10
+9
+Sample 1:
+Input
+Output
+2
+4 5 78 60
+4 5 6 3
+-61.4
+-3.8

@@ -1,0 +1,105 @@
+E. New Year and the Acquaintance Estimation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Bob is an active user of the social network Faithbug. On this network, people are able to engage in a mutual friendship. That is, if
+a
+is a friend of
+b
+, then
+b
+is also a friend of
+a
+. Each user thus has a non-negative amount of friends.
+This morning, somebody anonymously sent Bob the following link: graph realization problem and Bob wants to know who that was. In order to do that, he first needs to know how the social network looks like. He investigated the profile of every other person on the network and noted down the number of his friends. However, he neglected to note down the number of his friends. Help him find out how many friends he has. Since there may be many possible answers, print all of them.
+Input
+The first line contains one integer
+n
+ (
+1≤n≤5⋅
+10
+5
+), the number of people on the network excluding Bob.
+The second line contains
+n
+numbers
+a
+1
+,
+a
+2
+,…,
+a
+n
+ (
+0≤
+a
+i
+≤n
+), with
+a
+i
+being the number of people that person
+i
+is a friend of.
+Output
+Print all possible values of
+a
+n+1
+ — the amount of people that Bob can be friend of, in increasing order.
+If no solution exists, output
+−1
+.
+Examples
+input
+Copy
+3
+3 3 3
+output
+Copy
+3 
+input
+Copy
+4
+1 1 1 1
+output
+Copy
+0 2 4 
+input
+Copy
+2
+0 2
+output
+Copy
+-1
+input
+Copy
+35
+21 26 18 4 28 2 15 13 16 25 6 32 11 5 31 17 9 3 24 33 14 27 29 1 20 4 12 7 10 30 34 8 19 23 22
+output
+Copy
+13 15 17 19 21 
+Note
+In the first test case, the only solution is that everyone is friends with everyone. That is why Bob should have
+3
+friends.
+In the second test case, there are three possible solutions (apart from symmetries):
+a
+is friend of
+b
+,
+c
+is friend of
+d
+, and Bob has no friends, or
+a
+is a friend of
+b
+and both
+c
+and
+d
+are friends with Bob, or
+Bob is friends of everyone.
+The third case is impossible to solve, as the second person needs to be a friend with everybody, but the first one is a complete stranger.

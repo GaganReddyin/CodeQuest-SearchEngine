@@ -1,0 +1,197 @@
+F. Intersection and Union
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+segments on the coordinate axis. The
+i
+-th segment is
+[
+l
+i
+,
+r
+i
+]
+. Let's denote the set of all integer points belonging to the
+i
+-th segment as
+S
+i
+.
+Let
+A∪B
+be the union of two sets
+A
+and
+B
+,
+A∩B
+be the intersection of two sets
+A
+and
+B
+, and
+A⊕B
+be the symmetric difference of
+A
+and
+B
+(a set which contains all elements of
+A
+and all elements of
+B
+, except for the ones that belong to both sets).
+Let
+[
+op
+1
+,
+op
+2
+,…,
+op
+n−1
+]
+be an array where each element is either
+∪
+,
+⊕
+, or
+∩
+. Over all
+3
+n−1
+ways to choose this array, calculate the sum of the following values:
+|(((
+S
+1
+ op
+1
+ S
+2
+) 
+op
+2
+ S
+3
+) 
+op
+3
+ S
+4
+) … 
+op
+n−1
+ S
+n
+|
+|
+(
+(
+(
+S
+S
+)
+S
+)
+S
+)
+S
+|
+In this expression,
+|S|
+denotes the size of the set
+S
+.
+Input
+The first line contains one integer
+n
+(
+2≤n≤3⋅
+10
+5
+).
+Then,
+n
+lines follow. The
+i
+-th of them contains two integers
+l
+i
+and
+r
+i
+(
+0≤
+l
+i
+≤
+r
+i
+≤3⋅
+10
+5
+).
+Output
+Print one integer — the sum of
+|(((
+S
+1
+ op
+1
+ S
+2
+) 
+op
+2
+ S
+3
+) 
+op
+3
+ S
+4
+) … 
+op
+n−1
+ S
+n
+|
+over all possible ways to choose
+[
+op
+1
+,
+op
+2
+,…,
+op
+n−1
+]
+. Since the answer can be huge, print it modulo
+998244353
+.
+Examples
+input
+Copy
+4
+3 5
+4 8
+2 2
+1 9
+output
+Copy
+162
+input
+Copy
+4
+1 9
+3 5
+4 8
+2 2
+output
+Copy
+102

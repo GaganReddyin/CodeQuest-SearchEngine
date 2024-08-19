@@ -1,0 +1,152 @@
+F. Bicolored Segments
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+segments
+[
+l
+1
+,
+r
+1
+],[
+l
+2
+,
+r
+2
+],…,[
+l
+n
+,
+r
+n
+]
+. Each segment has one of two colors: the
+i
+-th segment's color is
+t
+i
+.
+Let's call a pair of segments
+i
+and
+j
+bad if the following two conditions are met:
+t
+i
+≠
+t
+j
+;
+the segments
+[
+l
+i
+,
+r
+i
+]
+and
+[
+l
+j
+,
+r
+j
+]
+intersect, embed or touch, i. e. there exists an integer
+x
+such that
+x∈[
+l
+i
+,
+r
+i
+]
+and
+x∈[
+l
+j
+,
+r
+j
+]
+.
+Calculate the maximum number of segments that can be selected from the given ones, so that there is no bad pair among the selected ones.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — number of segments.
+The next
+n
+lines contains three integers
+l
+i
+,
+r
+i
+,
+t
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤
+10
+9
+;
+t
+i
+∈{1,2}
+) — description of the
+i
+-th segment.
+Output
+Print the maximum number of segments that can be selected, so that there is no bad pair among the selected segments.
+Examples
+input
+Copy
+3
+1 3 1
+4 6 2
+2 5 1
+output
+Copy
+2
+input
+Copy
+5
+5 8 1
+1 3 2
+3 4 2
+6 6 1
+2 10 2
+output
+Copy
+4
+input
+Copy
+7
+19 20 1
+13 15 2
+6 11 2
+4 10 1
+14 17 1
+13 13 2
+5 9 1
+output
+Copy
+5

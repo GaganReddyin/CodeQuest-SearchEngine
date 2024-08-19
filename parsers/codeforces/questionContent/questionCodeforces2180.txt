@@ -1,0 +1,126 @@
+F. Sum Over Subsets
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a multiset
+S
+. Over all pairs of subsets
+A
+and
+B
+, such that:
+B⊂A
+;
+|B|=|A|−1
+;
+greatest common divisor of all elements in
+A
+is equal to one;
+find the sum of
+∑
+x∈A
+x⋅
+∑
+x∈B
+x
+, modulo
+998244353
+.
+Input
+The first line contains one integer
+m
+(
+1≤m≤
+10
+5
+): the number of different values in the multiset
+S
+.
+Each of the next
+m
+lines contains two integers
+a
+i
+,
+fre
+q
+i
+(
+1≤
+a
+i
+≤
+10
+5
+,1≤fre
+q
+i
+≤
+10
+9
+). Element
+a
+i
+appears in the multiset
+S
+fre
+q
+i
+times. All
+a
+i
+are different.
+Output
+Print the required sum, modulo
+998244353
+.
+Examples
+input
+Copy
+2
+1 1
+2 1
+output
+Copy
+9
+input
+Copy
+4
+1 1
+2 1
+3 1
+6 1
+output
+Copy
+1207
+input
+Copy
+1
+1 5
+output
+Copy
+560
+Note
+A multiset is a set where elements are allowed to coincide.
+|X|
+is the cardinality of a set
+X
+, the number of elements in it.
+A⊂B
+: Set
+A
+is a subset of a set
+B
+.
+In the first example
+B={1},A={1,2}
+and
+B={2},A={1,2}
+have a product equal to
+1⋅3+2⋅3=9
+. Other pairs of
+A
+and
+B
+don't satisfy the given constraints.

@@ -1,0 +1,109 @@
+Sorted Distances
+Problem
+MoEngage has given you an array
+A consisting of
+N positive integers.
+You should perform
+Q queries of the following two types:
+1
+i
+X : Set
+A
+i
+to
+X.
+2
+L
+R : Find the minimum non-negative integer
+K such that the sequence
+[∣A
+L
+−K∣,∣A
+L+1
+−K∣,…,∣A
+R−1
+−K∣,∣A
+R
+−K∣] is sorted in non-decreasing order. Print
+−1 if no such
+K exists.
+For each query of type
+2, output the minimum non-negative integer
+K satisfying the constraint, or
+−1 if there isn't any.
+Input Format
+The first line contains two integers
+N,Q.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Then, the
+i
+th
+of the next
+Q lines contains three integers describing the queries
+1
+i
+X or
+2
+L
+R.
+Output Format
+For each query of type
+2, output the minimum integer
+K satisfying the constraint, or
+−1 if there isn't any in a new line.
+Constraints
+1≤N,Q≤2⋅10
+5
+0≤A
+i
+,X≤10
+9
+1≤L≤R≤N
+Sample 1:
+Input
+Output
+5 7
+5 3 2 6 0
+2 1 5
+1 2 7
+2 1 5
+1 4 2
+2 1 5
+1 2 5
+2 1 2
+4
+-1
+5
+0
+Explanation:
+In the first query, selecting
+K=4 makes the sequence
+[∣A
+1
+−K∣,∣A
+2
+−K∣,∣A
+3
+−K∣,∣A
+4
+−K∣,∣A
+5
+−K∣]=[1,1,2,2,4]. This sequence is sorted in non-decreasing order. Also, there exists no value of
+K less than
+4 satisfying this.
+In the second query, change
+A
+2
+=7. After the second query, the array
+A becomes
+[5,7,2,6,0].
+In the third query, there exists no value of
+K satisfying the constraints.

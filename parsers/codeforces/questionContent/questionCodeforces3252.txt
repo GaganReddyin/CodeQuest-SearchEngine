@@ -1,0 +1,135 @@
+D. Make The Fence Great Again
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a fence consisting of
+n
+vertical boards. The width of each board is
+1
+. The height of the
+i
+-th board is
+a
+i
+. You think that the fence is great if there is no pair of adjacent boards having the same height. More formally, the fence is great if and only if for all indices from
+2
+to
+n
+, the condition
+a
+i−1
+≠
+a
+i
+holds.
+Unfortunately, it is possible that now your fence is not great. But you can change it! You can increase the length of the
+i
+-th board by
+1
+, but you have to pay
+b
+i
+rubles for it. The length of each board can be increased any number of times (possibly, zero).
+Calculate the minimum number of rubles you have to spend to make the fence great again!
+You have to answer
+q
+independent queries.
+Input
+The first line contains one integer
+q
+(
+1≤q≤3⋅
+10
+5
+) — the number of queries.
+The first line of each query contains one integers
+n
+(
+1≤n≤3⋅
+10
+5
+) — the number of boards in the fence.
+The following
+n
+lines of each query contain the descriptions of the boards. The
+i
+-th line contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤
+10
+9
+) — the length of the
+i
+-th board and the price for increasing it by
+1
+, respectively.
+It is guaranteed that sum of all
+n
+over all queries not exceed
+3⋅
+10
+5
+.
+It is guaranteed that answer to each query will not exceed
+10
+18
+.
+Output
+For each query print one integer — the minimum number of rubles you have to spend to make the fence great.
+Example
+input
+Copy
+3
+3
+2 4
+2 1
+3 5
+3
+2 3
+2 10
+2 6
+4
+1 7
+3 3
+2 6
+1000000000 2
+output
+Copy
+2
+9
+0
+Note
+In the first query you have to increase the length of second board by
+2
+. So your total costs if
+2⋅
+b
+2
+=2
+.
+In the second query you have to increase the length of first board by
+1
+and the length of third board by
+1
+. So your total costs if
+1⋅
+b
+1
++1⋅
+b
+3
+=9
+.
+In the third query the fence is great initially, so you don't need to spend rubles.

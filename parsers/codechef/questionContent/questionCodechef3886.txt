@@ -1,0 +1,113 @@
+On Graphs, Probability Theory and Cakes
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef is viewing a simulation of creating a tree with
+N vertices (numbered
+1 through
+N) which calculates mysterious coefficients for all the edges. Initially, there is a graph without edges, but there is a set
+S containing
+N−1 edges (numbered
+1 through
+N−1) which should get added to the graph one by one.
+In this process,
+N−1 times, the following steps are performed:
+An edge
+e is chosen uniformly randomly from the current set
+S.
+This edge is added to the graph and removed from
+S.
+The coefficient of
+e is set to the number of vertices in the connected component created by adding this edge.
+Chef is wondering about the expected values of coefficients of the edges. Unfortunately, he does not have much time for such matters since he needs to prepare a superb cake for Chefina's birthday tomorrow.
+Help Chef and for each edge, calculate the expected value of its coefficient modulo
+998,244,353. We can prove that each coefficient is a rational number; for a coefficient in the form
+P/Q, where
+P and
+Q are positive integers and
+Q is coprime with
+998,244,353, you should compute
+P⋅Q
+−1
+modulo
+998,244,353, where
+Q
+−1
+is the multiplicative inverse of
+Q modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The following
+N−1 lines describe the edges in
+S. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+u and
+v denoting that the
+i-th edge connects vertices
+u and
+v.
+Output
+For each test case, print a single line containing
+N−1 integers. For each valid
+i, the
+i-th of these integers should be
+R⋅Q
+−1
+modulo
+998,244,353 for the coefficient of the
+i-th edge.
+Constraints
+2≤T≤10,000
+2≤N≤50,000
+1≤u,v≤N
+the edges in
+S form a tree
+the sum of
+N over all test cases does not exceed
+200,000
+Example Input
+3
+3
+1 2
+2 3
+4
+1 2
+2 3
+3 4
+7
+1 2
+2 3
+3 4
+4 5
+6 2
+7 3
+Example Output
+499122179 499122179
+831870297 3 831870297
+415935151 332748122 166374063 665496239 415935151 4
+Explanation
+Example case 1:
+With probability
+1/2, the edge
+(1,2) is added to the graph first and its coefficient is set to
+2 (vertices
+1 and
+2 are in the connected component). Then, with probability
+1, the edge
+(2,3) is added and its coefficient is set to
+3.
+With probability
+1/2, the edge
+(2,3) is chosen first instead and its coefficient is set to
+2. In this case, the coefficient of
+(1,2) is then set to
+3.
+The expected value of the coefficient of the first edge is
+2⋅1/2+3⋅1/2=5/2. For the second edge, it is the same.
+Example case 2: The expected values of the coefficients are
+17/6,3,17/6.

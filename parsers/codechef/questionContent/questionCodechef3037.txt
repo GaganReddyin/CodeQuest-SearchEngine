@@ -1,0 +1,268 @@
+Elevators
+Problem
+There is a building with
+10
+9
+floors labelled
+1 to
+10
+9
+from the bottom to the top.
+N people would like to move up several floors in the building. Specifically, the
+i-th person wants to move from floor
+A
+i
+to floor
+B
+i
+, where
+A
+i
+<B
+i
+.
+There are
+M elevators in the building. An elevator can hold any number of people. Initially, at the
+0-th second, all elevators are at floor
+1.
+An elevator takes
+1 second to move up
+1 floor but cannot move down any floors. On any floor, an elevator may stop so that people may enter or exit the elevator. Each person takes
+H seconds to enter or exit an elevator. Two or more people cannot enter or exit the same elevator at the same time; they must wait for their turn.
+A person can exit an elevator on any floor, not only floor
+B
+i
+. In particular, a person can switch elevators by exiting on some floor and entering a different elevator on the same floor.
+We say that the
+i-th person has reached the destination after taking
+H seconds to exit an elevator at floor
+B
+i
+.
+Find the minimum time needed in seconds until all
+N people have reached their destinations if they enter and exit elevators optimally.
+Note: We would recommend Python users to use PYPY/PYPY3 instead of PYTHON/PYTHON3.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains three integers
+N,
+M and
+H — the number of people, the number of elevators and the time taken for a person to enter or exit an elevator.
+N lines follow. The
+i-th line contains two integers
+A
+i
+and
+B
+i
+, where the
+i-th person wants to move from floor
+A
+i
+to floor
+B
+i
+.
+Output Format
+For each test case, output a single integer on a new line, representing the minimum time needed until all
+N people have reached their destinations.
+Constraints
+1≤T≤10
+5
+1≤N,M≤3⋅10
+5
+1≤H≤10
+9
+1≤A
+i
+<B
+i
+≤10
+9
+The sum of
+N over all test cases will not exceed
+3⋅10
+5
+The sum of
+M over all test cases will not exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+3
+5 3 2
+12 24
+2 3
+5 6
+3 8
+5 11
+1 20 23
+20 23
+6 3 998244353
+3 9
+3 9
+3 9
+3 9
+3 9
+3 9
+27
+68
+3992977420
+Explanation:
+For the first test case, a possible sequence of events is given as follows for each elevator.
+Elevator
+1:
+At the
+0-th second, elevator
+1 starts moving up from floor
+1.
+At the
+2-nd second, elevator
+1 stops at floor
+3. Person
+4 starts entering elevator
+1.
+At the
+4-th second, person
+4 finishes entering elevator
+1. Elevator
+1 continues moving up from floor
+3.
+At the
+6-th second, elevator
+1 stops at floor
+5. Person
+4 starts exiting elevator
+1.
+At the
+8-th second, person
+4 finishes exiting elevator
+1. Elevator
+1 continues moving up from floor
+5.
+Elevator
+2:
+At the
+0-th second, elevator
+2 starts moving up from floor
+1.
+At the
+1-st second, elevator
+2 stops at floor
+2. Person
+2 starts entering elevator
+2.
+At the
+3-rd second, person
+2 finishes entering elevator
+2. Elevator
+2 continues moving up from floor
+2.
+At the
+4-th second, elevator
+2 stops at floor
+3. Person
+2 starts exiting elevator
+2.
+At the
+6-th second, person
+2 finishes exiting elevator
+2. Elevator
+2 continues moving up from floor
+3.
+At the
+8-th second, elevator
+2 stops at floor
+5. Person
+4 starts entering elevator
+2.
+At the
+10-th second, person
+4 finishes entering elevator
+2. Person
+3 starts entering elevator
+2.
+At the
+12-th second, person
+3 finishes entering elevator
+2. Person
+5 starts entering elevator
+2.
+At the
+14-th second, person
+5 finishes entering elevator
+2. Elevator
+2 continues moving up from floor
+5.
+At the
+15-th second, elevator
+2 stops at floor
+6. Person
+3 starts exiting elevator
+2.
+At the
+17-th second, person
+3 finishes exiting elevator
+2. Elevator
+2 continues moving up from floor
+6.
+At the
+19-th second, elevator
+2 stops at floor
+8. Person
+4 starts exiting elevator
+2.
+At the
+21-st second, person
+4 finishes exiting elevator
+2. Elevator
+2 continues moving up from floor
+8.
+At the
+24-th second, elevator
+2 stops at floor
+11. Person
+5 starts exiting elevator
+2.
+At the
+26-th second, person
+5 finishes exiting elevator
+2. Elevator
+2 continues moving up from floor
+11.
+Elevator
+3:
+At the
+0-th second, elevator
+3 starts moving up from floor
+1.
+At the
+11-th second, elevator
+3 stops at floor
+12. Person
+1 starts entering elevator
+3.
+At the
+13-th second, person
+1 finishes entering elevator
+3. Elevator
+3 continues moving up from floor
+12.
+At the
+25-th second, elevator
+3 stops at floor
+24. Person
+1 starts exiting elevator
+3.
+At the
+27-th second, person
+1 finishes exiting elevator
+3. Elevator
+3 continues moving up from floor
+24.
+All people reach their destinations by
+27 seconds. Notice that person
+4 switched elevators, which is allowed. It can be shown that there is no way for them to reach their destinations by
+26 seconds or fewer.

@@ -1,0 +1,117 @@
+D. Vasya and Triangle
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vasya has got three integers
+n
+,
+m
+and
+k
+. He'd like to find three integer points
+(
+x
+1
+,
+y
+1
+)
+,
+(
+x
+2
+,
+y
+2
+)
+,
+(
+x
+3
+,
+y
+3
+)
+, such that
+0≤
+x
+1
+,
+x
+2
+,
+x
+3
+≤n
+,
+0≤
+y
+1
+,
+y
+2
+,
+y
+3
+≤m
+and the area of the triangle formed by these points is equal to
+nm
+k
+.
+Help Vasya! Find such points (if it's possible). If there are multiple solutions, print any of them.
+Input
+The single line contains three integers
+n
+,
+m
+,
+k
+(
+1≤n,m≤
+10
+9
+,
+2≤k≤
+10
+9
+).
+Output
+If there are no such points, print "NO".
+Otherwise print "YES" in the first line. The next three lines should contain integers
+x
+i
+,
+y
+i
+— coordinates of the points, one point per line. If there are multiple solutions, print any of them.
+You can print each letter in any case (upper or lower).
+Examples
+input
+Copy
+4 3 3
+output
+Copy
+YES
+1 0
+2 3
+4 1
+input
+Copy
+4 4 7
+output
+Copy
+NO
+Note
+In the first example area of the triangle should be equal to
+nm
+k
+=4
+. The triangle mentioned in the output is pictured below:
+In the second example there is no triangle with area
+nm
+k
+=
+16
+7
+.

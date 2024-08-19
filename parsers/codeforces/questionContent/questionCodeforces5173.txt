@@ -1,0 +1,46 @@
+E. Army Creation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+As you might remember from our previous rounds, Vova really likes computer games. Now he is playing a strategy game known as Rage of Empires.
+In the game Vova can hire n different warriors; ith warrior has the type ai. Vova wants to create a balanced army hiring some subset of warriors. An army is called balanced if for each type of warrior present in the game there are not more than k warriors of this type in the army. Of course, Vova wants his army to be as large as possible.
+To make things more complicated, Vova has to consider q different plans of creating his army. ith plan allows him to hire only warriors whose numbers are not less than li and not greater than ri.
+Help Vova to determine the largest size of a balanced army for each plan.
+Be aware that the plans are given in a modified way. See input section for details.
+Input
+The first line contains two integers n and k (1 ≤ n, k ≤ 100000).
+The second line contains n integers a1, a2, ... an (1 ≤ ai ≤ 100000).
+The third line contains one integer q (1 ≤ q ≤ 100000).
+Then q lines follow. ith line contains two numbers xi and yi which represent ith plan (1 ≤ xi, yi ≤ n).
+You have to keep track of the answer to the last plan (let's call it last). In the beginning last = 0. Then to restore values of li and ri for the ith plan, you have to do the following:
+li = ((xi + last) mod n) + 1;
+ri = ((yi + last) mod n) + 1;
+If li > ri, swap li and ri.
+Output
+Print q numbers. ith number must be equal to the maximum size of a balanced army when considering ith plan.
+Example
+input
+Copy
+6 2
+1 1 1 2 2 2
+5
+1 6
+4 3
+1 1
+2 6
+2 6
+output
+Copy
+2
+4
+1
+3
+2
+Note
+In the first example the real plans are:
+1 2
+1 6
+6 6
+2 4
+4 6

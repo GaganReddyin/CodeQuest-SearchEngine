@@ -1,0 +1,215 @@
+D. Three Sequences
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a sequence of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+You have to construct two sequences of integers
+b
+and
+c
+with length
+n
+that satisfy:
+for every
+i
+(
+1≤i≤n
+)
+b
+i
++
+c
+i
+=
+a
+i
+b
+is non-decreasing, which means that for every
+1<i≤n
+,
+b
+i
+≥
+b
+i−1
+must hold
+c
+is non-increasing, which means that for every
+1<i≤n
+,
+c
+i
+≤
+c
+i−1
+must hold
+You have to minimize
+max(
+b
+i
+,
+c
+i
+)
+. In other words, you have to minimize the maximum number in sequences
+b
+and
+c
+.
+Also there will be
+q
+changes, the
+i
+-th change is described by three integers
+l,r,x
+. You should add
+x
+to
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+.
+You have to find the minimum possible value of
+max(
+b
+i
+,
+c
+i
+)
+for the initial sequence and for sequence after each change.
+Input
+The first line contains an integer
+n
+(
+1≤n≤
+10
+5
+).
+The secound line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤i≤n
+,
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+).
+The third line contains an integer
+q
+(
+1≤q≤
+10
+5
+).
+Each of the next
+q
+lines contains three integers
+l,r,x
+(
+1≤l≤r≤n,−
+10
+9
+≤x≤
+10
+9
+), desribing the next change.
+Output
+Print
+q+1
+lines.
+On the
+i
+-th (
+1≤i≤q+1
+) line, print the answer to the problem for the sequence after
+i−1
+changes.
+Examples
+input
+Copy
+4
+2 -1 7 3
+2
+2 4 -3
+3 4 2
+output
+Copy
+5
+5
+6
+input
+Copy
+6
+-9 -10 -9 -6 -5 4
+3
+2 6 -9
+1 2 -10
+4 6 -3
+output
+Copy
+3
+3
+3
+1
+input
+Copy
+1
+0
+2
+1 1 -1
+1 1 -1
+output
+Copy
+0
+0
+-1
+Note
+In the first test:
+The initial sequence
+a=(2,−1,7,3)
+. Two sequences
+b=(−3,−3,5,5),c=(5,2,2,−2)
+is a possible choice.
+After the first change
+a=(2,−4,4,0)
+. Two sequences
+b=(−3,−3,5,5),c=(5,−1,−1,−5)
+is a possible choice.
+After the second change
+a=(2,−4,6,2)
+. Two sequences
+b=(−4,−4,6,6),c=(6,0,0,−4)
+is a possible choice.

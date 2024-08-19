@@ -1,0 +1,181 @@
+D. Different Arrays
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+integers.
+You have to perform the sequence of
+n−2
+operations on this array:
+during the first operation, you either add
+a
+2
+to
+a
+1
+and subtract
+a
+2
+from
+a
+3
+, or add
+a
+2
+to
+a
+3
+and subtract
+a
+2
+from
+a
+1
+;
+during the second operation, you either add
+a
+3
+to
+a
+2
+and subtract
+a
+3
+from
+a
+4
+, or add
+a
+3
+to
+a
+4
+and subtract
+a
+3
+from
+a
+2
+;
+...
+during the last operation, you either add
+a
+n−1
+to
+a
+n−2
+and subtract
+a
+n−1
+from
+a
+n
+, or add
+a
+n−1
+to
+a
+n
+and subtract
+a
+n−1
+from
+a
+n−2
+.
+So, during the
+i
+-th operation, you add the value of
+a
+i+1
+to one of its neighbors, and subtract it from the other neighbor.
+For example, if you have the array
+[1,2,3,4,5]
+, one of the possible sequences of operations is:
+subtract
+2
+from
+a
+3
+and add it to
+a
+1
+, so the array becomes
+[3,2,1,4,5]
+;
+subtract
+1
+from
+a
+2
+and add it to
+a
+4
+, so the array becomes
+[3,1,1,5,5]
+;
+subtract
+5
+from
+a
+3
+and add it to
+a
+5
+, so the array becomes
+[3,1,−4,5,10]
+.
+So, the resulting array is
+[3,1,−4,5,10]
+.
+An array is reachable if it can be obtained by performing the aforementioned sequence of operations on
+a
+. You have to calculate the number of reachable arrays, and print it modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+3≤n≤300
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤300
+).
+Output
+Print one integer — the number of reachable arrays. Since the answer can be very large, print its remainder modulo
+998244353
+.
+Examples
+input
+Copy
+4
+1 1 1 1
+output
+Copy
+3
+input
+Copy
+5
+1 2 3 5 0
+output
+Copy
+7

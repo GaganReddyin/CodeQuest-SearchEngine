@@ -1,0 +1,150 @@
+A. Journey Planning
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Tanya wants to go on a journey across the cities of Berland. There are
+n
+cities situated along the main railroad line of Berland, and these cities are numbered from
+1
+to
+n
+.
+Tanya plans her journey as follows. First of all, she will choose some city
+c
+1
+to start her journey. She will visit it, and after that go to some other city
+c
+2
+>
+c
+1
+, then to some other city
+c
+3
+>
+c
+2
+, and so on, until she chooses to end her journey in some city
+c
+k
+>
+c
+k−1
+. So, the sequence of visited cities
+[
+c
+1
+,
+c
+2
+,…,
+c
+k
+]
+should be strictly increasing.
+There are some additional constraints on the sequence of cities Tanya visits. Each city
+i
+has a beauty value
+b
+i
+associated with it. If there is only one city in Tanya's journey, these beauty values imply no additional constraints. But if there are multiple cities in the sequence, then for any pair of adjacent cities
+c
+i
+and
+c
+i+1
+, the condition
+c
+i+1
+−
+c
+i
+=
+b
+c
+i+1
+−
+b
+c
+i
+must hold.
+For example, if
+n=8
+and
+b=[3,4,4,6,6,7,8,9]
+, there are several three possible ways to plan a journey:
+c=[1,2,4]
+;
+c=[3,5,6,8]
+;
+c=[7]
+(a journey consisting of one city is also valid).
+There are some additional ways to plan a journey that are not listed above.
+Tanya wants her journey to be as beautiful as possible. The beauty value of the whole journey is the sum of beauty values over all visited cities. Can you help her to choose the optimal plan, that is, to maximize the beauty value of the journey?
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of cities in Berland.
+The second line contains
+n
+integers
+b
+1
+,
+b
+2
+, ...,
+b
+n
+(
+1≤
+b
+i
+≤4⋅
+10
+5
+), where
+b
+i
+is the beauty value of the
+i
+-th city.
+Output
+Print one integer — the maximum beauty of a journey Tanya can choose.
+Examples
+input
+Copy
+6
+10 7 1 9 10 15
+output
+Copy
+26
+input
+Copy
+1
+400000
+output
+Copy
+400000
+input
+Copy
+7
+8 9 26 11 12 29 14
+output
+Copy
+55
+Note
+The optimal journey plan in the first example is
+c=[2,4,5]
+.
+The optimal journey plan in the second example is
+c=[1]
+.
+The optimal journey plan in the third example is
+c=[3,6]
+.

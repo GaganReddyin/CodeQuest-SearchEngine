@@ -1,0 +1,130 @@
+I. Omkar and Mosaic
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Omkar is creating a mosaic using colored square tiles, which he places in an
+n×n
+grid. When the mosaic is complete, each cell in the grid will have either a glaucous or sinoper tile. However, currently he has only placed tiles in some cells.
+A completed mosaic will be a mastapeece if and only if each tile is adjacent to exactly
+2
+tiles of the same color (
+2
+tiles are adjacent if they share a side.) Omkar wants to fill the rest of the tiles so that the mosaic becomes a mastapeece. Now he is wondering, is the way to do this unique, and if it is, what is it?
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2000
+).
+Then follow
+n
+lines with
+n
+characters in each line. The
+i
+-th character in the
+j
+-th line corresponds to the cell in row
+i
+and column
+j
+of the grid, and will be
+S
+if Omkar has placed a sinoper tile in this cell,
+G
+if Omkar has placed a glaucous tile,
+.
+if it's empty.
+Output
+On the first line, print UNIQUE if there is a unique way to get a mastapeece, NONE if Omkar cannot create any, and MULTIPLE if there is more than one way to do so. All letters must be uppercase.
+If you print UNIQUE, then print
+n
+additional lines with
+n
+characters in each line, such that the
+i
+-th character in the
+j
+th
+line is
+S
+if the tile in row
+i
+and column
+j
+of the mastapeece is sinoper, and
+G
+if it is glaucous.
+Examples
+input
+Copy
+4
+S...
+..G.
+....
+...S
+output
+Copy
+MULTIPLE
+input
+Copy
+6
+S.....
+....G.
+..S...
+.....S
+....G.
+G.....
+output
+Copy
+NONE
+input
+Copy
+10
+.S....S...
+..........
+...SSS....
+..........
+..........
+...GS.....
+....G...G.
+..........
+......G...
+..........
+output
+Copy
+UNIQUE
+SSSSSSSSSS
+SGGGGGGGGS
+SGSSSSSSGS
+SGSGGGGSGS
+SGSGSSGSGS
+SGSGSSGSGS
+SGSGGGGSGS
+SGSSSSSSGS
+SGGGGGGGGS
+SSSSSSSSSS
+input
+Copy
+1
+.
+output
+Copy
+NONE
+Note
+For the first test case, Omkar can make the mastapeeces
+SSSS
+SGGS
+SGGS
+SSSS
+and
+SSGG
+SSGG
+GGSS
+GGSS.
+For the second test case, it can be proven that it is impossible for Omkar to add tiles to create a mastapeece.
+For the third case, it can be proven that the given mastapeece is the only mastapeece Omkar can create by adding tiles.
+For the fourth test case, it's clearly impossible for the only tile in any mosaic Omkar creates to be adjacent to two tiles of the same color, as it will be adjacent to
+0
+tiles total.

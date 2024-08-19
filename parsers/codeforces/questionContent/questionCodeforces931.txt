@@ -1,0 +1,289 @@
+F. Anti-Theft Road Planning
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem.
+A city has
+n
+2
+buildings divided into a grid of
+n
+rows and
+n
+columns. You need to build a road of some length
+D(A,B)
+of your choice between each pair of adjacent by side buildings
+A
+and
+B
+. Due to budget limitations and legal restrictions, the length of each road must be a positive integer and the total length of all roads should not exceed
+48000
+.
+There is a thief in the city who will start from the topmost, leftmost building (in the first row and the first column) and roam around the city, occasionally stealing artifacts from some of the buildings. He can move from one building to another adjacent building by travelling through the road which connects them.
+You are unable to track down what buildings he visits and what path he follows to reach them. But there is one tracking mechanism in the city. The tracker is capable of storing a single integer
+x
+which is initially
+0
+. Each time the thief travels from a building
+A
+to another adjacent building
+B
+through a road of length
+D(A,B)
+, the tracker changes
+x
+to
+x⊕D(A,B)
+. Each time the thief steals from a building, the tracker reports the value
+x
+stored in it and resets it back to
+0
+.
+It is known beforehand that the thief will steal in exactly
+k
+buildings but you will know the values returned by the tracker only after the thefts actually happen. Your task is to choose the lengths of roads in such a way that no matter what strategy or routes the thief follows, you will be able to exactly tell the location of all the buildings where the thefts occurred from the values returned by the tracker.
+Interaction
+First read a single line containing two integers
+n
+(2≤n≤32)
+and
+k
+(1≤k≤1024)
+denoting the number of rows and number of thefts respectively.
+Let's denote the
+j
+-th building in the
+i
+-th row by
+B
+i,j
+.
+Then print
+n
+lines each containing
+n−1
+integers. The
+j
+-th integer of the
+i
+-th line must be the value of
+D(
+B
+i,j
+,
+B
+i,j+1
+)
+.
+Then print
+n−1
+lines each containing
+n
+integers. The
+j
+-th integer of the
+i
+-th line must be the value of
+D(
+B
+i,j
+,
+B
+i+1,j
+)
+.
+Remember that the total length of the roads must not exceed
+48000
+.
+Then answer
+k
+queries. First read the value
+x
+returned by the tracker. Then print two integers denoting the row number and column number of the building where the theft occurred. After that you will be able to answer the next query (if such exists).
+After printing the answers do not forget to output end of line and flush the output buffer. Otherwise you will get the verdict Idleness limit exceeded. To flush the buffer, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+Read documentation for other languages.
+Hacks
+You cannot make hacks in this problem.
+Example
+input
+Copy
+2 4
+
+
+
+14
+
+1
+
+14
+
+3
+output
+Copy
+1
+8
+2 4
+
+1 2
+
+1 1
+
+1 2
+
+2 1
+Note
+For the sample test,
+n=2
+and
+k=4
+.
+You choose to build the roads of the following lengths:
+The thief follows the following strategy:
+Start at
+B
+1,1
+.
+Move Right to
+B
+1,2
+.
+Move Down to
+B
+2,2
+.
+Move Left to
+B
+2,1
+.
+Move Up to
+B
+1,1
+.
+Move Right to
+B
+1,2
+.
+Steal from
+B
+1,2
+.
+Move Left to
+B
+1,1
+.
+Steal from
+B
+1,1
+.
+Move Down to
+B
+2,1
+.
+Move Right to
+B
+2,2
+.
+Move Up to
+B
+1,2
+.
+Steal from
+B
+1,2
+.
+Move Left to
+B
+1,1
+.
+Move Down to
+B
+2,1
+.
+Steal from
+B
+2,1
+.
+The tracker responds in the following way:
+Initialize
+x=0
+.
+Change
+x
+to
+x⊕1=0⊕1=1
+.
+Change
+x
+to
+x⊕4=1⊕4=5
+.
+Change
+x
+to
+x⊕8=5⊕8=13
+.
+Change
+x
+to
+x⊕2=13⊕2=15
+.
+Change
+x
+to
+x⊕1=15⊕1=14
+.
+Return
+x=14
+and re-initialize
+x=0
+.
+Change
+x
+to
+x⊕1=0⊕1=1
+.
+Return
+x=1
+and re-initialize
+x=0
+.
+Change
+x
+to
+x⊕2=0⊕2=2
+.
+Change
+x
+to
+x⊕8=2⊕8=10
+.
+Change
+x
+to
+x⊕4=10⊕4=14
+.
+Return
+x=14
+and re-initialize
+x=0
+.
+Change
+x
+to
+x⊕1=0⊕1=1
+.
+Change
+x
+to
+x⊕2=1⊕2=3
+.
+Return
+x=3
+and re-initialize
+x=0
+.

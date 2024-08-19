@@ -1,0 +1,184 @@
+Finding Sum
+Problem
+You are given two integers
+N and
+M.
+Find the sum of
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+, over all pairs of arrays
+A and
+B such that
+A and
+B consists of
+N elements
+A
+i
+and
+B
+i
+are integers, where
+0≤A
+i
+,B
+i
+≤M
+∑
+i=1
+N
+A
+i
+=∑
+i=1
+N
+B
+i
+=M
+Since the sum might be large, please print it modulo
+998244353.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases.
+The only line of each test case contains two positive integers
+N and
+M, the number of elements of
+A and the sum of elements of
+A respectively.
+Output Format
+For each test case, output on a new line the required sum modulo
+998244353.
+Constraints
+1≤T≤10
+3
+1≤N≤5⋅10
+2
+1≤M≤10
+5
+The sum of
+M over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+4
+1 5
+2 3
+3 1
+343 343
+0
+160
+24
+46648820
+Explanation:
+Testcase 3: There are 9 pairs of
+(A,B) which fit all the constraints:
+([1,0,0],[1,0,0]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=0
+([0,1,0],[0,1,0]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=0
+([0,0,1],[0,0,1]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=0
+([1,0,0],[0,1,0]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=4
+([1,0,0],[0,0,1]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=4
+([0,1,0],[1,0,0]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=4
+([0,1,0],[0,0,1]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=4
+([0,0,1],[1,0,0]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=4
+([0,0,1],[0,1,0]).
+(∑
+i=1
+N
+∣A
+i
+−B
+i
+∣)
+2
+=4
+The total sum of these is
+24, which is the answer.

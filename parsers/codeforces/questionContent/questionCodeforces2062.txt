@@ -1,0 +1,67 @@
+F. Max Correct Set
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call the set of positive integers
+S
+correct if the following two conditions are met:
+S⊆{1,2,…,n}
+;
+if
+a∈S
+and
+b∈S
+, then
+|a−b|≠x
+and
+|a−b|≠y
+.
+For the given values
+n
+,
+x
+, and
+y
+, you have to find the maximum size of the correct set.
+Input
+A single line contains three integers
+n
+,
+x
+and
+y
+(
+1≤n≤
+10
+9
+;
+1≤x,y≤22
+).
+Output
+Print one integer — the maximum size of the correct set.
+Examples
+input
+Copy
+10 2 5
+output
+Copy
+5
+input
+Copy
+21 4 6
+output
+Copy
+9
+input
+Copy
+1337 7 7
+output
+Copy
+672
+input
+Copy
+455678451 22 17
+output
+Copy
+221997195

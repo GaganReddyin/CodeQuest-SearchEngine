@@ -1,0 +1,73 @@
+One Stone or Two Stones
+Problem
+Chef and Chefina are playing a game. There are two piles numbered
+1 and
+2.
+Pile
+1 contains
+X stones while Pile
+2 contains
+Y stones.
+Chef starts the game.
+In his turn, Chef can either remove
+1 stone each from both the piles or remove
+2 stones from pile
+1.
+On the other hand, Chefina, in her turn, can either remove
+1 stone each from both the piles or remove
+2 stones from pile
+2.
+The player who cannot make a move loses. Determine the winner if both players play optimally.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line containing two integers
+X and
+Y, the initial number of stones in piles
+1 and
+2 respectively.
+Output Format
+For each test case, output CHEF if Chef wins the game, and CHEFINA otherwise.
+You may print each character in uppercase or lowercase. For example, the strings CHEF, chef, Chef, and cHEf are all considered identical.
+Constraints
+1≤T≤1000
+1≤X,Y≤10
+9
+Sample 1:
+Input
+Output
+3
+1 10
+2 2
+4 2
+CHEFINA
+CHEFINA
+CHEF
+Explanation:
+Test case
+1: Consider the following sequence of moves:
+Chef removes
+1 stone each from both the piles. Thus, pile
+1 has no stone left while pile
+2 has
+9 stones left.
+Chefina removes
+2 stones from pile
+2. Thus, pile
+1 has no stones left while pile
+2 has
+7 stones left.
+Since Chef has no valid move, he loses. Note that this might not be an optimal sequence of moves.
+Test case
+2: Consider the following sequence of moves:
+Chef removes
+1 stone each from both the piles. Thus, pile
+1 has
+1 stone left and pile
+2 has
+1 stone left.
+Chefina removes
+1 stone each from both the piles. Thus, pile
+1 has no stones left and pile
+2 has no stones left.
+Since Chef has no valid move, he loses. Note that this might not be an optimal sequence of moves.

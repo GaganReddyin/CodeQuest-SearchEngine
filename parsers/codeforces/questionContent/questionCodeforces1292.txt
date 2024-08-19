@@ -1,0 +1,142 @@
+H. Squid Game
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+After watching the new over-rated series Squid Game, Mashtali and Soroush decided to hold their own Squid Games! Soroush agreed to be the host and will provide money for the winner's prize, and Mashtali became the Front Man!
+m
+players registered to play in the games to win the great prize, but when Mashtali found out how huge the winner's prize is going to be, he decided to kill eliminate all the players so he could take the money for himself!
+Here is how evil Mashtali is going to eliminate players:
+There is an unrooted tree with
+n
+vertices. Every player has
+2
+special vertices
+x
+i
+and
+y
+i
+.
+In one operation, Mashtali can choose any vertex
+v
+of the tree. Then, for each remaining player
+i
+he finds a vertex
+w
+on the simple path from
+x
+i
+to
+y
+i
+, which is the closest to
+v
+. If
+w≠
+x
+i
+and
+w≠
+y
+i
+, player
+i
+will be eliminated.
+Now Mashtali wondered: "What is the minimum number of operations I should perform so that I can remove every player from the game and take the money for myself?"
+Since he was only thinking about the money, he couldn't solve the problem by himself and asked for your help!
+Input
+The first line contains
+2
+integer
+n
+and
+m
+(1≤n,m≤3⋅
+10
+5
+)
+ — the number of vertices of the tree and the number of players.
+The second line contains
+n−1
+integers
+pa
+r
+2
+,pa
+r
+3
+,…,pa
+r
+n
+(1≤pa
+r
+i
+<i)
+ — denoting an edge between node
+i
+and
+pa
+r
+i
+.
+The
+i
+-th of the following
+m
+lines contains two integers
+x
+i
+and
+y
+i
+(1≤
+x
+i
+,
+y
+i
+≤n,
+x
+i
+≠
+y
+i
+)
+ — the special vertices of the
+i
+-th player.
+Output
+Print the minimum number of operations Mashtali has to perform.
+If there is no way for Mashtali to eliminate all the players, print
+−1
+.
+Examples
+input
+Copy
+6 3
+1 1 1 4 4
+1 5
+3 4
+2 6
+output
+Copy
+2
+input
+Copy
+5 3
+1 1 3 3
+1 2
+1 4
+1 5
+output
+Copy
+-1
+Note
+Explanation for the first sample:
+In the first operation, Mashtali can choose vertex
+1
+and eliminate players with colors red and blue. In the second operation, he can choose vertex
+6
+and eliminate the player with orange color.
+In the second sample, Mashtali can't eliminate the first player.

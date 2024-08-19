@@ -1,0 +1,150 @@
+Beautiful Branch
+Problem
+This is an interactive task.
+You are given a tree with
+N nodes.
+Chef has secretly marked two nodes
+A and
+B as special.
+Let the shortest path between nodes
+A and
+B be denoted as the beautiful branch. Note that nodes
+A and
+B can be equal, in which case, beautiful branch consists of only one node.
+We define
+D(X) as the minimum possible distance of node
+X from any node in beautiful branch.
+Your task is to find one of the special nodes using following queries:
+In each query, you can select a subset of nodes
+S from the tree.
+The judge will return the sum of
+D(x),
+x∈S. Formally, the judge returns
+x∈S
+∑
+D(x).
+For each test case, you can use at most
+300 queries.
+Further, the sum of sizes of subsets over all queries in a test case should not exceed
+35⋅N.
+Interaction
+Begin the interaction by reading a single integer
+T denoting the number of test cases. The description of interaction for
+T test cases follows.
+For each test case, first read a single integer
+N, denoting the number of nodes in the tree.
+Then,
+N−1 lines follow. The
+i
+th
+of these lines contain two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between the nodes
+u
+i
+and
+v
+i
+.
+Now you may begin asking queries.
+To ask a query about a set
+S consisting of
+K nodes,
+S
+1
+,S
+2
+,…,S
+K
+,
+(1≤K≤N,1≤S
+i
+≤N, all
+S
+i
+are distinct),
+you should print:
+?
+K
+S
+1
+S
+2
+…
+S
+K
+You will then receive an integer
+Y, where
+Y denotes the value
+x∈S
+∑
+D(x).
+When you have found one of the special nodes (say
+A),
+print the answer in the following format:
+!
+A
+Outputting the answer doesn't count towards the limit of
+300 queries.
+Do not output extra space and newline, or it may cause Wrong Answer verdict.
+If at any time you make an invalid query or exceed the query limit, the interaction is terminated and you will receive a Wrong Answer verdict.
+If you receive a Judge Error verdict, that means your program actually has one of many possible errors: an Idleness Limit Exceeded error (it is waiting for input that does not exist), a Runtime error, you asked an invalid query, or possibly some other error.
+Don't forget to flush the output after printing each line!
+You can read more about Interactive problems here.
+Constraints
+1≤T≤4⋅10
+3
+1≤N≤10
+5
+1≤u
+i
+,v
+i
+≤N,u
+i
+
+=v
+i
+It is guaranteed that the input is a tree.
+The sum of
+N over all test-cases won't exceed
+10
+5
+.
+The number of queries for a test case should not exceed
+300.
+The sum of sizes of subsets over all queries in a test case should not exceed
+35⋅N.
+Sample Interaction
+1
+6
+1 2
+2 3
+1 4
+2 5
+4 6
+                 ? 3 2 3 5
+5
+                 ? 1 4
+0
+                 ? 2 1 6
+0
+                 ! 1
+Consider the tree provided in the input and special nodes as
+A=1 and
+B=6. Thus, the beautiful branch consists of nodes
+1,4, and
+6.
+For the first query, we have a set of
+3 nodes. Thus, the answer will be
+D(2)+D(3)+D(5)=1+2+2=5.
+For the second and the third query, answer will be
+0 as the nodes lie on beautiful branch.
+Since
+1 and
+6 are special nodes, we may print either.
+Note that the above queries are just to demonstrate the interaction. They may or may not be sufficient to deduce the final answer.

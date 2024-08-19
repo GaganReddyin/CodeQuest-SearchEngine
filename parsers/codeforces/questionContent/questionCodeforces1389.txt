@@ -1,0 +1,249 @@
+D. Hemose in ICPC ?
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem!
+In the last regional contest Hemose, ZeyadKhattab and YahiaSherif — members of the team Carpe Diem — did not qualify to ICPC because of some unknown reasons. Hemose was very sad and had a bad day after the contest, but ZeyadKhattab is very wise and knows Hemose very well, and does not want to see him sad.
+Zeyad knows that Hemose loves tree problems, so he gave him a tree problem with a very special device.
+Hemose has a weighted tree with
+n
+nodes and
+n−1
+edges. Unfortunately, Hemose doesn't remember the weights of edges.
+Let's define
+Dist(u,v)
+for
+u≠v
+as the greatest common divisor of the weights of all edges on the path from node
+u
+to node
+v
+.
+Hemose has a special device. Hemose can give the device a set of nodes, and the device will return the largest
+Dist
+between any two nodes from the set. More formally, if Hemose gives the device a set
+S
+of nodes, the device will return the largest value of
+Dist(u,v)
+over all pairs
+(u,v)
+with
+u
+,
+v
+∈
+S
+and
+u≠v
+.
+Hemose can use this Device at most
+12
+times, and wants to find any two distinct nodes
+a
+,
+b
+, such that
+Dist(a,b)
+is maximum possible. Can you help him?
+Interaction
+Begin the interaction from reading a single integer
+n
+(
+2≤n≤
+10
+3
+) — the number of nodes in the tree.
+Next, read
+n−1
+lines.
+The
+i
+-th of the next
+n−1
+lines contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+), which means that there's an edge between nodes
+u
+i
+and
+v
+i
+.
+It's guaranteed that weights of edges were
+≤
+10
+9
+.
+It is guaranteed that the given graph is a tree.
+Now you may begin asking queries. To ask a query about a set of
+k
+nodes
+v
+1
+,
+v
+2
+,…,
+v
+k
+(
+2≤k≤n
+,
+1≤
+v
+i
+≤n
+, all
+v
+i
+are distinct), output:
+?
+k
+v
+1
+v
+2
+…
+v
+k
+You will then receive an integer
+x
+, the largest
+Dist(
+v
+i
+,
+v
+j
+)
+over
+1≤i,j≤k
+with
+i≠j
+.
+When you have found
+a
+and
+b
+(
+1≤a,b≤n)
+,
+a≠b
+) such that
+Dist(a,b)
+is the maximum possible, print the answer in the following format:
+!
+a
+b
+Outputting answer doesn't count towards the limit of
+12
+queries.
+If there are several pairs
+(a,b)
+with the same largest
+Dist(a,b)
+, you can output any.
+After printing a query do not forget to output the end of line and flush the output. Otherwise, you will get Idleness limit exceeded. To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see the documentation for other languages.
+Hacks
+To hack a solution, use the following format.
+The first line should contain a single integer
+n
+(2≤n≤
+10
+3
+)
+— the number of nodes.
+The
+i
+-th of the next
+n−1
+lines should contain three integers
+u
+i
+,
+v
+i
+,
+w
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+,
+1≤w≤
+10
+9
+), which means that there's an edge between nodes
+u
+i
+and
+v
+i
+with weight
+w
+i
+.
+These
+n−1
+edges must form a tree.
+Example
+input
+Copy
+6
+1 2
+2 3
+2 4
+1 5
+5 6
+
+10
+
+2
+
+10
+output
+Copy
+? 6 1 2 3 4 5 6
+
+? 3 3 1 5
+
+? 2 1 2
+
+! 1 2
+Note
+The tree in the first sample:

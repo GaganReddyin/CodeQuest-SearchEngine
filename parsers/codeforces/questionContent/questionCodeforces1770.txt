@@ -1,0 +1,181 @@
+F. Reunion
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It is reported that the 2050 Conference will be held in Yunqi Town in Hangzhou from April 23 to 25, including theme forums, morning jogging, camping and so on.
+The relationship between the
+n
+volunteers of the 2050 Conference can be represented by a tree (a connected undirected graph with
+n
+vertices and
+n−1
+edges). The
+n
+vertices of the tree corresponds to the
+n
+volunteers and are numbered by
+1,2,…,n
+.
+We define the distance between two volunteers
+i
+and
+j
+, dis
+(i,j)
+as the number of edges on the shortest path from vertex
+i
+to vertex
+j
+on the tree. dis
+(i,j)=0
+whenever
+i=j
+.
+Some of the volunteers can attend the on-site reunion while others cannot. If for some volunteer
+x
+and nonnegative integer
+r
+, all volunteers whose distance to
+x
+is no more than
+r
+can attend the on-site reunion, a forum with radius
+r
+can take place. The level of the on-site reunion is defined as the maximum possible radius of any forum that can take place.
+Assume that each volunteer can attend the on-site reunion with probability
+1
+2
+and these events are independent. Output the expected level of the on-site reunion. When no volunteer can attend, the level is defined as
+−1
+. When all volunteers can attend, the level is defined as
+n
+.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤300
+) denoting the number of volunteers.
+Each of the next
+n−1
+lines contains two integers
+a
+and
+b
+denoting an edge between vertex
+a
+and vertex
+b
+.
+Output
+Output the expected level modulo
+998244353
+.
+Formally, let
+M=998244353
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Examples
+input
+Copy
+3
+1 2
+2 3
+output
+Copy
+499122177
+input
+Copy
+5
+1 2
+2 3
+3 4
+3 5
+output
+Copy
+249561089
+input
+Copy
+10
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+output
+Copy
+821796866
+Note
+For the first example, the following table shows all possible outcomes.
+yes
+means the volunteer can attend the on-site reunion and
+no
+means he cannot attend.
+1
+yes
+yes
+yes
+yes
+no
+no
+no
+no
+2
+yes
+yes
+no
+no
+yes
+yes
+no
+no
+3
+yes
+no
+yes
+no
+yes
+no
+yes
+no
+level
+3
+1
+0
+0
+1
+0
+0
+−1
+The expected level is
+3+1+1+(−1)
+2
+3
+=
+1
+2
+.

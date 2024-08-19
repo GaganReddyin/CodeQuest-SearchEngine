@@ -1,0 +1,320 @@
+I. Cubic Lattice
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A cubic lattice
+L
+in
+3
+-dimensional euclidean space is a set of points defined in the following way:
+L={u⋅
+r
+⃗ 
+1
++v⋅
+r
+⃗ 
+2
++w⋅
+r
+⃗ 
+3
+}
+u,v,w∈Z
+→
+→
+→
+Where
+r
+⃗ 
+1
+,
+r
+⃗ 
+2
+,
+r
+⃗ 
+3
+∈
+Z
+3
+are some integer vectors such that:
+r
+⃗ 
+1
+→
+,
+r
+⃗ 
+2
+→
+and
+r
+⃗ 
+3
+→
+are pairwise orthogonal:
+r
+⃗ 
+1
+⋅
+r
+⃗ 
+2
+=
+r
+⃗ 
+1
+⋅
+r
+⃗ 
+3
+=
+r
+⃗ 
+2
+⋅
+r
+⃗ 
+3
+=0
+→
+→
+→
+→
+→
+→
+Where
+a
+⃗ 
+⋅
+b
+⃗ 
+is a dot product of vectors
+a
+⃗ 
+→
+and
+b
+⃗ 
+→
+.
+r
+⃗ 
+1
+→
+,
+r
+⃗ 
+2
+→
+and
+r
+⃗ 
+3
+→
+all have the same length:
+|
+r
+⃗ 
+1
+|=|
+r
+⃗ 
+2
+|=|
+r
+⃗ 
+3
+|=r
+→
+→
+→
+You're given a set
+A={
+a
+⃗ 
+1
+,
+a
+⃗ 
+2
+,…,
+a
+⃗ 
+n
+}
+of integer points,
+i
+-th point has coordinates
+a
+i
+=(
+x
+i
+;
+y
+i
+;
+z
+i
+)
+. Let
+g
+i
+=gcd(
+x
+i
+,
+y
+i
+,
+z
+i
+)
+. It is guaranteed that
+gcd(
+g
+1
+,
+g
+2
+,…,
+g
+n
+)=1
+.
+You have to find a cubic lattice
+L
+such that
+A⊂L
+and
+r
+is the maximum possible.
+Input
+First line contains single integer
+n
+(
+1≤n≤
+10
+4
+) — the number of points in
+A
+.
+The
+i
+-th of the following
+n
+lines contains integers
+x
+i
+,
+y
+i
+,
+z
+i
+(
+0<
+x
+2
+i
++
+y
+2
+i
++
+z
+2
+i
+≤
+10
+16
+) — coordinates of the
+i
+-th point.
+It is guaranteed that
+gcd(
+g
+1
+,
+g
+2
+,…,
+g
+n
+)=1
+where
+g
+i
+=gcd(
+x
+i
+,
+y
+i
+,
+z
+i
+)
+.
+Output
+In first line output a single integer
+r
+2
+, the square of maximum possible
+r
+.
+In following
+3
+lines output coordinates of vectors
+r
+⃗ 
+1
+→
+,
+r
+⃗ 
+2
+→
+and
+r
+⃗ 
+3
+→
+respectively.
+If there are multiple possible answers, output any.
+Examples
+input
+Copy
+2
+1 2 3
+1 2 1
+output
+Copy
+1
+1 0 0
+0 1 0
+0 0 1
+input
+Copy
+1
+1 2 2
+output
+Copy
+9
+2 -2 1
+1 2 2
+-2 -1 2
+input
+Copy
+1
+2 5 5
+output
+Copy
+9
+-1 2 2
+2 -1 2
+2 2 -1

@@ -1,0 +1,92 @@
+I. Say Hello
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Two friends are travelling through Bubble galaxy. They say "Hello!" via signals to each other if their distance is smaller or equal than
+d
+1
+and
+it's the first time they speak to each other or
+at some point in time after their last talk their distance was greater than
+d
+2
+.
+We need to calculate how many times friends said "Hello!" to each other. For
+N
+moments, you'll have an array of points for each friend representing their positions at that moment. A person can stay in the same position between two moments in time, but if a person made a move we assume this movement as movement with constant speed in constant direction.
+Input
+The first line contains one integer number
+N
+(
+2≤N≤100000
+) representing number of moments in which we captured positions for two friends.
+The second line contains two integer numbers
+d
+1
+and
+d
+2
+ (0<
+d
+1
+<
+d
+2
+<1000)
+.
+The next
+N
+lines contains four integer numbers
+A
+x
+,
+A
+y
+,
+B
+x
+,
+B
+y
+(
+0≤
+A
+x
+,
+A
+y
+,
+B
+x
+,
+B
+y
+≤1000
+) representing coordinates of friends A and B in each captured moment.
+Output
+Output contains one integer number that represents how many times friends will say "Hello!" to each other.
+Example
+input
+Copy
+4
+2 5
+0 0 0 10
+5 5 5 6
+5 0 10 5
+14 7 10 5
+output
+Copy
+2
+Note
+Explanation: Friends should send signals 2 times to each other, first time around point
+A2
+and
+B2
+and second time during A's travel from point
+A3
+to
+A4
+while B stays in point
+B3=B4
+.

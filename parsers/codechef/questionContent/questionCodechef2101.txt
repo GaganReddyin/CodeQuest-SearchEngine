@@ -1,0 +1,80 @@
+The Magical Stone
+Problem
+Initially, there is a magical stone of mass
+2
+N
+lying at the origin of the number line. For the next
+N seconds, the following event happens:
+Let us define the decomposition of a magical stone as follows: If there is a magical stone of mass
+M>1 lying at coordinate
+X, then it decomposes into two magical stones, each of mass
+2
+M
+lying at the coordinates
+X−1 and
+X+1 respectively. The original stone of mass
+M gets destroyed in the process.
+Each second, all the magical stones undergo decomposition simultaneously.
+Note that there can be more than one stone at any coordinate
+X.
+Given a range
+[L,R], find out the number of stones present at each of the coordinates in the range
+[L,R]. As the number of stones can be very large, output them modulo
+(10
+9
++7).
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains three integers
+N,
+L and
+R, as described in the problem statement.
+Output Format
+For each testcase, output in a single line a total of
+(R−L+1) space-separated integers. The
+i
+th
+integer will denote the number of stones present at
+X=(L+i−1) coordinate. As the number of stones can be very large, output them modulo
+(10
+9
++7).
+Constraints
+1≤T≤100
+1≤N≤10
+6
+−N≤L≤R≤N
+Sum of
+(R−L+1) over all the test cases doesn't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+2 -2 2
+2 0 2
+150000 48 48
+1 0 2 0 1
+2 0 1
+122830846
+Explanation:
+Test case 1: Let us look at the number of stones for
+x=−2 to
+x=2 as the time progresses:
+t=0:
+{0,0,1,0,0}
+t=1:
+{0,1,0,1,0}
+t=2:
+{1,0,2,0,1}
+We have to output the number of stones at
+x=−2 to
+x=2, which is
+{1,0,2,0,1}.
+Test case 2: Similar to first test case, We have to output the number of stones at
+x=0 to
+x=2, which is
+{2,0,1}.

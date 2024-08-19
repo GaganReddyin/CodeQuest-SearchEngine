@@ -1,0 +1,70 @@
+D1. Domino (easy version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between this problem and D2 is that you don't have to provide the way to construct the answer in this problem, but you have to do it in D2.
+There's a table of
+n×m
+cells (
+n
+rows and
+m
+columns). The value of
+n⋅m
+is even.
+A domino is a figure that consists of two cells having a common side. It may be horizontal (one of the cells is to the right of the other) or vertical (one of the cells is above the other).
+You need to find out whether it is possible to place
+nm
+2
+dominoes on the table so that exactly
+k
+of them are horizontal and all the other dominoes are vertical. The dominoes cannot overlap and must fill the whole table.
+Input
+The first line contains one integer
+t
+(
+1≤t≤10
+) — the number of test cases. Then
+t
+test cases follow.
+Each test case consists of a single line. The line contains three integers
+n
+,
+m
+,
+k
+(
+1≤n,m≤100
+,
+0≤k≤
+nm
+2
+,
+n⋅m
+is even) — the number of rows, columns and horizontal dominoes, respectively.
+Output
+For each test case output "YES", if it is possible to place dominoes in the desired way, or "NO" otherwise.
+You may print each letter in any case (YES, yes, Yes will all be recognized as positive answer, NO, no and nO will all be recognized as negative answer).
+Example
+input
+Copy
+8
+4 4 2
+2 3 0
+3 2 3
+1 2 0
+2 4 2
+5 2 2
+2 17 16
+2 1 1
+output
+Copy
+YES
+YES
+YES
+NO
+YES
+NO
+YES
+NO

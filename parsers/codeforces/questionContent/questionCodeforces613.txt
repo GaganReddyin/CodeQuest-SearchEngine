@@ -1,0 +1,146 @@
+G. Cut Substrings
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two non-empty strings
+s
+and
+t
+, consisting of Latin letters.
+In one move, you can choose an occurrence of the string
+t
+in the string
+s
+and replace it with dots.
+Your task is to remove all occurrences of the string
+t
+in the string
+s
+in the minimum number of moves, and also calculate how many different sequences of moves of the minimum length exist.
+Two sequences of moves are considered different if the sets of indices at which the removed occurrences of the string
+t
+in
+s
+begin differ. For example, the sets
+{1,2,3}
+and
+{1,2,4}
+are considered different, the sets
+{2,4,6}
+and
+{2,6}
+— too, but sets
+{3,5}
+and
+{5,3}
+— not.
+For example, let the string
+s=
+"abababacababa" and the string
+t=
+"aba". We can remove all occurrences of the string
+t
+in
+2
+moves by cutting out the occurrences of the string
+t
+at the
+3
+th and
+9
+th positions. In this case, the string
+s
+is an example of the form "ab...bac...ba". It is also possible to cut occurrences of the string
+t
+at the
+3
+th and
+11
+th positions. There are two different sequences of minimum length moves.
+Since the answer can be large, output it modulo
+10
+9
++7
+.
+Input
+The first line of the input contains a single integer
+q
+(
+1≤q≤50
+) — the number of test cases. The descriptions of the sets follow.
+The first line of each set contains a non-empty string
+s
+(
+1≤|s|≤500
+) consisting of lowercase Latin letters.
+The second line of each set contains a non-empty string
+t
+(
+1≤|t|≤500
+) consisting of lowercase Latin letters.
+It is guaranteed that the sum of string lengths
+s
+over all test cases does not exceed
+500
+. Similarly, it is guaranteed that the sum of string lengths
+t
+over all test cases does not exceed
+500
+.
+Output
+For each test case print two integers — the minimum number of moves and the number of different optimal sequences, modulo
+10
+9
++7
+.
+Example
+input
+Copy
+8
+abababacababa
+aba
+ddddddd
+dddd
+xyzxyz
+xyz
+abc
+abcd
+abacaba
+abaca
+abc
+def
+aaaaaaaa
+a
+aaaaaaaa
+aa
+output
+Copy
+2 2
+1 4
+2 1
+0 1
+1 1
+0 1
+8 1
+3 6
+Note
+The first test case is explained in the statement.
+In the second case, it is enough to cut any of the four occurrences.
+In the third case, string
+s
+is the concatenation of two strings
+t=
+"xyz", so there is a unique optimal sequence of
+2
+moves.
+In the fourth and sixth cases, the string
+s
+initially contains no occurrences of the string
+t
+.
+In the fifth case, the string
+s
+contains exactly one occurrence of the string
+t
+.

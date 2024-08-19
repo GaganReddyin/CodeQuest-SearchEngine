@@ -1,0 +1,323 @@
+D1. Hot Start Up (easy version)
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This is an easy version of the problem. The constraints of
+t
+,
+n
+,
+k
+are the only difference between versions.
+You have a device with two CPUs. You also have
+k
+programs, numbered
+1
+through
+k
+, that you can run on the CPUs.
+The
+i
+-th program (
+1≤i≤k
+) takes
+col
+d
+i
+seconds to run on some CPU. However, if the last program we ran on this CPU was also program
+i
+, it only takes
+ho
+t
+i
+seconds (
+ho
+t
+i
+≤col
+d
+i
+). Note that this only applies if we run program
+i
+multiple times consecutively  — if we run program
+i
+, then some different program, then program
+i
+again, it will take
+col
+d
+i
+seconds the second time.
+You are given a sequence
+a
+1
+,
+a
+2
+,…,
+a
+n
+of length
+n
+, consisting of integers from
+1
+to
+k
+. You need to use your device to run programs
+a
+1
+,
+a
+2
+,…,
+a
+n
+in sequence. For all
+2≤i≤n
+, you cannot start running program
+a
+i
+until program
+a
+i−1
+has completed.
+Find the minimum amount of time needed to run all programs
+a
+1
+,
+a
+2
+,…,
+a
+n
+in sequence.
+Input
+Input consists of multiple test cases. The first line contains a single integer
+t
+, the number of test cases (
+1≤t≤5000
+).
+The first line of each test case contains
+n
+and
+k
+(
+1≤n,k≤5000
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤k
+).
+The third line of each test case contains
+k
+integers
+col
+d
+1
+,col
+d
+2
+,…,col
+d
+k
+(
+1≤col
+d
+i
+≤
+10
+9
+).
+The fourth line of each test case contains
+k
+integers
+ho
+t
+1
+,ho
+t
+2
+,…,ho
+t
+k
+(
+1≤ho
+t
+i
+≤col
+d
+i
+).
+It is guaranteed the sum of
+n
+and the sum of
+k
+over all test cases do not exceed
+5000
+.
+Output
+For each test case, print the minimum time needed to run all programs in the given order.
+Example
+input
+Copy
+9
+3 2
+1 2 2
+3 2
+2 1
+4 2
+1 2 1 2
+5 3
+2 1
+4 3
+1 2 3 1
+100 100 100
+1 1 1
+5 2
+2 1 2 1 1
+65 45
+54 7
+5 3
+1 3 2 1 2
+2 2 2
+1 1 1
+5 1
+1 1 1 1 1
+1000000000
+999999999
+5 6
+1 6 1 4 1
+3 6 4 1 4 5
+1 1 1 1 4 1
+1 3
+3
+4 5 6
+1 2 3
+8 3
+3 3 3 1 2 3 2 1
+10 10 8
+10 10 5
+output
+Copy
+6
+11
+301
+225
+8
+4999999996
+11
+6
+63
+Note
+In the first test case, we can do the following:
+Run program
+a
+1
+=1
+on CPU
+1
+. It takes
+col
+d
+1
+=3
+seconds to run.
+Run program
+a
+2
+=2
+on CPU
+2
+. It takes
+col
+d
+2
+=2
+seconds to run.
+Run program
+a
+3
+=2
+on CPU
+2
+. The last program run on this CPU was also program
+2
+, so it takes
+ho
+t
+2
+=1
+second to run.
+In total, we need
+3+2+1=6
+seconds to run them all. We can show this is optimal.
+In the second test case, we can use do the following:
+Run program
+a
+1
+=1
+on CPU
+1
+. It takes
+col
+d
+1
+=5
+seconds to run.
+Run program
+a
+2
+=2
+on CPU
+2
+. It takes
+col
+d
+2
+=3
+seconds to run.
+Run program
+a
+3
+=1
+on CPU
+1
+. The last program run on this CPU was also program
+1
+, so it takes
+ho
+t
+1
+=2
+seconds to run.
+Run program
+a
+4
+=2
+on CPU
+2
+. The last program run on this CPU was also program
+2
+, so it takes
+ho
+t
+2
+=1
+second to run.
+In total, we need
+5+3+2+1=11
+seconds. We can show this is optimal.

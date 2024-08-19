@@ -1,0 +1,146 @@
+F. Tricolor Triangles
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a simple undirected graph with
+n
+vertices and
+m
+edges. Edge
+i
+is colored in the color
+c
+i
+, which is either
+1
+,
+2
+, or
+3
+, or left uncolored (in this case,
+c
+i
+=−1
+).
+You need to color all of the uncolored edges in such a way that for any three pairwise adjacent vertices
+1≤a<b<c≤n
+, the colors of the edges
+a↔b
+,
+b↔c
+, and
+a↔c
+are either pairwise different, or all equal. In case no such coloring exists, you need to determine that.
+Input
+The first line of input contains one integer
+t
+(
+1≤t≤10
+): the number of test cases.
+The following lines contain the description of the test cases.
+In the first line you are given two integers
+n
+and
+m
+(
+3≤n≤64
+,
+0≤m≤min(256,
+n(n−1)
+2
+)
+): the number of vertices and edges in the graph.
+Each of the next
+m
+lines contains three integers
+a
+i
+,
+b
+i
+, and
+c
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+,
+a
+i
+≠
+b
+i
+,
+c
+i
+is either
+−1
+,
+1
+,
+2
+, or
+3
+), denoting an edge between
+a
+i
+and
+b
+i
+with color
+c
+i
+. It is guaranteed that no two edges share the same endpoints.
+Output
+For each test case, print
+m
+integers
+d
+1
+,
+d
+2
+,…,
+d
+m
+, where
+d
+i
+is the color of the
+i
+-th edge in your final coloring. If there is no valid way to finish the coloring, print
+−1
+.
+Example
+input
+Copy
+4
+3 3
+1 2 1
+2 3 2
+3 1 -1
+3 3
+1 2 1
+2 3 1
+3 1 -1
+4 4
+1 2 -1
+2 3 -1
+3 4 -1
+4 1 -1
+3 3
+1 2 1
+2 3 1
+3 1 2
+output
+Copy
+1 2 3 
+1 1 1 
+1 2 2 3 
+-1

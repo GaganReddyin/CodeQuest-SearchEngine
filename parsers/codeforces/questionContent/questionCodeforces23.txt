@@ -1,0 +1,97 @@
+E. The Lakes
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an
+n×m
+grid
+a
+of non-negative integers. The value
+a
+i,j
+represents the depth of water at the
+i
+-th row and
+j
+-th column.
+A lake is a set of cells such that:
+each cell in the set has
+a
+i,j
+>0
+, and
+there exists a path between any pair of cells in the lake by going up, down, left, or right a number of times and without stepping on a cell with
+a
+i,j
+=0
+.
+The volume of a lake is the sum of depths of all the cells in the lake.
+Find the largest volume of a lake in the grid.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains two integers
+n,m
+(
+1≤n,m≤1000
+) — the number of rows and columns of the grid, respectively.
+Then
+n
+lines follow each with
+m
+integers
+a
+i,j
+(
+0≤
+a
+i,j
+≤1000
+) — the depth of the water at each cell.
+It is guaranteed that the sum of
+n⋅m
+over all test cases does not exceed
+10
+6
+.
+Output
+For each test case, output a single integer — the largest volume of a lake in the grid.
+Example
+input
+Copy
+5
+3 3
+1 2 0
+3 4 0
+0 0 5
+1 1
+0
+3 3
+0 1 1
+1 0 1
+1 1 1
+5 5
+1 1 1 1 1
+1 0 0 0 1
+1 0 5 0 1
+1 0 0 0 1
+1 1 1 1 1
+5 5
+1 1 1 1 1
+1 0 0 0 1
+1 1 4 0 1
+1 0 0 0 1
+1 1 1 1 1
+output
+Copy
+10
+0
+7
+16
+21

@@ -1,0 +1,185 @@
+F. Double Sort II
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given two permutations
+a
+and
+b
+, both of size
+n
+. A permutation of size
+n
+is an array of
+n
+elements, where each integer from
+1
+to
+n
+appears exactly once. The elements in each permutation are indexed from
+1
+to
+n
+.
+You can perform the following operation any number of times:
+choose an integer
+i
+from
+1
+to
+n
+;
+let
+x
+be the integer such that
+a
+x
+=i
+. Swap
+a
+i
+with
+a
+x
+;
+let
+y
+be the integer such that
+b
+y
+=i
+. Swap
+b
+i
+with
+b
+y
+.
+Your goal is to make both permutations sorted in ascending order (i. e. the conditions
+a
+1
+<
+a
+2
+<⋯<
+a
+n
+and
+b
+1
+<
+b
+2
+<⋯<
+b
+n
+must be satisfied) using minimum number of operations. Note that both permutations must be sorted after you perform the sequence of operations you have chosen.
+Input
+The first line contains one integer
+n
+(
+2≤n≤3000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+; all
+a
+i
+are distinct).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤n
+; all
+b
+i
+are distinct).
+Output
+First, print one integer
+k
+(
+0≤k≤2n
+) — the minimum number of operations required to sort both permutations. Note that it can be shown that
+2n
+operations are always enough.
+Then, print
+k
+integers
+o
+p
+1
+,o
+p
+2
+,…,o
+p
+k
+(
+1≤o
+p
+j
+≤n
+), where
+o
+p
+j
+is the value of
+i
+you choose during the
+j
+-th operation.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+5
+1 3 2 4 5
+2 1 3 4 5
+output
+Copy
+1
+2 
+input
+Copy
+2
+1 2
+1 2
+output
+Copy
+0
+input
+Copy
+4
+1 3 4 2
+4 3 2 1
+output
+Copy
+2
+3 4 

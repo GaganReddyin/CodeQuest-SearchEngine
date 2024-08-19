@@ -1,0 +1,73 @@
+D. Min Cost String
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's define the cost of a string
+s
+as the number of index pairs
+i
+and
+j
+(
+1≤i<j<|s|
+) such that
+s
+i
+=
+s
+j
+and
+s
+i+1
+=
+s
+j+1
+.
+You are given two positive integers
+n
+and
+k
+. Among all strings with length
+n
+that contain only the first
+k
+characters of the Latin alphabet, find a string with minimum possible cost. If there are multiple such strings with minimum cost — find any of them.
+Input
+The only line contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+;1≤k≤26
+).
+Output
+Print the string
+s
+such that it consists of
+n
+characters, each its character is one of the
+k
+first Latin letters, and it has the minimum possible cost among all these strings. If there are multiple such strings — print any of them.
+Examples
+input
+Copy
+9 4
+output
+Copy
+aabacadbb
+input
+Copy
+5 1
+output
+Copy
+aaaaa
+input
+Copy
+10 26
+output
+Copy
+codeforces

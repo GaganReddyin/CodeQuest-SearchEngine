@@ -1,0 +1,116 @@
+B2. Palindrome Game (hard version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between the easy and hard versions is that the given string
+s
+in the easy version is initially a palindrome, this condition is not always true for the hard version.
+A palindrome is a string that reads the same left to right and right to left. For example, "101101" is a palindrome, while "0101" is not.
+Alice and Bob are playing a game on a string
+s
+of length
+n
+consisting of the characters '0' and '1'. Both players take alternate turns with Alice going first.
+In each turn, the player can perform one of the following operations:
+Choose any
+i
+(
+1≤i≤n
+), where
+s[i]=
+'0' and change
+s[i]
+to '1'. Pay 1 dollar.
+Reverse the whole string, pay 0 dollars. This operation is only allowed if the string is currently not a palindrome, and the last operation was not reverse. That is, if Alice reverses the string, then Bob can't reverse in the next move, and vice versa.
+Reversing a string means reordering its letters from the last to the first. For example, "01001" becomes "10010" after reversing.
+The game ends when every character of string becomes '1'. The player who spends minimum dollars till this point wins the game and it is a draw if both spend equal dollars. If both players play optimally, output whether Alice wins, Bob wins, or if it is a draw.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+3
+). Then
+t
+test cases follow.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+3
+).
+The second line of each test case contains the string
+s
+of length
+n
+, consisting of the characters '0' and '1'. It is guaranteed that the string
+s
+contains at least one '0'.
+Note that there is no limit on the sum of
+n
+over test cases.
+Output
+For each test case print a single word in a new line:
+"ALICE", if Alice will win the game,
+"BOB", if Bob will win the game,
+"DRAW", if the game ends in a draw.
+Example
+input
+Copy
+3
+3
+110
+2
+00
+4
+1010
+output
+Copy
+ALICE
+BOB
+ALICE
+Note
+In the first test case of example,
+in the
+1
+-st move, Alice will use the
+2
+-nd operation to reverse the string, since doing the
+1
+-st operation will result in her loss anyway. This also forces Bob to use the
+1
+-st operation.
+in the
+2
+-nd move, Bob has to perform the
+1
+-st operation, since the
+2
+-nd operation cannot be performed twice in a row. All characters of the string are '1', game over.
+Alice spends
+0
+dollars while Bob spends
+1
+dollar. Hence, Alice wins.
+In the second test case of example,
+in the
+1
+-st move Alice has to perform the
+1
+-st operation, since the string is currently a palindrome.
+in the
+2
+-nd move Bob reverses the string.
+in the
+3
+-rd move Alice again has to perform the
+1
+-st operation. All characters of the string are '1', game over.
+Alice spends
+2
+dollars while Bob spends
+0
+dollars. Hence, Bob wins.

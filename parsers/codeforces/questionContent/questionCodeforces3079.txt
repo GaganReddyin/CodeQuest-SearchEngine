@@ -1,0 +1,141 @@
+F. Colored Tree
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're given a tree with
+n
+vertices. The color of the
+i
+-th vertex is
+h
+i
+.
+The value of the tree is defined as
+∑
+h
+i
+=
+h
+j
+,1≤i<j≤n
+dis(i,j)
+, where
+dis(i,j)
+is the number of edges on the shortest path between
+i
+and
+j
+.
+The color of each vertex is lost, you only remember that
+h
+i
+can be any integer from
+[
+l
+i
+,
+r
+i
+]
+(inclusive). You want to calculate the sum of values of all trees meeting these conditions modulo
+10
+9
++7
+(the set of edges is fixed, but each color is unknown, so there are
+∏
+i=1
+n
+(
+r
+i
+−
+l
+i
++1)
+different trees).
+Input
+The first line contains one integer
+n
+(
+2≤n≤
+10
+5
+) — the number of vertices.
+Then
+n
+lines follow, each line contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤
+10
+5
+) denoting the range of possible colors of vertex
+i
+.
+Then
+n−1
+lines follow, each containing two integers
+u
+and
+v
+(
+1≤u,v≤n
+,
+u≠v
+) denoting an edge of the tree. It is guaranteed that these edges form a tree.
+Output
+Print one integer — the sum of values of all possible trees, taken modulo
+10
+9
++7
+.
+Example
+input
+Copy
+4
+1 1
+1 2
+1 1
+1 2
+1 2
+1 3
+3 4
+output
+Copy
+22
+Note
+In the first example there are four different ways to color the tree (so, there are four different trees):
+a tree with vertices colored as follows:
+{1,1,1,1}
+. The value of this tree is
+dis(1,2)+dis(1,3)+dis(1,4)+dis(2,3)+dis(2,4)+dis(3,4)=10
+;
+a tree with vertices colored as follows:
+{1,2,1,1}
+. The value of this tree is
+dis(1,3)+dis(1,4)+dis(3,4)=4
+;
+a tree with vertices colored as follows:
+{1,1,1,2}
+. The value of this tree is
+dis(1,2)+dis(1,3)+dis(2,3)=4
+;
+a tree with vertices colored as follows:
+{1,2,1,2}
+. The value of this tree is
+dis(1,3)+dis(2,4)=4
+.
+Overall the sum of all values is
+10+4+4+4=22
+.

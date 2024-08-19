@@ -1,0 +1,76 @@
+Line Line Line Graph
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider an undirected graph
+G with
+N vertices and
+M edges. A line graph
+L(G) of this graph is a graph with
+M vertices; each of these vertices corresponds to an edge in
+G and two vertices in
+L(G) are connected by an edge if the corresponding edges in
+G have a common vertex.
+Let
+L
+k
+(G) denote the result of performing the operation "replace
+G by
+L(G)"
+k times, i.e.
+L
+1
+(G)=L(G),
+L
+2
+(G)=L(L(G)),
+L
+3
+(G)=L(L(L(G))) and so on.
+You are given an undirected simple graph
+G with
+N vertices (numbered
+1 through
+N) and
+M edges, and a positive integer
+K. Find the size of the largest independent set in
+L
+K
+(G). Since this value may be very large, compute it modulo
+998,244,353.
+Input
+The first line of the input contains three space-separated integers
+N,
+M and
+K.
+Each of the next
+M lines contains two space-separated integers
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+Output
+Print a single line containing one integer ― the number of vertices in the largest independent set in
+L
+K
+(G), modulo
+998,244,353.
+Constraints
+2≤N,M≤2,000
+1≤K≤7
+1≤u,v≤N
+G does not contain any self-loops or parallel edges
+Subtasks
+Subtask #1 (30 points):
+K=1
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+4 6 2
+1 2
+1 3
+1 4
+2 3
+2 4
+3 4
+3

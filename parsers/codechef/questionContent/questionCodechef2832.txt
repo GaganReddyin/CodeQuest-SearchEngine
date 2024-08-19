@@ -1,0 +1,43 @@
+Infinite Graph
+Problem
+There is a graph of infinite size. The vertices of the graph are integers from negative infinity to positive infinity. Each vertex has a label (It can be empty too). Every label is an array of positive integers.
+For every integer x in u's label, there is a directed edge from u to (u + x). There can be multiple edges connecting any 2 vertices.
+The labels are periodic with period n. So label of vertex v is the same as the label of vertex (v + n) for all v.
+Ankita wants to color all edges of the graph (assume that she can somehow color all edges of an infinite graph).
+An edge-coloring is good if every vertex meets the following criteria :
+Colors of all outgoing edges are distinct.
+Colors of all incoming edges are distinct.
+Set of colors of incoming edges is the same as the set of colors of outgoing edges.
+Now Ankita wonders what is the maximum number of colors she can use to do a good coloring of a given graph's edges. Can you write a program to help her find out the answer?
+Input
+The first line of input consists of a single integer T, the number of test cases. T test cases follow.
+The first line of each test case contains a single integer n - the periodicity of the graph's labels.
+The next n lines contain the description of n labels. The ith of these lines begins with the integer mi, the length of the ith array and and it represents the label corresponding to vertex (i-1).
+After that mi integers follow, which are the elements of the array. Each element lies between 1 and 106.
+Output
+Output a single integer for each test case in a separate line:
+If it is not possible to color edges of the graph in a good way, output -1.
+Otherwise output the maximum number of colors with which the graph can be colored in a good way.
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ n ≤ 1000
+0 ≤ mi ≤ 1000
+Each element of an array lies between 1 and 106 (both inclusive).
+Sum of n over all T doesn't exceed 1000.
+Sample input
+2
+3
+1 2
+1 4
+2 5 4
+3
+1 3
+1 2
+2 1 3
+Sample output
+5
+-1
+Explanation
+For the first test case the periodicity is 3 and the arrays are [2], [4] and [5, 4]. The graph, along with colored edges, looks like this:
+Note that there can be multiple ways of coloring the above graph. This is just one of the correct solutions.
+For the second test case, the periodicity is 3 and the arrays are [3], [2], [1, 3]. It is not possible to color this graph in a good way.

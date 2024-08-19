@@ -1,0 +1,64 @@
+E. Dasha and Puzzle
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Dasha decided to have a rest after solving the problem. She had been ready to start her favourite activity — origami, but remembered the puzzle that she could not solve.
+The tree is a non-oriented connected graph without cycles. In particular, there always are n - 1 edges in a tree with n vertices.
+The puzzle is to position the vertices at the points of the Cartesian plane with integral coordinates, so that the segments between the vertices connected by edges are parallel to the coordinate axes. Also, the intersection of segments is allowed only at their ends. Distinct vertices should be placed at different points.
+Help Dasha to find any suitable way to position the tree vertices on the plane.
+It is guaranteed that if it is possible to position the tree vertices on the plane without violating the condition which is given above, then you can do it by using points with integral coordinates which don't exceed 1018 in absolute value.
+Input
+The first line contains single integer n (1 ≤ n ≤ 30) — the number of vertices in the tree.
+Each of next n - 1 lines contains two integers ui, vi (1 ≤ ui, vi ≤ n) that mean that the i-th edge of the tree connects vertices ui and vi.
+It is guaranteed that the described graph is a tree.
+Output
+If the puzzle doesn't have a solution then in the only line print "NO".
+Otherwise, the first line should contain "YES". The next n lines should contain the pair of integers xi, yi (|xi|, |yi| ≤ 1018) — the coordinates of the point which corresponds to the i-th vertex of the tree.
+If there are several solutions, print any of them.
+Examples
+input
+Copy
+7
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+output
+Copy
+YES
+0 0
+1 0
+0 1
+2 0
+1 -1
+-1 1
+0 2
+input
+Copy
+6
+1 2
+2 3
+2 4
+2 5
+2 6
+output
+Copy
+NO
+input
+Copy
+4
+1 2
+2 3
+3 4
+output
+Copy
+YES
+3 3
+4 3
+5 3
+6 3
+Note
+In the first sample one of the possible positions of tree is:

@@ -1,0 +1,184 @@
+D. Mark and Lightbulbs
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mark has just purchased a rack of
+n
+lightbulbs. The state of the lightbulbs can be described with binary string
+s=
+s
+1
+s
+2
+…
+s
+n
+, where
+s
+i
+=1
+means that the
+i
+-th lightbulb is turned on, while
+s
+i
+=0
+means that the
+i
+-th lightbulb is turned off.
+Unfortunately, the lightbulbs are broken, and the only operation he can perform to change the state of the lightbulbs is the following:
+Select an index
+i
+from
+2,3,…,n−1
+such that
+s
+i−1
+≠
+s
+i+1
+.
+Toggle
+s
+i
+. Namely, if
+s
+i
+is
+0
+, set
+s
+i
+to
+1
+or vice versa.
+Mark wants the state of the lightbulbs to be another binary string
+t
+. Help Mark determine the minimum number of operations to do so.
+Input
+The first line of the input contains a single integer
+q
+(
+1≤q≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+3≤n≤2⋅
+10
+5
+) — the number of lightbulbs.
+The second line of each test case contains a binary string
+s
+of length
+n
+— the initial state of the lightbulbs.
+The third line of each test case contains a binary string
+t
+of length
+n
+— the final state of the lightbulbs.
+It is guaranteed that the sum of
+n
+across all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a line containing the minimum number of operations Mark needs to perform to transform
+s
+to
+t
+. If there is no such sequence of operations, print
+−1
+.
+Example
+input
+Copy
+4
+4
+0100
+0010
+4
+1010
+0100
+5
+01001
+00011
+6
+000101
+010011
+output
+Copy
+2
+-1
+-1
+5
+Note
+In the first test case, one sequence of operations that achieves the minimum number of operations is the following.
+Select
+i=3
+, changing
+0100
+to
+0110
+.
+Select
+i=2
+, changing
+0110
+to
+0010
+.
+In the second test case, there is no sequence of operations because one cannot change the first digit or the last digit of
+s
+.
+In the third test case, even though the first digits of
+s
+and
+t
+are the same and the last digits of
+s
+and
+t
+are the same, it can be shown that there is no sequence of operations that satisfies the condition.
+In the fourth test case, one sequence that achieves the minimum number of operations is the following:
+Select
+i=3
+, changing
+000101
+to
+001101
+.
+Select
+i=2
+, changing
+001101
+to
+011101
+.
+Select
+i=4
+, changing
+011101
+to
+011001
+.
+Select
+i=5
+, changing
+011001
+to
+011011
+.
+Select
+i=3
+, changing
+011011
+to
+010011
+.

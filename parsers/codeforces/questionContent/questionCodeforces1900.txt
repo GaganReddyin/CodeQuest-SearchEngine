@@ -1,0 +1,113 @@
+D. GCD of an Array
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of length
+n
+. You are asked to process
+q
+queries of the following format: given integers
+i
+and
+x
+, multiply
+a
+i
+by
+x
+.
+After processing each query you need to output the greatest common divisor (GCD) of all elements of the array
+a
+.
+Since the answer can be too large, you are asked to output it modulo
+10
+9
++7
+.
+Input
+The first line contains two integers —
+n
+and
+q
+(
+1≤n,q≤2⋅
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+) — the elements of the array
+a
+before the changes.
+The next
+q
+lines contain queries in the following format: each line contains two integers
+i
+and
+x
+(
+1≤i≤n
+,
+1≤x≤2⋅
+10
+5
+).
+Output
+Print
+q
+lines: after processing each query output the GCD of all elements modulo
+10
+9
++7
+on a separate line.
+Example
+input
+Copy
+4 3
+1 6 8 12
+1 12
+2 3
+3 3
+output
+Copy
+2
+2
+6
+Note
+After the first query the array is
+[12,6,8,12]
+,
+gcd(12,6,8,12)=2
+.
+After the second query —
+[12,18,8,12]
+,
+gcd(12,18,8,12)=2
+.
+After the third query —
+[12,18,24,12]
+,
+gcd(12,18,24,12)=6
+.
+Here the
+gcd
+function denotes the greatest common divisor.

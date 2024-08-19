@@ -1,0 +1,241 @@
+E. Chaotic Merge
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two strings
+x
+and
+y
+, both consist only of lowercase Latin letters. Let
+|s|
+be the length of string
+s
+.
+Let's call a sequence
+a
+a merging sequence if it consists of exactly
+|x|
+zeros and exactly
+|y|
+ones in some order.
+A merge
+z
+is produced from a sequence
+a
+by the following rules:
+if
+a
+i
+=0
+, then remove a letter from the beginning of
+x
+and append it to the end of
+z
+;
+if
+a
+i
+=1
+, then remove a letter from the beginning of
+y
+and append it to the end of
+z
+.
+Two merging sequences
+a
+and
+b
+are different if there is some position
+i
+such that
+a
+i
+≠
+b
+i
+.
+Let's call a string
+z
+chaotic if for all
+i
+from
+2
+to
+|z|
+z
+i−1
+≠
+z
+i
+.
+Let
+s[l,r]
+for some
+1≤l≤r≤|s|
+be a substring of consecutive letters of
+s
+, starting from position
+l
+and ending at position
+r
+inclusive.
+Let
+f(
+l
+1
+,
+r
+1
+,
+l
+2
+,
+r
+2
+)
+be the number of different merging sequences of
+x[
+l
+1
+,
+r
+1
+]
+and
+y[
+l
+2
+,
+r
+2
+]
+that produce chaotic merges. Note that only non-empty substrings of
+x
+and
+y
+are considered.
+Calculate
+∑
+1≤
+l
+1
+≤
+r
+1
+≤|x|
+1≤
+l
+2
+≤
+r
+2
+≤|y|
+f(
+l
+1
+,
+r
+1
+,
+l
+2
+,
+r
+2
+)
+. Output the answer modulo
+998244353
+.
+Input
+The first line contains a string
+x
+(
+1≤|x|≤1000
+).
+The second line contains a string
+y
+(
+1≤|y|≤1000
+).
+Both strings consist only of lowercase Latin letters.
+Output
+Print a single integer — the sum of
+f(
+l
+1
+,
+r
+1
+,
+l
+2
+,
+r
+2
+)
+over
+1≤
+l
+1
+≤
+r
+1
+≤|x|
+and
+1≤
+l
+2
+≤
+r
+2
+≤|y|
+modulo
+998244353
+.
+Examples
+input
+Copy
+aaa
+bb
+output
+Copy
+24
+input
+Copy
+code
+forces
+output
+Copy
+1574
+input
+Copy
+aaaaa
+aaa
+output
+Copy
+0
+input
+Copy
+justamassivetesttocheck
+howwellyouhandlemodulooperations
+output
+Copy
+667387032
+Note
+In the first example there are:
+6
+pairs of substrings "a" and "b", each with valid merging sequences "01" and "10";
+3
+pairs of substrings "a" and "bb", each with a valid merging sequence "101";
+4
+pairs of substrings "aa" and "b", each with a valid merging sequence "010";
+2
+pairs of substrings "aa" and "bb", each with valid merging sequences "0101" and "1010";
+2
+pairs of substrings "aaa" and "b", each with no valid merging sequences;
+1
+pair of substrings "aaa" and "bb" with a valid merging sequence "01010";
+Thus, the answer is
+6⋅2+3⋅1+4⋅1+2⋅2+2⋅0+1⋅1=24
+.

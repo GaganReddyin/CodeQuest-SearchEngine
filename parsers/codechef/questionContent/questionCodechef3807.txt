@@ -1,0 +1,90 @@
+Deathly Hallows and The Cloak Of Invisibility
+Problem
+Hermione : [reading] "There were once three brothers, who were traveling along a lonely winding road at twilight".
+After taking the prize for their cleverness from the Death, the Eldest brother(X) and the Second brother(Y) realized that the best choice was made by their youngest brother and hence they decided to kill him and take his cloak of invisibility. But there was only one cloak and 2 brothers. So they decided to play Q games to decide who will take the cloak. The game is as follows:
+Let M denote a Magical Pair of a number(id) and a string(str).
+Formally, M = (id, str)
+There is a set of Magical Pairs which they fix at the very beginning. This set is never changed, even if multiple games are played. More than one Magical Pair can have same id. Let S denote the set of Magical Pairs.
+S = {M1, M2, ......, Mn} = {(id1,str1), (id2, str2), ........, (idn, strn)}
+Each of the Q individual games will be played on an Active Set. An Active Set A is defined as a subset of S on which current game is being played. This Active Set is constructed in a particular way, which will be explained later.
+In a single game, the two players take alternating turns, making Moves. A Move is defined as selecting a Magical Pair M and all other Magical Pairs P(including M) from the set A such that Pid is equal to Mid and Mstr is a prefix of Pstr. These are then deleted from the set A. A player who is not able to move loses. The Younger Brother moves first. Both players play optimally.
+Let us now see how the Active Set for each of the Q games is constructed. Each game is described by three integers: L, R, and K, which is known to you. At the start of each game, A is empty, and then the two players do the following to construct A:
+Second Brother(Y) : In the first step, the second brother adds all Magical Pairs M from set S to the Active set A such that L ≤ Mid ≤ R
+Elder brother(X) : In the second step, the Elder brother removes all the Magical Pairs M from the Active set A of id Z if there are more than K Magical Pairs with id Z. That is, if there is any id which appears more than K times, he removes them all.
+Elder brother(X) : In the last step, the Elder brother chooses any one id which exists in the Active Set currently, and removes all Magic Pairs with that id.
+The Elder Brother wants to know, in how many different ways can he do the last step (that is, selecting some id) emerge as the winner of that game. Help him find this for each of the Q games.
+Input
+First line an integer N denoting number of Magical Pairs in set S.
+Next N lines contains a pair of id and str separated by space, denoting N Magical Pairs.
+Next line contains an integer Q denoting Number of games played.
+Next Q lines contains three space separated integers L, R, K as described in the problem.
+
+Output
+It contains Q lines, each line containing the number of ways for Elder Brother to win as per the above mentioned conditions.
+
+Constraints
+1 ≤ N, Q ≤ 2 * 105
+1 ≤ id ≤ 2 * 104
+1 ≤ |str| ≤ 105
+1 ≤ |str1| + .... + |strN| ≤ 3 * 106
+1 ≤ L ≤ R ≤ 2 * 104
+1 ≤ K ≤ 105
+
+Example 1
+Input:
+9
+2 nig
+2 my
+2 myhello
+2 night
+4 myth
+2 nil
+4 myhello
+2 myth
+4 my
+4
+1 5 6
+2 4 5
+2 3 5
+3 5 4
+Output:
+0
+1
+0
+1
+
+Explanation
+For given problem,
+S = {(2,nig),(2,my),(2,myhello),(2,night),(2,myth),(2,nil),(4,myhello)(4,myth),(4,my)}
+Query 1 : The Active Set, after the first two steps is
+A = S.
+Now Elder Brother(X) can either select id = 2 or id = 4 for removal.
+
+1. Suppose X selects id = 2 for removal then the new Active set,
+A = {(4,myhello),(4,myth),(4,my)}.
+As both player are playing optimally, hence in the first move Second Brother(Y) will remove (4,my) from A further resulting into removal of (4,myhello) and (4,myth) since these Magical pairs have same id as of my and my is prefix of both myhello and myth. A is empty now. So Elder Brother can't move and hence Loses.
+
+2. Suppose X selects id = 4 for removal then the new Active set,
+A = {(2,nig),(2,my)(2,myhello),(2,night),(2,myth),(2,nil)}.
+One of the optimal set of moves on given set A is :
+Y : removes (2,nig) and {(2,night)} also gets removed
+X : removes (2,myth)
+Y : remves (2,myhello)
+X : removes (2,nil)
+Y : removes (2,my)
+No more Magical Pairs are left to remove. So Elder Brother loses the game.
+Hence there exists no way to remove exactly 1 id and emerge as winner.
+Query 2 : The Active Set, after first two steps is
+A = {(4,myhello),(4,myth),(4,my)}.
+Elder brother can select id = 4 and make set A empty.
+Now Younger Brother cannot move and hence Elder one is the winner.
+So in total 1 way exists.
+Query 3 : The Active Set, after first two steps is
+A = {}.
+Hence Elder brother cannot select any id.
+So in total 0 way exists.
+Query 4 : The Active Set, after first two steps is
+A = {(2,nig),(2,my)(2,myhello),(2,night),(2,myth),(2,nil)}.
+Elder brother can select id = 2 and make set A empty.
+Now Younger Brother cannot move and hence Elder one is the winner.
+So in total 1 way exists.

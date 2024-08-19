@@ -1,0 +1,112 @@
+A Tree to Remember
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef finished inviting all of his friends. Now it is time to get a tree in his house and decorate it for the party. He wants to use the most beautiful tree ever.
+The tree Chef chose has
+N nodes (numbered
+1 through
+N) and it is rooted at node
+1. For each valid
+i, the initial colour of the
+i-th node is
+C
+i
+and there is a value
+A
+i
+written in that node. Chef calculates the beauty of his tree as
+∑
+i=1
+N
+A
+i
+⋅F
+i
+, where
+F
+i
+denotes the number of distinct colours of nodes in the subtree of the
+i-th node (including this node).
+Now, Chef is trying to improve the beauty of the tree ― he wants to make
+Q updates, where in each update, he chooses a node
+a and an integer
+x and changes the colour of the node
+a to
+x. After each update, find the beauty of the tree. Note that the updates are permanent, i.e. they affect all subsequent updates.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+Each of the following
+N−1 lines contains two space-separated integers
+u and
+v denoting an edge between nodes
+u and
+v.
+The next line contains
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Each of the following
+Q lines contains two space-separated integers
+a and
+x describing a query.
+Output
+For each update, print a single line containing one integer ― the beauty of the tree after this update is performed.
+Constraints
+1≤T≤2
+1≤N,Q≤10
+5
+1≤A
+i
+,C
+i
+≤N for each valid
+i
+1≤u,v,a,x≤N
+the graph described on the input is a tree
+Sample 1:
+Input
+Output
+1
+10 6
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+3 10
+7 8
+7 9
+1 2 2 1 1 3 4 4 3 4
+1 2 2 1 1 3 4 4 3 4
+1 1
+2 3
+4 2
+2 1
+8 2
+10 3
+38
+38
+40
+38
+42
+42

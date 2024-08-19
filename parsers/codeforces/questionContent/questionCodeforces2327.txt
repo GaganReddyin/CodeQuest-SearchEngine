@@ -1,0 +1,213 @@
+D. Searchlights
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+robbers at coordinates
+(
+a
+1
+,
+b
+1
+)
+,
+(
+a
+2
+,
+b
+2
+)
+, ...,
+(
+a
+n
+,
+b
+n
+)
+and
+m
+searchlight at coordinates
+(
+c
+1
+,
+d
+1
+)
+,
+(
+c
+2
+,
+d
+2
+)
+, ...,
+(
+c
+m
+,
+d
+m
+)
+.
+In one move you can move each robber to the right (increase
+a
+i
+of each robber by one) or move each robber up (increase
+b
+i
+of each robber by one). Note that you should either increase all
+a
+i
+or all
+b
+i
+, you can't increase
+a
+i
+for some points and
+b
+i
+for some other points.
+Searchlight
+j
+can see a robber
+i
+if
+a
+i
+≤
+c
+j
+and
+b
+i
+≤
+d
+j
+.
+A configuration of robbers is safe if no searchlight can see a robber (i.e. if there is no pair
+i,j
+such that searchlight
+j
+can see a robber
+i
+).
+What is the minimum number of moves you need to perform to reach a safe configuration?
+Input
+The first line of input contains two integers
+n
+and
+m
+(
+1≤n,m≤2000
+): the number of robbers and the number of searchlight.
+Each of the next
+n
+lines contains two integers
+a
+i
+,
+b
+i
+(
+0≤
+a
+i
+,
+b
+i
+≤
+10
+6
+), coordinates of robbers.
+Each of the next
+m
+lines contains two integers
+c
+i
+,
+d
+i
+(
+0≤
+c
+i
+,
+d
+i
+≤
+10
+6
+), coordinates of searchlights.
+Output
+Print one integer: the minimum number of moves you need to perform to reach a safe configuration.
+Examples
+input
+Copy
+1 1
+0 0
+2 3
+output
+Copy
+3
+input
+Copy
+2 3
+1 6
+6 1
+10 1
+1 10
+7 7
+output
+Copy
+4
+input
+Copy
+1 2
+0 0
+0 0
+0 0
+output
+Copy
+1
+input
+Copy
+7 3
+0 8
+3 8
+2 7
+0 10
+5 5
+7 0
+3 5
+6 6
+3 11
+11 5
+output
+Copy
+6
+Note
+In the first test, you can move each robber to the right three times. After that there will be one robber in the coordinates
+(3,0)
+.
+The configuration of the robbers is safe, because the only searchlight can't see the robber, because it is in the coordinates
+(2,3)
+and
+3>2
+.
+In the second test, you can move each robber to the right two times and two times up. After that robbers will be in the coordinates
+(3,8)
+,
+(8,3)
+.
+It's easy the see that the configuration of the robbers is safe.
+It can be proved that you can't reach a safe configuration using no more than
+3
+moves.

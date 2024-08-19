@@ -1,0 +1,130 @@
+G. Mateusz and Escape Room
+time limit per test7 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mateusz likes to travel! However, on his
+42
+nd visit to Saint Computersburg there is not much left to sightsee. That's why he decided to go to an escape room with his friends!
+The team has solved all riddles flawlessly. There is only one riddle remaining — a huge circular table! There are
+n
+weighing scales lying on top of the table, distributed along the circle. Each scale is adjacent to exactly two other scales: for each
+i∈{1,2,…,n−1}
+, the
+i
+-th and the
+(i+1)
+-th scales are adjacent to each other, as well as the first and the
+n
+-th scale.
+The
+i
+-th scale initially contains
+a
+i
+heavy coins. Mateusz can perform moves — each move consists of fetching a single coin from one scale and putting it on any adjacent scale.
+It turns out that the riddle will be solved when there is a specific amount of coins on each of the scales. Specifically, each scale has parameters
+l
+i
+and
+r
+i
+. If each coin lies on a single scale and for each
+i
+, the
+i
+-th scale contains at least
+l
+i
+and at most
+r
+i
+coins, the riddle will be solved and Mateusz's team will win!
+Mateusz is aiming for the best possible time. Therefore, he wants to solved the riddle as quickly as possible. What is the minimum possible number of moves required to fulfill all the conditions?
+Input
+The first line contains an integer
+n
+(
+3≤n≤35000
+) — the number of weighing scales in the circle.
+The following
+n
+lines describe the scales. The
+i
+-th of these lines describes the
+i
+-th scale and consists of three integers
+a
+i
+,
+l
+i
+,
+r
+i
+(
+0≤
+a
+i
+≤35000
+,
+0≤
+l
+i
+≤
+r
+i
+≤35000
+).
+It's guaranteed that the riddle is solvable, that is,
+∑
+n
+i=1
+l
+i
+≤
+∑
+n
+i=1
+a
+i
+≤
+∑
+n
+i=1
+r
+i
+.
+Output
+Output one integer — the minimum number of operations required to solve the riddle.
+Examples
+input
+Copy
+5
+0 2 3
+1 2 3
+4 3 3
+4 3 3
+4 3 3
+output
+Copy
+4
+input
+Copy
+3
+0 1 2
+3 0 3
+1 0 0
+output
+Copy
+1
+input
+Copy
+4
+1 0 2
+3 3 3
+4 0 4
+5 3 5
+output
+Copy
+0

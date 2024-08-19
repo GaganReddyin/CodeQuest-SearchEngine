@@ -1,0 +1,204 @@
+F. Sports Betting
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+William is not only interested in trading but also in betting on sports matches.
+n
+teams participate in each match. Each team is characterized by strength
+a
+i
+. Each two teams
+i<j
+play with each other exactly once. Team
+i
+wins with probability
+a
+i
+a
+i
++
+a
+j
+and team
+j
+wins with probability
+a
+j
+a
+i
++
+a
+j
+.
+The team is called a winner if it directly or indirectly defeated all other teams. Team
+a
+defeated (directly or indirectly) team
+b
+if there is a sequence of teams
+c
+1
+,
+c
+2
+, ...
+c
+k
+such that
+c
+1
+=a
+,
+c
+k
+=b
+and team
+c
+i
+defeated team
+c
+i+1
+for all
+i
+from
+1
+to
+k−1
+. Note that it is possible that team
+a
+defeated team
+b
+and in the same time team
+b
+defeated team
+a
+.
+William wants you to find the expected value of the number of winners.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤14
+), which is the total number of teams participating in a match.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+)  — the strengths of teams participating in a match.
+Output
+Output a single integer  — the expected value of the number of winners of the tournament modulo
+10
+9
++7
+.
+Formally, let
+M=
+10
+9
++7
+. It can be demonstrated that the answer can be presented as a irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output a single integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output an integer
+x
+such that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Examples
+input
+Copy
+2
+1 2
+output
+Copy
+1
+input
+Copy
+5
+1 5 2 11 14
+output
+Copy
+642377629
+Note
+To better understand in which situation several winners are possible let's examine the second test:
+One possible result of the tournament is as follows (
+a→b
+means that
+a
+defeated
+b
+):
+1→2
+2→3
+3→1
+1→4
+1→5
+2→4
+2→5
+3→4
+3→5
+4→5
+Or more clearly in the picture:
+In this case every team from the set
+{1,2,3}
+directly or indirectly defeated everyone. I.e.:
+1
+st defeated everyone because they can get to everyone else in the following way
+1→2
+,
+1→2→3
+,
+1→4
+,
+1→5
+.
+2
+nd defeated everyone because they can get to everyone else in the following way
+2→3
+,
+2→3→1
+,
+2→4
+,
+2→5
+.
+3
+rd defeated everyone because they can get to everyone else in the following way
+3→1
+,
+3→1→2
+,
+3→4
+,
+3→5
+.
+Therefore the total number of winners is
+3
+.

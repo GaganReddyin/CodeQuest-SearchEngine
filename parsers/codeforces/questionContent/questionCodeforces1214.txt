@@ -1,0 +1,124 @@
+F. Strange Instructions
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Dasha has
+10
+100
+coins. Recently, she found a binary string
+s
+of length
+n
+and some operations that allows to change this string (she can do each operation any number of times):
+Replace substring 00 of
+s
+by 0 and receive
+a
+coins.
+Replace substring 11 of
+s
+by 1 and receive
+b
+coins.
+Remove 0 from any position in
+s
+and pay
+c
+coins.
+It turned out that while doing this operations Dasha should follow the rule:
+It is forbidden to do two operations with the same parity in a row. Operations are numbered by integers
+1
+-
+3
+in the order they are given above.
+Please, calculate what is the maximum profit Dasha can get by doing these operations and following this rule.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains four integers
+n
+,
+a
+,
+b
+,
+c
+(
+1≤n≤
+10
+5
+,1≤a,b,c≤
+10
+9
+).
+The second line of each test case contains a binary string
+s
+of length
+n
+.
+It is guaranteed that the total sum of
+n
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case print the answer.
+Example
+input
+Copy
+3
+5 2 2 1
+01101
+6 4 3 5
+110001
+6 3 2 1
+011110
+output
+Copy
+3
+11
+4
+Note
+In the first test case one of the optimal sequences of operations is 01101
+→
+0101
+→
+011
+→
+01. This sequence of operations consists of operations
+2
+,
+3
+and
+2
+in this order. It satisfies all rules and gives profit
+3
+. It can be shown that it is impossible to achieve higher profit in this test case, so the answer is
+3
+.
+In the second test case one of the optimal sequences of operations is 110001
+→
+11001
+→
+1001
+→
+101.
+In the third test case one of the optimal sequences of operations is 011110
+→
+01110
+→
+1110
+→
+110
+→
+11
+→
+1.

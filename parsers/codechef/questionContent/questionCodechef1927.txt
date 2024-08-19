@@ -1,0 +1,45 @@
+Bob and Pallindromes
+Problem
+Bob has a string (S), which is initially empty. In one operation, he can select a lowercase character (a-z) uniformly at random and appends it to S. He then evaluates whether S is a palindrome or not; if it is, he gets 1 point.
+Given that Bob performs N operations in total, find the expected no. of points Bob gets.
+It is guaranteed that the answer can always be represented as a rational number
+b
+a
+. You must print this number modulo 1000000007. By this we mean that you must print,
+a×b
+−1
+modulo 1000000007 where
+b
+−1
+denotes the modulo inverse of
+b with respect to 1000000007.
+Also observe that 1000000007 is a prime number.
+Input
+First line of the input will contain T denoting the number of test-cases.For every test case, first line will contain N.
+Output
+• For every test case, print the required answer in a separate line % 10^9+7.
+Constraints
+1 ≤ T ≤ 30
+1 ≤ N ≤ 1000000000
+  Subtasks
+Subtask #1 : (20 points)
+1 ≤ T ≤ 3 1 ≤ N≤ 1000
+Subtask 2 : (30 points)
+1 ≤ T ≤ 10 1 ≤ N≤ 1000
+Subtask #3 : (50 points)
+1 ≤ T ≤ 30 1 ≤ N≤ 1000000000
+Sample 1:
+Input
+Output
+3
+2
+3
+4
+576923082
+153846156
+214497044
+Explanation:
+For n = 2, the answer is 27/26 points.
+We have to print this number modulo 1000000007 which equals 27 * 26
+−1
+% 1000000007 = 576923082.

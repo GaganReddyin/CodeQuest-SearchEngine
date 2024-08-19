@@ -1,0 +1,70 @@
+Array Swaps
+Problem
+Salmon received an array
+A of size
+N and an array
+B of size
+M for Christmas. He would like to move all the elements in
+B to
+A using a special method described below.
+While
+B is not empty, Salmon does the following operations in order:
+Remove and store the leftmost element off of B (let's call this element
+X).
+Place
+X at the start of
+A.
+Keep swapping
+X and the element to the right of it repeatedly until
+X is at the rightmost position of
+A or
+X is greater or equal to the element to the right of it.
+Before performing the operations, Salmon can rearrange both A and B in any order once. He would like to do as little work as possible -- determine the minimum possible amount of swaps.
+###Input: The first line of input will consist of a two space-separated integers,
+N and
+M (
+1≤N,M≤2∗10
+5
+).
+The next line will consist of
+N space-separated integers, with the
+i-th input representing
+A[i] (
+−10
+9
+≤A[i]≤10
+9
+).
+The next line will consist of
+M space-separated integers, with the
+i-th input representing
+B[i] (
+−10
+9
+≤B[i]≤10
+9
+).
+###Output: Output a single integer, the minimum number of swaps required.
+###Subtasks:
+Subtask 1 [15 points]:
+A[i]=1,B[i]=1 for all
+i.
+Subtask 2 [30 points]:
+N,M≤10
+3
+.
+Subtask 3 [55 points]: No additional constraints.
+###Note: The answer may be greater than the limit for a 32-bit integer. Use long long instead of int for C++ and long for Java. Please check your language documentation for other languages on how to use 64-bit integers. Note that Python solutions won't encounter a problem as it uses BigIntegers by default.
+Sample 1:
+Input
+Output
+5 3
+10 5 2 5 4
+3 1 2
+5
+Explanation:
+Salmon can reorder
+A to be
+[2,10,5,4,5] and
+B to be
+[1,2,3].

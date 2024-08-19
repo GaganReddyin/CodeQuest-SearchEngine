@@ -1,0 +1,38 @@
+E. Mike and code of a permutation
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Mike has discovered a new way to encode permutations. If he has a permutation P = [p1, p2, ..., pn], he will encode it in the following way:
+Denote by A = [a1, a2, ..., an] a sequence of length n which will represent the code of the permutation. For each i from 1 to n sequentially, he will choose the smallest unmarked j (1 ≤ j ≤ n) such that pi < pj and will assign to ai the number j (in other words he performs ai = j) and will mark j. If there is no such j, he'll assign to ai the number  - 1 (he performs ai =  - 1).
+Mike forgot his original permutation but he remembers its code. Your task is simple: find any permutation such that its code is the same as the code of Mike's original permutation.
+You may assume that there will always be at least one valid permutation.
+Input
+The first line contains single integer n (1 ≤ n ≤ 500 000) — length of permutation.
+The second line contains n space-separated integers a1, a2, ..., an (1 ≤ ai ≤ n or ai =  - 1) — the code of Mike's permutation.
+You may assume that all positive values from A are different.
+Output
+In first and only line print n numbers p1, p2, ..., pn (1 ≤ pi ≤ n) — a permutation P which has the same code as the given one. Note that numbers in permutation are distinct.
+Examples
+input
+Copy
+6
+2 -1 1 5 -1 4
+output
+Copy
+2 6 1 4 5 3
+input
+Copy
+8
+2 -1 4 -1 6 -1 8 -1
+output
+Copy
+1 8 2 7 3 6 4 5
+Note
+For the permutation from the first example:
+i = 1, the smallest j is 2 because p2 = 6 > p1 = 2.
+i = 2, there is no j because p2 = 6 is the greatest element in the permutation.
+i = 3, the smallest j is 1 because p1 = 2 > p3 = 1.
+i = 4, the smallest j is 5 (2 was already marked) because p5 = 5 > p4 = 4.
+i = 5, there is no j because 2 is already marked.
+i = 6, the smallest j is 4 because p4 = 4 > p6 = 3.

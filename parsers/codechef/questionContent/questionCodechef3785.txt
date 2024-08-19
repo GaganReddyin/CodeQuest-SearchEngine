@@ -1,0 +1,131 @@
+Expected Repetitions
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a string
+S with length
+N that contains only the
+26 lowercase English letters. You are also given a sequence
+W
+1
+,W
+2
+,…,W
+26
+of weights corresponding to these letters in the order from 'a' to 'z', i.e.
+W
+1
+is the weight of 'a',
+W
+2
+is the weight of 'b' and so on.
+We define the weight of a string as the sum of weights of all characters present in it. If a character occurs multiple times in this string, its weight is also counted multiple times.
+Next, we define the power of a string
+s as the sum of weights of all strings
+r such that
+s can be represented as
+r+r+…+r+p, where
++ denotes string concatenation and
+p is a prefix of
+r (possibly empty).
+Consider a contiguous substring of
+S chosen uniformly randomly among all its
+N(N+1)/2 contiguous substrings. Find the expected value of the power of such a substring. The expected power can be represented as a fraction
+P/Q, where
+P and
+Q are positive integers and
+Q is coprime with
+998,244,353. You should calculate
+P⋅Q
+−1
+modulo
+998,244,353, where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single string
+S.
+The second line contains
+26 space-separated integers
+W
+1
+,W
+2
+,…,W
+26
+.
+Output
+For each test case, print a single line containing one integer
+P⋅Q
+−1
+modulo
+998,244,353.
+Constraints
+1≤N≤500,000
+1≤W
+i
+≤10
+9
+for each valid
+i
+S contains only lowercase English letters
+the sum of
+∣S∣ over all test cases does not exceed
+500,000
+Subtasks
+Subtask #1 (10 points):
+N≤100
+the sum of
+∣S∣ over all test cases does not exceed
+1,000
+Subtask #2 (20 points):
+N≤2,000
+the sum of
+∣S∣ over all test cases does not exceed
+20,000
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+2
+aaa
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+abab
+1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+499122179
+698771051
+Explanation:
+Let
+W(s) and
+P(s) denote the weight and power of a string
+s respectively.
+Example case 1: There are
+3 contiguous substrings "a",
+2 contiguous substrings "aa" and
+1 contiguous substring "aaa".
+"a" is chosen with probability
+3/6; we have
+P(a)=W(a)=1
+"aa" is chosen with probability
+2/6;
+P(aa)=W(a)+W(aa)=1+2=3
+"aaa" is chosen with probability
+1/6;
+P(aaa)=W(a)+W(aa)+W(aaa)=1+2+3=6
+The expected power is
+(3⋅1+2⋅3+1⋅6)/6=15/6.
+Example case 2: The contiguous substrings are "a", "b", "ab", "ba", "aba", "bab", "abab"; the first three of them occur twice. We have
+P(a)=W(a)=1,
+P(b)=W(b)=2,
+P(ab)=W(ab)=1+2=3,
+P(ba)=W(ba)=3,
+P(aba)=W(ab)+W(aba)=3+4=7,
+P(bab)=W(ba)+W(bab)=3+5=8 and
+P(abab)=W(ab)+W(abab)=3+6=9.
+The expected power is
+(2⋅P(a)+2⋅P(b)+2⋅P(ab)+P(ba)+P(aba)+P(bab)+P(abab))/10=39/10.

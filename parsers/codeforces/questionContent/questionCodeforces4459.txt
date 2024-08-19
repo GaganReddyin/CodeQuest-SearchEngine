@@ -1,0 +1,99 @@
+E. Billiard
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider a billiard table of rectangular size
+n×m
+with four pockets. Let's introduce a coordinate system with the origin at the lower left corner (see the picture).
+There is one ball at the point
+(x,y)
+currently. Max comes to the table and strikes the ball. The ball starts moving along a line that is parallel to one of the axes or that makes a
+45
+∘
+angle with them. We will assume that:
+the angles between the directions of the ball before and after a collision with a side are equal,
+the ball moves indefinitely long, it only stops when it falls into a pocket,
+the ball can be considered as a point, it falls into a pocket if and only if its coordinates coincide with one of the pockets,
+initially the ball is not in a pocket.
+Note that the ball can move along some side, in this case the ball will just fall into the pocket at the end of the side.
+Your task is to determine whether the ball will fall into a pocket eventually, and if yes, which of the four pockets it will be.
+Input
+The only line contains
+6
+integers
+n
+,
+m
+,
+x
+,
+y
+,
+v
+x
+,
+v
+y
+(
+1≤n,m≤
+10
+9
+,
+0≤x≤n
+;
+0≤y≤m
+;
+−1≤
+v
+x
+,
+v
+y
+≤1
+;
+(
+v
+x
+,
+v
+y
+)≠(0,0)
+) — the width of the table, the length of the table, the
+x
+-coordinate of the initial position of the ball, the
+y
+-coordinate of the initial position of the ball, the
+x
+-component of its initial speed and the
+y
+-component of its initial speed, respectively. It is guaranteed that the ball is not initially in a pocket.
+Output
+Print the coordinates of the pocket the ball will fall into, or
+−1
+if the ball will move indefinitely.
+Examples
+input
+Copy
+4 3 2 2 -1 1
+output
+Copy
+0 0
+input
+Copy
+4 4 2 0 1 1
+output
+Copy
+-1
+input
+Copy
+10 10 10 1 -1 0
+output
+Copy
+-1
+Note
+The first sample:
+The second sample:
+In the third sample the ball will never change its
+y
+coordinate, so the ball will never fall into a pocket.

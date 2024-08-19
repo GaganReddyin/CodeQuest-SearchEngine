@@ -1,0 +1,165 @@
+E. Are You Fired?
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Levian works as an accountant in a large company. Levian knows how much the company has earned in each of the
+n
+consecutive months — in the
+i
+-th month the company had income equal to
+a
+i
+(positive income means profit, negative income means loss, zero income means no change). Because of the general self-isolation, the first
+⌈
+n
+2
+⌉
+months income might have been completely unstable, but then everything stabilized and for the last
+⌊
+n
+2
+⌋
+months the income was the same.
+Levian decided to tell the directors
+n−k+1
+numbers — the total income of the company for each
+k
+consecutive months. In other words, for each
+i
+between
+1
+and
+n−k+1
+he will say the value
+a
+i
++
+a
+i+1
++…+
+a
+i+k−1
+. For example, if
+a=[−1,0,1,2,2]
+and
+k=3
+he will say the numbers
+0,3,5
+.
+Unfortunately, if at least one total income reported by Levian is not a profit (income
+≤0
+), the directors will get angry and fire the failed accountant.
+Save Levian's career: find any such
+k
+, that for each
+k
+months in a row the company had made a profit, or report that it is impossible.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤5⋅
+10
+5
+) — the number of months for which Levian must account.
+The second line contains
+⌈
+n
+2
+⌉
+integers
+a
+1
+,
+a
+2
+,…,
+a
+⌈
+n
+2
+⌉
+, where
+a
+i
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+) — the income of the company in the
+i
+-th month.
+Third line contains a single integer
+x
+(
+−
+10
+9
+≤x≤
+10
+9
+) — income in every month from
+⌈
+n
+2
+⌉+1
+to
+n
+.
+Output
+In a single line, print the appropriate integer
+k
+or
+−1
+, if it does not exist.
+If there are multiple possible answers, you can print any.
+Examples
+input
+Copy
+3
+2 -1
+2
+output
+Copy
+2
+input
+Copy
+5
+2 2 -8
+2
+output
+Copy
+-1
+input
+Copy
+6
+-2 -2 6
+-1
+output
+Copy
+4
+Note
+In the first example,
+k=2
+and
+k=3
+satisfy: in the first case, Levian will report the numbers
+1,1
+, and in the second case — one number
+3
+.
+In the second example, there is no such
+k
+.
+In the third example, the only answer is
+k=4
+: he will report the numbers
+1,2,3
+.

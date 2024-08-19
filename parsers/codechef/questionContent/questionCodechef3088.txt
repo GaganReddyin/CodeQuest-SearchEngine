@@ -1,0 +1,102 @@
+Walk on Tree
+Problem
+###Read problems statements Hindi ,Bengali , Mandarin chinese , Russian and Vietnamese as well.
+You are given a tree with
+N nodes (numbered
+1 through
+N). The tree is rooted at node
+r. For each node, find the number of walks with length
+K from the root to this node modulo
+998244353.
+A walk from node
+a to node
+b with length
+K is defined as a sequence of nodes
+(u
+1
+,u
+2
+,…,u
+K+1
+), where
+u
+1
+=a,u
+K+1
+=b and for each valid
+i, there is an edge between nodes
+u
+i
+and
+u
+i+1
+. Two walks
+(u
+1
+,u
+2
+,…,u
+K+1
+) and
+(v
+1
+,v
+2
+,…,v
+K+1
+) are considered different if there is a valid index
+i such that
+u
+i
+
+=v
+i
+.
+Input
+The first line of the input contains a single integer
+N denoting the number of nodes in the tree.
+Each of the next
+N−1 lines contains two space-separated integers
+x and
+y denoting an edge between nodes
+x and
+y.
+The last line contains two space-separated integers
+r and
+K.
+Output
+Print a single line containing
+N space-separated integers. For each valid
+i, the
+i-th of them should denote the number of walks from node
+r to node
+i with length
+K, modulo
+998244353.
+Constraints
+1≤N≤3,000
+1≤r≤N
+0≤K≤10
+9
+Subtasks
+Subtask #1 (10 points):
+1≤N≤200
+Subtask #2 (10 points):
+0≤K≤3,000
+Subtask #3 (80 points): original constraints
+Sample 1:
+Input
+Output
+5
+1 2
+1 3
+1 4
+4 5
+3 4
+0 3 3 4 0
+Explanation:
+There are three walks from node
+3 to itself:
+(3,1,2,1,3),
+(3,1,3,1,3) and
+(3,1,4,1,3).

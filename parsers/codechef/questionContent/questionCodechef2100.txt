@@ -1,0 +1,103 @@
+D - Pilgrims Destination
+Problem
+There is a planet named “Ruizland” having
+N cities, These cities are connected in the form of a tree by a bidirectional path of specified length(in miles). Cities are numbered from
+1 to
+N. City number
+1 is the capital city.
+M pilgrims started their journey from the capital city having initial energy
+E
+1
+,E
+2
+,…,E
+M
+respectively which reduces on moving from one city to another by a certain amount
+(A).
+A is calculated as follows:-
+Consider two cities
+U and
+V having an edge length of
+K miles. The total number of distinct cities from the capital city to the city
+U is
+D (city
+U and capital city both are inclusive).
+If a pilgrim moves from city
+U to
+V, then
+A=K∗D.
+Out of
+N cities, There are some special cities (except the capital city) that are connected to only one city. All pilgrims want to reach any of the special cities. A pilgrim will stop his journey as soon as the energy of the pilgrims becomes
+0 or reaches any of the special cities.
+Initially, all cities have
+0 pilgrims except the capital city.
+Find the maximum count of special cities that is non-empty (at least one pilgrim is present) after the end of the journey of all the pilgrims given that pilgrims are allowed to take any path during their journey.
+###Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two integers
+N and
+M separated by space, where
+N is the number of cities and
+M is the number of pilgrims.
+The second line contains
+M integers separated by spaces, denoting the initial energy of the pilgrims.
+Next,
+N−1 lines consists of three integers
+U,
+V and
+K separated by space where city
+U and
+V are connected by a bidirectional path whose length is
+K miles
+Output
+For each test case, Print the maximum count of special cities that is non-empty (at least one pilgrim is present) after the end of the journey of all the pilgrims.
+Constraints
+1≤T≤50
+2≤N≤10
+5
+1≤M≤10
+5
+1≤E
+i
+≤10
+18
+1≤U,V≤N
+1≤K≤10
+6
+It is guaranteed that the sum of
+N over all test cases does not exceed
+10
+5
+.
+It is guaranteed that the sum of
+M over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+1
+6 4
+100 20 10 50
+1 2 10
+2 3 20
+2 4 30
+4 5 40
+1 6 50
+2
+Explanation:
+There are
+3 special cities namely
+3,5 and
+6. The energy expected to reach these special cities are
+50,190 and
+50 respectively. Special city
+5 cannot be reached by any pilgrim. If Pilgrim
+1 goes to the special city
+3 and pilgrim
+4 goes to the special city
+6, then the maximum number of non-empty special cities is
+2.

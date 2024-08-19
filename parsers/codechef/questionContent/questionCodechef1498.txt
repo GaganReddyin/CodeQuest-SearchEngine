@@ -1,0 +1,57 @@
+Subsegment Divisibility 
+Problem
+JJ challenges his friend GG to construct an array
+A containing
+N distinct elements such that the following conditions hold:
+For all
+1≤i≤N,
+1≤A
+i
+≤10
+5
+For every subarray of length
+≥2, the sum of all the elements of the subarray is not divisible by the length of the subarray
+Please help perplexed GG to complete JJ's challenge.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains an integer
+N - the size of the array
+A to be constructed.
+Output Format
+For each test case, output an array
+A containing
+N distinct elements which satisfy the given conditions.
+If there are multiple arrays that satisfy the conditions, print any.
+Constraints
+1≤T≤10
+1≤N≤500
+Sample 1:
+Input
+Output
+2
+3
+4
+7 2 5
+3 18 11 2
+Explanation:
+Test case-1: Following are the subarrays of length
+≥2:
+Length=2:
+sum([7,2])=9,
+sum([2,5])=7
+Length=3:
+sum([7,2,5])=14
+We can see that for each of these subarrays, the sum is not divisible by the length.
+Test case-2: Following are the subarrays of length
+≥2:
+Length=2:
+sum([3,18])=21,
+sum([18,11])=29,
+sum([11,2])=13
+Length=3:
+sum([3,18,11])=32,
+sum([18,11,2])=31
+Length=4:
+sum([3,18,11,2])=34
+We can see that for each of these subarrays, the sum is not divisible by the length.

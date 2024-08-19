@@ -1,0 +1,180 @@
+C. Line Empire
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are an ambitious king who wants to be the Emperor of The Reals. But to do that, you must first become Emperor of The Integers.
+Consider a number axis. The capital of your empire is initially at
+0
+. There are
+n
+unconquered kingdoms at positions
+0<
+x
+1
+<
+x
+2
+<…<
+x
+n
+. You want to conquer all other kingdoms.
+There are two actions available to you:
+You can change the location of your capital (let its current position be
+c
+1
+) to any other conquered kingdom (let its position be
+c
+2
+) at a cost of
+a⋅|
+c
+1
+−
+c
+2
+|
+.
+From the current capital (let its current position be
+c
+1
+) you can conquer an unconquered kingdom (let its position be
+c
+2
+) at a cost of
+b⋅|
+c
+1
+−
+c
+2
+|
+. You cannot conquer a kingdom if there is an unconquered kingdom between the target and your capital.
+Note that you cannot place the capital at a point without a kingdom. In other words, at any point, your capital can only be at
+0
+or one of
+x
+1
+,
+x
+2
+,…,
+x
+n
+. Also note that conquering a kingdom does not change the position of your capital.
+Find the minimum total cost to conquer all kingdoms. Your capital can be anywhere at the end.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+)  — the number of test cases. The description of each test case follows.
+The first line of each test case contains
+3
+integers
+n
+,
+a
+, and
+b
+(
+1≤n≤2⋅
+10
+5
+;
+1≤a,b≤
+10
+5
+).
+The second line of each test case contains
+n
+integers
+x
+1
+,
+x
+2
+,…,
+x
+n
+(
+1≤
+x
+1
+<
+x
+2
+<…<
+x
+n
+≤
+10
+8
+).
+The sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer  — the minimum cost to conquer all kingdoms.
+Example
+input
+Copy
+4
+5 2 7
+3 5 12 13 21
+5 6 3
+1 5 6 21 30
+2 9 3
+10 15
+11 27182 31415
+16 18 33 98 874 989 4848 20458 34365 38117 72030
+output
+Copy
+173
+171
+75
+3298918744
+Note
+Here is an optimal sequence of moves for the second test case:
+Conquer the kingdom at position
+1
+with cost
+3⋅(1−0)=3
+.
+Move the capital to the kingdom at position
+1
+with cost
+6⋅(1−0)=6
+.
+Conquer the kingdom at position
+5
+with cost
+3⋅(5−1)=12
+.
+Move the capital to the kingdom at position
+5
+with cost
+6⋅(5−1)=24
+.
+Conquer the kingdom at position
+6
+with cost
+3⋅(6−5)=3
+.
+Conquer the kingdom at position
+21
+with cost
+3⋅(21−5)=48
+.
+Conquer the kingdom at position
+30
+with cost
+3⋅(30−5)=75
+.
+The total cost is
+3+6+12+24+3+48+75=171
+. You cannot get a lower cost than this.

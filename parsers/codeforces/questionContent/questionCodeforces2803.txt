@@ -1,0 +1,362 @@
+F. Blocks and Sensors
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Polycarp plays a well-known computer game (we won't mention its name). Every object in this game consists of three-dimensional blocks — axis-aligned cubes of size
+1×1×1
+. These blocks are unaffected by gravity, so they can float in the air without support. The blocks are placed in cells of size
+1×1×1
+; each cell either contains exactly one block or is empty. Each cell is represented by its coordinates
+(x,y,z)
+(the cell with these coordinates is a cube with opposite corners in
+(x,y,z)
+and
+(x+1,y+1,z+1)
+) and its contents
+a
+x,y,z
+; if the cell is empty, then
+a
+x,y,z
+=0
+, otherwise
+a
+x,y,z
+is equal to the type of the block placed in it (the types are integers from
+1
+to
+2⋅
+10
+5
+).
+Polycarp has built a large structure consisting of blocks. This structure can be enclosed in an axis-aligned rectangular parallelepiped of size
+n×m×k
+, containing all cells
+(x,y,z)
+such that
+x∈[1,n]
+,
+y∈[1,m]
+, and
+z∈[1,k]
+. After that, Polycarp has installed
+2nm+2nk+2mk
+sensors around this parallelepiped. A sensor is a special block that sends a ray in some direction and shows the type of the first block that was hit by this ray (except for other sensors). The sensors installed by Polycarp are adjacent to the borders of the parallelepiped, and the rays sent by them are parallel to one of the coordinate axes and directed inside the parallelepiped. More formally, the sensors can be divided into
+6
+types:
+there are
+mk
+sensors of the first type; each such sensor is installed in
+(0,y,z)
+, where
+y∈[1,m]
+and
+z∈[1,k]
+, and it sends a ray that is parallel to the
+Ox
+axis and has the same direction;
+there are
+mk
+sensors of the second type; each such sensor is installed in
+(n+1,y,z)
+, where
+y∈[1,m]
+and
+z∈[1,k]
+, and it sends a ray that is parallel to the
+Ox
+axis and has the opposite direction;
+there are
+nk
+sensors of the third type; each such sensor is installed in
+(x,0,z)
+, where
+x∈[1,n]
+and
+z∈[1,k]
+, and it sends a ray that is parallel to the
+Oy
+axis and has the same direction;
+there are
+nk
+sensors of the fourth type; each such sensor is installed in
+(x,m+1,z)
+, where
+x∈[1,n]
+and
+z∈[1,k]
+, and it sends a ray that is parallel to the
+Oy
+axis and has the opposite direction;
+there are
+nm
+sensors of the fifth type; each such sensor is installed in
+(x,y,0)
+, where
+x∈[1,n]
+and
+y∈[1,m]
+, and it sends a ray that is parallel to the
+Oz
+axis and has the same direction;
+finally, there are
+nm
+sensors of the sixth type; each such sensor is installed in
+(x,y,k+1)
+, where
+x∈[1,n]
+and
+y∈[1,m]
+, and it sends a ray that is parallel to the
+Oz
+axis and has the opposite direction.
+Polycarp has invited his friend Monocarp to play with him. Of course, as soon as Monocarp saw a large parallelepiped bounded by sensor blocks, he began to wonder what was inside of it. Polycarp didn't want to tell Monocarp the exact shape of the figure, so he provided Monocarp with the data from all sensors and told him to try guessing the contents of the parallelepiped by himself.
+After some hours of thinking, Monocarp has no clue about what's inside the sensor-bounded space. But he does not want to give up, so he decided to ask for help. Can you write a program that will analyze the sensor data and construct any figure that is consistent with it?
+Input
+The first line contains three integers
+n
+,
+m
+and
+k
+(
+1≤n,m,k≤2⋅
+10
+5
+,
+nmk≤2⋅
+10
+5
+) — the dimensions of the parallelepiped.
+Then the sensor data follows. For each sensor, its data is either
+0
+, if the ray emitted from it reaches the opposite sensor (there are no blocks in between), or an integer from
+1
+to
+2⋅
+10
+5
+denoting the type of the first block hit by the ray. The data is divided into
+6
+sections (one for each type of sensors), each consecutive pair of sections is separated by a blank line, and the first section is separated by a blank line from the first line of the input.
+The first section consists of
+m
+lines containing
+k
+integers each. The
+j
+-th integer in the
+i
+-th line is the data from the sensor installed in
+(0,i,j)
+.
+The second section consists of
+m
+lines containing
+k
+integers each. The
+j
+-th integer in the
+i
+-th line is the data from the sensor installed in
+(n+1,i,j)
+.
+The third section consists of
+n
+lines containing
+k
+integers each. The
+j
+-th integer in the
+i
+-th line is the data from the sensor installed in
+(i,0,j)
+.
+The fourth section consists of
+n
+lines containing
+k
+integers each. The
+j
+-th integer in the
+i
+-th line is the data from the sensor installed in
+(i,m+1,j)
+.
+The fifth section consists of
+n
+lines containing
+m
+integers each. The
+j
+-th integer in the
+i
+-th line is the data from the sensor installed in
+(i,j,0)
+.
+Finally, the sixth section consists of
+n
+lines containing
+m
+integers each. The
+j
+-th integer in the
+i
+-th line is the data from the sensor installed in
+(i,j,k+1)
+.
+Output
+If the information from the input is inconsistent, print one integer
+−1
+.
+Otherwise, print the figure inside the parallelepiped as follows. The output should consist of
+nmk
+integers:
+a
+1,1,1
+,
+a
+1,1,2
+, ...,
+a
+1,1,k
+,
+a
+1,2,1
+, ...,
+a
+1,2,k
+, ...,
+a
+1,m,k
+,
+a
+2,1,1
+, ...,
+a
+n,m,k
+, where
+a
+i,j,k
+is the type of the block in
+(i,j,k)
+, or
+0
+if there is no block there. If there are multiple figures consistent with sensor data, describe any of them.
+For your convenience, the sample output is formatted as follows: there are
+n
+separate sections for blocks having
+x=1
+,
+x=2
+, ...,
+x=n
+; each section consists of
+m
+lines containing
+k
+integers each. Note that this type of output is acceptable, but you may print the integers with any other formatting instead (even all integers on the same line), only their order matters.
+Examples
+input
+Copy
+4 3 2
+
+1 4
+3 2
+6 5
+
+1 4
+3 2
+6 7
+
+1 4
+1 4
+0 0
+0 7
+
+6 5
+6 5
+0 0
+0 7
+
+1 3 6
+1 3 6
+0 0 0
+0 0 7
+
+4 3 5
+4 2 5
+0 0 0
+0 0 7
+output
+Copy
+1 4
+3 0
+6 5
+
+1 4
+3 2
+6 5
+
+0 0
+0 0
+0 0
+
+0 0
+0 0
+0 7
+input
+Copy
+1 1 1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+output
+Copy
+0
+input
+Copy
+1 1 1
+
+0
+
+0
+
+1337
+
+0
+
+0
+
+0
+output
+Copy
+-1
+input
+Copy
+1 1 1
+
+1337
+
+1337
+
+1337
+
+1337
+
+1337
+
+1337
+output
+Copy
+1337

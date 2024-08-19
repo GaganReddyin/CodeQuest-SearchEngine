@@ -1,0 +1,47 @@
+Chef Anup
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+Chef Anup is making dishes. Each dish consists of N ingredients, and quantity of each ingredient is an integer between 1 and K inclusive.
+Relative quality of 2 dishes is determined by their lexicographic order. Dish A is of lower quality than dish B if there is a position i (1<=i<=N) such that Aj = Bj for all j < i and Ai < Bi.
+E.g., if N = 2 and K = 2, then the possible dishes in lexicographic order are (1,1), (1,2), (2,1), (2,2).
+Given an integer L, determine the Lth possible dish in increasing order of quality.
+Input Format
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+Each test case description consists of a single line containing three integers N, K and L as described above.
+Output Format
+For each test case, print N space-separated integers in a single line describing the quantities of the ingredients for the Lth dish.
+Constraints
+1 ≤ T ≤ 10
+L will not exceed the total number of possible dishes.
+Subtasks
+For 20 points : N = 3, 2 ≤ K ≤ 102, 1 ≤ L ≤ 106
+For 30 points : 1 ≤ N ≤ 102, 2 ≤ K ≤ 102, 1 ≤ L ≤ 104
+For 50 points : 1 ≤ N ≤ 103, 2 ≤ K ≤ 103, 1 ≤ L ≤ 1018
+Sample 1:
+Input
+Output
+4
+3 3 1
+3 3 2
+3 3 3
+3 3 4
+1 1 1
+1 1 2
+1 1 3
+1 2 1
+Explanation:
+First 4 dishes in order have ingredients (1,1,1), (1,1,2), (1,1,3), and (1,2,1).
+Sample 2:
+Input
+Output
+4
+4 3 1
+4 3 2
+4 3 3
+4 3 4
+1 1 1 1
+1 1 1 2
+1 1 1 3
+1 1 2 1
+Explanation:
+First 4 dishes in order have ingredients (1,1,1,1), (1,1,1,2), (1,1,1,3), and (1,1,2,1).

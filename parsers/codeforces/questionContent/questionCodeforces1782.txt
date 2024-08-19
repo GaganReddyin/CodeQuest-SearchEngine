@@ -1,0 +1,284 @@
+H. Phoenix and Bits
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Phoenix loves playing with bits — specifically, by using the bitwise operations AND, OR, and XOR. He has
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+, and will perform
+q
+of the following queries:
+replace all numbers
+a
+i
+where
+l≤
+a
+i
+≤r
+with
+a
+i
+AND
+x
+;
+replace all numbers
+a
+i
+where
+l≤
+a
+i
+≤r
+with
+a
+i
+OR
+x
+;
+replace all numbers
+a
+i
+where
+l≤
+a
+i
+≤r
+with
+a
+i
+XOR
+x
+;
+output how many distinct integers
+a
+i
+where
+l≤
+a
+i
+≤r
+.
+For each query, Phoenix is given
+l
+,
+r
+, and
+x
+. Note that he is considering the values of the numbers, not their indices.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤2⋅
+10
+5
+;
+1≤q≤
+10
+5
+) — the number of integers and the number of queries, respectively.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+<
+2
+20
+) — the integers that Phoenix starts with.
+The next
+q
+lines contain the queries. For each query, the first integer of each line is
+t
+(
+1≤t≤4
+) — the type of query.
+If
+t∈{1,2,3}
+, then three integers
+l
+i
+,
+r
+i
+, and
+x
+i
+will follow (
+0≤
+l
+i
+,
+r
+i
+,
+x
+i
+<
+2
+20
+;
+l
+i
+≤
+r
+i
+).
+Otherwise, if
+t=4
+, two integers
+l
+i
+and
+r
+i
+will follow (
+0≤
+l
+i
+≤
+r
+i
+<
+2
+20
+).
+It is guaranteed that there is at least one query where
+t=4
+.
+Output
+Print the answer for each query where
+t=4
+.
+Examples
+input
+Copy
+5 6
+5 4 3 2 1
+1 2 3 2
+4 2 5
+3 2 5 3
+4 1 6
+2 1 1 8
+4 8 10
+output
+Copy
+3
+2
+1
+input
+Copy
+6 7
+6 0 2 3 2 7
+1 0 4 3
+2 6 8 4
+4 0 7
+3 2 5 3
+1 0 1 2
+4 0 3
+4 2 7
+output
+Copy
+5
+1
+2
+Note
+In the first example:
+For the first query,
+2
+is replaced by
+2
+AND
+2=2
+and
+3
+is replaced with
+3
+AND
+2=2
+. The set of numbers is
+{1,2,4,5}
+.
+For the second query, there are
+3
+distinct numbers between
+2
+and
+5
+:
+2
+,
+4
+, and
+5
+.
+For the third query,
+2
+is replaced by
+2
+XOR
+3=1
+,
+4
+is replaced by
+4
+XOR
+3=7
+, and
+5
+is replaced by
+5
+XOR
+3=6
+. The set of numbers is
+{1,6,7}
+.
+For the fourth query, there are
+2
+distinct numbers between
+1
+and
+6
+:
+1
+and
+6
+.
+For the fifth query,
+1
+is replaced by
+1
+OR
+8=9
+. The set of numbers is
+{6,7,9}
+.
+For the sixth query, there is one distinct number between
+8
+and
+10
+:
+9
+.

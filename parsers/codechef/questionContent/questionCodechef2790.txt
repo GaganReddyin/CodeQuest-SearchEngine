@@ -1,0 +1,82 @@
+Chef Rami and Inventions
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+In Chef Rami's kitchen, there is a long counter divided into
+N sections (numbered
+1 through
+N). For each valid
+i, there are
+a
+i
+raw meals stacked on top of each other in section
+i.
+Chef Rami has a special cooking device. This device can take all the meals that are stacked in some section and instantly cook them. He may perform the following operations in any order any number of times (including zero), until all the meals are cooked:
+Choose a section and use the device to cook all the meals in that section. This move costs
+X units of energy regardless of which section it is applied to.
+Choose a section
+i (
+i≥2) and move all the meals that are located in section
+i on top of the meals in section
+i−1 (if there are
+0 meals in section
+i−1, all the meals from section
+i are simply moved). The cost of this move is the number of meals located in section
+i before the move.
+Choose a section
+i (
+i<N) and move all the meals that are located in section
+i on top of the meals in section
+i+1. The cost of this move is also the number of meals located in section
+i before the move.
+Since Chef Rami is lazy, he wants to spend the minimum amount of energy to cook all the meals. Help him calculate this value.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+X.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Output
+For each test case, print a single line containing one integer ― the minimum number of units of energy Chef Rami needs to spend.
+Constraints
+1≤T≤1,000
+1≤N≤5,000
+1≤X≤10
+9
+0≤a
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+20,000
+Subtasks
+Subtask #1 (30 points):
+1≤N≤50
+the sum of
+N over all test cases does not exceed
+500
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+3 3
+5 2 4
+8
+Explanation:
+Example case 1: One of the optimal solutions is to move all the meals from the second section to the third section, with cost
+2, and then use the device on the first and third sections, with cost
+3 units of energy per use. The total cost is
+2+3+3=8 units of energy.

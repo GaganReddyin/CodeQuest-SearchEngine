@@ -1,0 +1,215 @@
+H. Codeforces Scoreboard
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are participating in a Codeforces Round with
+n
+problems.
+You spend exactly one minute to solve each problem, the time it takes to submit a problem can be ignored. You can only solve at most one problem at any time. The contest starts at time
+0
+, so you can make your first submission at any time
+t≥1
+minutes. Whenever you submit a problem, it is always accepted.
+The scoring of the
+i
+-th problem can be represented by three integers
+k
+i
+,
+b
+i
+, and
+a
+i
+. If you solve it at time
+t
+minutes, you get
+max(
+b
+i
+−
+k
+i
+⋅t,
+a
+i
+)
+points.
+Your task is to choose an order to solve all these
+n
+problems to get the maximum possible score. You can assume the contest is long enough to solve all problems.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of problems.
+The
+n
+lines follow, the
+i
+-th of them contains three integers
+k
+i
+,
+b
+i
+,
+a
+i
+(
+1≤
+k
+i
+,
+b
+i
+,
+a
+i
+≤
+10
+9
+;
+a
+i
+<
+b
+i
+), denoting that you get the score of
+max(
+b
+i
+−
+k
+i
+⋅t,
+a
+i
+)
+if you solve the
+i
+-th task at time
+t
+minutes.
+It's guaranteed that the sum of
+n
+does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a line containing a single integer — the maximum score you can get.
+Example
+input
+Copy
+4
+4
+10000 1000000000 2006
+10000 1000000000 9999
+2 999991010 1010
+1000000000 1000000000 999999999
+6
+1 8 1
+9 29 4
+2 14 3
+4 13 1
+2 19 5
+10 12 5
+8
+4 10 1
+4 19 8
+1 14 3
+4 15 6
+2 9 6
+1 11 10
+2 19 12
+4 19 14
+10
+5 12 7
+5 39 12
+2 39 11
+3 23 15
+5 30 11
+3 17 13
+5 29 14
+3 17 11
+3 36 18
+3 9 8
+output
+Copy
+3999961003
+53
+78
+180
+Note
+In the second test case, the points for all problems at each minute are listed below.
+Time
+1
+2
+3
+4
+5
+6
+Problem
+1
+7
+6
+5
+4
+3
+2
+Problem
+2
+20
+11
+4
+4
+4
+4
+Problem
+3
+12
+10
+8
+6
+4
+3
+Problem
+4
+9
+5
+1
+1
+1
+1
+Problem
+5
+17
+15
+13
+11
+9
+7
+Problem
+6
+5
+5
+5
+5
+5
+5
+The points displayed in red denote one of the optimal orders with the score
+53
+.

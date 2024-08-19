@@ -1,0 +1,156 @@
+D. Progressions Covering
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two arrays: an array
+a
+consisting of
+n
+zeros and an array
+b
+consisting of
+n
+integers.
+You can apply the following operation to the array
+a
+an arbitrary number of times: choose some subsegment of
+a
+of length
+k
+and add the arithmetic progression
+1,2,…,k
+to this subsegment — i. e. add
+1
+to the first element of the subsegment,
+2
+to the second element, and so on. The chosen subsegment should be inside the borders of the array
+a
+(i.e., if the left border of the chosen subsegment is
+l
+, then the condition
+1≤l≤l+k−1≤n
+should be satisfied). Note that the progression added is always
+1,2,…,k
+but not the
+k,k−1,…,1
+or anything else (i.e., the leftmost element of the subsegment always increases by
+1
+, the second element always increases by
+2
+and so on).
+Your task is to find the minimum possible number of operations required to satisfy the condition
+a
+i
+≥
+b
+i
+for each
+i
+from
+1
+to
+n
+. Note that the condition
+a
+i
+≥
+b
+i
+should be satisfied for all elements at once.
+Input
+The first line of the input contains two integers
+n
+and
+k
+(
+1≤k≤n≤3⋅
+10
+5
+) — the number of elements in both arrays and the length of the subsegment, respectively.
+The second line of the input contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+12
+), where
+b
+i
+is the
+i
+-th element of the array
+b
+.
+Output
+Print one integer — the minimum possible number of operations required to satisfy the condition
+a
+i
+≥
+b
+i
+for each
+i
+from
+1
+to
+n
+.
+Examples
+input
+Copy
+3 3
+5 4 6
+output
+Copy
+5
+input
+Copy
+6 3
+1 2 3 2 2 3
+output
+Copy
+3
+input
+Copy
+6 3
+1 2 4 1 2 3
+output
+Copy
+3
+input
+Copy
+7 3
+50 17 81 25 42 39 96
+output
+Copy
+92
+Note
+Consider the first example. In this test, we don't really have any choice, so we need to add at least five progressions to make the first element equals
+5
+. The array
+a
+becomes
+[5,10,15]
+.
+Consider the second example. In this test, let's add one progression on the segment
+[1;3]
+and two progressions on the segment
+[4;6]
+. Then, the array
+a
+becomes
+[1,2,3,2,4,6]
+.

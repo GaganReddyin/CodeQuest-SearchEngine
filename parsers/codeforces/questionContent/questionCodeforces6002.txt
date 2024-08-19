@@ -1,0 +1,81 @@
+F. Xors on Segments
+time limit per test10 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array with n integers ai and m queries. Each query is described by two integers (lj, rj).
+Let's define the function . The function is defined for only u ≤ v.
+For each query print the maximal value of the function f(ax, ay) over all lj ≤ x, y ≤ rj,  ax ≤ ay.
+Input
+The first line contains two integers n, m (1 ≤ n ≤ 5·104,  1 ≤ m ≤ 5·103) — the size of the array and the number of the queries.
+The second line contains n integers ai (1 ≤ ai ≤ 106) — the elements of the array a.
+Each of the next m lines contains two integers lj, rj (1 ≤ lj ≤ rj ≤ n) – the parameters of the j-th query.
+Output
+For each query print the value aj on a separate line — the maximal value of the function f(ax, ay) over all lj ≤ x, y ≤ rj,  ax ≤ ay.
+Examples
+input
+Copy
+6 3
+1 2 3 4 5 6
+1 6
+2 5
+3 4
+output
+Copy
+7
+7
+7
+input
+Copy
+1 1
+1
+1 1
+output
+Copy
+1
+input
+Copy
+6 20
+10 21312 2314 214 1 322
+1 1
+1 2
+1 3
+1 4
+1 5
+1 6
+2 2
+2 3
+2 4
+2 5
+2 6
+3 4
+3 5
+3 6
+4 4
+4 5
+4 6
+5 5
+5 6
+6 6
+output
+Copy
+10
+21313
+21313
+21313
+21313
+21313
+21312
+21313
+21313
+21313
+21313
+2314
+2315
+2315
+214
+215
+323
+1
+323
+322

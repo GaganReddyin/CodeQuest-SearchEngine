@@ -1,0 +1,34 @@
+Query over Matrix
+Problem
+Read problems statements in Mandarin Chinese , Russian and Vietnamese as well.
+Read problems statements in Mandarin Chinese , Russian and Vietnamese
+There is a N*N square matrix. You have been given N specifications, one per row of the matrix. The ith specifications is represented by a pair of integers L[i] and R[i], denoting that all element belonging to columns between L[i] and R[i] (both inclusive) in row i are 1, while the rest of the elements of the ith row are 0.
+Now you will be given an integer Q, followed by Q operations: Each query is described by two integers x and y, which asks what will be the parity of the sum of the matrix if the xth row and the yth column are removed from the matrix.
+Input
+First line of the input contains an integer N, followed by N lines: each containing a pair of integers. ith pair of integers denotes the value of L[i] and R[i].
+The next line contains the value of Q, and the following Q lines contain the queries.
+Output
+Q lines, each containing a single character "E" or "O" (no quotes needed), indicating whether the sum is even or odd.
+Constraints
+Subtask #1: 20 points
+1 ≤ N,Q ≤ 1000, 1 ≤ L[i] ≤ R[i] ≤ N,1 ≤ x,y ≤ N
+Subtask #2: 80 points
+1 ≤ N,Q ≤ 105, 1 ≤ L[i] ≤ R[i] ≤ N, 1 ≤ x,y ≤ N
+Sample 1:
+Input
+Output
+3
+1 3
+2 2
+1 3
+2
+2 2
+3 2
+E
+E
+Explanation:
+The given array is:
+1 1 1
+0 1 0
+1 1 1
+It's easy to see that the sum is even in both the queries.

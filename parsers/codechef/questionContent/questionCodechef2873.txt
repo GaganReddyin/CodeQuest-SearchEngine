@@ -1,0 +1,72 @@
+Nice Subsets
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+A good number is a positive integer which is not divisible by the cube (third power) of any prime. For example,
+2,
+3,
+25=5⋅5,
+63=7⋅9 and
+2057=11⋅11⋅17 are good numbers, but
+8=2⋅2⋅2,
+9317=7⋅11⋅11⋅11 and
+2401=7⋅7⋅7⋅7 are not good numbers.
+A pair of positive integers
+(x,y) is special if
+x⋅y is a good number. A set of positive integers is nice if each pair of different integers from this set is special. In particular, the empty set is nice.
+You are given a set of integers
+{A
+1
+,A
+2
+,…,A
+N
+}. Find the number of nice subsets of this set.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the number of nice subsets.
+Constraints
+1≤T≤10
+1≤N≤40
+1≤A
+i
+≤10
+8
+for each valid
+i
+A
+1
+,A
+2
+,…,A
+N
+are pairwise distinct
+Sample 1:
+Input
+Output
+4
+3
+1 2 3
+1
+8
+5
+5 1 4 2 3
+2
+81 3
+8
+2
+24
+3

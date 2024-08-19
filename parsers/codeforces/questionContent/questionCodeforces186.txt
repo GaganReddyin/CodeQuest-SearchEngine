@@ -1,0 +1,189 @@
+B. Equalize by Divide
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of positive integers.
+You can make this operation multiple (possibly zero) times:
+Choose two indices
+i
+,
+j
+(
+1≤i,j≤n
+,
+i≠j
+).
+Assign
+a
+i
+:=⌈
+a
+i
+a
+j
+⌉
+. Here
+⌈x⌉
+denotes
+x
+rounded up to the smallest integer
+≥x
+.
+Is it possible to make all array elements equal by some sequence of operations (possibly empty)? If yes, print any way to do it in at most
+30n
+operations.
+It can be proven, that under the problem constraints, if some way exists to make all elements equal, there exists a way with at most
+30n
+operations.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Descriptions of test cases follow.
+The first line of each test case description contains a single integer
+n
+(
+1≤n≤100
+).
+The second line of each test case description contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+It is guaranteed, that the sum of
+n
+for all test cases does not exceed
+1000
+.
+Output
+For each test case print a single integer
+q
+(
+−1≤q≤30n
+). If
+q=−1
+, there is no solution, otherwise
+q
+is equal to the number of operations.
+If
+q≥0
+, on the next
+q
+lines print two integers
+i
+,
+j
+(
+1≤i,j≤n
+,
+i≠j
+) — descriptions of operations.
+If there are multiple solutions, you can print any.
+Example
+input
+Copy
+10
+1
+100
+3
+1 1 1
+2
+2 1
+2
+5 5
+3
+4 3 2
+4
+3 3 4 4
+2
+2 100
+5
+5 3 6 7 8
+6
+3 3 80 3 8 3
+4
+19 40 19 55
+output
+Copy
+0
+0
+-1
+0
+2
+1 3
+2 1
+4
+3 1
+4 2
+1 3
+2 4
+6
+2 1
+2 1
+2 1
+2 1
+2 1
+2 1
+8
+5 2
+4 2
+3 2
+1 3
+1 3
+2 1
+4 1
+5 1
+4
+5 1
+3 1
+3 1
+3 1
+9
+4 2
+2 1
+1 2
+1 2
+3 2
+3 2
+1 4
+2 4
+3 4
+Note
+In the first and second, fourth test cases all numbers are equal, so it is possible to do nothing.
+In the third test case, it is impossible to make all numbers equal.
+In the fifth test case:
+[4,3,2]→[2,3,2]→[2,2,2]
+.
+In the sixth test case:
+[3,3,4,4]→[3,3,2,4]→[3,3,2,2]→[2,3,2,2]→[2,2,2,2]
+.
+Here the red numbers are
+i
+indices (that will be assigned), blue numbers are
+j
+indices.

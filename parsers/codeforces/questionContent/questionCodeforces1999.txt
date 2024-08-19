@@ -1,0 +1,215 @@
+F. 1 2 3 4 ...
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Igor had a sequence
+d
+1
+,
+d
+2
+,…,
+d
+n
+of integers. When Igor entered the classroom there was an integer
+x
+written on the blackboard.
+Igor generated sequence
+p
+using the following algorithm:
+initially,
+p=[x]
+;
+for each
+1≤i≤n
+he did the following operation
+|
+d
+i
+|
+times:
+if
+d
+i
+≥0
+, then he looked at the last element of
+p
+(let it be
+y
+) and appended
+y+1
+to the end of
+p
+;
+if
+d
+i
+<0
+, then he looked at the last element of
+p
+(let it be
+y
+) and appended
+y−1
+to the end of
+p
+.
+For example, if
+x=3
+, and
+d=[1,−1,2]
+,
+p
+will be equal
+[3,4,3,4,5]
+.
+Igor decided to calculate the length of the longest increasing subsequence of
+p
+and the number of them.
+A sequence
+a
+is a subsequence of a sequence
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero or all) elements.
+A sequence
+a
+is an increasing sequence if each element of
+a
+(except the first one) is strictly greater than the previous element.
+For
+p=[3,4,3,4,5]
+, the length of longest increasing subsequence is
+3
+and there are
+3
+of them:
+[
+3
+–
+,
+4
+–
+,3,4,
+5
+–
+]
+,
+[
+3
+–
+,4,3,
+4
+–
+,
+5
+–
+]
+,
+[3,4,
+3
+–
+,
+4
+–
+,
+5
+–
+]
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤50
+) — the length of the sequence
+d
+.
+The second line contains a single integer
+x
+(
+−
+10
+9
+≤x≤
+10
+9
+) — the integer on the blackboard.
+The third line contains
+n
+integers
+d
+1
+,
+d
+2
+,…,
+d
+n
+(
+−
+10
+9
+≤
+d
+i
+≤
+10
+9
+).
+Output
+Print two integers:
+the first integer should be equal to the length of the longest increasing subsequence of
+p
+;
+the second should be equal to the number of them modulo
+998244353
+.
+You should print only the second number modulo
+998244353
+.
+Examples
+input
+Copy
+3
+3
+1 -1 2
+output
+Copy
+3 3
+input
+Copy
+3
+100
+5 -3 6
+output
+Copy
+9 7
+input
+Copy
+3
+1
+999999999 0 1000000000
+output
+Copy
+2000000000 1
+input
+Copy
+5
+34
+1337 -146 42 -69 228
+output
+Copy
+1393 3876
+Note
+The first test case was explained in the statement.
+In the second test case
+p=[100,101,102,103,104,105,104,103,102,103,104,105,106,107,108]
+.
+In the third test case
+p=[1,2,…,2000000000]
+.

@@ -1,0 +1,93 @@
+Army of Me
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Dr.D has recently been thinking about the phrase "Life is short". He decided to start doing all sorts of exotic stuff he has always wanted to do. But since life is short, he does not have the time to do it all by himself, so he made the Cloninator and used it to create
+N clones of himself (numbered
+1 through
+N) to help him do all the stuff on his hope-to-do-list. Dr.D has already lined up the clones; for each
+i (
+1≤i≤N), the
+i-th clone in the line is the
+P
+i
+-th clone created by Cloninator.
+There are
+Q items on Dr.D's hope-to-do-list, so you should process
+Q queries. For each query, Dr.D wants to choose some parameters
+L and
+R such that
+1≤L≤R≤N and send the clones
+P
+L
+,P
+L+1
+,…,P
+R
+to do an exotic activity. Dr.D waits until these clones finish and come back before proceeding with the next item on his list (the next query), so a clone may be picked multiple times in different queries.
+The strength of a group of clones is the maximum number of clones in that group such that their positions in the line are consecutive and they can be reordered in such a way that their id-s
+P
+i
+also become consecutive (they were created consecutively by the Cloninator). Dr.D is wondering if the groups he selects are strong enough for their tasks. For each query, calculate the strength of the group of clones that Dr.D sends to do an exotic activity.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+The next
+Q lines describe queries. Each of these lines contains two space-separated integers
+X and
+Y; the values of
+L and
+R for this query can be calculated as follows:
+Let
+last be the answer to the previous query, or
+0 if this is the first query.
+Calculate
+L=((X+last−1)%N)+1.
+Calculate
+R=((Y+last−1)%N)+1.
+If
+L>R, swap
+L and
+R.
+Output
+For each query, print a single line containing one integer ― the strength of the given group.
+Constraints
+1≤N,Q≤5⋅10
+5
+P
+1
+,P
+2
+,…,P
+N
+form a permutation of
+1,2,…,N.
+1≤X,Y≤N
+Subtasks
+Subtask #1 (21 points):
+N,Q≤5,000
+Subtask #2 (79 points): original constraints
+Sample 1:
+Input
+Output
+7 5
+2 5 4 6 3 7 1
+2 4
+5 2
+1 7
+7 6
+3 2
+3
+5
+1
+7
+2

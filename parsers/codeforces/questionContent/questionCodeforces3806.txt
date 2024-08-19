@@ -1,0 +1,54 @@
+B1. Distinguish three-qubit states
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given 3 qubits which are guaranteed to be in one of the two states:
+|
+ψ
+0
+⟩=
+1
+3
+√
+(|100⟩+ω|010⟩+
+ω
+2
+|001⟩)
+, or
+|
+ψ
+1
+⟩=
+1
+3
+√
+(|100⟩+
+ω
+2
+|010⟩+ω|001⟩)
+, where
+ω=
+e
+2iπ/3
+.
+Your task is to perform necessary operations and measurements to figure out which state it was and to return 0 if it was
+|
+ψ
+0
+⟩
+state or 1 if it was
+|
+ψ
+1
+⟩
+state. The state of the qubits after the operations does not matter.
+You have to implement an operation which takes an array of 3 qubits as an input and returns an integer. Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Solve (qs : Qubit[]) : Int {
+        // your code here
+    }
+}

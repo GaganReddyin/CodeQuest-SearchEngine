@@ -1,0 +1,77 @@
+Sonya and Segments
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Sonya has
+N segments on the
+x-axis. For each valid
+i, the
+i-th segment contains all points between
+l
+i
+and
+r
+i
+inclusive.
+Maks gave Sonya a magic number
+K. Sonya wants to choose exactly
+K of her segments in such a way that the intersection of the chosen segments is empty, i.e. there is no point which is contained in each of the chosen segments. Find the number of ways in which Sonya can choose
+K segments. Since this number can be large, Sonya only needs to know its remainder modulo
+1000000007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+l
+i
+and
+r
+i
+.
+Output
+For each test case, print a single line containing one integer — the number of ways to choose the segments, modulo
+1000000007 (
+10
+9
++7).
+Constraints
+1≤T≤1,000
+1≤K≤N≤4⋅10
+5
+1≤l
+i
+≤r
+i
+≤10
+9
+for each valid
+i
+the sum of
+N for all test cases does not exceed
+4⋅10
+5
+Sample 1:
+Input
+Output
+1
+5 2
+1 4
+2 5
+5 10
+4 7
+8 9
+4
+Explanation:
+Example case 1: We are looking for pairs of segments. The four pairs with empty intersections are
+(1,3),
+(1,5),
+(2,5) and
+(4,5).

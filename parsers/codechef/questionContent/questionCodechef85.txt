@@ -1,0 +1,60 @@
+Height of Rationals
+Problem
+In a recent breakthrough in mathematics, the proof utilized a concept called Height.
+Consider a fraction
+b
+a
+. Its Height is defined as the maximum of its numerator and denominator. So, for example, the Height of
+19
+3
+would be
+19, and the Height of
+4
+27
+would be
+27.
+Given
+a and
+b, find the Height of
+b
+a
+.
+Input Format
+The only line of input contains two integers,
+a and
+b.
+Output Format
+Output a single integer, which is the Height of
+b
+a
+.
+Constraints
+1≤a,b≤100
+a and
+b do not have any common factors.
+Sample 1:
+Input
+Output
+3 19
+19
+Explanation:
+The maximum of
+{3,19} is
+19. Hence the Height of
+19
+3
+is
+19.
+Sample 2:
+Input
+Output
+27 4
+27
+Explanation:
+The maximum of
+{27,4} is
+27. Hence the Height of
+4
+27
+is
+27.

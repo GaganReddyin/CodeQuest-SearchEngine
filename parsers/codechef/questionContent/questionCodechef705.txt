@@ -1,0 +1,126 @@
+Nahaane Jaa
+Problem
+"Bapuji - Ae Jethiya Nahaane Jaa Nahaane Jaa".
+Bapuji is furious with Jethiya because he did not bathe before eating. Jethiya does not want to bathe right now, but in order to do so, he must first establish his innocence to Bapuji.
+Bapuji gives Jethiya a problem, and if Jethiya solves it, Bapuji will allow him to eat his food before taking a bath. Jethiya asks for your help to solve the problem.
+You are given an array
+A of size
+N and an integer
+K. You can perform the following operation on the given array any number of times (possibly zero):
+Choose two integers
+L and
+R (
+1≤L≤R≤N)
+Then, for each
+i such that
+L≤i≤R, set
+A
+i
+to
+A
+⌊
+2
+L+R
+⌋
+. Here,
+⌊ ⌋ denotes the floor function.
+That is, apply the following to the subarray
+[L,R]:
+If this subarray has odd length, set all its elements to be equal to the middle element.
+If it has even length, set all its elements to be equal to the left one among the two middle elements.
+For example, if
+A=[1,3,2,3] then:
+If we choose
+L=1 and
+R=4, the array will change as follows:
+[
+1,3,2,3
+]→[3,3,3,3]
+If we choose
+L=2 and
+R=4, the array will change as follows:
+[1,
+3,2,3
+]→[1,2,2,2]
+Is it possible to make all the array elements equal to
+K after performing some number of operations?
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K — the number of elements in the array and the value
+K respectively.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of the array.
+Output Format
+For each test case, output on a new line the answer: Yes if all the elements can be made equal to
+K, and No otherwise.
+Each letter of the output may be printed in either uppercase or lowercase, i.e, Yes, YES, and yEs will all be treated as equivalent.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+−10
+9
+≤K≤10
+9
+−10
+9
+≤A
+i
+≤10
+9
+The sum of
+N across all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4 10
+1 2 3 4
+3 1
+1 2 3
+5 5
+7 -5 5 -2 5
+4 9
+-9 -9 8 0
+No
+Yes
+Yes
+No
+Explanation:
+Test case
+1: There is no way to make all the elements of the array equal
+10.
+Test case
+2: One way of performing operations is as follows:
+First, choose
+L=1 and
+R=2. This makes the array
+[1,1,3].
+Then, choose
+L=1 and
+R=3. This makes the array
+[1,1,1], and we are done.
+Test case
+3: Choose
+L=1 and
+R=5. The middle element is
+5 so everything becomes
+5, as required.
+Test case
+4: There is no way to make everything equal to
+9.

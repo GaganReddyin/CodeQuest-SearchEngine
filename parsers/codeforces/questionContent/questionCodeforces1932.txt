@@ -1,0 +1,96 @@
+B. RBS Deletion
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+A bracket sequence is a string containing only characters "(" and ")". A regular bracket sequence (or, shortly, an RBS) is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters "1" and "+" between the original characters of the sequence. For example:
+bracket sequences "()()" and "(())" are regular (the resulting expressions are: "(1)+(1)" and "((1+1)+1)");
+bracket sequences ")(", "(" and ")" are not.
+You are given a string
+s
+, which is an RBS. You can apply any number of operations to this string. Each operation can have one of the following types:
+choose some non-empty prefix of
+s
+and remove it from
+s
+, so
+s
+is still an RBS. For example, we can apply this operation as follows: "(())()(())()()"
+→
+"()()" (the first
+10
+characters are removed);
+choose some contiguous non-empty substring of
+s
+and remove it from
+s
+, so
+s
+is still an RBS. For example, we can apply this operation as follows: "(())()(())()()"
+→
+"(())()()()" (the characters from the
+7
+-th to the
+10
+-th are removed).
+The operation
+2
+can be applied at most
+k
+times. Calculate the maximum number of operations you can apply until
+s
+becomes empty.
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases.
+Each test case is described by two lines. The first line contains two integers
+n
+and
+k
+(
+2≤n≤2⋅
+10
+5
+;
+1≤k≤n
+;
+n
+is even) — the length of
+s
+and the maximum number of operations of type
+2
+you can apply.
+The second line contains a string
+s
+of
+n
+characters '(' and ')'. This string is an RBS.
+The sum of
+n
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer — the maximum number of operations you can apply.
+Example
+input
+Copy
+3
+12 2
+(()())((()))
+6 3
+()()()
+8 1
+(((())))
+output
+Copy
+4
+3
+2

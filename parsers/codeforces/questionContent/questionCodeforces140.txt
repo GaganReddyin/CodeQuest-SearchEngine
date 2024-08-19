@@ -1,0 +1,128 @@
+F1. GCD Master (easy version)
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The only difference between the two versions is the constraint on
+m
+. You can make hacks only if both versions of the problem are solved.
+You are given an array
+a
+of length
+n
+and two integers
+m
+and
+k
+. Each element in
+a
+satisfies
+1≤
+a
+i
+≤m
+.
+In one operation, you choose two indices
+i
+and
+j
+such that
+1≤i<j≤|a|
+, then append
+gcd(
+a
+i
+,
+a
+j
+)
+to the back of the array and delete
+a
+i
+and
+a
+j
+from the array. Note that the length of the array decreases by one after this operation.
+Find the maximum possible sum of the array after performing exactly
+k
+operations.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains three integers
+n
+,
+m
+and
+k
+(
+2≤n≤
+10
+6
+;
+1≤m≤
+10
+6
+;
+1≤k≤n−1
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤m
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+6
+and the sum of
+m
+over all test cases does not exceed
+10
+6
+.
+Output
+For each test case, output the maximum possible sum of the array after performing
+k
+operations optimally.
+Example
+input
+Copy
+3
+3 8 1
+4 7 8
+5 114 2
+7 2 4 1 6
+3 514 2
+2 3 3
+output
+Copy
+11
+14
+1
+Note
+In the first test case, the best way is to choose
+i=1
+,
+j=3
+in the first operation. The final sequence is
+[7,4]
+.

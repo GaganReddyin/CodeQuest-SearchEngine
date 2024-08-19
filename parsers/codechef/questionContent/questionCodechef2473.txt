@@ -1,0 +1,69 @@
+D-Dimensional MST
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given
+N points in
+D-dimensional space. The
+i
+th
+point has
+D coordinates -
+x
+i,1
+,x
+i,2
+,…,x
+i,D
+.
+Consider a weighted undirected complete graph with these
+N points as its vertices. Weight of the edge between points
+i and
+j is
+∣x
+i,1
+−x
+j,1
+∣+∣x
+i,2
+−x
+j,2
+∣+…+∣x
+i,D
+−x
+j,D
+∣.
+Find the weight of the maximum spanning tree of this graph.
+###Input:
+The first line contains two integers
+N,D.
+The
+i-th of the next
+N lines contains a description of the
+i-th point. It has
+D integers:
+x
+i,1
+,x
+i,2
+,…,x
+i,D
+.
+###Output: Output a single line which contains a single integer - the Maximum Spanning Tree Weight
+###Constraints
+1≤D≤5
+1≤N≤200000
+0≤x
+i,j
+≤100000
+###Subtasks
+10 points,
+N≤5000
+90 points,
+N≤200000
+Sample 1:
+Input
+Output
+2 2 
+1 1 
+2 2
+2

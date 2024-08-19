@@ -1,0 +1,270 @@
+F. Equate Multisets
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Multiset —is a set of numbers in which there can be equal elements, and the order of the numbers does not matter. Two multisets are equal when each value occurs the same number of times. For example, the multisets
+{2,2,4}
+and
+{2,4,2}
+are equal, but the multisets
+{1,2,2}
+and
+{1,1,2}
+ — are not.
+You are given two multisets
+a
+and
+b
+, each consisting of
+n
+integers.
+In a single operation, any element of the
+b
+multiset can be doubled or halved (rounded down). In other words, you have one of the following operations available for an element
+x
+of the
+b
+multiset:
+replace
+x
+with
+x⋅2
+,
+or replace
+x
+with
+⌊
+x
+2
+⌋
+(round down).
+Note that you cannot change the elements of the
+a
+multiset.
+See if you can make the multiset
+b
+become equal to the multiset
+a
+in an arbitrary number of operations (maybe
+0
+).
+For example, if
+n=4
+,
+a={4,24,5,2}
+,
+b={4,1,6,11}
+, then the answer is yes. We can proceed as follows:
+Replace
+1
+with
+1⋅2=2
+. We get
+b={4,2,6,11}
+.
+Replace
+11
+with
+⌊
+11
+2
+⌋=5
+. We get
+b={4,2,6,5}
+.
+Replace
+6
+with
+6⋅2=12
+. We get
+b={4,2,12,5}
+.
+Replace
+12
+with
+12⋅2=24
+. We get
+b={4,2,24,5}
+.
+Got equal multisets
+a={4,24,5,2}
+and
+b={4,2,24,5}
+.
+Input
+The first line of input data contains a single integer
+t
+(
+1≤t≤
+10
+4
+) —the number of test cases.
+Each test case consists of three lines.
+The first line of the test case contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+) —the number of elements in the multisets
+a
+and
+b
+.
+The second line gives
+n
+integers:
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+1
+≤
+a
+2
+≤⋯≤
+a
+n
+≤
+10
+9
+) —the elements of the multiset
+a
+. Note that the elements may be equal.
+The third line contains
+n
+integers:
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+1
+≤
+b
+2
+≤⋯≤
+b
+n
+≤
+10
+9
+) — elements of the multiset
+b
+. Note that the elements may be equal.
+It is guaranteed that the sum of
+n
+values over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print on a separate line:
+YES if you can make the multiset
+b
+become equal to
+a
+,
+NO otherwise.
+You can output YES and NO in any case (for example, strings yEs, yes, Yes and YES will be recognized as positive answer).
+Example
+input
+Copy
+5
+4
+2 4 5 24
+1 4 6 11
+3
+1 4 17
+4 5 31
+5
+4 7 10 13 14
+2 14 14 26 42
+5
+2 2 4 4 4
+28 46 62 71 98
+6
+1 2 10 16 64 80
+20 43 60 74 85 99
+output
+Copy
+YES
+NO
+YES
+YES
+YES
+Note
+The first example is explained in the statement.
+In the second example, it is impossible to get the value
+31
+from the numbers of the multiset
+b
+by available operations.
+In the third example, we can proceed as follows:
+Replace
+2
+with
+2⋅2=4
+. We get
+b={4,14,14,26,42}
+.
+Replace
+14
+with
+⌊
+14
+2
+⌋=7
+. We get
+b={4,7,14,26,42}
+.
+Replace
+26
+with
+⌊
+26
+2
+⌋=13
+. We get
+b={4,7,14,13,42}
+.
+Replace
+42
+with
+⌊
+42
+2
+⌋=21
+. We get
+b={4,7,14,13,21}
+.
+Replace
+21
+with
+⌊
+21
+2
+⌋=10
+. We get
+b={4,7,14,13,10}
+.
+Got equal multisets
+a={4,7,10,13,14}
+and
+b={4,7,14,13,10}
+.

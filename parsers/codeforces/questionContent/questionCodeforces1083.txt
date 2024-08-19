@@ -1,0 +1,138 @@
+F. Madoka and Laziness
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Madoka has become too lazy to write a legend, so let's go straight to the formal description of the problem.
+An array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+is called a hill if it is not empty and there is an index
+i
+in it, for which the following is true:
+a
+1
+<
+a
+2
+<…<
+a
+i
+>
+a
+i+1
+>
+a
+i+2
+>…>
+a
+n
+.
+A sequence
+x
+is a subsequence of a sequence
+y
+if
+x
+can be obtained from
+y
+by deletion of several (possibly, zero or all) elements keeping the order of the other elements. For example, for an array
+[69,1000,228,−7]
+the array
+[1000,−7]
+is a subsequence, while
+[1]
+and
+[−7,1000]
+are not.
+Splitting an array into two subsequences is called good if each element belongs to exactly one subsequence, and also each of these subsequences is a hill.
+You are given an array of distinct positive integers
+a
+1
+,
+a
+2
+,…
+a
+n
+. It is required to find the number of different pairs of maxima of the first and second subsequences among all good splits. Two pairs that only differ in the order of elements are considered same.
+Input
+The first line of input contains a single integer
+n
+(
+2≤n≤5⋅
+10
+5
+) — array size.
+The second line of input contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — the elements of the array. It is guaranteed that all
+a
+i
+are pairwise distinct.
+Output
+In a single line, print exactly one number — the number of different pairs of maxima of the first and second subsequences among all good splits.
+Examples
+input
+Copy
+4
+1 2 4 3
+output
+Copy
+3
+input
+Copy
+8
+2 12 13 7 14 6 11 8
+output
+Copy
+4
+input
+Copy
+7
+9 5 3 10 2 6 8
+output
+Copy
+0
+input
+Copy
+8
+8 6 10 9 1 5 2 14
+output
+Copy
+0
+Note
+In the first test case there are 3 possible pairs:
+(3,4)
+,
+(2,4)
+,
+(1,4)
+. And they are achieved with the following partitions:
+[1,2,3],[4]
+;
+[4,3],[1,2]
+;
+[1],[2,4,3]

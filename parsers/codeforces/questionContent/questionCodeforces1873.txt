@@ -1,0 +1,280 @@
+D. Bananas in a Microwave
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a malfunctioning microwave in which you want to put some bananas. You have
+n
+time-steps before the microwave stops working completely. At each time-step, it displays a new operation.
+Let
+k
+be the number of bananas in the microwave currently. Initially,
+k=0
+. In the
+i
+-th operation, you are given three parameters
+t
+i
+,
+x
+i
+,
+y
+i
+in the input. Based on the value of
+t
+i
+, you must do one of the following:
+Type 1: (
+t
+i
+=1
+,
+x
+i
+,
+y
+i
+) — pick an
+a
+i
+, such that
+0≤
+a
+i
+≤
+y
+i
+, and perform the following update
+a
+i
+times:
+k:=⌈(k+
+x
+i
+)⌉
+.
+Type 2: (
+t
+i
+=2
+,
+x
+i
+,
+y
+i
+) — pick an
+a
+i
+, such that
+0≤
+a
+i
+≤
+y
+i
+, and perform the following update
+a
+i
+times:
+k:=⌈(k⋅
+x
+i
+)⌉
+.
+Note that
+x
+i
+can be a fractional value. See input format for more details. Also,
+⌈x⌉
+is the smallest integer
+≥x
+.
+At the
+i
+-th time-step, you must apply the
+i
+-th operation exactly once.
+For each
+j
+such that
+1≤j≤m
+, output the earliest time-step at which you can create exactly
+j
+bananas. If you cannot create exactly
+j
+bananas, output
+−1
+.
+Input
+The first line contains two space-separated integers
+n
+(1≤n≤200)
+and
+m
+(2≤m≤
+10
+5
+)
+.
+Then,
+n
+lines follow, where the
+i
+-th line denotes the operation for the
+i
+-th timestep. Each such line contains three space-separated integers
+t
+i
+,
+x
+′
+i
+and
+y
+i
+(
+1≤
+t
+i
+≤2
+,
+1≤
+y
+i
+≤m
+).
+Note that you are given
+x
+′
+i
+, which is
+10
+5
+⋅
+x
+i
+. Thus, to obtain
+x
+i
+, use the formula
+x
+i
+=
+x
+′
+i
+10
+5
+.
+For type 1 operations,
+1≤
+x
+′
+i
+≤
+10
+5
+⋅m
+, and for type 2 operations,
+10
+5
+<
+x
+′
+i
+≤
+10
+5
+⋅m
+.
+Output
+Print
+m
+integers, where the
+i
+-th integer is the earliest time-step when you can obtain exactly
+i
+bananas (or
+−1
+if it is impossible).
+Examples
+input
+Copy
+3 20
+1 300000 2
+2 400000 2
+1 1000000 3
+output
+Copy
+-1 -1 1 -1 -1 1 -1 -1 -1 3 -1 2 3 -1 -1 3 -1 -1 -1 3 
+input
+Copy
+3 20
+1 399999 2
+2 412345 2
+1 1000001 3
+output
+Copy
+-1 -1 -1 1 -1 -1 -1 1 -1 -1 3 -1 -1 -1 3 -1 2 -1 3 -1 
+Note
+In the first sample input, let us see how to create
+16
+number of bananas in three timesteps. Initially,
+k=0
+.
+In timestep 1, we choose
+a
+1
+=2
+, so we apply the type 1 update —
+k:=⌈(k+3)⌉
+— two times. Hence,
+k
+is now 6.
+In timestep 2, we choose
+a
+2
+=0
+, hence value of
+k
+remains unchanged.
+In timestep 3, we choose
+a
+3
+=1
+, so we are applying the type 1 update
+k:=⌈(k+10)⌉
+once. Hence,
+k
+is now 16.
+It can be shown that
+k=16
+cannot be reached in fewer than three timesteps with the given operations.
+In the second sample input, let us see how to create
+17
+number of bananas in two timesteps. Initially,
+k=0
+.
+In timestep 1, we choose
+a
+1
+=1
+, so we apply the type 1 update —
+k:=⌈(k+3.99999)⌉
+— once. Hence,
+k
+is now 4.
+In timestep 2, we choose
+a
+2
+=1
+, so we apply the type 2 update —
+k:=⌈(k⋅4.12345)⌉
+— once. Hence,
+k
+is now 17.
+It can be shown that
+k=17
+cannot be reached in fewer than two timesteps with the given operations.

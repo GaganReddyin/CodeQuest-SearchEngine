@@ -1,0 +1,116 @@
+E. Let Them Slide
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+arrays that can have different sizes. You also have a table with
+w
+columns and
+n
+rows. The
+i
+-th array is placed horizontally in the
+i
+-th row. You can slide each array within its row as long as it occupies several consecutive cells and lies completely inside the table.
+You need to find the maximum sum of the integers in the
+j
+-th column for each
+j
+from
+1
+to
+w
+independently.
+Optimal placements for columns
+1
+,
+2
+and
+3
+are shown on the pictures from left to right.
+Note that you can exclude any array out of a column provided it remains in the window. In this case its value is considered to be zero.
+Input
+The first line contains two integers
+n
+(
+1≤n≤
+10
+6
+) and
+w
+(
+1≤w≤
+10
+6
+) — the number of arrays and the width of the table.
+Each of the next
+n
+lines consists of an integer
+l
+i
+(
+1≤
+l
+i
+≤w
+), the length of the
+i
+-th array, followed by
+l
+i
+integers
+a
+i1
+,
+a
+i2
+,…,
+a
+i
+l
+i
+(
+−
+10
+9
+≤
+a
+ij
+≤
+10
+9
+) — the elements of the array.
+The total length of the arrays does no exceed
+10
+6
+.
+Output
+Print
+w
+integers, the
+i
+-th of them should be the maximum sum for column
+i
+.
+Examples
+input
+Copy
+3 3
+3 2 4 8
+2 2 5
+2 6 3
+output
+Copy
+10 15 16 
+input
+Copy
+2 2
+2 7 8
+1 -8
+output
+Copy
+7 8 
+Note
+Illustration for the first example is in the statement.

@@ -1,0 +1,98 @@
+Fixed Weight
+Problem
+A permutation of length
+N is an array of
+N integers
+(P
+1
+,P
+2
+,…,P
+N
+) where every integer from
+1 to
+N (inclusive) appears in it exactly once. The weight of a subsegment containing the elements
+(P
+l
+,P
+l+1
+,…,P
+r
+) is defined as follows:
+W(l,r)=(r−l+1)⋅
+l≤i≤r
+min
+(P
+i
+) where
+1≤l≤r≤N and
+l≤i≤r
+min
+(P
+i
+) denotes the minimum element of the subsegment.
+You are given two integers
+N and
+X. You need to determine if there exists a permutation of length
+N such that it contains at least one subsegment having weight
+X?
+Input Format
+The first line contains an integer
+T - the number of test cases. The
+T test cases then follow.
+The first and only line of each test case contains two space-separated integers
+N,X - the length of the permutation and the weight parameter mentioned in the question respectively.
+Output Format
+For each test case, print YES if there exists a permutation of length
+N having at least one subsegment with a weight of
+X, otherwise print NO.
+You may print each character of Yes and No in uppercase or lowercase (for example, yes, yEs, YES will be considered identical).
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤X≤10
+10
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+3 2
+3 5
+5 6
+4 10
+YES
+NO
+YES
+NO
+Explanation:
+Test case
+1:
+[1,2,3] is one of the valid permutations because it contains the following subsegment having weight
+2.
+W(1,2)=(2−1+1)⋅
+1≤i≤2
+min
+(P
+i
+)=2⋅1=2
+Test case
+2: It can be proven that there does not exist any permutation of length
+3 which has a subsegment having weight
+5.
+Test case
+3:
+[4,2,1,3,5] is one of the valid permutations because it contains the following subsegment having weight
+6.
+W(4,5)=(5−4+1)⋅
+4≤i≤5
+min
+(P
+i
+)=2⋅3=6

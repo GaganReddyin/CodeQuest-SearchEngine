@@ -1,0 +1,162 @@
+Even Subarray XOR
+Problem
+Given a positive integer
+N, construct two arrays
+A and
+B, each of size
+N such that:
+A
+i
+
+=A
+j
+for all
+(1≤i<j≤N);
+B
+i
+
+=B
+j
+for all
+(1≤i<j≤N);
+A
+i
+
+=B
+j
+for all
+(1≤i,j≤N);
+1≤A
+i
+,B
+i
+≤3⋅10
+5
+for all
+(1≤i≤N);
+⊕A[1,i]=⊕B[1,i] for all
+(1≤i≤N) such that
+i is even.
+Here
+⊕A[L,R] corresponds to the bitwise XOR of all elements of the subarray
+[L,R] of array
+A. Similarly,
+⊕B[L,R] corresponds to the bitwise XOR of all elements of the subarray
+[L,R] of array
+B.
+If multiple answers are possible, ouput any.
+Input Format
+First line will contain
+T, the number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, a single integer
+N - as mentioned in statement.
+Output Format
+For each test case, output two lines.
+The first line contains
+N space-separated integers denoting the elements of the array
+A.
+The second line contains
+N space-separated integers denoting the elements of the array
+B.
+If multiple answers are possible, ouput any.
+Constraints
+1≤T≤1000
+1≤N≤2
+17
+1≤A
+i
+,B
+i
+≤3⋅10
+5
+Sum of
+N over all test cases does not exceed
+2
+18
+.
+Sample 1:
+Input
+Output
+3
+2
+3
+4
+6 3 
+11 14
+100000 98630 300000 
+200000 199334 299999
+4 1 9 5 
+7 2 10 6
+Explanation:
+Test case
+1: A possible pair of arrays is
+A=[6,3] and
+B=[11,14].
+The only even value of
+i≤2 is
+2. Thus,
+⊕A[1,i]=⊕A[1,2]=A
+1
+⊕A
+2
+=6⊕3=5. Also,
+⊕B[1,i]=⊕B[1,2]=B
+1
+⊕B
+2
+=11⊕14=5.
+Test case
+2: A possible pair of arrays is
+A=[100000,98630,300000] and
+B=[200000,199334,299999].
+The only even value of
+i≤3 is
+2. Thus,
+⊕A[1,i]=⊕A[1,2]=A
+1
+⊕A
+2
+=100000⊕98630=2022. Also,
+⊕B[1,i]=⊕B[1,2]=B
+1
+⊕B
+2
+=200000⊕199334=2022.
+Test case
+3: A possible pair of arrays is
+A=[4,1,9,5] and
+B=[7,2,10,6].
+The even values of
+i≤4 are
+2 and
+4.
+i=2:
+⊕A[1,i]=⊕A[1,2]=A
+1
+⊕A
+2
+=4⊕1=5. Also,
+⊕B[1,i]=⊕B[1,2]=B
+1
+⊕B
+2
+=7⊕2=5.
+i=4:
+⊕A[1,i]=⊕A[1,4]=A
+1
+⊕A
+2
+⊕A
+3
+⊕A
+4
+=4⊕1⊕9⊕5=9. Also,
+⊕B[1,i]=⊕B[1,4]=B
+1
+⊕B
+2
+⊕B
+3
+⊕B
+4
+=7⊕2⊕10⊕6=9.

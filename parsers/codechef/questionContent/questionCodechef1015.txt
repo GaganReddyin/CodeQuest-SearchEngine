@@ -1,0 +1,49 @@
+Exactly N plus 1 Values
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+You are given a positive integer
+N. You have to print exactly
+N+1 positive integers satisfying the following conditions:
+Exactly one value should appear twice, all the remaining values should appear only once.
+Sum of all these values should be equal to
+2
+N
+.
+You have to print the values in non-decreasing order. If there are multiple solutions, you can print any of them.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output Format
+For each test case, print a single line containing
+N+1 positive integers in non-decreasing order that satisfy the given conditions. If there are multiple solutions, you may print any of them.
+Constraints
+1≤T≤60
+1≤N≤60
+Subtasks
+Subtask 1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+2
+3
+4
+1 2 2 3
+1 2 3 3 7
+Explanation:
+Test Case
+1:
+2 is repeated twice and the remaining elements occurred only once and the sum of all the elements is equal to
+8, which is
+2
+3
+.
+Test Case
+2:
+3 is repeated twice and the remaining elements occurred only once and the sum of all the elements is equal to
+16, which is
+2
+4
+.

@@ -1,0 +1,130 @@
+Bunny Hops
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+Bugs Bunny is very smart, but he keeps constantly worrying about the future and is always anxious. Therefore, he keeps hopping between towns without standing still.
+The place where Bugs Bunny lives has
+N towns (numbered
+1 through
+N) with one-way roads connecting them in such a way that they form an arborescence (a tree with all paths directed from the root), rooted at town
+1. Therefore, each town except the root has exactly one incoming road; for each
+i (
+1≤i≤N−1), there is a road from town
+P
+i
+to town
+i+1. Each town has a distinct rating associated with it; for each valid
+i, the
+i-th town has rating
+A
+i
+.
+From a town
+i, Bugs Bunny is allowed to hop to town
+j (without visiting any other towns in between), if the following conditions are satisfied:
+there is a path between towns
+i and
+j, i.e. a path from town
+i to town
+j or from town
+j to town
+i
+town
+j has a lower rating than town
+i, i.e.
+A
+j
+<A
+i
+This way, Bugs Bunny can visit a sequence of towns by hopping, starting anywhere and stopping whenever he chooses. Clearly, he cannot keep hopping forever, so the number of such sequences is finite.
+Tell Bugs Bunny the number of sequences of two or more towns which can be formed by hopping, given that he can start at any town and stop at any town. Since this number can be very large, calculate it modulo
+10
+9
++7.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N−1 space-separated integers
+P
+1
+,P
+2
+,…,P
+N−1
+.
+The third line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer --- the number of valid sequences of visited towns modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+A
+1
+,A
+2
+,…,A
+N
+are pairwise distinct
+the graph described on the input is a directed tree
+the sum of
+N over all test cases does not exceed
+3⋅10
+5
+Subtasks
+Subtask #1 (20 points): the tree is a straight line --- there is a single path starting at town
+1 and passing through all towns
+Subtask #2 (20 points):
+N≤10
+3
+the sum of
+N over all test cases does not exceed
+10
+4
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+3
+3
+1 1
+10 15 5
+5
+1 1 3 3
+50 10 20 40 30
+9
+1 1 2 2 2 2 7 7
+1 2 3 4 5 6 7 8 9
+3
+8
+28
+Explanation:
+Example case 1: The possible hops for Bugs Bunny are from town
+1 to town
+3 and from town
+2 to town
+1. Therefore, the
+3 possible sequences of visited towns are
+(2,1,3),
+(2,1) and
+(1,3).

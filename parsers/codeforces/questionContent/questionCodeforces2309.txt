@@ -1,0 +1,101 @@
+G. No Game No Life
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's consider the following game of Alice and Bob on a directed acyclic graph. Each vertex may contain an arbitrary number of chips. Alice and Bob make turns alternating. Alice goes first. In one turn player can move exactly one chip along any edge outgoing from the vertex that contains this chip to the end of this edge. The one who cannot make a turn loses. Both players play optimally.
+Consider the following process that takes place every second on a given graph with
+n
+vertices:
+An integer
+v
+is chosen equiprobably from
+[1,n+1]
+.
+If
+v≤n
+, we add a chip to the
+v
+-th vertex and go back to step 1.
+If
+v=n+1
+, Alice and Bob play the game with the current arrangement of chips and the winner is determined. After that, the process is terminated.
+Find the probability that Alice will win the game. It can be shown that the answer can be represented as
+P
+Q
+, where
+P
+and
+Q
+are coprime integers and
+Q≢0(mod998244353)
+. Print the value of
+P⋅
+Q
+−1
+mod998244353
+.
+Input
+The first line contains two integers
+n
+and
+m
+ — the number of vertices and edges of the graph (
+1≤n≤
+10
+5
+,
+0≤m≤
+10
+5
+).
+The following
+m
+lines contain edges description. The
+i
+-th of them contains two integers
+u
+i
+and
+v
+i
+ — the beginning and the end vertices of the
+i
+-th edge (
+1≤
+u
+i
+,
+v
+i
+≤n
+). It's guaranteed that the graph is acyclic.
+Output
+Output a single integer — the probability of Alice victory modulo
+998244353
+.
+Examples
+input
+Copy
+1 0
+output
+Copy
+0
+input
+Copy
+2 1
+1 2
+output
+Copy
+332748118
+input
+Copy
+5 5
+1 4
+5 2
+4 3
+1 5
+5 4
+output
+Copy
+931694730

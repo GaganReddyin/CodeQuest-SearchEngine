@@ -1,0 +1,89 @@
+Maximise Score
+Problem
+Alice and Bob play a game. They have an array
+A of
+N elements.
+First, Alice picks any index
+i
+(1≤i≤N).
+Then, Bob has to pick an index
+j such that
+∣i−j∣=1 ,i.e , he must pick an element which is adjacent to that of the Alice.
+Let the score of the game be
+∣A
+i
+−A
+j
+∣.
+Alice wants to minimize the score while Bob wants to maximize the score . Determine the optimal score if they both play optimally.
+Note that
+∣X∣ denotes the absolute value of
+X. For example,
+∣4∣=4 and
+∣−7∣=7.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the length of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+representing the array
+A.
+Output Format
+For each test case, output on a new line, the optimal score if both players play optimally.
+Constraints
+1≤T≤1000
+2≤N≤100
+−10000≤A
+i
+≤10000
+Sample 1:
+Input
+Output
+3
+3
+1 1 1
+4
+1 2 3 4
+5
+-10 10 40 -50 30
+0
+1
+20
+Explanation:
+Test case
+1: Alice will choose index
+i=1 and Bob will choose index
+j=2. Thus, the score is
+∣A
+1
+−A
+2
+∣=∣1−1∣=0.
+Test case
+2: Alice will choose index
+i=3 and Bob will choose index
+j=2. Thus, the score is
+∣A
+3
+−A
+2
+∣=∣3−2∣=1.
+Test case
+3: Alice will choose index
+i=1 and Bob will choose index
+j=2. Thus, the score is
+∣A
+1
+−A
+2
+∣=∣−10−10∣=20.

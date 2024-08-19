@@ -1,0 +1,265 @@
+D. Winding polygonal line
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vasya has
+n
+different points
+A
+1
+,
+A
+2
+,…
+A
+n
+on the plane. No three of them lie on the same line He wants to place them in some order
+A
+p
+1
+,
+A
+p
+2
+,…,
+A
+p
+n
+, where
+p
+1
+,
+p
+2
+,…,
+p
+n
+ — some permutation of integers from
+1
+to
+n
+.
+After doing so, he will draw oriented polygonal line on these points, drawing oriented segments from each point to the next in the chosen order. So, for all
+1≤i≤n−1
+he will draw oriented segment from point
+A
+p
+i
+to point
+A
+p
+i+1
+. He wants to make this polygonal line satisfying
+2
+conditions:
+it will be non-self-intersecting, so any
+2
+segments which are not neighbors don't have common points.
+it will be winding.
+Vasya has a string
+s
+, consisting of
+(n−2)
+symbols "L" or "R". Let's call an oriented polygonal line winding, if its
+i
+-th turn left, if
+s
+i
+=
+"L" and right, if
+s
+i
+=
+"R". More formally:
+i
+-th turn will be in point
+A
+p
+i+1
+, where oriented segment from point
+A
+p
+i
+to point
+A
+p
+i+1
+changes to oriented segment from point
+A
+p
+i+1
+to point
+A
+p
+i+2
+. Let's define vectors
+v
+1
+→
+=
+A
+p
+i
+A
+p
+i+1
+−
+→
+−
+−
+−
+−
+and
+v
+2
+→
+=
+A
+p
+i+1
+A
+p
+i+2
+−
+→
+−
+−
+−
+−
+−
+. Then if in order to rotate the vector
+v
+1
+→
+by the smallest possible angle, so that its direction coincides with the direction of the vector
+v
+2
+→
+we need to make a turn counterclockwise, then we say that
+i
+-th turn is to the left, and otherwise to the right. For better understanding look at this pictures with some examples of turns:
+There are left turns on this picture
+There are right turns on this picture
+You are given coordinates of the points
+A
+1
+,
+A
+2
+,…
+A
+n
+on the plane and string
+s
+. Find a permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+of the integers from
+1
+to
+n
+, such that the polygonal line, drawn by Vasya satisfy two necessary conditions.
+Input
+The first line contains one integer
+n
+ — the number of points (
+3≤n≤2000
+). Next
+n
+lines contains two integers
+x
+i
+and
+y
+i
+, divided by space — coordinates of the point
+A
+i
+on the plane (
+−
+10
+9
+≤
+x
+i
+,
+y
+i
+≤
+10
+9
+). The last line contains a string
+s
+consisting of symbols "L" and "R" with length
+(n−2)
+. It is guaranteed that all points are different and no three points lie at the same line.
+Output
+If the satisfying permutation doesn't exists, print
+−1
+. In the other case, print
+n
+numbers
+p
+1
+,
+p
+2
+,…,
+p
+n
+ — the permutation which was found (
+1≤
+p
+i
+≤n
+and all
+p
+1
+,
+p
+2
+,…,
+p
+n
+are different). If there exists more than one solution, you can find any.
+Examples
+input
+Copy
+3
+1 1
+3 1
+1 3
+L
+output
+Copy
+1 2 3
+input
+Copy
+6
+1 0
+0 1
+0 2
+-1 0
+-1 -1
+2 1
+RLLR
+output
+Copy
+6 1 3 4 2 5
+Note
+This is the picture with the polygonal line from the
+1
+test:
+As we see, this polygonal line is non-self-intersecting and winding, because the turn in point
+2
+is left.
+This is the picture with the polygonal line from the
+2
+test:

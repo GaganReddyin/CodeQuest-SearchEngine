@@ -1,0 +1,121 @@
+E. Carrots for Rabbits
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are some rabbits in Singapore Zoo. To feed them, Zookeeper bought
+n
+carrots with lengths
+a
+1
+,
+a
+2
+,
+a
+3
+,…,
+a
+n
+. However, rabbits are very fertile and multiply very quickly. Zookeeper now has
+k
+rabbits and does not have enough carrots to feed all of them. To solve this problem, Zookeeper decided to cut the carrots into
+k
+pieces. For some reason, all resulting carrot lengths must be positive integers.
+Big carrots are very difficult for rabbits to handle and eat, so the time needed to eat a carrot of size
+x
+is
+x
+2
+.
+Help Zookeeper split his carrots while minimizing the sum of time taken for rabbits to eat the carrots.
+Input
+The first line contains two integers
+n
+and
+k
+(1≤n≤k≤
+10
+5
+)
+: the initial number of carrots and the number of rabbits.
+The next line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(1≤
+a
+i
+≤
+10
+6
+)
+: lengths of carrots.
+It is guaranteed that the sum of
+a
+i
+is at least
+k
+.
+Output
+Output one integer: the minimum sum of time taken for rabbits to eat carrots.
+Examples
+input
+Copy
+3 6
+5 3 1
+output
+Copy
+15
+input
+Copy
+1 4
+19
+output
+Copy
+91
+Note
+For the first test, the optimal sizes of carrots are
+{1,1,1,2,2,2}
+. The time taken is
+1
+2
++
+1
+2
++
+1
+2
++
+2
+2
++
+2
+2
++
+2
+2
+=15
+For the second test, the optimal sizes of carrots are
+{4,5,5,5}
+. The time taken is
+4
+2
++
+5
+2
++
+5
+2
++
+5
+2
+=91
+.

@@ -1,0 +1,95 @@
+E. Boring Segments
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+segments on a number line, numbered from
+1
+to
+n
+. The
+i
+-th segments covers all integer points from
+l
+i
+to
+r
+i
+and has a value
+w
+i
+.
+You are asked to select a subset of these segments (possibly, all of them). Once the subset is selected, it's possible to travel between two integer points if there exists a selected segment that covers both of them. A subset is good if it's possible to reach point
+m
+starting from point
+1
+in arbitrary number of moves.
+The cost of the subset is the difference between the maximum and the minimum values of segments in it. Find the minimum cost of a good subset.
+In every test there exists at least one good subset.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤3⋅
+10
+5
+;
+2≤m≤
+10
+6
+) — the number of segments and the number of integer points.
+Each of the next
+n
+lines contains three integers
+l
+i
+,
+r
+i
+and
+w
+i
+(
+1≤
+l
+i
+<
+r
+i
+≤m
+;
+1≤
+w
+i
+≤
+10
+6
+) — the description of the
+i
+-th segment.
+In every test there exists at least one good subset.
+Output
+Print a single integer — the minimum cost of a good subset.
+Examples
+input
+Copy
+5 12
+1 5 5
+3 4 10
+4 10 6
+11 12 5
+10 12 3
+output
+Copy
+3
+input
+Copy
+1 10
+1 10 23
+output
+Copy
+0

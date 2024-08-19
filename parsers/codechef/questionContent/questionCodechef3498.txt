@@ -1,0 +1,220 @@
+Good Operations
+Problem
+You are given
+N intervals where the
+i
+th
+interval is
+[L
+i
+,R
+i
+].
+In one operation, you will:
+Choose an integer
+M
+(1≤M≤N) and select
+M distinct indices
+x
+1
+,x
+2
+,…,x
+M
+.
+For the
+i
+th
+selected index
+x
+i
+(corresponding to range
+[L
+x
+i
+,R
+x
+i
+]):
+Choose an integer
+K
+i
+where
+(1<K
+i
+≤(R
+x
+i
+−L
+x
+i
++1));
+Pick
+K
+i
+distinct integers
+Y
+(i,1)
+,Y
+(i,2)
+,…,Y
+(i,K
+i
+)
+from the range
+[L
+x
+i
+,R
+x
+i
+].
+We define the following for an operation:
+The cost is defined as the product of all
+K
+i
+. Formally, cost
+=
+i=1
+∏
+M
+K
+i
+The score is defined as the product of all picked integers over all chosen intervals.
+Formally, score
+=
+i=1
+∏
+M
+j=1
+∏
+K
+i
+Y
+(i,j)
+.
+An operation is good if:
+Maximum number of intervals are chosen.
+In other words, the value of
+M is the maximum possible.
+The cost of the operation is not greater than
+N;
+Your task is to find the sum of scores of all possible good operations
+mod998244353.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N, the number of intervals.
+Following
+N lines contain two space-separated integers each,
+L
+i
+,R
+i
+, describing the interval.
+Output Format
+For each test case, output on a new line, the sum of the scores of all possible good operations
+mod998244353.
+Constraints
+1≤T≤10
+5
+2≤N≤2⋅10
+5
+1≤L
+i
+<R
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+2 3
+1 2
+2 4
+4
+1 2
+1 2
+2 3
+1 3
+6
+252936231 332813086
+386572952 831069149
+3104467 923891121
+9208951 530928817
+861315826 926300539
+45025265 893934729
+58
+138
+491102218
+Explanation:
+Test case
+1: You can only choose
+M=1 indices. Otherwise, the cost will be greater than
+N=3.
+All the good operations are:
+x
+1
+=1: For the chosen interval
+[2,3], pick
+K=2 distinct integers
+{2,3} in it.
+The cost is
+2 and the score is
+2⋅3=6.
+x
+1
+=2: For the chosen interval
+[1,2], pick
+K=2 distinct integers
+{1,2} in it.
+The cost is
+2 and the score is
+1⋅2=2.
+x
+1
+=3: For the chosen interval
+[2,4], pick
+K=2 distinct integers
+{2,3} in it.
+The cost is
+2 and the score is
+2⋅3=6.
+x
+1
+=3: For the chosen interval
+[2,4], pick
+K=2 distinct integers
+{2,4} in it.
+The cost is
+2 and the score is
+2⋅4=8.
+x
+1
+=3: For the chosen interval
+[2,4], pick
+K=2 distinct integers
+{3,4} in it.
+The cost is
+2 and the score is
+3⋅4=12.
+x
+1
+=3: For the chosen interval
+[2,4], pick
+K=3 distinct integers
+{2,3,4} in it.
+The cost is
+3 and the score is
+2⋅3⋅4=24.
+The sum of the scores of all possible good operations is
+6+2+6+8+12+24=58.

@@ -1,0 +1,468 @@
+D. Rearrange
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Koa the Koala has a matrix
+A
+of
+n
+rows and
+m
+columns. Elements of this matrix are distinct integers from
+1
+to
+n⋅m
+(each number from
+1
+to
+n⋅m
+appears exactly once in the matrix).
+For any matrix
+M
+of
+n
+rows and
+m
+columns let's define the following:
+The
+i
+-th row of
+M
+is defined as
+R
+i
+(M)=[
+M
+i1
+,
+M
+i2
+,…,
+M
+im
+]
+for all
+i
+(
+1≤i≤n
+).
+The
+j
+-th column of
+M
+is defined as
+C
+j
+(M)=[
+M
+1j
+,
+M
+2j
+,…,
+M
+nj
+]
+for all
+j
+(
+1≤j≤m
+).
+Koa defines
+S(A)=(X,Y)
+as the spectrum of
+A
+, where
+X
+is the set of the maximum values in rows of
+A
+and
+Y
+is the set of the maximum values in columns of
+A
+.
+More formally:
+X={max(
+R
+1
+(A)),max(
+R
+2
+(A)),…,max(
+R
+n
+(A))}
+Y={max(
+C
+1
+(A)),max(
+C
+2
+(A)),…,max(
+C
+m
+(A))}
+Koa asks you to find some matrix
+A
+′
+of
+n
+rows and
+m
+columns, such that each number from
+1
+to
+n⋅m
+appears exactly once in the matrix, and the following conditions hold:
+S(
+A
+′
+)=S(A)
+R
+i
+(
+A
+′
+)
+is bitonic for all
+i
+(
+1≤i≤n
+)
+C
+j
+(
+A
+′
+)
+is bitonic for all
+j
+(
+1≤j≤m
+)
+An array
+t
+(
+t
+1
+,
+t
+2
+,…,
+t
+k
+) is called bitonic if it first increases and then decreases.
+More formally:
+t
+is bitonic if there exists some position
+p
+(
+1≤p≤k
+) such that:
+t
+1
+<
+t
+2
+<…<
+t
+p
+>
+t
+p+1
+>…>
+t
+k
+.
+Help Koa to find such matrix or to determine that it doesn't exist.
+Input
+The first line of the input contains two integers
+n
+and
+m
+(
+1≤n,m≤250
+)  — the number of rows and columns of
+A
+.
+Each of the ollowing
+n
+lines contains
+m
+integers. The
+j
+-th integer in the
+i
+-th line denotes element
+A
+ij
+(
+1≤
+A
+ij
+≤n⋅m
+) of matrix
+A
+. It is guaranteed that every number from
+1
+to
+n⋅m
+appears exactly once among elements of the matrix.
+Output
+If such matrix doesn't exist, print
+−1
+on a single line.
+Otherwise, the output must consist of
+n
+lines, each one consisting of
+m
+space separated integers  — a description of
+A
+′
+.
+The
+j
+-th number in the
+i
+-th line represents the element
+A
+′
+ij
+.
+Every integer from
+1
+to
+n⋅m
+should appear exactly once in
+A
+′
+, every row and column in
+A
+′
+must be bitonic and
+S(A)=S(
+A
+′
+)
+must hold.
+If there are many answers print any.
+Examples
+input
+Copy
+3 3
+3 5 6
+1 7 9
+4 8 2
+output
+Copy
+9 5 1
+7 8 2
+3 6 4
+input
+Copy
+2 2
+4 1
+3 2
+output
+Copy
+4 1
+3 2
+input
+Copy
+3 4
+12 10 8 6
+3 4 5 7
+2 11 9 1
+output
+Copy
+12 8 6 1
+10 11 9 2
+3 4 5 7
+Note
+Let's analyze the first sample:
+For matrix
+A
+we have:
+Rows:
+R
+1
+(A)=[3,5,6];max(
+R
+1
+(A))=6
+R
+2
+(A)=[1,7,9];max(
+R
+2
+(A))=9
+R
+3
+(A)=[4,8,2];max(
+R
+3
+(A))=8
+Columns:
+C
+1
+(A)=[3,1,4];max(
+C
+1
+(A))=4
+C
+2
+(A)=[5,7,8];max(
+C
+2
+(A))=8
+C
+3
+(A)=[6,9,2];max(
+C
+3
+(A))=9
+X={max(
+R
+1
+(A)),max(
+R
+2
+(A)),max(
+R
+3
+(A))}={6,9,8}
+Y={max(
+C
+1
+(A)),max(
+C
+2
+(A)),max(
+C
+3
+(A))}={4,8,9}
+So
+S(A)=(X,Y)=({6,9,8},{4,8,9})
+For matrix
+A
+′
+we have:
+Rows:
+R
+1
+(
+A
+′
+)=[9,5,1];max(
+R
+1
+(
+A
+′
+))=9
+R
+2
+(
+A
+′
+)=[7,8,2];max(
+R
+2
+(
+A
+′
+))=8
+R
+3
+(
+A
+′
+)=[3,6,4];max(
+R
+3
+(
+A
+′
+))=6
+Columns:
+C
+1
+(
+A
+′
+)=[9,7,3];max(
+C
+1
+(
+A
+′
+))=9
+C
+2
+(
+A
+′
+)=[5,8,6];max(
+C
+2
+(
+A
+′
+))=8
+C
+3
+(
+A
+′
+)=[1,2,4];max(
+C
+3
+(
+A
+′
+))=4
+Note that each of this arrays are bitonic.
+X={max(
+R
+1
+(
+A
+′
+)),max(
+R
+2
+(
+A
+′
+)),max(
+R
+3
+(
+A
+′
+))}={9,8,6}
+Y={max(
+C
+1
+(
+A
+′
+)),max(
+C
+2
+(
+A
+′
+)),max(
+C
+3
+(
+A
+′
+))}={9,8,4}
+So
+S(
+A
+′
+)=(X,Y)=({9,8,6},{9,8,4})

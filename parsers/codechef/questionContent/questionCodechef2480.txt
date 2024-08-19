@@ -1,0 +1,151 @@
+Matchable Permutations
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef has a string
+S with length
+N. He also has
+M other strings
+P
+1
+,P
+2
+,…,P
+M
+, which are called patterns. The characters in the strings are indexed from
+1.
+Chef was wondering if he could find the
+M patterns in the string
+S in the given order. That is, he wanted to know whether it is possible to choose
+M ranges, denoted by
+[l
+i
+,r
+i
+] for each
+i (
+1≤i≤M), such that
+1≤l
+1
+≤r
+1
+<l
+2
+≤r
+2
+<…<l
+M
+≤r
+M
+≤N and for each valid
+i, the substring
+S
+l
+i
+,S
+l
+i
++1
+,…,S
+r
+i
+equals
+P
+i
+.
+As this problem was too easy for Chef, he decided to make a harder one. A permutation
+p=(p
+1
+,p
+2
+,…,p
+M
+) of integers
+1 through
+M is called a matchable permutation if Chef can reorder the
+M patterns into
+P
+p
+1
+,P
+p
+2
+,…,P
+p
+M
+and then find them in
+S, in this order (in the same way as described above).
+Can you help Chef find the number of matchable permutations?
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+The second line contains a single string
+S.
+M lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains a single string
+P
+i
+.
+Output
+Print a single line containing one integer - the number of matchable permutations.
+Constraints
+1≤N≤10
+5
+1≤M≤14
+1≤∣P
+i
+∣≤10
+5
+for each valid
+i
+S,P
+1
+,P
+2
+,…,P
+M
+contain only lowercase English letters
+Subtasks
+Subtask #1 (10 points):
+1≤M≤3
+Subtask #2 (30 points):
+1≤N≤1,000
+Subtask #3 (60 points): original constraints
+Example Input 1
+10 3
+abbabacbac
+ab
+ac
+b
+Example Output 1
+3
+Explanation 1
+Among the
+3!=6 possible permutations of
+(1,2,3), the matchable permutations are
+(1,2,3),
+(3,1,2) and
+(1,3,2). These correspond to permutations of patterns ("ab", "ac", "b"), ("b", "ab", "ac") and ("ab", "b", "ac") respectively. Each of them can be found in
+S in the given order.
+Example Input 2
+3 2
+aaa
+aa
+aa
+Example Output 2
+0
+Explanation 2
+We cannot match the two patterns in such a way that their ranges do not intersect.
+Example Input 3
+4 2
+aaaa
+aa
+aa
+Example Output 3
+2
+Explanation 3
+The matchable permutations are
+(1,2) and
+(2,1).

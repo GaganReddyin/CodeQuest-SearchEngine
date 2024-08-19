@@ -1,0 +1,73 @@
+Circle Eating
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N candies (numbered
+1 through
+N) on a circular table. For each valid
+i, candies
+i and
+i+1 are adjacent; candies
+1 and
+N are also adjacent. You want to eat all these candies.
+Initially, your happiness level is
+0. For each valid
+i, when you eat the
+i-th candy, the happiness level increases by
+a
+i
+. Note that
+a
+i
+may be negative and your happiness level may also become negative.
+First, you should eat the candy
+1. After that, while there is at least one uneaten candy, you may eat any candy that is adjacent to at least one of the candies eaten so far.
+Your goal is to maximise the smallest value of your happiness during this process.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Output
+For each test case, print a single line containing one integer ― the maximum possible minimum happiness value during the process.
+Constraints
+1≤T≤200,000
+1≤N≤200,000
+∣a
+i
+∣≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+200,000
+Subtasks
+Subtask #1 (10 points):
+N≤20
+Subtask #2 (10 points):
+N≤300
+Subtask #3 (80 points): original constraints
+Sample 1:
+Input
+Output
+3
+3
+1 2 3
+3
+-10 -20 30
+3
+-1 0 0
+1
+-10
+-1

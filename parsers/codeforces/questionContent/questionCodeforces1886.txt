@@ -1,0 +1,227 @@
+F. Squares
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+squares drawn from left to right on the floor. The
+i
+-th square has three integers
+p
+i
+,
+a
+i
+,
+b
+i
+, written on it. The sequence
+p
+1
+,
+p
+2
+,…,
+p
+n
+forms a permutation.
+Each round you will start from the leftmost square
+1
+and jump to the right. If you are now on the
+i
+-th square, you can do one of the following two operations:
+Jump to the
+i+1
+-th square and pay the cost
+a
+i
+. If
+i=n
+, then you can end the round and pay the cost
+a
+i
+.
+Jump to the
+j
+-th square and pay the cost
+b
+i
+, where
+j
+is the leftmost square that satisfies
+j>i,
+p
+j
+>
+p
+i
+. If there is no such
+j
+then you can end the round and pay the cost
+b
+i
+.
+There are
+q
+rounds in the game. To make the game more difficult, you need to maintain a square set
+S
+(initially it is empty). You must pass through these squares during the round (other squares can also be passed through). The square set
+S
+for the
+i
+-th round is obtained by adding or removing a square from the square set for the
+(i−1)
+-th round.
+For each round find the minimum cost you should pay to end it.
+Input
+The first line contains two integers
+n
+,
+q
+(
+1≤n,q≤2⋅
+10
+5
+)  — the number of squares and the number of rounds.
+The second line contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+). It is guaranteed that the sequence
+p
+1
+,
+p
+2
+,…,
+p
+n
+forms a permutation.
+The third line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+).
+The fourth line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−
+10
+9
+≤
+b
+i
+≤
+10
+9
+).
+Then
+q
+lines follow,
+i
+-th of them contains a single integer
+x
+i
+(
+1≤
+x
+i
+≤n
+). If
+x
+i
+was in the set
+S
+on the
+(i−1)
+-th round you should remove it, otherwise, you should add it.
+Output
+Print
+q
+lines, each of them should contain a single integer  — the minimum cost you should pay to end the corresponding round.
+Examples
+input
+Copy
+3 2
+2 1 3
+10 -5 4
+3 -2 3
+1
+2
+output
+Copy
+6
+8
+input
+Copy
+5 4
+2 1 5 3 4
+6 -5 3 -10 -1
+0 3 2 7 2
+1
+2
+3
+2
+output
+Copy
+-8
+-7
+-7
+-8
+Note
+Let's consider the character
+T
+as the end of a round. Then we can draw two graphs for the first and the second test.
+In the first round of the first test, the set that you must pass through is
+{1}
+. The path you can use is
+1→3→T
+and its cost is
+6
+.
+In the second round of the first test, the set that you must pass through is
+{1,2}
+. The path you can use is
+1→2→3→T
+and its cost is
+8
+.

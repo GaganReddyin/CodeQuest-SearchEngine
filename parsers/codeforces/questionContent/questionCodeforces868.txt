@@ -1,0 +1,180 @@
+G. Euclid Guess
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's consider Euclid's algorithm for finding the greatest common divisor, where
+t
+is a list:
+
+function Euclid(a, b):
+    if a < b:
+        swap(a, b)
+
+    if b == 0:
+        return a
+
+    r = reminder from dividing a by b
+    if r > 0:
+        append r to the back of t
+
+    return Euclid(b, r)
+There is an array
+p
+of pairs of positive integers that are not greater than
+m
+. Initially, the list
+t
+is empty. Then the function is run on each pair in
+p
+. After that the list
+t
+is shuffled and given to you.
+You have to find an array
+p
+of any size not greater than
+2⋅
+10
+4
+that produces the given list
+t
+, or tell that no such array exists.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤
+10
+3
+,
+1≤m≤
+10
+9
+) — the length of the array
+t
+and the constraint for integers in pairs.
+The second line contains
+n
+integers
+t
+1
+,
+t
+2
+,…,
+t
+n
+(
+1≤
+t
+i
+≤m
+) — the elements of the array
+t
+.
+Output
+If the answer does not exist, output
+−1
+.
+If the answer exists, in the first line output
+k
+(
+1≤k≤2⋅
+10
+4
+) — the size of your array
+p
+, i. e. the number of pairs in the answer.
+The
+i
+-th of the next
+k
+lines should contain two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤m
+) — the
+i
+-th pair in
+p
+.
+If there are multiple valid answers you can output any of them.
+Examples
+input
+Copy
+7 20
+1 8 1 6 3 2 3
+output
+Copy
+3
+19 11
+15 9
+3 7
+input
+Copy
+2 10
+7 1
+output
+Copy
+-1
+input
+Copy
+2 15
+1 7
+output
+Copy
+1
+15 8
+input
+Copy
+1 1000000000
+845063470
+output
+Copy
+-1
+Note
+In the first sample let's consider the array
+t
+for each pair:
+(19,11)
+:
+t=[8,3,2,1]
+;
+(15,9)
+:
+t=[6,3]
+;
+(3,7)
+:
+t=[1]
+.
+So in total
+t=[8,3,2,1,6,3,1]
+, which is the same as the input
+t
+(up to a permutation).
+In the second test case it is impossible to find such array
+p
+of pairs that all integers are not greater than
+10
+and
+t=[7,1]
+In the third test case for the pair
+(15,8)
+array
+t
+will be
+[7,1]
+.

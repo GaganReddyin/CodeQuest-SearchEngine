@@ -1,0 +1,142 @@
+Arithmetic Jumping
+Problem
+You are given a tree with
+N vertices.
+We call a sequence of vertices
+[A
+1
+,A
+2
+,…,A
+K
+] cool if
+dis(A
+i
+,A
+(i+1)
+)=i for
+1≤i<K. Here,
+dis(u,v) denotes the length of the shortest path between vertices
+u and
+v.
+Note that, the sequence
+A may contain duplicate vertices as well.
+You need to answer
+M queries of the following type:
+P
+Q : Given integers
+P and
+Q, find the maximum possible
+X such that there exists a cool sequence of length
+X :
+[A
+1
+,A
+2
+,…,A
+X
+] where
+A
+1
+=P and
+A
+X
+=Q.
+It is guaranteed that for each query
+P is not a leaf vertex (it has at least two neighbours).
+It can be proven that with this constraint, a cool sequence starting with
+P and ending with
+Q always exists.
+Input Format
+The first line of each test case contains two integers
+N and
+M - the number of vertices in the tree and the number of queries.
+Then,
+N−1 lines follow. The
+i
+th
+line contains two space-separated integers
+U
+i
+and
+V
+i
+- the vertices connected by the
+i
+th
+edge.
+Finally,
+M lines follow. The
+i
+th
+line contains two space-separated integers
+P
+i
+and
+Q
+i
+.
+Output Format
+Output
+Q separate lines. The
+i
+th
+line should contain the answer for the
+i
+th
+query, the maximum possible
+X such that there exists a cool sequence of length
+X.
+Constraints
+3≤N≤2⋅10
+5
+1≤M≤2⋅10
+5
+1≤U
+i
+,V
+i
+≤N
+1≤P
+i
+,Q
+i
+≤N,
+P
+i
+is not a leaf.
+Sample 1:
+Input
+Output
+7 3
+1 2
+2 3
+1 4
+4 6
+6 7
+1 5
+1 2
+6 6
+6 5
+3
+5
+3
+Explanation:
+Query
+1: Given
+P=1 and
+Q=2. One possible cool sequence with maximum length is
+[1,5,2]. It is valid because
+dis(1,5)=1 and
+dis(5,2)=2. It can be shown that no cool sequence of length greater than
+3 exists.
+Query
+2: Given
+P=6 and
+Q=6. One possible cool sequence with the maximum length is
+[6,7,4,3,6]. It is valid because
+dis(6,7)=1,
+dis(7,4)=2,
+dis(4,3)=3, and
+dis(3,6)=4. It can be shown that no cool sequence of length greater than
+5 exists.

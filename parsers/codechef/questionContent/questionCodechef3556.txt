@@ -1,0 +1,113 @@
+The Secret Recipe
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+N people (numbered
+1 through
+N) are trying to catch Chef because he has a secret recipe for the most delicious biryani ever. Chef does not have a number.
+The chase starts at time
+t=0 and takes place on a circular road with length
+L. Positions on the road are described by one real-valued coordinate; for each real number
+x, position
+x+L is the same as position
+x. Chef's initial position is
+X
+c
+=0 and for each valid
+i, the initial position of the
+i-th person is
+X
+i
+.
+Chef's maximum velocity is
+V
+c
+and for each valid
+i, the maximum velocity of the
+i-th person is
+V
+i
+. At each moment in time, any person (including Chef) with maximum velocity
+V may choose any velocity
+v (a real number) between
+−V and
+V inclusive, possibly different at different moments in time, independently from all other people and this person's velocity at all other moments in time. All people move continuously — for any very small time difference
+Δt, a person at a position
+x and with a velocity
+v at time
+t is approximately at the position
+x+v⋅Δt at time
+t+Δt.
+When Chef is at the same position as one of the
+N people at the same moment in time, he is considered caught and the chase ends. It can be proved that Chef is unable to keep escaping forever; formally, there is a real number
+T
+u
+such that Chef can always be caught at a finite time which does not exceed
+T
+u
+, regardless of his choices.
+The
+N people want to catch Chef at the smallest possible time, while Chef wants to maximise the time when he will be caught. Find the time at which Chef gets caught if all people act optimally.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+L and
+V
+c
+.
+The second line contains
+N space-separated integers
+X
+1
+,X
+2
+,…,X
+N
+.
+The third line contains
+N space-separated integers
+V
+1
+,V
+2
+,…,V
+N
+.
+Output
+For each test case, print a single line containing one real number — the time when Chef gets caught. Your answer will be considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Constraints
+1≤T≤1,000
+2≤N≤10
+5
+2≤L≤10
+6
+1≤X
+i
+≤L−1 for each valid
+i
+1≤V
+i
+≤10
+6
+for each valid
+i
+1≤V
+c
+≤10
+6
+the sum of
+N over all test cases does not exceed
+10
+6
+Example Input
+1
+3 10 2
+2 5 6
+3 1 1
+Example Output
+1.50000000000

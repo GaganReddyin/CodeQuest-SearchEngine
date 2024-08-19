@@ -1,0 +1,116 @@
+Winter Is Here
+Problem
+You will be given two arrays
+A and
+B, each of length
+N. For some value
+K, let's call an array
+C good if it satisfies the following conditions:
+0≤C
+i
+≤B
+i
+for
+(1≤i≤N)
+At least
+K elements in the array must be equal to
+0.
+∑
+i=1
+N
+A
+i
+=∑
+i=1
+N
+C
+i
+Among all the good arrays
+C, let
+result(K) denote the minimum value of
+∑
+i=1
+N
+∣A
+i
+−C
+i
+∣. If no good array is possible,
+result(K)=−1.
+Find the value
+result(K) for all
+(0≤K<N).
+Input Format
+The first line of input contains an integer
+T denoting the number of test cases.
+T test cases follow.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+, the array
+A.
+The third line contains
+N integers
+B
+1
+,B
+2
+,…,B
+N
+, the array
+B.
+Output Format
+For each test case, output
+N space-separated integers,
+result(K) for
+(0≤K<N).
+Constraints
+1≤T≤100
+1≤N≤100
+1≤A
+i
+,B
+i
+≤100
+The sum of
+N over all test cases won't exceed
+100.
+Sample 1:
+Input
+Output
+2
+5
+6 5 2 1 7
+10 1 5 1 5
+3
+7 7 9
+8 9 9
+12 14 -1 -1 -1 
+0 -1 -1
+Explanation:
+Test case
+1:
+[10,1,4,1,5] is a good array with at least
+0 zeroes and gives the minimum value for
+result(0).
+[10,0,5,1,5] is a good array with at least
+1 zeroes and gives the minimum value for
+result(1).
+No good array is possible for the given constraints when
+K=2,3, or
+4.
+Test case
+2:
+[7,7,9] is a good array with at least
+0 zeroes and gives the minimum value of
+result(0).
+No good array is possible when
+K=1 or
+2.

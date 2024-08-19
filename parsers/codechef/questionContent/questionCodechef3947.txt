@@ -1,0 +1,100 @@
+Chef and Edge Flipping
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef likes tournament graphs, which are directed graphs where each unordered pair of vertices is directly connected by exactly one edge. A directed graph is strongly connected if for each pair of vertices
+(a,b), there is a path from the vertex
+a to the vertex
+b.
+Consider a tournament graph
+G with
+N vertices (numbered
+1 through
+N). Chef takes a sequence of pairs of vertices
+(a
+1
+,b
+1
+),(a
+2
+,b
+2
+),…,(a
+M
+,b
+M
+) and does the following for each
+i from
+1 to
+M in this order:
+Flip the direction of the edge between vertices
+a
+i
+and
+b
+i
+.
+If the graph is strongly connected either before or after flipping this edge, declare
+G a bad tournament.
+If
+G is never declared a bad tournament, Chef calls it a good tournament. Given the sequence of
+M edge flips, find a good tournament.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+M lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+a
+i
+and
+b
+i
+.
+Output
+For each test case, print
+N−1 lines. For each valid
+i, the
+i-th of these lines should contain
+N−i space-separated integers; for each valid
+j, the
+j-th of these integers should be
+1 if there is an edge from the vertex
+i to the vertex
+i+j or
+0 if there is an edge from the vertex
+i+j to the vertex
+i.
+It can be proved that a good tournament always exists under the given constraints. If there are multiple solutions, you may print any one of them.
+Constraints
+1≤T≤400
+6≤N≤400
+the sum of
+N over all test cases does not exceed
+4,000
+Subtasks
+Subtask #1 (30 points):
+M=N−2
+Subtask #2 (40 points):
+M=⌈
+2
+3N
+⌉−3
+Subtask #3 (30 points):
+M=2N−11
+Example Input
+1
+6 4
+1 3
+3 4
+2 6
+5 6
+Example Output
+1 0 1 1 1
+0 0 0 1
+1 1 1
+1 1
+0

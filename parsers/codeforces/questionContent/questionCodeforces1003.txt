@@ -1,0 +1,186 @@
+J. Training Camp
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are organizing a training camp to teach algorithms to young kids. There are
+n
+2
+kids, organized in an
+n
+by
+n
+grid. Each kid is between
+1
+and
+n
+years old (inclusive) and any two kids who are in the same row or in the same column have different ages.
+You want to select exactly
+n
+kids for a programming competition, with exactly one kid from each row and one kid from each column. Moreover, kids who are not selected must be either older than both kids selected in their row and column, or younger than both kids selected in their row and column (otherwise they will complain). Notice that it is always possible to select
+n
+kids satisfying these requirements (for example by selecting
+n
+kids who have the same age).
+During the training camp, you observed that some kids are good at programming, and the others are not. What is the maximum number of kids good at programming that you can select while satisfying all the requirements?
+Input
+The first line contains
+n
+(
+1≤n≤128
+) — the size of the grid.
+The following
+n
+lines describe the ages of the kids. Specifically, the
+i
+-th line contains
+n
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,n
+(
+1≤
+a
+i,j
+≤n
+) — where
+a
+i,j
+is the age of the kid in the
+i
+-th row and
+j
+-th column. It is guaranteed that two kids on the same row or column have different ages, i.e.,
+a
+i,j
+≠
+a
+i,
+j
+′
+for any
+1≤i≤n
+,
+1≤j<
+j
+′
+≤n
+, and
+a
+i,j
+≠
+a
+i
+′
+,j
+for any
+1≤i<
+i
+′
+≤n
+,
+1≤j≤n
+.
+The following
+n
+lines describe the programming skills of the kids. Specifically, the
+i
+-th line contains
+n
+integers
+c
+i,1
+,
+c
+i,2
+,…,
+c
+i,n
+(
+c
+i,j
+∈{0,1}
+) — where
+c
+i,j
+=1
+if the kid in the
+i
+-th row and
+j
+-th column is good at programming and
+c
+i,j
+=0
+otherwise.
+Output
+Print the maximum number of kids good at programming that you can select while satisfying all the requirements.
+Examples
+input
+Copy
+3
+1 2 3
+3 1 2
+2 3 1
+1 0 0
+0 0 1
+0 0 0
+output
+Copy
+1
+input
+Copy
+4
+1 2 3 4
+2 1 4 3
+3 4 1 2
+4 3 2 1
+1 1 1 0
+0 0 1 0
+1 1 0 1
+0 0 0 1
+output
+Copy
+2
+Note
+In the first sample, it is not possible to select the two kids good at programming (in row
+1
+and column
+1
+, and in row
+2
+and column
+3
+), because then you would have to select the kid in row
+3
+and column
+2
+, and in that case two kids would complain (the one in row
+1
+and column
+2
+, and the one in row
+3
+and column
+1
+).
+A valid selection which contains
+1
+kid good at programming is achieved by choosing the
+3
+kids who are
+1
+year old.
+In the second sample, there are
+10
+valid choices of the
+n
+kids that satisfy the requirements, and each of them selects exactly
+2
+kids good at programming.

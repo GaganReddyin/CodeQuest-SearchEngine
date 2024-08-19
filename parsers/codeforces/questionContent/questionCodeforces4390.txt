@@ -1,0 +1,81 @@
+B. World Cup
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Allen wants to enter a fan zone that occupies a round square and has
+n
+entrances.
+There already is a queue of
+a
+i
+people in front of the
+i
+-th entrance. Each entrance allows one person from its queue to enter the fan zone in one minute.
+Allen uses the following strategy to enter the fan zone:
+Initially he stands in the end of the queue in front of the first entrance.
+Each minute, if he is not allowed into the fan zone during the minute (meaning he is not the first in the queue), he leaves the current queue and stands in the end of the queue of the next entrance (or the first entrance if he leaves the last entrance).
+Determine the entrance through which Allen will finally enter the fan zone.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the number of entrances.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+) — the number of people in queues. These numbers do not include Allen.
+Output
+Print a single integer — the number of entrance that Allen will use.
+Examples
+input
+Copy
+4
+2 3 2 0
+output
+Copy
+3
+input
+Copy
+2
+10 10
+output
+Copy
+1
+input
+Copy
+6
+5 2 6 5 7 4
+output
+Copy
+6
+Note
+In the first example the number of people (not including Allen) changes as follows:
+[2,3,2,0]→[1,2,1,0]→[0,1,0,0]
+. The number in bold is the queue Alles stands in. We see that he will enter the fan zone through the third entrance.
+In the second example the number of people (not including Allen) changes as follows:
+[10,10]→[9,9]→[8,8]→[7,7]→[6,6]→
+[5,5]→[4,4]→[3,3]→[2,2]→[1,1]→[0,0]
+.
+In the third example the number of people (not including Allen) changes as follows:
+[5,2,6,5,7,4]→[4,1,5,4,6,3]→[3,0,4,3,5,2]→
+[2,0,3,2,4,1]→[1,0,2,1,3,0]→[0,0,1,0,2,0]
+.

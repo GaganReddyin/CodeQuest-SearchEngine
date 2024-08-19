@@ -1,0 +1,198 @@
+Make Them Alike
+Problem
+You are given a permutation
+P of length
+N, an array
+A of size
+N, and an integer
+M.
+Initially,
+0≤A
+i
+≤M. Consider an array
+A
+′
+obtained from
+A by replacing all zeros in
+A with positive integers less than or equal to
+M.
+The array
+A
+′
+will then be transformed as follows, in
+N steps:
+In the
+i
+th
+step, we set
+A
+i
+′
+=A
+P
+i
+′
+.
+The initial array
+A
+′
+is said to be beautiful, if, after the transformation of
+N steps, all elements of array
+A
+′
+are equal.
+Find the number of such beautiful arrays
+A
+′
+which can be formed by changing the zeros in array
+A to any value
+≤M. Since this number can be huge, print this number modulo
+10
+9
++7.
+Note that a permutation of length
+N contains of all elements from
+1 to
+N exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M, the size of the array and the maximum value it can have.
+The second line of each test case consists of
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+, the permutation
+P.
+The third line of each test case consists of
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, the initial array
+A.
+Output Format
+For each test case, output on a new line, the number of such beautiful arrays
+A
+′
+which can be formed by changing the zeros in array
+A to any value
+≤M.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤M≤10
+9
+0≤A
+i
+≤M
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4 3
+2 1 4 3
+0 2 0 2
+3 2
+3 1 2
+0 0 0
+8 54
+8 1 2 4 3 6 7 5
+0 0 0 0 0 0 0 0
+9
+8
+459165024
+Explanation:
+Test case
+1: The given permutation is
+[2,1,4,3]. One of the possible beautiful arrays is:
+A
+′
+=[1,2,3,2]. This is obtained by replacing the first
+0 with
+1 and the second
+0 with
+3 in the array
+A.
+For the transformation:
+In the first step,
+A
+1
+′
+is replaced with
+A
+P
+1
+′
+=A
+2
+′
+, that is
+2. The array becomes
+[2,2,3,2].
+In the second step,
+A
+2
+′
+is replaced with
+A
+P
+2
+′
+=A
+1
+′
+, that is
+2. The array becomes
+[2,2,3,2].
+In the third step,
+A
+3
+′
+is replaced with
+A
+P
+3
+′
+=A
+4
+′
+, that is
+2. The array becomes
+[2,2,2,2].
+In the fourth step,
+A
+4
+′
+is replaced with
+A
+P
+4
+′
+=A
+3
+′
+, that is
+2. The array becomes
+[2,2,2,2].
+Thus, after the transformation, all elements of the array are equal. The other beautiful arrays for this test case are:
+[1,2,1,2],[1,2,2,2],[2,2,1,2],[2,2,2,2],[2,2,3,2],[3,2,1,2],[3,2,2,2],[3,2,3,2].
+There are
+9 beautiful arrays in total.

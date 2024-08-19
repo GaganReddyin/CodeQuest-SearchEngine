@@ -1,0 +1,86 @@
+Mathison and the cubic tree
+Problem
+Read problems statements in mandarin chinese, russian and vietnamese as well.
+After playing board games, buying letters, and shuffling decks, Mathison has finally decided to study. He opens his favorite book, CLRS, and decides to solve a graph problem. The problem is described below and you can find it by its number, 25.1-11, on page 693 (3rd edition only).
+You are given a tree with N nodes where each node has a value associated with it.
+Define PROD(u, v) to be the product of all values on the path from node u to node v.
+The problem is to find the longest path (u, v) such that PROD(u, v) is a cubic number (i.e. there is some natural number k such that k3 = PROD(u, v)).
+Mathison has no idea how to solve this problem so he asks you for help!
+Given T instances of this task, can you find the answer for each one of them so Mathison can proceed to the next chapter?
+Input
+The first line contains the number of tests, T.
+The description of a test starts with one line that contains the number of nodes, N.
+The second line contains N space-separated integers, representing the values of the nodes.
+Each of the following N-1 lines contain a single pair of integers u, v, representing an edge from u to v.
+Output
+The output file must contain T lines, each one containing the answer (i.e. the longest path that generates a cubic number) for the corresponding test. If there's no such path then output -1 instead.
+Constraints
+1 ≤ T ≤ 5000
+1 ≤ N ≤ 100,000 (i.e. 105)
+1 ≤ valuex ≤ 1,000,000 (i.e. 106)
+Subtaks
+Subtask #1 (10 points):
+1 ≤ T ≤ 5000
+1 ≤ N ≤ 10
+All values are ≤ 50
+TL = 1s
+Subtask #2 (25 points):
+1 ≤ T ≤ 50
+1 ≤ N ≤ 300
+TL = 2s
+Subtask #3 (25 points):
+The sum of all Ns is ≤ 300,000
+All values are ≤ 150
+TL = 3.5s
+Subtask #4 (40 points):
+The sum of all Ns is ≤ 300,000
+Original constraints for N and valuex.
+TL = 4.5s
+Sample 1:
+Input
+Output
+4
+10
+525 1210 15 6 40 22 441 35 220 121
+2 1
+1 3
+7 3
+2 5
+2 4
+5 8
+6 5
+9 5
+9 10
+3
+2 3 5
+1 2
+2 3
+5
+2 4 2 2 8
+1 2
+1 3
+3 4
+5 4
+2
+125 3
+1 2
+3
+-1
+4
+1
+Explanation:
+First test
+
+
+There is only one path that generates a cubic number: 2 ? 5 ? 9; 1210 × 40 × 220 = 10648000 = 2203
+There are 3 nodes in this path so the answer is 3.
+
+Second test
+There is no path that generates a cubic number so the answer is -1.
+
+Third test
+There are two paths that generate a cubic number: 1 ? 2 and 1 ? 3 ? 4 ? 5.
+The second one is longer so the answer is 4.
+
+Fourth test
+There is only one path that generates a cubic number and it contains only one node.

@@ -1,0 +1,95 @@
+B. Merge it!
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+In one operation you can choose two elements of the array and replace them with the element equal to their sum (it does not matter where you insert the new element). For example, from the array
+[2,1,4]
+you can obtain the following arrays:
+[3,4]
+,
+[1,6]
+and
+[2,5]
+.
+Your task is to find the maximum possible number of elements divisible by
+3
+that are in the array after performing this operation an arbitrary (possibly, zero) number of times.
+You have to answer
+t
+independent queries.
+Input
+The first line contains one integer
+t
+(
+1≤t≤1000
+) — the number of queries.
+The first line of each query contains one integer
+n
+(
+1≤n≤100
+).
+The second line of each query contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+Output
+For each query print one integer in a single line — the maximum possible number of elements divisible by
+3
+that are in the array after performing described operation an arbitrary (possibly, zero) number of times.
+Example
+input
+Copy
+2
+5
+3 1 2 3 1
+7
+1 1 1 1 1 2 2
+output
+Copy
+3
+3
+Note
+In the first query of the example you can apply the following sequence of operations to obtain
+3
+elements divisible by
+3
+:
+[3,1,2,3,1]→[3,3,3,1]
+.
+In the second query you can obtain
+3
+elements divisible by
+3
+with the following sequence of operations:
+[1,1,1,1,1,2,2]→[1,1,1,1,2,3]→[1,1,1,3,3]→[2,1,3,3]→[3,3,3]
+.

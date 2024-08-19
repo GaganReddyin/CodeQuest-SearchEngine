@@ -1,0 +1,74 @@
+A. Cirno's Perfect Bitmasks Classroom
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Even if it's a really easy question, she won't be able to answer it
+— Perfect Memento in Strict Sense
+Cirno's perfect bitmasks classroom has just started!
+Cirno gave her students a positive integer
+x
+. As an assignment, her students need to find the minimum positive integer
+y
+, which satisfies the following two conditions:
+x and y>0
+and
+0
+x xor y>0
+0
+Where
+and
+is the bitwise AND operation, and
+xor
+is the bitwise XOR operation.
+Among the students was Mystia, who was truly baffled by all these new operators. Please help her!
+Input
+The first line of input contains a single integer
+t
+(
+1≤t≤
+10
+3
+) — the number of input test cases.
+For each test case, the only line of input contains one integer
+x
+(
+1≤x≤
+2
+30
+).
+Output
+For each test case, print a single integer — the minimum number of
+y
+.
+Example
+input
+Copy
+7
+1
+2
+5
+9
+16
+114514
+1000000
+output
+Copy
+3
+3
+1
+1
+17
+2
+64
+Note
+Test case 1:
+1and3=1>0
+,
+1xor3=2>0
+.
+Test case 2:
+2and3=2>0
+,
+2xor3=1>0
+.

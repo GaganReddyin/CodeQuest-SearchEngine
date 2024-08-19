@@ -1,0 +1,140 @@
+F. Showing Off
+time limit per test6 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Another dull quarantine day was going by when BThero decided to start researching matrices of size
+n×m
+. The rows are numerated
+1
+through
+n
+from top to bottom, and the columns are numerated
+1
+through
+m
+from left to right. The cell in the
+i
+-th row and
+j
+-th column is denoted as
+(i,j)
+.
+For each cell
+(i,j)
+BThero had two values:
+The cost of the cell, which is a single positive integer.
+The direction of the cell, which is one of characters L, R, D, U. Those characters correspond to transitions to adjacent cells
+(i,j−1)
+,
+(i,j+1)
+,
+(i+1,j)
+or
+(i−1,j)
+, respectively. No transition pointed outside of the matrix.
+Let us call a cell
+(
+i
+2
+,
+j
+2
+)
+reachable from
+(
+i
+1
+,
+j
+1
+)
+, if, starting from
+(
+i
+1
+,
+j
+1
+)
+and repeatedly moving to the adjacent cell according to our current direction, we will, sooner or later, visit
+(
+i
+2
+,
+j
+2
+)
+.
+BThero decided to create another matrix from the existing two. For a cell
+(i,j)
+, let us denote
+S
+i,j
+as a set of all reachable cells from it (including
+(i,j)
+itself). Then, the value at the cell
+(i,j)
+in the new matrix will be equal to the sum of costs of all cells in
+S
+i,j
+.
+After quickly computing the new matrix, BThero immediately sent it to his friends. However, he did not save any of the initial matrices! Help him to restore any two valid matrices, which produce the current one.
+Input
+The first line of input file contains a single integer
+T
+(
+1≤T≤100
+) denoting the number of test cases. The description of
+T
+test cases follows.
+First line of a test case contains two integers
+n
+and
+m
+(
+1≤n⋅m≤
+10
+5
+).
+Each of the following
+n
+lines contain exactly
+m
+integers — the elements of the produced matrix. Each element belongs to the segment
+[2,
+10
+9
+]
+.
+It is guaranteed that
+∑(n⋅m)
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, if an answer does not exist, print a single word NO. Otherwise, print YES and both matrices in the same format as in the input.
+The first matrix should be the cost matrix and the second matrix should be the direction matrix.
+All integers in the cost matrix should be positive.
+All characters in the direction matrix should be valid. No direction should point outside of the matrix.
+Example
+input
+Copy
+2
+3 4
+7 6 7 8
+5 5 4 4
+5 7 4 4
+1 1
+5
+output
+Copy
+YES
+1 1 1 1
+2 1 1 1
+3 2 1 1
+R D L L
+D R D L
+U L R U
+NO

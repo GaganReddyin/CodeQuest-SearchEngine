@@ -1,0 +1,150 @@
+B. DIV + MOD
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Not so long ago, Vlad came up with an interesting function:
+f
+a
+(x)=⌊
+x
+a
+⌋+xmoda
+, where
+⌊
+x
+a
+⌋
+is
+x
+a
+, rounded down,
+xmoda
+— the remainder of the integer division of
+x
+by
+a
+.
+For example, with
+a=3
+and
+x=11
+, the value
+f
+3
+(11)=⌊
+11
+3
+⌋+11mod3=3+2=5
+.
+The number
+a
+is fixed and known to Vlad. Help Vlad find the maximum value of
+f
+a
+(x)
+if
+x
+can take any integer value from
+l
+to
+r
+inclusive (
+l≤x≤r
+).
+Input
+The first line of input data contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of input test cases.
+This is followed by
+t
+lines, each of which contains three integers
+l
+i
+,
+r
+i
+and
+a
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤
+10
+9
+,1≤
+a
+i
+≤
+10
+9
+) — the left and right boundaries of the segment and the fixed value of
+a
+.
+Output
+For each test case, output one number on a separate line — the maximum value of the function on a given segment for a given
+a
+.
+Example
+input
+Copy
+5
+1 4 3
+5 8 4
+6 10 6
+1 1000000000 1000000000
+10 12 8
+output
+Copy
+2
+4
+5
+999999999
+5
+Note
+In the first sample:
+f
+3
+(1)=⌊
+1
+3
+⌋+1mod3=0+1=1
+,
+f
+3
+(2)=⌊
+2
+3
+⌋+2mod3=0+2=2
+,
+f
+3
+(3)=⌊
+3
+3
+⌋+3mod3=1+0=1
+,
+f
+3
+(4)=⌊
+4
+3
+⌋+4mod3=1+1=2
+As an answer, obviously,
+f
+3
+(2)
+and
+f
+3
+(4)
+are suitable.

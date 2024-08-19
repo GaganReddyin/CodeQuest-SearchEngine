@@ -1,0 +1,56 @@
+N Triplets
+Problem
+Alice is still not satisfied with Bob's math skills so she gave him a new challenge.
+Given a positive integer
+N, find any
+3 distinct positive integers
+A,B,C such that:
+The product of any two of these
+3 integers is a divisor of
+N.
+The product of all three integers is a multiple of
+N.
+If multiple solutions exist, you may print any of them.
+Print
+−1 if no solution exists.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first and only line of each test case contains a single integer,
+N.
+Output Format
+For each test case, output on a new line three space-separated integers satisfying the given condition.
+Print
+−1 if the answer does not exist.
+Constraints
+1≤T≤100
+1≤N≤10
+9
+Sample 1:
+Input
+Output
+3
+30
+24
+3
+2 3 5
+2 6 4
+-1
+Explanation:
+Test case
+1: We have
+A=2,B=3,C=5. They satisfy all the conditions:
+AB=6,AC=10,BC=15 are all divisors of
+N=30
+ABC=30 is a multiple of
+N=30
+Test case
+2: We have
+A=2,B=6,C=4. They satisfy all the conditions:
+AB=12,AC=8,BC=24 are all divisors of
+N=24
+ABC=48 is a multiple of
+N=24
+Test case
+3: It can be shown that no three positive integers
+A,B,C satisfy the conditions.

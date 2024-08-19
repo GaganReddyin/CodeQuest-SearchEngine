@@ -1,0 +1,38 @@
+Polynomials
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Given n functions yi(x) = a0 + a1x + a2x2 + a3x3 and q queries. For each query, you are given an integer t and you are required to find out yi (i ≤ i ≤ n) that minimizes the value of yi(t).
+Input
+The first line is an integer T denotes the number of testcases. Each testcase starts with an integer n on a single line, the number of polynomials. The next n lines, each line describes a polynomial contains four integers: a0 a1 a2 a3. Then a line contains q, the number of queries. Each of the next q lines describes a query by a single integer t.
+Output
+Each query, output the answer on a single line.
+Constraints
+1 ≤ T ≤ 10
+1 ≤ n, q ≤ 105
+0 ≤ t ≤ 105
+0 ≤ a3 ≤ 103
+0 ≤ ai ≤ 105
+sum of n, q over all test cases, each is at most 3.105
+Subtasks:
+Subtask #1 (10 points): n, q ≤ 103
+Subtask #2 (20 points): a2 = a3 = 0
+Subtask #3 (70 points): original constrains
+Sample 1:
+Input
+Output
+1
+5
+10 5 4 8
+2 0 5 0
+1 8 0 2
+8 7 8 7
+7 0 8 1
+4
+1
+3
+5
+2
+7
+47
+127
+22

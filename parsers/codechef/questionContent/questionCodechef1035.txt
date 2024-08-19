@@ -1,0 +1,77 @@
+Strong Elements
+Problem
+Chef has an array
+A of length
+N.
+An index
+i is called strong if we can change the gcd of the whole array just by changing the value of
+A
+i
+.
+Determine the number of strong indices in the array.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+First line of each test case contains an integer
+N denoting the size of the array
+A.
+Second line contains
+N space separated integers
+A
+1
+,A
+2
+,…,A
+N
+- denoting the array
+A.
+Output Format
+For each test case, output the number of strong indices in the array.
+Constraints
+1≤T≤5⋅10
+4
+2≤N≤3⋅10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases do not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+5 10 20
+4
+3 5 7 11
+4
+2 2 2 2
+3
+0
+4
+Explanation:
+Test Case
+1: All the indices are strong.
+For index
+1 you can change the element to
+10 which changes the gcd of the array to
+10.
+For index
+2 you can change the element to
+12 which changes the gcd of the array to
+1.
+For index
+3 you can change the element to
+12 which changes the gcd of the array to
+1.
+Test Case
+2: No index is strong. If you change any single element, gcd still remains the same.
+Test Case
+3: All the indices are strong. You can change any element to
+3. This changes the gcd of the array to
+1.

@@ -1,0 +1,63 @@
+Max Minus Min
+Problem
+Consider an infinite sequence
+X
+i
+of nonnegative integers, in which
+X
+1
+=A,
+X
+2
+=B,
+X
+3
+=C, and for
+i≥4,
+X
+i
+=max(X
+i−3
+,X
+i−2
+,X
+i−1
+)−min(X
+i−3
+,X
+i−2
+,X
+i−1
+)
+Find the
+K-th term of this sequence.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The only line of each test case contains four space-separated integers
+A,B,C,K — the first three terms of the sequence, and the index of the term that you have to find.
+Output Format
+For each test case, output on a new line the
+K-th term of the corresponding sequence.
+Constraints
+1≤T≤1000
+0≤A,B,C≤10
+18
+1≤K≤10
+18
+Sample 1:
+Input
+Output
+3
+16 12 9 8
+2022 420 69 10
+1000000000 1000000000 1000000000 101
+2
+1746
+1000000000
+Explanation:
+Test case
+1: The sequence is
+(16,12,9,7,5,4,3,2,…). It can be seen that the eighth term is
+2.

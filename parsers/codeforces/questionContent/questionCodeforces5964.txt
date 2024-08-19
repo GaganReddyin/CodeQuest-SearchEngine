@@ -1,0 +1,38 @@
+C. Bear and String Distance
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Limak is a little polar bear. He likes nice strings — strings of length n, consisting of lowercase English letters only.
+The distance between two letters is defined as the difference between their positions in the alphabet. For example, , and .
+Also, the distance between two nice strings is defined as the sum of distances of corresponding letters. For example, , and .
+Limak gives you a nice string s and an integer k. He challenges you to find any nice string s' that . Find any s' satisfying the given conditions, or print "-1" if it's impossible to do so.
+As input/output can reach huge size it is recommended to use fast input/output methods: for example, prefer to use gets/scanf/printf instead of getline/cin/cout in C++, prefer to use BufferedReader/PrintWriter instead of Scanner/System.out in Java.
+Input
+The first line contains two integers n and k (1 ≤ n ≤ 105, 0 ≤ k ≤ 106).
+The second line contains a string s of length n, consisting of lowercase English letters.
+Output
+If there is no string satisfying the given conditions then print "-1" (without the quotes).
+Otherwise, print any nice string s' that .
+Examples
+input
+Copy
+4 26
+bear
+output
+Copy
+roar
+input
+Copy
+2 7
+af
+output
+Copy
+db
+input
+Copy
+3 1000
+hey
+output
+Copy
+-1

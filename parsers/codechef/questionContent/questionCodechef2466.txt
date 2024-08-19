@@ -1,0 +1,119 @@
+Valet Parking
+Problem
+Read problems statements in Mandarin Chinese, Russian, and Bengali as well.
+Your friend works as a valet where
+N cars show up in a shift. The
+i-th car will arrive
+T
+i
+seconds after the current moment, and the car can wait for at most
+Y
+i
+seconds. That is, your friend can only start parking the car from time
+T
+i
+to
+T
+i
++Y
+i
+(inclusive).
+Additionally, it takes
+X
+i
+time to park the
+i-th car, which means he cannot park any other cars for
+X
+i
+seconds starting from the time he starts parking the
+i-th car. It is known that no driver would like to wait for more time than it takes to park his car, so that
+Y
+i
+<X
+i
+for all
+i. The driver of the
+i-th car will pay
+A
+i
+coins as a tip to your friend if his car is parked. Note that he can start parking the next car immediately after he finishes parking the previous car.
+Your friend has asked you what will be the maximize possible earnings if he optimally chooses which cars to park and at what times.
+###Input:
+The first line contains one single integer
+N
+(1≤N≤3⋅10
+5
+)
+− the number of cars.
+The second line contains
+N integers
+T
+1
+,T
+2
+,…,T
+n
+− the time (in seconds) at which
+i-th car arrives.
+The third line contains
+N integers
+X
+1
+,X
+2
+,…,X
+n
+− the time (in seconds) required to park the
+i-th car.
+The fourth line contains
+N integers
+Y
+1
+,Y
+2
+,…,Y
+n
+− the maximum time (in seconds) for which the
+i-th car can wait.
+The fifth line contains
+N integers
+A
+1
+,A
+2
+,…,A
+n
+− the tip which the
+i-th car driver gives after the car is parked.
+###Output: Print a single integer
+− the answer to the problem.
+###Constraints
+1≤N≤3⋅10
+5
+1≤T
+i
+≤4⋅10
+3
+0≤Y
+i
+<X
+i
+≤4⋅10
+3
+1≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+3
+5 8 11
+3 10 4
+1 0 1
+11 13 5
+24
+Explanation:
+It is optimal to start parking the first car at
+5 seconds. We finish parking at
+8 seconds, and immediately start parking the second car.

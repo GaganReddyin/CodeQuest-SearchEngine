@@ -1,0 +1,31 @@
+Product on Tree
+Problem
+Read problems statements in Mandarin Chinese , Russian and Vietnamese
+Chef is going to leave his home town and shift to a new city. The new city contains exactly N houses. There are roads connecting the houses in such a way that there is exactly one way to go from a house to any other house. Length of each of the roads is known to Chef.
+Chief is doing a lot of research before shifting to the new city. He wants to know how many pairs of houses (a,b) are there, such that if we multiply length of all the roads on the path from a to b, the product will be divisible by M.
+Input
+First line of the input contains a pair of integers N and M, where N denotes the number of houses.
+Each of the next (N-1) lines contains a triplet of numbers (a,b,c) which will denote that the length of the road between houses a and b is c.
+Output
+A single integer denoting the number of pair of houses.
+Constraints
+1 ≤ M ≤ 500
+1 ≤ weight of the road ≤ 109
+
+Subtask #1: 20 points
+1 ≤ N ≤ 105
+M is a prime
+Subtask #2: 20 points
+1 ≤ N ≤ 1000
+Subtask #3: 60 points
+1 ≤ N ≤ 105
+Sample 1:
+Input
+Output
+4 2
+1 3 4
+1 2 4
+1 4 4
+6
+Explanation:
+If we multiply the lengths of the roads on the path between any pair of the vertices, it will be divisible by 2.

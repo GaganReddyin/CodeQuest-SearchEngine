@@ -1,0 +1,190 @@
+Magnet Sort
+Problem
+There is an array
+A with
+N elements. Each element of
+A has a fixed polarity: either north or south.
+Chef is allowed to perform some (possibly zero) operations on the array
+A. In one operation, Chef can:
+Pick some subarray of array
+A, such that, the first and last elements of the subarray have different polarities, and, rearrange the elements in this subarray any way he wants.
+Note that the polarity of each element remains unchanged after an operation.
+Find the minimum number of operations required to sort the array in non-decreasing order, or state that it is impossible.
+A subarray of
+A is obtained by deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.
+Input Format
+The first line contains an integer
+T, denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains a single integer
+N.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line of each test case contains a string of length
+N, the
+ith character of which is either
+N or
+S, representing that the
+ith element of
+A has north or south polarity, respectively.
+Output Format
+For each test case, if it impossible to sort the array, output
+−1. Otherwise, output a single integer: the minimum number of operations required to sort the array.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N across all test cases doesn't exceed
+2⋅10
+5
+.
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+6
+5
+1 3 2 3 7
+NNSNS
+2
+2 1
+SS
+3
+1 8 12
+SNS
+3
+3 2 1
+NSN
+5
+1 2 3 5 4
+NSNSN
+5
+1 1 2 2 1
+SNSNN
+1
+-1
+0
+2
+1
+1
+Explanation:
+Let's represent elements with a polarity of north in
+red, and elements with a polarity of south in
+blue. The polarity of each element is also labelled above it.
+In the first test case, we can sort the array in a single operation as follows.
+Rearrange the subarray
+[A
+1
+,A
+2
+,A
+3
+]:
+[
+1
+N
+,
+3
+N
+,
+2
+S
+,
+3
+N
+,
+7
+S
+]→[
+1
+N
+,
+2
+S
+,
+3
+N
+,
+3
+N
+,
+7
+S
+].
+In the second test case, the array
+[
+2
+S
+,
+1
+S
+] cannot be sorted, since no operations can be performed.
+In the third test case, the array is already sorted, so the answer is
+0.
+In the fourth test case, we can sort the array in two operations as follows.
+Rearrange the subarray
+[A
+2
+,A
+3
+]:
+[
+3
+N
+,
+2
+S
+,
+1
+N
+]→[
+3
+N
+,
+1
+N
+,
+2
+S
+].
+Rearrange the subarray
+[A
+1
+,A
+2
+,A
+3
+]:
+[
+3
+N
+,
+1
+N
+,
+2
+S
+]→[
+1
+N
+,
+2
+S
+,
+3
+N
+].

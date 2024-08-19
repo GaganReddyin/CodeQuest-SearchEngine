@@ -1,0 +1,49 @@
+A. Two Bases
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+After seeing the "ALL YOUR BASE ARE BELONG TO US" meme for the first time, numbers X and Y realised that they have different bases, which complicated their relations.
+You're given a number X represented in base bx and a number Y represented in base by. Compare those two numbers.
+Input
+The first line of the input contains two space-separated integers n and bx (1 ≤ n ≤ 10, 2 ≤ bx ≤ 40), where n is the number of digits in the bx-based representation of X.
+The second line contains n space-separated integers x1, x2, ..., xn (0 ≤ xi < bx) — the digits of X. They are given in the order from the most significant digit to the least significant one.
+The following two lines describe Y in the same way: the third line contains two space-separated integers m and by (1 ≤ m ≤ 10, 2 ≤ by ≤ 40, bx ≠ by), where m is the number of digits in the by-based representation of Y, and the fourth line contains m space-separated integers y1, y2, ..., ym (0 ≤ yi < by) — the digits of Y.
+There will be no leading zeroes. Both X and Y will be positive. All digits of both numbers are given in the standard decimal numeral system.
+Output
+Output a single character (quotes for clarity):
+'<' if X < Y
+'>' if X > Y
+'=' if X = Y
+Examples
+input
+Copy
+6 2
+1 0 1 1 1 1
+2 10
+4 7
+output
+Copy
+=
+input
+Copy
+3 3
+1 0 2
+2 5
+2 4
+output
+Copy
+<
+input
+Copy
+7 16
+15 15 4 0 0 7 10
+7 9
+4 8 0 3 1 5 0
+output
+Copy
+>
+Note
+In the first sample, X = 1011112 = 4710 = Y.
+In the second sample, X = 1023 = 215 and Y = 245 = 1123, thus X < Y.
+In the third sample, and Y = 48031509. We may notice that X starts with much larger digits and bx is much larger than by, so X is clearly larger than Y.

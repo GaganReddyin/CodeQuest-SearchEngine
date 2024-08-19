@@ -1,0 +1,77 @@
+Anti Palindrome
+Problem
+A (
+1-indexed) string
+S of length
+N is said to be anti-palindrome if, for each
+1≤i≤N,
+S
+i
+
+=S
+(N+1−i)
+.
+You are given a string
+S of length
+N (consisting of lowercase Latin letters only). Rearrange the string to convert it into an anti-palindrome or determine that there is no rearrangement which is an anti-palindrome.
+If there are multiple rearrangements of the string which are anti-palindromic, print any of them.
+Input Format
+The first line of input contains a single integer
+T — the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N — the length of the string
+S.
+The second line of each test case contains the string
+S.
+Output Format
+For each test case, if it is possible to rearrange
+S to convert it into an anti-palindrome, print YES in the first line and print the rearranged string in the second line. Otherwise, print NO.
+You may print each character of YES and NO in uppercase or lowercase (for e.g. yes, yEs, Yes will be considered identical).
+If there are multiple rearrangements of the string which are anti-palindromic, print any of them.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+S contains only lowercase Latin letters
+It is guaranteed that the sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+3
+abc
+8
+abccccdd
+4
+xyyx
+6
+ppppqr
+NO
+YES
+abddcccc
+YES
+xxyy
+NO
+Explanation:
+Test case
+1: No matter how the string is rearranged, the condition
+S
+i
+
+=S
+(N+1−i)
+will not be satisfied for
+i=2.
+Test case
+2: One possible rearrangement of the string which is anti-palindromic is abddcccc. Other answers, such as ccdaccdb, will also be accepted.
+Test case
+3: One possible rearrangement of the string which is anti-palindromic is xxyy.
+Test case
+4: It can be shown that none of the rearrangements of
+A is anti-palindromic.

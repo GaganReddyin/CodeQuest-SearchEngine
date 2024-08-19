@@ -1,0 +1,125 @@
+Bracket Removal
+Problem
+A bracket sequence is made up of brackets '(' and ')'. We define a balanced bracket sequence as following:
+Empty sequence is balanced
+If
+P is balanced,
+(P) is also balanced
+If
+P and
+Q are balanced,
+PQ is also balanced
+For example, empty sequence and sequences
+(())(),
+(),
+(()(())) are balanced. While
+(,
+)(,
+(() and
+(()))( are not balanced.
+You are given a bracket sequence
+A of length
+N and
+Q queries of the following form:
+L
+R : You are given two integers
+L and
+R
+(1≤L≤R≤N). Find the number of pairs
+(X,Y), where
+L≤X≤Y≤R, such that after removing the substring
+A
+[X,Y]
+from
+A
+[L,R]
+, the substring
+A
+[L,R]
+becomes a balanced bracket sequence.
+In other words, for a given
+(L,R), find the number of pairs
+(X,Y), such that the sequence
+A
+L
+…A
+X−1
+A
+Y+1
+…A
+R
+is a balanced bracket sequence.
+Note that,
+A
+[L,R]
+denotes the substring
+A
+L
+A
+L+1
+A
+L+2
+…A
+R−1
+A
+R
+.
+Input Format
+The first line of the input contains
+2 integers
+N and
+Q - the size of the bracket sequence and the number of queries.
+The second line contains a string
+A of length
+N - the bracket sequence.
+The next
+Q lines, each contain two integers
+L
+i
+and
+R
+i
+- the queries to be answered.
+Output Format
+Print
+Q lines, representing the answer for each query.
+Constraints
+1≤N≤3000
+1≤Q≤2⋅10
+6
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+10 3
+(()()((())
+1 4
+3 9
+7 9
+1
+2
+3
+Explanation:
+The first query is
+(()(. The only valid removal is (()(. Thus, answer for this query is
+1.
+The second query is
+)()(((). The valid removals are )()((() and )()((().
+The third query is
+((). The valid removals are ((), (() and (().
+Sample 2:
+Input
+Output
+10 3
+(())()()()
+1 10
+3 5
+5 10
+20
+1
+9
+Explanation:
+The first query is the whole string.
+Some examples of valid removals in the first query are (())()()() and (())()()(). Total number of valid removals in this case is
+20.

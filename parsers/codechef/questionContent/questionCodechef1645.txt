@@ -1,0 +1,96 @@
+Chef, Chefina and Their Friendship
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+In Chefland, each person has their own non-empty personal string. When two people with personal strings
+T
+1
+and
+T
+2
+(possibly identical) become friends in Chefland, their strings are replaced by a new string
+S=T
+1
++T
+1
++T
+2
++T
+2
+, where
++ denotes string concatenation.
+Chef recently became friends with Chefina. However, Chefina's personal string was her favourite and she got upset when it was replaced by
+S. She wanted her personal string back. Chef does not remember
+T
+1
+and
+T
+2
+now, he only knows
+S.
+Find the number of ways in which Chef can retrieve valid strings
+T
+1
+and
+T
+2
+from the given string
+S. It is also possible that Chef does not remember
+S correctly, in which case there is no way to retrieve
+T
+1
+and
+T
+2
+.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single string
+S.
+Output
+For each test case, print a single line containing one integer ― the number of ways to retrieve
+T
+1
+and
+T
+2
+from
+S.
+Constraints
+1≤T≤10
+4
+4≤∣S∣≤10
+5
+∣S∣ is divisible by
+2
+S contains only lowercase English letters
+the sum of
+∣S∣ over all test cases does not exceed
+2⋅10
+6
+Sample 1:
+Input
+Output
+3
+abcd
+aaaa
+ababcdccdc
+0
+1
+1
+Explanation:
+Example case 1: There is no way to choose
+T
+1
+and
+T
+2
+.
+Example case 2: Both
+T
+1
+and
+T
+2
+must be "a".

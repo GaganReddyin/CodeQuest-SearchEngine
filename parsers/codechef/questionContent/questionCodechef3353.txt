@@ -1,0 +1,237 @@
+Strange Bitwise Operation
+Problem
+You are given an array
+A of size
+N.
+Using the array
+A, we define the variables
+S
+1
+and
+S
+2
+:
+Select an index
+i
+(1≤i<N);
+Define
+S
+1
+=(A
+1
+⊕A
+2
+⊕…⊕A
+i
+)
+∣
+(A
+(i+1)
+⊕…⊕A
+N
+), where
+⊕ and
+∣ denote the bitwise XOR and bitwise OR operations respectively;
+Define
+S
+2
+=(A
+1
+⊕A
+2
+⊕…⊕A
+i
+)
+&
+(¬(A
+(i+1)
+⊕…⊕A
+N
+)), where
+⊕,
+&, and
+¬ denote the bitwise XOR, bitwise AND, and bitwise NOT operations respectively.
+Your task is to maximise the value
+(S
+1
+−S
+2
+) by selecting an optimal value of
+i.
+Note: Each element is regarded as an unsigned
+32-bit integer. Thus, if
+X=0,
+¬X=4294967295, which can also be written as
+(2
+32
+−1). Similarly, if
+X=1,
+¬X=4294967294, which can also be written as
+(2
+32
+−2).
+You should answer
+Q queries. Each query is of the form:
+X
+Y: Given index
+X
+(1≤X≤N) and an integer
+Y, set
+A
+X
+:=Y and find the maximum value of
+(S
+1
+−S
+2
+) possible.
+Each query is independent. In other words, for each query, we modify on the original array.
+Input Format
+The first line of input will contain two space-separated integers
+N and
+Q, the size of
+A and the number of queries.
+The next line contain
+N space-separated integers,
+A
+1
+,A
+2
+,…,A
+N
+.
+The next
+Q lines describe the queries. For the
+i
+th
+(1≤i≤Q) line, there are two space-separated integers
+X and
+Y, describing that for this query, we need to set
+A
+X
+=Y.
+Output Format
+For each query, output on a new line, the maximum value of
+(S
+1
+−S
+2
+), you can get after modification.
+Constraints
+2≤N,Q≤3∗10
+5
+1≤X≤N
+0≤A
+i
+,Y<2
+30
+.
+Sample 1:
+Input
+Output
+4 3
+1 2 3 4
+4 2
+3 0
+4 7
+3
+6
+7
+Explanation:
+Query
+1: We set
+A
+4
+=2. Thus, the array is
+A=[1,2,3,2]. The optimal way is to select
+i=1. We get:
+S
+1
+=1
+∣
+(2⊕3⊕2)=3
+S
+2
+=1
+&
+(¬(2⊕3⊕2))=1
+&
+(¬3)=1
+&
+4294967292=0
+Thus,
+(S
+1
+−S
+2
+)=3. It can be shown that this is the maximum value of
+S
+1
+−S
+2
+possible for any
+(1≤i<N).
+Query
+2: We set
+A
+3
+=0. Thus, the array is
+A=[1,2,0,4]. The optimal way is to select
+i=1. We get:
+S
+1
+=1
+∣
+(2⊕0⊕4)=7
+S
+2
+=1
+&
+(¬(2⊕0⊕4))=1
+&
+(¬6)=1
+&
+4294967289=1
+Thus,
+(S
+1
+−S
+2
+)=7−1=6. It can be shown that this is the maximum value of
+S
+1
+−S
+2
+possible for any
+(1≤i<N).
+Query
+3: We set
+A
+4
+=7. Thus, the array is
+A=[1,2,3,7]. The optimal way is to select
+i=3. We get:
+S
+1
+=(1⊕2⊕3)
+∣
+7=7
+S
+2
+=(1⊕2⊕3)
+&
+(¬7)=0
+&
+(¬7)=0
+Thus,
+(S
+1
+−S
+2
+)=7−0=7. It can be shown that this is the maximum value of
+S
+1
+−S
+2
+possible for any
+(1≤i<N).

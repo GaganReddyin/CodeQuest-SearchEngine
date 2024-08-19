@@ -1,0 +1,57 @@
+Chef and Professor
+Problem
+Chef's professor gave him homework to find a permutation of length
+2
+N
+such that each integer from
+0 to
+2
+N
+−1 appears exactly once in the permutation and the maximum bitwise XOR of any even length subarray is minimized.
+Chef wonders how many such permutations are there. Help Chef to find out the number of permutations modulo
+(10
+9
++7), satisfying the above conditions and also help him find one such permutation.
+Input Format
+First-line will contain
+T, the number of test cases. Then the test cases follow.
+The only line of each test case contains an integer
+N.
+Output Format
+For each test case, print two lines of output.
+In the first line, print the number of permutations modulo
+(10
+9
++7), for which maximum bitwise xor of any even-length subarray is minimized.
+In the next line, print
+2
+N
+space-separated numbers denoting any such permutation.
+Constraints
+1≤T≤18
+1≤N≤18
+Sum of
+2
+N
+over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+2
+1
+2
+2
+0 1
+8
+3 2 0 1
+Explanation:
+Test case
+1: There are two optimal permutations:
+[0,1] and
+[1,0].
+Test case
+2: The maximum xor value of any even-sized subarray will be
+2 and there are
+8 such permutations.

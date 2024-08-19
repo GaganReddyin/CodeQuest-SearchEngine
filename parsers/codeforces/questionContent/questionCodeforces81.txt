@@ -1,0 +1,94 @@
+F. Entangled Substrings
+time limit per test2 seconds
+memory limit per test256 mebibytes
+inputstandard input
+outputstandard output
+Quantum entanglement is when two particles link together in a certain way no matter how far apart they are in space.
+You are given a string
+s
+. A pair of its non-empty substrings
+(a,b)
+is called entangled if there is a (possibly empty) link string
+c
+such that:
+Every occurrence of
+a
+in
+s
+is immediately followed by
+cb
+;
+Every occurrence of
+b
+in
+s
+is immediately preceded by
+ac
+.
+In other words,
+a
+and
+b
+occur in
+s
+only as substrings of
+acb
+. Compute the total number of entangled pairs of substrings of
+s
+.
+A string
+a
+is a substring of a string
+b
+if
+a
+can be obtained from
+b
+by the deletion of several (possibly zero or all) characters from the beginning and several (possibly zero or all) characters from the end.
+Input
+The first and only line contains a string
+s
+of lowercase English letters (
+1≤|s|≤
+10
+5
+) — the string for which you should count pairs of entangled substrings.
+Output
+Output a single integer, the number of entangled pairs of substrings of
+s
+.
+Examples
+input
+Copy
+abba
+output
+Copy
+1
+input
+Copy
+abacaba
+output
+Copy
+0
+input
+Copy
+abcabcabcabc
+output
+Copy
+5
+input
+Copy
+adamant
+output
+Copy
+82
+Note
+In the first example, the only entangled pair is (ab,ba). For this pair, the corresponding link string
+c
+is empty, as they only occur as substrings of the whole string abba, which doesn't have any characters between ab and ba.
+In the second example, there are no entangled pairs.
+In the third example, the entangled pairs are (a,b), (b,c), (a,c), (a,bc), and (ab,c). For most pairs, the corresponding link string
+c
+is empty, except for the pair (a,c), for which the link string
+c
+is b, as a and c only occur as substrings of the string abc.

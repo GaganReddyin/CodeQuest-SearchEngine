@@ -1,0 +1,51 @@
+Place Balls Twice
+Problem
+There are
+N boxes. Initially, each box contains one ball.
+For each
+K from
+1 to
+N, solve the following problem:
+Choose a subset of boxes of size
+K equiprobably at random, and place one additional ball in each chosen box.
+Then again choose a subset of boxes of size
+K equiprobably at random, and place one additional ball in each chosen box. This second choice is independent of the first.
+What is the expected value of the product of the number of balls over all boxes? It can be shown that the answer can be expressed as
+Q
+P
+for some integers
+P,Q, where
+Q is not divisible by
+998244353. Output such value
+0≤R<998244353, that
+P≡QRmod998244353.
+Input Format
+The only line of input contains one integer
+N.
+Output Format
+Print
+N numbers, the
+K-th of them is the expected value of the product for parameter
+K modulo
+998244353.
+Constraints
+1≤N≤250000
+Sample 1:
+Input
+Output
+3
+665496239 11 27
+Explanation:
+If
+K=1, with probability
+1/3 one box will have 3 balls and two boxes will have 1 ball, and with probability
+2/3 two boxes will have 2 balls and one box will have 1 ball. Thus the answer is
+1/3⋅(3⋅1⋅1)+2/3⋅(2⋅2⋅1)=11/3.
+If
+K=2, with probability
+1/3 two boxes will have 3 balls and one box will have 1 ball, and with probability
+2/3 two boxes will have 2 balls and one box will have 3 balls. Thus the answer is
+1/3⋅(3⋅3⋅1)+2/3⋅(2⋅2⋅3)=11.
+If
+K=3, with probability 1 all three boxes will have 3 balls, thus the answer is
+1⋅(3⋅3⋅3)=27.

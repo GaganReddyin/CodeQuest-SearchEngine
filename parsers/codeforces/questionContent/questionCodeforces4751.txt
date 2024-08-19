@@ -1,0 +1,57 @@
+H. Don't Exceed
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You generate real numbers s1, s2, ..., sn as follows:
+s0 = 0;
+si = si - 1 + ti, where ti is a real number chosen independently uniformly at random between 0 and 1, inclusive.
+You are given real numbers x1, x2, ..., xn. You are interested in the probability that si ≤ xi is true for all i simultaneously.
+It can be shown that this can be represented as , where P and Q are coprime integers, and . Print the value of P·Q - 1 modulo 998244353.
+Input
+The first line contains integer n (1 ≤ n ≤ 30).
+The next n lines contain real numbers x1, x2, ..., xn, given with at most six digits after the decimal point (0 < xi ≤ n).
+Output
+Print a single integer, the answer to the problem.
+Examples
+input
+Copy
+4
+1.00
+2
+3.000000
+4.0
+output
+Copy
+1
+input
+Copy
+1
+0.50216
+output
+Copy
+342677322
+input
+Copy
+2
+0.5
+1.0
+output
+Copy
+623902721
+input
+Copy
+6
+0.77
+1.234567
+2.1
+1.890
+2.9999
+3.77
+output
+Copy
+859831967
+Note
+In the first example, the sought probability is 1 since the sum of i real numbers which don't exceed 1 doesn't exceed i.
+In the second example, the probability is x1 itself.
+In the third example, the sought probability is 3 / 8.

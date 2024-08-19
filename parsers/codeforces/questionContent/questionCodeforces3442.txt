@@ -1,0 +1,94 @@
+D. Make Equal
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+numbers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. In one operation we can add to any one of those numbers a nonnegative integer power of
+2
+.
+What is the smallest number of operations we need to perform to make all
+n
+numbers equal? It can be proved that under given constraints it doesn't exceed
+10
+18
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+17
+).
+Output
+Output exactly one integer — the smallest number of operations we need to perform to make all
+n
+numbers equal.
+Examples
+input
+Copy
+4
+228 228 228 228
+output
+Copy
+0
+input
+Copy
+3
+2 2 8
+output
+Copy
+3
+Note
+In the first example, all numbers are already equal. So the needed number of operation is
+0
+.
+In the second example, we can apply the operation
+3
+times: add
+8
+to first
+2
+, add
+8
+to second
+2
+, add
+2
+to
+8
+, making all numbers equal to
+10
+. It can be proved that we can't make all numbers equal in less than
+3
+operations.

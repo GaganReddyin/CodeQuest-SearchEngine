@@ -1,0 +1,78 @@
+Doofish Set
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Dr.D has invented yet another -inator: the hateinator. He wants to test it on a group of
+N people (numbered
+1 through
+N). The hateinator may be used any number of times; to use it once, Dr.D should divide these
+N people into two groups and press the fire button on the hateinator. We call each such grouping a Doofish set. Afterwards, there will be hatred between each two people who were in different groups. The hatred does not disappear ― any two people that hate each other before the hateinator is used still hate each other afterwards.
+The hateinator uses a lot of power. Let's denote the number of times it is used by
+K. Then, it consumes
+K⋅N units of power. Dr.D cannot afford to use the hateinator if this number exceeds
+10
+6
+.
+Dr.D has done the math and computed the most evil hatred system: a situation with some
+M pairs of people who hate each other. You are given these pairs. There must not be any other pair of people who hate each other. Initially, there is no hatred between these
+N people. Now, Dr.D is wondering: is it possible to use the hateinator to create this most evil system? If it is, what is the minimum number of times he needs to use it and with which Doofish sets? Help Dr.D find the answers.
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+M lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains two space-separated integers
+a
+i
+and
+b
+i
+denoting that people
+a
+i
+and
+b
+i
+should hate each other.
+Output
+If there is no way to achieve Dr.D's plan or the required amount of power exceeds
+10
+6
+, print a single line containing the integer
+−1.
+Otherwise, first, print a line containing one integer
+K ― the minimum number of times Dr.D needs to use the hateinator. Then, print
+K lines; each of these lines should contain a string describing a Doofish set for one use of the hateinator.
+A string
+S describes a Doofish set if it contains exactly
+N characters and each of these characters is '0' or '1'. A Doofish set is a pair of groups. For each valid
+i, if the
+i-th character of
+S is '1', the
+i-th person is in the first group and if it is '0', this person is in the second group.
+Constraints
+1≤N≤10
+5
+0≤M≤2⋅10
+5
+1≤a
+i
+,b
+i
+≤N for each valid
+i
+Subtasks
+Subtask 1 (30 points):
+M=N⋅(N−1)/2
+Subtask 2 (70 points): original constraints
+Sample 1:
+Input
+Output
+3 3
+1 2
+1 3
+2 3
+2
+110
+100

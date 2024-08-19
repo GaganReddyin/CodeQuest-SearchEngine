@@ -1,0 +1,295 @@
+H. Pushing Robots
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There're
+n
+robots placed on a number line. Initially,
+i
+-th of them occupies unit segment
+[
+x
+i
+,
+x
+i
++1]
+. Each robot has a program, consisting of
+k
+instructions numbered from
+1
+to
+k
+. The robot performs instructions in a cycle. Each instruction is described by an integer number. Let's denote the number corresponding to the
+j
+-th instruction of the
+i
+-th robot as
+f
+i,j
+.
+Initial placement of robots corresponds to the moment of time
+0
+. During one second from moment of time
+t
+(
+0≤t
+) until
+t+1
+the following process occurs:
+Each robot performs
+(tmodk+1)
+-th instruction from its list of instructions. Robot number
+i
+takes number
+F=
+f
+i,(tmodk+1)
+. If this number is negative (less than zero), the robot is trying to move to the left with force
+|F|
+. If the number is positive (more than zero), the robot is trying to move to the right with force
+F
+. Otherwise, the robot does nothing.
+Let's imaginary divide robots into groups of consecutive, using the following algorithm:
+Initially, each robot belongs to its own group.
+Let's sum up numbers corresponding to the instructions of the robots from one group. Note that we are summing numbers without taking them by absolute value. Denote this sum as
+S
+. We say that the whole group moves together, and does it with force
+S
+by the same rules as a single robot. That is if
+S
+is negative, the group is trying to move to the left with force
+|S|
+. If
+S
+is positive, the group is trying to move to the right with force
+S
+. Otherwise, the group does nothing.
+If one group is trying to move, and in the direction of movement touches another group, let's unite them. One group is touching another if their outermost robots occupy adjacent unit segments.
+Continue this process until groups stop uniting.
+Each robot moves by
+1
+in the direction of movement of its group or stays in place if its group isn't moving. But there's one exception.
+The exception is if there're two groups of robots, divided by exactly one unit segment, such that the left group is trying to move to the right and the right group is trying to move to the left. Let's denote sum in the left group as
+S
+l
+and sum in the right group as
+S
+r
+. If
+|
+S
+l
+|≤|
+S
+r
+|
+only the right group will move. Otherwise, only the left group will move.
+Note that robots from one group don't glue together. They may separate in the future. The division into groups is imaginary and is needed only to understand how robots will move during one second
+[t,t+1]
+.
+An illustration of the process happening during one second:
+Rectangles represent robots. Numbers inside rectangles correspond to instructions of robots. The final division into groups is marked with arcs. Below are the positions of the robots after moving. Only the left of the two rightmost groups moved. That's because these two groups tried to move towards each other, and were separated by exactly one unit segment.
+Look at the examples for a better understanding of the process.
+You need to answer several questions. What is the position of
+a
+i
+-th robot at the moment of time
+t
+i
+?
+Input
+The first line contains two integer numbers
+n
+and
+k
+ — the number of robots and the number of instructions in the program of one robot (
+1≤n≤100
+,
+1≤k≤50
+).
+The next line contains
+n
+integer numbers
+x
+i
+ — positions of robots at moment of time
+0
+(
+−
+10
+9
+≤
+x
+1
+<
+x
+2
+<⋯<
+x
+n
+<
+10
+9
+).
+The next
+n
+lines contain descriptions of robots' programs. The
+i
+-th of these lines contains
+k
+integer numbers
+f
+i,j
+(
+|
+f
+i,j
+|≤
+10
+6
+).
+The next line contains a single integer number
+q
+ — the number of questions you to answer (
+1≤q≤1000
+).
+The next
+q
+lines contain two integer number
+a
+i
+and
+t
+i
+each, meaning that you should find a position of
+a
+i
+-th robot at moment of time
+t
+i
+(
+1≤
+a
+i
+≤n
+,
+0≤
+t
+i
+≤
+10
+18
+).
+Output
+For every question output a single integer on the new line. Coordinate of the left border of unit segment occupied by the
+a
+i
+-th robot at the moment of time
+t
+i
+.
+Examples
+input
+Copy
+2 1
+0 4
+1
+-1
+8
+1 0
+2 0
+1 1
+2 1
+1 2
+2 2
+1 3
+2 3
+output
+Copy
+0
+4
+1
+3
+1
+2
+1
+2
+input
+Copy
+2 1
+0 4
+2
+-1
+8
+1 0
+2 0
+1 1
+2 1
+1 2
+2 2
+1 3
+2 3
+output
+Copy
+0
+4
+1
+3
+2
+3
+3
+4
+input
+Copy
+2 2
+0 1
+1 -1
+-1 1
+4
+1 0
+1 1
+1 2
+1 3
+output
+Copy
+0
+0
+-1
+0
+input
+Copy
+1 3
+0
+3 -2 1
+3
+1 5
+1 10
+1 15
+output
+Copy
+1
+4
+5
+input
+Copy
+4 3
+-8 -4 2 5
+-1 3 0
+1 -3 -4
+2 -5 2
+-1 -4 2
+5
+3 12
+4 18
+4 11
+1 6
+1 10
+output
+Copy
+6
+9
+6
+-8
+-9

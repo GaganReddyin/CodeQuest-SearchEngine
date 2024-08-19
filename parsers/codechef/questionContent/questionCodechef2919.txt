@@ -1,0 +1,100 @@
+Tower Counting
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Flappy Bird is on a screen with height
+H pixels (a 2D plane where the
+y-axis corresponds to the vertical direction). There are
+N vertical obstacles in the room (numbered
+1 through
+N); for each valid
+i, the coordinates of the endpoint of the
+i-th obstacle are
+(x
+i
+,a
+i
+). There are two types of obstacles:
+Type 0: A line segment between the points
+(x
+i
+,0) and
+(x
+i
+,a
+i
+), i.e. upwards from the floor.
+Type 1: A line segment between the points
+(x
+i
+,H) and
+(x
+i
+,a
+i
+), i.e. downwards from the ceiling.
+For each obstacle, you need to find the number of endpoints of other obstacles (not including itself) that are visible from its endpoint. Two endpoints are visible from each other if the line segment joining them does not intersect or touch any other obstacle. Note that each obstacle has exactly one endpoint.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+H and
+N.
+The following
+N lines describe the obstacles. For each valid
+i, the
+i-th of these lines contains three space-separated integers
+t
+i
+,
+x
+i
+and
+a
+i
+, where
+t
+i
+is the type of the
+i-th obstacle.
+Output
+For each test case, print a single line containing
+N space-separated integers. For each valid
+i, the
+i-th of these integers should be the number of endpoints visible from the
+i-th endpoint.
+Constraints
+1≤T≤200
+1≤H≤10
+9
+1≤N≤2,000
+t
+i
+∈{0,1} for each valid
+i
+1≤x
+i
+≤10
+9
+for each valid
+i
+1≤a
+i
+≤H−1 for each valid
+i
+no two obstacles touch or intersect
+the sum of
+N over all test cases does not exceed
+20,000
+Sample 1:
+Input
+Output
+1
+10 4
+0 2 5
+1 5 6
+1 8 8
+0 11 2
+2 3 2 3
+Explanation:
+Example case 1:

@@ -1,0 +1,111 @@
+F. Harry The Potter
+time limit per test9 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+To defeat Lord Voldemort, Harry needs to destroy all horcruxes first. The last horcrux is an array
+a
+of
+n
+integers, which also needs to be destroyed. The array is considered destroyed if all its elements are zeroes. To destroy the array, Harry can perform two types of operations:
+choose an index
+i
+(
+1≤i≤n
+), an integer
+x
+, and subtract
+x
+from
+a
+i
+.
+choose two indices
+i
+and
+j
+(
+1≤i,j≤n;i≠j
+), an integer
+x
+, and subtract
+x
+from
+a
+i
+and
+x+1
+from
+a
+j
+.
+Note that
+x
+does not have to be positive.
+Harry is in a hurry, please help him to find the minimum number of operations required to destroy the array and exterminate Lord Voldemort.
+Input
+The first line contains a single integer
+n
+ — the size of the array
+a
+(
+1≤n≤20
+).
+The following line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+ — array elements (
+−
+10
+15
+≤
+a
+i
+≤
+10
+15
+).
+Output
+Output a single integer — the minimum number of operations required to destroy the array
+a
+.
+Examples
+input
+Copy
+3
+1 10 100
+output
+Copy
+3
+input
+Copy
+3
+5 3 -2
+output
+Copy
+2
+input
+Copy
+1
+0
+output
+Copy
+0
+Note
+In the first example one can just apply the operation of the first kind three times.
+In the second example, one can apply the operation of the second kind two times: first, choose
+i=2,j=1,x=4
+, it transforms the array into
+(0,−1,−2)
+, and then choose
+i=3,j=2,x=−2
+to destroy the array.
+In the third example, there is nothing to be done, since the array is already destroyed.

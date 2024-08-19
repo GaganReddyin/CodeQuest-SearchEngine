@@ -1,0 +1,209 @@
+Separate Them All
+Problem
+In Chefland, there are
+N cities numbered from
+1 to
+N. The cities are connected using
+N−1 roads such that there exists a path between all pairs of cities. In other words, the cities and roads forma a tree-structure
+The roads of Chefland are not in good condition. Therefore, all the roads need to be destroyed. The cost of destroying a road between cities
+x and
+y is
+d
+x
+⋅d
+y
+, where
+d
+x
+and
+d
+y
+are the degrees of the cities
+x and
+y respectively.
+Note that, the degree of a city is the number of roads connected to it before each destroy operation.
+Chef wants to find the minimum cost to destroy all the roads. On calculating this cost once, he finds the process very interesting. Therefore, he does this for
+Q more independent queries.
+In each query, a road is removed and another road is added. Find the minimum cost to destroy all roads initially, and after each query. It is guaranteed that after each query, all the cities are still connected and form a tree-structure.
+Note: Since the queries are independent, the initial tree is retained after each query.
+Input Format
+The first line contains a single integer
+T , the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+Q.
+The next
+N−1 lines contain two integers each,
+u
+i
+and
+v
+i
+, denoting a road between cities
+u
+i
+and
+v
+i
+.
+The next
+Q lines contain four space separated integers,
+a
+i
+,
+b
+i
+,
+c
+i
+, and
+d
+i
+denoting that the road between the cities
+a
+i
+and
+b
+i
+is removed and the road between the cities
+c
+i
+and
+d
+i
+is added.
+Output Format
+For each test case, output
+Q+1 lines. Each line should contain a single integer.
+The first line contains the answer to the initial tree. The next
+Q lines contain the answer for the updated tree in each query.
+Constraints
+1≤T≤10
+4
+1≤N,Q≤10
+5
+1≤u
+i
+,v
+i
+≤N,u
+i
+
+=v
+i
+1≤a
+i
+,b
+i
+,c
+i
+,d
+i
+≤N,a
+i
+
+=b
+i
+,c
+i
+
+=d
+i
+It is guaranteed that there exists a road between cities
+a
+i
+and
+b
+i
+.
+It is guaranteed that the given edges form a tree initially as well as after every query.
+Subtasks
+Subtask 1 (30 points):
+Sum of
+N⋅Q over all test cases does not exceed
+2⋅10
+5
+.
+Subtask 2 (70 points):
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sum of
+Q over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+4 4
+1 2
+1 3
+1 4
+1 2 2 3
+1 3 2 3
+4 1 1 4
+2 1 4 2
+6
+5
+5
+6
+5
+Explanation:
+Test Case
+1: Initially, the tree looks like: The roads can be destroyed as:
+Remove edge between nodes
+1 and
+2. The degree of these nodes are
+3 and
+1 respectively. Hence, the cost is
+3⋅1=3. Now, the degree of node
+1 becomes
+2.
+Remove edge between nodes
+1 and
+3. The degree of these nodes are
+2 and
+1 respectively. Hence, the cost is
+2⋅1=2. Now, the degree of node
+1 becomes
+1.
+Remove edge between nodes
+1 and
+4. The degree of these nodes are
+1 and
+1 respectively. Hence, the cost is
+1⋅1=1.
+Thus, the total cost is
+3+2+1=6. It can be proven that this is the minimum cost required to remove all the edges.
+Query
+1: The edge between
+1 and
+2 is removed and the edge between
+2 and
+3 is added. The tree looks like: The minimum total cost to remove all the edges of this tree is
+5.
+Query
+2: The edge between
+1 and
+3 is removed and the edge between
+2 and
+3 is added. The tree looks like: The minimum total cost to remove all the edges of this tree is
+5.
+Query
+3: The edge between
+4 and
+1 is removed and the edge between
+1 and
+4 is added. Thus, the tree remains the same as the initial tree. The total cost of removing all the edges is
+6, as explained earlier.
+Query
+4: The edge between
+2 and
+1 is removed and the edge between
+4 and
+2 is added. The tree looks like: The minimum total cost to remove all the edges of this tree is
+5.

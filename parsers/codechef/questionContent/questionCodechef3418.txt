@@ -1,0 +1,74 @@
+Chef and Pairs
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree (connected, undirected, acyclic graph) consisting of
+N nodes. Based on this tree, you have to answer
+Q queries.
+Each query is of the form:
+K D V
+1
+ V
+2
+ ⋯ V
+K
+- output the number of pairs
+(i,j),
+1≤i<j≤K, such that the shortest path between nodes
+V
+i
+and
+V
+j
+in the tree has
+D edges.
+Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers,
+N and
+Q.
+N−1 lines follow. Each line consists of two integers
+u and
+v, indicating that there is an edge between nodes
+u and
+v in the tree.
+Q lines follow. Each line describes a query in the format given above.
+Output
+For each query, output the answer on a new line.
+Constraints
+1≤T≤5
+1≤N,Q≤10
+5
+1≤u,v,V
+i
+≤N
+0≤D≤10
+5
+The sum of
+K across all queries in a single test case is at most
+10
+5
+.
+Subtasks
+Subtask 1 (20 points): For each query,
+K≤10
+Subtask 2 (80 points): Original constraints
+Sample Input
+1
+5 2
+1 2
+1 3
+2 4
+4 5
+3 2 2 3 5
+2 4 1 3
+Sample Output
+2
+0
+Explanation
+In the first query, the pairs of nodes
+(2,3) and
+(2,5) have distance
+2.
+In the second query, there is no pair with distance
+4.

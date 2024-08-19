@@ -1,0 +1,139 @@
+F. Unstable String Sort
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Authors have come up with the string
+s
+consisting of
+n
+lowercase Latin letters.
+You are given two permutations of its indices (not necessary equal)
+p
+and
+q
+(both of length
+n
+). Recall that the permutation is the array of length
+n
+which contains each integer from
+1
+to
+n
+exactly once.
+For all
+i
+from
+1
+to
+n−1
+the following properties hold:
+s[
+p
+i
+]≤s[
+p
+i+1
+]
+and
+s[
+q
+i
+]≤s[
+q
+i+1
+]
+. It means that if you will write down all characters of
+s
+in order of permutation indices, the resulting string will be sorted in the non-decreasing order.
+Your task is to restore any such string
+s
+of length
+n
+consisting of at least
+k
+distinct lowercase Latin letters which suits the given permutations.
+If there are multiple answers, you can print any of them.
+Input
+The first line of the input contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+5
+,1≤k≤26
+) — the length of the string and the number of distinct characters required.
+The second line of the input contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+, all
+p
+i
+are distinct integers from
+1
+to
+n
+) — the permutation
+p
+.
+The third line of the input contains
+n
+integers
+q
+1
+,
+q
+2
+,…,
+q
+n
+(
+1≤
+q
+i
+≤n
+, all
+q
+i
+are distinct integers from
+1
+to
+n
+) — the permutation
+q
+.
+Output
+If it is impossible to find the suitable string, print "NO" on the first line.
+Otherwise print "YES" on the first line and string
+s
+on the second line. It should consist of
+n
+lowercase Latin letters, contain at least
+k
+distinct characters and suit the given permutations.
+If there are multiple answers, you can print any of them.
+Example
+input
+Copy
+3 2
+1 2 3
+1 3 2
+output
+Copy
+YES
+abb

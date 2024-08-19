@@ -1,0 +1,28 @@
+F. Erasing Substrings
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string s, initially consisting of n lowercase Latin letters. After that, you perform k operations with it, where . During i-th operation you must erase some substring of length exactly 2i - 1 from s.
+Print the lexicographically minimal string you may obtain after performing k such operations.
+Input
+The only line contains one string s consisting of n lowercase Latin letters (1 ≤ n ≤ 5000).
+Output
+Print the lexicographically minimal string you may obtain after performing k operations.
+Examples
+input
+Copy
+adcbca
+output
+Copy
+aba
+input
+Copy
+abacabadabacaba
+output
+Copy
+aabacaba
+Note
+Possible operations in examples:
+adcbca adcba aba;
+abacabadabacaba abcabadabacaba aabadabacaba aabacaba.

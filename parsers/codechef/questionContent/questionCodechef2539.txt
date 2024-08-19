@@ -1,0 +1,94 @@
+Kingdom Attack
+Problem
+Ratan Singh and Alauddin Khilji are blood-enemies of each other. Ratan Singh has a diverse and well planned kingdom. His kingdom has
+N provinces. Every province has a bidirectional road to every other province (except itself of course). But Alauddin has now attacked his kingdom. During his attack, he destroyed some of the roads connecting provinces.
+To fight back, Ratan Singh divided his sena(army) into two senas. Sena
+X and Sena
+Y. Sena
+X has the best warriors, while Sena
+Y doesn’t. According to his plan, each province should be protected by exactly one of the two senas(
+X or
+Y).
+As Sena
+X is very strong, Ratan Singh will place them in such a way that:
+No two adjacent provinces (provinces connected by a road) are guarded by Sena
+X.
+If a province
+P is guarded by Sena
+X, then all the provinces which are guarded by Sena
+Y needs to be adjacent to province
+P.
+There should exist at least one province having Sena
+X, and at least one province having Sena
+Y.
+This way, he can ensure the safety of his Kingdom.
+You are the only programmer that Khilji has. You have to help him calculate the number of possible ways in which Ratan Singh can achieve the aforementioned task!
+NOTE : Please use Fast I/O methods as the input can be large.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+First line of each test-case consists of two spaced integers,
+N and
+M, denoting the number of provinces in Ratan Singh's Kingdom, and the number of roads destroyed by Khilji respectively.
+Then,
+M lines follow:
+Each of these lines consists of two spaced integers,
+u
+v, denoting that the road connecting provinces
+u and
+v has been destroyed by Khilji.
+Output Format
+For each testcase, print the number of possible ways in which Ratan Singh can deploy his Senas, following the conditions mentioned in the statement.
+Constraints
+1≤T≤10
+5
+2≤N≤2⋅10
+5
+0≤M≤min(
+2
+N⋅(N−1)
+,3⋅10
+5
+)
+u
+
+=v.
+All the edges mentioned in the input are unique.
+The sum of
+N over all cases doesn't exceed
+2⋅10
+5
+The sum of
+M over all cases doesn't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+6 5
+1 6
+2 4
+2 5
+3 5
+4 5
+1
+Explanation:
+The only possible way to deploy the senas is, deploy the Sena
+X at provinces :
+[1,6] and the ena
+Y at provinces :
+[3,2,4,5]. For any of the provinces having Sena
+X, it can be seen that, every province of sena
+Y is adjacent to it. Province
+1 is adjacent to
+[3,2,4,5], the same follows for the province
+6.
+He cannot deploy sena
+X at
+[3,2,4,5] and
+Y at
+[1,6] because in the resulting graph, provinces
+3,2 as well as provinces
+3,4 are adjacent.

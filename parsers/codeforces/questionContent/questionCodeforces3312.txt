@@ -1,0 +1,160 @@
+E. Double Permutation Inc.
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Polycarp recently became an employee of the company "Double Permutation Inc." Now he is a fan of permutations and is looking for them everywhere!
+A permutation in this problem is a sequence of integers
+p
+1
+,
+p
+2
+,…,
+p
+k
+such that every integer from
+1
+to
+k
+occurs exactly once in it. For example, the following sequences are permutations of
+[3,1,4,2]
+,
+[1]
+and
+[6,1,2,3,5,4]
+. The following sequences are not permutations:
+[0,1]
+,
+[1,2,2]
+,
+[1,2,4]
+and
+[2,3]
+.
+In the lobby of the company's headquarter statistics on visits to the company's website for the last
+n
+days are published — the sequence
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Polycarp wants to color all the elements of this sequence in one of three colors (red, green or blue) so that:
+all red numbers, being written out of
+a
+1
+,
+a
+2
+,…,
+a
+n
+from left to right (that is, without changing their relative order), must form some permutation (let's call it
+P
+);
+all green numbers, being written out of
+a
+1
+,
+a
+2
+,…,
+a
+n
+from left to right (that is, without changing their relative order), must form the same permutation
+P
+;
+among blue numbers there should not be elements that are equal to some element of the permutation
+P
+.
+Help Polycarp to color all
+n
+numbers so that the total number of red and green elements is maximum.
+Input
+The first line contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of the sequence
+a
+. The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+).
+Output
+Print a string
+s
+of length
+n
+such that:
+s
+i
+='R', if the element
+a
+i
+must be colored in red;
+s
+i
+='G', if the element
+a
+i
+must be colored in green;
+s
+i
+='B', if the element
+a
+i
+must be colored in blue.
+The string
+s
+should maximize the total number of red and green elements when fulfilling the requirements from the main part of the problem statement. If there are several optimal answers, print any of them.
+Examples
+input
+Copy
+5
+1 2 3 2 1
+output
+Copy
+RBBBG
+input
+Copy
+3
+1 1 1
+output
+Copy
+BBB
+input
+Copy
+10
+3 3 2 2 5 4 1 5 4 1
+output
+Copy
+RGRGRRRGGG
+input
+Copy
+10
+3 9 3 1 2 1 2 4 4 4
+output
+Copy
+RBGRRGGBBB

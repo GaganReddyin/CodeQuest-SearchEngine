@@ -1,0 +1,94 @@
+Tree Upshot
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+You are given a tree with
+N nodes rooted at node
+1, and your task is to color each node of the tree either white or black. For each
+i (
+1≤i≤N), let
+w
+i
+be the number of white nodes that occurs in a simple path from the root node to
+i
+th
+node and
+b
+i
+be the number of black nodes that occurs in a simple path from the root node to
+i
+th
+node. The cost of a node
+i is defined as the absolute difference between
+w
+i
+and
+b
+i
+.
+The cost of the tree is defined as the summation of the cost of all the nodes in the tree. The value of the tree is defined as the absolute difference between the total number of white nodes and the total number of black nodes in the tree. You have to color the tree in such a way that the cost of the tree is minimized.
+Your task is to answer a single query
+Q, such that:
+If
+Q=1, Determine the maximum value the tree can have after minimizing the cost of the tree.
+If
+Q=2, Determine the minimum value the tree can have after minimizing the cost of the tree.
+Input Format
+The first line contains an integer
+T, denoting the number of test cases. The
+T test cases then follow:
+The first line of each test case contains two integers
+N and
+Q, denoting the number of nodes in the tree and the query to answer respectively.
+The next
+N−1 lines contain two space-separated integers
+u and
+v, denoting that there is an edge between the node
+u and the node
+v.
+Output Format
+For each test case, print a single line containing one integer - the answer to the query.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤Q≤2
+1≤u,v≤n,u
+
+=v
+∑N over all test cases does not exceed
+10
+5
+.
+It is guaranteed that the given nodes and edges form a tree.
+Subtasks
+Subtask #1 (20 points):
+Q=1
+Subtask #2 (80 points):
+Original constraints
+Sample 1:
+Input
+Output
+2
+5 1
+1 2
+1 3
+2 4
+2 5
+5 2
+1 2
+1 3
+2 4
+2 5
+3
+1
+Explanation:
+Test case 1: Color the node
+1 with black color and color the nodes
+2,3,4,5 with white color to get the minimum cost of the tree, that is
+3, and the maximum value of the tree, that is
+3.
+Test case 2: Color the nodes
+1,4 with black color and color the nodes
+2,3,5 with white color to get the minimum cost of the tree, that is
+3, and the minimum value of the tree, that is
+1.

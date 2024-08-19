@@ -1,0 +1,50 @@
+E. Ancient civilizations
+time limit per test0.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+On the surface of a newly discovered planet, which we model by a plane, explorers found remains of two different civilizations in various locations. They would like to learn more about those civilizations and to explore the area they need to build roads between some of locations. But as always, there are some restrictions:
+Every two locations of the same civilization are connected by a unique path of roads
+No two locations from different civilizations may have road between them (explorers don't want to accidentally mix civilizations they are currently exploring)
+Roads must be straight line segments
+Since intersections are expensive to build, they don't want any two roads to intersect (that is, only common point for any two roads may be at some of locations)
+Obviously all locations are different points in the plane, but explorers found out one more interesting information that may help you – no three locations lie on the same line!
+Help explorers and find a solution for their problem, or report it is impossible.
+Input
+In the first line, integer
+n
+(1≤n≤
+10
+3
+)
+- the number of locations discovered.
+In next
+n
+lines, three integers
+x,y,c
+(0≤x,y≤
+10
+4
+,c∈{0,1})
+- coordinates of the location and number of civilization it belongs to.
+Output
+In first line print number of roads that should be built.
+In the following lines print all pairs of locations (their
+0
+-based indices) that should be connected with a road.
+If it is not possible to build roads such that all restrictions are met, print "Impossible". You should not print the quotation marks.
+Example
+input
+Copy
+5
+0 0 1
+1 0 0
+0 1 0
+1 1 1
+3 2 0
+output
+Copy
+3
+1 4
+4 2
+3 0

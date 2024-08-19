@@ -1,0 +1,134 @@
+Luigi and Uniformity
+Problem
+Luigi has an array
+A of
+N positive integers. He wants to make all elements of the array equal.
+In one move, he can:
+Choose an index
+i
+(1≤i≤N) and divide the element
+A
+i
+by any one of its divisors.
+In other words, he can choose a positive integer
+X such that
+X∣A
+i
+and set
+A
+i
+:=
+X
+A
+i
+.
+Find the minimum number of moves required to make all the elements of the array equal.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains
+N, the size of array
+A.
+The second line of each test case contains
+N space-separated integers, the elements of array
+A.
+Output Format
+For each test case, output on a new line, the minimum number of moves required to make all elements of the array equal.
+Constraints
+1≤T≤1000
+1≤N≤3000
+1≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+4
+2
+11 22
+5
+38 38 38 38 38
+4
+4 4 16 8
+4
+11 13 17 19
+1
+0
+2
+4
+Explanation:
+Test case
+1: We can change
+22 to
+11 using an operation (divide by
+2). Thus, using one operation, we made all the elements equal.
+Test case
+2: All numbers are already same. Thus, we do not need to do any operations.
+Test case
+3: We make the following operations:
+Choose
+i=3 and
+X=4, such that
+4∣16. Thus,
+A
+3
+:=
+4
+16
+=4.
+Choose
+i=4 and
+X=2, such that
+2∣8. Thus,
+A
+4
+:=
+2
+8
+=4.
+Thus, using two operations, we made all the elements equal.
+Test case
+4: We make the following operations:
+Choose
+i=1 and
+X=11, such that
+11∣11. Thus,
+A
+1
+:=
+11
+11
+=1.
+Choose
+i=2 and
+X=13, such that
+13∣13. Thus,
+A
+2
+:=
+13
+13
+=1.
+Choose
+i=3 and
+X=17, such that
+17∣17. Thus,
+A
+3
+:=
+17
+17
+=1.
+Choose
+i=4 and
+X=19, such that
+19∣19. Thus,
+A
+4
+:=
+19
+19
+=1.
+Thus, using four operations, we made all the elements equal.

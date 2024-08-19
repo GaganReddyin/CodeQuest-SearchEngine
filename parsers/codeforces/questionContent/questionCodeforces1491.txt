@@ -1,0 +1,199 @@
+A. Sequence of Comparisons
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Once upon a time, Petya had an array of integers
+a
+of length
+n
+. But over time, the array itself was lost, and only
+n−1
+results of comparisons of neighboring array elements remained. In other words, for every
+i
+from
+1
+to
+n−1
+, Petya knows exactly one of these three facts:
+a
+i
+<
+a
+i+1
+;
+a
+i
+=
+a
+i+1
+;
+a
+i
+>
+a
+i+1
+.
+Petya wonders if it is possible to uniquely determine the result of comparing
+a
+1
+and
+a
+n
+.
+You have to help Petya determine the result of comparing
+a
+1
+and
+a
+n
+or report that the result cannot be determined unambiguously.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤500
+) — the number of test cases.
+The only line of the test case contains the string
+s
+(
+1≤|s|≤100
+), where
+s
+i
+is:
+<, if
+a
+i
+<
+a
+i+1
+;
+>, if
+a
+i
+>
+a
+i+1
+;
+=, if
+a
+i
+=
+a
+i+1
+.
+Output
+For each test case, print a single string equal to:
+<, if
+a
+1
+<
+a
+n
+;
+>, if
+a
+1
+>
+a
+n
+;
+=, if
+a
+1
+=
+a
+n
+;
+?, if it is impossible to uniquely determine the result of the comparison.
+Example
+input
+Copy
+4
+>>>
+<><=<
+=
+<<==
+output
+Copy
+>
+?
+=
+<
+Note
+Consider the test cases of the example:
+in the first test case, it's easy to see that
+a
+1
+>
+a
+4
+since
+a
+1
+>
+a
+2
+>
+a
+3
+>
+a
+4
+;
+in the second test case, both sequences
+[1,2,0,10,10,15]
+and
+[10,11,1,2,2,5]
+meet the constraints; in the first one,
+a
+1
+<
+a
+6
+, and in the second one,
+a
+1
+>
+a
+6
+, so it's impossible to compare
+a
+1
+and
+a
+6
+;
+in the third test case, we already know that
+a
+1
+=
+a
+2
+;
+in the fourth test case, it's easy to see that
+a
+3
+=
+a
+4
+=
+a
+5
+, and
+a
+1
+<
+a
+2
+<
+a
+3
+, so
+a
+1
+<
+a
+5
+.

@@ -1,0 +1,173 @@
+Dalgona Treat
+Problem
+"It doesn't matter how tough you are, you are not going to win on your own."
+N players advance to the 2nd round, the game is revealed to be "HoneyComb".
+The players have to construct an array
+A. Each and every player is given "Ppopgi" (Dalgona candy), and the
+ith player has to carve a number
+A
+i
+in their "Ppopgi".
+The players will qualify if the array
+A satisfies the following rules:
+The sum of the squares of all the numbers carved should be a perfect square. Formally,
+i=1
+∑
+n
+(A
+i
+)
+2
+=
+K
+2
+, where
+K is a natural number.
+The number of distinct values in the array should not exceed
+min(10,N).
+Gi-Hun wants everyone to qualify, so he asks you for help. Help him find an array
+A which satisfies these conditions.
+If there are multiple arrays that satisfy the conditions, you may find any of them.
+Note:
+N can be large enough that the array cannot be printed directly. Instead, describe the array in terms of its frequencies, i.e, print
+(value,frequency) pairs, where each pair suggests the number of times the value occurs in the array. If this is unclear, please look at the sample inputs and outputs.
+Input Format
+The first line of inputs contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N, the length of the array to be constructed.
+Output Format
+For each test case, print the array
+A you construct in the following format:
+The first line should contain a single integer
+K, the number of distinct values in the array
+A (
+1≤K≤min(10,N)).
+The next
+K lines hold the description of the array. The
+i
+th
+of these lines should contain two integers
+x
+i
+and
+y
+i
+, denoting that
+x
+i
+occurs exactly
+y
+i
+times in
+A.
+The pairs
+(x
+i
+,y
+i
+) should satisfy the following conditions:
+1≤x
+i
+≤10
+9
+and
+y
+i
+≥1 for every
+1≤i≤K
+The
+x
+i
+must be pairwise distinct, i.e,
+x
+i
+
+=x
+j
+if
+i
+
+=j
+The sum of
+y
+i
+must be
+N, i.e,
+∑
+i=1
+K
+y
+i
+=N
+Constraints
+1≤T≤100
+1≤N≤10
+9
+1≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+3
+1
+5
+6
+1
+1 1
+3
+2 2
+3 1
+4 2
+4
+2 2
+3 1
+4 2
+24 1
+Explanation:
+Test Case 2:
+2 occurs
+2 times,
+3 occurs once, and
+4 occurs
+2 times in
+A. The sum of squares is thus
+2
+2
++2
+2
++3
+2
++4
+2
++4
+2
+=49, which is
+7
+2
+.
+Test Case 3:
+2 occurs twice,
+3 occurs once,
+4 occurs twice, and
+24 occurs once in
+A. The sum of squares is
+2
+2
++2
+2
++3
+2
++4
+2
++4
+2
++24
+2
+=625, which is
+25
+2
+.

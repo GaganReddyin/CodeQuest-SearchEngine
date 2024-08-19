@@ -1,0 +1,143 @@
+F. Willy-nilly, Crack, Into Release!
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You have long dreamed of working in a large IT company and finally got a job there. You have studied all existing modern technologies for a long time and are ready to apply all your knowledge in practice. But then you sit down at your desk and see a sheet of paper with the company's motto printed in large letters: abcdabcdabcdabcd....
+The company's motto contains four main principles— a (Willi), b (Nilli), c (Crack), d (Release). Therefore, you consider strings of length
+n
+consisting of these four Latin letters. Unordered pairs of letters "ab", "bc", "cd", and "da" in this motto are adjacent, so we will call such pairs of symbols good. So, if you are given a string
+s
+of length
+n
+, and it is known that the unordered pair of symbols
+{x,y}
+is good, then you can perform one of the following operations on the string:
+if
+s
+n
+=x
+, then you are allowed to replace this symbol with
+y
+,
+if there exists
+1≤i<n
+such that
+s
+i
+=x
+and
+s
+i+1
+=…=
+s
+n
+=y
+, then you are allowed to replace the
+i
+-th symbol of the string with
+y
+, and all subsequent symbols with
+x
+.
+For example, the string bacdd can be replaced with one of the strings bacda, bacdc, or badcc, and the string aac can be replaced with aab or aad.
+A non-empty sequence of operations for the string
+s
+will be called correct if the following two conditions are met:
+after performing all operations, the string becomes
+s
+again,
+no string, except for
+s
+, will occur more than once during the operations. At the same time, the string
+s
+can occur exactly twice - before the start of the operations and after performing all operations.
+Now we are ready to move on to the problem statement! You have a set of strings that is initially empty. Then, each of
+q
+queries adds another string
+t
+i
+to the set, or removes the string
+t
+i
+from the set. After each query, you need to output the minimum and maximum size of a correct sequence of operations in which each word occurs at least once. The choice of the initial string
+s
+is up to you.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤20
+,
+1≤q≤100000
+) — the length of the strings under consideration and the number of queries to modify the set of strings.
+Each of the next
+q
+lines contains a string
+t
+i
+(
+|
+t
+i
+|=n
+). All strings consist of characters "a", "b", "c" and "d". If the string
+t
+i
+was not in the set before the query, it is added to the set, otherwise it is removed from the set.
+Output
+For each of the
+q
+queries, output two integers: the minimum and maximum size of a correct sequence of operations in which each word from the set appears at least once.
+If there is no sequence of operations that satisfies the condition of the problem, output a single number
+−1
+.
+Examples
+input
+Copy
+2 4
+aa
+ac
+dd
+ac
+output
+Copy
+2 12
+4 4
+-1
+12 12
+input
+Copy
+3 2
+acc
+bdd
+output
+Copy
+2 44
+28 44
+Note
+Let's consider the first test example.
+After the first query, the set of important words is equal to
+{
+aa
+}
+, the minimum sequence of actions has the following form: aa, ab, aa. The maximum sequence of actions that fits is aa, ab, ba, bb, bc, cb, cc, cd, dc, dd, da, ad, aa.
+After the second query, the set of important words is equal to
+{
+aa, ac
+}
+. The minimum and maximum sequences of actions are: aa, ab, ac, ad, aa.
+After the third query, the set of important words is equal to
+{
+aa, ac, dd
+}
+. There is no sequence of actions that fits the condition, so
+−1
+should be outputted.
+After the fourth query, the set of important words is equal to
+{
+aa, dd
+}
+. The minimum and maximum sequences of actions are as follows: aa, ab, ba, bb, bc, cb, cc, cd, dc, dd, da, ad, aa.

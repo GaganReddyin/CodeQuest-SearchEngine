@@ -1,0 +1,113 @@
+C. Music Festival
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+The boy Vitya loves to listen to music very much. He knows that
+n
+albums are due to be released this Friday,
+i
+-th of which contains
+k
+i
+tracks. Of course, Vitya has already listened to all the tracks, and knows that in the
+i
+-th album, the coolness of the
+j
+-th track is equal to
+a
+i,j
+.
+Vitya has a friend Masha, whom he really wants to invite to the festival, where his favorite bands perform. However, in order for a friend to agree, she must first evaluate the released novelties. Vitya knows that if Masha listens to a track that was cooler than all the previous ones, she will get 1 unit of impression. Unfortunately, albums can only be listened to in their entirety, without changing the songs in them in places.
+Help Vitya find such an order of albums so that Masha's impression turns out to be as much as possible, and she definitely went to the festival with him.
+Input
+Each test consists of multiple test cases. The first line contains a single integer t (
+1≤t≤200000
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤200000
+) — number of albums.
+The album descriptions follow. Each album description consists of two lines:
+The first line contains a single integer
+k
+i
+(
+1≤
+k
+i
+≤200000
+) — the number of tracks in the
+i
+th album.
+The following line contains
+k
+i
+integers
+a
+i,1
+, 
+a
+i,2
+, 
+a
+i,3
+, …, 
+a
+i,
+k
+i
+(
+1≤
+a
+i,j
+≤200000
+) — the coolness of the tracks in the
+i
+album.
+Denote for
+∑
+k
+i
+the sum of all
+k
+i
+. It is guaranteed that
+∑
+k
+i
+≤200000
+.
+Output
+For each test case print the singular number  — the maximum impression that Masha can get.
+Example
+input
+Copy
+2
+4
+5
+4 9 4 6 8
+1
+7
+2
+8 6
+1
+1
+4
+2
+3 4
+2
+1 8
+2
+2 8
+2
+7 9
+output
+Copy
+4
+4
+Note
+In the first test example, the optimal order is listening to the 4th, 2nd, 3rd and 1st albums.
+In this case, Masha will listen to the tracks in the following order: 1; 7; 8, 6; 4, 9, 4, 6, 8 and will receive 4 units of impression.
+In the second test example, you must first listen to the 1st, then the 4th, and in any order the 2nd and 3rd. In this case, Masha will get the maximum impression, and for every song in the 1st and 4th albums and nothing for the 2nd and 3rd.

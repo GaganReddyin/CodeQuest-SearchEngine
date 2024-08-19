@@ -1,0 +1,75 @@
+Minimum Dual Area
+Problem
+Read problem statements in Vietnamese,
+Bengali, Mandarin Chinese, and Russian as well.
+Given
+N points in a
+2D space, find the minimum sum of areas of rectangles required to cover all the points given that we can use at most
+2 non-overlapping rectangles whose sides can touch. The rectangles must be axis-aligned, meaning the sides are vertical and horizontal.
+###Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+Each test case contains
+N+1 lines of input.
+The first line contains a single integer
+N, the number of points.
+The next
+N lines each contains two integers
+x
+i
+,
+y
+i
+, the coordinates of the
+i-th point.
+Note: Points need not be distinct.
+###Output For each test case, output in a single line the answer to the problem.
+###Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+0≤x
+i
+,y
+i
+≤10
+9
+The sum of
+N over all test cases is at most
+10
+5
+.
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+3
+1
+100 100
+4
+1 100
+100 100
+100 1
+1 1
+5
+1 100
+100 100
+100 1
+1 1
+50 50
+0
+0
+4851
+Explanation:
+Case 1: Since there is only one point, the minimum area of a rectangle to cover this point is
+0.
+Case 2: We can have rectangles as
+2 opposite sides of the square. Since the width of the rectangles is
+0, the total area is also
+0.
+Case 3: The optimal solution is with the rectangles having endpoints
+{(1,1),(100,1),(1,50),(100,50)} and
+{(1,100),(1,100),(100,100),(100,100)}. Therefore the total area is
+49⋅99+0⋅99=4851

@@ -1,0 +1,277 @@
+F. Lunar New Year and a Recursive Sequence
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Lunar New Year is approaching, and Bob received a gift from his friend recently — a recursive sequence! He loves this sequence very much and wants to play with it.
+Let
+f
+1
+,
+f
+2
+,…,
+f
+i
+,…
+be an infinite sequence of positive integers. Bob knows that for
+i>k
+,
+f
+i
+can be obtained by the following recursive equation:
+f
+i
+=(
+f
+b
+1
+i−1
+⋅
+f
+b
+2
+i−2
+⋅⋯⋅
+f
+b
+k
+i−k
+)modp,
+b
+b
+b
+which in short is
+f
+i
+=(
+∏
+j=1
+k
+f
+b
+j
+i−j
+)modp,
+k
+b
+where
+p=998244353
+(a widely-used prime),
+b
+1
+,
+b
+2
+,…,
+b
+k
+are known integer constants, and
+xmody
+denotes the remainder of
+x
+divided by
+y
+.
+Bob lost the values of
+f
+1
+,
+f
+2
+,…,
+f
+k
+, which is extremely troublesome – these are the basis of the sequence! Luckily, Bob remembers the first
+k−1
+elements of the sequence:
+f
+1
+=
+f
+2
+=…=
+f
+k−1
+=1
+and the
+n
+-th element:
+f
+n
+=m
+. Please find any possible value of
+f
+k
+. If no solution exists, just tell Bob that it is impossible to recover his favorite sequence, regardless of Bob's sadness.
+Input
+The first line contains a positive integer
+k
+(
+1≤k≤100
+), denoting the length of the sequence
+b
+1
+,
+b
+2
+,…,
+b
+k
+.
+The second line contains
+k
+positive integers
+b
+1
+,
+b
+2
+,…,
+b
+k
+(
+1≤
+b
+i
+<p
+).
+The third line contains two positive integers
+n
+and
+m
+(
+k<n≤
+10
+9
+,
+1≤m<p
+), which implies
+f
+n
+=m
+.
+Output
+Output a possible value of
+f
+k
+, where
+f
+k
+is a positive integer satisfying
+1≤
+f
+k
+<p
+. If there are multiple answers, print any of them. If no such
+f
+k
+makes
+f
+n
+=m
+, output
+−1
+instead.
+It is easy to show that if there are some possible values of
+f
+k
+, there must be at least one satisfying
+1≤
+f
+k
+<p
+.
+Examples
+input
+Copy
+3
+2 3 5
+4 16
+output
+Copy
+4
+input
+Copy
+5
+4 7 1 5 6
+7 14187219
+output
+Copy
+6
+input
+Copy
+8
+2 3 5 6 1 7 9 10
+23333 1
+output
+Copy
+1
+input
+Copy
+1
+2
+88888 66666
+output
+Copy
+-1
+input
+Copy
+3
+998244352 998244352 998244352
+4 2
+output
+Copy
+-1
+input
+Copy
+10
+283 463 213 777 346 201 463 283 102 999
+2333333 6263423
+output
+Copy
+382480067
+Note
+In the first sample, we have
+f
+4
+=
+f
+2
+3
+⋅
+f
+3
+2
+⋅
+f
+5
+1
+. Therefore, applying
+f
+3
+=4
+, we have
+f
+4
+=16
+. Note that there can be multiple answers.
+In the third sample, applying
+f
+7
+=1
+makes
+f
+23333
+=1
+.
+In the fourth sample, no such
+f
+1
+makes
+f
+88888
+=66666
+. Therefore, we output
+−1
+instead.

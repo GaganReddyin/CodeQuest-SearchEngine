@@ -1,0 +1,1 @@
+G3. Palindrome checker oracle

@@ -1,0 +1,64 @@
+Useful Number
+Problem
+###Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+You are given an integer sequence
+A
+1
+,A
+2
+,…,A
+N
+. Let's define the useful number of a subsequence of
+A as the number of distinct primes
+p such that
+p divides each member of the subsequence, multiplied by the length of the subsequence. Find the maximum of useful numbers of all subsequences of
+A.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-seperated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing one integer — the maximum useful number.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤A
+i
+≤10
+5
+for each valid
+i
+Subtasks
+Subtask #1 (30 points):
+1≤N≤15
+1≤A
+i
+≤100 for each valid
+i
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+5
+2 2 4 17 8
+4
+Explanation:
+Example case 1: The subsequence
+[2,2,4,8] has the maximum useful number. The number of distinct primes that divide each member of the subsequence is
+1 (only the prime
+2) and the length of the subsequence is
+4, so the useful number of this subsequence is
+1⋅4=4.

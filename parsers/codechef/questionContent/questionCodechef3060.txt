@@ -1,0 +1,109 @@
+Defeating Beerus
+Problem
+Kakarot and Vegeta are both training their sons Goten and Trunks as only they can defeat Beerus. To train them, Kakarot lays out an undirected graph where each node is connected to every other node (even to itself). Each node also has a weight, which is hidden. The weight on node i is
+node
+i
+.
+For Goten, the time taken to jump from one node to another is
+node
+1
+OR
+node
+2
+(OR is the bitwise OR operator) and for Trunks it's
+node
+1
+AND
+node
+2
+(AND is the bitwise AND operator). Goten and Trunks figure out that they can fuse to become Gotenks and become really powerful.
+But for Gotenks the time between each node is the sum of the time taken by Goten and Trunks between each node. To test the mental ability of Gotenks, Kakarot asks him a question. He gives them two separate arrays. One for Goten(Go) and one for Trunks(Tr). Each array contains, the total time that person takes to go from that node to each particular node directly. For example ith index of the array Go contains,
+Go
+i
+= (
+node
+i
+OR
+node
+1
+) + (
+node
+i
+OR
+node
+2
+) + (
+node
+i
+OR
+node
+3
+) + ... + (
+node
+i
+OR
+node
+n
+). And the ith index of the array Tr contains,
+Tr
+i
+= (
+node
+i
+AND
+node
+1
+) + (
+node
+i
+AND
+node
+2
+) + (
+node
+i
+AND
+node
+3
+) + ... + (
+node
+i
+AND
+node
+n
+).
+After giving Gotenks these two arrays he asks him to remake that graph based on the times taken for Gotenks to travel between the nodes. That is, in the new graph, the weight of an edge (i, j) will be (
+node
+i
+OR
+node
+j
+) + (
+node
+i
+AND
+node
+j
+). You need to find the Maximum Spanning Tree of the graph. To pass Vegeta and Kakarot's mental ability test Gotenks must tell them the total weight of this tree.
+Help Gotenks to pass this test so that Beerus can be defeated.
+###Input:
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains a single integer, N denoting the size of the arrays.
+The second line of each test case contains N integers denoting elements of the array Go separated by single spaces.
+The third line of each test case contains N integers denoting elements of the array Tr separated by single spaces.
+###Output: For each test case output in a single line, the total weight of the maximum spanning tree.
+###Constraints
+1≤T≤2
+2≤N≤10
+5
+1≤Go
+i
+≤10
+9
+1≤Tr
+i
+≤10
+9
+###Sample Input: 1 2 4 5
+5 6
+###Sample Output: 5

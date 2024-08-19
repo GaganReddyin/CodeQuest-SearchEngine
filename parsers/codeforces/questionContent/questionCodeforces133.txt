@@ -1,0 +1,162 @@
+F. Bouncy Ball
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a room that can be represented by a
+n×m
+grid. There is a ball at position
+(
+i
+1
+,
+j
+1
+)
+(the intersection of row
+i
+1
+and column
+j
+1
+), and it starts going diagonally in one of the four directions:
+The ball is going down and right, denoted by
+DR
+; it means that after a step, the ball's location goes from
+(i,j)
+to
+(i+1,j+1)
+.
+The ball is going down and left, denoted by
+DL
+; it means that after a step, the ball's location goes from
+(i,j)
+to
+(i+1,j−1)
+.
+The ball is going up and right, denoted by
+UR
+; it means that after a step, the ball's location goes from
+(i,j)
+to
+(i−1,j+1)
+.
+The ball is going up and left, denoted by
+UL
+; it means that after a step, the ball's location goes from
+(i,j)
+to
+(i−1,j−1)
+.
+After each step, the ball maintains its direction unless it hits a wall (that is, the direction takes it out of the room's bounds in the next step). In this case, the ball's direction gets flipped along the axis of the wall; if the ball hits a corner, both directions get flipped. Any instance of this is called a bounce. The ball never stops moving.
+In the above example, the ball starts at
+(1,7)
+and goes
+DL
+until it reaches the bottom wall, then it bounces and continues in the direction
+UL
+. After reaching the left wall, the ball bounces and continues to go in the direction
+UR
+. When the ball reaches the upper wall, it bounces and continues in the direction
+DR
+. After reaching the bottom-right corner, it bounces once and continues in direction
+UL
+, and so on.
+Your task is to find how many bounces the ball will go through until it reaches cell
+(
+i
+2
+,
+j
+2
+)
+in the room, or report that it never reaches cell
+(
+i
+2
+,
+j
+2
+)
+by printing
+−1
+.
+Note that the ball first goes in a cell and only after that bounces if it needs to.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains six integers and a string
+n,m,
+i
+1
+,
+j
+1
+,
+i
+2
+,
+j
+2
+,d
+(
+2≤n,m≤25000
+;
+1≤
+i
+1
+,
+i
+2
+≤n
+;
+1≤
+j
+1
+,
+j
+2
+≤m
+;
+d∈{DR,DL,UR,UL}
+) — the dimensions of the grid, the starting coordinates of the ball, the coordinates of the final cell and the starting direction of the ball.
+It is guaranteed that the sum of
+n⋅m
+over all test cases does not exceed
+5⋅
+10
+4
+.
+Output
+For each test case, output a single integer — the number of bounces the ball does until it reaches cell
+(
+i
+2
+,
+j
+2
+)
+for the first time, or
+−1
+if the ball never reaches the final cell.
+Example
+input
+Copy
+6
+5 7 1 7 2 4 DL
+5 7 1 7 3 2 DL
+3 3 1 3 2 2 UR
+2 4 2 1 2 2 DR
+4 3 1 1 1 3 UL
+6 4 1 2 3 4 DR
+output
+Copy
+3
+-1
+1
+-1
+4
+0

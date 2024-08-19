@@ -1,0 +1,113 @@
+B. Blue and Red of Our Faculty!
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It's our faculty's 34th anniversary! To celebrate this great event, the Faculty of Computer Science, University of Indonesia (Fasilkom), held CPC - Coloring Pavements Competition. The gist of CPC is two players color the predetermined routes of Fasilkom in Blue and Red. There are
+N
+Checkpoints and
+M
+undirected predetermined routes. Routes
+i
+connects checkpoint
+U
+i
+and
+V
+i
+, for
+(1≤i≤M)
+. It is guaranteed that any pair of checkpoints are connected by using one or more routes.
+The rules of CPC is as follows:
+Two players play in each round. One player plays as blue, the other plays as red. For simplicity, let's call these players
+Blue
+and
+Red
+.
+Blue
+will color every route in he walks on blue,
+Red
+will color the route he walks on red. Both players start at checkpoint number
+1
+. Initially, all routes are gray.
+Each phase, from their current checkpoint,
+Blue
+and
+Red
+select a different gray route and moves to the checkpoint on the other end of the route simultaneously.
+The game ends when
+Blue
+or
+Red
+can no longer move. That is, there is no two distinct gray routes they can choose to continue moving.
+Chaneka is interested in participating. However, she does not want to waste much energy. So, She is only interested in the number of final configurations of the routes after each round. Turns out, counting this is also exhausting, so Chaneka asks you to figure this out!
+Two final configurations are considered different if there is a route
+U
+in a different color in the two configurations.
+Input
+The first line contains two integers
+N
+and
+M
+.
+N
+(2≤N≤2⋅
+10
+3
+)
+denotes the number of checkpoints,
+M
+(1≤M≤2⋅N)
+denotes the number of routes. It is guaranteed that every checkpoint except checkpoint
+1
+has exactly two routes connecting it.
+The next
+M
+lines each contains two integers
+U
+i
+and
+V
+i
+(1≤
+U
+i
+,
+V
+i
+≤N,
+U
+i
+≠
+V
+i
+)
+, which denotes the checkpoint that route
+i
+connects.
+It is guaranteed that for every pair of checkpoints, there exists a path connecting them directly or indirectly using the routes.
+Output
+Output a single integer which denotes the number of final configurations after each round of CPC modulo
+10
+9
++7
+Example
+input
+Copy
+5 6
+1 2
+2 3
+3 4
+4 1
+1 5
+5 1
+output
+Copy
+8
+Note
+Every possible final configuration for the example is listed below:
+The blue-colored numbers give the series of moves
+Blue
+took, and the red-colored numbers give the series of moves
+Red
+took.

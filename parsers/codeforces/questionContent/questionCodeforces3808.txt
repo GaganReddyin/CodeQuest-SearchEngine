@@ -1,0 +1,24 @@
+A1. Generate state |00⟩ + |01⟩ + |10⟩
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two qubits in state
+|00⟩
+. Your task is to create the following state on them:
+1
+3
+–
+√
+(|00⟩+|01⟩+|10⟩)
+1
+You have to implement an operation which takes an array of 2 qubits as an input and has no output. The "output" of your solution is the state in which it left the input qubits.
+Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Solve (qs : Qubit[]) : Unit {
+        // your code here
+    }
+}

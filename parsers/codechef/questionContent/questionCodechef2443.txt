@@ -1,0 +1,41 @@
+Sum Of Binomial Coefficent 
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+As we all know, Binomial Coefficient C(n, r) is defined by the following formula.
+
+Also define S(n) as follows.
+
+
+
+Note that n will be provided to you as an input parameter.
+Since S(n) can be very large, please print it modulo (109 + 7).
+Input
+The first line contains a single integer T representing the number of test cases.
+Each of the next T lines contains an integer n.
+Output
+For each test case, output a single line containing the value of S(n) modulo (109 + 7).
+Constraints
+10 points:
+1 ≤ T ≤ 300
+1 ≤ n ≤ 300
+30 points:
+1 ≤ T ≤ 105
+1 ≤ n ≤ 5000
+60 points:
+1 ≤ T ≤ 105
+1 ≤ n ≤ 1018
+Example
+Input:
+5
+1
+2
+3
+4
+5
+
+Output:
+2
+4
+2
+4
+8

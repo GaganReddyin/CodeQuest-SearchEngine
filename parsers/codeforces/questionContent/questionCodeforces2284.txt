@@ -1,0 +1,171 @@
+E. Expected Damage
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are playing a computer game. In this game, you have to fight
+n
+monsters.
+To defend from monsters, you need a shield. Each shield has two parameters: its current durability
+a
+and its defence rating
+b
+. Each monster has only one parameter: its strength
+d
+.
+When you fight a monster with strength
+d
+while having a shield with current durability
+a
+and defence
+b
+, there are three possible outcomes:
+if
+a=0
+, then you receive
+d
+damage;
+if
+a>0
+and
+d≥b
+, you receive no damage, but the current durability of the shield decreases by
+1
+;
+if
+a>0
+and
+d<b
+, nothing happens.
+The
+i
+-th monster has strength
+d
+i
+, and you will fight each of the monsters exactly once, in some random order (all
+n!
+orders are equiprobable). You have to consider
+m
+different shields, the
+i
+-th shield has initial durability
+a
+i
+and defence rating
+b
+i
+. For each shield, calculate the expected amount of damage you will receive if you take this shield and fight the given
+n
+monsters in random order.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+) — the number of monsters and the number of shields, respectively.
+The second line contains
+n
+integers
+d
+1
+,
+d
+2
+, ...,
+d
+n
+(
+1≤
+d
+i
+≤
+10
+9
+), where
+d
+i
+is the strength of the
+i
+-th monster.
+Then
+m
+lines follow, the
+i
+-th of them contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+≤n
+;
+1≤
+b
+i
+≤
+10
+9
+) — the description of the
+i
+-th shield.
+Output
+Print
+m
+integers, where the
+i
+-th integer represents the expected damage you receive with the
+i
+-th shield as follows: it can be proven that, for each shield, the expected damage is an irreducible fraction
+x
+y
+, where
+y
+is coprime with
+998244353
+. You have to print the value of
+x⋅
+y
+−1
+mod998244353
+, where
+y
+−1
+is the inverse element for
+y
+(
+y⋅
+y
+−1
+mod998244353=1
+).
+Examples
+input
+Copy
+3 2
+1 3 1
+2 1
+1 2
+output
+Copy
+665496237
+1
+input
+Copy
+3 3
+4 2 6
+3 1
+1 2
+2 3
+output
+Copy
+0
+8
+665496236

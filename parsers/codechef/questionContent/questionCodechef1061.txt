@@ -1,0 +1,92 @@
+Mean Maximization
+Problem
+JJ loves playing with averages. He has an array
+A of length
+N. He wants to divide the array
+A into two non-empty subsets
+P and
+Q such that the value of
+mean(P)+mean(Q) is as large as possible. (Note that each
+A
+i
+must belong to either subset
+P or subset
+Q).
+Help him find this maximum value of
+mean(P)+mean(Q).
+As a reminder, the mean of a subset
+X of size
+M is defined as:
+mean(X)=
+M
+∑
+i=1
+M
+X
+i
+.
+For example,
+mean([3,1,4,5])=
+4
+3+1+4+5
+=3.25.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - the size of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+Output the largest value of
+mean(P)+mean(Q).
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Formally, let your answer be
+a, and the jury's answer be
+b. Your answer is accepted if and only if
+max(1,∣b∣)
+∣a−b∣
+≤10
+−6
+.
+Constraints
+1≤T≤100
+2≤N≤1000
+1≤A
+i
+≤10
+6
+Sample 1:
+Input
+Output
+2
+2
+4 5
+5
+2 2 2 2 2
+9.000000
+4.000000
+Explanation:
+Test case-1: We can divide the two elements into two non-empty subsets
+P and
+Q as follows:
+P=[4],
+Q=[5].
+Therefore,
+mean(P)+mean(Q)=9.
+Test case-2: In whatever way we divide the elements of the array, mean of both the subsets will always be
+2.
+Therefore,
+mean(P)+mean(Q)=4.

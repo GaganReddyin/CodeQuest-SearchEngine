@@ -1,0 +1,61 @@
+Maximize Difference
+Problem
+Chef has two numbers
+N and
+M. He calls a pair of numbers
+(A,B) good if it satisfies the following conditions:
+1≤A,B≤M
+gcd(A,B)≥N
+Chef wants to find a good pair
+(A,B) such that the value of
+∣A−B∣ is maximized. Can you help Chef? (Here
+∣X∣ represents the absolute value of
+X).
+If there are multiple good pairs for which the value of
+∣A−B∣ is maximized, you can print any of them. It can be proved that under the given constraints, at least one good pair always exists.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+M — the parameters mentioned in the statment.
+Output Format
+For each test case, output two integers
+A and
+B such that
+(A,B) is a good pair and the value of
+∣A−B∣ is maximized.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+N≤M≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+5 6
+2 8
+10 89
+6 6
+8 2
+11 88
+Explanation:
+Test case
+1:
+(5,5) and
+(6,6) are the only good pairs and for both of them the value of
+∣A−B∣ is
+0.
+Test case
+2:
+(6,8),(8,6),(2,8),(8,2),(4,6),(6,4),(2,6),(6,2),(2,4),(4,2) and
+(2,2) are the good pairs out of which
+∣A−B∣ is maximum for
+(2,8) and
+(8,2).

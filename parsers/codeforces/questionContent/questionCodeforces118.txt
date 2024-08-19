@@ -1,0 +1,138 @@
+F. Traveling in Berland
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cities in Berland, arranged in a circle and numbered from
+1
+to
+n
+in clockwise order.
+You want to travel all over Berland, starting in some city, visiting all the other cities and returning to the starting city. Unfortunately, you can only drive along the Berland Ring Highway, which connects all
+n
+cities. The road was designed by a very titled and respectable minister, so it is one-directional — it can only be traversed clockwise, only from the city
+i
+to the city
+(imodn)+1
+(i.e. from
+1
+to
+2
+, from
+2
+in
+3
+, ..., from
+n
+to
+1
+).
+The fuel tank of your car holds up to
+k
+liters of fuel. To drive from the
+i
+-th city to the next one,
+a
+i
+liters of fuel are needed (and are consumed in the process).
+Every city has a fuel station; a liter of fuel in the
+i
+-th city costs
+b
+i
+burles. Refueling between cities is not allowed; if fuel has run out between cities, then your journey is considered incomplete.
+For each city, calculate the minimum cost of the journey if you start and finish it in that city.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+k
+(
+3≤n≤2⋅
+10
+5
+;
+1≤k≤
+10
+9
+) — the number of cities and the volume of fuel tank, respectively.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤k
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤2
+).
+The sum of
+n
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print
+n
+integers, where the
+i
+-th of them is equal to the minimum cost of the journey if you start and finish in the
+i
+-th city.
+Example
+input
+Copy
+4
+3 5
+3 4 4
+1 2 2
+5 7
+1 3 2 5 1
+2 1 1 1 2
+4 3
+1 2 1 3
+2 2 2 2
+3 2
+2 2 2
+1 2 1
+output
+Copy
+17 19 17 
+13 12 12 12 14 
+14 14 14 14 
+8 8 8 

@@ -1,0 +1,159 @@
+D. Ezzat and Grid
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Moamen was drawing a grid of
+n
+rows and
+10
+9
+columns containing only digits
+0
+and
+1
+. Ezzat noticed what Moamen was drawing and became interested in the minimum number of rows one needs to remove to make the grid beautiful.
+A grid is beautiful if and only if for every two consecutive rows there is at least one column containing
+1
+in these two rows.
+Ezzat will give you the number of rows
+n
+, and
+m
+segments of the grid that contain digits
+1
+. Every segment is represented with three integers
+i
+,
+l
+, and
+r
+, where
+i
+represents the row number, and
+l
+and
+r
+represent the first and the last column of the segment in that row.
+For example, if
+n=3
+,
+m=6
+, and the segments are
+(1,1,1)
+,
+(1,7,8)
+,
+(2,7,7)
+,
+(2,15,15)
+,
+(3,1,1)
+,
+(3,15,15)
+, then the grid is:
+Your task is to tell Ezzat the minimum number of rows that should be removed to make the grid beautiful.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤3⋅
+10
+5
+).
+Each of the next
+m
+lines contains three integers
+i
+,
+l
+, and
+r
+(
+1≤i≤n
+,
+1≤l≤r≤
+10
+9
+). Each of these
+m
+lines means that row number
+i
+contains digits
+1
+in columns from
+l
+to
+r
+, inclusive.
+Note that the segments may overlap.
+Output
+In the first line, print a single integer
+k
+ — the minimum number of rows that should be removed.
+In the second line print
+k
+distinct integers
+r
+1
+,
+r
+2
+,…,
+r
+k
+, representing the rows that should be removed (
+1≤
+r
+i
+≤n
+), in any order.
+If there are multiple answers, print any.
+Examples
+input
+Copy
+3 6
+1 1 1
+1 7 8
+2 7 7
+2 15 15
+3 1 1
+3 15 15
+output
+Copy
+0
+input
+Copy
+5 4
+1 2 3
+2 4 6
+3 3 5
+5 1 1
+output
+Copy
+3
+2 4 5
+Note
+In the first test case, the grid is the one explained in the problem statement. The grid has the following properties:
+The
+1
+-st row and the
+2
+-nd row have a common
+1
+in the column
+7
+.
+The
+2
+-nd row and the
+3
+-rd row have a common
+1
+in the column
+15
+.
+As a result, this grid is beautiful and we do not need to remove any row.
+In the second test case, the given grid is as follows:

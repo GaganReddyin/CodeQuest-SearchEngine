@@ -1,0 +1,116 @@
+Palindrome by Splitting
+Problem
+JJ has an array
+A initially of length
+N. He can perform the following operation on
+A:
+1) Pick any index
+i
+(1≤i≤∣A∣) such that
+A
+i
+>1
+2) Select any two integers
+X and
+Y such that
+X+Y=A
+i
+and
+X,Y≥1
+3) Replace
+A
+i
+with
+X and
+Y
+Note that the length of the array increases by
+1 after each operation.
+For example, if
+A=[4,6,7,2], he can select
+i=1 and select
+X=1,Y=3 (since
+X+Y=A
+1
+). After the operation array becomes:
+[
+4
+,6,7,2]→[
+1
+,
+3
+,6,7,2].
+JJ wants to make
+A palindromic. Find the minimum number of operations to do so.
+It is guaranteed that
+A can be converted to a palindromic array by using the above operation.
+Note: An array is called a palindrome if it reads the same backwards and forwards, for e.g.
+[1,3,3,1] and
+[6,2,6] are palindromic.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the minimum number of operations to make
+A palindromic.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤A
+i
+≤10
+5
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+3 7 6 4
+5
+1 4 5 4 1
+5
+1 2 3 4 5
+2
+0
+4
+Explanation:
+Test Case 1: We can perform the following operations:
+[3,
+7
+,6,4]
+i=2,X=1,Y=6
+[3,
+1
+,
+6
+,6,4]
+[3,1,6,6,
+4
+]
+i=5,X=1,Y=3
+[3,1,6,6,
+1
+,
+3
+]
+Test Case 2:
+A is already palindromic.

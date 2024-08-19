@@ -1,0 +1,104 @@
+Pythagorean Pair
+Problem
+Chef has an integer
+N. It is known that the largest odd divisor of
+N does not exceed
+10
+5
+.
+Determine two non-negative integers
+A and
+B such that
+A
+2
++B
+2
+=N, or report that no such pair exists.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single integer
+N.
+Output Format
+For each test case, output space-separated
+A and
+B such that
+A
+2
++B
+2
+=N or
+−1 if no such pair exists.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+15
+Largest odd divisor of
+N won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+4
+100
+6
+13
+4
+8 6
+-1
+2 3
+0 2
+Explanation:
+Test case
+1: A possible pair
+(A,B) such that
+A
+2
++B
+2
+=N is
+(8,6). Here,
+8
+2
++6
+2
+=64+36=100.
+Test case
+2: There is no pair
+(A,B) such that
+A
+2
++B
+2
+=N.
+Test case
+3: A possible pair
+(A,B) such that
+A
+2
++B
+2
+=N is
+(2,3). Here,
+2
+2
++3
+2
+=4+9=13
+Test case
+4: A possible pair
+(A,B) such that
+A
+2
++B
+2
+=N is
+(0,2). Here,
+0
+2
++2
+2
+=0+4=4.

@@ -1,0 +1,64 @@
+Calculus
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given one positive integer
+N. Calculate
+∫
+0
+∞
+e
+2πx
++1
+e
+2πx
+−1
+(
+x
+1
+−
+N
+2
++x
+2
+x
+)dx.
+It is possible to prove that its value can be written as a fraction
+b
+a
+, where
+a and
+b are positive integers and
+b is coprime with
+998,244,353. You need to find
+a⋅b
+−1
+modulo
+998,244,353, where
+b
+−1
+denotes the multiplicative inverse of
+b modulo
+998,244,353.
+Input
+The first and only line of the input contains a single integer
+N.
+Output
+Print a single line containing one integer
+a⋅b
+−1
+modulo
+998,244,353.
+Constraints
+1≤N≤10
+6
+Subtasks
+Subtask #1 (1 point):
+N=2
+Subtask #2 (1 point):
+N=3
+Subtask #3 (98 points): original constraints
+Sample 1:
+Input
+Output
+1
+2

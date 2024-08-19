@@ -1,0 +1,185 @@
+Four Equidistant Points on a Grid
+Problem
+The manhattan distance between two points
+P
+1
+(x
+1
+,y
+1
+) and
+P
+2
+(x
+2
+,y
+2
+) is given by
+d(P
+1
+,P
+2
+)=∣x
+2
+−x
+1
+∣+∣y
+2
+−y
+1
+∣.
+In other words, manhattan distance is the minimum number of moves required to reach
+P
+2
+from
+P
+1
+if, in each move, you are allowed to travel one unit along the
+X-axis or one unit along the
+Y-axis.
+You are given an integer
+D. Find four points
+(P
+1
+,P
+2
+,P
+3
+,P
+4
+) with integer coordinates, such that:
+The absolute value of both
+X and
+Y coordinates of all points is at most
+10
+9
+.
+The manhattan distance between any pair of points is
+D . More formally,
+d(P
+i
+,P
+j
+)=D for all
+1≤i<j≤4.
+If such set of points do not exist, print -1. If there are multiple solutions, you may print any.
+Note: It is guaranteed that whenever there exists a solution, there exists one in which all points have coordinates with absolute values not more than
+10
+9
+.
+Input Format
+The first line contains a single integer,
+D - as per the problem statement.
+Output Format
+If there is no solution, print in a single line the integer -1.
+Otherwise print
+4 lines. The
+i
+th
+line, should contain two space separated integers,
+X
+i
+Y
+i
+, the coordinates of the point
+P
+i
+, such that
+0≤∣X
+i
+∣,∣Y
+i
+∣≤10
+9
+.
+Constraints
+1≤D≤10
+5
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+0 1
+1 2
+2 3
+3 4
+Explanation:
+The following sample output for this testcase is not correct, but is only provided to clarify the output format
+The points in the solution are
+P
+1
+(0,1),P
+2
+(1,2),P
+3
+(2,3) and
+P
+4
+(3,4).
+d(P
+1
+,P
+2
+)=∣0−1∣+∣1−2∣=2 but
+d(P
+1
+,P
+3
+)=∣0−2∣+∣1−3∣=4. As
+d(P
+1
+,P
+2
+)
+
+=d(P
+1
+,P
+3
+), the solution is incorrect.
+A correct solution will satisfy
+d(P
+1
+,P
+2
+)=d(P
+1
+,P
+3
+)=d(P
+1
+,P
+4
+)=d(P
+2
+,P
+3
+)=d(P
+2
+,P
+4
+)=d(P
+3
+,P
+4
+).
+A correct sample output is not provided so as to not reveal any hints about the solution.
+Sample 2:
+Input
+Output
+1
+-1
+Explanation:
+You may verify that for
+D=1, there are no set of points
+P
+1
+,P
+2
+,P
+3
+,P
+4
+as per the problem statement. This output is correct.

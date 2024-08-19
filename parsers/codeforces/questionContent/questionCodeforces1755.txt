@@ -1,0 +1,173 @@
+F2. Guess the K-th Zero (Hard version)
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem.
+This is a hard version of the problem. The difference from the easy version is that in the hard version
+1≤t≤min(n,
+10
+4
+)
+and the total number of queries is limited to
+6⋅
+10
+4
+.
+Polycarp is playing a computer game. In this game, an array consisting of zeros and ones is hidden. Polycarp wins if he guesses the position of the
+k
+-th zero from the left
+t
+times.
+Polycarp can make no more than
+6⋅
+10
+4
+requests totally of the following type:
+?
+l
+r
+ — find out the sum of all elements in positions from
+l
+to
+r
+(
+1≤l≤r≤n
+) inclusive.
+To make the game more interesting, each guessed zero turns into one and the game continues on the changed array. More formally, if the position of the
+k
+-th zero was
+x
+, then after Polycarp guesses this position, the
+x
+-th element of the array will be replaced from
+0
+to
+1
+.
+Help Polycarp win the game.
+Interaction
+First, your program must read two integers
+n
+and
+t
+(
+1≤n≤2⋅
+10
+5
+,
+1≤t≤min(n,
+10
+4
+)
+).
+Then
+t
+lines follow, each of which contains one integer
+k
+(
+1≤k≤n
+). It is guaranteed that at the moment of the request the array contains at least
+k
+zeros. In order to get the next value of
+k
+, you must output the answer for the previous value of
+k
+.
+After that, you can make no more than
+6⋅
+10
+4
+requests in total.
+Use the following format to output the answer (it is not a request, it doesn't count in
+6⋅
+10
+4
+):
+!
+x
+ — position of the
+k
+-th zero.
+Positions in the array are numbered from left to right from
+1
+to
+n
+inclusive.
+After printing
+t
+answers, your program should exit immediately.
+In this task, the interactor is not adaptive. This means that within the same test, the hidden array and the queries do not change.
+In case of an incorrect query, -1 will be displayed. When this value is received, your program must immediately exit normally (for example, by calling exit(0)), otherwise, the testing system may issue an arbitrary verdict.
+If the number of requests is exceeded, the verdict wrong answer will be displayed.
+Your solution may get the verdict Idleness limit exceeded if you don't print anything or forget to flush the output buffer.
+To flush the output buffer, you need to do the following immediately after the query output and the end-of-line character:
+fflush(stdout) or cout.flush() in C ++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see the documentation for other languages.
+Hacks
+Use the following format for hacks:
+On the first line print the string
+s
+(
+1≤|s|≤2⋅
+10
+5
+), consisting of zeros and ones, and an integer
+t
+(
+1≤t≤min(|s|,
+10
+4
+)
+) — hidden array and number of requests, respectively. In the next
+t
+lines output the number
+k
+(
+1≤k≤|s|
+).
+The hacked solution will not have direct access to the hidden array.
+Example
+input
+Copy
+6 2
+
+2
+
+2
+
+1
+
+1
+
+0
+
+1
+
+0
+output
+Copy
+? 4 6
+
+? 1 1
+
+? 1 2
+
+? 5 5
+
+! 5
+
+? 2 2
+
+! 2
+Note
+In the first test, the array
+[1,0,1,1,0,1]
+is hidden. After answering the query
+k=2
+, the array changed to
+[1,0,1,1,1,1]
+.

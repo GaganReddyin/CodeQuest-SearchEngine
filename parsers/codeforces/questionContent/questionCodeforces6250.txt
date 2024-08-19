@@ -1,0 +1,38 @@
+B. Amr and The Large Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Amr has got a large array of size n. Amr doesn't like large arrays so he intends to make it smaller.
+Amr doesn't care about anything in the array except the beauty of it. The beauty of the array is defined to be the maximum number of times that some number occurs in this array. He wants to choose the smallest subsegment of this array such that the beauty of it will be the same as the original array.
+Help Amr by choosing the smallest subsegment possible.
+Input
+The first line contains one number n (1 ≤ n ≤ 105), the size of the array.
+The second line contains n integers ai (1 ≤ ai ≤ 106), representing elements of the array.
+Output
+Output two integers l, r (1 ≤ l ≤ r ≤ n), the beginning and the end of the subsegment chosen respectively.
+If there are several possible answers you may output any of them.
+Examples
+input
+Copy
+5
+1 1 2 2 1
+output
+Copy
+1 5
+input
+Copy
+5
+1 2 2 3 1
+output
+Copy
+2 3
+input
+Copy
+6
+1 2 2 1 1 2
+output
+Copy
+1 5
+Note
+A subsegment B of an array A from l to r is an array of size r - l + 1 where Bi = Al + i - 1 for all 1 ≤ i ≤ r - l + 1

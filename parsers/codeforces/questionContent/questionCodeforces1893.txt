@@ -1,0 +1,211 @@
+E. A-Z Graph
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a directed graph consisting of
+n
+vertices. Each directed edge (or arc) labeled with a single character. Initially, the graph is empty.
+You should process
+m
+queries with it. Each query is one of three types:
+"
++
+u
+v
+c
+" — add arc from
+u
+to
+v
+with label
+c
+. It's guaranteed that there is no arc
+(u,v)
+in the graph at this moment;
+"
+−
+u
+v
+" — erase arc from
+u
+to
+v
+. It's guaranteed that the graph contains arc
+(u,v)
+at this moment;
+"
+?
+k
+" — find the sequence of
+k
+vertices
+v
+1
+,
+v
+2
+,…,
+v
+k
+such that there exist both routes
+v
+1
+→
+v
+2
+→⋯→
+v
+k
+and
+v
+k
+→
+v
+k−1
+→⋯→
+v
+1
+and if you write down characters along both routes you'll get the same string. You can visit the same vertices any number of times.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤2⋅
+10
+5
+;
+1≤m≤2⋅
+10
+5
+) — the number of vertices in the graph and the number of queries.
+The next
+m
+lines contain queries — one per line. Each query is one of three types:
+"
++
+u
+v
+c
+" (
+1≤u,v≤n
+;
+u≠v
+;
+c
+is a lowercase Latin letter);
+"
+−
+u
+v
+" (
+1≤u,v≤n
+;
+u≠v
+);
+"
+?
+k
+" (
+2≤k≤
+10
+5
+).
+It's guaranteed that you don't add multiple edges and erase only existing edges. Also, there is at least one query of the third type.
+Output
+For each query of the third type, print YES if there exist the sequence
+v
+1
+,
+v
+2
+,…,
+v
+k
+described above, or NO otherwise.
+Example
+input
+Copy
+3 11
++ 1 2 a
++ 2 3 b
++ 3 2 a
++ 2 1 b
+? 3
+? 2
+- 2 1
+- 3 2
++ 2 1 c
++ 3 2 d
+? 5
+output
+Copy
+YES
+NO
+YES
+Note
+In the first query of the third type
+k=3
+, we can, for example, choose a sequence
+[1,2,3]
+, since
+1
+→
+a
+2
+→
+b
+3
+and
+3
+→
+a
+2
+→
+b
+1
+.
+In the second query of the third type
+k=2
+, and we can't find sequence
+p
+1
+,
+p
+2
+such that arcs
+(
+p
+1
+,
+p
+2
+)
+and
+(
+p
+2
+,
+p
+1
+)
+have the same characters.
+In the third query of the third type, we can, for example, choose a sequence
+[1,2,3,2,1]
+, where
+1
+→
+a
+2
+→
+b
+3
+→
+d
+2
+→
+c
+1
+.

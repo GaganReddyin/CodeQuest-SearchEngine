@@ -1,0 +1,62 @@
+Counting Tuples
+Problem
+You are given an integer
+N. You have to count the number of distinct tuples
+(A,B,C,D) with
+1≤A,B,C,D≤N such that
+A⋅B=C⋅D.
+Two tuples, say
+(A,B,C,D) and
+(E,F,G,H) are considered to be different if at least one of the following conditions hold true:
+A
+
+=E
+B
+
+=F
+C
+
+=G
+D
+
+=H.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains a single integer on a new line -
+N, as described in the problem statement
+Output Format
+For each testcase, output the answer on a new line - the number of tuples as described in the problem statement.
+Constraints
+1≤T≤10
+1≤N≤10
+6
+Sample 1:
+Input
+Output
+3
+3
+50
+35
+15
+10950
+4831
+Explanation:
+Test case
+1: Following tuples satisfy the given condition:
+(1, 1, 1, 1)
+(1, 2, 2, 1)
+(1, 3, 3, 1)
+(2, 1, 1, 2)
+(2, 2, 2, 2)
+(2, 3, 3, 2)
+(3, 1, 1, 3)
+(3, 2, 2, 3)
+(3, 3, 3, 3)
+(1, 2, 1, 2)
+(2, 1, 2, 1)
+(1, 3, 1, 3)
+(3, 1, 3, 1)
+(2, 3, 2, 3)
+(3, 2, 3, 2)
+A⋅B=C⋅D holds true for all these tuples.

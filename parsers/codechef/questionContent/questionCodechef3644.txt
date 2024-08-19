@@ -1,0 +1,119 @@
+Twice GCD Thrice LCM
+Problem
+This is an interactive problem.
+Eren and Mikasa are playing a game. Mikasa has a sequence
+A of
+N positive integers.
+Eren needs to find the values of all elements of this sequence to win the game.
+Eren may ask at most
+3⋅N questions to Mikasa. Each question can be one of two types:
+Type
+1: Eren gives Mikasa two distinct integers
+i and
+j
+(1≤i,j≤N) and Mikasa responds with
+gcd(A
+i
+,A
+j
+).
+Type
+2: Eren gives Mikasa three distinct integers
+i,
+j, and
+k
+(1≤i,j,k≤N) and Mikasa responds with
+lcm(A
+i
+,A
+j
+,A
+k
+).
+Help Eren find the sequence
+A.
+Note that,
+gcd stands for greatest common divisor and
+lcm stands for least common multiple.
+闘え (Fight) !!!
+Interaction
+First, you should read a line containing a single integer
+T, denoting the number of test cases.
+For each test case, you should start by reading a line containing a single integer
+N, denoting the number of elements in the sequence
+A.
+To ask a question:
+Type
+1: Print a line containing three space-separated integers
+1,i, and
+j
+(1≤i,j≤N,i
+
+=j). Then, you must read a line containing a single integer: the answer to your question or
+−1 if the question is invalid or you asked more than
+3⋅N questions.
+Type
+2: Print a line containing four space-separated integers
+2,i,j, and
+k
+(1≤i,j,k≤N,i
+
+=j,j
+
+=k,i
+
+=k). Then, you must read a line containing a single integer: the answer to your question or
+−1 if the question is invalid or you asked more than
+3⋅N questions.
+To finish solving a test case, you should print a single line containing
+N+1 space-separated integers
+3,A
+1
+,A
+2
+,…,A
+N
+. Then, you must read a line containing a single integer:
+1 if your output is correct or
+−1 if it is incorrect.
+Note that when you receive an answer
+−1, you should immediately terminate your program to receive a Wrong Answer verdict; otherwise, you may receive any verdict.
+Don't forget to flush the output after printing each line!
+Also note that Judge Error usually means that Interactive Judge was waiting for user input and User’s code didn’t give it, and so the resulting Time Limit Exceeded is shown as Judge Error.
+You can read more about Interactive problems here.
+Constraints
+1≤T≤100
+4≤N≤100
+1≤A
+i
+≤10
+6
+Sample Interaction
+1
+4
+                1 1 2
+1
+                2 1 2 3
+4
+                1 2 3
+2
+                3 1 2 4 3
+1
+Consider the sequence
+A=[1,2,4,3].
+Thus,
+gcd(A
+1
+,A
+2
+)=1,lcm(A
+1
+,A
+2
+,A
+3
+)=4,gcd(A
+2
+,A
+3
+)=2.

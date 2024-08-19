@@ -1,0 +1,333 @@
+E. Avoid Rainbow Cycles
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+m
+sets of integers
+A
+1
+,
+A
+2
+,…,
+A
+m
+; elements of these sets are integers between
+1
+and
+n
+, inclusive.
+There are two arrays of positive integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+and
+b
+1
+,
+b
+2
+,…,
+b
+n
+.
+In one operation you can delete an element
+j
+from the set
+A
+i
+and pay
+a
+i
++
+b
+j
+coins for that.
+You can make several (maybe none) operations (some sets can become empty).
+After that, you will make an edge-colored undirected graph consisting of
+n
+vertices. For each set
+A
+i
+you will add an edge
+(x,y)
+with color
+i
+for all
+x,y∈
+A
+i
+and
+x<y
+. Some pairs of vertices can be connected with more than one edge, but such edges have different colors.
+You call a cycle
+i
+1
+→
+e
+1
+→
+i
+2
+→
+e
+2
+→…→
+i
+k
+→
+e
+k
+→
+i
+1
+(
+e
+j
+is some edge connecting vertices
+i
+j
+and
+i
+j+1
+in this graph) rainbow if all edges on it have different colors.
+Find the minimum number of coins you should pay to get a graph without rainbow cycles.
+Input
+The first line contains two integers
+m
+and
+n
+(
+1≤m,n≤
+10
+5
+), the number of sets and the number of vertices in the graph.
+The second line contains
+m
+integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+(
+1≤
+a
+i
+≤
+10
+9
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+9
+).
+In the each of the next of
+m
+lines there are descriptions of sets. In the
+i
+-th line the first integer
+s
+i
+(
+1≤
+s
+i
+≤n
+) is equal to the size of
+A
+i
+. Then
+s
+i
+integers follow: the elements of the set
+A
+i
+. These integers are from
+1
+to
+n
+and distinct.
+It is guaranteed that the sum of
+s
+i
+for all
+1≤i≤m
+does not exceed
+2⋅
+10
+5
+.
+Output
+Print one integer: the minimum number of coins you should pay for operations to avoid rainbow cycles in the obtained graph.
+Examples
+input
+Copy
+3 2
+1 2 3
+4 5
+2 1 2
+2 1 2
+2 1 2
+output
+Copy
+11
+input
+Copy
+7 8
+3 6 7 9 10 7 239
+8 1 9 7 10 2 6 239
+3 2 1 3
+2 4 1
+3 1 3 7
+2 4 3
+5 3 4 5 6 7
+2 5 7
+1 8
+output
+Copy
+66
+Note
+In the first test, you can make such operations:
+Delete element
+1
+from set
+1
+. You should pay
+a
+1
++
+b
+1
+=5
+coins for that.
+Delete element
+1
+from set
+2
+. You should pay
+a
+2
++
+b
+1
+=6
+coins for that.
+You pay
+11
+coins in total. After these operations, the first and the second sets will be equal to
+{2}
+and the third set will be equal to
+{1,2}
+.
+So, the graph will consist of one edge
+(1,2)
+of color
+3
+.
+In the second test, you can make such operations:
+Delete element
+1
+from set
+1
+. You should pay
+a
+1
++
+b
+1
+=11
+coins for that.
+Delete element
+4
+from set
+2
+. You should pay
+a
+2
++
+b
+4
+=13
+coins for that.
+Delete element
+7
+from set
+3
+. You should pay
+a
+3
++
+b
+7
+=13
+coins for that.
+Delete element
+4
+from set
+4
+. You should pay
+a
+4
++
+b
+4
+=16
+coins for that.
+Delete element
+7
+from set
+6
+. You should pay
+a
+6
++
+b
+7
+=13
+coins for that.
+You pay
+66
+coins in total.
+After these operations, the sets will be:
+{2,3}
+;
+{1}
+;
+{1,3}
+;
+{3}
+;
+{3,4,5,6,7}
+;
+{5}
+;
+{8}
+.
+We will get the graph:
+There are no rainbow cycles in it.

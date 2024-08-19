@@ -1,0 +1,121 @@
+A. Find Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given
+n
+, find any array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of integers such that all of the following conditions hold:
+1≤
+a
+i
+≤
+10
+9
+for every
+i
+from
+1
+to
+n
+.
+a
+1
+<
+a
+2
+<…<
+a
+n
+For every
+i
+from
+2
+to
+n
+,
+a
+i
+isn't divisible by
+a
+i−1
+It can be shown that such an array always exists under the constraints of the problem.
+Input
+The first line contains the number of test cases
+t
+(
+1≤t≤100
+). Description of the test cases follows.
+The only line of each test case contains a single integer
+n
+(
+1≤n≤1000
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+4
+.
+Output
+For each test case print
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+— the array you found. If there are multiple arrays satisfying all the conditions, print any of them.
+Example
+input
+Copy
+3
+1
+2
+7
+output
+Copy
+1
+2 3
+111 1111 11111 111111 1111111 11111111 111111111
+Note
+In the first test case, array
+[1]
+satisfies all the conditions.
+In the second test case, array
+[2,3]
+satisfies all the conditions, as
+2<3
+and
+3
+is not divisible by
+2
+.
+In the third test case, array
+[111,1111,11111,111111,1111111,11111111,111111111]
+satisfies all the conditions, as it's increasing and
+a
+i
+isn't divisible by
+a
+i−1
+for any
+i
+from
+2
+to
+7
+.

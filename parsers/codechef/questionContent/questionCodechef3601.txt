@@ -1,0 +1,49 @@
+Replace and Substring Queries
+Problem
+Problem Statement
+Bored of reading statements and problem related with Cyborg, Geno and his friends? So am I. The problem statement goes as follows.
+You are given 2 string, A and B. You need to support 3 type of operations on these strings.
+1 x y: Change the xth character in the string A to y.
+2 x y: Change the xth character in the string B to y.
+3 l r: Report the number of substrings of B that have the same character set as the substring of A from index l to r i.e. A[l:r].
+
+Assume 1-based indexing in the whole problem. By character set of a string S, we mean the set of characters (in sorted order) which appear in S atleast once. For example: The character set of S = "aettmeeb" is {a, b, e, m, t}
+Input section
+The first line contains T, the number of test cases. The description of T test cases follows.
+The first 2 lines of each testcase contains 2 strings, A and B on a separate line. The next line contains Q, the number of queries. Each of the next Q lines contains 3 integers, denoting the queries to be supported as stated in the problem above.
+It is guaranteed that all the queries indices are within the range of the string length.
+Output section
+For each query of type 3, print the required answer to the problem.
+Input constraints
+1 ≤ T ≤ 10
+1 ≤ |A|, |B|, Q ≤ 100000, where |S| = length of string S
+Both A and B consists of lowercase characters {a, b, c, ...., r, s, t} only.
+Sum of |A| over all test cases ≤ 200000
+Sum of |B| over all test cases ≤ 200000
+Sum of Q over all test cases ≤ 200000
+Sample Input
+2
+abde
+cabb
+4
+1 3 b
+3 1 1
+3 2 4
+3 1 3
+eee
+eeeee
+1
+3 1 3
+Sample Output
+1
+0
+2
+15
+Explanation
+The below explanation is for test case 1.
+The string A becomes abbe.
+The substrings of B having the character set as {a} is a.
+There are no substrings of B having the character set as {b, e} as there is no character e in the string B.
+The substrings of B having the character set as {a, b} are ab, abb.
+
+For the test case 2, all the substrings of B satisfy the condition.

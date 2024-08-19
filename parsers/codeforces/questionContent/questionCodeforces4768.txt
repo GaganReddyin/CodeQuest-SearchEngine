@@ -1,0 +1,30 @@
+C. Three Garlands
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mishka is decorating the Christmas tree. He has got three garlands, and all of them will be put on the tree. After that Mishka will switch these garlands on.
+When a garland is switched on, it periodically changes its state — sometimes it is lit, sometimes not. Formally, if i-th garland is switched on during x-th second, then it is lit only during seconds x, x + ki, x + 2ki, x + 3ki and so on.
+Mishka wants to switch on the garlands in such a way that during each second after switching the garlands on there would be at least one lit garland. Formally, Mishka wants to choose three integers x1, x2 and x3 (not necessarily distinct) so that he will switch on the first garland during x1-th second, the second one — during x2-th second, and the third one — during x3-th second, respectively, and during each second starting from max(x1, x2, x3) at least one garland will be lit.
+Help Mishka by telling him if it is possible to do this!
+Input
+The first line contains three integers k1, k2 and k3 (1 ≤ ki ≤ 1500) — time intervals of the garlands.
+Output
+If Mishka can choose moments of time to switch on the garlands in such a way that each second after switching the garlands on at least one garland will be lit, print YES.
+Otherwise, print NO.
+Examples
+input
+Copy
+2 2 3
+output
+Copy
+YES
+input
+Copy
+4 2 3
+output
+Copy
+NO
+Note
+In the first example Mishka can choose x1 = 1, x2 = 2, x3 = 1. The first garland will be lit during seconds 1, 3, 5, 7, ..., the second — 2, 4, 6, 8, ..., which already cover all the seconds after the 2-nd one. It doesn't even matter what x3 is chosen. Our choice will lead third to be lit during seconds 1, 4, 7, 10, ..., though.
+In the second example there is no way to choose such moments of time, there always be some seconds when no garland is lit.

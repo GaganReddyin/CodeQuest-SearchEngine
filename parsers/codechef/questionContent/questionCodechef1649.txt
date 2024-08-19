@@ -1,0 +1,44 @@
+Maximum Candies
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a matrix
+A with
+N rows (numbered
+1 through
+N) and
+M columns (numbered
+1 through
+M).
+You need to fill the matrix with candies in such a way that:
+For each cell, the number of candies in this cell is an integer between
+0 and
+X inclusive.
+For each pair of adjacent cells, the number of candies in one cell plus the number of candies in the other cell does not exceed
+Y. Two cells are considered adjacent if they share a side.
+Find the maximum number of candies you can place in the given matrix.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains four space-separated integers
+N,
+M,
+X and
+Y.
+Output
+For each test case, print a single line containing one integer ― the maximum number of candies.
+Constraints
+1≤T≤100
+1≤N,M≤100
+1≤X,Y≤10
+4
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+4 4 4 6
+3 4 4 5
+48
+30

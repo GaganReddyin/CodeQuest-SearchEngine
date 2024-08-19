@@ -1,0 +1,54 @@
+A. Distinct Digits
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have two integers
+l
+and
+r
+. Find an integer
+x
+which satisfies the conditions below:
+l≤x≤r
+.
+All digits of
+x
+are different.
+If there are multiple answers, print any of them.
+Input
+The first line contains two integers
+l
+and
+r
+(
+1≤l≤r≤
+10
+5
+).
+Output
+If an answer exists, print any of them. Otherwise, print
+−1
+.
+Examples
+input
+Copy
+121 130
+output
+Copy
+123
+input
+Copy
+98766 100000
+output
+Copy
+-1
+Note
+In the first example,
+123
+is one of the possible answers. However,
+121
+can't be the answer, because there are multiple
+1
+s on different digits.
+In the second example, there is no valid answer.

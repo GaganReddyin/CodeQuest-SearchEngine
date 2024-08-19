@@ -1,0 +1,111 @@
+Binary Movements
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+"Out of 6 billion humans, the troublemakers are just a handful." - Dalai Lama
+Nikitasha and Mansi are best friends. They have a binary sequence
+A
+1
+,A
+2
+,…,A
+N
+(each element of this sequence is
+0 or
+1). Their friend Sakshi always finds ways to trouble them. This time, Sakshi altered their sequence by performing the following operation
+Z times:
+Create a new sequence
+B
+1
+,B
+2
+,…,B
+N
+. Initially,
+A
+i
+=B
+i
+for each valid
+i.
+For each valid
+i such that
+A
+i
+=0 and
+A
+i+1
+=1, swap
+B
+i
+and
+B
+i+1
+, i.e. set
+B
+i
+=1 and
+B
+i+1
+=0. Note that the order of swaps does not matter.
+Replace the sequence
+A by the sequence
+B.
+Now, Sakshi challenges Nikitasha And Mansi to find the altered sequence (the resulting sequence
+A after
+Z steps). Help Nikitasha and Mansi find this sequence.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Z.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing
+N space-separated integers — the altered sequence.
+Constraints
+1≤T≤1,000
+1≤N,Z≤10
+6
+0≤A
+i
+≤1 for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (10 points):
+1≤N,Z≤3,000
+the sum of
+N over all test cases does not exceed
+3,000
+Subtask #2 (90 points): original constraints
+Sample 1:
+Input
+Output
+2
+6 2
+0 1 1 0 1 1
+4 4
+0 1 0 1
+1 1 0 1 1 0 
+1 1 0 0
+Explanation:
+Example case 1: After the first step, the sequence becomes
+(1,0,1,1,0,1). After the second step, it becomes
+(1,1,0,1,1,0).
+Example case 2: After the first step, the sequence becomes
+(1,0,1,0). After the second step, the sequence becomes
+(1,1,0,0). Applying more steps does not alter the sequence anymore, so after the third and fourth step, the sequence remains
+(1,1,0,0).

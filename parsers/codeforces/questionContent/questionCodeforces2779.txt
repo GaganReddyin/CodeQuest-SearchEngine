@@ -1,0 +1,209 @@
+B. Maximums
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alicia has an array,
+a
+1
+,
+a
+2
+,…,
+a
+n
+, of non-negative integers. For each
+1≤i≤n
+, she has found a non-negative integer
+x
+i
+=max(0,
+a
+1
+,…,
+a
+i−1
+)
+. Note that for
+i=1
+,
+x
+i
+=0
+.
+For example, if Alicia had the array
+a={0,1,2,0,3}
+, then
+x={0,0,1,2,2}
+.
+Then, she calculated an array,
+b
+1
+,
+b
+2
+,…,
+b
+n
+:
+b
+i
+=
+a
+i
+−
+x
+i
+.
+For example, if Alicia had the array
+a={0,1,2,0,3}
+,
+b={0−0,1−0,2−1,0−2,3−2}={0,1,1,−2,1}
+.
+Alicia gives you the values
+b
+1
+,
+b
+2
+,…,
+b
+n
+and asks you to restore the values
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Can you help her solve the problem?
+Input
+The first line contains one integer
+n
+(
+3≤n≤200000
+) – the number of elements in Alicia's array.
+The next line contains
+n
+integers,
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−
+10
+9
+≤
+b
+i
+≤
+10
+9
+).
+It is guaranteed that for the given array
+b
+there is a solution
+a
+1
+,
+a
+2
+,…,
+a
+n
+, for all elements of which the following is true:
+0≤
+a
+i
+≤
+10
+9
+.
+Output
+Print
+n
+integers,
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+), such that if you calculate
+x
+according to the statement,
+b
+1
+will be equal to
+a
+1
+−
+x
+1
+,
+b
+2
+will be equal to
+a
+2
+−
+x
+2
+, ..., and
+b
+n
+will be equal to
+a
+n
+−
+x
+n
+.
+It is guaranteed that there exists at least one solution for the given tests. It can be shown that the solution is unique.
+Examples
+input
+Copy
+5
+0 1 1 -2 1
+output
+Copy
+0 1 2 0 3 
+input
+Copy
+3
+1000 999999000 -1000000000
+output
+Copy
+1000 1000000000 0 
+input
+Copy
+5
+2 1 2 2 3
+output
+Copy
+2 3 5 7 10 
+Note
+The first test was described in the problem statement.
+In the second test, if Alicia had an array
+a={1000,1000000000,0}
+, then
+x={0,1000,1000000000}
+and
+b={1000−0,1000000000−1000,0−1000000000}={1000,999999000,−1000000000}
+.

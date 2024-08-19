@@ -1,0 +1,222 @@
+G. Doping
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+We call an array
+a
+of length
+n
+fancy if for each
+1<i≤n
+it holds that
+a
+i
+=
+a
+i−1
++1
+.
+Let's call
+f(p)
+applied to a permutation
+†
+†
+of length
+n
+as the minimum number of subarrays it can be partitioned such that each one of them is fancy. For example
+f([1,2,3])=1
+, while
+f([3,1,2])=2
+and
+f([3,2,1])=3
+.
+Given
+n
+and a permutation
+p
+of length
+n
+, we define a permutation
+p
+′
+of length
+n
+to be
+k
+-special if and only if:
+p
+′
+is lexicographically smaller
+‡
+‡
+than
+p
+, and
+f(
+p
+′
+)=k
+.
+Your task is to count for each
+1≤k≤n
+the number of
+k
+-special permutations modulo
+m
+.
+†
+†
+A permutation is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array) and
+[1,3,4]
+is also not a permutation (
+n=3
+but there is
+4
+in the array).
+‡
+‡
+A permutation
+a
+of length
+n
+is lexicographically smaller than a permutation
+b
+of length
+n
+if and only if the following holds: in the first position where
+a
+and
+b
+differ, the permutation
+a
+has a smaller element than the corresponding element in
+b
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤2000
+,
+10≤m≤
+10
+9
+) — the length of the permutation and the required modulo.
+The second line contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the permutation
+p
+.
+Output
+Print
+n
+integers, where the
+k
+-th integer is the number of
+k
+-special permutations modulo
+m
+.
+Examples
+input
+Copy
+4 666012
+1 3 4 2
+output
+Copy
+1 0 1 1 
+input
+Copy
+3 10
+3 2 1
+output
+Copy
+1 2 2 
+input
+Copy
+7 1000000000
+7 2 1 3 5 4 6
+output
+Copy
+1 6 40 201 705 1635 1854 
+input
+Copy
+10 11
+10 9 8 7 6 5 4 3 2 1
+output
+Copy
+1 9 9 0 1 5 5 0 1 0 
+Note
+In the first example, the permutations that are lexicographically smaller than
+[1,3,4,2]
+are:
+[1,2,3,4]
+,
+f([1,2,3,4])=1
+;
+[1,2,4,3]
+,
+f([1,2,4,3])=3
+;
+[1,3,2,4]
+,
+f([1,3,2,4])=4
+.
+Thus our answer is
+[1,0,1,1]
+.
+In the second example, the permutations that are lexicographically smaller than
+[3,2,1]
+are:
+[1,2,3]
+,
+f([1,2,3])=1
+;
+[1,3,2]
+,
+f([1,3,2])=3
+;
+[2,1,3]
+,
+f([2,1,3])=3
+;
+[2,3,1]
+,
+f([2,3,1])=2
+;
+[3,1,2]
+,
+f([3,1,2])=2
+.
+Thus our answer is
+[1,2,2]
+.

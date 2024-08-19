@@ -1,0 +1,269 @@
+Chef and Array (Challenge)
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef has an integer
+K and a randomly generated sequence
+A
+1
+,A
+2
+,…,A
+N
+. He asks you to choose
+N non-negative integers
+D
+1
+,D
+2
+,…,D
+N
+such that
+D
+i
+≤K for each valid
+i and add
+D
+i
+to
+A
+i
+for each valid
+i.
+Also, Chef has
+M primes
+P
+1
+,P
+2
+,…,P
+M
+. It is guaranteed that for each valid
+i,
+P
+i
+is the smallest prime greater than
+P
+i−1
+. After all addition operations are performed on the sequence
+A, he finds the product of all elements of
+A and computes its remainders modulo each prime. Let's denote these remainders by
+B
+1
+,B
+2
+,…,B
+M
+. Please help Chef maximise
+M
+1
+∑
+i=1
+M
+B
+i
+.
+Input
+The first line of the input contains three space-separated integers
+N,
+M and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+M space-separated integers
+P
+1
+,P
+2
+,…,P
+M
+.
+Output
+Print a single line containing
+N space-separated integers — the sequence
+A
+1
+,A
+2
+,…,A
+N
+obtained after performing all additions.
+Constraints
+1≤N,M≤10
+4
+1≤K≤2⋅10
+9
+1≤A
+i
+,P
+i
+≤2⋅10
+9
+for each valid
+i
+P
+i
+is the smallest prime greater than
+P
+i−1
+for each valid
+i
+Example Input
+4 4 5
+1 2 3 4
+5 7 11 13
+Example Output
+2 6 6 9
+Explanation
+We can choose
+D=(1,4,3,5) — that is, we're adding
+1 to
+A
+1
+,
+4 to
+A
+2
+,
+3 to
+A
+3
+and
+5 to
+A
+4
+. After these addition operations,
+A=(2,6,6,9). Let's calculate the sequence
+B.
+B
+1
+=(A
+1
+⋅A
+2
+⋅A
+3
+⋅A
+4
+)%P
+1
+=3
+B
+2
+=(A
+1
+⋅A
+2
+⋅A
+3
+⋅A
+4
+)%P
+2
+=4
+B
+3
+=(A
+1
+⋅A
+2
+⋅A
+3
+⋅A
+4
+)%P
+3
+=10
+B
+4
+=(A
+1
+⋅A
+2
+⋅A
+3
+⋅A
+4
+)%P
+4
+=11
+The score for this output would be
+(B
+1
++B
+2
++B
+3
++B
+4
+)/M=28/4=7.
+Score
+Your score for each test file will be the sum of all
+B
+i
+divided by
+M.
+For the above example, the score you would obtain is
+7.
+Test Generation Process
+There are four types of tests and five test files (test cases) of each type. During the contest, the displayed score will account for exactly one test file of each type, i.e. your score reflects your submission's performance on 20% (1/5) of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to the sum of your program's scores over all test files.
+The pseudocodes used for generating tests of each type are given below. Assume the function rnd.next(l, r) generates a random number uniformly in the range
+l through
+r (both inclusive) and nextPrime(x) finds the smallest prime greater than
+x.
+Type 1:
+     
+INF = 1000000000
+N = 100
+M = 10000
+K = rnd.next(1, 1000000)
+for i = 1 to N:
+ A[i] = rnd.next(1, INF)
+X = rnd.next(INF / 10, INF / 2) + INF
+for i = 1 to M:
+ P[i] = nextPrime(X)
+ X = P[i]
+Type 2:
+     
+INF = 1000000000
+N = 1000
+M = 1000
+K = rnd.next(1, 1000)
+for i = 1 to N:
+ A[i] = rnd.next(1, INF)
+X = rnd.next(INF / 10, INF / 2) + INF
+for i = 1 to M:
+ P[i] = nextPrime(X)
+ X = P[i]
+Type 3:
+     
+
+INF = 1000000000
+N = 1000
+M = 1000
+K = rnd.next(1, 1000000)
+for i = 1 to N:
+ A[i] = rnd.next(1, INF)
+X = rnd.next(INF / 10, INF / 2) + INF
+for i = 1 to M:
+ P[i] = nextPrime(X)
+ X = P[i]
+Type 4:
+     
+INF = 1000000000
+N = 10000
+M = 100
+K = rnd.next(1, 1000000)
+for i = 1 to N:
+ A[i] = rnd.next(1, INF)
+X = rnd.next(INF / 10, INF / 2) + INF
+for i = 1 to M:
+ P[i] = nextPrime(X)
+ X = P[i]

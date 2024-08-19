@@ -1,0 +1,34 @@
+B. Duff in Beach
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+While Duff was resting in the beach, she accidentally found a strange array b0, b1, ..., bl - 1 consisting of l positive integers. This array was strange because it was extremely long, but there was another (maybe shorter) array, a0, ..., an - 1 that b can be build from a with formula: bi = ai mod n where a mod b denoted the remainder of dividing a by b.
+Duff is so curious, she wants to know the number of subsequences of b like bi1, bi2, ..., bix (0 ≤ i1 < i2 < ... < ix < l), such that:
+1 ≤ x ≤ k
+For each 1 ≤ j ≤ x - 1,
+For each 1 ≤ j ≤ x - 1, bij ≤ bij + 1. i.e this subsequence is non-decreasing.
+Since this number can be very large, she want to know it modulo 109 + 7.
+Duff is not a programmer, and Malek is unavailable at the moment. So she asked for your help. Please tell her this number.
+Input
+The first line of input contains three integers, n, l and k (1 ≤ n, k, n × k ≤ 106 and 1 ≤ l ≤ 1018).
+The second line contains n space separated integers, a0, a1, ..., an - 1 (1 ≤ ai ≤ 109 for each 0 ≤ i ≤ n - 1).
+Output
+Print the answer modulo 1 000 000 007 in one line.
+Examples
+input
+Copy
+3 5 3
+5 9 1
+output
+Copy
+10
+input
+Copy
+5 10 3
+1 2 3 4 5
+output
+Copy
+25
+Note
+In the first sample case, . So all such sequences are: , , , , , , , , and .

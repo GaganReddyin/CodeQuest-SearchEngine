@@ -1,0 +1,79 @@
+XOR, The Detective
+Problem
+There are some hidden non-negative numbers
+A and
+B, with
+0≤A<B<2
+29
+. You were not able to determine them and were gonna cry. Luckily, XOR The Detective decided to save your day!
+XOR The Detective is a great interrogator. In one query, he can ask any integer
+X such that
+0≤X<2
+30
+, and learn the value of
+(A+X)⊕(B+X). Here
+⊕ denotes the bitwise XOR operation.
+Help XOR The Detective to determine both
+A and
+B in at most
+30 queries.
+Interaction
+Begin the interaction by reading a single integer
+T
+− the number of test cases.
+For each test case, first read a single integer
+Q
+− the maximum allowed number of queries to ask.
+To ask a question about number
+X, output ?
+X. Then, read the value of
+(A+X)⊕(B+X).
+To give your answer, output !
+A
+B. Right after this, if it wasn't your last test case, proceed to the next test case.
+It's guaranteed that
+A and
+B are fixed before the start of the interaction.
+Example Input
+You             Interactor
+                1
+                30
+? 0
+                1
+? 1             
+                7 
+! 2 3               
+Explanation
+The hidden numbers are
+A=2 and
+B=3.
+In the first query, we get
+(2+0)⊕(3+0)=1.
+In the second query, we get
+(2+1)⊕(3+1)=7.
+Even though we can't uniquely determine
+A,B from this information, we might still answer. Here, we got lucky.
+Constraints
+The sum of
+Q over all test cases doesn't exceed
+10
+4
+in all subtasks.
+Subtask 1:
+0≤A<B<128
+Q=128
+Subtask 2:
+0≤A<B<2
+29
+Q=60
+Subtask 3:
+0≤A<B<2
+29
+Q=30
+Subtasks
+Subtask
+1: 10 points
+Subtask
+2: 40 points
+Subtask
+3: 50 points

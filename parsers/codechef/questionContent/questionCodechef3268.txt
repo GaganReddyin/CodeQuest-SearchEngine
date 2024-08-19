@@ -1,0 +1,116 @@
+Break And Fix The Tree
+Problem
+Chef is playing a game, and to win the prize, he must complete it. But he is busy arranging meals for the vortex party, so he asked you the play the game in his place. The game is as below:
+You are given a rooted tree of size
+N rooted at node
+1, where each node
+i has a value
+V
+i
+assigned to it. Define
+P
+u
+as the parent of node
+u. You have to perform queries of the following type on the tree:
+1XW: Break the edge between node
+X and
+P
+X
+in the tree, and attach
+X as a child of
+W (note that this means
+P
+X
+=W after this operation). It is guaranteed that
+X is a leaf node of the tree.
+2XK: Change the value on node
+X to
+K (i.e. assign
+V
+X
+←K).
+3XY: Calculate the sum of values of nodes on the path from
+X to
+Y.
+Note that the queries are accumulative, meaning the changes made in each query is persisted for the following queries.
+Input Format
+The first line of the input contains an integer
+N - the number of nodes in the tree.
+The next line contains
+N−1 space-separated integers
+P
+2
+,P
+3
+,…,P
+N
+- the parents node of
+2 to
+N.
+The next line contains
+N space-separated integers
+V
+1
+,V
+2
+,…,V
+N
+- the initial values of the nodes.
+The next line contains an integer
+Q - the number of queries.
+Each of the next
+Q lines contains a query as described in the statement.
+Output Format
+For each query of type
+3, output on a new line the sum of values of nodes on the path from
+X to
+Y.
+Constraints
+2≤N≤10
+5
+1≤P
+i
+≤N
+−10
+9
+≤V
+i
+≤10
+9
+1≤Q≤10
+5
+1≤X,Y,W≤N
+X
+
+=W
+−10
+9
+≤K≤10
+9
+Sample 1:
+Input
+Output
+5
+1 1 2 2
+1 2 3 4 5
+6
+3 4 5
+1 4 3
+1 5 3
+1 2 4
+2 4 10
+3 2 5
+11
+20
+Explanation:
+Initially, the tree is
+For first query, the path followed is
+4→2→5. Therefore the sum of values is
+4+2+5=11.
+After updating the tree according to second query, it becomes
+After updating the tree according to third query, it becomes
+After updating the tree according to fourth query, it becomes
+After updating the tree according to fifth query, it becomes
+The path for the sixth query is
+2→4→3→5. Therefore the sum of values is
+2+10+3+5=20.

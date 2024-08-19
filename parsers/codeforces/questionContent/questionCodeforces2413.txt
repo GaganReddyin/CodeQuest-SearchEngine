@@ -1,0 +1,176 @@
+C. Cyclic Permutations
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A permutation of length
+n
+is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array) and
+[1,3,4]
+is also not a permutation (
+n=3
+but there is
+4
+in the array).
+Consider a permutation
+p
+of length
+n
+, we build a graph of size
+n
+using it as follows:
+For every
+1≤i≤n
+, find the largest
+j
+such that
+1≤j<i
+and
+p
+j
+>
+p
+i
+, and add an undirected edge between node
+i
+and node
+j
+For every
+1≤i≤n
+, find the smallest
+j
+such that
+i<j≤n
+and
+p
+j
+>
+p
+i
+, and add an undirected edge between node
+i
+and node
+j
+In cases where no such
+j
+exists, we make no edges. Also, note that we make edges between the corresponding indices, not the values at those indices.
+For clarity, consider as an example
+n=4
+, and
+p=[3,1,4,2]
+; here, the edges of the graph are
+(1,3),(2,1),(2,3),(4,3)
+.
+A permutation
+p
+is cyclic if the graph built using
+p
+has at least one simple cycle.
+Given
+n
+, find the number of cyclic permutations of length
+n
+. Since the number may be very large, output it modulo
+10
+9
++7
+.
+Please refer to the Notes section for the formal definition of a simple cycle
+Input
+The first and only line contains a single integer
+n
+(
+3≤n≤
+10
+6
+).
+Output
+Output a single integer
+0≤x<
+10
+9
++7
+, the number of cyclic permutations of length
+n
+modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+4
+output
+Copy
+16
+input
+Copy
+583291
+output
+Copy
+135712853
+Note
+There are
+16
+cyclic permutations for
+n=4
+.
+[4,2,1,3]
+is one such permutation, having a cycle of length four:
+4→3→2→1→4
+.
+Nodes
+v
+1
+,
+v
+2
+,
+…
+,
+v
+k
+form a simple cycle if the following conditions hold:
+k≥3
+.
+v
+i
+≠
+v
+j
+for any pair of indices
+i
+and
+j
+. (
+1≤i<j≤k
+)
+v
+i
+and
+v
+i+1
+share an edge for all
+i
+(
+1≤i<k
+), and
+v
+1
+and
+v
+k
+share an edge.

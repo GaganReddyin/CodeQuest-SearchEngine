@@ -1,0 +1,97 @@
+Intersection Matrix
+Problem
+You are given a matrix
+A with
+N rows and
+M columns. We can select some non-empty subset of rows and some non-empty subset of columns of the given matrix and add all the elements which occur at the intersection of selected rows and columns. This value is called the happiness of the selected rows and columns. For example, let the matrix be the following:
+1
+2
+3
+7
+5
+6
+2
+1
+2
+Let rows be numbered
+1 to
+N from top to bottom and columns numbered
+1 to
+M from left to right. If we select rows
+1 and
+3 and columns
+1 and
+2, we get a happiness of
+1+2+2+1=6.
+We are also given an integer
+B. We need to tell the number of ways to select some non-empty subset of rows and some non-empty subset of columns so that their happiness is
+B. Since the answer can be large, find it modulo
+10
+9
++7.
+###Input
+The first line contains an integer
+T, the number of test cases.
+The first line of each test case contains three integers
+N,
+M and
+B - the number of rows, the number of columns, and the intended happiness, respectively.
+Each of the next
+N lines of the test case contains
+M space-separated integers. The
+j-th element in the
+i-th line represents the element
+A[i][j] in the
+i-th row and
+j-th column.
+###Output For each test case, output in a separate line, the number of ways to select some non-empty subset of rows and some non-empty subset of columns so that their happiness is
+B, modulo
+10
+9
++7.
+###Constraints
+1≤T≤3
+1≤N⋅M≤200
+1≤A[i][j],B≤10
+5
+###Subtasks Subtask #1 (15 points):
+1≤N⋅M≤10
+Subtask #2 (25 points):
+1≤N⋅M≤40
+Subtask #3 (35 points):
+1≤N⋅M≤144
+Subtask #4 (25 points):
+original constraints
+Sample 1:
+Input
+Output
+1
+ 3 3 6
+ 1 2 3
+ 7 5 6
+ 2 1 2
+4
+Explanation:
+There are
+4 ways to select subsets of rows and columns to get happiness equal to
+6.
+Select rows
+{1,3} and columns
+{1,2}. The elements at the intersections are
+{1,2,2,1}. So, the happiness is
+1+2+2+1=6.
+Select rows
+{1} and columns
+{1,2,3}. The elements at the intersections are
+{1,2,3}. So, the happiness is
+1+2+3=6.
+Select rows
+{2} and columns
+{3}. The elements at the intersections are
+{6}. So, the happiness is
+6.
+Select rows
+{2,3} and columns
+{2}. The elements at the intersections are
+{5,1}. So, the happiness is
+5+1=6.

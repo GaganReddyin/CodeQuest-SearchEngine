@@ -1,0 +1,76 @@
+Maximise the Subsequence Sum
+Problem
+Chef has an array
+A containing
+N integers. The integers of the array can be positive, negative, or even zero.
+Chef allows you to choose at most
+K elements of the array and multiply them by
+−1.
+Find the maximum sum of a subsequence you can obtain if you choose the elements of the subsequence optimally.
+Note: A sequence
+a is a subsequence of a sequence
+b if
+a can be obtained from
+b by deletion of several (possibly, zero or all) elements. For example,
+[3,1] is a subsequence of
+[3,2,1] and
+[4,3,1], but not a subsequence of
+[1,3,3,7] and
+[3,10,4]. Note that empty sequence is also a subsequence.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N,K.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,...,A
+N
+Output Format
+For each test case, print a single line containing one integer - the maximum sum of a subsequence you can obtain.
+Constraints
+1≤T≤15
+1≤N≤10
+5
+0≤K≤N
+−10
+4
+≤A
+i
+≤10
+4
+Sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+3
+6 2
+6 -10 -1 0 -4 2
+5 0
+-1 -1 -1 -1 -1
+3 3
+1 2 3
+22
+0
+6
+Explanation:
+Test case
+1: It is optimal to multiply
+−10,−4 with
+−1 and then take the subsequence
+[6,10,4,2].
+Test case
+2: It is optimal to choose empty subsequence with a sum equal to
+0.
+Test case
+3: We can take subsequence
+[1,2,3]. Here, we do not multiply
+−1 with any element.

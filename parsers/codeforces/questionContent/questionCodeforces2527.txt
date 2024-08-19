@@ -1,0 +1,159 @@
+D. AND, OR and square sum
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Gottfried learned about binary number representation. He then came up with this task and presented it to you.
+You are given a collection of
+n
+non-negative integers
+a
+1
+,…,
+a
+n
+. You are allowed to perform the following operation: choose two distinct indices
+1≤i,j≤n
+. If before the operation
+a
+i
+=x
+,
+a
+j
+=y
+, then after the operation
+a
+i
+=x AND y
+,
+a
+j
+=x OR y
+, where
+AND
+and
+OR
+are bitwise AND and OR respectively (refer to the Notes section for formal description). The operation may be performed any number of times (possibly zero).
+After all operations are done, compute
+∑
+n
+i=1
+a
+2
+i
+ — the sum of squares of all
+a
+i
+. What is the largest sum of squares you can achieve?
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,…,
+a
+n
+(
+0≤
+a
+i
+<
+2
+20
+).
+Output
+Print a single integer — the largest possible sum of squares that can be achieved after several (possibly zero) operations.
+Examples
+input
+Copy
+1
+123
+output
+Copy
+15129
+input
+Copy
+3
+1 3 5
+output
+Copy
+51
+input
+Copy
+2
+349525 699050
+output
+Copy
+1099509530625
+Note
+In the first sample no operation can be made, thus the answer is
+123
+2
+.
+In the second sample we can obtain the collection
+1,1,7
+, and
+1
+2
++
+1
+2
++
+7
+2
+=51
+.
+If
+x
+and
+y
+are represented in binary with equal number of bits (possibly with leading zeros), then each bit of
+x AND y
+is set to
+1
+if and only if both corresponding bits of
+x
+and
+y
+are set to
+1
+. Similarly, each bit of
+x OR y
+is set to
+1
+if and only if at least one of the corresponding bits of
+x
+and
+y
+are set to
+1
+. For example,
+x=3
+and
+y=5
+are represented as
+011
+2
+and
+101
+2
+(highest bit first). Then,
+x AND y=
+001
+2
+=1
+, and
+x OR y=
+111
+2
+=7
+.

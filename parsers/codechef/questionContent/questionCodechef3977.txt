@@ -1,0 +1,47 @@
+Outside of Brackets
+Problem
+Marichka has a sequence
+S containing brackets ( and ) and character x, such that the bracketed sequence is valid.
+A valid bracket sequence is a bracket sequence which can be transformed into a correct arithmetic expression by inserting characters 1 and + between the original characters of the sequence.
+For example, the given sequence
+S could be equal to (x)((x))x, because ()(()) is valid. On the other hand, it cannot be equal to )(x) because )() is not valid.
+Zenyk decided that in one step, he will:
+Select any pair of adjacent elements of the sequence and swap them.
+He wondered what is the minimum number of steps he needs to take, to get a valid bracket sequence with all x outside the brackets.
+You can notice that in valid bracket sequence, each opening bracket will have corresponding closing one and vice versa.
+Element x is outside all brackets if there is no such pair of corresponding opening and closing brackets such that x lies inside it. For instance, in sequence (()())x(())xx() all x are outside, but in sequence ((x))x(), the first x is inside and second x is outside.
+Note that the intermediate sequences do not have to be valid.
+Input Format
+The first and only line contains the string
+S, a sequence of characters (, ), and x, such that the bracket sequence is valid.
+Output Format
+Print one integer — the minimum number of steps Zenyk needs to take, to get a valid bracket sequence with all x outside the brackets.
+Constraints
+1≤|S|
+≤10
+4
+The bracket sequence of string
+S is valid.
+Sample 1:
+Input
+Output
+x
+0
+Explanation:
+x is already outside of brackets, as there are no brackets.
+Sample 2:
+Input
+Output
+(x)
+1
+Explanation:
+Zenyk can swap the first two characters, getting string x(), where x is outside of brackets.
+Sample 3:
+Input
+Output
+(()x())
+2
+Explanation:
+Zenyk can swap the second and third characters, getting the string ()(x()), and then the third and fourth, getting the string ()x(()), where x is outside of brackets.
+It can be shown that we cannot move x outside brackets in less than
+2 operations.

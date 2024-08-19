@@ -1,0 +1,88 @@
+Binary Substituition
+Problem
+Chef has a binary string
+S. He can replace any occurrence of -
+01 with
+a
+10 with
+b
+010 with
+ab
+101 with
+ba
+While doing these operations, Chef noticed that he can end up with different strings depending upon the order of application of the operations. Given the final string containing only
+a and
+b, Chef wants to know the number of possible strings he might have began with.
+As the number of initial strings can be large, print the result modulo
+998244353.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input denoting
+S, the final string obtained after applying the operations.
+Output Format
+For each test case, output the number of original strings that can result in the final string mod
+998244353.
+Constraints
+1≤T≤5⋅10
+4
+1≤∣S∣≤10
+5
+The sum of
+∣S∣ over all test cases won't exceed
+5⋅10
+5
+.
+S consists of
+a and
+b only.
+Sample 1:
+Input
+Output
+3
+ab
+aa
+abb
+2
+1
+2
+Explanation:
+Test case
+1: The binary strings that can result in the string
+ab are
+0110 and
+010.
+0110: Replace the first two characters
+01 with
+a and last two characters
+10 with
+b. Thus, we get
+ab.
+010: Replace the characters
+010 with
+ab.
+Test case
+2: The only binary string that can result in the string
+aa is
+0101. In
+0101, we replace the first two characters with
+a and last two characters with
+a as well.
+Test case
+3: The binary strings that can result in the string
+abb are
+011010 and
+01010.
+011010: Replace the first two characters
+01 with
+a, next two characters
+10 with
+b, and last two characters
+10 with
+b. Thus, we get
+abb.
+01010: Replace the characters
+010 with
+ab and the characters
+10 with
+b.

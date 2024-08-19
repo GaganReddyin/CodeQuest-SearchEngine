@@ -1,0 +1,96 @@
+C. Two Arrays
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two integers
+n
+and
+m
+. Calculate the number of pairs of arrays
+(a,b)
+such that:
+the length of both arrays is equal to
+m
+;
+each element of each array is an integer between
+1
+and
+n
+(inclusive);
+a
+i
+≤
+b
+i
+for any index
+i
+from
+1
+to
+m
+;
+array
+a
+is sorted in non-descending order;
+array
+b
+is sorted in non-ascending order.
+As the result can be very large, you should print it modulo
+10
+9
++7
+.
+Input
+The only line contains two integers
+n
+and
+m
+(
+1≤n≤1000
+,
+1≤m≤10
+).
+Output
+Print one integer – the number of arrays
+a
+and
+b
+satisfying the conditions described above modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+2 2
+output
+Copy
+5
+input
+Copy
+10 1
+output
+Copy
+55
+input
+Copy
+723 9
+output
+Copy
+157557417
+Note
+In the first test there are
+5
+suitable arrays:
+a=[1,1],b=[2,2]
+;
+a=[1,2],b=[2,2]
+;
+a=[2,2],b=[2,2]
+;
+a=[1,1],b=[2,1]
+;
+a=[1,1],b=[1,1]
+.

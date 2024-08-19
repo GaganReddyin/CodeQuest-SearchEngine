@@ -1,0 +1,157 @@
+D. Maximum Subarray
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+, consisting of
+n
+integers. You are also given two integers
+k
+and
+x
+.
+You have to perform the following operation exactly once: add
+x
+to the elements on exactly
+k
+distinct positions, and subtract
+x
+from all the others.
+For example, if
+a=[2,−1,2,3]
+,
+k=1
+,
+x=2
+, and we have picked the first element, then after the operation the array
+a=[4,−3,0,1]
+.
+Let
+f(a)
+be the maximum possible sum of a subarray of
+a
+. The subarray of
+a
+is a contiguous part of the array
+a
+, i. e. the array
+a
+i
+,
+a
+i+1
+,…,
+a
+j
+for some
+1≤i≤j≤n
+. An empty subarray should also be considered, it has sum
+0
+.
+Let the array
+a
+′
+be the array
+a
+after applying the aforementioned operation. Apply the operation in such a way that
+f(
+a
+′
+)
+is the maximum possible, and print the maximum possible value of
+f(
+a
+′
+)
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains three integers
+n
+,
+k
+and
+x
+(
+1≤n≤2⋅
+10
+5
+;
+0≤k≤min(20,n)
+;
+−
+10
+9
+≤x≤
+10
+9
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+).
+The sum of
+n
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer — the maximum possible value of
+f(
+a
+′
+)
+.
+Example
+input
+Copy
+4
+4 1 2
+2 -1 2 3
+2 2 3
+-1 2
+3 0 5
+3 2 4
+6 2 -8
+4 -1 9 -3 7 -8
+output
+Copy
+5
+7
+0
+44

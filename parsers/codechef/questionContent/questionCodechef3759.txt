@@ -1,0 +1,81 @@
+City Mapping 2
+Problem
+Salmon is going on holiday, and he decides to go to Silvermill after taking the advice of his good friend Peanut. Unfortunately, his computer is broken, and so he cannot Google for the map.
+Silvermill is a city consisting of
+N road junctions, numbered from
+1 to
+N, and
+N−1 roads. The city is fully connected, meaning it is possible to travel from every road junction to every other road junction using the roads in the city. The government building is also at one road junction, which is considered a special road junction. Hence, the road network forms a rooted tree with nodes are road junctions and edges as roads. In addition, there are no more than three roads connected to each junction in the city.
+Salmon needs to obtain a map of Silvermill. It suffices to find the parent of each node in the tree. If the node is the root, then its parent is -1.
+To find the map of the city, he has hired a cartographer who can answer the following question: “what is the lowest common ancestor of nodes
+X and
+Y?” The cartographer answers this question at most
+Q times before quitting his job.
+Help Salmon! Using at most
+Q queries to the lowest common ancestor of two nodes, recover the tree!
+Interaction format
+The first line of input will contain
+T, number of testcases. Then the testcases follow.
+For each testcase, the input contains one line containing
+N, the number of nodes in the tree, and
+Q, the maximum number of queries you are allowed to ask.
+To query the lowest common ancestor of a pair of nodes
+(x,y), output ? x y. This uses up one query. If either of the two nodes is out of the range
+[1,N] or you have exceeded the query limit
+Q, the judge replies -1 exiting with a wrong answer verdict and you should terminate your program immediately. Otherwise, the judge outputs the LCA of the two nodes.
+When you have the answer, output ! followed by
+N space-separated integers. The
+i-th integer should be the parent of node
+i in the tree (-1 if
+i is the root). Note that this is not counted as a query. If the parent values are correct, the judge outputs a single integer,
+1 and you should process the next testcase(if any). Otherwise, the judge outputs
+−1 and returns with a wrong answer verdict. In this case, you should terminate your program immediately.
+Constraints
+T=5
+1≤N≤1000
+1≤Q≤25000
+For each query, the two nodes you query should be in the range
+[1,N].
+For each answer, all the parent values should be in the range
+[1,N] or equal to -1.
+There are at most three roads connected to each junction.
+The grader is not adaptive.
+Subtasks
+Subtask 1 [15 points] :
+1≤N≤100,Q=5000
+Subtask 2 [25 points]:
+Q=25000. Each junction has at most two roads connected to it.
+Subtask 3 [60 points]:
+Q=25000.
+Sample Interaction:
+Below is an example in which there are two testcases both with
+N=3. In the first testcase, node
+1 is the root and nodes
+2 and
+3 are its children. In the second testcase, node
+2 is the root. The parent of node
+1 is node
+2 and that of node
+3 is node
+1.
+You             Judge
+                2          // T
+                3 4        //  N, Q for the first testcase
+? 1 2
+                1          // LCA(1, 2) = 1
+? 2 3
+                1          // LCA(2, 3) = 1
+! -1 1 1
+                1          // Judge replies that your answer
+                           // is correct
+                
+                3 3        //  N, Q for the second testcase
+? 1 2
+                2          // LCA(1, 2) = 2
+? 2 3
+                2          // LCA(2, 3) = 2
+? 3 1
+                1          // LCA(3, 1) = 1
+! 2 -1 1
+                1          // Judge replies that your answer
+                           // is correct

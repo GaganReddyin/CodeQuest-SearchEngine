@@ -1,0 +1,51 @@
+Alternating Work Days
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+Alice and Bob are two friends. Initially, the skill levels of them are zero. They work on alternative days, i.e one of Alice and Bob works on the odd-numbered days
+(1,3,5,…) and the other works on the even-numbered days
+(2,4,6,…). The skill levels of Alice and Bob increase by
+A,B respectively on the days they work.
+Determine if it is possible that the skill levels of Alice and Bob become exactly
+P,Q respectively on some day.
+Input Format
+The first line contains an integer
+T, denoting the number of test cases. The
+T test cases then follow:
+The first and only line of each test case contains four space-separated integers
+A,B,P,Q.
+Output Format
+For each test case, print YES if it is possible that the skill levels of Alice and Bob become exactly
+P,Q on some day, otherwise print NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+Constraints
+1≤T≤10
+3
+1≤A,B,P,Q≤10
+9
+Subtasks
+Subtask 1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+4
+1 2 1 2
+1 2 3 2
+4 3 4 6
+3 5 9 25
+YES
+NO
+YES
+NO
+Explanation:
+Test Case
+1: Alice works on the first day and gains skill level
+1. Bob works on the second day and gains skill level
+2.
+Test Case
+2: There is no possible way that the skill levels of Alice and Bob become
+3 and
+2 respectively.
+Test Case
+3: Bob works on the first and third day and Alice works on the second day. Hence after the third day, the skill levels of Alice and Bob become
+1⋅4=4 and
+2⋅3=6 respectively.

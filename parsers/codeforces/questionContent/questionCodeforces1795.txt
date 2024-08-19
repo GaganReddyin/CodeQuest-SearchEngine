@@ -1,0 +1,115 @@
+F. Swapping Problem
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given 2 arrays
+a
+and
+b
+, both of size
+n
+. You can swap two elements in
+b
+at most once (or leave it as it is), and you are required to minimize the value
+∑
+i
+|
+a
+i
+−
+b
+i
+|.
+∑
+|
+b
+|
+Find the minimum possible value of this sum.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+9
+).
+Output
+Output the minimum value of
+∑
+i
+|
+a
+i
+−
+b
+i
+|
+.
+Examples
+input
+Copy
+5
+5 4 3 2 1
+1 2 3 4 5
+output
+Copy
+4
+input
+Copy
+2
+1 3
+4 2
+output
+Copy
+2
+Note
+In the first example, we can swap the first and fifth element in array
+b
+, so that it becomes
+[5,2,3,4,1]
+.
+Therefore, the minimum possible value of this sum would be
+|5−5|+|4−2|+|3−3|+|2−4|+|1−1|=4
+.
+In the second example, we can swap the first and second elements. So, our answer would be
+2
+.

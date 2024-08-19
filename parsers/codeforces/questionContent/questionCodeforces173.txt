@@ -1,0 +1,192 @@
+E1. Unforgivable Curse (easy version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an easy version of the problem. In this version,
+k
+is always
+3
+.
+The chief wizard of the Wizengamot once caught the evil wizard Drahyrt, but the evil wizard has returned and wants revenge on the chief wizard. So he stole spell
+s
+from his student Harry.
+The spell — is a
+n
+-length string of lowercase Latin letters.
+Drahyrt wants to replace spell with an unforgivable curse — string
+t
+.
+Drahyrt, using ancient magic, can swap letters at a distance
+k
+or
+k+1
+in spell as many times as he wants. In this version of the problem, you can swap letters at a distance of
+3
+or
+4
+. In other words, Drahyrt can change letters in positions
+i
+and
+j
+in spell
+s
+if
+|i−j|=3
+or
+|i−j|=4
+.
+For example, if
+s=
+"talant" and
+t=
+"atltna", Drahyrt can act as follows:
+swap the letters at positions
+1
+and
+4
+to get spell "aaltnt".
+swap the letters at positions
+2
+and
+6
+to get spell "atltna".
+You are given spells
+s
+and
+t
+. Can Drahyrt change spell
+s
+to
+t
+?
+Input
+The first line of input gives a single integer
+T
+(
+1≤T≤
+10
+4
+) — the number of test cases in the test.
+Descriptions of the test cases are follow.
+The first line contains two integers
+n,k
+(
+1≤n≤2⋅
+10
+5
+,
+k=3
+) — the length spells and the number
+k
+such that Drahyrt can change letters in a spell at a distance
+k
+or
+k+1
+.
+The second line gives spell
+s
+ — a string of length
+n
+consisting of lowercase Latin letters.
+The third line gives spell
+t
+ — a string of length
+n
+consisting of lowercase Latin letters.
+It is guaranteed that the sum of
+n
+values over all test cases does not exceed
+2⋅
+10
+5
+. Note that there is no limit on the sum of
+k
+values over all test cases.
+Output
+For each test case, output on a separate line "YES" if Drahyrt can change spell
+s
+to
+t
+and "NO" otherwise.
+You can output the answer in any case (for example, lines "yEs", "yes", "Yes" and "YES" will be recognized as positive answer).
+Example
+input
+Copy
+7
+6 3
+talant
+atltna
+7 3
+abacaba
+aaaabbc
+12 3
+abracadabraa
+avadakedavra
+5 3
+accio
+cicao
+5 3
+lumos
+molus
+4 3
+uwjt
+twju
+4 3
+kvpx
+vxpk
+output
+Copy
+YES
+YES
+NO
+YES
+NO
+YES
+NO
+Note
+The first example is explained in the condition.
+In the second example we can proceed as follows:
+Swap the letters at positions
+2
+and
+5
+(distance
+3
+), then we get the spell "aaacbba".
+Swap the letters at positions
+4
+and
+7
+(distance
+3
+), then you get the spell "aaaabbc".
+In the third example, we can show that it is impossible to get the string
+t
+from the string
+s
+by swapping the letters at a distance of
+3
+or
+4
+.
+In the fourth example, for example, the following sequence of transformations is appropriate:
+"accio"
+→
+"aocic"
+→
+"cocia"
+→
+"iocca"
+→
+"aocci"
+→
+"aicco"
+→
+"cicao"
+In the fifth example, you can show that it is impossible to get the string
+s
+from the string
+t
+.
+In the sixth example, it is enough to swap the two outermost letters.

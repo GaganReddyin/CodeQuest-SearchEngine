@@ -1,0 +1,113 @@
+Hopscotch
+Problem
+"We’ve already come too far to end this now".
+N players advance to the fifth round and the game is going to be Hopscotch. Every player has to select one mannequin before the start of the game.
+Players are numbered
+1 to
+N. You are given an array
+A of size
+N, where
+If
+A
+i
+=i, the
+i
+th
+player selects their own mannequin.
+If
+A
+i
+=j where
+j
+
+=i, the
+i
+th
+player decides the mannequin for the
+j
+th
+player.
+If
+A
+i
+=0, the
+i
+th
+player hasn’t decided yet.
+The VIPs want to know the number of ways that the undecided players can select mannequins such that everyone gets a mannequin, and no undecided players select their own mannequin.
+It is guaranteed that every (non-zero) element in
+A is unique, i.e, if
+1≤i,j≤N are such that
+i
+
+=j,A
+i
+>0, and
+A
+j
+>0, then
+A
+i
+
+=A
+j
+.
+Since the answer can be very large, print it modulo
+10
+9
++7.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N denoting the number of players.
+The second line contains
+N space-separated integers, the
+i
+th
+of which is
+A
+i
+as described in the statement above.
+Output Format
+For every test case, print one line containing the number of ways undecided players can select mannequins for others such that everyone receives a mannequin, modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+3
+0≤A
+i
+≤N
+The non-zero elements of
+A are distinct.
+Sample 1:
+Input
+Output
+3 
+5 
+1 2 3 4 5 
+6 
+3 6 1 0 0 0 
+10 
+0 0 0 0 0 0 0 0 0 0
+0 
+3 
+1334961
+Explanation:
+Test Case 1: There is no undecided player, so the number of ways is
+0.
+Test Case 2: There are
+3 ways for the last
+3 players to decide mannequins, all of which are listed below:
+4→2,5→4,6→5
+4→5,5→4,6→2
+4→5,5→2,6→4
+where
+a→b means that
+a selects the mannequin for
+b.

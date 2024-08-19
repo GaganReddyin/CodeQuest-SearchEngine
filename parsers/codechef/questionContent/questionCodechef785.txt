@@ -1,0 +1,67 @@
+Permutation Creation
+Problem
+JJ gives you a number
+N and challenges you to construct a permutation
+P of length
+N such that:
+∣P
+i+1
+−P
+i
+∣≥2 for all
+1≤i≤N−1 (Here
+∣x∣ denotes the absolute value of
+x)
+Can you complete JJ's challenge?
+As a reminder, a permutation of length
+N is an array where every integer from
+1 to
+N occurs exactly once.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains one integer
+N — the length of the permutation
+P to be constructed.
+Output Format
+For each test case, output
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+denoting the permutation
+P which satisfies the given conditions.
+If no such permutation exists, output
+−1.
+If there are multiple answers, print any.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+2
+2
+6
+-1
+1 4 2 5 3 6
+Explanation:
+Test Case 1: It can be proven that no permutation of length
+2 exists that satisfies the given conditions.
+Test Case 2:
+[1,4,2,5,3,6] satisfies the given condition, since
+∣P
+i+1
+−P
+i
+∣≥2 for all
+1≤i≤N−1

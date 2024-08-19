@@ -1,0 +1,113 @@
+D. Arkady and Rectangles
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Arkady has got an infinite plane painted in color
+0
+. Then he draws
+n
+rectangles filled with paint with sides parallel to the Cartesian coordinate axes, one after another. The color of the
+i
+-th rectangle is
+i
+(rectangles are enumerated from
+1
+to
+n
+in the order he draws them). It is possible that new rectangles cover some of the previous ones completely or partially.
+Count the number of different colors on the plane after Arkady draws all the rectangles.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤100000
+) — the number of rectangles.
+The
+i
+-th of the next
+n
+lines contains
+4
+integers
+x
+1
+,
+y
+1
+,
+x
+2
+and
+y
+2
+(
+−
+10
+9
+≤
+x
+1
+<
+x
+2
+≤
+10
+9
+,
+−
+10
+9
+≤
+y
+1
+<
+y
+2
+≤
+10
+9
+) — the coordinates of corners of the
+i
+-th rectangle.
+Output
+In the single line print the number of different colors in the plane, including color
+0
+.
+Examples
+input
+Copy
+5
+-1 -1 1 1
+-4 0 0 4
+0 0 4 4
+-4 -4 0 0
+0 -4 4 0
+output
+Copy
+5
+input
+Copy
+4
+0 0 4 4
+-4 -4 0 0
+0 -4 4 0
+-2 -4 2 4
+output
+Copy
+5
+Note
+That's how the plane looks in the first sample
+That's how the plane looks in the second sample
+0
+= white,
+1
+= cyan,
+2
+= blue,
+3
+= purple,
+4
+= yellow,
+5
+= red.

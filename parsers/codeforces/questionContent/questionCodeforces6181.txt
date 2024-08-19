@@ -1,0 +1,46 @@
+D. LCS Again
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string S of length n with each character being one of the first m lowercase English letters.
+Calculate how many different strings T of length n composed from the first m lowercase English letters exist such that the length of LCS (longest common subsequence) between S and T is n - 1.
+Recall that LCS of two strings S and T is the longest string C such that C both in S and T as a subsequence.
+Input
+The first line contains two numbers n and m denoting the length of string S and number of first English lowercase characters forming the character set for strings (1 ≤ n ≤ 100 000, 2 ≤ m ≤ 26).
+The second line contains string S.
+Output
+Print the only line containing the answer.
+Examples
+input
+Copy
+3 3
+aaa
+output
+Copy
+6
+input
+Copy
+3 3
+aab
+output
+Copy
+11
+input
+Copy
+1 2
+a
+output
+Copy
+1
+input
+Copy
+10 9
+abacadefgh
+output
+Copy
+789
+Note
+For the first sample, the 6 possible strings T are: aab, aac, aba, aca, baa, caa.
+For the second sample, the 11 possible strings T are: aaa, aac, aba, abb, abc, aca, acb, baa, bab, caa, cab.
+For the third sample, the only possible string T is b.

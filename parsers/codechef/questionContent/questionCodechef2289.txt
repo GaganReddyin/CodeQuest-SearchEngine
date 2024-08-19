@@ -1,0 +1,59 @@
+Shifted Palindrome
+Problem
+Read problems statements in Mandarin chinese and Vietnamese as well.
+You are given a string
+S. A cyclic shift of
+S is a string formed by moving a number of characters from the beginning of
+S to its end (in the same order). Formally, for an integer
+k (
+0≤k<N), the
+k-th cyclic shift is a string
+R with length
+N such that:
+R
+i
+=S
+i+k
+for each
+1≤i≤N−k
+R
+i
+=S
+i−N+k
+for each
+N−k+1≤i≤N
+A string is palindromic if it is equal to its own reverse string.
+Compute the number of palindromic cyclic shifts of the given string.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single string
+S.
+Output
+For each test case, print a single line containing one integer — the number of palindromic shifts.
+Constraints
+1≤T≤1,000
+1≤∣S∣≤2⋅10
+5
+∣S∣ contains only lowercase English letters
+the sum of
+∣S∣ in all test cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask #1 (20 points): the sum of
+∣S∣ in all test cases does not exceed
+100
+Subtask #2 (20 points): the sum of
+∣S∣ in all test cases does not exceed
+5,000
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+1
+aabb
+2
+Explanation:
+Example case 1: The two palindromic cyclic shifts of "aabb" are "abba" and "baab".

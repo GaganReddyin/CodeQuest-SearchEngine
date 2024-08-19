@@ -1,0 +1,168 @@
+B. Valerii Against Everyone
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're given an array
+b
+of length
+n
+. Let's define another array
+a
+, also of length
+n
+, for which
+a
+i
+=
+2
+b
+i
+(
+1≤i≤n
+).
+Valerii says that every two non-intersecting subarrays of
+a
+have different sums of elements. You want to determine if he is wrong. More formally, you need to determine if there exist four integers
+l
+1
+,
+r
+1
+,
+l
+2
+,
+r
+2
+that satisfy the following conditions:
+1≤
+l
+1
+≤
+r
+1
+<
+l
+2
+≤
+r
+2
+≤n
+;
+a
+l
+1
++
+a
+l
+1
++1
++…+
+a
+r
+1
+−1
++
+a
+r
+1
+=
+a
+l
+2
++
+a
+l
+2
++1
++…+
+a
+r
+2
+−1
++
+a
+r
+2
+.
+If such four integers exist, you will prove Valerii wrong. Do they exist?
+An array
+c
+is a subarray of an array
+d
+if
+c
+can be obtained from
+d
+by deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100
+). Description of the test cases follows.
+The first line of every test case contains a single integer
+n
+(
+2≤n≤1000
+).
+The second line of every test case contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+0≤
+b
+i
+≤
+10
+9
+).
+Output
+For every test case, if there exist two non-intersecting subarrays in
+a
+that have the same sum, output YES on a separate line. Otherwise, output NO on a separate line.
+Also, note that each letter can be in any case.
+Example
+input
+Copy
+2
+6
+4 3 0 1 2 0
+2
+2 5
+output
+Copy
+YES
+NO
+Note
+In the first case,
+a=[16,8,1,2,4,1]
+. Choosing
+l
+1
+=1
+,
+r
+1
+=1
+,
+l
+2
+=2
+and
+r
+2
+=6
+works because
+16=(8+1+2+4+1)
+.
+In the second case, you can verify that there is no way to select to such subarrays.

@@ -1,0 +1,68 @@
+Equinox Strings
+Problem
+Sarthak and Anuradha are very good friends and are eager to participate in an event called Equinox. It is a game of words. In this game,
+N strings
+S
+1
+,…,S
+N
+are given. For each string
+S
+i
+, if it starts with one of the letters of the word “EQUINOX”, Sarthak gets
+A points and if not, Anuradha gets
+B points. The one who has more points at the end of the game wins. If they both the same number of points, the game is a draw..
+Print the winner of the game, if any, otherwise print “DRAW”.
+###Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains three integers
+N,
+A,
+B.
+N lines follow, each containing a string
+S
+i
+.
+All strings are in UPPERCASE.
+###Output
+For each test case, print “SARTHAK” (case insensitive) if he has more points than Anuradha, print “ANURADHA” (case insensitive) if she has more points than Sarthak, otherwise print “DRAW” (case insensitive), without the quotes.
+###Constraints
+1≤T≤100
+1≤N≤100
+1≤A,
+B≤10
+9
+1≤∣S
+i
+∣≤100
+###Subtasks Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+4 1 3
+ABBBCDDE
+EARTH
+INDIA
+UUUFFFDDD
+2 5 7
+SDHHD
+XOXOXOXO
+DRAW
+ANURADHA
+Explanation:
+Test case
+1: The strings which start with one of the letters of the word EQUINOX are
+{ EARTH, INDIA, UUUFFFDDD
+}. Thus, Sarthak gets
+1 point for each of these strings. In total, Sarthak gets
+3 points.
+On the other hand, there is one string that does not start with one of the letters of the word EQUINOX. Thus, Anuradha gets
+3 points for that string.
+Finally, since both of them have equal points, the game results in DRAW.
+Test case
+2: There is only one string that starts with one of the letters of the word EQUINOX which is XOXOXOXO. Thus, Sarthak gets
+5 point for this string. There is one string that does not start with one of the letters of the word EQUINOX. Thus, Anuradha gets
+7 points for that string.
+Finally, Anuradha has the higher score. So she is the winner.

@@ -1,0 +1,181 @@
+Dipole Moment
+Problem
+You are given a tree with
+N nodes, numbered from
+1 to
+N. It is rooted at node
+1.
+We call the simple path between node
+A and node
+B to be vertical if node
+A lies on the path from the root to
+B or node
+B lies on the path from the root to
+A. In other words, LCA (
+A,B) must be
+A or
+B. And in such cases, we define a node
+A to lie above node
+B in the tree if distance to
+A from the root is less than the distance from the root to
+B. Otherwise we define it to lie below
+B.
+You also have with you
+1 Proton and
+E Electrons (together called as particles) . And you need to place these in some nodes of the tree.
+Suppose we fix the proton to be at some node
+A. We then call a placement of electrons valid if the following conditions are met :-
+Each node can have at most one particle in it. Also, every particle should be placed in some node.
+Electrons can only be placed in nodes from which the simple path to
+A is vertical (that is, they should either be above
+A, or below
+A).
+At least
+X
+A
+nodes above
+A should contain an electron and at least
+Y
+A
+nodes below
+A should contain an electron.
+The Dipole moment for a valid placement of electrons is calculated as follows :-
+Consider the sum of distances from
+A to nodes which contain an electron and lie above
+A. Let this sum be
+S
+1
+.
+Similarly, consider the sum of distances from
+A to nodes which contain an electron and lie below
+A. Let this sum be
+S
+2
+.
+The Dipole Moment is then defined as |
+S
+1
+−S
+2
++Z
+A
+|, here
+Z
+A
+is the positive charge if the proton is placed at
+A. Here, |
+X| refers to the absolute value of
+X.
+For every
+A (
+1≤A≤N) print the minimum dipole moment you can achieve among all valid placement in which the node
+A contains the proton.
+In case there is no valid placement for a particular node
+A, print
+−1 for that.
+Note that the distance between two nodes is the number of edges in the simple path between them.
+###Input:
+The first line contains a single integer,
+T, which denotes the number of testcases.
+The first line of each testcase will contain two integers,
+N and
+E, which denote the number of nodes and number of electrons respectively.
+The next
+N−1 lines contain two integers
+u and
+v denoting that there’s an edge between
+u and
+v in the tree.
+The i-th of the next
+N lines contain 3 space separated integers ,
+X
+i
+,Y
+i
+,Z
+i
+###Output:
+Output
+T lines, where each line should be containing
+N space-separated integers, the
+A
+th
+integer should be the minimum dipole moment if the proton is placed at node
+A , or -1 if there is no valid placement.
+###Constraints
+1≤T≤5
+2≤N≤2∗10
+5
+1≤u,v≤N
+Sum of
+N over all testcases
+≤4∗10
+5
+1≤E≤N−1
+0≤∣Z
+i
+∣≤10
+6
+0≤X
+i
+,Y
+i
+<N
+0≤X
+i
++Y
+i
+≤E
+X
+A
+≤ number of nodes above
+A, for all
+A.
+Y
+A
+≤ number of nodes below
+A, for all
+A.
+###Subtasks
+15 points : sum of
+N over all testcases
+≤300
+25 points : sum of
+N over all testcases
+≤3000
+60 points : Original Constraints.
+###Sample Input:
+1
+13 2
+1 2
+2 3
+2 4
+2 5
+4 6
+4 7
+1 8
+8 9
+8 10
+8 12
+10 11
+1 13
+0 1 5
+0 0 0
+1 0 4
+2 0 -3
+1 0 -8
+2 0 -6
+2 0 3
+0 2 0
+1 0 -4
+2 0 7
+0 0 2
+0 0 10
+1 0 -2
+###Sample Output:
+0 0 7 0 5 1 6 2 1 10 5 13 -1
+###Explanation: With the proton fixed at node
+1, we can achieve a dipole moment of
+0 by placing the electrons at nodes
+2 and
+12 for instance.

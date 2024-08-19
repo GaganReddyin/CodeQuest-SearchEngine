@@ -1,0 +1,90 @@
+Second Player
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+There are
+N players participating in a knockout tournament. The
+i-th player has the rating
+A
+i
+. No two players have the same rating.
+N−1 matches are played in the tournament. In each match,
+2 random players are chosen out of the remaining players, and the player with the higher rating wins. The losing player gets eliminated from the tournament.
+Can you find out the expected rating of the player ending up at the second position (that is, the expected rating of the player losing in the
+(N−1)-th match)?
+The expected rating of the second player can be represented as a fraction of the form
+Q
+P
+. You are required to print
+P⋅Q
+−1
+(mod1000000007).
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains
+N - the number of players participating in the tournament.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,⋯,A
+N
+- the ratings of the players.
+Output Format
+For each test case, output on a single line the expected rating of the second player modulo
+1000000007.
+Constraints
+1≤T≤500
+2≤N≤5⋅10
+5
+1≤A
+i
+≤10
+9
+A
+i
+
+=A
+j
+for all
+1≤i<j≤N
+The sum of
+N over all test cases does not exceed
+5⋅10
+5
+Sample 1:
+Input
+Output
+2
+2
+1 2
+3
+1 2 3
+1
+666666673
+Explanation:
+Test Case
+1: There is only one possible match, and the player with rating
+=1 will be the second player.
+Test Case
+2: The player with rating
+=1 will be the second player with probability
+3
+1
+. The player with rating
+=2 will be the second player with probability
+3
+2
+. Therefore, the expected rating of the second player is
+1⋅
+3
+1
++2⋅
+3
+2
+=
+3
+5
+.

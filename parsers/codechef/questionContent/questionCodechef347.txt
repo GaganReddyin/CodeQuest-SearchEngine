@@ -1,0 +1,119 @@
+Existence
+Problem
+Chef has two variables
+X and
+Y. He wants to find out whether the variables satisfy the equation:
+X
+4
++4⋅Y
+2
+=4⋅X
+2
+⋅Y
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two integers
+X and
+Y, as mentioned in statement.
+Output Format
+For each test case, output YES if the variables
+X and
+Y satisfy the given equation, NO otherwise.
+You may print each character in uppercase or lowercase. For example, Yes, YES, yes, and YeS are all considered the same.
+Constraints
+1≤T≤1000
+1≤X≤10
+9
+1≤Y≤10
+18
+Sample 1:
+Input
+Output
+5
+2 2
+4 4
+3 6
+8 32
+200000000 20000000000000000
+YES
+NO
+NO
+YES
+YES
+Explanation:
+Test case
+1: Given
+X=2 and
+Y=2. Here,
+2
+4
++4⋅2
+2
+=4⋅2
+2
+⋅2=32.
+Test case
+2: Given
+X=4 and
+Y=4. Here,
+4
+4
++4⋅4
+2
+=320 which is not equal to
+4⋅4
+2
+⋅4=256.
+Test case
+3: Given
+X=3 and
+Y=6. Here,
+3
+4
++4⋅6
+2
+=225 which is not equal to
+4⋅3
+2
+⋅6=216.
+Test case
+4: Given
+X=8 and
+Y=32. Here,
+8
+4
++4⋅32
+2
+=8192 which is equal to
+4⋅8
+2
+⋅32=8192.
+Test case
+5: Given
+X=2⋅10
+8
+and
+Y=2⋅10
+16
+. Here,
+(2⋅10
+8
+)
+4
++4⋅(2⋅10
+16
+)
+2
+=32⋅10
+32
+which is equal to
+4⋅(2⋅10
+8
+)
+2
+⋅(2⋅10
+16
+)=32⋅10
+32
+.

@@ -1,0 +1,170 @@
+F. Tower Defense
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Monocarp is playing a tower defense game. A level in the game can be represented as an OX axis, where each lattice point from
+1
+to
+n
+contains a tower in it.
+The tower in the
+i
+-th point has
+c
+i
+mana capacity and
+r
+i
+mana regeneration rate. In the beginning, before the
+0
+-th second, each tower has full mana. If, at the end of some second, the
+i
+-th tower has
+x
+mana, then it becomes
+min(x+
+r
+i
+,
+c
+i
+)
+mana for the next second.
+There are
+q
+monsters spawning on a level. The
+j
+-th monster spawns at point
+1
+at the beginning of
+t
+j
+-th second, and it has
+h
+j
+health. Every monster is moving
+1
+point per second in the direction of increasing coordinate.
+When a monster passes the tower, the tower deals
+min(H,M)
+damage to it, where
+H
+is the current health of the monster and
+M
+is the current mana amount of the tower. This amount gets subtracted from both monster's health and tower's mana.
+Unfortunately, sometimes some monsters can pass all
+n
+towers and remain alive. Monocarp wants to know what will be the total health of the monsters after they pass all towers.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of towers.
+The
+i
+-th of the next
+n
+lines contains two integers
+c
+i
+and
+r
+i
+(
+1≤
+r
+i
+≤
+c
+i
+≤
+10
+9
+) — the mana capacity and the mana regeneration rate of the
+i
+-th tower.
+The next line contains a single integer
+q
+(
+1≤q≤2⋅
+10
+5
+) — the number of monsters.
+The
+j
+-th of the next
+q
+lines contains two integers
+t
+j
+and
+h
+j
+(
+0≤
+t
+j
+≤2⋅
+10
+5
+;
+1≤
+h
+j
+≤
+10
+12
+) — the time the
+j
+-th monster spawns and its health.
+The monsters are listed in the increasing order of their spawn time, so
+t
+j
+<
+t
+j+1
+for all
+1≤j≤q−1
+.
+Output
+Print a single integer — the total health of all monsters after they pass all towers.
+Examples
+input
+Copy
+3
+5 1
+7 4
+4 2
+4
+0 14
+1 10
+3 16
+10 16
+output
+Copy
+4
+input
+Copy
+5
+2 1
+4 1
+5 4
+7 5
+8 3
+9
+1 21
+2 18
+3 14
+4 24
+5 8
+6 25
+7 19
+8 24
+9 24
+output
+Copy
+40

@@ -1,0 +1,117 @@
+English
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is learning English. So far, he knows
+N words, and he wants to write a verse.
+Let's call a pair of English words a stanza. A verse is a list of stanzas. The prefixal rhyme of a stanza is the longest common prefix of the words in it. Similarly, the suffixal rhyme of a stanza is the longest common suffix of the words in it. The beauty of a stanza whose prefixal and suffixal rhymes have lengths
+l
+p
+and
+l
+s
+respectively is
+min(l
+p
+,l
+s
+)
+2
+.
+For example, a stanza formed by the words "abcdefghijkl" and "abcxyzhijkl" has a prefixal rhyme "abc" (with length
+3), suffixal rhyme "hijkl" (with length
+5) and beauty
+min(3,5)
+2
+=3
+2
+=9.
+The beauty of a verse is the sum of beauties of all its stanzas. For example, the beauty of the verse (("abcdefghijkl", "abcxyzhijkl"), ("world", "word"), ("code", "chef")) is
+9+1+0=10.
+You are given
+N words
+W
+1
+,W
+2
+,…,W
+N
+(they are not necessarily distinct). Help Chef write the most beautiful verse. It is not necessary to use all the words, but each word may be used at most once in the whole verse (more precisely, each element of the sequence
+W may be used only once, but if some word appears
+k times in
+W, we can use it up to
+k times).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains a single string
+W
+i
+.
+Output
+For each test case, print a single line containing one integer ― the greatest possible beauty of Chef's verse.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤∣W
+i
+∣≤10
+5
+for each valid
+i
+all words contain only lowercase English letters
+the sum of
+∣W
+1
+∣+∣W
+2
+∣+…+∣W
+N
+∣ over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (50 points): all words are palindromes
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+6
+abcdefghijkl
+chef
+world
+code
+abcxyzhijkl
+word
+4
+problem
+poem
+problem
+problem
+3
+contest
+coolest
+unused
+10
+50
+4
+Explanation:
+Example case 1: The best verse is (("abcdefghijkl", "abcxyzhijkl"), ("world", "word"), ("code", "chef")), which was described above.
+Example case 2: The best verse is (("problem", "problem"), ("problem", "poem")). Its beauty is
+7
+2
++1
+2
+=49+1=50. Note that we have three copies of the word "problem", so we can use it three times.
+Example case 3: The best verse is (("coolest", "contest")), which contains only one stanza. Its beauty is
+2
+2
+=4. Note that it is not necessary to use all the words ? the word "unused" is left unused.

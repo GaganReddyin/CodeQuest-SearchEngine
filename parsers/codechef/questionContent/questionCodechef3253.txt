@@ -1,0 +1,22 @@
+Numbers Game
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef Dobby loves playing games, especially games related to numbers. So, today Bhuvan gave him a new game. The description of the game goes as follows :
+Consider an array A of N non-negative integers. You can do the following move any number of times, pick two numbers from the array (x, y), such that x ≥ y and convert them into (x - y, 2 * y). The aim of the game is to make the array contains exactly (N - 1) zeros. If Dobby achieves this, after any number of steps, he wins the game.
+Bhuvan wants to know the odds to choose an initial array satisfying for every index i, the condition 0 ≤ A[i] ≤ B[i] where B is given in input and Dobby wins the game with such an array. So please help him counting the number of such arrays, since the answer can be very large, output the answer modulo 109 + 7.
+Input section
+The first line contains N, denoting the number of elements in the array.
+Next line contains N space separated integers, denoting the elements of the array.
+Output section
+Output the number of possible winning arrays modulo 109 + 7.
+Input constraints
+2 ≤ N ≤ 50
+0 ≤ B[i] ≤ 50, where B[i] denotes the ith element of the array.
+Sample Input
+3
+2 0 1
+Sample Output
+4
+Explanation
+The possible winning arrays are (1, 0, 0), (0, 0, 1), (2, 0, 0) and (1, 0, 1).
+Let us consider why array (2, 0, 1) is losing. The only move is 2 pick the pair (2, 1). After applying the operation, we get the pair (1, 2). Thus, only the order of elements in the array change and we are in a situation of deadlock. Thus, Chef Dobby can't convert the array to contain 2 zeros.

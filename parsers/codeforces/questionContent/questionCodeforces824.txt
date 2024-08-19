@@ -1,0 +1,192 @@
+H. Gambling
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Marian is at a casino. The game at the casino works like this.
+Before each round, the player selects a number between
+1
+and
+10
+9
+. After that, a dice with
+10
+9
+faces is rolled so that a random number between
+1
+and
+10
+9
+appears. If the player guesses the number correctly their total money is doubled, else their total money is halved.
+Marian predicted the future and knows all the numbers
+x
+1
+,
+x
+2
+,…,
+x
+n
+that the dice will show in the next
+n
+rounds.
+He will pick three integers
+a
+,
+l
+and
+r
+(
+l≤r
+). He will play
+r−l+1
+rounds (rounds between
+l
+and
+r
+inclusive). In each of these rounds, he will guess the same number
+a
+. At the start (before the round
+l
+) he has
+1
+dollar.
+Marian asks you to determine the integers
+a
+,
+l
+and
+r
+(
+1≤a≤
+10
+9
+,
+1≤l≤r≤n
+) such that he makes the most money at the end.
+Note that during halving and multiplying there is no rounding and there are no precision errors. So, for example during a game, Marian could have money equal to
+1
+1024
+,
+1
+128
+,
+1
+2
+,
+1
+,
+2
+,
+4
+, etc. (any value of
+2
+t
+, where
+t
+is an integer of any sign).
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of rounds.
+The second line of each test case contains
+n
+integers
+x
+1
+,
+x
+2
+,…,
+x
+n
+(
+1≤
+x
+i
+≤
+10
+9
+), where
+x
+i
+is the number that will fall on the dice in the
+i
+-th round.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output three integers
+a
+,
+l
+, and
+r
+such that Marian makes the most amount of money gambling with his strategy. If there are multiple answers, you may output any of them.
+Example
+input
+Copy
+4
+5
+4 4 3 4 4
+5
+11 1 11 1 11
+1
+1000000000
+10
+8 8 8 9 9 6 6 9 6 6
+output
+Copy
+4 1 5
+1 2 2
+1000000000 1 1
+6 6 10
+Note
+For the first test case, the best choice is
+a=4
+,
+l=1
+,
+r=5
+, and the game would go as follows.
+Marian starts with one dollar.
+After the first round, he ends up with
+2
+dollars because the numbers coincide with the chosen one.
+After the second round, he ends up with
+4
+dollars because the numbers coincide again.
+After the third round, he ends up with
+2
+dollars because he guesses
+4
+even though
+3
+is the correct choice.
+After the fourth round, he ends up with
+4
+dollars again.
+In the final round, he ends up
+8
+dollars because he again guessed correctly.
+There are many possible answers for the second test case, but it can be proven that Marian will not end up with more than
+2
+dollars, so any choice with
+l=r
+with the appropriate
+a
+is acceptable.

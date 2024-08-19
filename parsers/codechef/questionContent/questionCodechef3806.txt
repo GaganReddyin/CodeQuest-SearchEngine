@@ -1,0 +1,103 @@
+D-Function
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Dr.D is tired of making up stories, so here is the formal description of this problem :
+You are given a set
+S={S
+1
+,S
+2
+,…,S
+K
+}, an integer
+X and a sequence
+A
+1
+,A
+2
+,…,A
+M
+. Let's define an infinite sequence
+W
+1
+,W
+2
+,…: for each valid
+i,
+W
+i
+=A
+((i−1)%M)+1
+. Then, let's define a function
+F(i) for any non-negative integer
+i in the following way:
+F(0)=X
+if
+i∈S,
+F(i)=0
+otherwise, for
+i
+
+=0,
+F(i)=(∑
+j=1
+i
+F(i−j)⋅W
+j
+)%(10
+9
++7)
+Find the value of
+F(N).
+Input
+The first line of the input contains four space-separated integers
+X,
+K,
+M and
+N.
+The second line contains
+K space-separated integers
+S
+1
+,S
+2
+,…,S
+K
+.
+The third line contains
+M space-separated integers
+A
+1
+,A
+2
+,…,A
+M
+.
+Output
+Print a single line containing one integer
+F(N).
+Constraints
+0≤X<10
+9
++7
+0≤K≤200
+1≤M≤200
+0≤N≤10
+18
+0≤A
+i
+<10
+9
++7 for each valid
+i
+1≤S
+i
+≤N for each valid
+i
+Sample 1:
+Input
+Output
+3 1 3 5
+4
+2 3 1
+231

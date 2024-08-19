@@ -1,0 +1,36 @@
+Wingardium Leviosa
+Problem
+“It's leviOsa, not levioSA!”
+Hermione did the "swish and flick" to levitate the feather. Ron being annoyed ask her to solve a different task.
+Ron ask her Q queries. In each query he provides her a value N and ask her to find F(N).
+$$F(N) = \sum\limits_{R = 0}^{\lfloor \frac{N}{2} \rfloor} \Biggl( \binom{N}{R} - \binom{N - R}{R} \Biggl)$$, where $$\binom{n}{r} = \frac{n!}{r! * (n - r)!}$$
+As Hermione is busy learning new spells, she seeks for your help.Help her in finding F(N) for each query.As the value of F(N) can be very large, output F(N)%(106 + 3).
+Input
+The first line of the input contains an integer Q denoting the number of queries.
+Each of the next Q lines contains an integer N.
+Output
+Output F(N)%(106 + 3) for each query in a seaparate line.
+Constraints
+1 ≤ Q ≤ 105
+1 ≤ N ≤ 109
+Example
+Input:
+4
+1
+2
+3
+4
+Output:
+0
+1
+1
+6
+Explanation
+Example case 1.
+N = 1, F(1) = C(1, 0) - C(1, 0) = 0
+Example case 2.
+N = 2, F(2) = (C(2, 0) - C(2, 0)) + (C(2, 1) - C(1, 1)) = 0 + 1 = 1
+Example case 3.
+N = 3, F(3) = (C(3, 0) - C(3, 0)) + (C(3, 1) - C(2, 1)) = 0 + 1 = 1
+Example case 4.
+N = 4, F(4) = (C(4, 0) - C(4, 0)) + (C(4, 1) - C(3, 1)) + (C(4, 2) - C(2, 2)) = 0 + 1 + 5 = 6

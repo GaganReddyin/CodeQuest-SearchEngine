@@ -1,0 +1,150 @@
+C. Nezzar and Symmetric Array
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Long time ago there was a symmetric array
+a
+1
+,
+a
+2
+,…,
+a
+2n
+consisting of
+2n
+distinct integers. Array
+a
+1
+,
+a
+2
+,…,
+a
+2n
+is called symmetric if for each integer
+1≤i≤2n
+, there exists an integer
+1≤j≤2n
+such that
+a
+i
+=−
+a
+j
+.
+For each integer
+1≤i≤2n
+, Nezzar wrote down an integer
+d
+i
+equal to the sum of absolute differences from
+a
+i
+to all integers in
+a
+, i. e.
+d
+i
+=
+∑
+2n
+j=1
+|
+a
+i
+−
+a
+j
+|
+.
+Now a million years has passed and Nezzar can barely remember the array
+d
+and totally forget
+a
+. Nezzar wonders if there exists any symmetric array
+a
+consisting of
+2n
+distinct integers that generates the array
+d
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+The second line of each test case contains
+2n
+integers
+d
+1
+,
+d
+2
+,…,
+d
+2n
+(
+0≤
+d
+i
+≤
+10
+12
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, print "YES" in a single line if there exists a possible array
+a
+. Otherwise, print "NO".
+You can print letters in any case (upper or lower).
+Example
+input
+Copy
+6
+2
+8 12 8 12
+2
+7 7 9 11
+2
+7 11 7 11
+1
+1 1
+4
+40 56 48 40 80 56 80 48
+6
+240 154 210 162 174 154 186 240 174 186 162 210
+output
+Copy
+YES
+NO
+NO
+NO
+NO
+YES
+Note
+In the first test case,
+a=[1,−3,−1,3]
+is one possible symmetric array that generates the array
+d=[8,12,8,12]
+.
+In the second test case, it can be shown that there is no symmetric array consisting of distinct integers that can generate array
+d
+.

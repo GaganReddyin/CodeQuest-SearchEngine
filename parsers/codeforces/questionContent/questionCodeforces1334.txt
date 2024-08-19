@@ -1,0 +1,227 @@
+A. A.M. Deviation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A number
+a
+2
+is said to be the arithmetic mean of two numbers
+a
+1
+and
+a
+3
+, if the following condition holds:
+a
+1
++
+a
+3
+=2⋅
+a
+2
+.
+We define an arithmetic mean deviation of three numbers
+a
+1
+,
+a
+2
+and
+a
+3
+as follows:
+d(
+a
+1
+,
+a
+2
+,
+a
+3
+)=|
+a
+1
++
+a
+3
+−2⋅
+a
+2
+|
+.
+Arithmetic means a lot to Jeevan. He has three numbers
+a
+1
+,
+a
+2
+and
+a
+3
+and he wants to minimize the arithmetic mean deviation
+d(
+a
+1
+,
+a
+2
+,
+a
+3
+)
+. To do so, he can perform the following operation any number of times (possibly zero):
+Choose
+i,j
+from
+{1,2,3}
+such that
+i≠j
+and increment
+a
+i
+by
+1
+and decrement
+a
+j
+by
+1
+Help Jeevan find out the minimum value of
+d(
+a
+1
+,
+a
+2
+,
+a
+3
+)
+that can be obtained after applying the operation any number of times.
+Input
+The first line contains a single integer
+t
+(1≤t≤5000)
+ — the number of test cases.
+The first and only line of each test case contains three integers
+a
+1
+,
+a
+2
+and
+a
+3
+(1≤
+a
+1
+,
+a
+2
+,
+a
+3
+≤
+10
+8
+)
+.
+Output
+For each test case, output the minimum value of
+d(
+a
+1
+,
+a
+2
+,
+a
+3
+)
+that can be obtained after applying the operation any number of times.
+Example
+input
+Copy
+3
+3 4 5
+2 2 6
+1 6 5
+output
+Copy
+0
+1
+0
+Note
+Note that after applying a few operations, the values of
+a
+1
+,
+a
+2
+and
+a
+3
+may become negative.
+In the first test case,
+4
+is already the Arithmetic Mean of
+3
+and
+5
+.
+d(3,4,5)=|3+5−2⋅4|=0
+In the second test case, we can apply the following operation:
+(2,2,6)
+−
+→
+−
+−
+−
+−
+−
+−
+increment 
+a
+2
+decrement 
+a
+1
+(1,3,6)
+d(1,3,6)=|1+6−2⋅3|=1
+It can be proven that answer can not be improved any further.
+In the third test case, we can apply the following operations:
+(1,6,5)
+−
+→
+−
+−
+−
+−
+−
+−
+increment 
+a
+3
+decrement 
+a
+2
+(1,5,6)
+−
+→
+−
+−
+−
+−
+−
+−
+increment 
+a
+1
+decrement 
+a
+2
+(2,4,6)
+d(2,4,6)=|2+6−2⋅4|=0

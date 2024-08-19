@@ -1,0 +1,230 @@
+From Your GGANBU
+Problem
+“Do you know what someone with no money has in common with someone with too much money? Living is no fun for them.”
+Gi-Hun wants to know the truth about the game and II-nam has asked him to solve this puzzle in order to get answers to his questions.
+Gi-Hun is given a tree consisting of
+N nodes numbered from
+1 to
+N, rooted at node 1. Each node
+i has been assigned a value
+A
+i
+.
+Also given is a set of special edges
+S, consisting of some edges of the given tree (each edge is denoted by a pair of integers). Gi-Hun is required to answer
+Q queries.
+There are 3 different types of queries.
+1 u K — consider the subtree of
+u in the tree, denoted by
+T
+u
+. You would like divide
+T
+u
+into
+K disconnected components by removing exactly
+K−1 non-special (i.e, not in
+S) edges from
+T
+u
+such that the following value is maximized:
+For
+v∈T
+u
+, let
+Z
+v
+be the number of edges removed on the path from
+u to
+v, plus
+1. Then, you would like to maximize the value
+∑
+v∈T
+u
+Z
+v
+⋅A
+v
+If it is not possible to remove
+K−1 non-special edges from
+T
+u
+, print IMPOSSIBLE instead.
+2 u v — add edge
+u−v to set
+S. It is guaranteed that this edge is part of the tree and is not already in
+S.
+3 u v — remove edge
+u−v from set
+S. It is guaranteed that this edge is already in
+S.
+Note: The original tree is restored after every query of type
+1, i.e, edges are not permanently removed from the tree.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q, denoting the number of nodes of the tree and the number of queries respectively.
+The second line contains
+N−1 space-separated integers
+P
+2
+,P
+3
+,…,P
+N
+, where
+P
+i
+is the parent of node
+i.
+The third line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the values of the nodes.
+The fourth line contains a single integer
+M, denoting the number of edges in the set
+S.
+The next
+M lines describe the set
+S. The
+i-th of these
+M lines contains two integers
+u
+i
+and
+v
+i
+, denoting that edge
+u
+i
+−v
+i
+is present in
+S.
+The next
+Q lines each contain
+3 integers describing the queries as given in the statement.
+Output Format
+For each query of type
+1, output on a new line the maximum value of
+∑
+v∈T
+u
+Z
+v
+⋅A
+v
+, or IMPOSSIBLE if there doesn't exist a way to remove
+K−1 non-special edges.
+Constraints
+1≤T≤10
+4
+2≤N≤10
+5
+1≤Q≤10
+5
+0≤M≤N−1
+1≤K≤30
+1≤P
+i
+≤N
+−10
+9
+≤A
+i
+≤10
+9
+1≤u,v≤N
+S will always contain only edges which are a part of the tree.
+Sum of
+N over all test cases does not exceed
+10
+5
+Sum of
+Q over all test cases does not exceed
+10
+5
+Sample 1:
+Input
+Output
+1
+5 9
+1 1 2 2
+1 -3 4 -6 10
+1
+1 3
+1 1 3
+3 1 3
+1 1 3
+1 2 2
+2 2 5
+1 2 3
+1 1 4
+1 1 5
+1 2 1
+17
+20
+11
+IMPOSSIBLE
+5
+IMPOSSIBLE
+1
+Explanation:
+Query 1:
+S={(1,3)}. Remove edges
+(1,2) and
+(2,5). The
+Z-values of the nodes are
+[1,2,1,2,3]. This gives us
+∑
+v∈T
+1
+Z
+v
+⋅A
+v
+=1⋅1+2⋅(−3)+1⋅4+2⋅(−6)+3⋅10=17.
+Query 2: Remove
+(1,3) from
+S.
+S is now empty.
+Query 3:
+S is empty. Remove edges
+(1,3) and
+(2,5). The
+Z-values of the nodes are
+[1,1,2,1,2], which makes
+∑
+v∈T
+1
+Z
+v
+⋅A
+v
+=20.
+Query 4: -
+S is empty. Remove the edge
+(2,5). This gives us
+Z
+2
+=Z
+4
+=1 and
+Z
+5
+=2, with the value being
+1⋅(−3)+1⋅(−6)+2⋅10=11.
+Query 5: Add
+(2,5) to
+S. Now,
+S={(2,5)}.
+Query 6: It is impossible to remove two non-special edges from the subtree of
+2.

@@ -1,0 +1,148 @@
+D. Expression Evaluation Error
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+On the board, Bob wrote
+n
+positive integers in base
+10
+with sum
+s
+(i. e. in decimal numeral system). Alice sees the board, but accidentally interprets the numbers on the board as base-
+11
+integers and adds them up (in base
+11
+).
+What numbers should Bob write on the board, so Alice's sum is as large as possible?
+Input
+The input consists of multiple test cases. The first line contains an integer
+t
+(
+1≤t≤100
+) — the number of test cases. The description of the test cases follows.
+The only line of each test case contains two integers
+s
+and
+n
+(
+1≤s≤
+10
+9
+;
+1≤n≤min(100,s)
+) — the sum and amount of numbers on the board, respectively. Numbers
+s
+and
+n
+are given in decimal notation (base
+10
+).
+Output
+For each test case, output
+n
+positive integers — the numbers Bob should write on the board, so Alice's sum is as large as possible. If there are multiple answers, print any of them.
+Example
+input
+Copy
+6
+97 2
+17 1
+111 4
+100 2
+10 9
+999999 3
+output
+Copy
+70 27 
+17 
+3 4 100 4
+10 90
+1 1 2 1 1 1 1 1 1 
+999900 90 9
+Note
+In the first test case,
+70
+10
++
+27
+10
+=
+97
+10
+, and Alice's sum is
+70
+11
++
+27
+11
+=
+97
+11
+=9⋅11+7=
+106
+10
+.
+70
+27
+97
+9
+11
+7
+106
+(Here
+x
+b
+represents the number
+x
+in base
+b
+.) It can be shown that it is impossible for Alice to get a larger sum than
+106
+10
+.
+In the second test case, Bob can only write a single number on the board, so he must write
+17
+.
+In the third test case,
+3
+10
++
+4
+10
++
+100
+10
++
+4
+10
+=
+111
+10
+, and Alice's sum is
+3
+11
++
+4
+11
++
+100
+11
++
+4
+11
+=
+110
+11
+=1⋅
+11
+2
++1⋅11=
+132
+10
+.
+2
+It can be shown that it is impossible for Alice to get a larger sum than
+132
+10
+.

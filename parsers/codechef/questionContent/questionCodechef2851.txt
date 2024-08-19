@@ -1,0 +1,118 @@
+Distinct Rows in Submatrices
+Problem
+###Read problems statements Hindi ,Bengali , Mandarin chinese , Russian and Vietnamese as well.
+Let's define the strength of a matrix as the number of distinct rows in it. Two rows
+a
+1
+,a
+2
+,…,a
+n
+and
+b
+1
+,b
+2
+,…,b
+n
+are distinct if there is an index
+i such that
+a
+i
+
+=b
+i
+.
+You are given an integer matrix
+A with
+N rows (numbered
+1 through
+N) and
+M columns (numbered
+1 through
+M). A submatrix of
+A is formed as the intersection of rows
+r
+1
+through
+r
+2
+and columns
+c
+1
+through
+c
+2
+for any
+r
+1
+≤r
+2
+,c
+1
+≤c
+2
+. Find the sum of the strengths of all submatrices of
+A.
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains
+M space-separated integers
+A
+i,1
+,A
+i,2
+,…,A
+i,M
+.
+Output
+Print a single line containing one integer — the sum of strengths of all the submatrices.
+Constraints
+1≤N⋅M≤500,000
+1≤A
+i,j
+≤10
+9
+for each valid
+i,j
+Subtasks
+Subtask #1 (20 points):
+1≤N⋅M≤1,000
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2 2
+1 1
+1 2
+11
+Explanation:
+The submatrices are
+1
+
+1
+
+1
+
+2
+
+1 1
+
+1 2
+
+1
+1
+
+1
+2
+
+1 1
+1 2
+with strengths
+1,1,1,1,1,1,1,2,2 respectively. The sum of these strengths is
+11.

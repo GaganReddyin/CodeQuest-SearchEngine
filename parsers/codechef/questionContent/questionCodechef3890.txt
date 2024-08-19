@@ -1,0 +1,99 @@
+Tree Query
+Problem
+Read problem statements in Hindi,Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree with
+N vertices (numbered
+1 through
+N); vertex
+1 is the root. Initially, for each valid
+i, the
+i-th vertex has a weight
+w
+i
+. You should perform a sequence of
+Q operations of the following two types:
+Add
+x to the weight of vertex
+v.
+Add
+x to the weight of each vertex in the subtree of vertex
+v (including
+v).
+Let's define a function
+f(u)=∑
+i=1
+N
+w
+i
+⋅d(i,u), where
+d(i,u) denotes the distance between vertices
+i and
+u. After each operation, find an integer
+u such that
+f(u) is minimum amoung
+f(1),f(2),…,f(N), if there are multiple values of
+u find smallest one.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+w
+1
+,w
+2
+,…,w
+N
+.
+N−1 lines follow. Each of these lines contains two space-separated integers
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+Each of the next
+Q lines contains three space-separated integers
+t,
+v and
+x describing one operation, where
+t denotes the type of the operation.
+Output
+Print
+Q lines. For each valid
+i, the
+i-th of these lines should contain one integer
+u such that
+f(u) is minimum among
+f(1),f(2),…,f(N) after the
+i-th operation, if there are multiple values of
+u find smallest one.
+Constraints
+1≤N,Q≤10
+5
+1≤w
+i
+≤10
+7
+for each valid
+i
+∣x∣≤10
+7
+the weights of all vertices remain positive after each operation
+Subtasks
+Subtask #1 (50 points):
+N,Q≤10
+3
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+5 2
+5 5 5 5 10
+1 2
+2 3
+3 4
+3 5
+1 5 -5
+2 4 50
+3
+4

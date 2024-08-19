@@ -1,0 +1,144 @@
+F. Divide Powers
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a multiset of powers of two. More precisely, for each
+i
+from
+0
+to
+n
+exclusive you have
+cn
+t
+i
+elements equal to
+2
+i
+.
+In one operation, you can choose any one element
+2
+l
+>1
+and divide it into two elements
+2
+l−1
+.
+You should perform
+q
+queries. Each query has one of two types:
+"
+1
+pos
+val
+" — assign
+cn
+t
+pos
+:=val
+;
+"
+2
+x
+k
+" — calculate the minimum number of operations you need to make at least
+k
+elements with value lower or equal to
+2
+x
+.
+Note that all queries of the second type don't change the multiset; that is, you just calculate the minimum number of operations, you don't perform them.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤30
+;
+1≤q≤2⋅
+10
+5
+) — the size of array
+cnt
+and the number of queries.
+The second line contains
+n
+integers
+cn
+t
+0
+,cn
+t
+1
+,…,cn
+t
+n−1
+(
+0≤cn
+t
+i
+≤
+10
+6
+).
+Next
+q
+lines contain queries: one per line. Each query has one of two types:
+"
+1
+pos
+val
+" (
+0≤pos<n
+;
+0≤val≤
+10
+6
+);
+"
+2
+x
+k
+" (
+0≤x<n
+;
+1≤k≤
+10
+15
+).
+It's guaranteed that there is at least one query of the second type.
+Output
+For each query of the second type, print the minimum number of operations you need to make at least
+k
+elements with a value lower or equal to
+2
+x
+or
+−1
+if there is no way to do it.
+Example
+input
+Copy
+6 11
+0 1 0 0 1 0
+2 1 5
+2 4 18
+1 1 0
+2 2 5
+2 0 17
+1 0 3
+2 1 2
+1 1 4
+1 4 0
+1 5 1
+2 2 8
+output
+Copy
+4
+16
+4
+-1
+0
+1

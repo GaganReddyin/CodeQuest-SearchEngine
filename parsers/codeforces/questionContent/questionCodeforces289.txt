@@ -1,0 +1,89 @@
+C. Equal Frequencies
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Let's call a string balanced if all characters that are present in it appear the same number of times. For example, "coder", "appall", and "ttttttt" are balanced, while "wowwow" and "codeforces" are not.
+You are given a string
+s
+of length
+n
+consisting of lowercase English letters. Find a balanced string
+t
+of the same length
+n
+consisting of lowercase English letters that is different from the string
+s
+in as few positions as possible. In other words, the number of indices
+i
+such that
+s
+i
+≠
+t
+i
+should be as small as possible.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+Each test case consists of two lines. The first line contains a single integer
+n
+ (
+1≤n≤
+10
+5
+) — the length of the string
+s
+.
+The second line contains the string
+s
+of length
+n
+consisting of lowercase English letters.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, print the smallest number of positions where string
+s
+and a balanced string
+t
+can differ, followed by such a string
+t
+.
+If there are multiple solutions, print any. It can be shown that at least one balanced string always exists.
+Example
+input
+Copy
+4
+5
+hello
+10
+codeforces
+5
+eevee
+6
+appall
+output
+Copy
+1
+helno
+2
+codefofced
+1
+eeeee
+0
+appall
+Note
+In the first test case, the given string "hello" is not balanced: letters 'h', 'e', and 'o' appear in it once, while letter 'l' appears twice. On the other hand, string "helno" is balanced: five distinct letters are present in it, and each of them appears exactly once. Strings "hello" and "helno" differ in just one position: the fourth character. Other solutions are possible too.
+In the second test case, string "codefofced" is balanced since only letters 'c', 'o', 'd', 'e', and 'f' are present in it, and each of them appears exactly twice.
+In the third test case, string "eeeee" is balanced since only letter 'e' is present in it.
+In the fourth test case, the given string "appall" is already balanced.

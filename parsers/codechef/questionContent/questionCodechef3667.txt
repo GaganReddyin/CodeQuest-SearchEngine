@@ -1,0 +1,152 @@
+Unreasonable Updates
+Problem
+Given an array
+A of length
+N, you have to perform
+Q queries on it.
+There are three different type of queries:
+1
+L
+R - For every
+i such that
+L≤i≤R and
+A
+i
+>0, replace
+A
+i
+with
+A
+i
+∣
+(A
+i
+−1).
+2
+L
+R - For every
+i such that
+L≤i≤R and
+A
+i
+>0, replace
+A
+i
+with
+A
+i
+&
+(A
+i
+−1).
+3
+x - Print
+A
+x
+.
+Output the answer to each query of type
+3.
+Input Format
+The first line contains
+2 integers,
+N and
+Q - the number of elements in the array
+A and the number of queries, respectively.
+The next line contains
+N integers -
+A
+1
+,
+A
+2
+,
+…,
+A
+N
+, the elements of the array
+A.
+i-th line of the next
+Q lines contains the description of the
+i-th query.
+Output Format
+For each query of type
+3, output the value of
+A
+x
+.
+Constraints
+1≤N≤2×10
+5
+1≤Q≤3×10
+5
+0≤A
+i
+≤2
+30
+−1
+For queries of type
+1 and
+2,
+1≤L≤R≤N
+For queries of type
+3,
+1≤x≤N
+Sample 1:
+Input
+Output
+3 7
+1 2 3
+2 2 3
+3 2
+3 3
+1 1 3
+3 1
+3 2
+3 3
+0
+2
+1
+0
+3
+Explanation:
+Initially,
+A=[1,2,3]
+Query
+1:
+A becomes
+[1,2
+&
+(2−1),3
+&
+(3−1)]=[1,0,2].
+Query
+2: The value of
+A
+2
+=0.
+Query
+3: The value of
+A
+3
+=2.
+Query
+4:
+A becomes
+[1,0,2
+∣
+(2−1)]=[1,0,3].
+Query
+5: The value of
+A
+1
+=1.
+Query
+6: The value of
+A
+2
+=0.
+Query
+7: The value of
+A
+3
+=3.

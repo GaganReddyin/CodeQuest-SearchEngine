@@ -1,0 +1,77 @@
+Fibonacci concatenation
+Problem
+Read problem statements in Mandarin Chinese and Bengali.
+Let's define Fibonacci concatenation sequence as follows:
+f[0]=0,
+f[1]=1
+f[i]=f[i−1]+f[i−2], for every
+i≥2
+Here
+f[i] denotes the
+i
+th
+Fibonacci concatenation number and
++ represents concatenation.
+For example,
+f[2]=f[1]+f[0]=1+0=10,
+f[3]=f[2]+f[1]=
+10+1=
+101.
+Given an integer
+n, you have to determine the sum of digits of all subsequences of the
+n
+th
+Fibonacci concatenation number
+f[n], modulo
+10
+9
++7.
+A subsequence of a number is a sequence of digits that can be derived from the number by deletion of several (possibly, zero or all) digits without changing the order of the remaining digits. The subsequence may even start with trailing zeros. For example
+10,
+01 are subsequences of
+101 while
+110 is NOT a subsequence of
+101. Note that there are
+8 subsequences of
+101. The subsequence
+1 appears twice and should be counted as different while computing the sum.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+n.
+Output Format
+For each test case, print a single line containing one integer - the sum of digits of all subsequences of
+f[n], modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+5
+1≤n≤10
+5
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+1
+2
+8
+Explanation:
+Test case
+1: Since
+f[1]=1, we have only two subsequences, "" (empty subsequence) and "
+1". So the sum of digits of both subsequences is
+0+1=1.
+Test case
+2: Since
+f[2]=10, we have four subsequences, "" (empty subsequence), "
+1", "
+0" and "
+10". So the sum of digits of all the subsequences is
+0+1+0+1=2.

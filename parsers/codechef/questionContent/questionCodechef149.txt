@@ -1,0 +1,50 @@
+Test Averages
+Problem
+Chef has scored
+A,B, and
+C marks in
+3 different subjects respectively.
+Chef will fail if the average score of any two subjects is less than
+35. Determine whether Chef will pass or fail.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, three integers
+A,B,C, denoting the Chef's score in the three subjects.
+Output Format
+For each test case, if Chef will pass, print PASS, otherwise print FAIL.
+You may print each character of the string in uppercase or lowercase (for example, the strings pass, Pass, pAss, and PASS will all be treated as identical).
+Constraints
+1≤T≤1000
+0≤A,B,C≤100
+Sample 1:
+Input
+Output
+4
+23 47 52
+28 36 80
+0 100 0
+35 35 35
+Pass
+Fail
+Fail
+Pass
+Explanation:
+Test case
+1: The average of the first two subjects is
+35, the average of the first and last subject is
+37.5, whereas the average of the last two subjects is
+49.5. Since all averages are greater than or equal to
+35, Chef will pass.
+Test case
+2: Since the average of the first two subjects is
+32 which is less than
+35, Chef will fail.
+Test case
+3: Since the average of the first and last subjects subjects is
+0 which is less than
+35, Chef will fail.
+Test case
+4: Since the average of any two subjects is
+35 which is greater than or equal to
+35, Chef will pass.

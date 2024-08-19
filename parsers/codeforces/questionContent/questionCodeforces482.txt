@@ -1,0 +1,139 @@
+E. Bracket Cost
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Daemon Targaryen decided to stop looking like a Metin2 character. He turned himself into the most beautiful thing, a bracket sequence.
+For a bracket sequence, we can do two kind of operations:
+Select one of its substrings
+†
+†
+and cyclic shift it to the right. For example, after a cyclic shift to the right, "(())" will become ")(()";
+Insert any bracket, opening '(' or closing ')', wherever you want in the sequence.
+We define the cost of a bracket sequence as the minimum number of such operations to make it balanced
+‡
+‡
+.
+Given a bracket sequence
+s
+of length
+n
+, find the sum of costs across all its
+n(n+1)
+2
+non-empty substrings. Note that for each substring we calculate the cost independently.
+†
+†
+A string
+a
+is a substring of a string
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.
+‡
+‡
+A sequence of brackets is called balanced if one can turn it into a valid math expression by adding characters
++
+and
+1
+. For example, sequences "(())()", "()", and "(()(()))" are balanced, while ")(", "(()", and "(()))(" are not.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of the bracket sequence.
+The second line of each test case contains a string
+s
+, consisting only of characters '(' and ')', of length
+n
+— the bracket sequence.
+It is guaranteed that sum of
+n
+across all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a single integer — the sum of costs of all substrings of
+s
+.
+Example
+input
+Copy
+5
+1
+)
+4
+)()(
+3
+())
+5
+(((((
+10
+)(())))())
+output
+Copy
+1
+9
+6
+35
+112
+Note
+In the first test case, there is the only substring ")". Its cost is
+1
+because we can insert '(' to the beginning of this substring and get a string "()", that is a balanced string.
+In the second test case, the cost of each substring of length one is
+1
+. The cost of a substring ")(" is
+1
+because we can cyclically shift it to right and get a string "()". The cost of strings ")()" and "()(" is
+1
+because its enough to insert one bracket to each of them. The cost of substring ")()(" is
+1
+because we can cyclically shift it to right and get a string "()()". So there are
+4+2+2+1=9
+substring of cost
+1
+and
+1
+substring of cost
+0
+. So the sum of the costs is
+9
+.
+In the third test case,
+"(", the cost is
+1
+;
+"()", the cost is
+0
+;
+"())", the cost is
+1
+;
+")", the cost is
+1
+;
+"))", the cost is
+2
+;
+")", the cost is
+1
+.
+So the sum of the costs is
+6
+.

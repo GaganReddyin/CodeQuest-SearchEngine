@@ -1,0 +1,45 @@
+A. Find a Number
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two positive integers
+d
+and
+s
+. Find minimal positive integer
+n
+which is divisible by
+d
+and has sum of digits equal to
+s
+.
+Input
+The first line contains two positive integers
+d
+and
+s
+(
+1≤d≤500,1≤s≤5000
+) separated by space.
+Output
+Print the required number or -1 if it doesn't exist.
+Examples
+input
+Copy
+13 50
+output
+Copy
+699998
+input
+Copy
+61 2
+output
+Copy
+1000000000000000000000000000001
+input
+Copy
+15 50
+output
+Copy
+-1

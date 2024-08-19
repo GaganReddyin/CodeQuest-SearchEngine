@@ -1,0 +1,66 @@
+Guess the row
+Problem
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+You and Paolo are playing a game.
+Paolo, without letting you peek, writes down on a sheet of paper an
+N×N matrix of
+0s and
+1s (all the
+N
+2
+entries are either
+0 or
+1) such that, for each
+1≤k≤N, there is a row with exactly
+k ones. In all tests,
+N=50.
+Your goal is to find the row with exactly
+⌊
+2
+N
+⌋ ones. In order to do it, you may ask the following kind of question to Paolo: Paolo, what's the value in the
+i-th row and
+j-th column?
+The question is valid if
+1≤i,j≤N.
+You have to play
+T=500 games and, in total, you can ask at most
+610T questions.
+Interaction Format
+First, read two integers
+T (
+T=500) and
+N (
+N=50). They are fixed but still provided, just for your comfort.
+Now, you start playing games. As soon as you give the answer to a game you should immediately start playing the next one.
+To ask a question (of the kind described in the statement), you should print '?
+i
+j' (without quotes). After this, you should read an integer, the value of the entry in the
+i-th row and
+j-th column. A question is valid if
+1≤i≤N and
+1≤j≤N.
+When you have identified the row with exactly
+⌊
+2
+N
+⌋ ones, you should print '!
+i' (without quotes), where
+i is the index of the row (
+1≤i≤N).
+If you perform a malformed query, or you identify a row that does not have
+⌊
+2
+N
+⌋ ones, the interactor terminates immediately and your program receives verdict Wrong Answer. If you ask more than
+610T questions, the interaction continues until you have played all the games and then your program receives a verdict Wrong Answer.
+A program in C++ which uses cin and cout (and flushes the output after every question) needs
+≈700ms to perform
+610T=305000 questions (considering only the time spent interacting).
+The interactor is not adaptive (i.e., the
+T matrices are chosen before the beginning of the interaction).
+Note
+Instead of providing a sample case that shows the interaction, we provide an implementation in C++ of a program that performs the interaction correctly and answers correctly (but it makes too many questions and therefore receives a verdict Wrong Answer).
+Constraints
+T=500
+N=50

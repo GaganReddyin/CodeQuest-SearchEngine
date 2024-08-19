@@ -1,0 +1,190 @@
+(Challenge) Maximizing LIS
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given an integer
+K and a random permutation ― sequence
+A
+1
+,A
+2
+,…,A
+N
+of integers
+1 through
+N. You have to perform the following process:
+Split the permutation
+A into
+K non-empty contiguous subsequences
+S
+1
+,S
+2
+,…,S
+K
+such that each element of
+A appears in exactly one of them.
+Choose an arbitrary permutation
+P of the integers
+1 through
+K.
+Create a new permutation
+B
+1
+,B
+2
+,…,B
+N
+by concatenating the sequences
+S
+P
+1
+,S
+P
+2
+,…,S
+P
+K
+in this order.
+You are allowed to split the permutation
+A into
+K subsequences in any valid way and choose any permutation
+P you want. Your goal is to make the length of the longest increasing subsequence of the permutation
+B as large as possible.
+Input
+The first line of the input contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Constraints
+5≤N≤5⋅10
+5
+3≤K≤N
+1≤A
+i
+≤N for each valid
+i
+A
+i
+
+=A
+j
+for each valid
+i,j (
+i
+
+=j)
+Scoring
+In each test case (and therefore each test file), let
+L
+A
+and
+L
+B
+be the lengths of the longest increasing subsequences of the permutations
+A and
+B respectively. If
+L
+B
+≤L
+A
+, your submission will receive the Wrong Answer verdict. Otherwise, your score for this test case is
+(L
+B
+−L
+A
+)⋅W, where
+W is a parameter of the grader. The values of
+W for all tests are specified in the Test Generation section. The score of a submission is equal to the sum of its scores over all test cases. The goal is to maximise the score of your submission.
+There are 18 test files. During the contest, the displayed score will account for exactly five test files (belonging to groups 1, 3, 5, 7, 9 from the test generation section), i.e. your score reflects your submission's performance on roughly 28% (5 / 18) of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other
+13 test files.
+Example Input
+7 3
+5 3 7 1 2 6 4
+Example Output
+1 2 6 4 5 3 7
+Explanation
+The permutation
+B=(1,2,6,4,5,3,7) could be obtained from
+A=(5,3,7,1,2,6,4) in the following way:
+Choose subsequences
+S
+1
+=(5,3),
+S
+2
+=(7),
+S
+3
+=(1,2,6,4).
+Choose the permutation
+P=(3,1,2).
+Concatenate
+S
+P
+1
+,S
+P
+2
+,S
+P
+3
+=S
+3
+,S
+1
+,S
+2
+=(1,2,6,4),(5,3),(7).
+The longest increasing subsequence of
+A is
+(1,2,6) and its length is
+L
+A
+=3. The longest increasing subsequence of
+B is
+(1,2,4,5,7) and its length is
+L
+B
+=5. If
+W=1, the final score of this solution on this test case is
+L
+B
+−L
+A
+=5−3=2.
+Test generation
+There are nine test groups. In each test group, there are two test cases; the values of
+N,
+K and
+W (the scoring coefficient) are listed in the table below. In each test case, the permutation
+A is chosen uniformly randomly among all
+N!−1 permutations other than
+1,2,…,N−1,N.
+Group N K W
+1 5 · 103 50 8284
+2 5 · 103 140 4745
+3 5 · 103 400 2124
+4 5 · 104 150 2676
+5 5 · 104 450 1484
+6 5 · 104 1500 580
+7 5 · 105 500 828
+8 5 · 105 1400 474
+9 5 · 105 5000 175

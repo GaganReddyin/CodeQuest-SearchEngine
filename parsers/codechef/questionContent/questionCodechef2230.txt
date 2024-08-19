@@ -1,0 +1,80 @@
+Tri XOR
+Problem
+There are
+N numbers written on a blackboard.
+In one operation, Chef can:
+Choose any
+3 integers
+A,B, and
+C written on the blackboard.
+Erase them from the blackboard.
+Write
+A⊕B,B⊕C, and
+C⊕A on the blackboard. Here,
+⊕ denotes the bitwise XOR operation.
+Your task is to make all the numbers written on the blackboard equal to
+0 using at most
+11111 operations.
+It is guaranteed that all the numbers on the blackboard can be made
+0 under the given constraints.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N, the number of integers written on the blackboard.
+Next line contains
+N space separated integers
+A
+1
+,A
+2
+,…A
+N
+, the integers written on the blackboard initially.
+Output Format
+For each test case:
+On the first line, output
+M(0≤M≤11111) - the number of operations you are going to perform.
+Next
+M lines contain
+3 space-separated integers
+A,B, and
+C
+(A,B,C should be present on the blackboard at the time of operation
+) - denoting the integers using which operation is performed.
+Constraints
+1≤T≤10
+6≤N≤1000
+0≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+1
+6
+0 1 2 3 2 0
+2
+2 3 2
+1 1 1
+Explanation:
+Test case
+1: We can make all the numbers
+0 using
+2 operations:
+Operation
+1: Choose the integers
+2,3, and
+2 and replace them with
+2⊕3=1,3⊕2=1, and
+2⊕2=0. Thus, numbers on the blackboard are now
+[0,1,0,1,1,0].
+Operation
+2: Choose the integers
+1,1, and
+1 and replace them with
+1⊕1=0,1⊕1=0, and
+1⊕1=0. Thus all numbers on the blackboard are now
+0.

@@ -1,0 +1,80 @@
+A. Many Equal Substrings
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+t
+consisting of
+n
+lowercase Latin letters and an integer number
+k
+.
+Let's define a substring of some string
+s
+with indices from
+l
+to
+r
+as
+s[l…r]
+.
+Your task is to construct such string
+s
+of minimum possible length that there are exactly
+k
+positions
+i
+such that
+s[i…i+n−1]=t
+. In other words, your task is to construct such string
+s
+of minimum possible length that there are exactly
+k
+substrings of
+s
+equal to
+t
+.
+It is guaranteed that the answer is always unique.
+Input
+The first line of the input contains two integers
+n
+and
+k
+(
+1≤n,k≤50
+) — the length of the string
+t
+and the number of substrings.
+The second line of the input contains the string
+t
+consisting of exactly
+n
+lowercase Latin letters.
+Output
+Print such string
+s
+of minimum possible length that there are exactly
+k
+substrings of
+s
+equal to
+t
+.
+It is guaranteed that the answer is always unique.
+Examples
+input
+Copy
+3 4
+aba
+output
+Copy
+ababababa
+input
+Copy
+3 2
+cat
+output
+Copy
+catcat

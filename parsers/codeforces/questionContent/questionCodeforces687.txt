@@ -1,0 +1,236 @@
+B. Permutation Chain
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A permutation of length
+n
+is a sequence of integers from
+1
+to
+n
+such that each integer appears in it exactly once.
+Let the fixedness of a permutation
+p
+be the number of fixed points in it — the number of positions
+j
+such that
+p
+j
+=j
+, where
+p
+j
+is the
+j
+-th element of the permutation
+p
+.
+You are asked to build a sequence of permutations
+a
+1
+,
+a
+2
+,…
+, starting from the identity permutation (permutation
+a
+1
+=[1,2,…,n]
+). Let's call it a permutation chain. Thus,
+a
+i
+is the
+i
+-th permutation of length
+n
+.
+For every
+i
+from
+2
+onwards, the permutation
+a
+i
+should be obtained from the permutation
+a
+i−1
+by swapping any two elements in it (not necessarily neighboring). The fixedness of the permutation
+a
+i
+should be strictly lower than the fixedness of the permutation
+a
+i−1
+.
+Consider some chains for
+n=3
+:
+a
+1
+=[1,2,3]
+,
+a
+2
+=[1,3,2]
+ — that is a valid chain of length
+2
+. From
+a
+1
+to
+a
+2
+, the elements on positions
+2
+and
+3
+get swapped, the fixedness decrease from
+3
+to
+1
+.
+a
+1
+=[2,1,3]
+,
+a
+2
+=[3,1,2]
+ — that is not a valid chain. The first permutation should always be
+[1,2,3]
+for
+n=3
+.
+a
+1
+=[1,2,3]
+,
+a
+2
+=[1,3,2]
+,
+a
+3
+=[1,2,3]
+ — that is not a valid chain. From
+a
+2
+to
+a
+3
+, the elements on positions
+2
+and
+3
+get swapped but the fixedness increase from
+1
+to
+3
+.
+a
+1
+=[1,2,3]
+,
+a
+2
+=[3,2,1]
+,
+a
+3
+=[3,1,2]
+ — that is a valid chain of length
+3
+. From
+a
+1
+to
+a
+2
+, the elements on positions
+1
+and
+3
+get swapped, the fixedness decrease from
+3
+to
+1
+. From
+a
+2
+to
+a
+3
+, the elements on positions
+2
+and
+3
+get swapped, the fixedness decrease from
+1
+to
+0
+.
+Find the longest permutation chain. If there are multiple longest answers, print any of them.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤99
+) — the number of testcases.
+The only line of each testcase contains a single integer
+n
+(
+2≤n≤100
+) — the required length of permutations in the chain.
+Output
+For each testcase, first, print the length of a permutation chain
+k
+.
+Then print
+k
+permutations
+a
+1
+,
+a
+2
+,…,
+a
+k
+.
+a
+1
+should be an identity permutation of length
+n
+(
+[1,2,…,n]
+). For each
+i
+from
+2
+to
+k
+,
+a
+i
+should be obtained by swapping two elements in
+a
+i−1
+. It should also have a strictly lower fixedness than
+a
+i−1
+.
+Example
+input
+Copy
+2
+2
+3
+output
+Copy
+2
+1 2
+2 1
+3
+1 2 3
+3 2 1
+3 1 2

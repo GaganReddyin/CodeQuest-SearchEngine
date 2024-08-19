@@ -1,0 +1,101 @@
+F. Vasya and Maximum Matching
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vasya has got a tree consisting of
+n
+vertices. He wants to delete some (possibly zero) edges in this tree such that the maximum matching in the resulting graph is unique. He asks you to calculate the number of ways to choose a set of edges to remove.
+A matching in the graph is a subset of its edges such that there is no vertex incident to two (or more) edges from the subset. A maximum matching is a matching such that the number of edges in the subset is maximum possible among all matchings in this graph.
+Since the answer may be large, output it modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤3⋅
+10
+5
+) — the number of vertices in the tree.
+Each of the next
+n−1
+lines contains two integers
+u
+and
+v
+(
+1≤u,v≤n,u≠v
+) denoting an edge between vertex
+u
+and vertex
+v
+. It is guaranteed that these edges form a tree.
+Output
+Print one integer — the number of ways to delete some (possibly empty) subset of edges so that the maximum matching in the resulting graph is unique. Print the answer modulo
+998244353
+.
+Examples
+input
+Copy
+4
+1 2
+1 3
+1 4
+output
+Copy
+4
+input
+Copy
+4
+1 2
+2 3
+3 4
+output
+Copy
+6
+input
+Copy
+1
+output
+Copy
+1
+Note
+Possible ways to delete edges in the first example:
+delete
+(1,2)
+and
+(1,3)
+.
+delete
+(1,2)
+and
+(1,4)
+.
+delete
+(1,3)
+and
+(1,4)
+.
+delete all edges.
+Possible ways to delete edges in the second example:
+delete no edges.
+delete
+(1,2)
+and
+(2,3)
+.
+delete
+(1,2)
+and
+(3,4)
+.
+delete
+(2,3)
+and
+(3,4)
+.
+delete
+(2,3)
+.
+delete all edges.

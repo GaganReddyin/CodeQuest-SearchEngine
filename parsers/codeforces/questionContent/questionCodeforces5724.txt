@@ -1,0 +1,30 @@
+A2. Collective Mindsets (medium)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Way to go! Heidi now knows how many brains there must be for her to get one. But throwing herself in the midst of a clutch of hungry zombies is quite a risky endeavor. Hence Heidi wonders: what is the smallest number of brains that must be in the chest for her to get out at all (possibly empty-handed, but alive)?
+The brain dinner night will evolve just as in the previous subtask: the same crowd is present, the N - 1 zombies have the exact same mindset as before and Heidi is to make the first proposal, which must be accepted by at least half of the attendees for her to survive.
+Input
+The only line of input contains one integer: N, the number of attendees (1 ≤ N ≤ 109).
+Output
+Output one integer: the smallest number of brains in the chest which allows Heidi to merely survive.
+Examples
+input
+Copy
+1
+output
+Copy
+0
+input
+Copy
+3
+output
+Copy
+1
+input
+Copy
+99
+output
+Copy
+49

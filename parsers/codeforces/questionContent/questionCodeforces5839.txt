@@ -1,0 +1,30 @@
+E. Different Subsets For All Tuples
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For a sequence a of n integers between 1 and m, inclusive, denote f(a) as the number of distinct subsequences of a (including the empty subsequence).
+You are given two positive integers n and m. Let S be the set of all sequences of length n consisting of numbers from 1 to m. Compute the sum f(a) over all a in S modulo 109 + 7.
+Input
+The only line contains two integers n and m (1 ≤ n, m ≤ 106) — the number of elements in arrays and the upper bound for elements.
+Output
+Print the only integer c — the desired sum modulo 109 + 7.
+Examples
+input
+Copy
+1 3
+output
+Copy
+6
+input
+Copy
+2 2
+output
+Copy
+14
+input
+Copy
+3 3
+output
+Copy
+174

@@ -1,0 +1,146 @@
+Strange Queries
+Problem
+Read problems statements in Russian.
+You are given an array
+A of
+N positive integers. You are allowed to perform any of the following operations any number of times:
+Pick an index
+i (
+1≤i≤n), and a prime number
+p. Assign
+A
+i
+×p to
+A
+i
+.
+Pick an index
+i (
+1≤i≤n), and a prime number
+p such that
+A
+i
+is divisible by
+p. Assign
+A
+i
+÷p to
+a
+i
+.
+The goal is to make all the numbers in array equal using the minimum number of operations. Among all sequences of operations using the minimum number of operations, denote
+S to be the smallest final value of all elements in
+A. You are given
+Q queries of the form
+(L
+i
+,R
+i
+). For each query, you need to calculate the
+S value of the contiguous subarray
+A
+L
+i
+…R
+i
+.
+Input Format
+The first line contains
+N and
+Q denoting the number of elements in the array and number of queries.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the given array.
+Q lines follow. The
+i-th line contains two space-separated integers
+L
+i
+and
+R
+i
+denoting the
+i-th query.
+Output Format
+For each query, output the value
+S for the subarray on a single line.
+Constraints
+1≤N≤10
+6
+1≤Q≤2⋅10
+5
+1≤L
+i
+≤R
+i
+≤N
+1≤A
+i
+≤10
+6
+Sample 1:
+Input
+Output
+4 2
+19 7 11 77
+2 4
+3 4
+77
+11
+Explanation:
+For the first query, there is only one sequence of operations that uses
+2 operations:
+Choose
+i=2 and
+p=11, assign
+A
+2
+×11=77 to
+A
+2
+.
+Choose
+i=3 and
+p=7, assign
+A
+3
+×7=77 to
+A
+3
+.
+We can prove that there aren't any sequence of operations that uses
+1 operation, so the above sequence uses the least number of operations. The final
+S value is
+77.
+For the second query, there are two sequences of operations that uses
+2 operations. Those are:
+Choose
+i=3 and
+p=7, assign
+A
+3
+×7=77 to
+A
+3
+.
+Choose
+i=4 and
+p=7, assign
+A
+4
+÷7=11 to
+A
+4
+.
+Both of them are optimal in terms of number of operations. The first sequence of operations has the final value
+S to be
+77, and the second sequence of operations has the final value
+S to be
+11. Therefore, the answer to this query is
+11 (we need to minimize the final value
+S).

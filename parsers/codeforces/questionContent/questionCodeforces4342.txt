@@ -1,0 +1,131 @@
+D. Coins and Queries
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Polycarp has
+n
+coins, the value of the
+i
+-th coin is
+a
+i
+. It is guaranteed that all the values are integer powers of
+2
+(i.e.
+a
+i
+=
+2
+d
+for some non-negative integer number
+d
+).
+Polycarp wants to know answers on
+q
+queries. The
+j
+-th query is described as integer number
+b
+j
+. The answer to the query is the minimum number of coins that is necessary to obtain the value
+b
+j
+using some subset of coins (Polycarp can use only coins he has). If Polycarp can't obtain the value
+b
+j
+, the answer to the
+j
+-th query is -1.
+The queries are independent (the answer on the query doesn't affect Polycarp's coins).
+Input
+The first line of the input contains two integers
+n
+and
+q
+(
+1≤n,q≤2⋅
+10
+5
+) — the number of coins and the number of queries.
+The second line of the input contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+— values of coins (
+1≤
+a
+i
+≤2⋅
+10
+9
+). It is guaranteed that all
+a
+i
+are integer powers of
+2
+(i.e.
+a
+i
+=
+2
+d
+for some non-negative integer number
+d
+).
+The next
+q
+lines contain one integer each. The
+j
+-th line contains one integer
+b
+j
+— the value of the
+j
+-th query (
+1≤
+b
+j
+≤
+10
+9
+).
+Output
+Print
+q
+integers
+an
+s
+j
+. The
+j
+-th integer must be equal to the answer on the
+j
+-th query. If Polycarp can't obtain the value
+b
+j
+the answer to the
+j
+-th query is -1.
+Example
+input
+Copy
+5 4
+2 4 8 2 4
+8
+5
+14
+10
+output
+Copy
+1
+-1
+3
+2

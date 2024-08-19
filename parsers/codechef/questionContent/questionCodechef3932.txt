@@ -1,0 +1,134 @@
+Chef and Mala
+Problem
+Chef is preparing a banquet of
+N dishes for Sir Anton and Sir Trygub. Unfortuantely, Sir Anton and Sir Trygub only told the Chef three days before the banquet that they do not like food that is too spicy or too numb.
+For the
+i-th dish, Chef has assigned
+4 scores:
+SA
+i
+--- the spiciness felt by Sir Anton
+NA
+i
+--- the numbness felt by Sir Anton
+ST
+i
+--- the spiciness felt by Sir Trygub
+NT
+i
+--- the numbness felt by Sir Trygub
+Chef will serve some dishes to Sir Anton and Sir Trygub. A serve is said to be good, if both of the following conditions are satisfied:
+All dishes are served to at least one of the Sirs.
+Both Sirs are served at least one dish.
+The total disgust of a good serve is defined as the sum of the maximum spiciness felt by Sir Anton, the maximum numbness felt by Sir Anton, the maximum spiciness felt by Sir Trygub and the maximum numbness felt by Sir Trygub.
+Find the minimum disgust possible amongst all the good serves.
+More formally, find the minimum value of
+i∈A
+max
+(SA
+i
+)+
+i∈A
+max
+(NA
+i
+)+
+i∈T
+max
+(ST
+i
+)+
+i∈T
+max
+(NT
+i
+) over all
+(A,T), such that,
+A⊆[1,N],
+T⊆[1,N],
+1≤∣A∣,∣T∣ and
+A∪T=[1,N].
+Input Format
+The first line of input contains one integer
+T - the number of test cases.
+The first line of each test case contains one integer
+N - the number of dishes.
+The next
+N lines of each test case contain
+4 integers each denoting the values
+SA
+i
+,NA
+i
+,ST
+i
+and
+NT
+i
+.
+Output Format
+For each test case, print in a single line, the minimum disgust possible amongst all the good serves.
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+0≤SA
+i
+,NA
+i
+,ST
+i
+,NT
+i
+≤10
+9
+It is guaranteed that the sum of
+N over all test cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+5
+1 7 1 9
+7 8 9 8
+9 1 10 10
+6 9 4 0
+5 9 5 5
+2
+0 0 1 2
+3 4 0 0
+22
+0
+Explanation:
+In the first test case, a possible solution is to let
+A={1,2,3,4,5} and
+T={4}. This way, the disgust is
+i∈A
+max
+(SA
+i
+)+
+i∈A
+max
+(NA
+i
+)+
+i∈T
+max
+(ST
+i
+)+
+i∈T
+max
+(NT
+i
+)=9+9+4+0=22. It can be shown that this is the minimum disgust possible.
+In the second test case,
+A={1} and
+T={2}. Thus, the disgust is
+0+0+0+0=0.

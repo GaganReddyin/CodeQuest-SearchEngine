@@ -1,0 +1,106 @@
+Subarray Game
+Problem
+We define the goodness of any array
+B of length
+M as:
+∑
+i=1
+M−1
+∣B
+i+1
+−B
+i
+∣ (Here
+∣X∣ denotes the absolute value of
+X). In particular, goodness of any array of length
+1 is
+0.
+Alice and Bob have an array
+A containing
+N distinct elements and they play a game with it.
+Alice starts the game after which both the players make moves alternatively. In one move:
+A player can delete any subarray from
+A such that the goodness of
+A does not change.
+Formally, the player chooses indices
+L and
+R such that
+1≤L≤R≤length(A) and removes the subarray
+[A
+L
+,A
+L+1
+,…,A
+R
+] from
+A such that the goodness of
+A does not change.
+For e.g.
+A=[3,1,2,4], a player can select
+L=3,R=3, then the resulting array will be
+[3,1,4]. Initially, the goodness was
+∣1−3∣+∣2−1∣+∣4−2∣=5. After the move, the goodness is
+∣1−3∣+∣4−1∣=5. Here we can observe that the goodness does not change.
+The player who is not able to make a move loses. If both the players play optimally, determine who out of Alice and Bob will win the game.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the winner of the game if both players play optimally.
+You may print each character of Alice and Bob in uppercase or lowercase (for example, aLiCe, ALIce, alice will be considered identical).
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+1≤A
+i
+≤10
+9
+All
+A
+i
+are distinct.
+Sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+2
+3
+1 3 2
+4
+1 2 3 4
+Bob
+Alice
+Explanation:
+Test case 1: Alice can not make any moves such that the goodness of the array does not change. Therefore Bob wins.
+Test case 2: Alice can choose
+L=2,R=3 and remove the subarray
+[A
+2
+,A
+3
+]. The resulting array is
+[1,4].
+Goodness of the array before the operation
+=∣2−1∣+∣3−2∣+∣4−3∣=3.
+Goodness of the array after the operation
+=∣4−1∣=3.
+Thus, the array has the same goodness as before. Now Bob can not make any move. Therefore Alice wins.

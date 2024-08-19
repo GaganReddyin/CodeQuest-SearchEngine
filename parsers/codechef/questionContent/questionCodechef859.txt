@@ -1,0 +1,121 @@
+Max count of 1
+Problem
+You are given a binary string
+S of length
+N.
+You have to construct a binary string
+X, of length
+N, such that:
+For each
+(1≤i<N),
+X
+(i+1)
+=(X
+i
+⊕S
+i
+), where
+⊕ denotes the bitwise XOR operation;
+The count of
+1s in the string
+X is maximised.
+Find the maximum count of
+1 in string
+X.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first line of each test case contains a single integer
+N, the length of the string
+S.
+The second line of each test case contains a binary string
+S.
+Output Format
+For each test case, output on a new line, the maximum count of
+1 in string
+X.
+Constraints
+1≤T≤10
+5
+1≤N≤3⋅10
+5
+S consists of
+0 and
+1 only.
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+0011
+4
+1100
+4
+1010
+3
+3
+2
+Explanation:
+Test case
+1: Conside the string
+X=1110.
+Here,
+X
+2
+=X
+1
+⊕S
+1
+=1⊕0,
+X
+3
+=X
+2
+⊕S
+2
+=1⊕0,
+X
+4
+=X
+3
+⊕S
+3
+=1⊕1. It can be shown that no other value of
+X exists that satisfies the conditions and has more than three
+1s.
+Test case
+2: Conside the string
+X=1011.
+Here,
+X
+2
+=X
+1
+⊕S
+1
+=1⊕1,
+X
+3
+=X
+2
+⊕S
+2
+=0⊕1,
+X
+4
+=X
+3
+⊕S
+3
+=1⊕0. It can be shown that no other value of
+X exists that satisfies the conditions and has more than three
+1s.
+Test case
+3: The string
+X=0110, which has two
+1s.

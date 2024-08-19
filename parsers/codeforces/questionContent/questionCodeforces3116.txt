@@ -1,0 +1,698 @@
+I. Mission Possible
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Allen, a government secret service, has been assigned to infiltrate a mafia secret base to uncover crucial information regarding the mafia's operations.
+The secret base is a rectangular bounded by
+(
+x
+L
+,
+y
+L
+)
+,
+(
+x
+L
+,
+y
+R
+)
+,
+(
+x
+R
+,
+y
+L
+)
+, and
+(
+x
+R
+,
+y
+R
+)
+in a Cartesian coordinate system where
+x
+L
+<
+x
+R
+and
+y
+L
+<
+y
+R
+. There are
+N
+sensors placed inside the secret base. The
+i
+th
+sensor is located at
+(
+x
+i
+,
+y
+i
+)
+and has an effective sensing radius of
+r
+i
+which can detect any person who is strictly within the radius of
+r
+i
+from
+(
+x
+i
+,
+y
+i
+)
+. In other words, the
+i
+th
+sensor can detect a person at location
+(
+x
+a
+,
+y
+a
+)
+if and only if the Euclidean distance of
+(
+x
+i
+,
+y
+i
+)
+and
+(
+x
+a
+,
+y
+a
+)
+is strictly less than
+r
+i
+. It is also known that the Euclidean distance of any two sensors
+i
+and
+j
+is strictly larger than
+r
+i
++
+r
+j
+. Note that the Euclidean distance of two points,
+(
+x
+a
+,
+y
+a
+)
+and
+(
+x
+b
+,
+y
+b
+)
+, is
+|
+x
+a
+−
+x
+b
+|
+2
++|
+y
+a
+−
+y
+b
+|
+2
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+√
+.
+Allen begins his infiltration mission at location
+(
+x
+s
+,
+y
+s
+)
+, and his target is located at
+(
+x
+t
+,
+y
+t
+)
+. Allen has the power to run extremely fast in a straight line while he needs to spend extra time to change his running trajectory (to adjust his footing). Although he is a fast runner, he still needs to make sure that none of the sensors detect him while he is running, i.e. there is no point in his running trajectory which is strictly within a sensor effective sensing radius.
+Let
+P={(
+x
+p
+1
+,
+y
+p
+1
+),…,(
+x
+p
+|P|
+,
+y
+p
+|P|
+)}
+be the set of locations where Allen changes his running trajectory, thus, Allen's running trajectory with
+P
+is
+(
+x
+s
+,
+y
+s
+)→(
+x
+p
+1
+,
+y
+p
+1
+)→⋯→(
+x
+p
+|P|
+,
+y
+p
+|P|
+)→(
+x
+t
+,
+y
+t
+)
+where
+(
+x
+a
+,
+y
+a
+)→(
+x
+b
+,
+y
+b
+)
+implies that Allen is running from
+(
+x
+a
+,
+y
+a
+)
+to
+(
+x
+b
+,
+y
+b
+)
+in a straight line. The set
+P
+is feasible if and only if with
+P
+, Allen is not detected by any sensor and is not running out of the secret base (although, Allen is allowed to run along the secret base perimeter). Note that
+x
+p
+and
+y
+p
+,
+(
+x
+p
+,
+y
+p
+)∈P
+, are not necessarily integers; they can be real numbers.
+Your task in this problem is to find any one feasible
+P
+which contains no more than
+1000
+points.
+Input
+Input begins with a line containing five integers:
+N
+x
+L
+y
+L
+x
+R
+y
+R
+(
+0≤N≤50
+;
+0≤
+x
+L
+<
+x
+R
+≤1000
+;
+0≤
+y
+L
+<
+y
+R
+≤1000
+) representing the number of sensors and the secret base (
+x
+L
+,
+y
+L
+,
+x
+R
+,
+y
+R
+), respectively. The next line contains two integers:
+x
+s
+y
+s
+(
+x
+L
+<
+x
+s
+<
+x
+R
+;
+y
+L
+<
+y
+s
+<
+y
+R
+) representing Allen's initial location. The next line contains two integers:
+x
+t
+y
+t
+(
+x
+L
+<
+x
+t
+<
+x
+R
+;
+y
+L
+<
+y
+t
+<
+y
+R
+) representing Allen's target location. It is guaranteed that
+x
+s
+≠
+x
+t
+or
+y
+s
+≠
+y
+t
+. The next
+N
+lines each contains three integers:
+x
+i
+y
+i
+r
+i
+(
+x
+L
+<
+x
+i
+−
+r
+i
+<
+x
+i
++
+r
+i
+<
+x
+R
+;
+y
+L
+<
+y
+i
+−
+r
+i
+<
+y
+i
++
+r
+i
+<
+y
+R
+;
+1≤
+r
+i
+≤1000
+) representing a sensor at location
+(
+x
+i
+,
+y
+i
+)
+with an effective sensing radius of
+r
+i
+. It is guaranteed that the Euclidean distance of any two sensors
+i
+and
+j
+is larger than
+r
+i
++
+r
+j
+. It is also guaranteed that the Euclidean distance of
+(
+x
+s
+,
+y
+s
+)
+and
+(
+x
+t
+,
+y
+t
+)
+to any sensor
+i
+is larger than
+r
+i
+.
+Output
+Output in a line an integer representing the size of a feasible
+P
+. The next
+|P|
+lines each contains two real numbers (separated by a single space); the
+j
+th
+line contains
+x
+j
+y
+j
+representing the
+j
+th
+point in
+P
+. You may output any feasible
+P
+with no more than
+1000
+points.
+Due to the nature of the output (floating point), let us define an epsilon
+ϵ
+to be
+10
+−6
+to verify the output. Consider
+Q
+1
+=(
+x
+s
+,
+y
+s
+)
+,
+Q
+j+1
+=
+P
+j
+for all
+1≤j≤|P|
+, and
+Q
+|P|+2
+=(
+x
+t
+,
+y
+t
+)
+. Then,
+P
+is considered correct if and only if
+P
+contains no more than
+1000
+points and all of the following are satisfied:
+x
+L
+−ϵ≤
+x
+p
+k
+≤
+x
+R
++ϵ
+and
+y
+L
+−ϵ≤
+y
+p
+k
+≤
+y
+R
++ϵ
+for all
+1≤k≤|P|
+(Allen is not running out of the secret base).
+For all
+1≤k<|Q|
+, let
+S
+k
+be the line segment connecting
+Q
+k
+and
+Q
+k+1
+(Allen is running in straight line). For all
+1≤i≤N
+, let
+(
+x
+k,i
+,
+y
+k,i
+)
+be the point along
+S
+k
+that is the closest to the
+i
+th
+sensor's location,
+(
+x
+i
+,
+y
+i
+)
+. Let
+d
+k,i
+be the Euclidean distance between
+(
+x
+k,i
+,
+y
+k,i
+)
+and
+(
+x
+i
+,
+y
+i
+)
+. Then, the constraint
+r
+i
+≤
+d
+k,i
++ϵ
+should be satisfied (Allen is not detected by any sensor).
+All points in
+Q
+are distinct. Two points,
+(
+x
+a
+,
+y
+a
+)
+and
+(
+x
+b
+,
+y
+b
+)
+, are considered distinct if and only if
+|
+x
+a
+−
+x
+b
+|>ϵ
+or
+|
+y
+a
+−
+y
+b
+|>ϵ
+.
+Examples
+input
+Copy
+3 2 2 50 26
+4 14
+48 14
+15 13 7
+36 16 6
+46 18 3
+output
+Copy
+2
+13.25 23.1234567
+36.591003 7.1
+input
+Copy
+1 0 0 1000 1000
+100 501
+900 501
+500 251 250
+output
+Copy
+0
+Note
+Explanation for the sample input/output #1
+The figure above shows the
+P
+from the sample output. Note that there exists a feasible
+P
+with only one point in this sample, although you are not required to find such
+P
+.

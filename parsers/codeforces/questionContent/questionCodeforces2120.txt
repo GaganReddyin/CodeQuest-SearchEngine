@@ -1,0 +1,184 @@
+C. String Equality
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Ashish has two strings
+a
+and
+b
+, each of length
+n
+, and an integer
+k
+. The strings only contain lowercase English letters.
+He wants to convert string
+a
+into string
+b
+by performing some (possibly zero) operations on
+a
+.
+In one move, he can either
+choose an index
+i
+(
+1≤i≤n−1
+) and swap
+a
+i
+and
+a
+i+1
+, or
+choose an index
+i
+(
+1≤i≤n−k+1
+) and if
+a
+i
+,
+a
+i+1
+,…,
+a
+i+k−1
+are all equal to some character
+c
+(
+c≠
+'z'), replace each one with the next character
+(c+1)
+, that is, 'a' is replaced by 'b', 'b' is replaced by 'c' and so on.
+Note that he can perform any number of operations, and the operations can only be performed on string
+a
+.
+Help Ashish determine if it is possible to convert string
+a
+into
+b
+after performing some (possibly zero) operations on it.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The description of each test case is as follows.
+The first line of each test case contains two integers
+n
+(
+2≤n≤
+10
+6
+) and
+k
+(
+1≤k≤n
+).
+The second line of each test case contains the string
+a
+of length
+n
+consisting of lowercase English letters.
+The third line of each test case contains the string
+b
+of length
+n
+consisting of lowercase English letters.
+It is guaranteed that the sum of values
+n
+among all test cases does not exceed
+10
+6
+.
+Output
+For each test case, print "Yes" if Ashish can convert
+a
+into
+b
+after some moves, else print "No".
+You may print the letters of the answer in any case (upper or lower).
+Example
+input
+Copy
+4
+3 3
+abc
+bcd
+4 2
+abba
+azza
+2 1
+zz
+aa
+6 2
+aaabba
+ddddcc
+output
+Copy
+No
+Yes
+No
+Yes
+Note
+In the first test case it can be shown that it is impossible to convert
+a
+into
+b
+.
+In the second test case,
+"abba"
+−
+→
+inc
+"acca"
+−
+→
+inc
+…
+−
+→
+inc
+"azza".
+Here "swap" denotes an operation of the first type, and "inc" denotes an operation of the second type.
+In the fourth test case,
+"aaabba"
+−
+→
+−
+−
+swap
+"aaabab"
+−
+→
+−
+−
+swap
+"aaaabb"
+−
+→
+inc
+…
+−
+→
+inc
+"ddaabb"
+−
+→
+inc
+…
+−
+→
+inc
+"ddddbb"
+−
+→
+inc
+…
+−
+→
+inc
+"ddddcc".

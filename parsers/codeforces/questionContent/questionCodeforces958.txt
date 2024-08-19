@@ -1,0 +1,145 @@
+A. Prof. Slim
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+One day Prof. Slim decided to leave the kingdom of the GUC to join the kingdom of the GIU. He was given an easy online assessment to solve before joining the GIU. Citizens of the GUC were happy sad to see the prof leaving, so they decided to hack into the system and change the online assessment into a harder one so that he stays at the GUC. After a long argument, they decided to change it into the following problem.
+Given an array of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+, where
+a
+i
+≠0
+, check if you can make this array sorted by using the following operation any number of times (possibly zero). An array is sorted if its elements are arranged in a non-decreasing order.
+select two indices
+i
+and
+j
+(
+1≤i,j≤n
+) such that
+a
+i
+and
+a
+j
+have different signs. In other words, one must be positive and one must be negative.
+swap the signs of
+a
+i
+and
+a
+j
+. For example if you select
+a
+i
+=3
+and
+a
+j
+=−2
+, then they will change to
+a
+i
+=−3
+and
+a
+j
+=2
+.
+Prof. Slim saw that the problem is still too easy and isn't worth his time, so he decided to give it to you to solve.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Then
+t
+test cases follow.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the array
+a
+.
+The next line contain
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+,
+a
+i
+≠0
+) separated by spaces describing elements of the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases doesn't exceed
+10
+5
+.
+Output
+For each test case, print "YES" if the array can be sorted in the non-decreasing order, otherwise print "NO". You can print each letter in any case (upper or lower).
+Example
+input
+Copy
+4
+7
+7 3 2 -11 -13 -17 -23
+6
+4 10 25 47 71 96
+6
+71 -35 7 -4 -11 -25
+6
+-45 9 -48 -67 -55 7
+output
+Copy
+NO
+YES
+YES
+NO
+Note
+In the first test case, there is no way to make the array sorted using the operation any number of times.
+In the second test case, the array is already sorted.
+In the third test case, we can swap the sign of the
+1
+-st element with the sign of the
+5
+-th element, and the sign of the
+3
+-rd element with the sign of the
+6
+-th element, this way the array will be sorted.
+In the fourth test case, there is no way to make the array sorted using the operation any number of times.

@@ -1,0 +1,64 @@
+Sereja and BOX
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Sereja has a box A with size N*N*N, where N=2Q for some integer Q. Each cell A(i, j, k) contains some binary value (zero or one). Sereja now has C++ function F(A) (where the box A is parameter of the function F):
+int F(box A, int dx = 0, int dy = 0, int dz = 0, int size = N) {
+   vector B = {};
+   for (int i = dx; i < dx + size; i++) {
+      for (int j = dy; j < dy + size; j++) {
+         for (int k = dz; k < dz + size; k++) {
+           B.push_back(A[i][j][k]);
+         }
+      }
+   }
+   sort(B.begin(), B.end());
+   if (B[0] == B[size * size * size - 1]) {
+      return 1;
+   }
+   int result = 0;
+   for (int i = 0; i < 2; i++) {
+      for (int j = 0; j < 2; j++) {
+        for (int k = 0; k < 2; k++) {
+           result += f(A, 
+                          dx + i * size / 2, 
+                          dy + j * size / 2, 
+                          dz + k * size / 2,
+                          size / 2);
+        }
+      }
+   }
+   return result;
+}
+This function computes compression level of the box. Sereja now wants to know minimal and maximal value of F(D) among all boxes D which has same dimensions as A and differ in no more than K cells with A.
+Input
+First line contains integers N and K.
+Each of N next blocks contains N lines, each line contains N numbers, k-th number in j-th line of i-th block means value of A(i,j,k).
+Output
+Output two numbers in a single line - minimal and maximal value of F(D).
+Constraints
+1 ≤ N ≤ 32
+1 ≤ K ≤ N3
+Subtasks
+Subtask #1: 1 ≤ N ≤ 2 (5 points)
+Subtask #2: 1 ≤ N ≤ 4 (15 points)
+Subtask #3: 1 ≤ N ≤ 8 (20 points)
+Subtask #4: 1 ≤ N ≤ 16 (25 points)
+Subtask #5: original constraints (35 points)
+Example 1
+Input:
+2 0
+0 0
+0 0
+0 0
+0 0
+Output:
+1 1
+Example 2
+Input:
+2 1
+0 0
+0 0
+0 0
+0 0
+Output:
+1 8

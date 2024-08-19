@@ -1,0 +1,58 @@
+String Reverse
+Problem
+Chef has a string
+S consisting only of English lowercase letters (a - z). However, Hitesh does not like it and wants it to be reversed.
+Hitesh wonders what is the minimum number of operations required to reverse the string
+S using the following operation:
+Select any
+i such that
+1≤i≤∣S∣ and remove
+S
+i
+from its original position and append it to the end of the string (i.e. shift any character to the end of the string).
+For e.g. if
+S= abcde and we apply operation on
+i=2, then
+S becomes acdeb.
+Help Hitesh find the minimum number of operations required to reverse
+S.
+It is guaranteed that it is possible to reverse the string in a finite number of operations.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line containing the string S.
+Output Format
+For each test case, output the minimum number of operations required to reverse the string
+S.
+Constraints
+1≤T≤10
+3
+1≤∣S∣≤10
+5
+Sum of
+∣S∣ over all testcases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+abdeba
+codechef
+3
+7
+Explanation:
+Test case-1: Following steps can be performed:
+abdeba→abebad
+abebad→abeadb
+abeadb→abedba
+Test case-2: following steps can be performed:
+codechef→codechfe
+codechfe→codecfeh
+codecfeh→codefehc
+codefehc→codfehce
+codfehce→cofehced
+cofehced→cfehcedo
+cfehcedo→fehcedoc

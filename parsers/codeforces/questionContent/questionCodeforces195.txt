@@ -1,0 +1,298 @@
+E. Li Hua and Array
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Li Hua wants to solve a problem about
+φ
+ — Euler's totient function. Please recall that
+φ(x)=
+∑
+i=1
+x
+[gcd(i,x)=1]
+.
+†,‡
+He has a sequence
+a
+1
+,
+a
+2
+,⋯,
+a
+n
+and he wants to perform
+m
+operations:
+"1
+l
+r
+" (
+1≤l≤r≤n
+) — for each
+x∈[l,r]
+, change
+a
+x
+into
+φ(
+a
+x
+)
+.
+"2
+l
+r
+" (
+1≤l≤r≤n
+) — find out the minimum changes needed to make sure
+a
+l
+=
+a
+l+1
+=⋯=
+a
+r
+. In each change, he chooses one
+x∈[l,r]
+, change
+a
+x
+into
+φ(
+a
+x
+)
+. Each operation of this type is independent, which means the array doesn't actually change.
+Suppose you were Li Hua, please solve this problem.
+†
+†
+gcd(x,y)
+denotes the greatest common divisor (GCD) of integers
+x
+and
+y
+.
+‡
+‡
+The notation
+[cond]
+equals
+1
+if the condition
+cond
+is true, and
+0
+otherwise.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤
+10
+5
+) — the number of elements in the array and the number of operations to process, respectively.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,⋯,
+a
+n
+(
+1≤
+a
+i
+≤5⋅
+10
+6
+) — the elements of the array.
+Next
+m
+lines, each line contains three integers
+t
+i
+,
+l
+i
+,
+r
+i
+(
+t
+i
+∈{1,2},1≤
+l
+i
+≤
+r
+i
+≤n
+) — the
+i
+-th operation.
+Output
+For each "2
+l
+r
+", output the answer in an separate line.
+Example
+input
+Copy
+5 4
+8 1 6 3 7
+2 1 5
+2 3 4
+1 1 3
+2 3 4
+output
+Copy
+10
+2
+1
+Note
+Denote
+φ
+k
+(x)={
+x,
+φ(
+φ
+k−1
+(x)),
+k=0
+k>0
+.
+At first,
+a=[8,1,6,3,7]
+.
+To make sure
+a
+1
+=
+a
+2
+=
+a
+3
+=
+a
+4
+=
+a
+5
+, we can change
+a
+to
+a
+′
+=[
+φ
+3
+(8),
+φ
+0
+(1),
+φ
+2
+(6),
+φ
+2
+(3),
+φ
+3
+(7)]=[1,1,1,1,1]
+, using
+3+0+2+2+3=10
+changes.
+To make sure
+a
+3
+=
+a
+4
+, we can change
+a
+to
+a
+′
+=[
+φ
+0
+(8),
+φ
+0
+(1),
+φ
+1
+(6),
+φ
+1
+(3),
+φ
+0
+(7)]=[8,1,2,2,7]
+, using
+0+0+1+1+0=2
+changes.
+After "1
+1
+3
+",
+a
+is changed to
+a=[
+φ
+1
+(8),
+φ
+1
+(1),
+φ
+1
+(6),
+φ
+0
+(3),
+φ
+0
+(7)]=[4,1,2,3,7]
+.
+To make sure
+a
+3
+=
+a
+4
+, we can change
+a
+to
+a
+′
+=[
+φ
+0
+(4),
+φ
+0
+(1),
+φ
+0
+(2),
+φ
+1
+(3),
+φ
+0
+(7)]=[4,1,2,2,7]
+, using
+0+0+0+1+0=1
+change.

@@ -1,0 +1,69 @@
+Odd GCD Permutation
+Problem
+You are given an integer
+N. Print a permutation of
+{1,2,…,N} such that the greatest common divisor (GCD) of the numbers at odd indices is greater than the GCD of the numbers at even indices. If there are many such permutations, print the lexicographically largest permutation.
+More formally, find the lexicographically largest permutation
+P such that
+GCD(P
+1
+,P
+3
+,P
+5
+,…)>GCD(P
+2
+,P
+4
+,P
+6
+,…), where
+P
+i
+represents the number at index
+i in the permutation.
+If no solution exists, print -1.
+Note: Permutation
+X is lexicographically larger than permutation
+Y if
+X
+i
+>Y
+i
+, where
+i is the first index where
+X and
+Y differ.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The only line of each test case contains a single integer,
+N.
+Output Format
+Print the lexicographically largest permutation of
+{1,2,…,N} that satisfies the given condition. Or, if no solution exists, print -1.
+Constraints
+1≤T≤1000
+2≤N≤10
+3
+Sample 1:
+Input
+Output
+3
+5
+6
+17
+-1
+6 5 4 3 2 1
+-1
+Explanation:
+Testcase 1: For
+N=5, no solution exists. There is no permutation of the numbers from 1 to 5 that satisfies the condition where the GCD of all numbers at odd indices is greater than the GCD of all numbers at even indices.
+Testcase 2: For
+N=6,
+Permutations that satisfy the condition of the GCD of all numbers at odd indices being greater than the GCD of all numbers at even indices include:
+[6,3,2,5,4,1]
+[2,3,4,1,6,5]
+[6,5,4,3,2,1]
+There are more, but among all these permutations, you can show that
+[6,5,4,3,2,1] is the lexicographically largest. Hence, it is the solution for this test case. In this solution, the GCD of all numbers at odd indices is 2 , while the GCD of all numbers at even indices is 1.

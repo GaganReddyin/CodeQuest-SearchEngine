@@ -1,0 +1,179 @@
+B. Boboniu Plays Chess
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Boboniu likes playing chess with his employees. As we know, no employee can beat the boss in the chess game, so Boboniu has never lost in any round.
+You are a new applicant for his company. Boboniu will test you with the following chess question:
+Consider a
+n×m
+grid (rows are numbered from
+1
+to
+n
+, and columns are numbered from
+1
+to
+m
+). You have a chess piece, and it stands at some cell
+(
+S
+x
+,
+S
+y
+)
+which is not on the border (i.e.
+2≤
+S
+x
+≤n−1
+and
+2≤
+S
+y
+≤m−1
+).
+From the cell
+(x,y)
+, you can move your chess piece to
+(x,
+y
+′
+)
+(
+1≤
+y
+′
+≤m,
+y
+′
+≠y
+) or
+(
+x
+′
+,y)
+(
+1≤
+x
+′
+≤n,
+x
+′
+≠x
+). In other words, the chess piece moves as a rook. From the cell, you can move to any cell on the same row or column.
+Your goal is to visit each cell exactly once. Can you find a solution?
+Note that cells on the path between two adjacent cells in your route are not counted as visited, and it is not required to return to the starting point.
+Input
+The only line of the input contains four integers
+n
+,
+m
+,
+S
+x
+and
+S
+y
+(
+3≤n,m≤100
+,
+2≤
+S
+x
+≤n−1
+,
+2≤
+S
+y
+≤m−1
+) — the number of rows, the number of columns, and the initial position of your chess piece, respectively.
+Output
+You should print
+n⋅m
+lines.
+The
+i
+-th line should contain two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+≤n
+,
+1≤
+y
+i
+≤m
+), denoting the
+i
+-th cell that you visited. You should print exactly
+nm
+pairs
+(
+x
+i
+,
+y
+i
+)
+, they should cover all possible pairs
+(
+x
+i
+,
+y
+i
+)
+, such that
+1≤
+x
+i
+≤n
+,
+1≤
+y
+i
+≤m
+.
+We can show that under these constraints there always exists a solution. If there are multiple answers, print any.
+Examples
+input
+Copy
+3 3 2 2
+output
+Copy
+2 2
+1 2
+1 3
+2 3
+3 3
+3 2
+3 1
+2 1
+1 1
+input
+Copy
+3 4 2 2
+output
+Copy
+2 2
+2 1
+2 3
+2 4
+1 4
+3 4
+3 3
+3 2
+3 1
+1 1
+1 2
+1 3
+Note
+Possible routes for two examples:

@@ -1,0 +1,93 @@
+Count Partitions 
+Problem
+An array
+B of length
+M consisting of only distinct elements is said to be good if the following condition holds:
+Let
+i be the index of the maximum element of
+B.
+Then,
+B[1,i] must be in ascending order, i.e,
+B
+1
+<B
+2
+<B
+3
+<…<B
+i
+.
+For example,
+[1,2,3],[1,4,3,2] and
+[1,3,2] are good arrays, while
+[2,1,3] and
+[3,2,4,1] are not.
+You are given a permutation
+P of length
+N. You have to partition
+P into some non-empty good subarrays. Note that every element of
+P should be contained in exactly one subarray.
+Find the total number of valid partitions.
+Since the answer can be quite large, please print it modulo
+998244353.
+Note: A permutation of length
+N is an arrangement of the integers
+{1,2,3,…,N}.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N, the length of
+P.
+The second line contains
+N space-separated distinct integers
+P
+1
+,P
+2
+,P
+3
+,…,P
+N
+.
+Output Format
+For each test case, output on a new line the number of valid partitions modulo
+998244353.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+6
+1≤P
+i
+≤N for each
+1≤i≤N.
+All elements of
+P are distinct.
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+2
+4
+2 1 4 3
+5
+1 2 3 4 5
+6
+16
+Explanation:
+Test case
+1: The
+6 valid partitions are as follows:
+[2],[1],[4],[3]
+[2],[1],[4,3]
+[2],[1,4],[3]
+[2],[1,4,3]
+[2,1],[4],[3]
+[2,1],[4,3]

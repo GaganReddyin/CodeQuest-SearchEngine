@@ -1,0 +1,31 @@
+Sherlock Counts Ways
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Watson gives an array of colored balls to Sherlock. All balls are identical in shape and size and hence, two balls with same color are indistinguishable. He gives to Sherlock an integer K and wants Sherlock to choose a bundle of K balls from the array. Sherlock is intrigued by the problem and starts wondering in how many different ways he can choose K such balls. Two ways are different if for any color c, there are different count of balls with color c in two chosen bundles.
+Input
+First line contains N and K followed by N integers in next line denoting A1, A2, ..., AN - colors of the balls.
+Output
+Output the required answer modulo 13313 in one line.
+Constraints
+1 ≤ K ≤ N ≤ 2*105
+1 ≤ Ai ≤ 2*105
+Example
+Input 1:
+4 2
+3 2 2 3 
+Output 1:
+3
+Input 2:
+5 1
+2 2 2 2 2
+Output 2:
+1
+Explanation
+Input 1:
+Three possible ways are:
+[2, 2]
+[3, 3]
+[2, 3]
+
+Input 2:
+Only possible way is [2].

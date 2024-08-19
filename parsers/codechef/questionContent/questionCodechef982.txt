@@ -1,0 +1,35 @@
+Majin Vegeta
+Problem
+Babidi has summoned Majin Vegeta. He orders him to kill Supreme Kai. But Vegeta wants to get out of his control.
+Babidi has laid out a trap. Vegeta is standing at the
+nth level of mind control. In order to defeat Babidi's trap, he needs to reach
+mth level. The levels are continuous increasing integers. At each increment of level,
+nth to
+(n+1)th level, for example, the energy used is - number of distinct prime factors of
+n.
+Vegeta needs your help in order to figure out how much total minimum energy he needs to defeat Babidi's trap. The total energy is the sum of energy used at each increment of a level.In the calculation of energy,
+n and
+m are inclusive.
+###Input:
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follow.
+The first and only line of each test case contains the two integers
+n and
+m, separated by a single space.
+###Output: For each test case, print a single line containing one integer denoting the energy needed by Vegeta to escape Babidi's mind control and continue his battle with Kakarot.
+###Constraints
+1≤T≤2
+1≤n≤m≤10
+6
+Sample 1:
+Input
+Output
+2
+3 7
+1 1023
+5
+2177
+Explanation:
+Example case 1: Vegeta is standing at
+n=3. As he moves from 3 to 4, energy used is 1. From 4 to 5, energy used is 1. Similarly, as he continues to move towards m=7, the total energy used is 1+1+1+2=5.

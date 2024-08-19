@@ -1,0 +1,60 @@
+Pile Partition
+Problem
+Alice and Bob are playing a game. At the start of the game, there are
+N piles of stones, the
+i-th of which has
+A
+i
+stones.
+Alice and Bob alternate moves. On their move, a player does the following:
+Choose one pile of stones, and discard the remaining
+N−1 piles.
+Partition the stones in the chosen pile into exactly
+N new piles of stones, each containing at least
+1 stone. Note that this means that the number of piles is always
+N.
+The player who cannot make a move loses. Determine the winner of the game if Alice moves first.
+Input Format
+The first line of input contains an integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case contains two lines of input.
+The first line of each test case contains
+N, the number of piles.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For every test case print exactly one line containing the answer — either "Alice" or "Bob" (without the quotes). You can output Alice and Bob in any case (for example, the strings BOb, BOB, bob and boB will be recognized as a positive response)
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+1≤A
+i
+≤10
+18
+The sum of
+N over all test cases doesn't exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+1
+3
+5 7 8
+Alice
+Explanation:
+In the first move, Alice can select the first pile and divide it into
+3 piles of sizes
+2,2, and
+1. After this, Bob cannot make a move since each pile has less than
+3 stones.

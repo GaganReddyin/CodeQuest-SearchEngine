@@ -1,0 +1,246 @@
+F. Formalism for Formalism
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Yura is a mathematician, and his cognition of the world is so absolute as if he have been solving formal problems a hundred of trillions of billions of years. This problem is just that!
+Consider all non-negative integers from the interval
+[0,
+10
+n
+)
+. For convenience we complement all numbers with leading zeros in such way that each number from the given interval consists of exactly
+n
+decimal digits.
+You are given a set of pairs
+(
+u
+i
+,
+v
+i
+)
+, where
+u
+i
+and
+v
+i
+are distinct decimal digits from
+0
+to
+9
+.
+Consider a number
+x
+consisting of
+n
+digits. We will enumerate all digits from left to right and denote them as
+d
+1
+,
+d
+2
+,…,
+d
+n
+. In one operation you can swap digits
+d
+i
+and
+d
+i+1
+if and only if there is a pair
+(
+u
+j
+,
+v
+j
+)
+in the set such that at least one of the following conditions is satisfied:
+d
+i
+=
+u
+j
+and
+d
+i+1
+=
+v
+j
+,
+d
+i
+=
+v
+j
+and
+d
+i+1
+=
+u
+j
+.
+We will call the numbers
+x
+and
+y
+, consisting of
+n
+digits, equivalent if the number
+x
+can be transformed into the number
+y
+using some number of operations described above. In particular, every number is considered equivalent to itself.
+You are given an integer
+n
+and a set of
+m
+pairs of digits
+(
+u
+i
+,
+v
+i
+)
+. You have to find the maximum integer
+k
+such that there exists a set of integers
+x
+1
+,
+x
+2
+,…,
+x
+k
+(
+0≤
+x
+i
+<
+10
+n
+) such that for each
+1≤i<j≤k
+the number
+x
+i
+is not equivalent to the number
+x
+j
+.
+Input
+The first line contains an integer
+n
+(
+1≤n≤50000
+) — the number of digits in considered numbers.
+The second line contains an integer
+m
+(
+0≤m≤45
+) — the number of pairs of digits in the set.
+Each of the following
+m
+lines contains two digits
+u
+i
+and
+v
+i
+, separated with a space (
+0≤
+u
+i
+<
+v
+i
+≤9
+).
+It's guaranteed that all described pairs are pairwise distinct.
+Output
+Print one integer — the maximum value
+k
+such that there exists a set of integers
+x
+1
+,
+x
+2
+,…,
+x
+k
+(
+0≤
+x
+i
+<
+10
+n
+) such that for each
+1≤i<j≤k
+the number
+x
+i
+is not equivalent to the number
+x
+j
+.
+As the answer can be big enough, print the number
+k
+modulo
+998244353
+.
+Examples
+input
+Copy
+1
+0
+output
+Copy
+10
+input
+Copy
+2
+1
+0 1
+output
+Copy
+99
+input
+Copy
+2
+9
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+output
+Copy
+91
+Note
+In the first example we can construct a set that contains all integers from
+0
+to
+9
+. It's easy to see that there are no two equivalent numbers in the set.
+In the second example there exists a unique pair of equivalent numbers:
+01
+and
+10
+. We can construct a set that contains all integers from
+0
+to
+99
+despite number
+1
+.

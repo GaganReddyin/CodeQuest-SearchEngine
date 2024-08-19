@@ -1,0 +1,139 @@
+Dazzling Even-Odd Challenge
+Problem
+Dazzler has an interesting task for you.
+You will be given an array
+A of
+N positive integers such that:
+N is always even.
+Exactly
+2
+N
+elements in the array are even and
+2
+N
+elements are odd.
+In one operation, you should do the following steps:
+Choose two different indices
+i and
+j
+(1≤i,j≤N).
+Set
+A
+i
+:=A
+i
++1.
+Set
+A
+j
+:=A
+j
+−1.
+You need to apply some finite (possibly zero) number of operations on the array such that:
+The parity of the final element at each index is same as the parity of the initial element at that index. For example, if the
+i
+th
+element in the initial array is even, then, the
+i
+th
+element in the final array must be even as well.
+All the
+2
+N
+odd elements in the final array are equal.
+All the
+2
+N
+even elements in the final array are equal.
+Print YES if it is possible to meet all the above conditions after doing some finite (possibly zero) number of operations. Otherwise, print NO.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+First line of each test case contains
+N, number of elements in the array
+A. Note that,
+N is even.
+Second line of each test case contains
+N space-separated positive integers, the elements of the array.
+Output Format
+For each test case, output in a single line, YES if it is possible to meet all the given conditions after doing some finite (possibly zero) number of operations. Otherwise, print NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings YeS, yEs, yes and YES will all be treated as identical).
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+1≤A[i]≤10
+9
+N%2=0
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4
+1 1 2 4
+4
+1 2 5 6
+2
+1 2
+4
+1 2 3 4
+NO
+YES
+YES
+YES
+Explanation:
+Test case
+1: It is not possible to satisfy all the given conditions using any number of operations.
+Test case
+2: One of the possible sequence of operations is listed below:
+In the first operation, choose
+i=2 and
+j=4. Thus,
+A
+2
+=2+1=3 and
+A
+4
+=6−1=5. The array will become
+[1,3,5,5].
+In the second operation, choose
+i=2 and
+j=4. Thus,
+A
+2
+=3+1=4 and
+A
+4
+=5−1=4. The array will become
+[1,4,5,4].
+In the third operation, choose
+i=1 and
+j=3. Thus,
+A
+1
+=1+1=2 and
+A
+3
+=5−1=4. The array will become
+[2,4,4,4].
+In the fourth operation, choose
+i=1 and
+j=3. Thus,
+A
+1
+=2+1=3 and
+A
+3
+=4−1=3. The array will become
+[3,4,3,4].
+Here, all the odd elements are equal and all the even elements are equal. Also, the parity at each index is preserved.
+Test case
+3: The array
+[1,2] satisfies all the conditions. Thus,
+0 operations are needed.

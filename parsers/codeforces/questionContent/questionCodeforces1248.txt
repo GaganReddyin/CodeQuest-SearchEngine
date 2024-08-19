@@ -1,0 +1,107 @@
+H. Keep XOR Low
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+and an integer
+x
+.
+Find the number of non-empty subsets of indices of this array
+1≤
+b
+1
+<
+b
+2
+<…<
+b
+k
+≤n
+, such that for all pairs
+(i,j)
+where
+1≤i<j≤k
+, the inequality
+a
+b
+i
+⊕
+a
+b
+j
+≤x
+is held. Here,
+⊕
+denotes the bitwise XOR operation. As the answer may be very large, output it modulo
+998244353
+.
+Input
+The first line of the input contains two integers
+n
+and
+x
+(
+1≤n≤150000
+,
+0≤x<
+2
+30
+). Here,
+n
+is the size of the array.
+The next line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+<
+2
+30
+): the array itself.
+Output
+Print one integer: the number of non-empty subsets such that the bitwise XOR of every pair of elements is at most
+x
+, modulo
+998244353
+.
+Examples
+input
+Copy
+4 2
+0 1 2 3
+output
+Copy
+8
+input
+Copy
+3 6
+4 2 2
+output
+Copy
+7
+input
+Copy
+4 0
+1 1 2 2
+output
+Copy
+6

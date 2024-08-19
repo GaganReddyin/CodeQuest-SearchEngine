@@ -1,0 +1,206 @@
+C. Complementary XOR
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have two binary strings
+a
+and
+b
+of length
+n
+. You would like to make all the elements of both strings equal to
+0
+. Unfortunately, you can modify the contents of these strings using only the following operation:
+You choose two indices
+l
+and
+r
+(
+1≤l≤r≤n
+);
+For every
+i
+that respects
+l≤i≤r
+, change
+a
+i
+to the opposite. That is,
+a
+i
+:=1−
+a
+i
+;
+For every
+i
+that respects either
+1≤i<l
+or
+r<i≤n
+, change
+b
+i
+to the opposite. That is,
+b
+i
+:=1−
+b
+i
+.
+Your task is to determine if this is possible, and if it is, to find such an appropriate chain of operations. The number of operations should not exceed
+n+5
+. It can be proven that if such chain of operations exists, one exists with at most
+n+5
+operations.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the length of the strings.
+The second line of each test case contains a binary string
+a
+, consisting only of characters 0 and 1, of length
+n
+.
+The third line of each test case contains a binary string
+b
+, consisting only of characters 0 and 1, of length
+n
+.
+It is guaranteed that sum of
+n
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print first "YES" if it's possible to make all the elements of both strings equal to
+0
+. Otherwise, print "NO". If the answer is "YES", on the next line print a single integer
+k
+(
+0≤k≤n+5
+) — the number of operations. Then
+k
+lines follows, each contains two integers
+l
+and
+r
+(
+1≤l≤r≤n
+) — the description of the operation.
+If there are several correct answers, print any of them.
+Example
+input
+Copy
+5
+3
+010
+101
+2
+11
+10
+4
+1000
+0011
+2
+10
+10
+3
+111
+111
+output
+Copy
+YES
+1
+2 2
+NO
+NO
+YES
+2
+1 2
+2 2
+YES
+2
+1 1
+2 3
+Note
+In the first test case, we can perform one operation with
+l=2
+and
+r=2
+. So
+a
+2
+:=1−1=0
+and string
+a
+became equal to 000.
+b
+1
+:=1−1=0
+,
+b
+3
+:=1−1=0
+and string
+b
+became equal to 000.
+In the second and in the third test cases, it can be proven that it's impossible to make all elements of both strings equal to
+0
+.
+In the fourth test case, we can perform an operation with
+l=1
+and
+r=2
+, then string
+a
+became equal to 01, and string
+b
+doesn't change. Then we perform an operation with
+l=2
+and
+r=2
+, then
+a
+2
+:=1−1=0
+and
+b
+1
+=1−1=0
+. So both of string
+a
+and
+b
+became equal to 00.
+In the fifth test case, we can perform an operation with
+l=1
+and
+r=1
+. Then string
+a
+became equal to 011 and string
+b
+became equal to 100. Then we can perform an operation with
+l=2
+and
+r=3
+, so both of string
+a
+and
+b
+became equal to 000.

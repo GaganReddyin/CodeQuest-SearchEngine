@@ -1,0 +1,81 @@
+Bitwise Tuples
+Problem
+Read problem statements in Vietnamese,
+Bengali, Mandarin Chinese, and Russian as well.
+Chef has two numbers
+N and
+M. Help Chef to find number of integer
+N-tuples
+(A
+1
+,A
+2
+,…,A
+N
+) such that
+0≤A
+1
+,A
+2
+,…,A
+N
+≤2
+M
+−1 and
+A
+1
+&A
+2
+&…&A
+N
+=0, where
+& denotes the bitwise AND operator.
+Since the number of tuples can be large, output it modulo
+10
+9
++7.
+Input
+The first line contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two integers
+N and
+M.
+Output
+For each test case, output in a single line the answer to the problem modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+5
+1≤N,M≤10
+6
+###Subtasks Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+4
+1 2
+2 2
+4 2
+8 4
+1
+9
+225
+228250597
+Explanation:
+Test Case
+1: The only possible tuple is
+(0).
+Test Case
+2: The tuples are
+(0,0),
+(0,1),
+(0,2),
+(0,3),
+(1,0),
+(2,0),
+(3,0),
+(1,2),
+(2,1).

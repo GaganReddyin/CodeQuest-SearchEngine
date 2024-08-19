@@ -1,0 +1,123 @@
+I. Interactive Treasure Hunt
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem.
+There is a grid of
+n×m
+cells. Two treasure chests are buried in two different cells of the grid. Your task is to find both of them. You can make two types of operations:
+DIG
+r
+c
+: try to find the treasure in the cell
+(r,c)
+. The interactor will tell you if you found the treasure or not.
+SCAN
+r
+c
+: scan from the cell
+(r,c)
+. The result of this operation is the sum of Manhattan distances from the cell
+(r,c)
+to the cells where the treasures are hidden. Manhattan distance from a cell
+(
+r
+1
+,
+c
+1
+)
+to a cell
+(
+r
+2
+,
+c
+2
+)
+is calculated as
+|
+r
+1
+−
+r
+2
+|+|
+c
+1
+−
+c
+2
+|
+.
+You need to find the treasures in at most 7 operations. This includes both DIG and SCAN operations in total. To solve the test you need to call DIG operation at least once in both of the cells where the treasures are hidden.
+Interaction
+Your program has to process multiple test cases in a single run. First, the testing system writes
+t
+ — the number of test cases (
+1≤t≤100
+). Then,
+t
+test cases should be processed one by one.
+In each test case, your program should start by reading the integers
+n
+and
+m
+(
+2≤n,m≤16
+).
+Then, your program can make queries of two types:
+DIG
+r
+c
+(
+1≤r≤n
+;
+1≤c≤m
+). The interactor responds with integer
+1
+, if you found the treasure, and
+0
+if not. If you try to find the treasure in the same cell multiple times, the result will be
+0
+since the treasure is already found.
+SCAN
+r
+c
+(
+1≤r≤n
+;
+1≤c≤m
+). The interactor responds with an integer that is the sum of Manhattan distances from the cell
+(r,c)
+to the cells where the treasures were hidden. The sum is calculated for both cells with treasures, even if you already found one of them.
+After you found both treasures, i. e. you received
+1
+for two DIG operations, your program should continue to the next test case or exit if that test case was the last one.
+Example
+input
+Copy
+1
+2 3
+
+1
+
+1
+
+3
+
+0
+
+1
+output
+Copy
+SCAN 1 2
+
+DIG 1 2
+
+SCAN 2 2
+
+DIG 1 1
+
+DIG 1 3

@@ -1,0 +1,281 @@
+C. Max Mex
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Once Grisha found a tree (connected graph without cycles) with a root in node
+1
+.
+But this tree was not just a tree. A permutation
+p
+of integers from
+0
+to
+n−1
+is written in nodes, a number
+p
+i
+is written in node
+i
+.
+As Grisha likes to invent some strange and interesting problems for himself, but not always can solve them, you need to help him deal with two types of queries on this tree.
+Let's define a function
+MEX(S)
+, where
+S
+is a set of non-negative integers, as a smallest non-negative integer that is not included in this set.
+Let
+l
+be a simple path in this tree. So let's define indices of nodes which lie on
+l
+as
+u
+1
+,
+u
+2
+,
+…
+,
+u
+k
+.
+Define
+V(l)
+as a set {
+p
+u
+1
+,
+p
+u
+2
+,
+…
+,
+p
+u
+k
+}.
+Then queries are:
+For two nodes
+i
+and
+j
+, swap
+p
+i
+and
+p
+j
+.
+Find the maximum value of
+MEX(V(l))
+in all possible
+l
+.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the number of nodes of a tree.
+The second line contains
+n
+integers —
+p
+1
+,
+p
+2
+,
+…
+,
+p
+n
+(
+0≤
+p
+i
+<n
+) — the permutation
+p
+, it's guaranteed that all numbers are different .
+The third line contains
+n−1
+integers —
+d
+2
+,
+d
+3
+,
+…
+,
+d
+n
+(
+1≤
+d
+i
+<i
+), where
+d
+i
+is a direct ancestor of node
+i
+in a tree.
+The fourth line contains a single integer
+q
+(
+1≤q≤2⋅
+10
+5
+) — the number of queries.
+The following
+q
+lines contain the description of queries:
+At the beginning of each of next
+q
+lines, there is a single integer
+t
+(
+1
+or
+2
+) — the type of a query:
+If
+t=1
+, the line also contains two integers
+i
+and
+j
+(
+1≤i,j≤n
+) — the indices of nodes, where values of the permutation should be swapped.
+If
+t=2
+, you need to find the maximum value of
+MEX(V(l))
+in all possible
+l
+.
+Output
+For each type 2 query print a single integer — the answer for this query.
+Examples
+input
+Copy
+6
+2 5 0 3 1 4
+1 1 3 3 3
+3
+2
+1 6 3
+2
+output
+Copy
+3
+2
+input
+Copy
+6
+5 2 1 4 3 0
+1 1 1 3 3
+9
+2
+1 5 3
+2
+1 6 1
+2
+1 4 2
+2
+1 1 6
+2
+output
+Copy
+3
+2
+4
+4
+2
+Note
+Number written in brackets is a permutation value of a node.
+In the first example, for the first query, optimal path is a path from node
+1
+to node
+5
+. For it, set of values is
+{0,1,2}
+and
+MEX
+is
+3
+.
+For the third query, optimal path is a path from node
+5
+to node
+6
+. For it, set of values is
+{0,1,4}
+and
+MEX
+is
+2
+.
+In the second example, for the first query, optimal path is a path from node
+2
+to node
+6
+. For it, set of values is
+{0,1,2,5}
+and
+MEX
+is
+3
+.
+For the third query, optimal path is a path from node
+5
+to node
+6
+. For it, set of values is
+{0,1,3}
+and
+MEX
+is
+2
+.
+For the fifth query, optimal path is a path from node
+5
+to node
+2
+. For it, set of values is
+{0,1,2,3}
+and
+MEX
+is
+4
+.
+For the seventh query, optimal path is a path from node
+5
+to node
+4
+. For it, set of values is
+{0,1,2,3}
+and
+MEX
+is
+4
+.
+For the ninth query, optimal path is a path from node
+6
+to node
+5
+. For it, set of values is
+{0,1,3}
+and
+MEX
+is
+2
+.

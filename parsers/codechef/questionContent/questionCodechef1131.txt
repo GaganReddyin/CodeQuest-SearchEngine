@@ -1,0 +1,159 @@
+Divisible by A_i
+Problem
+You are given an array
+A consisting of
+N positive integers.
+Suppose
+F(B,X) gives the minimum positive integer
+Y such that:
+X divides
+Y⋅B
+i
+for all
+(1≤i≤∣B∣).
+Find the value of
+F(A,A
+i
+) for all
+(1≤i≤N).
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains an integer
+N — the length of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+representing the array
+A.
+Output Format
+For each test case, print
+N space-separated integers where the
+i
+th
+integer denotes the value
+F(A,A
+i
+).
+Constraints
+1≤T≤10
+5
+1≤N≤5⋅10
+5
+1≤A
+i
+≤10
+6
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+2
+1 2
+3
+2 2 2
+1 2
+1 1 1
+Explanation:
+Test case
+1: Given
+A=[1,2]
+F(A,A
+1
+)=F(A,1)=1: Here
+X=1 and
+Y=1 as
+X=1 divides both
+Y⋅A
+1
+=1 and
+Y⋅A
+2
+=2.
+F(A,A
+2
+)=F(A,2)=2: Here
+X=2 and
+Y=2 as
+X=2 divides both
+Y⋅A
+1
+=2 and
+Y⋅A
+2
+=4.
+Note that the values of
+Y are minimum possible for both
+F(A,A
+1
+) and
+F(A,A
+2
+).
+Test case
+2: Given
+A=[2,2,2]
+F(A,A
+1
+)=F(A,2)=1: Here
+X=2 and
+Y=1 as
+X=1 divides
+Y⋅A
+1
+=2,Y⋅A
+2
+=2, and
+Y⋅A
+3
+=2.
+F(A,A
+2
+)=F(A,2)=1: Here
+X=2 and
+Y=1 as
+X=1 divides
+Y⋅A
+1
+=2,Y⋅A
+2
+=2, and
+Y⋅A
+3
+=2.
+F(A,A
+3
+)=F(A,2)=1: Here
+X=2 and
+Y=1 as
+X=1 divides
+Y⋅A
+1
+=2,Y⋅A
+2
+=2, and
+Y⋅A
+3
+=2.
+Note that the values of
+Y are minimum possible for
+F(A,A
+1
+),F(A,A
+2
+), and
+F(A,A
+3
+).

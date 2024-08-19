@@ -1,0 +1,158 @@
+How Many Maximums
+Problem
+From an array
+A containing
+N integers, you construct a binary string
+S of length
+(N−1) as follows. For all
+1≤i<N:
+If
+A
+i
+<A
+i+1
+, then
+S
+i
+=0.
+If
+A
+i
+>A
+i+1
+, then
+S
+i
+=1.
+Given the string
+S, determine the count of indices
+i
+(1≤i≤N) such that it is possible for
+A
+i
+to be the maximum element of the array
+A.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the array
+A.
+The second line of each test case contains the binary string
+S of length
+(N−1) containing
+0s and
+1s only.
+Output Format
+For each test case, output the count of indices
+i
+(1≤i≤N) such that it is possible for
+A
+i
+to be the maximum element of the array
+A.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+0
+7
+000111
+6
+11100
+1
+1
+2
+Explanation:
+Test case
+1: Here
+A
+1
+<A
+2
+. Therefore clearly only
+A
+2
+can be the maximum element of
+A.
+Test case
+2: Here
+A
+1
+<A
+2
+,
+A
+2
+<A
+3
+,
+A
+3
+<A
+4
+,
+A
+4
+>A
+5
+,
+A
+5
+>A
+6
+and
+A
+6
+>A
+7
+. Therefore, clearly only
+A
+4
+can be the maximum element of
+A.
+Test case
+3: Here
+A
+1
+>A
+2
+,
+A
+2
+>A
+3
+,
+A
+3
+>A
+4
+,
+A
+4
+<A
+5
+and
+A
+5
+<A
+6
+. Therefore
+A
+1
+and
+A
+6
+both can be the maximum elements of
+A.

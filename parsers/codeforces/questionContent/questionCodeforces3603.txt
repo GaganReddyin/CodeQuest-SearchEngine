@@ -1,0 +1,135 @@
+G. Inverse of Rows and Columns
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a binary matrix
+a
+of size
+n×m
+. A binary matrix is a matrix where each element is either
+0
+or
+1
+.
+You may perform some (possibly zero) operations with this matrix. During each operation you can inverse the row of this matrix or a column of this matrix. Formally, inverting a row is changing all values in this row to the opposite (
+0
+to
+1
+,
+1
+to
+0
+). Inverting a column is changing all values in this column to the opposite.
+Your task is to sort the initial matrix by some sequence of such operations. The matrix is considered sorted if the array
+[
+a
+1,1
+,
+a
+1,2
+,…,
+a
+1,m
+,
+a
+2,1
+,
+a
+2,2
+,…,
+a
+2,m
+,…,
+a
+n,m−1
+,
+a
+n,m
+]
+is sorted in non-descending order.
+Input
+The first line of the input contains two integers
+n
+and
+m
+(
+1≤n,m≤200
+) — the number of rows and the number of columns in the matrix.
+The next
+n
+lines contain
+m
+integers each. The
+j
+-th element in the
+i
+-th line is
+a
+i,j
+(
+0≤
+a
+i,j
+≤1
+) — the element of
+a
+at position
+(i,j)
+.
+Output
+If it is impossible to obtain a sorted matrix, print "NO" in the first line.
+Otherwise print "YES" in the first line. In the second line print a string
+r
+of length
+n
+. The
+i
+-th character
+r
+i
+of this string should be '1' if the
+i
+-th row of the matrix is inverted and '0' otherwise. In the third line print a string
+c
+of length
+m
+. The
+j
+-th character
+c
+j
+of this string should be '1' if the
+j
+-th column of the matrix is inverted and '0' otherwise. If there are multiple answers, you can print any.
+Examples
+input
+Copy
+2 2
+1 1
+0 1
+output
+Copy
+YES
+00
+10
+input
+Copy
+3 4
+0 0 0 1
+0 0 0 0
+1 1 1 1
+output
+Copy
+YES
+010
+0000
+input
+Copy
+3 3
+0 0 0
+1 0 1
+1 1 0
+output
+Copy
+NO

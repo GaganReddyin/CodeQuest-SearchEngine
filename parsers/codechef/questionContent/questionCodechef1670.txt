@@ -1,0 +1,34 @@
+Chef and Sub Array 
+Problem
+Read problems statements in mandarin chinese, russian and vietnamese as well.
+Chef has a binary array A of length N. He also has a frame that can focus on at max K consecutive elements of the array.
+Chef has a lovely dog which likes to do following two things.
+Shifting the array A to the right by one element (N-th element becomes 1st, 1st becomes 2nd and so on)
+Asking Chef what is the maximal number of elements equal to 1, that can be captured by a frame (frame can capture not more than K consecutive elements of array).
+Help Chef entertain his Dog!
+Input
+The first line of each test case contains three integers N, K and P denoting the number of elements in array A, size of a frame and the number of Dog's requests.
+The second line contains N space-separated integers A1, A2, ..., AN denoting the elements of array.
+The third line contains string consisting of P characters, i-th character stands for dog's i-th question and equals '!' if Dog shifts the array and '?' if dog asks what is the maximal number of ones captured by the frame.
+Output
+For each Dog's question output a single line containing an integer corresponding to the answer of the question.
+Constraints
+1 ≤ N, K, P ≤ 105
+0 ≤ Ai ≤ 1
+Subtasks
+Subtask #1 (30 points) N, K, P ≤ 103
+Subtask #2 (70 points) Original constraints.
+Sample 1:
+Input
+Output
+5 3 4
+1 0 0 1 1
+?!!?
+2
+3
+Explanation:
+Example case 1.
+For the first question , Chef can pick last 3 elements (or last two, no matter) for his frame, and will have 2 elements equal 1.
+After first shift (exclamation mark) array will become: 1 1 0 0 1.
+After second shift (exclamation mark) array will become: 1 1 1 0 0.
+Now for the second question Chef can pick first 3 elements for his frame, and will have 3 elements equal 1.

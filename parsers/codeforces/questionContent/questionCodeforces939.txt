@@ -1,0 +1,142 @@
+G. Cross Xor
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a grid with
+r
+rows and
+c
+columns, where the square on the
+i
+-th row and
+j
+-th column has an integer
+a
+i,j
+written on it. Initially, all elements are set to
+0
+. We are allowed to do the following operation:
+Choose indices
+1≤i≤r
+and
+1≤j≤c
+, then replace all values on the same row or column as
+(i,j)
+with the value xor
+1
+. In other words, for all
+a
+x,y
+where
+x=i
+or
+y=j
+or both, replace
+a
+x,y
+with
+a
+x,y
+xor
+1
+.
+You want to form grid
+b
+by doing the above operations a finite number of times. However, some elements of
+b
+are missing and are replaced with '?' instead.
+Let
+k
+be the number of '?' characters. Among all the
+2
+k
+ways of filling up the grid
+b
+by replacing each '?' with '0' or '1', count the number of grids, that can be formed by doing the above operation a finite number of times, starting from the grid filled with
+0
+. As this number can be large, output it modulo
+998244353
+.
+Input
+The first line contains two integers
+r
+and
+c
+(
+1≤r,c≤2000
+)  — the number of rows and columns of the grid respectively.
+The
+i
+-th of the next
+r
+lines contain
+c
+characters
+b
+i,1
+,
+b
+i,2
+,…,
+b
+i,c
+(
+b
+i,j
+∈{0,1,?}
+).
+Output
+Print a single integer representing the number of ways to fill up grid
+b
+modulo
+998244353
+.
+Examples
+input
+Copy
+3 3
+?10
+1??
+010
+output
+Copy
+1
+input
+Copy
+2 3
+000
+001
+output
+Copy
+0
+input
+Copy
+1 1
+?
+output
+Copy
+2
+input
+Copy
+6 9
+1101011?0
+001101?00
+101000110
+001011010
+0101?01??
+00?1000?0
+output
+Copy
+8
+Note
+In the first test case, the only way to fill in the
+?
+s is to fill it in as such:
+0 1 0
+1 1 1
+0 1 0
+This can be accomplished by doing a single operation by choosing
+(i,j)=(2,2)
+.
+In the second test case, it can be shown that there is no sequence of operations that can produce that grid.

@@ -1,0 +1,112 @@
+Sums in a Triangle
+Problem
+Given an integer
+N, let us consider a triangle of numbers of
+N lines in which a number
+a
+11
+appears in the first line, two numbers
+a
+21
+and
+a
+22
+appear in the second line, three numbers
+a
+31
+,
+a
+32
+and
+a
+33
+appear in the third line, etc. In general,
+i numbers
+a
+i1
+,a
+i2
+…a
+ii
+appear in the
+i
+th
+line for all
+1≤i≤N. Develop a program that will compute the largest of the sums of numbers that appear on the paths starting from the top towards the base, so that:
+on each path the next number is located on the row below, more precisely either directly below or below and one place to the right.
+Warning: large Input/Output data, be careful with certain languages
+Input Format
+The first line of the input contains an integer
+T, the number of test cases.
+Then T test cases follow. Each test case starts with an integer
+N, the number of rows. Then
+N lines follow where in
+i
+th
+line contains
+i integers
+a
+i1
+,a
+i2
+…a
+ii
+.
+Output Format
+For each test case print the maximum path sum in a separate line.
+Constraints
+1≤T≤1000
+1≤N<100
+0≤a
+ij
+<100
+Sample 1:
+Input
+Output
+2
+3
+1
+2 1
+1 2 3
+4
+1
+1 2
+4 1 2
+2 3 1 1
+5
+9
+Explanation:
+Test case 1:
+There are a total of
+4 paths
+(1,1)→(2,1)→(3,1) with sum equal to
+4.
+(1,1)→(2,1)→(3,2) with sum equal to
+5.
+(1,1)→(2,2)→(3,2) with sum equal to
+4.
+(1,1)→(2,2)→(3,3) with sum equal to
+5.
+Therefore, the maximum sum over all paths is equal to
+5.
+Test case 2:
+There are a total of
+8 paths
+(1,1)→(2,1)→(3,1)→(4,1) with sum equal to
+8.
+(1,1)→(2,1)→(3,1)→(4,2) with sum equal to
+9.
+(1,1)→(2,1)→(3,2)→(4,2) with sum equal to
+7.
+(1,1)→(2,1)→(3,2)→(4,3) with sum equal to
+4.
+(1,1)→(2,2)→(3,2)→(4,2) with sum equal to
+7.
+(1,1)→(2,2)→(3,2)→(4,3) with sum equal to
+5.
+(1,1)→(2,2)→(3,3)→(4,3) with sum equal to
+6.
+(1,1)→(2,2)→(3,3)→(4,4) with sum equal to
+6.
+Therefore, the maximum sum over all paths is equal to
+9.

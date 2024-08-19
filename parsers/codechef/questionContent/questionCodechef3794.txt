@@ -1,0 +1,198 @@
+Clique Boolean Expression
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef Ada constructed a simple undirected graph
+G with
+N vertices (numbered
+1 through
+N) as follows:
+Start with a complete graph with
+K vertices and
+K⋅(K−1)/2 edges.
+Then, add
+N−K vertices one by one. After adding each vetex, find some clique of
+K−1 vertices in the graph and connect the new vertex to all the vertices of that clique.
+Consider
+N boolean variables
+X
+1
+,X
+2
+,…,X
+N
+and their negations
+¬X
+1
+,¬X
+2
+,…,¬X
+N
+, corresponding to vertices of the graph. You are given the initial values of all variables.
+A CNF boolean expression is defined as a conjunction of clauses, where each clause is a disjunction of two or more elements of the set of variables and their negations.
+Using the graph
+G, Ada wrote a CNF boolean expression
+B with
+M clauses, where each clause corresponds to a clique in the graph with some (maybe none) of the variables (corresponding to vertices) negated. More formally, for each
+i from
+1 to
+M:
+Ada chose some clique in the graph, consisting of
+L
+i
+vertices
+Z
+1
+,Z
+2
+,…,Z
+L
+i
+then for each valid
+j, Ada chose a variable
+P
+i,j
+as either
+X
+Z
+j
+or
+¬X
+Z
+j
+the
+i-th clause in the expression
+B had
+L
+i
+terms:
+P
+i,1
+∨P
+i,2
+∨…∨P
+i,L
+i
+Ada wants the expression to evaluate to "true". In order to achieve that, she may change the values of variables; for each valid
+i, the cost of changing the value of
+X
+i
+(from "true" to "false" or vice versa) is
+C
+i
+. Find the minimum total cost needed to make the expression
+B evaluate to "true" or determine that it is impossible.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+K.
+The second line contains a single binary string
+S with length
+N describing the initial values of the variables. For each valid
+i, the
+i-th character of
+S is '1' if
+X
+i
+is true or '0' if
+X
+i
+is false.
+The third line contains
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+.
+M lines follow. For each valid
+i, the
+i-th of these lines contains an integer
+L
+i
+followed by a space and
+L
+i
+space-separated integers representing the variables
+P
+i,1
+,…,P
+i,L
+i
+. For each valid
+i, the variable
+X
+i
+is represented by the integer
+i and its negation is represented by
+−i.
+Output
+For each test case, print a single line containing one integer ― the minimum cost needed to make the boolean expression evaluate to "true", or
+−1 if it is impossible.
+Constraints
+1≤T≤10
+1≤N,M≤144
+3≤K≤9
+each character of
+S is either '0' or '1'
+1≤C
+i
+≤256 for each valid
+i
+1≤L
+i
+≤N for each valid
+i
+1≤∣P
+i,j
+∣≤N for each valid
+i,j
+Subtasks
+Subtask #1 (25 points, time limit 1 second):
+K=3
+Subtask #2 (75 points, time limit 6 seconds): original constraints
+Sample 1:
+Input
+Output
+1
+5 3 3
+00001
+1 4 2 3 7
+3 1 -2 4
+3 2 3 -5
+3 1 -3 2
+3
+Explanation:
+Example case 1: The following figure depicts the graph used to generate the expression.
+The boolean expression is
+B=(X
+1
+∨¬X
+2
+∨X
+4
+)∧(X
+2
+∨X
+3
+∨¬X
+5
+)∧(X
+1
+∨¬X
+3
+∨X
+2
+).
+One optimal solution is to change the values of
+X
+1
+and
+X
+3
+.

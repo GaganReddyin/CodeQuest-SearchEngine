@@ -1,0 +1,152 @@
+G1. Magic Triples (Easy Version)
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The only difference is that in this version,
+a
+i
+≤
+10
+6
+.
+For a given sequence of
+n
+integers
+a
+, a triple
+(i,j,k)
+is called magic if:
+1≤i,j,k≤n
+.
+i
+,
+j
+,
+k
+are pairwise distinct.
+there exists a positive integer
+b
+such that
+a
+i
+⋅b=
+a
+j
+and
+a
+j
+⋅b=
+a
+k
+.
+Kolya received a sequence of integers
+a
+as a gift and now wants to count the number of magic triples for it. Help him with this task!
+Note that there are no constraints on the order of integers
+i
+,
+j
+and
+k
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of the test cases follows.
+The first line of the test case contains a single integer
+n
+(
+3≤n≤2⋅
+10
+5
+) — the length of the sequence.
+The second line of the test contains
+n
+integers
+a
+1
+,
+a
+2
+,
+a
+3
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+) — the elements of the sequence
+a
+.
+The sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer — the number of magic triples for the sequence
+a
+.
+Example
+input
+Copy
+7
+5
+1 7 7 2 7
+3
+6 2 18
+9
+1 2 3 4 5 6 7 8 9
+4
+1000 993 986 179
+7
+1 10 100 1000 10000 100000 1000000
+8
+1 1 2 2 4 4 8 8
+9
+1 1 1 2 2 2 4 4 4
+output
+Copy
+6
+1
+3
+0
+9
+16
+45
+Note
+In the first example, there are
+6
+magic triples for the sequence
+a
+ —
+(2,3,5)
+,
+(2,5,3)
+,
+(3,2,5)
+,
+(3,5,2)
+,
+(5,2,3)
+,
+(5,3,2)
+.
+In the second example, there is a single magic triple for the sequence
+a
+ —
+(2,1,3)
+.

@@ -1,0 +1,312 @@
+F. XOR, Tree, and Queries
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a tree of
+n
+vertices. The vertices are numbered from
+1
+to
+n
+.
+You will need to assign a weight to each edge. Let the weight of the
+i
+-th edge be
+a
+i
+(
+1≤i≤n−1
+). The weight of each edge should be an integer between
+0
+and
+2
+30
+−1
+, inclusive.
+You are given
+q
+conditions. Each condition consists of three integers
+u
+,
+v
+, and
+x
+. This means that the bitwise XOR of all edges on the shortest path from
+u
+to
+v
+should be
+x
+.
+Find out if there exist
+a
+1
+,
+a
+2
+,…,
+a
+n−1
+that satisfy the given conditions. If yes, print a solution such that
+a
+1
+⊕
+a
+2
+⊕…⊕
+a
+n−1
+is the smallest. Here,
+⊕
+denotes the bitwise XOR operation.
+If there are multiple solutions such that
+a
+1
+⊕
+a
+2
+⊕…⊕
+a
+n−1
+is the smallest, print any.
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n≤2.5⋅
+10
+5
+,
+0≤q≤2.5⋅
+10
+5
+).
+The
+i
+-th of the following
+n−1
+lines contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n
+,
+x
+i
+≠
+y
+i
+), meaning that the
+i
+-th edge connects vertices
+x
+i
+and
+y
+i
+in the tree.
+It is guaranteed that the given edges form a tree.
+The following
+q
+lines contain information about conditions.
+Each line contains three integers
+u
+,
+v
+,
+x
+(
+1≤u,v≤n
+,
+u≠v
+,
+0≤x≤
+2
+30
+−1
+), meaning that the bitwise XOR of all edges on the shortest path from
+u
+to
+v
+should be
+x
+.
+Output
+If there do not exist
+a
+1
+,
+a
+2
+, ...,
+a
+n−1
+that satisfy the given conditions, print "No".
+Otherwise, print "Yes" in the first line.
+Then print
+n−1
+integers on the next line, where the
+i
+-th integer is the weight of the
+i
+-th edge. If there are multiple solutions that satisfy the given conditions, print a solution such that
+a
+1
+⊕
+a
+2
+⊕…⊕
+a
+n−1
+is the smallest.
+If there are multiple solutions such that
+a
+1
+⊕
+a
+2
+⊕…⊕
+a
+n−1
+is the smallest, print any.
+When printing "Yes" or "No", you can print each letter in any case (either upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Examples
+input
+Copy
+4 4
+1 2
+2 3
+3 4
+1 4 3
+2 4 2
+1 3 1
+2 3 1
+output
+Copy
+No
+input
+Copy
+6 2
+1 2
+2 3
+3 4
+2 5
+5 6
+1 4 2
+2 6 7
+output
+Copy
+Yes
+4 2 4 1 6
+input
+Copy
+6 2
+1 2
+2 3
+3 4
+2 5
+5 6
+1 4 3
+1 6 5
+output
+Copy
+Yes
+6 1 4 3 0
+Note
+For the first example, there does not exist a set of edge weights that satisfies the given conditions.
+For the second example, the two given conditions are
+a
+1
+⊕
+a
+2
+⊕
+a
+3
+=2
+and
+a
+4
+⊕
+a
+5
+=7
+. There can be multiple solutions, for example,
+(
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+5
+)=(1,2,1,4,3)
+.
+For the third example, the two given conditions are
+a
+1
+⊕
+a
+2
+⊕
+a
+3
+=3
+and
+a
+1
+⊕
+a
+4
+⊕
+a
+5
+=5
+. There are multiple solutions that satisfy the given conditions.
+(
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+5
+)=(1,1,3,4,0)
+satisfies the given conditions, but the bitwise XOR of all edge weights is
+7
+, which does not have the smallest
+a
+1
+⊕
+a
+2
+⊕…⊕
+a
+n−1
+, so it cannot be the answer.

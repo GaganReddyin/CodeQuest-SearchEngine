@@ -1,0 +1,154 @@
+C. Bouncing Ball
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're creating a game level for some mobile game. The level should contain some number of cells aligned in a row from left to right and numbered with consecutive integers starting from
+1
+, and in each cell you can either put a platform or leave it empty.
+In order to pass a level, a player must throw a ball from the left so that it first lands on a platform in the cell
+p
+, then bounces off it, then bounces off a platform in the cell
+(p+k)
+, then a platform in the cell
+(p+2k)
+, and so on every
+k
+-th platform until it goes farther than the last cell. If any of these cells has no platform, you can't pass the level with these
+p
+and
+k
+.
+You already have some level pattern
+a
+1
+,
+a
+2
+,
+a
+3
+, ...,
+a
+n
+, where
+a
+i
+=0
+means there is no platform in the cell
+i
+, and
+a
+i
+=1
+means there is one. You want to modify it so that the level can be passed with given
+p
+and
+k
+. In
+x
+seconds you can add a platform in some empty cell. In
+y
+seconds you can remove the first cell completely, reducing the number of cells by one, and renumerating the other cells keeping their order. You can't do any other operation. You can not reduce the number of cells to less than
+p
+.
+Illustration for the third example test case. Crosses mark deleted cells. Blue platform is the newly added.
+What is the minimum number of seconds you need to make this level passable with given
+p
+and
+k
+?
+Input
+The first line contains the number of test cases
+t
+(
+1≤t≤100
+). Description of test cases follows.
+The first line of each test case contains three integers
+n
+,
+p
+, and
+k
+(
+1≤p≤n≤
+10
+5
+,
+1≤k≤n
+) — the number of cells you have, the first cell that should contain a platform, and the period of ball bouncing required.
+The second line of each test case contains a string
+a
+1
+a
+2
+a
+3
+…
+a
+n
+(
+a
+i
+=0
+or
+a
+i
+=1
+) — the initial pattern written without spaces.
+The last line of each test case contains two integers
+x
+and
+y
+(
+1≤x,y≤
+10
+4
+) — the time required to add a platform and to remove the first cell correspondingly.
+The sum of
+n
+over test cases does not exceed
+10
+5
+.
+Output
+For each test case output a single integer — the minimum number of seconds you need to modify the level accordingly.
+It can be shown that it is always possible to make the level passable.
+Example
+input
+Copy
+3
+10 3 2
+0101010101
+2 2
+5 4 1
+00000
+2 10
+11 2 3
+10110011000
+4 3
+output
+Copy
+2
+4
+10
+Note
+In the first test case it's best to just remove the first cell, after that all required platforms are in their places: 0101010101. The stroked out digit is removed, the bold ones are where platforms should be located. The time required is
+y=2
+.
+In the second test case it's best to add a platform to both cells
+4
+and
+5
+: 00000
+→
+00011. The time required is
+x⋅2=4
+.
+In the third test case it's best to to remove the first cell twice and then add a platform to the cell which was initially
+10
+-th: 10110011000
+→
+10110011010. The time required is
+y⋅2+x=10
+.

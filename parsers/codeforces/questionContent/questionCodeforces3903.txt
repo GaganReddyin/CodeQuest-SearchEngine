@@ -1,0 +1,237 @@
+H. Mateusz and an Infinite Sequence
+time limit per test7 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+A Thue-Morse-Radecki-Mateusz sequence (Thorse-Radewoosh sequence in short) is an infinite sequence constructed from a finite sequence
+gen
+of length
+d
+and an integer
+m
+, obtained in the following sequence of steps:
+In the beginning, we define the one-element sequence
+M
+0
+=(0)
+.
+In the
+k
+-th step,
+k≥1
+, we define the sequence
+M
+k
+to be the concatenation of the
+d
+copies of
+M
+k−1
+. However, each of them is altered slightly — in the
+i
+-th of them (
+1≤i≤d
+), each element
+x
+is changed to
+(x+
+gen
+i
+)(modm)
+.
+For instance, if we pick
+gen=(0,1,2)
+and
+m=4
+:
+M
+0
+=(0)
+,
+M
+1
+=(0,1,2)
+,
+M
+2
+=(0,1,2,1,2,3,2,3,0)
+,
+M
+3
+=(0,1,2,1,2,3,2,3,0,1,2,3,2,3,0,3,0,1,2,3,0,3,0,1,0,1,2)
+, and so on.
+As you can see, as long as the first element of
+gen
+is
+0
+, each consecutive step produces a sequence whose prefix is the sequence generated in the previous step. Therefore, we can define the infinite Thorse-Radewoosh sequence
+M
+∞
+as the sequence obtained by applying the step above indefinitely. For the parameters above,
+M
+∞
+=(0,1,2,1,2,3,2,3,0,1,2,3,2,3,0,3,0,1,…)
+.
+Mateusz picked a sequence
+gen
+and an integer
+m
+, and used them to obtain a Thorse-Radewoosh sequence
+M
+∞
+. He then picked two integers
+l
+,
+r
+, and wrote down a subsequence of this sequence
+A:=((
+M
+∞
+)
+l
+,(
+M
+∞
+)
+l+1
+,…,(
+M
+∞
+)
+r
+)
+.
+Note that we use the
+1
+-based indexing both for
+M
+∞
+and
+A
+.
+Mateusz has his favorite sequence
+B
+with length
+n
+, and would like to see how large it is compared to
+A
+. Let's say that
+B
+majorizes sequence
+X
+of length
+n
+(let's denote it as
+B≥X
+) if and only if for all
+i∈{1,2,…,n}
+, we have
+B
+i
+≥
+X
+i
+.
+He now asks himself how many integers
+x
+in the range
+[1,|A|−n+1]
+there are such that
+B≥(
+A
+x
+,
+A
+x+1
+,
+A
+x+2
+,…,
+A
+x+n−1
+)
+. As both sequences were huge, answering the question using only his pen and paper turned out to be too time-consuming. Can you help him automate his research?
+Input
+The first line contains two integers
+d
+and
+m
+(
+2≤d≤20
+,
+2≤m≤60
+) — the length of the sequence
+gen
+and an integer used to perform the modular operations. The second line contains
+d
+integers
+gen
+i
+(
+0≤
+gen
+i
+<m
+). It's guaranteed that the first element of the sequence
+gen
+is equal to zero.
+The third line contains one integer
+n
+(
+1≤n≤30000
+) — the length of the sequence
+B
+. The fourth line contains
+n
+integers
+B
+i
+(
+0≤
+B
+i
+<m
+). The fifth line contains two integers
+l
+and
+r
+(
+1≤l≤r≤
+10
+18
+,
+r−l+1≥n
+).
+Output
+Print a single integer — the answer to the problem.
+Examples
+input
+Copy
+2 2
+0 1
+4
+0 1 1 0
+2 21
+output
+Copy
+6
+input
+Copy
+3 4
+0 1 2
+2
+0 2
+6 11
+output
+Copy
+1
+Note
+Thorse-Radewoosh sequence in the first example is the standard Thue-Morse sequence, so the sequence
+A
+is as follows:
+11010011001011010010
+. Here are the places where the sequence
+B
+majorizes
+A
+:

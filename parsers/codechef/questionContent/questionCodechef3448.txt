@@ -1,0 +1,166 @@
+Tree Xor
+Problem
+You are given a weighted tree.
+The distance from node
+x to node
+y is calculated as follows:
+Let there be
+k edges in the shortest path from node
+x to
+y.
+Let the weight of these edges, in the same order (from
+x to
+y), be denoted as
+e
+1
+,e
+2
+,…,e
+k
+.
+Then, the distance from
+x to
+y is denoted as:
+d(x,y)=f(e
+1
+,0)⊕f(e
+2
+,1)⊕f(e
+3
+,2)⊕…⊕f(e
+k
+,k−1), where
+⊕ denotes the bitwise XOR operation, and
+f(a,b) denotes the integer obtained after
+b left circular shifts on the integer
+a (considering its
+32 bit binary representation).
+For example,
+f((10000000000000000000000000000001)
+2
+,3)=(00000000000000000000000000001100)
+2
+.
+Your task is to find
+∑
+v=1
+v=N
+d(i,v) for each
+1≤i≤N.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains one integer
+N — the number of nodes.
+The next
+N−1 lines describe the edges. The
+i
+th
+of these
+N−1 lines contains three space-separated integers
+u
+i
+,
+v
+i
+and
+w
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+of weight
+w
+i
+.
+Output Format
+For each test case, output on a single line,
+N space-separated integers,
+∑
+v=1
+v=N
+d(i,v) for each
+1≤i≤N.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤u
+i
+,v
+i
+≤N,u
+i
+
+=v
+i
+1≤w
+i
+≤10
+9
+It is guaranteed that the input forms a tree.
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+2 4 2
+2 5 3
+5 1 7
+4 3 3
+5
+1 2 4
+2 4 1
+4 3 2
+4 5 9
+34 22 72 33 28 
+58 29 34 21 60
+Explanation:
+Test case
+1:
+∑
+v=1
+v=N
+d(1,v)=d(1,1)+d(1,2)+d(1,3)+d(1,4)+d(1,5)=0+1+17+9+7=34.
+∑
+v=1
+v=N
+d(2,v)=d(2,1)+d(2,2)+d(2,3)+d(2,4)+d(3,5)=13+0+4+2+3=22.
+∑
+v=1
+v=N
+d(3,v)=d(3,1)+d(3,2)+d(3,3)+d(3,4)+d(3,5)=51+7+0+3+11=72.
+∑
+v=1
+v=N
+d(4,v)=d(4,1)+d(4,2)+d(4,3)+d(4,4)+d(4,5)=24+2+3+0+4=33.
+∑
+v=1
+v=N
+d(5,v)=d(5,1)+d(5,2)+d(5,3)+d(5,4)+d(5,5)=7+3+11+7+0=28.
+Sample 2:
+Input
+Output
+2
+5
+5 3 970522898
+3 2 863410220
+2 4 951221455
+2 1 200227496
+5
+2 5 316453536
+5 4 502398447
+2 3 552230542
+3 1 378185884
+6407001990 3101485483 3557484652 6437805028 7643320508 
+6404230548 1795517026 2942111594 4862320556 2365156887

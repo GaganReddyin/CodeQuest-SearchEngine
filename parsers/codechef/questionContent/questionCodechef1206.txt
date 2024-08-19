@@ -1,0 +1,22 @@
+Max Out
+Problem
+You are given an array A of size N. Output the maximum value of A[i]%A[j] (ie. A[i] mod A[j]) over all 1 ≤ i, j ≤ N.
+Input
+First line of input contains T, the number of testcases.
+The first line of each test case contains N, the number of elements in the array.
+Second line of each testcase contains N space separated integers in which the ith integer is A[i].
+Output
+For each testcase output a single integer in a new line: the maximum value of A[i]%A[j].
+Constraints
+1≤T≤10
+1≤N≤105
+1≤A[i]≤106
+Sample 1:
+Input
+Output
+1
+2
+1 2
+1
+Explanation:
+The maximum value is obtained by 1%2 = 1.

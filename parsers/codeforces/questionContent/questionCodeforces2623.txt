@@ -1,0 +1,91 @@
+C. Count Triangles
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Like any unknown mathematician, Yuri has favourite numbers:
+A
+,
+B
+,
+C
+, and
+D
+, where
+A≤B≤C≤D
+. Yuri also likes triangles and once he thought: how many non-degenerate triangles with integer sides
+x
+,
+y
+, and
+z
+exist, such that
+A≤x≤B≤y≤C≤z≤D
+holds?
+Yuri is preparing problems for a new contest now, so he is very busy. That's why he asked you to calculate the number of triangles with described property.
+The triangle is called non-degenerate if and only if its vertices are not collinear.
+Input
+The first line contains four integers:
+A
+,
+B
+,
+C
+and
+D
+(
+1≤A≤B≤C≤D≤5⋅
+10
+5
+) — Yuri's favourite numbers.
+Output
+Print the number of non-degenerate triangles with integer sides
+x
+,
+y
+, and
+z
+such that the inequality
+A≤x≤B≤y≤C≤z≤D
+holds.
+Examples
+input
+Copy
+1 2 3 4
+output
+Copy
+4
+input
+Copy
+1 2 2 5
+output
+Copy
+3
+input
+Copy
+500000 500000 500000 500000
+output
+Copy
+1
+Note
+In the first example Yuri can make up triangles with sides
+(1,3,3)
+,
+(2,2,3)
+,
+(2,3,3)
+and
+(2,3,4)
+.
+In the second example Yuri can make up triangles with sides
+(1,2,2)
+,
+(2,2,2)
+and
+(2,2,3)
+.
+In the third example Yuri can make up only one equilateral triangle with sides equal to
+5⋅
+10
+5
+.

@@ -1,0 +1,184 @@
+Maximum Median Matching
+Problem
+N boys and
+N girls attend a dance class, where
+N is odd. For today's practice session, they need to form
+N boy-girl pairs.
+The
+i-th boy has a happiness value of
+A
+i
+and the
+i-th girl has a happiness value of
+B
+i
+. A pair consisting of the
+i-th boy and the
+j-th girl has a happiness value of
+A
+i
++B
+j
+.
+Let the happiness values of the
+N pairs be
+C
+1
+,C
+2
+,…,C
+N
+. The dance instructor would like it if many of the pairs have a high happiness value, and passes the task to you — find the maximum possible value of the median of
+C, if the boy-girl pairs are chosen optimally.
+Note: The median of a odd-sized list of integers is the middle number when they are sorted. For example, the median of
+[1] is
+1, the median of
+[1,5,2] is
+2, and the median of
+[30,5,5,56,3] is
+5.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of three lines of input.
+The first line of each test case contains a single integer
+N.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the happiness values of the boys.
+The third line of each test case contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+— the happiness values of the girls.
+Output Format
+For each test case, output on a new line the maximum possible median happiness of the
+N pairs.
+Constraints
+1≤T≤3⋅10
+4
+1≤N<3⋅10
+5
+N is odd
+1≤A
+i
+,B
+i
+≤10
+9
+for each valid
+i
+The sum of
+N across all test cases won't exceed
+3⋅10
+5
+.
+Subtasks
+Subtask 1 (10 points):
+The sum of
+N across all test cases won't exceed
+10.
+Subtask 2 (30 points):
+The sum of
+N across all test cases won't exceed
+4000.
+Subtask 3 (60 points):
+No further constraints.
+Sample 1:
+Input
+Output
+3
+1
+10
+25
+3
+1 6 6
+2 2 7
+5
+10 4 93 5 16
+4 34 62 6 26
+35
+8
+50
+Explanation:
+Test case
+1: There is only one boy and one girl, so they must be paired with each other. The happiness value of the pair is
+10+25=35, and it is also the median.
+Test case
+2: Pair
+A
+1
+with
+B
+3
+,
+A
+2
+with
+B
+2
+, and
+A
+3
+with
+B
+3
+. The happiness values are then
+[1+7,2+6,2+6]=[8,8,8], with a median of
+8. It can be shown that this is the maximum possible median.
+Test case
+3: One way of achieving a median of
+50 is as follows:
+Pair
+A
+1
+with
+B
+3
+, for a happiness of
+10+62=72
+Pair
+A
+2
+with
+B
+4
+, for a happiness of
+4+6=10
+Pair
+A
+3
+with
+B
+5
+, for a happiness of
+93+26=119
+Pair
+A
+4
+with
+B
+1
+, for a happiness of
+5+4=9
+Pair
+A
+5
+with
+B
+2
+, for a happiness of
+16+34=50
+The happiness values are
+[72,10,119,9,50], with a median of
+50. It can be shown that no other pairing obtains a strictly larger median.

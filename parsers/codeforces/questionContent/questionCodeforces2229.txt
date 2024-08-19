@@ -1,0 +1,159 @@
+E. Rock, Paper, Scissors
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice and Bob have decided to play the game "Rock, Paper, Scissors".
+The game consists of several rounds, each round is independent of each other. In each round, both players show one of the following things at the same time: rock, paper or scissors. If both players showed the same things then the round outcome is a draw. Otherwise, the following rules applied:
+if one player showed rock and the other one showed scissors, then the player who showed rock is considered the winner and the other one is considered the loser;
+if one player showed scissors and the other one showed paper, then the player who showed scissors is considered the winner and the other one is considered the loser;
+if one player showed paper and the other one showed rock, then the player who showed paper is considered the winner and the other one is considered the loser.
+Alice and Bob decided to play exactly
+n
+rounds of the game described above. Alice decided to show rock
+a
+1
+times, show scissors
+a
+2
+times and show paper
+a
+3
+times. Bob decided to show rock
+b
+1
+times, show scissors
+b
+2
+times and show paper
+b
+3
+times. Though, both Alice and Bob did not choose the sequence in which they show things. It is guaranteed that
+a
+1
++
+a
+2
++
+a
+3
+=n
+and
+b
+1
++
+b
+2
++
+b
+3
+=n
+.
+Your task is to find two numbers:
+the minimum number of round Alice can win;
+the maximum number of rounds Alice can win.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤
+10
+9
+) — the number of rounds.
+The second line of the input contains three integers
+a
+1
+,
+a
+2
+,
+a
+3
+(
+0≤
+a
+i
+≤n
+) — the number of times Alice will show rock, scissors and paper, respectively. It is guaranteed that
+a
+1
++
+a
+2
++
+a
+3
+=n
+.
+The third line of the input contains three integers
+b
+1
+,
+b
+2
+,
+b
+3
+(
+0≤
+b
+j
+≤n
+) — the number of times Bob will show rock, scissors and paper, respectively. It is guaranteed that
+b
+1
++
+b
+2
++
+b
+3
+=n
+.
+Output
+Print two integers: the minimum and the maximum number of rounds Alice can win.
+Examples
+input
+Copy
+2
+0 1 1
+1 1 0
+output
+Copy
+0 1
+input
+Copy
+15
+5 5 5
+5 5 5
+output
+Copy
+0 15
+input
+Copy
+3
+0 0 3
+3 0 0
+output
+Copy
+3 3
+input
+Copy
+686
+479 178 29
+11 145 530
+output
+Copy
+22 334
+input
+Copy
+319
+10 53 256
+182 103 34
+output
+Copy
+119 226
+Note
+In the first example, Alice will not win any rounds if she shows scissors and then paper and Bob shows rock and then scissors. In the best outcome, Alice will win one round if she shows paper and then scissors, and Bob shows rock and then scissors.
+In the second example, Alice will not win any rounds if Bob shows the same things as Alice each round.
+In the third example, Alice always shows paper and Bob always shows rock so Alice will win all three rounds anyway.

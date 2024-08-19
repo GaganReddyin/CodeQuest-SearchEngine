@@ -1,0 +1,104 @@
+E. Segment Sum
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two integers
+l
+and
+r
+(
+l≤r
+). Your task is to calculate the sum of numbers from
+l
+to
+r
+(including
+l
+and
+r
+) such that each number contains at most
+k
+different digits, and print this sum modulo
+998244353
+.
+For example, if
+k=1
+then you have to calculate all numbers from
+l
+to
+r
+such that each number is formed using only one digit. For
+l=10,r=50
+the answer is
+11+22+33+44=110
+.
+Input
+The only line of the input contains three integers
+l
+,
+r
+and
+k
+(
+1≤l≤r<
+10
+18
+,1≤k≤10
+) — the borders of the segment and the maximum number of different digits.
+Output
+Print one integer — the sum of numbers from
+l
+to
+r
+such that each number contains at most
+k
+different digits, modulo
+998244353
+.
+Examples
+input
+Copy
+10 50 2
+output
+Copy
+1230
+input
+Copy
+1 2345 10
+output
+Copy
+2750685
+input
+Copy
+101 154 2
+output
+Copy
+2189
+Note
+For the first example the answer is just the sum of numbers from
+l
+to
+r
+which equals to
+50⋅51
+2
+−
+9⋅10
+2
+=1230
+. This example also explained in the problem statement but for
+k=1
+.
+For the second example the answer is just the sum of numbers from
+l
+to
+r
+which equals to
+2345⋅2346
+2
+=2750685
+.
+For the third example the answer is
+101+110+111+112+113+114+115+116+117+118+119+121+122+131+133+141+144+151=2189
+.

@@ -1,0 +1,287 @@
+C. Restore the Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Kristina had an array
+a
+of length
+n
+consisting of non-negative integers.
+She built a new array
+b
+of length
+n−1
+, such that
+b
+i
+=max(
+a
+i
+,
+a
+i+1
+)
+(
+1≤i≤n−1
+).
+For example, suppose Kristina had an array
+a
+= [
+3,0,4,0,5
+] of length
+5
+. Then she did the following:
+Calculated
+b
+1
+=max(
+a
+1
+,
+a
+2
+)=max(3,0)=3
+;
+Calculated
+b
+2
+=max(
+a
+2
+,
+a
+3
+)=max(0,4)=4
+;
+Calculated
+b
+3
+=max(
+a
+3
+,
+a
+4
+)=max(4,0)=4
+;
+Calculated
+b
+4
+=max(
+a
+4
+,
+a
+5
+)=max(0,5)=5
+.
+As a result, she got an array
+b
+= [
+3,4,4,5
+] of length
+4
+.
+You only know the array
+b
+. Find any matching array
+a
+that Kristina may have originally had.
+Input
+The first line of input data contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The description of the test cases follows.
+The first line of each test case contains one integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the number of elements in the array
+a
+that Kristina originally had.
+The second line of each test case contains exactly
+n−1
+non-negative integer — elements of array
+b
+(
+0≤
+b
+i
+≤
+10
+9
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+, and that array
+b
+was built correctly from some array
+a
+.
+Output
+For each test case on a separate line, print exactly
+n
+non-negative integers — the elements of the array
+a
+that Kristina originally had.
+If there are several possible answers — output any of them.
+Example
+input
+Copy
+11
+5
+3 4 4 5
+4
+2 2 1
+5
+0 0 0 0
+6
+0 3 4 4 3
+2
+10
+4
+3 3 3
+5
+4 2 5 5
+4
+3 3 3
+4
+2 1 0
+3
+4 4
+6
+8 1 3 5 10
+output
+Copy
+3 0 4 0 5
+2 2 1 1
+0 0 0 0 0
+0 0 3 4 3 3
+10 10
+3 3 3 1
+4 2 2 5 5
+3 3 3 3
+2 1 0 0
+2 4 4
+8 1 1 3 5 10
+Note
+The first test case is explained in the problem statement.
+In the second test case, we can get array
+b
+= [
+2,2,1
+] from the array
+a
+= [
+2,2,1,1
+]:
+b
+1
+=max(
+a
+1
+,
+a
+2
+)=max(2,2)=2
+;
+b
+2
+=max(
+a
+2
+,
+a
+3
+)=max(2,1)=2
+;
+b
+3
+=max(
+a
+3
+,
+a
+4
+)=max(1,1)=1
+.
+In the third test case, all elements of the array
+b
+are zeros. Since each
+b
+i
+is the maximum of two adjacent elements of array
+a
+, array
+a
+can only consist entirely of zeros.
+In the fourth test case, we can get array
+b
+= [
+0,3,4,4,3
+] from the array
+a
+= [
+0,0,3,4,3,3
+] :
+b
+1
+=max(
+a
+1
+,
+a
+2
+)=max(0,0)=0
+;
+b
+2
+=max(
+a
+2
+,
+a
+3
+)=max(0,3)=3
+;
+b
+3
+=max(
+a
+3
+,
+a
+4
+)=max(3,4)=4
+;
+b
+4
+=max(
+a
+4
+,
+a
+5
+)=max(4,3)=4
+;
+b
+5
+=max(
+a
+5
+,
+a
+6
+)=max(3,3)=3
+.

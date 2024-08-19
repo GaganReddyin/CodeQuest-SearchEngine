@@ -1,0 +1,36 @@
+F. The Sum of the k-th Powers
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are well-known formulas: , , . Also mathematicians found similar formulas for higher degrees.
+Find the value of the sum modulo 109 + 7 (so you should find the remainder after dividing the answer by the value 109 + 7).
+Input
+The only line contains two integers n, k (1 ≤ n ≤ 109, 0 ≤ k ≤ 106).
+Output
+Print the only integer a — the remainder after dividing the value of the sum by the value 109 + 7.
+Examples
+input
+Copy
+4 1
+output
+Copy
+10
+input
+Copy
+4 2
+output
+Copy
+30
+input
+Copy
+4 3
+output
+Copy
+100
+input
+Copy
+4 0
+output
+Copy
+4

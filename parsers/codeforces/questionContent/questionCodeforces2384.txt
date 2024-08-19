@@ -1,0 +1,168 @@
+D. Rainbow Rectangles
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Shrimpy Duc is a fat and greedy boy who is always hungry. After a while of searching for food to satisfy his never-ending hunger, Shrimpy Duc finds M&M candies lying unguarded on a
+L×L
+grid. There are
+n
+M&M candies on the grid, the
+i
+-th M&M is currently located at
+(
+x
+i
++0.5,
+y
+i
++0.5),
+and has color
+c
+i
+out of a total of
+k
+colors (the size of M&Ms are insignificant).
+Shrimpy Duc wants to steal a rectangle of M&Ms, specifically, he wants to select a rectangle with integer coordinates within the grid and steal all candies within the rectangle. Shrimpy Duc doesn't need to steal every single candy, however, he would like to steal at least one candy for each color.
+In other words, he wants to select a rectangle whose sides are parallel to the coordinate axes and whose left-bottom vertex
+(
+X
+1
+,
+Y
+1
+)
+and right-top vertex
+(
+X
+2
+,
+Y
+2
+)
+are points with integer coordinates satisfying
+0≤
+X
+1
+<
+X
+2
+≤L
+and
+0≤
+Y
+1
+<
+Y
+2
+≤L
+, so that for every color
+1≤c≤k
+there is at least one M&M with color
+c
+that lies within that rectangle.
+How many such rectangles are there? This number may be large, so you only need to find it modulo
+10
+9
++7
+.
+Input
+The first line contains three positive integers
+n,k,L
+(1≤k≤n≤2⋅
+10
+3
+,1≤L≤
+10
+9
+)
+— the number of M&Ms, the number of colors and the length of the grid respectively.
+The following
+n
+points describe the M&Ms. Each line contains three integers
+x
+i
+,
+y
+i
+,
+c
+i
+(0≤
+x
+i
+,
+y
+i
+<L,1≤
+c
+i
+≤k)
+— the coordinates and color of the
+i
+-th M&M respectively.
+Different M&Ms have different coordinates (
+x
+i
+≠
+x
+j
+or
+y
+i
+≠
+y
+j
+for every
+i≠j
+), and for every
+1≤c≤k
+there is at least one M&M with color
+c
+.
+Output
+Output a single integer — the number of rectangles satisfying Shrimpy Duc's conditions, modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+4 2 4
+3 2 2
+3 1 1
+1 1 1
+1 2 1
+output
+Copy
+20
+input
+Copy
+5 3 10
+6 5 3
+5 3 1
+7 9 1
+2 3 2
+5 0 2
+output
+Copy
+300
+input
+Copy
+10 4 10
+5 4 4
+0 0 3
+6 0 1
+3 9 2
+8 7 1
+8 1 3
+2 1 3
+6 3 2
+3 5 3
+4 3 4
+output
+Copy
+226
+Note
+Grid for the first sample:

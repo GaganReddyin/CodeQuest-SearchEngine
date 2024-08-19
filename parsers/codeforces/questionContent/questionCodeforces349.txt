@@ -1,0 +1,141 @@
+J. Jumbled Trees
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You are given an undirected connected graph with
+n
+vertices and
+m
+edges. Each edge has an associated counter, initially equal to
+0
+. In one operation, you can choose an arbitrary spanning tree and add any value
+v
+to all edges of this spanning tree.
+Determine if it's possible to make every counter equal to its target value
+x
+i
+modulo prime
+p
+, and provide a sequence of operations that achieves it.
+Input
+The first line contains three integers
+n
+,
+m
+, and
+p
+ — the number of vertices, the number of edges, and the prime modulus (
+1≤n≤500
+;
+1≤m≤1000
+;
+2≤p≤
+10
+9
+,
+p
+is prime).
+Next
+m
+lines contain three integers
+u
+i
+,
+v
+i
+,
+x
+i
+each — the two endpoints of the
+i
+-th edge and the target value of that edge's counter (
+1≤
+u
+i
+,
+v
+i
+≤n
+;
+0≤
+x
+i
+<p
+;
+u
+i
+≠
+v
+i
+).
+The graph is connected. There are no loops, but there may be multiple edges between the same two vertices.
+Output
+If the target values on counters cannot be achieved, print -1.
+Otherwise, print
+t
+ — the number of operations, followed by
+t
+lines, describing the sequence of operations. Each line starts with integer
+v
+(
+0≤v<p
+) — the counter increment for this operation. Then, in the same line, followed by
+n−1
+integers
+e
+1
+,
+e
+2
+, ...
+e
+n−1
+(
+1≤
+e
+i
+≤m
+) — the edges of the spanning tree.
+The number of operations
+t
+should not exceed
+2m
+. You don't need to minimize
+t
+. Any correct answer within the
+2m
+bound is accepted. You are allowed to repeat spanning trees.
+Examples
+input
+Copy
+3 3 101
+1 2 30
+2 3 40
+3 1 50
+output
+Copy
+3
+10 1 2
+20 1 3
+30 2 3
+input
+Copy
+2 2 37
+1 2 8
+1 2 15
+output
+Copy
+2
+8 1
+15 2
+input
+Copy
+5 4 5
+1 3 1
+2 3 2
+2 5 3
+4 1 4
+output
+Copy
+-1

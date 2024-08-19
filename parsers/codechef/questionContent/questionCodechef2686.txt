@@ -1,0 +1,93 @@
+The One Where No One is Ready
+Problem
+Ross has to give an important speech at the museum and he wants all of his friends in the first row of the auditorium. Ross is punctual and gets ready on time.
+However, Joey and Chandler are behaving like children and fighting over everything. On getting a firm shouting from Ross, both of them decide to get dressed but they are still angry at each other. Chandler decides to have the final laugh by stealing Joey’s underwear. This makes Joey mad and he decides to wear all the pants owned by Chandler.
+This infuriates Ross even more. There is a time crunch and he wants Joey to wear pants of a single color.
+Joey has
+N pants. Given a string
+S of length
+N, where
+S
+i
+represents the colour of
+i
+th
+pant. Joey is allowed to make up to
+K moves. To make a move, Joey has to do the following:
+Pick a prefix (possibly empty or complete), say
+P from the string
+S.
+Discard a suffix (possibly empty or complete) from
+P.
+Add
+P back to the string.
+For example, Let the pants be denoted by the string
+S =
+AABAD. In one move Joey can, pick a prefix
+P =
+AABA, discard the suffix
+ABA from
+P and finally, add
+P =
+A back to the string
+S. The final string becomes
+AD.
+After making up to
+K moves, Joey decides to wear the pants denoted by the final string, if all of them are of the same colour.
+Find the maximum number of pants that Joey can wear such that all of them are of the same colour, after making at most
+K moves. If it is impossible to wear pants of the same colour even after
+K moves, print -1.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+For each testcase first line of input contains two integers
+N,K, the number of pants and the maximum number of moves.
+Second line of each testcase contains a string
+S consisting of uppercase english letters.
+i
+th
+character from the beginning denotes the colour of the
+i
+th
+layer of pants from top.
+Output Format
+For each testcase, output in a single line the maximum number of pants of the same colour that Joey can wear using atmost
+K moves. If it is impossible for Joey to wear pants of the same colour finally, output -1.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+0≤K≤N
+S consists of uppercase english letters only.
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+2
+5 2
+ABACA 
+4 1
+ABAB
+3
+1
+Explanation:
+Test case 1: For the first move, Joey can pick the prefix with first 2 pants i.e.
+AB, out of this prefix, Joey can discard the suffix
+B and add the remaining prefix i.e.
+A back to the string
+S. Now the string
+S is
+AACA. For the second move, Joey can pick the prefix with 3 pants i.e.
+AAC, discard the prefix
+C and add remaining prefix
+AA back to string. Finally, the string looks like
+AAA, i.e.
+3 pants of colour
+A.
+Test case 2: For the first and only move, Joey can pick the prefix
+ABAB, i.e. the entire string and discard the suffix
+BAB, and add the remaining prefix i.e.
+A back to the string.

@@ -1,0 +1,26 @@
+Stack Of Rectangles
+Problem
+Given a triangle with side lengths $a, b$ and $c$, you have to choose one of the sides as the base of the triangle and stack $k$ rectangles on top of one another parallel to the base of the triangle. These rectangles can have any dimensions, but they must lie inside the triangle and no two rectangles can intersect.
+A triangle with $k$ rectangles stacked on top of each other.
+Your task is to find the maximum possible value of the sum of areas of the rectangles.
+Input
+The first line contains a single integer $T$, which denotes the number of test cases. The description of each test case follows.
+<li>The first and the only line of each test case contains $4$ positive 
+    integers $a$, $b$, $c$ and $k$  - the sides of the triangle and the 
+    number of rectangles respectively.
+</li>
+Output
+For each test case, print a single line containing one real number corresponding 
+to the maximum value of the sum of areas of rectangles we can get. Your answer 
+will be considered correct if it has an absolute or relative error $≤ 10^{-6}$.
+Constraints
+$1 ≤ T ≤ 10^{3}$
+$1 ≤ a, b, c ≤ 10^{9}$
+$1 ≤ k ≤ 10^{5}$
+Sample Input
+2
+3 4 5 1
+35 75 100 2
+Sample Output
+3.0000000000
+700.0000000000

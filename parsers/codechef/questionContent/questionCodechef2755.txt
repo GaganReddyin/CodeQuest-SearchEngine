@@ -1,0 +1,124 @@
+Yet Another Palindromic Problem
+Problem
+Chef is given a rooted tree with
+N nodes numbered
+1 to
+N where
+1 is the root node.
+Each node is assigned a lowercase english alphabet between a to z (both included).
+Given two nodes
+A and
+B:
+Let
+LCA(A,B) denote the lowest common ancestor of nodes
+A and
+B.
+Let
+DIS(A,B) denote the string containing all the characters associated with the nodes in the same order as the shortest path from node
+A to node
+B (excluding the character associated to node
+B). Note that
+DIS(A,A) is an empty string.
+Chef needs to answer
+Q queries. Each query is of the type:
+U
+V: Given two integers
+U and
+V
+(1≤U,V≤N), determine if there exists a concatenation of a non-empty subsequence of
+DIS(U,LCA(U,V)) and a non-empty subsequence of
+DIS(V,LCA(U,V)) such that it is a palindrome.
+Input Format
+The first line of each test case contains
+T, the number of test cases.
+The second line of each test case contains
+N, the number of nodes in the tree.
+The third line of each test case contains a string
+S consisting of
+N characters. Here,
+S
+i
+corresponds to the character associated with node
+i.
+The next
+(N−1) lines each contain two space-separated integers
+x and
+y, denoting that an edge exists between nodes
+x and
+y.
+The next line contains
+Q, the number of queries.
+The next
+Q lines each contain two space-separated integers
+U and
+V, denoting the query.
+Output Format
+For each test case, output
+Q lines. Print YES in the
+i
+th
+line if there exist a concatenation of a non-empty subsequence of
+DIS(U,LCA(U,V)) and a non-empty subsequence of
+DIS(V,LCA(U,V)) such that it is a palindrome for the
+i
+th
+query. Otherwise, print NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+Constraints
+1≤T≤2⋅10
+5
+2≤N≤2⋅10
+5
+1≤Q≤2⋅10
+5
+1≤x,y≤N and
+x
+
+=y.
+1≤U,V≤N and
+U
+
+=V
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sum of
+Q over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+7
+ydbxcbd
+1 2
+2 3
+1 4
+2 5
+6 4
+7 6
+2
+3 5
+3 6
+NO
+YES
+Explanation:
+The tree looks like:
+Query
+1:
+LCA(3,5)=2.
+DIS(3,LCA(3,5))=DIS(3,2)= b. Similarly,
+DIS(5,LCA(3,5))=DIS(5,2)= c. It is not possible to concatenate non-empty subsequences from
+DIS(3,2) and
+DIS(5,2) such that we get a palindrome.
+Query
+2:
+LCA(3,6)=1.
+DIS(3,LCA(3,6))=DIS(3,1)= bd. Similarly,
+DIS(6,LCA(3,6))=DIS(6,1)= bx. We can pick subsequence b from both
+DIS(3,1) and
+DIS(6,1). After concatenation, we get bb which is a palindrome.

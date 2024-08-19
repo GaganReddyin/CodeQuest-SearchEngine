@@ -1,0 +1,157 @@
+Chef and Queries on a Tree
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef has a tree with
+N nodes numbered
+1 through
+N. Each node of the tree has a weight; let's denote the weight of node
+v by
+a
+v
+.
+Chef should answer
+Q queries. Each query is described by an integer
+r and a list of
+k nodes
+u
+1
+,u
+2
+,…,u
+k
+. In each query, let
+S be the connected subgraph of the tree (i.e. a subtree) which contains the nodes
+u
+1
+,u
+2
+,…,u
+k
+and has the minimum possible size (it can be proven that these conditions uniquely define
+S). The answer to a query is
+min
+u∈S
+(∣a
+u
+−r∣).
+Help Chef and answer all the queries. Note the special format of the input, which is intended to ensure you can only know each query (except the first) after answering the previous query.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Each of the following
+N−1 lines contains two space-separated integers
+x and
+y denoting an edge between nodes
+x and
+y.
+The following
+Q lines describe queries. Each of these lines contains two space-separated integers
+r
+′
+and
+k, followed by a space and
+k space-separated integers
+u
+1
+′
+,u
+2
+′
+,…,u
+k
+′
+. Let's denote the answer to the previous query by
+ans (
+ans=0 if this is the first query). The values of
+r and
+u
+1
+,u
+2
+,…,u
+k
+for this query can be computed as follows:
+r=r
+′
+⊕ans
+u
+i
+=u
+i
+′
+⊕ans for each valid
+i
+Output
+For each query, print a single line containing one integer — the answer to this query.
+Constraints
+1≤T≤5
+2≤N,Q≤10
+5
+1≤a
+i
+≤10
+9
+for each valid
+i
+1≤r≤10
+9
+1≤x,y≤N
+the graph described on the input is a tree
+in each query,
+u
+1
+,u
+2
+,…,u
+k
+are pairwise distinct
+the sum of
+k for each test case does not exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+1
+5 7
+1 2 3 4 5
+1 2
+2 3
+2 4
+1 5
+1 2 4 5
+2 2 4 5
+3 2 4 5
+5 2 5 4
+5 2 4 5
+5 1 2
+103 3 2 1 6
+0
+0
+1
+0
+0
+3
+95
+Explanation:
+Example case 1: The decoded queries are
+1 2 4 5
+2 2 4 5
+3 2 4 5
+4 2 4 5
+5 2 4 5
+5 1 2
+100 3 1 2 5

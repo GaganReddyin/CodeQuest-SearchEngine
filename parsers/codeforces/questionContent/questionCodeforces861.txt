@@ -1,0 +1,204 @@
+E. The Ultimate LIS Problem
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It turns out that this is exactly the
+100
+-th problem of mine that appears in some programming competition. So it has to be special! And what can be more special than another problem about LIS...
+You are given a permutation
+p
+1
+,
+p
+2
+,…,
+p
+2n+1
+of integers from
+1
+to
+2n+1
+. You will have to process
+q
+updates, where the
+i
+-th update consists in swapping
+p
+u
+i
+,
+p
+v
+i
+.
+After each update, find any cyclic shift of
+p
+with
+LIS≤n
+, or determine that there is no such shift. (Refer to the output section for details).
+Here
+LIS(a)
+denotes the length of longest strictly increasing subsequence of
+a
+.
+Hacks are disabled in this problem. Don't ask why.
+Input
+The first line of the input contains two integers
+n,q
+(
+2≤n≤
+10
+5
+,
+1≤q≤
+10
+5
+).
+The second line of the input contains
+2n+1
+integers
+p
+1
+,
+p
+2
+,…,
+p
+2n+1
+(
+1≤
+p
+i
+≤2n+1
+, all
+p
+i
+are distinct)  — the elements of
+p
+.
+The
+i
+-th of the next
+q
+lines contains two integers
+u
+i
+,
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤2n+1
+,
+u
+i
+≠
+v
+i
+)  — indicating that you have to swap elements
+p
+u
+i
+,
+p
+v
+i
+in the
+i
+-th update.
+Output
+After each update, output any
+k
+(0≤k≤2n)
+, such that the length of the longest increasing subsequence of
+(
+p
+k+1
+,
+p
+k+2
+,…,
+p
+2n+1
+,
+p
+1
+,…,
+p
+k
+)
+doesn't exceed
+n
+, or
+−1
+, if there is no such
+k
+.
+Example
+input
+Copy
+2 6
+1 2 3 4 5
+1 5
+1 5
+4 5
+5 4
+1 4
+2 5
+output
+Copy
+-1
+-1
+2
+-1
+4
+0
+Note
+After the first update, our permutation becomes
+(5,2,3,4,1)
+. We can show that all its cyclic shifts have
+LIS≥3
+.
+After the second update, our permutation becomes
+(1,2,3,4,5)
+. We can show that all its cyclic shifts have
+LIS≥3
+.
+After the third update, our permutation becomes
+(1,2,3,5,4)
+. Its shift by
+2
+is
+(3,5,4,1,2)
+, and its
+LIS=2
+.
+After the fourth update, our permutation becomes
+(1,2,3,4,5)
+. We can show that all its cyclic shifts have
+LIS≥3
+.
+After the fifth update, our permutation becomes
+(4,2,3,1,5)
+. Its shift by
+4
+is
+(5,4,2,3,1)
+, and its
+LIS=2
+.
+After the fifth update, our permutation becomes
+(4,5,3,1,2)
+. Its shift by
+0
+is
+(4,5,3,1,2)
+, and its
+LIS=2
+.

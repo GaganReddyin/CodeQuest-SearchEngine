@@ -1,0 +1,142 @@
+E. The Human Equation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Petya and his friend, the robot Petya++, went to BFDMONCON, where the costume contest is taking place today.
+While walking through the festival, they came across a scientific stand named after Professor Oak and Golfball, where they were asked to solve an interesting problem.
+Given a sequence of numbers
+a
+1
+,
+a
+2
+,…,
+a
+n
+you can perform several operations on this sequence.
+Each operation should look as follows. You choose some subsequence
+†
+†
+. Then you call all the numbers at odd positions in this subsequence northern, and all the numbers at even positions in this subsequence southern. In this case, only the position of the number in the subsequence is taken into account, not in the original sequence.
+For example, consider the sequence
+1,4,2,8,5,7,3,6,9
+and its subsequence (shown in bold)
+1,4,2,8,5,7,3,6,9
+. Then the numbers
+4
+and
+5
+are northern, and the numbers
+2
+and
+6
+are southern.
+After that, you can do one of the following:
+add
+1
+to all northern numbers and subtract
+1
+from all south numbers; or
+add
+1
+to all southern numbers and subtract
+1
+from all northern numbers.
+Thus, from the sequence
+1,4,2,8,5,7,3,6,9
+, if you choose the subsequence shown in bold, you can get either
+1,5,1,8,6,7,3,5,9
+or
+1,3,3,8,4,7,3,7,9
+.
+Then the operation ends. Note also that all operations are independent, i. e. the numbers are no longer called northern or southern when one operation ends.
+It is necessary to turn all the numbers of the sequence into zeros using the operations described above. Since there is very little time left before the costume contest, the friends want to know, what is the minimum number of operations required for this.
+The friends were unable to solve this problem, so can you help them?
+†
+†
+A sequence
+c
+is a subsequence of a sequence
+d
+if
+c
+can be obtained from
+d
+by the deletion of several (possibly, zero or all) elements.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of the sequence.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+) — the description of the sequence itself.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer in a single line — the minimum number of operations it takes to turn all the numbers into zeros.
+Example
+input
+Copy
+5
+3
+1 2 -3
+5
+1 0 0 -1 -1
+6
+2 -4 3 -5 4 1
+5
+1 -1 1 -1 1
+7
+0 0 0 0 0 0 0
+output
+Copy
+3
+2
+6
+1
+0
+Note
+In the first test case, the sequence of operations is as follows:
+1,2,−3⟶0,2,−2⟶0,1,−1⟶0,0,0
+.
+In the second test case, the sequence looks like this:
+1,0,0,−1,−1⟶0,0,0,0,−1⟶0,0,0,0,0
+.
+In the fourth test case, simply select the entire sequence as a subsequence, then subtract one from the northern numbers and add one to the southern numbers. Thus, the sequence will be nulled in one operation.
+In the fifth test case, you don't need to do any operations, since the sequence already consists of zeros.

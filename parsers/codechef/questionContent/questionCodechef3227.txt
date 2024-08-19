@@ -1,0 +1,111 @@
+More Inversions
+Problem
+You are given an array
+A consisting of
+N integers -
+A
+1
+,A
+2
+,⋯,A
+N
+. For each index
+i find the maximum number of inversions in the entire array you can get by changing this element to any
+real number.
+Note: The number of inversions in an array
+A is the number of pairs of indices
+i,
+j such that
+1≤i<j≤N and
+A
+i
+>A
+j
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of 2 lines of input.
+The first line of each test case contains one integer
+N — the size of the array.
+The next line contains
+N space separated integers denoting the elements of the array.
+Output Format
+For each test case, output on a new line,
+N space separated integers where the
+i
+th
+integer denotes the answer for the
+i
+th
+index of the array.
+Constraints
+1≤T≤3⋅10
+5
+1≤N≤3⋅10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Subtasks
+Subtask 1 (18 points):
+1≤N≤150
+The sum of
+N across all test cases won't exceed
+2⋅10
+4
+There are at most 50 tests with
+N>10 and there is at most 1 test with
+N>50.
+Subtask 2 (22 points):
+1≤N≤1000
+The sum of
+N across all test cases won't exceed
+2⋅10
+3
+.
+Subtask 3 (60 points): No further constraints.
+Sample 1:
+Input
+Output
+2
+2
+1 2
+4
+4 8 6 2
+1 1 
+6 4 5 4
+Explanation:
+Testcase 1: The initial array is
+[1,2].
+Let us now try to modify
+A
+1
+to get the maximum number of inversions. We can set
+A
+1
+=3, and the new array
+[3,2] has 1 inversion.
+We can show that this is the maximum number of inversions we can achieve by modifying
+A
+1
+, and so the first output is
+1.
+Let us now try to modify
+A
+2
+to get the maximum number of inversions. We can set
+A
+2
+=0.5, and the new array
+[1,0.5] has 1 inversion.
+We can show that this is the maximum number of inversions we can achieve by modifying
+A
+2
+, and so the second output is
+1.

@@ -1,0 +1,156 @@
+G. Kuzya and Homework
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Kuzya started going to school. He was given math homework in which he was given an array
+a
+of length
+n
+and an array of symbols
+b
+of length
+n
+, consisting of symbols '*' and '/'.
+Let's denote a path of calculations for a segment
+[l;r]
+(
+1≤l≤r≤n
+) in the following way:
+Let
+x=1
+initially. For every
+i
+from
+l
+to
+r
+we will consequently do the following: if
+b
+i
+=
+'*',
+x=x∗
+a
+i
+, and if
+b
+i
+=
+'/', then
+x=
+x
+a
+i
+. Let's call a path of calculations for the segment
+[l;r]
+a list of all
+x
+that we got during the calculations (the number of them is exactly
+r−l+1
+).
+For example, let
+a=[7,
+12,
+3,
+5,
+4,
+10,
+9]
+,
+b=[/,
+∗,
+/,
+/,
+/,
+∗,
+∗]
+,
+l=2
+,
+r=6
+, then the path of calculations for that segment is
+[12,
+4,
+0.8,
+0.2,
+2]
+.
+Let's call a segment
+[l;r]
+simple if the path of calculations for it contains only integer numbers.
+Kuzya needs to find the number of simple segments
+[l;r]
+(
+1≤l≤r≤n
+). Since he obviously has no time and no interest to do the calculations for each option, he asked you to write a program to get to find that number!
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+6
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+).
+The third line contains
+n
+symbols without spaces between them — the array
+b
+1
+,
+b
+2
+…
+b
+n
+(
+b
+i
+=
+'/' or
+b
+i
+=
+'*' for every
+1≤i≤n
+).
+Output
+Print a single integer — the number of simple segments
+[l;r]
+.
+Examples
+input
+Copy
+3
+1 2 3
+*/*
+output
+Copy
+2
+input
+Copy
+7
+6 4 10 1 2 15 1
+*/*/*//
+output
+Copy
+8

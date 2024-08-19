@@ -1,0 +1,177 @@
+India Fights Corona
+Problem
+Read problem statements in Mandarin Chinese and Bengali.
+There are
+N cities (numbered from
+1 to
+N) and
+M bidirectional roads. The
+i
+th
+of these roads connects the cities
+A
+i
+and
+B
+i
+and has a length of
+D
+i
+Km.
+There are only
+K cities that have a hospital for corona testing. The cost of corona testing may be different in different cities. For each city, we want to know the minimum cost that needs to be spent to test a corona sample. If city you are in contains a hospital and you choose to test in that hospital itself, then the cost incurred is the cost of corona test in that hospital. Otherwise, if you choose to test in a hospital in another city, then an additional transportation cost is also incurred (Assuming Rs.1 per Km).
+So from a city
+i, if you choose to send a sample to city
+j, then the total cost incurred will be
+C
+j
++D(i,j). Here
+C
+j
+denotes the cost of corona testing in a hospital situated in city
+j and
+D(i,j) denotes the minimum distance between city
+i and
+j via some road network.
+Output the minimum money that should be spent by a person in each of the
+N cities for testing a corona sample.
+It is guaranteed that there is a path from every city to every other city. Also, there is at most one road between any pair of cities (i.e. no multiple edges). There are no roads from one city to itself (i.e. no self-loops).
+Note: Since the inputs and outputs are large, prefer using fast input-output methods.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+Each testcase contains
+K+M+1 lines of input.
+The first line of each test case contains three space-separated integers
+N,M,K.
+K lines follow. For each valid
+i, the
+i
+th
+of these lines contains two space-separated integers
+x
+i
+,C
+i
+which denotes that there is a hospital in the
+x
+i
+th
+city and the cost of corona testing in that hospital is
+C
+i
+. There is at most one hospital in a city i.e. all
+x
+i
+-s are distinct.
+Next
+M lines follow. For each valid
+i, the
+i
+th
+of these lines contains three space-separated integers
+A
+i
+,B
+i
+,D
+i
+, which denotes that there is a bidirectional road between City
+A
+i
+and City
+B
+i
+of length
+D
+i
+Km.
+Output Format
+For each test case, print a single line containing
+N space-separated integers, where the
+i
+th
+integer denotes the minimum cost of corona testing if you are in the
+i
+th
+city.
+Constraints
+1≤T≤4000
+2≤N≤2⋅10
+5
+1≤M≤4⋅10
+5
+1≤K≤N
+1≤x
+i
+,A
+i
+,B
+i
+≤N for each valid
+i
+1≤C
+i
+≤10
+9
+for each valid
+i
+1≤D
+i
+≤10
+9
+for each valid
+i
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sum of
+M over all test cases does not exceed
+4⋅10
+5
+All
+x
+i
+-s in a testcase are distinct.
+It is guaranteed that there is a path from every city to every other city.
+It is guaranteed that there are no self loops and multiple edges.
+Sample 1:
+Input
+Output
+2
+3 2 2
+1 5
+2 10
+1 2 6
+2 3 9
+3 2 2
+1 5
+2 10
+1 2 1
+2 3 9
+5 10 19 
+5 6 15
+Explanation:
+Test case
+1: The hospitals are situated at cities
+1 and
+2 with their costs being
+5 and 10 respectively. For city
+1 it is optimal to test the sample in its own hospital bearing a total cost of
+5. For city
+2 it is again optimal to test the sample in its own hospital bearing a total cost of
+10. For city
+3 it is optimal to test the sample in the hospital at city
+2 which incurs the traveling cost of
+9 and hospital cost of
+10, so the total cost is
+10+9=19.
+Test case
+2: For city
+2, it is optimal to test the sample in hospital at city
+1 which incurs a traveling cost of
+1 and hospital cost of
+5, so the total cost is
+1+5=6.

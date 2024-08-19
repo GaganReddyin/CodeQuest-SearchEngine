@@ -1,0 +1,98 @@
+E. Josuke and Complete Graph
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Josuke received a huge undirected weighted complete
+†
+†
+graph
+G
+as a gift from his grandfather. The graph contains
+10
+18
+vertices. The peculiarity of the gift is that the weight of the edge between the different vertices
+u
+and
+v
+is equal to
+gcd(u,v
+)
+‡
+. Josuke decided to experiment and make a new graph
+G
+′
+. To do this, he chooses two integers
+l≤r
+and deletes all vertices except such vertices
+v
+that
+l≤v≤r
+, and also deletes all the edges except between the remaining vertices.
+Now Josuke is wondering how many different weights are there in
+G
+′
+. Since their count turned out to be huge, he asks for your help.
+†
+†
+A complete graph is a simple undirected graph in which every pair of distinct vertices is adjacent.
+‡
+‡
+gcd(x,y)
+denotes the greatest common divisor (GCD) of the numbers
+x
+and
+y
+.
+Input
+The first line contains one integer
+t
+(
+1≤t≤100
+) — the number of test cases.
+The first line of each test case contains two numbers
+l
+,
+r
+(
+1≤l≤r≤
+10
+18
+,
+l≤
+10
+9
+).
+Output
+For each test case print a single number — the number of different weights among the remaining edges.
+Example
+input
+Copy
+7
+2 4
+16 24
+2 6
+1 10
+3 3
+2562 2568
+125 100090
+output
+Copy
+2
+6
+3
+5
+0
+5
+50045
+Note
+The graph
+G
+′
+for the first test case.
+The picture above shows that the graph has
+2
+different weights.
+In the fifth test case, there is only one vertex from which no edges originate, so the answer is
+0
+.

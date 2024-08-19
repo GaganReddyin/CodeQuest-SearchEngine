@@ -1,0 +1,114 @@
+C. Make Equal With Mod
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array of
+n
+non-negative integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. You can make the following operation: choose an integer
+x≥2
+and replace each number of the array by the remainder when dividing that number by
+x
+, that is, for all
+1≤i≤n
+set
+a
+i
+to
+a
+i
+modx
+.
+Determine if it is possible to make all the elements of the array equal by applying the operation zero or more times.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+) where
+a
+i
+is the
+i
+-th element of the array.
+The sum of
+n
+for all test cases is at most
+2⋅
+10
+5
+.
+Output
+For each test case, print a line with YES if you can make all elements of the list equal by applying the operation. Otherwise, print NO.
+You may print each letter in any case (for example, "YES", "Yes", "yes", "yEs" will all be recognized as a positive answer).
+Example
+input
+Copy
+4
+4
+2 5 6 8
+3
+1 1 1
+5
+4 1 7 0 8
+4
+5 9 17 5
+output
+Copy
+YES
+YES
+NO
+YES
+Note
+In the first test case, one can apply the operation with
+x=3
+to obtain the array
+[2,2,0,2]
+, and then apply the operation with
+x=2
+to obtain
+[0,0,0,0]
+.
+In the second test case, all numbers are already equal.
+In the fourth test case, applying the operation with
+x=4
+results in the array
+[1,1,1,1]
+.

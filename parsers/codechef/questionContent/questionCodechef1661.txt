@@ -1,0 +1,91 @@
+Minimum Beauty 
+Problem
+Chefina has an array
+A consisting of
+N non-negative integers.
+The beauty of a subsequence
+S is defined as
+3
+⋅
+abs(means(S) - median(S)),
+where
+mean(S) denotes the mean of subsequence
+S and
+median(S) denotes the median of subsequence
+S.
+Now, Chefina asks Chef to choose a subsequence
+S of size
+3 from array
+A such that the beauty of
+S is minimised. Your task is to find the minimum beauty possible.
+As a reminder, a subsequence of an array is obtained by deleting some elements from the array without changing the order of the remaining elements.
+Note: It can be proven that the answer is always an integer.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the number of elements in the array.
+The second line contains
+N space-separated integers, the elements of the array
+A.
+Output Format
+For each test case, output on a new line, the minimum beauty possible of any subsequence of array
+A, having length
+3.
+Constraints
+1≤T≤500
+3≤N≤5⋅10
+3
+0≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+5⋅10
+3
+.
+Sample 1:
+Input
+Output
+2
+4
+1 6 8 0
+10
+5 5 7 0 1 0 4 7 9 4
+3
+0
+Explanation:
+Test case
+1: For the given array
+[1,6,8,0], Chef will choose the subsequence
+[1,6,8] for minimum beauty.
+The mean of subsequence will be
+3
+(1+6+8)
+=5
+The median of subsequence will be
+6 (as it is the middle element after sorting the subsequence).
+The beauty of the subsequence is
+3⋅
+abs(5-6)
+=3.
+It can be shown that this is the minimum beauty that can be obtained using any subsequence of size
+3.
+Test case
+2: For the given array
+[5,5,7,0,1,0,4,7,9,4], Chef will choose subsequence
+[1,4,7] for minimum beauty.
+The mean of subsequence will be
+3
+(1+4+7)
+=4
+The median of subsequence will be
+4 (as it is the middle element after sorting the subsequence).
+The beauty of the subsequence is
+3⋅
+abs(4-4)
+=0.
+It can be shown that this is the minimum beauty that can be obtained using any subsequence of size
+3.

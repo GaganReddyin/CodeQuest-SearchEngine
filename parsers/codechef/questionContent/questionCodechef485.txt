@@ -1,0 +1,36 @@
+The One Where It All Began
+Problem
+In a New York City coffee house called Central Perk, we're introduced to six friends: chef Monica Geller, data controller Chandler Bing who lives across the hall from Monica, Chandler's roommate/actor Joey Tribbiani, Monica's brother Ross Geller, new ageist Phoebe Buffay, and "born to be a wife" Rachel Green.
+Chef wants to divide
+N cookies between the six friends such that:
+Each friend gets at least one cookie.
+No two friends get the same number of cookies.
+Find if it is possible for Chef to do so.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, one integers
+N.
+Output Format
+For each test case print "YES" if Chef can divide the cookies according to the given rules, else print "NO".
+You may print each character of each string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+Constraints
+1≤T≤10
+3
+1≤N≤10
+3
+Sample 1:
+Input
+Output
+3
+42
+5
+909
+YES
+NO
+YES
+Explanation:
+Test case 1: One possible way of distribution would be
+2,4,6,8,10,12.
+Test case 2: It is impossible to divide
+5 cookies among six friends according to given rules.

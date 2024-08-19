@@ -1,0 +1,174 @@
+E. Modular Stability
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+We define
+xmody
+as the remainder of division of
+x
+by
+y
+(
+%
+operator in C++ or Java, mod operator in Pascal).
+Let's call an array of positive integers
+[
+a
+1
+,
+a
+2
+,…,
+a
+k
+]
+stable if for every permutation
+p
+of integers from
+1
+to
+k
+, and for every non-negative integer
+x
+, the following condition is met:
+(((xmod
+a
+1
+)mod
+a
+2
+)…mod
+a
+k−1
+)mod
+a
+k
+=(((xmod
+a
+p
+1
+)mod
+a
+p
+2
+)…mod
+a
+p
+k−1
+)mod
+a
+p
+k
+That is, for each non-negative integer
+x
+, the value of
+(((xmod
+a
+1
+)mod
+a
+2
+)…mod
+a
+k−1
+)mod
+a
+k
+does not change if we reorder the elements of the array
+a
+.
+For two given integers
+n
+and
+k
+, calculate the number of stable arrays
+[
+a
+1
+,
+a
+2
+,…,
+a
+k
+]
+such that
+1≤
+a
+1
+<
+a
+2
+<⋯<
+a
+k
+≤n
+.
+Input
+The only line contains two integers
+n
+and
+k
+(
+1≤n,k≤5⋅
+10
+5
+).
+Output
+Print one integer — the number of stable arrays
+[
+a
+1
+,
+a
+2
+,…,
+a
+k
+]
+such that
+1≤
+a
+1
+<
+a
+2
+<⋯<
+a
+k
+≤n
+. Since the answer may be large, print it modulo
+998244353
+.
+Examples
+input
+Copy
+7 3
+output
+Copy
+16
+input
+Copy
+3 7
+output
+Copy
+0
+input
+Copy
+1337 42
+output
+Copy
+95147305
+input
+Copy
+1 1
+output
+Copy
+1
+input
+Copy
+500000 1
+output
+Copy
+500000

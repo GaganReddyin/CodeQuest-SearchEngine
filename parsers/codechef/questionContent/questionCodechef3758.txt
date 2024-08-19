@@ -1,0 +1,35 @@
+Shubham Loves Maths
+Problem
+Our friend Shubham loved solving maths problems. Today he came accross this function which is used to calculate the strength of a number
+ int strength(int N) {
+  int value = 0, temp = N;
+  /*Array lp stores the lowest prime divisor 
+                  i.e. lp[x] stores lowest prime divisor of x*/
+  while(temp != 1) {
+   value += N / lp[temp];
+   temp /= lp[temp];
+  }
+  return value;
+ }
+Having learnt sieving and related algorithms, we was able to calculate the above function efficiently. But, his friend gave him a harder task to calculate.
+You, being a good programmer, want to help Shubham with this difficult task. Since, this sum can be very large, you are required to output this value modulo 1000000007 (109 + 7).
+Input
+The input consists of T test cases. For each test case you are given 2 numbers N, k, as specified in problem statement.
+Output
+For each test case, print the required answer for the summation function expressed above, modulo 1000000007.
+Constraints
+1 ≤ T ≤ 4
+1 ≤ N ≤ 1010
+1 ≤ k ≤ 1018
+Sample Input
+2
+3 1
+6 2
+Sample Output
+12
+1692
+Explanation
+Here F(x) denotes strength(x)
+In first test case, the terms added are F(3) + F(6) + F(9) which evaluate to 1 + 5 + 6 = 12.
+.
+In the second test case, the terms added are F(36) + F(72) + F(108) + F(144) + F(180). The sum evalutes to 60 + 156 + 216 + 384 + 336 + 540 = 1692.

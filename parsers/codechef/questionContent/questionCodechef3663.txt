@@ -1,0 +1,63 @@
+MathBuzz
+Problem
+Read problem statements in Vietnamese,
+Bengali, Mandarin Chinese, and Russian as well.
+There is an inter-city math competition among
+k various prestigious top schools in the city. Some subset of schools will be selected to compete, where the
+i-th school is selected with probability
+p
+i
+(mod998 244 353). The schools are all selected independently from each other. It's even possible that the number of selected schools will be
+0 or
+1, because the contest organizers are not very good mathematicians themselves.
+Once the schools have been selected, each selected school must choose
+r of its students to form a team. The
+i-th school has
+a
+i
+students in total it can choose from. Given a selection of the schools, you are interested in the number of ways teams can be formed. Two ways are considered different if there is at least one school that chose different sets of students for its team.
+If the subset of schools is chosen according to the above process, find the expected number of ways they can form teams.
+###Input
+The first line contains an integer
+r.
+The second line contains an integer
+k.
+The third line contains
+k integers
+a
+1
+,…,a
+k
+.
+The fourth line contains
+k integers
+p
+1
+,…,p
+k
+.
+###Output Output the expected number of ways to form teams, modulo
+998244353.
+###Constraints
+1≤a
+i
+≤10
+9
+1≤k≤2⋅10
+5
+1≤r≤10
+5
+1≤p
+i
+<998 244 353
+###Subtasks
+Subtask 1 (10 points):
+r≤100
+Subtask 2 (90 points): Original constraints.
+###Sample Input
+1
+2
+2 2
+1 1
+###Sample Output
+4

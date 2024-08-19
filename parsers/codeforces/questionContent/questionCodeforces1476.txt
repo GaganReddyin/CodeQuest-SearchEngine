@@ -1,0 +1,221 @@
+F. Stations
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cities in a row numbered from
+1
+to
+n
+.
+The cities will be building broadcasting stations. The station in the
+i
+-th city has height
+h
+i
+and range
+w
+i
+. It can broadcast information to city
+j
+if the following constraints are met:
+i≤j≤
+w
+i
+, and
+for each
+k
+such that
+i<k≤j
+, the following condition holds:
+h
+k
+<
+h
+i
+.
+In other words, the station in city
+i
+can broadcast information to city
+j
+if
+j≥i
+,
+j
+is in the range of
+i
+-th station, and
+i
+is strictly highest on the range from
+i
+to
+j
+(including city
+j
+).
+At the beginning, for every city
+i
+,
+h
+i
+=0
+and
+w
+i
+=i
+.
+Then
+q
+events will take place. During
+i
+-th event one of the following will happen:
+City
+c
+i
+will rebuild its station so that its height will be strictly highest among all stations and
+w
+c
+i
+will be set to
+g
+i
+.
+Let
+b
+j
+be the number of stations that can broadcast information to city
+j
+. Print the sum of
+b
+j
+over all
+j
+satisfying
+l
+i
+≤j≤
+r
+i
+.
+Your task is to react to all events and print answers to all queries.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n,q≤2⋅
+10
+5
+) — number of cities and number of events.
+Then
+q
+lines follow. The
+i
+-th line begins with an integer
+p
+i
+(
+p
+i
+=1
+or
+p
+i
+=2
+).
+If
+p
+i
+=1
+a station will be rebuilt. Then two integers
+c
+i
+and
+g
+i
+(
+1≤
+c
+i
+≤
+g
+i
+≤n
+) follow — the city in which the station is rebuilt and its new broadcasting range.
+If
+p
+i
+=2
+you are given a query. Then two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+) follow — the range of cities in the query.
+Output
+For each query, print in a single line the sum of
+b
+j
+over the given interval.
+Examples
+input
+Copy
+1 3
+2 1 1
+1 1 1
+2 1 1
+output
+Copy
+1
+1
+input
+Copy
+5 10
+1 3 4
+2 3 5
+1 1 5
+2 1 5
+1 4 5
+2 2 4
+1 2 3
+2 1 3
+1 5 5
+2 2 5
+output
+Copy
+4
+10
+5
+4
+5
+Note
+In the first test case, only station
+1
+reaches city
+1
+before and after it is rebuilt.
+In the second test case, after each rebuild, the array
+b
+looks as follows:
+[1,1,1,2,1]
+;
+[1,2,2,3,2]
+;
+[1,2,2,1,2]
+;
+[1,1,2,1,2]
+;
+[1,1,2,1,1]
+.

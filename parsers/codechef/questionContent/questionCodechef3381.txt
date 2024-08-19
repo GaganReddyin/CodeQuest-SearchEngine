@@ -1,0 +1,50 @@
+Sum of distances
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+There is a directed acyclic graph with N vertices. The vertices are numbered from 1 to N.
+For every 1 ≤ i ≤ N-1, there is an edge from vertex i to vertex i+1, which has weight ai.
+For every 1 ≤ i ≤ N-2, there is an edge from vertex i to vertex i+2, which has weight bi.
+For every 1 ≤ i ≤ N-3, there is an edge from vertex i to vertex i+3, which has weight ci.
+There are no other edges.
+For each pair of vertices s, t where s < t, let d(s, t) denote the length of the shortest path from s to t. Your task is to compute the sum of d(s, t) for every 1 ≤ s < t ≤ N.
+Input
+First line of the input contains an integer T denoting number of test cases. T test cases follow.
+For each test case:
+The first line contains an integer N.
+The second line contains N - 1 integers a1, a2, ..., aN-1.
+The third line contains N - 2 integers b1, b2, ..., bN-2.
+The fourth line contains N - 3 integers c1, c2, ..., cN-3.
+Output
+For each test case, output a single line containing an integer, denoting the answer. It can be proved that the answer fits in the signed 64-bit type.
+Constraints
+1 ≤ T ≤ 104
+4 ≤ N ≤ 105
+1 ≤ sum of N over all test cases ≤ 3*105
+1 ≤ ai, bi, ci ≤ 104
+Subtasks
+Subtask #1 (8 points):
+N ≤ 103.
+1 ≤ sum of N over all test cases ≤ 104.
+Subtask #2: (13 points):
+bi = ai + ai+1.
+ci = ai + ai+1 + ai+2.
+Subtask #3: (46 points):
+ci = ai + ai+1 + ai+2.
+Subtsak #4: (33 points):
+Original constraints.
+Example
+Input:
+2
+4
+1 1 1
+1 1
+1
+5
+1 2 3 4
+2 3 4
+3 4
+Output:
+6
+31
+Explanation
+Example case 1. In this test case the distance between the node A and the node B will be equal to one for all pairs (A, B). So for all six pairs we get the distance 1 and the final sum 6.

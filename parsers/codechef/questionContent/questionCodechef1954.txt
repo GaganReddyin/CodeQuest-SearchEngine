@@ -1,0 +1,69 @@
+Chef and Subarrays
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Chef is playing a game where he has an array
+A of
+N integers, and an integer
+K. He looks at every subarray of length
+K, and writes its sum on a piece of paper. If a number appears as the sum of multiple subarrays of length
+K, then he only writes down that number once.
+Chef is lazy and doesn't like to write numbers. You, being a friend of Chef, want to modify the array such that Chef will only write one number on his paper. In one modification you can choose any index
+i and replace
+A
+i
+with any integer.
+You need to find the minimum number of modifications required.
+###Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+Each test case contains two lines of input.
+The first line contains two space-separated integers
+N,
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+###Output For each test case, output the answer in a single line.
+###Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤K≤N
+1≤A
+i
+≤10
+5
+The sum of
+N over all test cases does not exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+3 3 
+1 2 3
+2 1
+4 6
+0
+1
+Explanation:
+Test Case 1:
+K=3 and there is only one subarray of length
+3, so no changes are required.
+Test Case 2:
+K=1 and the subarrays of length
+1 are
+[4] and
+[6]. So, at least one modification is required. One possible solution with only one modification is to change
+A
+2
+to
+4.

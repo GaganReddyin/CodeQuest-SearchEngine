@@ -1,0 +1,146 @@
+Parity Fun
+Problem
+Chef has
+N numbers written on his board. He wants only one number to remain on the board and so he devises a special tactic to do so.
+He randomly picks up
+2 numbers written on the board say
+A and
+B respectively. He erases both of them from the board and writes a new number on the board which equals -
+A−B if parity of
+A
+= parity of
+B
+A+B if parity of
+A
+
+= parity of
+B
+Here parity refers to remainder obtained when a number is divided by
+2.
+Notice that the total numbers on the board reduced by
+1 after
+1 such operation. After a finite number of operations there would only be
+1 number remaining on the board.
+Chef is interested in knowing how many different final numbers he could end up with.
+Input Format
+The first line contains a single integer
+N denoting the amount of numbers initially present on the board.
+The second line consists of
+N space-separated integers
+A
+1
+,A
+2
+,...,A
+N
+denoting the numbers written on the board initially.
+Output Format
+For each testcase, output a single integer denoting the number of possible final numbers on the board.
+Constraints
+2≤N≤100
+1≤A
+i
+≤100
+Sample 1:
+Input
+Output
+2
+3 7
+2
+Explanation:
+The possible final outcomes here would be
+4 and
+−4.
+{3,7}
+A=7,B=3
+A−B
+{4}
+{3,7}
+A=3,B=7
+A−B
+{−4}
+Sample 2:
+Input
+Output
+4
+2 7 6 3
+7
+Explanation:
+The possible final outcomes here would be
+−12,
+−8,
+−4,
+0,
+4,
+8 and
+12.
+{2,7,6,3}
+A=7,B=6
+A+B
+{2,3,13}
+A=2,B=13
+A+B
+{3,15}
+A=3,B=15
+A−B
+{−12}
+{2,7,6,3}
+A=6,B=2
+A−B
+{4,7,3}
+A=3,B=7
+A−B
+{4,−4}
+A=−4,B=4
+A−B
+{−8}
+{2,7,6,3}
+A=3,B=2
+A+B
+{7,6,5}
+A=5,B=6
+A+B
+{7,11}
+A=7,B=11
+A−B
+{−4}
+{2,7,6,3}
+A=6,B=2
+A−B
+{4,7,3}
+A=7,B=3
+A−B
+{4,4}
+A=4,B=4
+A−B
+{0}
+{2,7,6,3}
+A=3,B=2
+A+B
+{7,6,5}
+A=5,B=6
+A+B
+{7,11}
+A=11,B=7
+A−B
+{4}
+{2,7,6,3}
+A=6,B=2
+A−B
+{4,7,3}
+A=3,B=7
+A−B
+{4,−4}
+A=4,B=−4
+A−B
+{8}
+{2,7,6,3}
+A=7,B=6
+A+B
+{2,3,13}
+A=2,B=13
+A+B
+{3,15}
+A=15,B=3
+A−B
+{12}

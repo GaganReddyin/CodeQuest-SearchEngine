@@ -1,0 +1,318 @@
+G. The Maximum Prefix
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're going to generate an array
+a
+with a length of at most
+n
+, where each
+a
+i
+equals either
+1
+or
+−1
+.
+You generate this array in the following way.
+First, you choose some integer
+k
+(
+1≤k≤n
+), which decides the length of
+a
+.
+Then, for each
+i
+(
+1≤i≤k
+), you set
+a
+i
+=1
+with probability
+p
+i
+, otherwise set
+a
+i
+=−1
+(with probability
+1−
+p
+i
+).
+After the array is generated, you calculate
+s
+i
+=
+a
+1
++
+a
+2
++
+a
+3
++…+
+a
+i
+. Specially,
+s
+0
+=0
+. Then you let
+S
+equal to
+max
+i=0
+k
+s
+i
+. That is,
+S
+is the maximum prefix sum of the array
+a
+.
+You are given
+n+1
+integers
+h
+0
+,
+h
+1
+,…,
+h
+n
+. The score of an array
+a
+with maximum prefix sum
+S
+is
+h
+S
+. Now, for each
+k
+, you want to know the expected score for an array of length
+k
+modulo
+10
+9
++7
+.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤5000
+) — the number of test cases. Their description follows.
+The first line contains an integer
+n
+(
+1≤n≤5000
+).
+Then for the following
+n
+lines, each line contains two integers
+x
+i
+and
+y
+i
+(
+0≤
+x
+i
+<
+10
+9
++7
+,
+1≤
+y
+i
+<
+10
+9
++7
+,
+x
+i
+≤
+y
+i
+), indicating
+p
+i
+=
+x
+i
+y
+i
+.
+The next line contains
+n+1
+integers
+h
+0
+,
+h
+1
+,…,
+h
+n
+(
+0≤
+h
+i
+<
+10
+9
++7
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+5000
+.
+Output
+For each test case, output
+n
+integers in one single line, the
+i
+-th of which denotes the expected score for an array of length
+i
+, modulo
+10
+9
++7
+.
+Formally, let
+M=
+10
+9
++7
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Example
+input
+Copy
+4
+2
+1 2
+1 2
+1 2 3
+3
+1 3
+1 4
+5 5
+1 1 1 1
+3
+2 5
+4 6
+0 2
+4 3 2 1
+5
+5 6
+5 7
+1 6
+1 3
+4 7
+9 0 4 5 2 4
+output
+Copy
+500000005 750000007 
+1 1 1 
+200000005 333333339 333333339 
+500000005 880952391 801587311 781746041 789304620 
+Note
+In the first test case, if we choose
+k=1
+, there are
+2
+possible arrays with equal probabilities:
+[1]
+and
+[−1]
+. The
+S
+values for them are
+1
+and
+0
+. So the expected score is
+1
+2
+h
+0
++
+1
+2
+h
+1
+=
+3
+2
+. If we choose
+k=2
+, there are
+4
+possible arrays with equal probabilities:
+[1,1]
+,
+[1,−1]
+,
+[−1,1]
+,
+[−1,−1]
+, and the
+S
+values for them are
+2,1,0,0
+. So the expected score is
+1
+2
+h
+0
++
+1
+4
+h
+1
++
+1
+4
+h
+2
+=
+7
+4
+.
+In the second test case, no matter what the
+S
+value is, the score is always
+1
+, so the expected score is always
+1
+.

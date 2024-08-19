@@ -1,0 +1,168 @@
+F. Balance the Cards
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A balanced bracket sequence is defined as an integer sequence that can be built with the following rules:
+The empty sequence is balanced.
+If
+[
+a
+1
+,…,
+a
+n
+]
+and
+[
+b
+1
+,…,
+b
+m
+]
+are balanced, then their concatenation
+[
+a
+1
+,…,
+a
+n
+,
+b
+1
+,…,
+b
+m
+]
+is balanced.
+If
+x
+is a positive integer and
+[
+a
+1
+,…,
+a
+n
+]
+is balanced, then
+[x,
+a
+1
+,…,
+a
+n
+,−x]
+is balanced.
+The positive numbers can be imagined as opening brackets and the negative numbers as closing brackets, where matching brackets must have the same type (absolute value). For example,
+[1,2,−2,−1]
+and
+[1,3,−3,2,−2,−1]
+are balanced, but
+[1,2,−1,−2]
+and
+[−1,1]
+are not balanced.
+There are
+2n
+cards. Each card has a number on the front and a number on the back. Each integer
+1,−1,2,−2,…,n,−n
+appears exactly once on the front of some card and exactly once on the back of some (not necessarily the same) card.
+You can reorder the cards however you like. You are not allowed to flip cards, so numbers cannot move between the front and back. Your task is to order the cards so that the sequences given by the front numbers and the back numbers are both balanced, or report that it is impossible.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of bracket types, and half the number of cards.
+The next
+2n
+lines describe the cards. The
+i
+-th of these lines contains two integers
+a
+i
+,
+b
+i
+(
+−n≤
+a
+i
+,
+b
+i
+≤n
+,
+a
+i
+≠0
+,
+b
+i
+≠0
+) — the numbers on the front and back of the
+i
+-th card, respectively. Every integer
+1,−1,2,−2,…,n,−n
+appears exactly once as
+a
+i
+and exactly once as
+b
+i
+.
+Output
+On the first line, output "YES" if it's possible to reorder these cards to satisfy the condition. Otherwise, output "NO". You can print each letter in any case (upper or lower).
+If it is possible, on the next
+2n
+lines output the cards in an order so that the front and back are both balanced. If there are multiple solutions, you may output any.
+Examples
+input
+Copy
+5
+1 3
+-3 -5
+4 -3
+2 2
+-1 -4
+-2 5
+3 -1
+5 1
+-4 4
+-5 -2
+output
+Copy
+YES
+1 3
+4 -3
+-4 4
+-1 -4
+5 1
+3 -1
+2 2
+-2 5
+-3 -5
+-5 -2
+input
+Copy
+2
+1 1
+-1 2
+2 -1
+-2 -2
+output
+Copy
+NO
+Note
+In the first test case, the front numbers create the balanced sequence
+[1,4,−4,−1,5,3,2,−2,−3,−5]
+and the back numbers create the balanced sequence
+[3,−3,4,−4,1,−1,2,5,−5,−2]
+.
+In the second test case, the cards are given in an order so that the front numbers are balanced, but the back numbers create the unbalanced sequence
+[1,2,−1,−2]
+. If we swapped the second and third cards, we would balance the back numbers and unbalance the front numbers. But there is no order that balances both.

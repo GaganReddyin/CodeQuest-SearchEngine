@@ -1,0 +1,159 @@
+E. Xor Permutations
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Toad Mikhail has an array of
+2
+k
+integers
+a
+1
+,
+a
+2
+,…,
+a
+2
+k
+.
+Find two permutations
+p
+and
+q
+of integers
+0,1,…,
+2
+k
+−1
+, such that
+a
+i
+is equal to
+p
+i
+⊕
+q
+i
+for all possible
+i
+, or determine there are no such permutations. Here
+⊕
+denotes the bitwise XOR operation.
+Input
+The first line contains one integer
+k
+(
+2≤k≤12
+), denoting that the size of the array is
+2
+k
+.
+The next line contains
+2
+k
+space-separated integers
+a
+1
+,
+a
+2
+,…,
+a
+2
+k
+(
+0≤
+a
+i
+<
+2
+k
+) — the elements of the given array.
+Output
+If the given array can't be represented as element-wise XOR of two permutations of integers
+0,1,…,
+2
+k
+−1
+, print "Fou".
+Otherwise, print "Shi" in the first line.
+The next two lines should contain the description of two suitable permutations. The first of these lines should contain
+2
+k
+space-separated distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+2
+k
+, and the second line should contain
+2
+k
+space-separated distinct integers
+q
+1
+,
+q
+2
+,…,
+q
+2
+k
+.
+All elements of
+p
+and
+q
+should be between
+0
+and
+2
+k
+−1
+, inclusive;
+p
+i
+⊕
+q
+i
+should be equal to
+a
+i
+for all
+i
+such that
+1≤i≤
+2
+k
+. If there are several possible solutions, you can print any.
+Examples
+input
+Copy
+2
+0 1 2 3
+output
+Copy
+Shi
+2 0 1 3 
+2 1 3 0 
+input
+Copy
+2
+0 0 0 0
+output
+Copy
+Shi
+0 1 2 3 
+0 1 2 3 
+input
+Copy
+2
+0 1 2 2
+output
+Copy
+Fou

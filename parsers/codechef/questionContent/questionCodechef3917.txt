@@ -1,0 +1,73 @@
+Yet Another Shortest Path Problem
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+You are given a directed weighted graph with
+P vertices, labelled from
+0 to
+P−1.
+P is a prime number. You are also given an integer
+K.
+For each vertex
+u, there is an edge from vertex
+u to vertex
+(K⋅u+i)modP for all
+0≤i≤K−1. The weight of an edge directed from the vertex
+u to the vertex
+(K⋅u+i)modP is equal to
+i.
+You will be given
+Q queries. In each query you will be given two vertices
+X and
+Y and you have to determine the minimum cost of going from
+X to
+Y. If a path does not exists between
+X and
+Y, print
+−1.
+Input Format
+Each test contains multiple test cases. The first line contains the number of test cases
+T. The description of
+T testcases as follows.
+The first line of each test contains
+3 space separated integers
+P,K,Q.
+Then
+Q lines follow. Each of the
+Q lines contains two space separated integers
+X and
+Y denoting a query.
+Output Format
+For each query print a single integer denoting the minimum cost of going from
+X to
+Y. If a path does not exist print
+−1.
+Constraints
+1≤T≤5
+2≤P≤10
+6
+and
+P is a prime
+2≤K≤10
+6
+1≤Q≤10
+4
+Subtasks
+10 points :
+1≤P≤1000
+90 points : original constraints
+Sample 1:
+Input
+Output
+2
+73 2 3
+0 55
+3 18
+66 17
+73 73 2
+54 54
+54 55
+1
+2
+0
+0
+55

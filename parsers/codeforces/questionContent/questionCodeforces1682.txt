@@ -1,0 +1,117 @@
+J. Pawns
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is an infinite chessboard, divided into cells. The cell
+(x,y)
+is the cell on the intersection of the
+x
+i
+-th row and
+y
+i
+-th column.
+n
+black pawns are placed on the board, the
+i
+-th black pawn occupies the cell
+(
+x
+i
+,
+y
+i
+)
+.
+You want to capture all black pawns. In order to do so, you may perform the following actions:
+place a white pawn into any empty cell (any cell having integer coordinates can be chosen, as long as it doesn't contain any pawns);
+make a move with one of the white pawns according to the chess rules.
+Recall that when you make a move with a white pawn in the cell
+(x,y)
+, the chess rules allow you to choose exactly one of these actions:
+if there is a black pawn in the cell
+(x+1,y−1)
+, you can capture it — the black pawn is removed from the board, and the white pawn moves to
+(x+1,y−1)
+;
+if there is a black pawn in the cell
+(x+1,y+1)
+, you can capture it — the black pawn is removed from the board, and the white pawn moves to
+(x+1,y+1)
+;
+if the cell
+(x+1,y)
+is empty, you can move the white pawn to that cell.
+You may perform any finite sequence of actions (placing white pawns and moving them). You want to capture all of the black pawns, and it can be shown that it is always possible; and you want to do it placing as few white pawns as possible.
+What is the minimum number of white pawns you have to place to capture all
+n
+black pawns?
+Input
+The first line contains one integer
+n
+(
+1≤n≤5⋅
+10
+5
+) — the number of black pawns.
+Then
+n
+lines follow. The
+i
+-th line contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤5⋅
+10
+5
+) denoting a black pawn in the cell
+(
+x
+i
+,
+y
+i
+)
+. No cell is occupied by two or more black pawns.
+Output
+Print one integer — the minimum number of white pawns you have to place to capture all
+n
+black pawns.
+Examples
+input
+Copy
+3
+1 1
+5 1
+2 2
+output
+Copy
+1
+input
+Copy
+3
+3 2
+1 3
+1 1
+output
+Copy
+2
+input
+Copy
+2
+1 1
+2 2
+output
+Copy
+1

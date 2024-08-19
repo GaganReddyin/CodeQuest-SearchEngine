@@ -1,0 +1,44 @@
+Harry Potter and the Goblet of Fire
+Problem
+"If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals."
+There are N wizards in Hogwarts with each wizard at level Ai. Harry is analyzing behaviour of different wizards. Sirius maps behaviour of one wizard using a Generous function defined as:
+Sirius asks Harry several queries. Each query contains L, R and P. Harry has to find Total Generosity for each query defined by function:
+Since the value of Total Generosity can be very large, output Total Generosity%(109 + 7)
+Input
+The first line of input contains 3 space separated integers N denoting the number of wizards, Q denoting the number of queries and K.
+The second line contains N space-separated integers A1, A2, ..., AN denoting the level of each wizard.
+Each of the next Q lines contains 3 space seaparated integers L, R and P denoting the query parameters.
+Output
+Output Total Generosity%(109 + 7) for each query in new line
+Constraints
+1 ≤ N, Q ≤ 5 * 105
+1 ≤ Ai, P, K ≤ 109
+1 ≤ L ≤ R ≤ N
+Example
+Input:
+4 3 1
+1 3 4 2
+1 2 1
+3 3 6
+2 4 3
+Output:
+7
+1
+36
+Explanation
+Q1 :
+I = 1, J = 1 :- Generosity(1, 1) = 1
+I = 1, J = 2 :- Generosity(1, 1) * Generosity(3, 1) = 1 * 3 = 3
+I = 2, J = 2 :- Generosity(3, 1) = 3
+Total Generosity = 1 + 3 + 3 = 7%(109 + 7) = 7
+Q2 :
+I = 3, J = 3 :- Generosity(4, 6) = 1
+Total Generosity = 1%(109 + 7) = 1
+Q3 :
+I = 2, J = 2 :- Generosity(3, 3) = 3
+I = 2, J = 3 :- Generosity(3, 3) * Generosity(4, 3) = 3 * 4 = 12
+I = 2, J = 4 :- Generosity(3, 3) * Generosity(4, 3) * Generosity(2, 3) = 3 * 4 * 1 = 12
+I = 3, J = 3 :- Generosity(4, 3) = 4
+I = 3, J = 4 :- Generosity(4, 3) * Generosity(2, 3) = 4 * 1 = 4
+I = 4, J = 4 :- Generosity(2, 3) = 1
+Total Generosity = 3 + 12 + 12 + 4 + 4 + 1= 36%(109 + 7) = 36

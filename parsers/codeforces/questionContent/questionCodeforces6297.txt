@@ -1,0 +1,34 @@
+C. Mike and Foam
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mike is a bartender at Rico's bar. At Rico's, they put beer glasses in a special shelf. There are n kinds of beer at Rico's numbered from 1 to n. i-th kind of beer has ai milliliters of foam on it.
+Maxim is Mike's boss. Today he told Mike to perform q queries. Initially the shelf is empty. In each request, Maxim gives him a number x. If beer number x is already in the shelf, then Mike should remove it from the shelf, otherwise he should put it in the shelf.
+After each query, Mike should tell him the score of the shelf. Bears are geeks. So they think that the score of a shelf is the number of pairs (i, j) of glasses in the shelf such that i < j and where is the greatest common divisor of numbers a and b.
+Mike is tired. So he asked you to help him in performing these requests.
+Input
+The first line of input contains numbers n and q (1 ≤ n, q ≤ 2 × 105), the number of different kinds of beer and number of queries.
+The next line contains n space separated integers, a1, a2, ... , an (1 ≤ ai ≤ 5 × 105), the height of foam in top of each kind of beer.
+The next q lines contain the queries. Each query consists of a single integer integer x (1 ≤ x ≤ n), the index of a beer that should be added or removed from the shelf.
+Output
+For each query, print the answer for that query in one line.
+Examples
+input
+Copy
+5 6
+1 2 3 4 6
+1
+2
+3
+4
+5
+1
+output
+Copy
+0
+1
+3
+5
+6
+2

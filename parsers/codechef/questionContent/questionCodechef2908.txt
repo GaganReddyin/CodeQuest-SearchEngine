@@ -1,0 +1,191 @@
+Cats and Rats
+Problem
+###Read problems statements in Vietnamese, Mandarin Chinese and Bengali as well.
+There are
+N cats (numbered
+1 through
+N) and
+M rats (numbered
+1 through
+M) on a line. Each cat and each rat wants to move from some point to some (possibly the same) point on this line. Naturally, the cats also want to eat the rats when they get a chance. Both the cats and the rats can only move with constant speed
+1.
+For each valid
+i, the
+i-th cat is initially sleeping at a point
+a
+i
+. At a time
+s
+i
+, this cat wakes up and starts moving to a final point
+b
+i
+with constant velocity and without any detours (so it arrives at this point at the time
+e
+i
+=s
+i
++∣a
+i
+−b
+i
+∣). After it arrives at the point
+b
+i
+, it falls asleep again.
+For each valid
+i, the
+i-th rat is initially hiding at a point
+c
+i
+. At a time
+r
+i
+, this rat stops hiding and starts moving to a final point
+d
+i
+in the same way as the cats ― with constant velocity and without any detours, arriving at the time
+q
+i
+=r
+i
++∣c
+i
+−d
+i
+∣ (if it does not get eaten). After it arrives at the point
+d
+i
+, it hides again.
+If a cat and a rat meet each other (they are located at the same point at the same time), the cat eats the rat, the rat disappears and cannot be eaten by any other cat. A sleeping cat cannot eat a rat and a hidden rat cannot be eaten ― formally, cat
+i can eat rat
+j only if they meet at a time
+t satisfying
+s
+i
+≤t≤e
+i
+and
+r
+j
+≤t≤q
+j
+.
+Your task is to find out which rats get eaten by which cats. It is guaranteed that no two cats will meet a rat at the same time.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains three space-separated integers
+a
+i
+,
+b
+i
+and
+s
+i
+.
+M more lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains three space-separated integers
+c
+i
+,
+d
+i
+and
+r
+i
+.
+Output
+For each test case, print
+M lines. For each valid
+i, the
+i-th of these lines should contain a single integer ― the number of the cat that will eat the
+i-th rat, or
+−1 if no cat will eat this rat.
+Constraints
+1≤T≤10
+0≤N≤1,000
+1≤M≤1,000
+1≤a
+i
+,b
+i
+,s
+i
+≤10
+9
+for each valid
+i
+1≤c
+i
+,d
+i
+,r
+i
+≤10
+9
+for each valid
+i
+all initial and final positions of all cats and rats are pairwise distinct
+Sample 1:
+Input
+Output
+2
+8 7
+2 5 1
+1 4 1
+9 14 10
+20 7 9
+102 99 1
+199 202 1
+302 299 3
+399 402 3
+6 3 1
+10 15 10
+100 101 1
+201 200 1
+300 301 5
+401 400 5
+1000 1010 1020
+8 8
+2 8 2
+12 18 2
+22 28 4
+32 38 4
+48 42 2
+58 52 3
+68 62 1
+78 72 3
+3 6 3
+13 19 3
+21 25 3
+31 39 3
+46 43 4
+59 53 2
+65 61 4
+79 71 2
+1
+4
+5
+6
+7
+8
+-1
+1
+2
+3
+4
+5
+6
+7
+8

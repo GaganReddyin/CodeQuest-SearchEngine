@@ -1,0 +1,631 @@
+Move the Coins - Creating Tests
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is preparing tests for the problem "Move the Coins"!
+He needs to create a tree
+G with
+N nodes (numbered
+1 through
+N), which is rooted at node
+1, and a list of
+Q distinct reparentings. A reparenting is a pair of nodes
+(u,v) (
+u
+
+=1) of
+G and the result of applying it to
+G is another graph, formed as follows:
+Take a copy of the original tree
+G.
+In this copy, remove the edge connecting the vertex
+u to its parent.
+Then, add a new edge between the nodes
+u and
+v.
+As an example, consider the following tree
+G:
+We wish to apply the reparenting
+r=(6,3) to it. The resulting graph would be
+A reparenting
+r is valid if the resulting graph is still a tree (that is, a connected graph without cycles). For the time being, Chef wants to generate only valid reparentings.
+Chef has already decided on the tree
+G and now he just needs to pick
+Q valid reparentings. He makes an initial list
+L of all valid reparentings for this tree and sorts them in a special order.
+Let
+r=(u,v) and
+r
+′
+=(u
+′
+,v
+′
+) be valid reparentings. Their order is decided as follows:
+if
+u<u
+′
+, then
+r<r
+′
+if
+u>u
+′
+, then
+r>r
+′
+if
+u=u
+′
+, find the distances of nodes
+v and
+v
+′
+from the root and denote them by
+h and
+h
+′
+respectively
+if
+u=u
+′
+and
+h<h
+′
+, then
+r<r
+′
+if
+u=u
+′
+and
+h>h
+′
+, then
+r>r
+′
+if
+u=u
+′
+,
+h=h
+′
+and
+v<v
+′
+, then
+r<r
+′
+if
+u=u
+′
+,
+h=h
+′
+and
+v>v
+′
+, then
+r>r
+′
+Chef chooses
+Q integers
+c
+1
+,c
+2
+,…,c
+Q
+, removes the
+c
+1
+-th element of
+L, then removes the
+c
+2
+-th element of the resulting (smaller) list
+L, and so on, until he removes the
+c
+Q
+-th element. The sequence
+c
+1
+,c
+2
+,…,c
+Q
+is chosen in such a way that during this process, each of them is a valid index of an element in the current list
+L. This way, he removes
+Q distinct valid reparentings and uses them in one test.
+Because Chef does not believe in making life easy for himself, the sequence
+c
+1
+,c
+2
+,…,c
+Q
+is encrypted and each of its elements cannot be decrypted until all previous reparentings are found. More formally, consider a decryption key
+d; initially,
+d=0. You are given an encrypted sequence
+e
+1
+,e
+2
+,…,e
+Q
+. For each integer
+i from
+1 to
+Q, Chef decrypts
+c
+i
+=e
+i
+⊕d (
+⊕ denotes the bitwise XOR operator), finds the
+c
+i
+-th reparenting in the current list
+L, denoted by
+(u
+i
+,v
+i
+), removes it from
+L and updates the decryption key
+d to
+(d+2
+i
+⋅u
+i
++3
+i
+⋅v
+i
+)%(10
+9
++7).
+Can you help Chef find the
+Q valid reparentings corresponding to his encrypted choices? Calculating the final value of
+d will suffice to show that you can do it!
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+Each of the next
+N−1 lines contains two space-separated integers
+a and
+b denoting that nodes
+a and
+b are connected by an edge.
+The next line contains a single integer
+Q.
+Q lines follow. For each valid
+i, the
+i-th of these lines contains a single integer
+e
+i
+.
+Output
+For each test case, print a single line containing one integer ― the final value of
+d after processing all
+Q reparentings.
+Constraints
+1≤T≤1,000
+1≤N,Q≤200,000
+1≤a,b≤N
+0≤e
+i
+≤2
+36
+for each valid
+i
+1≤c
+i
+≤R+1−i for each valid
+i, where
+R is the number of valid reparentings
+the sum of
+N over all test cases does not exceed
+200,000
+the sum of
+Q over all test cases does not exceed
+200,000
+Subtasks
+Subtask #1 (5 points):
+T≤10
+N,Q≤100
+Subtask #2 (10 points):
+T≤100
+N,Q≤1,000
+Subtask #3 (85 points): original constraints
+Sample 1:
+Input
+Output
+2
+5
+1 3
+1 2
+2 4
+2 5
+3
+5
+23
+72
+7
+1 7
+2 1
+6 1
+5 4
+3 5
+1 5
+5
+9
+6
+35
+313
+602
+126
+910
+Explanation:
+Example case 1: The tree
+G is
+There are
+25 reparentings
+(u,v) ? too many to draw all of them! However, here is a representative sampling. Valid reparentings are marked with a '?'; invalid ones with a '?':
+We can also form a table of validity of all reparentings
+(u,v):
+         v
+     1 2 3 4 5 
+     ?????????
+  1 ?? ? ? ? ? 
+  2 ?? ? ? ? ? 
+u 3 ?? ? ? ? ? 
+  4 ?? ? ? ? ? 
+  5 ?? ? ? ? ? 
+Our initial list
+L, then, is formed by listing all pairs
+(u,v) with a '?' and sorting in the order described above. We get the following list:
+ #   u  v  h
+ 1.  2  1  0
+ 2.  2  3  1
+ 3.  3  1  0
+ 4.  3  2  1
+ 5.  3  4  2
+ 6.  3  5  2
+ 7.  4  1  0
+ 8.  4  2  1
+ 9.  4  3  1
+10.  4  5  2
+11.  5  1  0
+12.  5  2  1
+13.  5  3  1
+14.  5  4  2
+For
+i=1,2,3, we need to decrypt
+e
+i
+to get
+c
+i
+, then find the corresponding reparenting
+(u
+i
+,v
+i
+) in the current list
+L, remove it from
+L and use it to update our decryption key
+d. The initial value of
+d is
+0. The first encrypted choice is
+e
+1
+=5; we decrypt it to get
+c
+1
+=d⊕e
+1
+=0⊕5=5, so the reparenting corresponding to the first choice is the
+5-th entry in the current list
+L, which is
+(u
+1
+,v
+1
+)=(3,4). We update
+d to
+(0+2
+1
+⋅u
+1
++3
+1
+⋅v
+1
+)%(10
+9
++7)=18 and remove the
+5-th element from
+L, which becomes
+ #   u  v  h
+ 1.  2  1  0
+ 2.  2  3  1
+ 3.  3  1  0
+ 4.  3  2  1
+ 5.  3  5  2
+ 6.  4  1  0
+ 7.  4  2  1
+ 8.  4  3  1
+ 9.  4  5  2
+10.  5  1  0
+11.  5  2  1
+12.  5  3  1
+13.  5  4  2
+On to the second choice!
+e
+2
+=23, so
+c
+2
+=18⊕23=5 and the reparenting
+(u
+2
+,v
+2
+) is
+(3,5). We update
+d again to
+(18+2
+2
+⋅u
+2
++3
+2
+⋅v
+2
+)%(10
+9
++7)=75 and remove
+(3,5) from our list
+L, which becomes
+ #   u  v  h
+ 1.  2  1  0
+ 2.  2  3  1
+ 3.  3  1  0
+ 4.  3  2  1
+ 5.  4  1  0
+ 6.  4  2  1
+ 7.  4  3  1
+ 8.  4  5  2
+ 9.  5  1  0
+10.  5  2  1
+11.  5  3  1
+12.  5  4  2
+On to the third and final choice! With
+e
+3
+=72, we decrypt
+c
+3
+=75⊕72=3, so the reparenting
+(u
+3
+,v
+3
+)=(3,1). We use this to update
+d for the final time to
+(75+2
+3
+⋅u
+3
++3
+3
+⋅v
+3
+)%(10
+9
++7)=126.
+We have now processed all
+Q choices, and the final decryption key is
+d=126.
+Example case 2: The tree
+G is
+There are
+49 possible reparentings; again, we only show a representative sample of them and their validity:
+The whole table of validity of reparentings is
+           v
+     1 2 3 4 5 6 7 
+     ?????????????
+  1 ?? ? ? ? ? ? ? 
+  2 ?? ? ? ? ? ? ? 
+  3 ?? ? ? ? ? ? ? 
+u 4 ?? ? ? ? ? ? ? 
+  5 ?? ? ? ? ? ? ? 
+  6 ?? ? ? ? ? ? ? 
+  7 ?? ? ? ? ? ? ? 
+By listing the valid ones and sorting them in the described order, we get our initial list
+L:
+ #   u  v  h
+ 1.  2  1  0
+ 2.  2  5  1
+ 3.  2  6  1
+ 4.  2  7  1
+ 5.  2  3  2
+ 6.  2  4  2
+ 7.  3  1  0
+ 8.  3  2  1
+ 9.  3  5  1
+10.  3  6  1
+11.  3  7  1
+12.  3  4  2
+13.  4  1  0
+14.  4  2  1
+15.  4  5  1
+16.  4  6  1
+17.  4  7  1
+18.  4  3  2
+19.  5  1  0
+20.  5  2  1
+21.  5  6  1
+22.  5  7  1
+23.  6  1  0
+24.  6  2  1
+25.  6  5  1
+26.  6  7  1
+27.  6  3  2
+28.  6  4  2
+29.  7  1  0
+30.  7  2  1
+31.  7  5  1
+32.  7  6  1
+33.  7  3  2
+34.  7  4  2
+The initial value of
+d is
+0. The first encrypted value is
+e
+1
+=9 and we decrypt it to get
+c
+1
+=d⊕e
+1
+=0⊕9=9. The reparenting
+(u
+1
+,v
+1
+) is the
+9-th element of
+L, i.e.
+(u
+1
+,v
+1
+)=(3,5). We update
+d to
+(0+2
+1
+⋅u
+1
++3
+1
+⋅v
+1
+)%(10
+9
++7)=21 and remove
+(3,5) from the list
+L. (To save space, we do not show
+L after each removal.)
+On to the next encrypted value
+e
+2
+=6: we decrypt it to get
+c
+2
+=21⊕6=19, so the reparenting
+(u
+2
+,v
+2
+) is the
+19-th element of
+L now (the
+20-th element in the initial list), i.e.
+(5,2). We update
+d to
+(21+2
+2
+⋅u
+2
++3
+2
+⋅v
+2
+)%(10
+9
++7)=59 and remove
+(5,2) from
+L.
+Next,
+e
+3
+=35, so
+c
+3
+=59⊕35=24,
+(u
+3
+,v
+3
+)=(6,7), we update
+d to
+(59+2
+3
+⋅u
+3
++3
+3
+⋅v
+3
+)%(10
+9
++7)=296 and remove
+(6,7) from
+L.
+Next,
+e
+4
+=313, so
+c
+4
+=296⊕313=17,
+(u
+4
+,v
+4
+)=(4,3), we update
+d to
+(296+2
+4
+⋅u
+4
++3
+4
+⋅v
+4
+)%(10
+9
++7)=603 and remove
+(4,3) from
+L.
+The last of Chef's encrypted choices is
+e
+5
+=602, so
+c
+5
+=603⊕602=1,
+(u
+5
+,v
+5
+)=(2,1). We update
+d to
+(603+2
+5
+⋅u
+5
++3
+5
+⋅v
+5
+)%(10
+9
++7)=910.
+We have now processed all
+Q of Chef's choices, and the final decryption key is
+d=910.

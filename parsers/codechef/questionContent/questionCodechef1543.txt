@@ -1,0 +1,77 @@
+Binary Mismatch
+Problem
+You have a binary string
+S of length
+N.
+You must perform the following operation on the binary string
+S exactly once:
+Choose two integers
+L and
+R
+(1≤L≤R≤N) and invert the substring
+S
+L…R
+(i.e change
+1 to
+0 and change
+0 to
+1).
+Determine whether you can make the number of zeroes in
+S equal to number of ones in
+S by performing the above operation exactly once. If there exists a way, also output the bounds of the chosen substring.
+Input Format
+The first line contains a single integer
+T — the number of test cases.
+The first line of each test case contains a single integer
+N — the length of string
+S.
+The second line of each test case contains a binary string
+S of length
+N.
+Output Format
+For each test case, output NO if there is no way to make the number of zeroes equal to number of ones.
+Otherwise, output YES. In the next line, output two integers
+L and
+R
+(1≤L≤R≤N) — bounds of the chosen substring. If there are multiple answers, print any.
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+Constraints
+1≤T≤10000
+1≤N≤10
+5
+S is a binary string, i.e, contains only characters
+0 and
+1
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+01
+3
+010
+4
+1000
+YES
+1 2
+NO
+YES
+4 4
+Explanation:
+Test case 1: We can pick
+L=1 and
+R=2 to obtain:
+01
+→10, which contains equal number of zeroes and ones.
+Test case 2: It can be proven that there is no way to make the number of zeroes equal to number of ones.
+Test case 3: We can pick
+L=4 and
+R=4 to obtain:
+100
+0
+→1001, which contains equal number of zeroes and ones.

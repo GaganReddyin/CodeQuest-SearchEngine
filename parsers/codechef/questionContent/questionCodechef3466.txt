@@ -1,0 +1,104 @@
+Save Jewels
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+It is well-known that if you become rich, you will have a lot of trouble. Coach Khaled is one of the richest men in the world. He has
+N jewels (numbered
+1 through
+N); for each valid
+i, the
+i-th jewel has value
+P
+i
+. The values of all jewels are pairwise distinct. Unfortunately for Khaled, one of the best thieves in the world, Ghoda, is trying to steal the jewels.
+Khaled knows that Ghoda wants to try to steal jewels during
+M days (numbered
+1 through
+M). For each valid
+i, on the
+i-th day, consider all jewels with numbers between
+L
+i
+and
+R
+i
+(inclusive) which Ghoda has not stolen yet. If there is at least one such jewel, Ghoda decides to steal one of these jewels: the most valuable one. Khaled can only choose one day and prevent Ghoda from stealing any jewels on that day; Ghoda can steal jewels on subsequent days in the same way.
+Khaled wants to maximise the sum of values of the jewels Ghoda has not stolen during these
+M days. Can you help him?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+M lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains two space-separated integers
+L
+i
+and
+R
+i
+.
+Output
+For each test case, print a single line containing one integer — the maximum possible sum of values of Khaled's remaining jewels.
+Constraints
+1≤T≤100
+1≤M≤N≤10
+5
+1≤P
+i
+≤10
+9
+for each valid
+i
+P
+1
+,P
+2
+,…,P
+N
+are pairwise distinct
+1≤L
+i
+,R
+i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+1
+4 4
+1 2 4 3
+1 3
+3 4
+1 2
+2 3
+4
+Explanation:
+Example case 1: Khaled can prevent Ghoda from stealing on day
+2. Then, Ghoda steals the
+3-rd jewel on the
+1-st day and the
+2-nd jewel on the
+3-rd day; he cannot steal anything on the
+4-th day. The remaining jewels are the
+1-st and
+4-th jewel, with values
+1 and
+3 respectively.

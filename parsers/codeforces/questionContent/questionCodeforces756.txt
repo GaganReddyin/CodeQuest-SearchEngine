@@ -1,0 +1,200 @@
+A. Two 0-1 Sequences
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+AquaMoon has two binary sequences
+a
+and
+b
+, which contain only
+0
+and
+1
+. AquaMoon can perform the following two operations any number of times (
+a
+1
+is the first element of
+a
+,
+a
+2
+is the second element of
+a
+, and so on):
+Operation 1: if
+a
+contains at least two elements, change
+a
+2
+to
+min(
+a
+1
+,
+a
+2
+)
+, and remove the first element of
+a
+.
+Operation 2: if
+a
+contains at least two elements, change
+a
+2
+to
+max(
+a
+1
+,
+a
+2
+)
+, and remove the first element of
+a
+.
+Note that after a removal of the first element of
+a
+, the former
+a
+2
+becomes the first element of
+a
+, the former
+a
+3
+becomes the second element of
+a
+and so on, and the length of
+a
+reduces by one.
+Determine if AquaMoon can make
+a
+equal to
+b
+by using these operations.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤2000
+) — the number of test cases. Description of test cases follows.
+The first line of each test case contains two integers
+n
+,
+m
+(
+1≤n,m≤50
+,
+m≤n
+) — the lengths of
+a
+and
+b
+respectively.
+The second line of each test case contains a string
+a
+of length
+n
+, consisting only
+0
+and
+1
+.
+The third line of each test case contains a string
+b
+of length
+m
+, consisting only
+0
+and
+1
+.
+Output
+For each test case, output "YES" if AquaMoon can change
+a
+to
+b
+by using these options; otherwise, output "NO".
+You may print each letter in any case (for example, "YES", "Yes", "yes", "yEs" will all be recognized as a positive answer).
+Example
+input
+Copy
+10
+6 2
+001001
+11
+6 2
+110111
+01
+6 2
+000001
+11
+6 2
+111111
+01
+8 5
+10000101
+11010
+7 4
+1010001
+1001
+8 6
+01010010
+010010
+8 4
+01010101
+1001
+8 4
+10101010
+0110
+7 5
+1011100
+11100
+output
+Copy
+YES
+YES
+NO
+NO
+NO
+YES
+YES
+NO
+NO
+YES
+Note
+In the first test case, you can use Operation 2 four times to make
+a
+equals to
+b
+.
+In the second test case, you can use Operation 1 four times to make
+a
+equals to
+b
+.
+In the third test case, it can be proved that no matter how we use the operations, it is impossible to make
+a
+equal to
+b
+.
+In the fourth test case, it can be proved that no matter how we use the operations, it is impossible to make
+a
+equal to
+b
+.
+In the fifth test case, you can use Operation 2 three times to make
+a
+become
+10101
+, so the first element of
+a
+equals to the first element of
+b
+, but it can be proved that no matter how to operate, the second to the fifth elements of
+a
+can't be the same as
+b
+.

@@ -1,0 +1,84 @@
+Painter Problem
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is a painter. He likes to draw geometric figures and among them, he especially loves isosceles right triangles. The longest side of a right triangle is called its hypotenuse. Chef drew
+N isosceles right triangles (numbered
+1 through
+N) on an infinite sheet of paper, which can be represented by a Cartesian half-plane (containing all points
+(x,y) such that
+y≥0), in such a way that the hypotenuse of each triangle lies on the
+x-axis (the line
+y=0). For example, the resulting figure could look like this:
+The sides of the triangles and the
+x-axis split the paper into one or more contiguous regions, which Chef calls districts. Chef is fascinated by his drawing, so he would like to know how many districts are on his paper. For each valid
+i, the hypotenuse of the
+i-th triangle is the line segment between points
+(l
+i
+,0) and
+(r
+i
+,0); note that the triangles are uniquely defined by this information.
+Help Chef calculate the number of districts in the painting.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+l
+i
+and
+r
+i
+.
+Output
+For each test case, print a single line containing one integer ― the number of districts.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+−10
+9
+≤l
+i
+<r
+i
+≤10
+9
+for each valid
+i
+the pairs
+(l
+1
+,r
+1
+),(l
+2
+,r
+2
+),…,(l
+N
+,r
+N
+) are distinct
+Subtasks
+Subtask #1 (50 points):
+N≤10
+3
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+4
+40 110
+100 140
+-100 100
+-100 60
+8
+Explanation:
+Example case 1: The paper with all triangles and eight numbered districts is shown in the figure below.

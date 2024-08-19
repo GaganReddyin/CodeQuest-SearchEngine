@@ -1,0 +1,20 @@
+An interesting subsequence
+Problem
+For two given sequences of integers, find the longest possible integer sequence which is a subsequence of both these sequences, and whose elements are integers in a (strictly) increasing order.
+Input
+The first number is n (1 ≤ n ≤ 5000), the length of the first sequence.
+The next n integers are elements of the first sequence.
+The next is m (1 ≤ m ≤ 5000), the length of the second sequence.
+The next m integers are elements of the second sequence.
+Output
+On the first line, print a single number k, the length of the longest possible common subsequence that is increasing.
+In the next line, print k space separated integers which is the answer. If there are multiple possible subsequences, any one would do.
+Sample 1:
+Input
+Output
+5
+2 3 1 4 0
+6
+10 3 4 1 0 0
+2
+3 4

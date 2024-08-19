@@ -1,0 +1,116 @@
+Ddakji
+Problem
+“You can make a lot by playing such games.”
+Every player has to play a game of Ddakji with the recruiter in order to enter the squid game. Gi-Hun has played many rounds but was unable to win even once. The recruiter thus decided to give him a puzzle instead.
+Gi-Hun is given an array
+A of
+N elements. He can perform the following operation on array
+A any number of times:
+Select any two indexes
+1≤i,j≤N such that
+i
+
+=j and replace
+A
+i
+with
+A
+i
+−A
+j
+.
+His task is to find the minimum possible value of
+∣A
+1
+∣+∣A
+2
+∣+…+∣A
+N
+∣ attainable by performing these operations several (possibly,
+0) times.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains
+N, the number of elements in the array.
+The second line of each test case contains
+N space-separated integers —
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each testcase, print on a new line one integer — minimum possible value of
+∣A
+1
+∣+∣A
+2
+∣+…+∣A
+N
+∣.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+−10
+9
+≤A
+i
+≤10
+9
+Sum of
+N across all test cases doesn't exceed
+10
+6
+Sample 1:
+Input
+Output
+5
+2
+4 1
+5
+0 0 0 0 0
+5
+10 10 10 10 10
+4
+0 2 -2 6
+10
+10 9 8 7 6 -5 -4 -3 -2 -1
+1
+0
+10
+4
+2
+Explanation:
+Test Case 1: Perform the operation with
+i=1 and
+j=2 four times. The array is now
+[0,1], and its value is
+∣0∣+∣1∣=1.
+Test Case 2: No operations need to be performed.
+Test Case 4: Perform the following operations:
+Choose
+i=4,j=2 and set
+A
+4
+=6−2=4. The array is now
+[0,2,−2,4].
+Choose
+i=4,j=2 and set
+A
+4
+=4−2=2. The array is now
+[0,2,−2,2].
+Choose
+i=2,j=4 and set
+A
+2
+=2−2=0. The array is now
+[0,0,−2,2].
+The value of the array is now
+∣0∣+∣0∣+∣−2∣+∣2∣=4, and it can be proved that this is the minimum possible value.

@@ -1,0 +1,34 @@
+E. Tavas and Pashmaks
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Tavas is a cheerleader in the new sports competition named "Pashmaks".
+This competition consists of two part: swimming and then running. People will immediately start running R meters after they finished swimming exactly S meters. A winner is a such person that nobody else finishes running before him/her (there may be more than one winner).
+Before the match starts, Tavas knows that there are n competitors registered for the match. Also, he knows that i-th person's swimming speed is si meters per second and his/her running speed is ri meters per second. Unfortunately, he doesn't know the values of R and S, but he knows that they are real numbers greater than 0.
+As a cheerleader, Tavas wants to know who to cheer up. So, he wants to know all people that might win. We consider a competitor might win if and only if there are some values of R and S such that with these values, (s)he will be a winner.
+Tavas isn't really familiar with programming, so he asked you to help him.
+Input
+The first line of input contains a single integer n (1 ≤ n ≤ 2 × 105).
+The next n lines contain the details of competitors. i-th line contains two integers si and ri (1 ≤ si, ri ≤ 104).
+Output
+In the first and the only line of output, print a sequence of numbers of possible winners in increasing order.
+Examples
+input
+Copy
+3
+1 3
+2 2
+3 1
+output
+Copy
+1 2 3 
+input
+Copy
+3
+1 2
+1 1
+2 1
+output
+Copy
+1 3 

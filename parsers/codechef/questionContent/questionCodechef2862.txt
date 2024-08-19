@@ -1,0 +1,92 @@
+Power Sum
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is preparing a brand new dish. He found
+N new ingredients (numbered
+1 through
+N) for the dish. For each valid
+i, the
+i-th ingredient costs
+C
+i
+dollars and it has value
+V
+i
+.
+Chef has a budget:
+S dollars. He can buy each ingredient at most once. A non-empty subset of these
+N ingredients (possibly containing all ingredients) is called affordable if the sum of costs of all the ingredients in the subset does not exceed Chef's budget. The tastiness of a dish prepared using a set of ingredients is equal to
+v
+K
+, where
+v is the sum of values of all the ingredients in the set and
+K is a fixed integer.
+To make a dish, Chef should use an affordable subset of ingredients. He wants to try out all the dishes he can make. Find the total (summed up) tastiness of all these dishes. Since this number could be very large, compute it modulo
+998,244,353.
+Input
+The first line of the input contains three space-separated integers
+N,
+S and
+K.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains two space-separated integers
+C
+i
+and
+V
+i
+.
+Output
+Print a single line containing one integer ― the total tastiness modulo
+998,244,353.
+Constraints
+1≤N,S≤100
+1≤K≤2,000
+1≤C
+i
+≤100 for each valid
+i
+1≤V
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (10 points):
+1≤N≤20
+Subtask #2 (30 points):
+1≤K≤100
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+3 2 2
+1 2
+2 3
+1 4
+65
+Explanation:
+Chef can make dishes using the following subsets of ingredients:
+{1} with tastiness
+2
+2
+=4
+{2} with tastiness
+3
+2
+=9
+{3} with tastiness
+4
+2
+=16
+{1,3} with total value
+6
+2
+=36
+The subsets
+{1,2},
+{2,3} and
+{1,2,3} cannot be used because they are not affordable.

@@ -1,0 +1,1 @@
+C2. Good Subarrays (Hard Version)

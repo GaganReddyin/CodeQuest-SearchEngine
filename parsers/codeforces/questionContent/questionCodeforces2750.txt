@@ -1,0 +1,43 @@
+B. Limericks
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There was once young lass called Mary,  
+Whose jokes were occasionally scary.  
+On this April's Fool  
+Fixed limerick rules  
+Allowed her to trip the unwary.
+
+Can she fill all the lines
+To work at all times?
+On juggling the words
+Right around two-thirds
+She nearly ran out of rhymes.
+Input
+The input contains a single integer
+a
+(
+4≤a≤998
+). Not every integer in the range is a valid input for the problem; you are guaranteed that the input will be a valid integer.
+Output
+Output a single number.
+Examples
+input
+Copy
+35
+output
+Copy
+57
+input
+Copy
+57
+output
+Copy
+319
+input
+Copy
+391
+output
+Copy
+1723

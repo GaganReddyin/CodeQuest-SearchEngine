@@ -1,0 +1,77 @@
+FIXFIX
+Problem
+Given a positive integer
+n and an integer
+k such that
+0≤k≤n, find any permutation
+A of
+1,2…n such that the number of indices for which
+A
+i
+=i is exactly
+k. If there exists no such permutation, print
+−1. If there exist multiple such permutations, print any one of them.
+Input Format
+First line of the input contains
+T, the number of test cases. Then the test cases follow.
+Each test case contains a single line of input, two integers
+n,k.
+Output Format
+For each test case, print a permutation in a single line, if a permutation with the given constraints exists. Print
+−1 otherwise.
+Constraints
+1≤T≤10
+5
+1≤n≤10
+5
+0≤k≤n
+Sum of
+n over all test cases doesn't exceed
+2⋅10
+6
+Sample 1:
+Input
+Output
+3
+2 1
+3 1
+4 2
+-1
+1 3 2
+3 2 1 4
+Explanation:
+Test case
+1: There are total
+2 permutations of
+[1,2] which are
+[1,2] and
+[2,1]. There are
+2 indices in
+[1,2] and
+0 indices in
+[2,1] for which
+A
+i
+=i holds true. Thus, there doesn't exist any permutation of
+[1,2] with exactly
+1 index
+i for which
+A
+i
+=i holds true.
+Test case
+2: Consider the permutation
+A=[1,3,2]. We have
+A
+1
+=1,
+A
+2
+=3 and
+A
+3
+=2. So, this permutation has exactly
+1 index such that
+A
+i
+=i.

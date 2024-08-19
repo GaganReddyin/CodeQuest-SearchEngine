@@ -1,0 +1,153 @@
+E. Election Promises
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In Byteland, there are two political parties fighting for seats in the Parliament in the upcoming elections: Wrong Answer Party and Time Limit Exceeded Party. As they want to convince as many citizens as possible to cast their votes on them, they keep promising lower and lower taxes.
+There are
+n
+cities in Byteland, connected by
+m
+one-way roads. Interestingly enough, the road network has no cycles — it's impossible to start in any city, follow a number of roads, and return to that city. Last year, citizens of the
+i
+-th city had to pay
+h
+i
+bourles of tax.
+Parties will now alternately hold the election conventions in various cities. If a party holds a convention in city
+v
+, the party needs to decrease the taxes in this city to a non-negative integer amount of bourles. However, at the same time they can arbitrarily modify the taxes in each of the cities that can be reached from
+v
+using a single road. The only condition that must be fulfilled that the tax in each city has to remain a non-negative integer amount of bourles.
+The first party to hold the convention is Wrong Answer Party. It's predicted that the party to hold the last convention will win the election. Can Wrong Answer Party win regardless of Time Limit Exceeded Party's moves?
+Input
+The first line of the input contains two integers
+n
+,
+m
+(
+1≤n≤200000
+,
+0≤m≤200000
+) — the number of cities and roads in Byteland.
+The next line contains
+n
+space-separated integers
+h
+1
+,
+h
+2
+,…,
+h
+n
+(
+0≤
+h
+i
+≤
+10
+9
+);
+h
+i
+denotes the amount of taxes paid in the
+i
+-th city.
+Each of the following
+m
+lines contains two integers (
+1≤u,v≤n
+,
+u≠v
+), and describes a one-way road leading from the city
+u
+to the city
+v
+. There will be no cycles in the road network. No two roads will connect the same pair of cities.
+We can show that the conventions cannot be held indefinitely for any correct test case.
+Output
+If Wrong Answer Party can win the election, output WIN in the first line of your output. In this case, you're additionally asked to produce any convention allowing the party to win regardless of the opponent's actions. The second line should contain
+n
+non-negative integers
+h
+′
+1
+,
+h
+′
+2
+,…,
+h
+′
+n
+(
+0≤
+h
+′
+i
+≤2⋅
+10
+18
+) describing the amount of taxes paid in consecutive cities after the convention. If there are multiple answers, output any. We guarantee that if the party has any winning move, there exists a move after which no city has to pay more than
+2⋅
+10
+18
+bourles.
+If the party cannot assure their victory, output LOSE in the first and only line of the output.
+Examples
+input
+Copy
+4 2
+2 1 1 5
+1 2
+3 4
+output
+Copy
+WIN
+1 5 1 5 
+input
+Copy
+4 2
+1 5 1 5
+1 2
+3 4
+output
+Copy
+LOSE
+input
+Copy
+3 3
+314 159 265
+1 2
+1 3
+3 2
+output
+Copy
+WIN
+0 0 0 
+input
+Copy
+6 4
+2 2 5 5 6 6
+1 3
+2 4
+3 5
+4 6
+output
+Copy
+LOSE
+Note
+In the first example, Wrong Answer Party should hold the convention in the city
+1
+. The party will decrease the taxes in this city to
+1
+bourle. As the city
+2
+is directly reachable from
+1
+, we can arbitrarily modify the taxes in this city. The party should change the tax to
+5
+bourles. It can be easily proved that Time Limit Exceeded cannot win the election after this move if Wrong Answer Party plays optimally.
+The second example test presents the situation we created after a single move in the previous test; as it's Wrong Answer Party's move now, the party cannot win.
+In the third test, we should hold the convention in the first city. This allows us to change the taxes in any city to any desired value; we can for instance decide to set all the taxes to zero, which allows the Wrong Answer Party to win the election immediately.

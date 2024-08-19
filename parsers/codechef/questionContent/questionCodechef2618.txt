@@ -1,0 +1,94 @@
+Intersecting Paths
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree (a connected undirected graph without cycles) with
+N vertices numbered
+1 through
+N. For each pair of vertices
+u and
+v, let's denote the simple path between them by
+(u,v); the paths are undirected, so
+(u,v) is the same path as
+(v,u).
+You should answer
+Q queries. In each query, you are given two vertices
+u and
+v. Then, for each simple path
+(a,b) in the tree, we define perfect intersection as follows:
+Let's denote the sets of vertices in the paths
+(u,v) and
+(a,b) by
+S
+1
+and
+S
+2
+respectively (a path contains its endpoints too).
+The path
+(a,b) intersects perfectly with
+(u,v) if
+∣S
+1
+∩S
+2
+∣=1, i.e. these paths have exactly one common vertex.
+The answer to the query is the number of paths which intersect perfectly with the path
+(u,v).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+Each of the next
+N−1 lines contains two space-separated integers
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+Each of the next
+Q lines contains two space-separated integers
+u and
+v describing one query.
+Output
+For each query, print a single line containing one integer — the answer to this query.
+Constraints
+1≤T≤10
+1≤N,Q≤3⋅10
+5
+1≤u,v≤N
+Subtasks
+Subtask #1 (10 points):
+1≤N,Q≤100
+Subtask #2 (20 points):
+1≤N,Q≤1,000
+Subtask #3 (70 points):
+T≤5
+1≤N≤250,000
+1≤Q≤3⋅10
+5
+Sample 1:
+Input
+Output
+1
+6 2
+1 2
+1 3
+1 4
+2 5
+2 6
+4 5
+1 3
+6
+9
+Explanation:
+Example case 1:
+In the first query, the paths that intersect perfectly with the given path
+(4,5) are
+(1,1),
+(1,3),
+(2,2),
+(2,6),
+(4,4) and
+(5,5).

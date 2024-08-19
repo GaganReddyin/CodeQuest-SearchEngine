@@ -1,0 +1,40 @@
+The Kingdom of Exodiastaan
+Problem
+There was a kingdom 'Exodistaan' ruled by 'JonSnow'. The kingdom was divided into
+n x
+m cities. The cities are arranged in a grid, with
+n rows of
+m cities each. Now the ruler 'JonSnow' had a list of enemies (not exceeding 10). The enemies want Exodistaan for themselves, as it is quite popular. Their strategy was to first attack the cities row-wise and then attack column-wise. The enemies attacked the rows and were able to capture some continuous segments of cities in some rows. Each row was attacked by at most one enemy. Now they want to attack columns and all the columns which have maximum number of distinct rulers will be attacked first. 'JonSnow' is busy in preparing for the war. You have to help him which columns will be attacked and what is the maximum number of distinct rulers (including 'JonSnow').
+###Input:
+The first line contains three integers
+n,m,k.
+Each of the next
+k lines contains 4 values
+i,l,r,S. This means that in row
+i, cities from column
+l to column
+r both inclusive have been captured by enemy
+S.
+###Output: Print 2 space separated integers
+A and
+B, where:
+A is the number of columns which will be attacked.
+B is the maximum number of distinct rulers in the columns.
+###Constraints
+1≤n,m≤10
+5
+1≤k≤n
+1≤l≤r≤m
+1≤ length of
+S≤10
+The number of distinct enemies do not exceed
+10.
+###Sample Input: 4 4 3 1 2 3 Lannister 2 1 2 Bolton 4 1 1 Lannister
+###Sample Output: 2 3
+###Explanation:
+The matrix is as follows -
+JonSnow     Lannister   Lannister    JonSnow
+Bolton    Bolton    JonSnow      JonSnow
+JonSnow     JonSnow     JonSnow      JonSnow
+Lannister   JonSnow     JonSnow      JonSnow
+The first and second Columns have 3 rulers each - {JonSnow, Bolton, Lannister}. And that is the maximum possible. Since there are two column with maximum distinct rulers, the first integer in the output is 2. And since the maximum number of rulers in a single column is 3, the second output is 3.

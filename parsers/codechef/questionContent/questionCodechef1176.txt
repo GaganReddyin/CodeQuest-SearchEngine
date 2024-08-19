@@ -1,0 +1,106 @@
+Chef And Adjacent Sums
+Problem
+You are given an array
+A of size
+N.
+Consider an array
+B of size
+N formed by sorting
+A in non-decreasing order.
+Let
+Z=(B
+N
++B
+(N−1)
+).
+Find whether there exists any rearrangement of the array
+A, such that, for all
+(1≤i<N),
+(A
+i
++A
+(i+1)
+)<Z.
+If such a rearrangement exists, print YES, otherwise print NO.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a integer
+N — the number of elements in the array.
+The next line contains
+N space-separated integers, denoting the elements of the array.
+Output Format
+For each test case, output YES, if a rearrangement exists that satisfies the conditions. Otherwise, output NO.
+You may print each character in uppercase or lowercase. For example, NO, no, No, and nO are all considered the same.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+1≤A
+i
+≤10
+5
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+4
+3
+3 4 4
+4
+1 2 3 4
+2
+2 2
+2
+1 2
+YES
+YES
+NO
+NO
+Explanation:
+Test case
+1: Here
+B=[3,4,4] and
+Z=(4+4)=8.
+We can rearrange the array to
+[4,3,4] such that
+(A
+1
++A
+2
+)=7<8 and
+(A
+2
++A
+3
+)=7<8. Thus, the rearrangement is valid.
+Test case
+2: Here
+B=[1,2,3,4] and
+Z=(4+3)=7.
+We can rearrange the array to
+[4,2,3,1] such that
+(A
+1
++A
+2
+)=6<7,
+(A
+2
++A
+3
+)=5<7, and
+(A
+3
++A
+4
+)=4<7. Thus, the rearrangement is valid.
+Test case
+3: The exists no possible rearrangement that satisfies the conditions.
+Test case
+4: The exists no possible rearrangement that satisfies the conditions.

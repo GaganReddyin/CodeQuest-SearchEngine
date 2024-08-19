@@ -1,0 +1,30 @@
+E. Sum of Remainders
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Calculate the value of the sum: n mod 1 + n mod 2 + n mod 3 + ... + n mod m. As the result can be very large, you should print the value modulo 109 + 7 (the remainder when divided by 109 + 7).
+The modulo operator a mod b stands for the remainder after dividing a by b. For example 10 mod 3 = 1.
+Input
+The only line contains two integers n, m (1 ≤ n, m ≤ 1013) — the parameters of the sum.
+Output
+Print integer s — the value of the required sum modulo 109 + 7.
+Examples
+input
+Copy
+3 4
+output
+Copy
+4
+input
+Copy
+4 4
+output
+Copy
+1
+input
+Copy
+1 1
+output
+Copy
+0

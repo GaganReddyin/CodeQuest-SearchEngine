@@ -1,0 +1,155 @@
+A. Portal
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+CQXYM found a rectangle
+A
+of size
+n×m
+. There are
+n
+rows and
+m
+columns of blocks. Each block of the rectangle is an obsidian block or empty. CQXYM can change an obsidian block to an empty block or an empty block to an obsidian block in one operation.
+A rectangle
+M
+size of
+a×b
+is called a portal if and only if it satisfies the following conditions:
+a≥5,b≥4
+.
+For all
+1<x<a
+, blocks
+M
+x,1
+and
+M
+x,b
+are obsidian blocks.
+For all
+1<x<b
+, blocks
+M
+1,x
+and
+M
+a,x
+are obsidian blocks.
+For all
+1<x<a,1<y<b
+, block
+M
+x,y
+is an empty block.
+M
+1,1
+,
+M
+1,b
+,
+M
+a,1
+,
+M
+a,b
+can be any type.
+Note that the there must be
+a
+rows and
+b
+columns, not
+b
+rows and
+a
+columns.
+Note that corners can be any type
+CQXYM wants to know the minimum number of operations he needs to make at least one sub-rectangle a portal.
+Input
+The first line contains an integer
+t
+(
+t≥1
+), which is the number of test cases.
+For each test case, the first line contains two integers
+n
+and
+m
+(
+5≤n≤400
+,
+4≤m≤400
+).
+Then
+n
+lines follow, each line contains
+m
+characters
+0
+or
+1
+. If the
+j
+-th character of
+i
+-th line is
+0
+, block
+A
+i,j
+is an empty block. Otherwise, block
+A
+i,j
+is an obsidian block.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+400
+.
+It is guaranteed that the sum of
+m
+over all test cases does not exceed
+400
+.
+Output
+Output
+t
+answers, and each answer in a line.
+Examples
+input
+Copy
+1
+5 4
+1000
+0000
+0110
+0000
+0001
+output
+Copy
+12
+input
+Copy
+1
+9 9
+001010001
+101110100
+000010011
+100000001
+101010101
+110001111
+000001111
+111100000
+000110000
+output
+Copy
+5
+Note
+In the first test case, the final portal is like this:
+
+1110
+1001
+1001
+1001
+0111

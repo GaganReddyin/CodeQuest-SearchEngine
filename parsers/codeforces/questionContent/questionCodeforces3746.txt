@@ -1,0 +1,149 @@
+B. Discounts
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You came to a local shop and want to buy some chocolate bars. There are
+n
+bars in the shop,
+i
+-th of them costs
+a
+i
+coins (and you want to buy all of them).
+You have
+m
+different coupons that allow you to buy chocolate bars.
+i
+-th coupon allows you to buy
+q
+i
+chocolate bars while you have to pay only for the
+q
+i
+−1
+most expensive ones (so, the cheapest bar of those
+q
+i
+bars is for free).
+You can use only one coupon; if you use coupon
+i
+, you have to choose
+q
+i
+bars and buy them using the coupon, and buy all the remaining
+n−
+q
+i
+bars without any discounts.
+To decide which coupon to choose, you want to know what will be the minimum total amount of money you have to pay if you use one of the coupons optimally.
+Input
+The first line contains one integer
+n
+(
+2≤n≤3⋅
+10
+5
+) — the number of chocolate bars in the shop.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+), where
+a
+i
+is the cost of
+i
+-th chocolate bar.
+The third line contains one integer
+m
+(
+1≤m≤n−1
+) — the number of coupons you have.
+The fourth line contains
+m
+integers
+q
+1
+,
+q
+2
+, ...,
+q
+m
+(
+2≤
+q
+i
+≤n
+), where
+q
+i
+is the number of chocolate bars you have to buy using
+i
+-th coupon so that the least expensive of them will be for free. All values of
+q
+i
+are pairwise distinct.
+Output
+Print
+m
+integers,
+i
+-th of them should be the minimum amount of money you have to pay if you buy
+q
+i
+bars with
+i
+-th coupon, and all the remaining bars one by one for their full price.
+Example
+input
+Copy
+7
+7 1 3 1 4 10 8
+2
+3 4
+output
+Copy
+27
+30
+Note
+Consider the first example.
+If we use the first coupon, we may choose chocolate bars having indices
+1
+,
+6
+and
+7
+, and we pay
+18
+coins for them and
+9
+coins for all other bars.
+If we use the second coupon, we may choose chocolate bars having indices
+1
+,
+5
+,
+6
+and
+7
+, and we pay
+25
+coins for them and
+5
+coins for all other bars.

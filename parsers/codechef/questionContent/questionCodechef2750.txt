@@ -1,0 +1,123 @@
+Chef and Churu
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+Chef has an array
+A of
+N numbers. He also has
+N functions. The
+i
+th
+function will return the sum of all
+A
+j
+where (
+L
+i
+≤j≤R
+i
+). You have to answer
+Q queries of two types:
+1
+x
+y - Change the
+x
+th
+element of the array to
+y.
+2
+l
+r - Print the sum of all functions from
+l to
+r.
+Can you solve this problem?
+Input
+First line contains a single integer -
+N, the length of the array and the number of functions
+Next line contains
+N space separated integers, the
+i
+th
+of which is
+A
+i
+The next N lines each contain two space separated integers, the
+i
+th
+line contains
+L
+i
+and
+R
+i
+.
+The next line contains a single integer
+Q
+The next
+Q lines contain queries in the format described aboce.
+Output
+For each query of type
+2, output the answer on a separate line.
+Constraints
+1≤N,Q≤10
+5
+1≤A
+i
+≤10
+9
+1≤L
+i
+≤R(i)≤N
+1≤x≤N
+1≤y≤10
+9
+1≤l≤r≤N
+Subtasks
+Subtask 1: (10 points)
+N≤1000
+Q≤1000
+Subtask 2: (10 points)
+R
+i
+−L
+i
+≤10
+All
+x are distinct
+Subtask 3: (80 points)
+No additional constraints
+Example Input
+5
+1 2 3 4 5
+1 3
+2 5
+4 5
+3 5
+1 2
+4
+2 1 4
+1 3 7
+2 1 4
+2 3 5
+Example Output
+41
+53
+28
+Explanation
+Functions values initially :
+F[1]=1+2+3=6
+F[2]=2+3+4+5=14
+F[3]=4+5=9
+F[4]=3+4+5=12
+F[5]=1+2=3
+Query
+1:F[1]+F[2]+F[3]+F[4]=41
+After the update , the functions are :
+F[1] = 10
+F[2] = 18
+F[3] = 9
+F[4] = 16
+F[5] = 3
+Query
+3:F[1]+F[2]+F[3]+F[4]=53
+Query
+4:F[3]+F[4]+F[5]=28

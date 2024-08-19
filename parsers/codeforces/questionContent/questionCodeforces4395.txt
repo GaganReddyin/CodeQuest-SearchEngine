@@ -1,0 +1,170 @@
+C. Leaving the Bar
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For a vector
+v
+⃗ 
+=(x,y)
+→
+, define
+|v|=
+x
+2
++
+y
+2
+−
+−
+−
+−
+−
+−
+√
+.
+Allen had a bit too much to drink at the bar, which is at the origin. There are
+n
+vectors
+v
+1
+→
+,
+v
+2
+→
+,⋯,
+v
+n
+→
+. Allen will make
+n
+moves. As Allen's sense of direction is impaired, during the
+i
+-th move he will either move in the direction
+v
+i
+→
+or
+−
+v
+i
+→
+. In other words, if his position is currently
+p=(x,y)
+, he will either move to
+p+
+v
+i
+→
+or
+p−
+v
+i
+→
+.
+Allen doesn't want to wander too far from home (which happens to also be the bar). You need to help him figure out a sequence of moves (a sequence of signs for the vectors) such that his final position
+p
+satisfies
+|p|≤1.5⋅
+10
+6
+so that he can stay safe.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the number of moves.
+Each of the following lines contains two space-separated integers
+x
+i
+and
+y
+i
+, meaning that
+v
+i
+→
+=(
+x
+i
+,
+y
+i
+)
+. We have that
+|
+v
+i
+|≤
+10
+6
+for all
+i
+.
+Output
+Output a single line containing
+n
+integers
+c
+1
+,
+c
+2
+,⋯,
+c
+n
+, each of which is either
+1
+or
+−1
+. Your solution is correct if the value of
+p=
+∑
+n
+i=1
+c
+i
+v
+i
+→
+, satisfies
+|p|≤1.5⋅
+10
+6
+.
+It can be shown that a solution always exists under the given constraints.
+Examples
+input
+Copy
+3
+999999 0
+0 999999
+999999 0
+output
+Copy
+1 1 -1 
+input
+Copy
+1
+-824590 246031
+output
+Copy
+1 
+input
+Copy
+8
+-67761 603277
+640586 -396671
+46147 -122580
+569609 -2112
+400 914208
+131792 309779
+-850150 -486293
+5272 721899
+output
+Copy
+1 1 1 1 1 1 1 -1 

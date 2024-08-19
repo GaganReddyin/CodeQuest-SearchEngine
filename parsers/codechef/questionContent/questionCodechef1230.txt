@@ -1,0 +1,112 @@
+XOR with smallest element
+Problem
+Chef has an array
+A of length
+N and an integer
+X.
+In one operation, Chef does the following:
+Find the smallest element in the current array. Let this be
+S.
+Next, pick any one index
+i such that
+A
+i
+=S
+Finally, replace
+A
+i
+with
+A
+i
+⊕X
+Here
+⊕ denotes the bitwise XOR operation.
+For example, if
+A=[1,1,2] and
+X=4, then in one move Chef can turn the array into either
+[5,1,2] or
+[1,5,2].
+Chef performs this operation exactly
+Y times. Let
+B be final array obtained.
+Output the array
+B in sorted order. Note that under this restriction, the output is unique.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains three space-separated integers
+N,
+X, and
+Y.
+The second line contains
+N space-separated integers denoting the array
+A.
+Output Format
+For each test case, output array
+B in sorted order.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤Y≤10
+9
+1≤A
+i
+,X≤2
+30
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+1 6 99
+9
+3 7 44
+1 2 3
+5 20 6
+5 10 15 20 25
+15 
+3 5 6 
+5 20 25 27 30
+Explanation:
+Test case
+1: The array is initially
+[9]. Since there is only one element, it will be modified in each step. So,
+After the first operation, the array is
+[15] (since
+9⊕6=15)
+After the second operation, the array is
+[9] (since
+15⊕6=9)
+Continuing the above, it can be verified that after
+99 steps, the array is
+[15].
+Test case
+3: The sequence of steps is as follows:
+Initially, the array is
+[5,10,15,20,25]
+After operation
+1, it is
+[17,10,15,20,25]
+After operation
+2, it is
+[17,30,15,20,25]
+After operation
+3, it is
+[17,30,27,20,25]
+After operation
+4, it is
+[5,30,27,20,25]
+After operation
+5, it is
+[17,30,27,20,25]
+After operation
+6, it is
+[5,30,27,20,25]
+Remember to print the output in sorted order.

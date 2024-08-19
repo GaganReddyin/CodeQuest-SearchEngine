@@ -1,0 +1,162 @@
+E. Permutation Separation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+(an array where each integer from
+1
+to
+n
+appears exactly once). The weight of the
+i
+-th element of this permutation is
+a
+i
+.
+At first, you separate your permutation into two non-empty sets — prefix and suffix. More formally, the first set contains elements
+p
+1
+,
+p
+2
+,…,
+p
+k
+, the second —
+p
+k+1
+,
+p
+k+2
+,…,
+p
+n
+, where
+1≤k<n
+.
+After that, you may move elements between sets. The operation you are allowed to do is to choose some element of the first set and move it to the second set, or vice versa (move from the second set to the first). You have to pay
+a
+i
+dollars to move the element
+p
+i
+.
+Your goal is to make it so that each element of the first set is less than each element of the second set. Note that if one of the sets is empty, this condition is met.
+For example, if
+p=[3,1,2]
+and
+a=[7,1,4]
+, then the optimal strategy is: separate
+p
+into two parts
+[3,1]
+and
+[2]
+and then move the
+2
+-element into first set (it costs
+4
+). And if
+p=[3,5,1,6,2,4]
+,
+a=[9,1,9,9,1,9]
+, then the optimal strategy is: separate
+p
+into two parts
+[3,5,1]
+and
+[6,2,4]
+, and then move the
+2
+-element into first set (it costs
+1
+), and
+5
+-element into second set (it also costs
+1
+).
+Calculate the minimum number of dollars you have to spend.
+Input
+The first line contains one integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the length of permutation.
+The second line contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+). It's guaranteed that this sequence contains each element from
+1
+to
+n
+exactly once.
+The third line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+Output
+Print one integer — the minimum number of dollars you have to spend.
+Examples
+input
+Copy
+3
+3 1 2
+7 1 4
+output
+Copy
+4
+input
+Copy
+4
+2 4 1 3
+5 9 8 3
+output
+Copy
+3
+input
+Copy
+6
+3 5 1 6 2 4
+9 1 9 9 1 9
+output
+Copy
+2

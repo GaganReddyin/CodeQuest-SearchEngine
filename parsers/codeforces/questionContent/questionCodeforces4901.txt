@@ -1,0 +1,51 @@
+F. Ann and Books
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In Ann's favorite book shop are as many as n books on math and economics. Books are numbered from 1 to n. Each of them contains non-negative number of problems.
+Today there is a sale: any subsegment of a segment from l to r can be bought at a fixed price.
+Ann decided that she wants to buy such non-empty subsegment that the sale operates on it and the number of math problems is greater than the number of economics problems exactly by k. Note that k may be positive, negative or zero.
+Unfortunately, Ann is not sure on which segment the sale operates, but she has q assumptions. For each of them she wants to know the number of options to buy a subsegment satisfying the condition (because the time she spends on choosing depends on that).
+Currently Ann is too busy solving other problems, she asks you for help. For each her assumption determine the number of subsegments of the given segment such that the number of math problems is greaten than the number of economics problems on that subsegment exactly by k.
+Input
+The first line contains two integers n and k (1 ≤ n ≤ 100 000,  - 109 ≤ k ≤ 109) — the number of books and the needed difference between the number of math problems and the number of economics problems.
+The second line contains n integers t1, t2, ..., tn (1 ≤ ti ≤ 2), where ti is 1 if the i-th book is on math or 2 if the i-th is on economics.
+The third line contains n integers a1, a2, ..., an (0 ≤ ai ≤ 109), where ai is the number of problems in the i-th book.
+The fourth line contains a single integer q (1 ≤ q ≤ 100 000) — the number of assumptions.
+Each of the next q lines contains two integers li and ri (1 ≤ li ≤ ri ≤ n) describing the i-th Ann's assumption.
+Output
+Print q lines, in the i-th of them print the number of subsegments for the i-th Ann's assumption.
+Examples
+input
+Copy
+4 1
+1 1 1 2
+1 1 1 1
+4
+1 2
+1 3
+1 4
+3 4
+output
+Copy
+2
+3
+4
+1
+input
+Copy
+4 0
+1 2 1 2
+0 0 0 0
+1
+1 4
+output
+Copy
+10
+Note
+In the first sample Ann can buy subsegments [1;1], [2;2], [3;3], [2;4] if they fall into the sales segment, because the number of math problems is greater by 1 on them that the number of economics problems. So we should count for each assumption the number of these subsegments that are subsegments of the given segment.
+Segments [1;1] and [2;2] are subsegments of [1;2].
+Segments [1;1], [2;2] and [3;3] are subsegments of [1;3].
+Segments [1;1], [2;2], [3;3], [2;4] are subsegments of [1;4].
+Segment [3;3] is subsegment of [3;4].

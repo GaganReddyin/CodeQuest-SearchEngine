@@ -1,0 +1,121 @@
+K-th Element on Grid
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+Given is a
+N×N grid
+A
+rc
+which is a permutation of numbers from 1 to
+N
+2
+. You have to process
+Q queries, in each query you are asked to find the value of
+k-th minimum in the subgrid with corners
+(r
+1
+,c
+1
+) and
+(r
+2
+,c
+2
+).
+Input Format
+The input consists of seven integers N Q seed minR maxR minC maxC.
+The actual input to the problem will be generated using the following code (C++, use it as a reference to implement the same generator in your programming language, uint64_t is an unsigned 64-bit integer type):
+uint64_t state;
+uint64_t nextRand() { // https://en.wikipedia.org/wiki/Xorshift
+    state ^= state << 13;
+    state ^= state >> 7;
+    state ^= state << 17;
+    return state >> 10;
+}
+int nextBounded(int B) {
+    return nextRand() % B;
+}
+
+int N, Q, minR, maxR, minC, maxC;
+
+void genGrid() {
+    vector<int> p(N * N);
+    for (int i = 0; i < N * N; i++)
+        p[i] = i + 1;
+    // https://en.wikipedia.org/wiki/Fisher-Yates_shuffle
+    for (int i = 0; i < N * N; i++)
+        swap(p[i], p[nextBounded(i + 1)]);
+    // A_{rc} is p[(r - 1) * N + (c - 1)]
+}
+
+void genQuery() {
+    int lenR = minR + nextBounded(maxR - minR + 1);
+    int lenC = minC + nextBounded(maxC - minC + 1);
+    int r1 = 1 + nextBounded(N - lenR + 1);
+    int c1 = 1 + nextBounded(N - lenC + 1);
+    int r2 = r1 + lenR - 1;
+    int c2 = c1 + lenC - 1;
+    int k = 1 + nextBounded(lenR * lenC);
+    // (r1 c1 r2 c2 k) is the query described in the statement
+}
+
+int main() {
+    cin >> N >> Q >> state >> minR >> maxR >> minC >> maxC;
+    genGrid();
+    for (int i = 0; i < Q; i++) {
+        genQuery();
+    }
+}
+Output Format
+Print
+Q integers - answers to queries in the order they are generated.
+Constraints
+1≤N≤5000
+1≤Q≤5000
+1≤seed≤10
+18
+1≤minR≤maxR≤N
+1≤minC≤maxC≤N
+Important note about generator input and constraints for subtasks:
+None of the intended solutions for any subtasks uses input format (pseudorandomness) to get better complexity. They can have slightly (less than an order of magnitude) better constant factor due to the input format, and TL/limitations are set based on the runtime of our solutions on the generated tests.
+ML on CodeChef is 1.5 GB. TL in this problem is 8 seconds. For any of the first 4 subtasks and any solution that is intended to pass it, the following holds:
+There exists an implementation of this solution in C++ that uses less than 1 GB of memory and less than 5 seconds per test on those subtasks.
+The last two subtasks are added for fun of top contestants :)
+To get your verdict faster and not kill our servers it is highly recommended not to execute your program on tests from subtasks you are not even dreaming to pass. If you are just trying to get those juicy 20 extra points from subtask 3, please put assert(N &lt;= 2500) after reading input.
+Subtasks
+Subtask 1 (5 points):
+N≤500,
+Q≤5000
+Subtask 2 (30 points):
+N≤1500,
+Q≤5000
+Subtask 3 (20 points):
+N≤2500,
+Q≤4000
+Subtask 4 (40 points):
+N≤4000,
+Q≤4000
+Subtask 5 (3 points):
+N≤4500,
+Q≤4500
+Subtask 6 (2 points): Original constraints
+Sample 1:
+Input
+Output
+4 5 42 1 4 2 3
+11
+1
+5
+7
+14
+Explanation:
+The actual sample input would look like this:
+4 5
+8 10 2 5
+7 16 14 13
+4 15 1 11
+3 6 9 12
+1 2 3 4 5
+2 1 4 3 1
+1 3 1 4 2
+2 1 2 2 1
+1 2 4 3 6

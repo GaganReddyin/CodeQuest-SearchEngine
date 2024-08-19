@@ -1,0 +1,130 @@
+Maximise the Minimum
+Problem
+You are given two arrays
+A and
+B, both of length
+N.
+You would like to choose exactly
+K distinct indices
+i
+1
+,i
+2
+,…,i
+K
+such that
+min(A
+i
+1
++A
+i
+2
++…+A
+i
+K
+,B
+i
+1
++B
+i
+2
++…+B
+i
+K
+) is maximized. Find this maximum value.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of
+3 lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the elements of
+A.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+denoting the elements of
+B.
+Output Format
+For each test case, output a new line containing one integer — the required maximum value.
+Constraints
+1≤T≤20
+2≤N≤40
+1≤K≤N
+1≤A
+i
+,B
+i
+≤40
+Sample 1:
+Input
+Output
+3
+5 3
+4 2 3 1 4
+3 2 5 5 1
+4 2
+1 2 3 4
+4 3 2 1
+6 3
+8 10 3 6 7 2
+4 8 4 1 1 6
+9
+5
+18
+Explanation:
+Test Case
+1: One optimal choice of indices is
+i
+1
+=1,i
+2
+=3,i
+3
+=5. This gives
+A
+1
++A
+3
++A
+5
+=11 and
+B
+1
++B
+3
++B
+5
+=9.
+Test Case
+2: One optimal choice of indices is
+i
+1
+=1,i
+2
+=4.
+Test Case
+3: One optimal choice of indices is
+i
+1
+=1,i
+2
+=2,i
+3
+=6.

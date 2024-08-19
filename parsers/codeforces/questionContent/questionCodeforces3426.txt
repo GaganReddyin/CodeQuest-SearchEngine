@@ -1,0 +1,202 @@
+A. Amusement Park
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You have been hired to supervise the project of a new amusement park. The park will have a special gimmick: directed slides that can get customers from one attraction to another quickly and in an entertaining way.
+The park owner has given you the current project: a list of planned attractions and a list of slides that should be built between them. However, him being a businessman, he casually envisioned the impossible: among other things, he projected a slide coming from the Haunted Castle to the Roller Coaster, another from the Roller Coaster to the Drop Tower, and a third from the Drop Tower to the Haunted Castle. As the slides can only go downhill, it is evident why this is a problem. You don't have the luxury of ignoring the laws of physics when building the park, so you have to request changes in the project. Maybe he would accept reversing the slide between the Drop Tower and the Haunted Castle?
+Formally:
+The project is a list of attractions and a list of directed slides. Each slide starts at one attraction and ends at another attraction.
+A proposal is obtained from the project by reversing the directions of some slides (possibly none or all of them).
+A proposal is legal if there is a way to assign an elevation to each attraction in such a way that every slide goes downhill.
+The cost of a proposal is the number of slides whose directions were reversed.
+For a given project, find and report the sum of costs all legal proposals. Since this number may be large, output it modulo
+998,244,353
+.
+Input
+The first line contains two space-separated integers
+n
+,
+m
+(
+1≤n≤18
+,
+0≤m≤n(n−1)/2
+) – the number of attractions and the number of slides, respectively. The attractions are numbered
+1
+through
+n
+.
+Then,
+m
+lines follow. The
+i
+-th of these lines contains two space-separated integers
+a
+i
+,
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+) denoting a slide from
+a
+i
+to
+b
+i
+.
+You may assume that:
+There are no self-loops. (For each
+i
+:
+a
+i
+≠
+b
+i
+.)
+No slide appears twice. (For all
+i≠j
+:
+a
+i
+≠
+a
+j
+or
+b
+i
+≠
+b
+j
+.)
+No pair of attractions is connected in both directions. (The unordered pairs
+{
+a
+i
+,
+b
+i
+}
+are distinct.)
+Output
+Output one line with a single integer, the sum of costs of all legal proposals modulo
+998,244,353
+.
+Scoring
+Subtask 1 (7 points):
+n≤3
+Subtask 2 (12 points):
+n≤6
+Subtask 3 (23 points):
+n≤10
+Subtask 4 (21 points):
+n≤15
+Subtask 5 (37 points): no additional constraints
+Examples
+input
+Copy
+2 1
+1 2
+output
+Copy
+1
+input
+Copy
+3 3
+1 2
+2 3
+1 3
+output
+Copy
+9
+Note
+In the first example, there are two proposals:
+The slide direction is not flipped. This proposal has cost
+0
+.
+The slide direction is flipped. This proposal has cost
+1
+.
+As both proposals are valid, the answer is
+0+1=1
+.
+In the second example, there are eight proposals with the slide directions as follows:
+1→2
+,
+2→3
+,
+1→3
+(cost
+0
+)
+1→2
+,
+2→3
+,
+3→1
+(cost
+1
+)
+1→2
+,
+3→2
+,
+1→3
+(cost
+1
+)
+1→2
+,
+3→2
+,
+3→1
+(cost
+2
+)
+2→1
+,
+2→3
+,
+1→3
+(cost
+1
+)
+2→1
+,
+2→3
+,
+3→1
+(cost
+2
+)
+2→1
+,
+3→2
+,
+1→3
+(cost
+2
+)
+2→1
+,
+3→2
+,
+3→1
+(cost
+3
+)
+The second proposal is not legal, as there is a slide sequence
+1→2→3→1
+. This means that the attraction
+1
+has to be strictly higher than ifself, which is clearly impossible. Similarly, the seventh proposal is not legal. The answer is thus
+0+1+2+1+2+3=9
+.

@@ -1,0 +1,47 @@
+G3. Palindrome checker oracle
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Implement a quantum oracle on
+N
+qubits which checks whether the vector
+x
+⃗ 
+→
+is a palindrome (i.e., implements the function
+f(
+x
+⃗ 
+)=1
+if
+x
+⃗ 
+→
+is a palindrome, and 0 otherwise).
+You have to implement an operation which takes the following inputs:
+an array of
+N
+(
+1≤N≤8
+) qubits
+x
+in an arbitrary state (input register),
+a qubit
+y
+in an arbitrary state (output qubit),
+and performs a transformation
+|x⟩|y⟩→|x⟩|y⊕f(x)⟩
+. The operation doesn't have an output; its "output" is the state in which it leaves the qubits.
+Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Solve (x : Qubit[], y : Qubit) : Unit {
+        body (...) {
+            // your code here
+        }
+        adjoint auto;
+    }
+}

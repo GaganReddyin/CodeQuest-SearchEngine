@@ -1,0 +1,102 @@
+E. Four Points
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given four different integer points
+p
+1
+,
+p
+2
+,
+p
+3
+and
+p
+4
+on
+XY
+grid.
+In one step you can choose one of the points
+p
+i
+and move it in one of four directions by one. In other words, if you have chosen point
+p
+i
+=(x,y)
+you can move it to
+(x,y+1)
+,
+(x,y−1)
+,
+(x+1,y)
+or
+(x−1,y)
+.
+Your goal to move points in such a way that they will form a square with sides parallel to
+OX
+and
+OY
+axes (a square with side
+0
+is allowed).
+What is the minimum number of steps you need to make such a square?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+Each test case consists of four lines. Each line contains two integers
+x
+and
+y
+(
+0≤x,y≤
+10
+9
+) — coordinates of one of the points
+p
+i
+=(x,y)
+.
+All points are different in one test case.
+Output
+For each test case, print the single integer — the minimum number of steps to make a square.
+Example
+input
+Copy
+3
+0 2
+4 2
+2 0
+2 4
+1 0
+2 0
+4 0
+6 0
+1 6
+2 2
+2 5
+4 1
+output
+Copy
+8
+7
+5
+Note
+In the first test case, one of the optimal solutions is shown below:
+Each point was moved two times, so the answer
+2+2+2+2=8
+.
+In the second test case, one of the optimal solutions is shown below:
+The answer is
+3+1+0+3=7
+.
+In the third test case, one of the optimal solutions is shown below:
+The answer is
+1+1+2+1=5
+.

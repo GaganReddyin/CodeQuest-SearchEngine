@@ -1,0 +1,55 @@
+Priya and AND
+Problem
+Priya loves bitwise AND, but she hates programming. Help her solve this problem.
+Given an array
+A of size
+N, let
+B
+ij
+denote the bitwise AND of
+A[i] and
+A[j]. You have to find the number of pairs
+(i,j), such that
+i<j and
+B
+ij
+=A[i].
+###Input:
+The first line of the input contains a single integer
+T denoting the number of test cases.
+The first line of each test case consists of a single integer
+N, denoting the Size of Array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,A
+3
+...A
+N
+.
+###Output: For each test case, output a single line, count of such pairs.
+###Constraints
+1≤T≤100
+1≤N≤100
+1≤A[i]≤100
+Sample 1:
+Input
+Output
+2
+5
+1 1 1 1 1
+1
+10
+10
+0
+Explanation:
+Example case 1: Number of valid pairs are -
+(1,2),(1,3),(1,4),(1,5),(2,3),(2,4),(2,5),(3,4),(3,5) and
+(4,5). Therefore, total valid pairs
+=10.
+Example case 2: Since
+N=1, therefore there are no valid pairs.

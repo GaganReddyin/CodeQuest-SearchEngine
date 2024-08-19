@@ -1,0 +1,71 @@
+Distinct Binary Strings
+Problem
+You are given a binary string
+S of length
+N.
+You have to perform the following operation exactly once:
+Select an index
+i
+(1≤i≤N) and delete
+S
+i
+from
+S. The remaining parts of
+S are concatenated in the same order.
+How many distinct binary strings of length
+N−1 can you get after applying this operation?
+Input Format
+The first line of input contains a single integer
+T - the number of test cases. The description of
+T test cases follow.
+The first line of each test case contains
+N - the length of the binary string
+S.
+The second line contains the binary string
+S.
+Output Format
+For each test case, output the number of distinct binary strings that you can get after applying the operation exactly once.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+Sum of
+N does not exceed
+2⋅10
+5
+over all testcases.
+Sample 1:
+Input
+Output
+3
+3
+100
+4
+1111
+5
+10110
+2
+1
+4
+Explanation:
+Test Case 1: We have
+S=100. Now, we can get
+00 (on deleting
+S
+1
+),
+10 (on deleting
+S
+2
+) and
+10 (on deleting
+S
+3
+). Therefore, we can get
+2 distinct strings.
+Test Case 2: We have
+S=1111. Now, we will always get
+111 irrespective of the index
+i on which we apply the operation. Therefore, we can get
+1 distinct string.

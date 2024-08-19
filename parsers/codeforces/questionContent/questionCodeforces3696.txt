@@ -1,0 +1,111 @@
+D. Foreigner
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Traveling around the world you noticed that many shop owners raise prices to inadequate values if the see you are a foreigner.
+You define inadequate numbers as follows:
+all integers from
+1
+to
+9
+are inadequate;
+for an integer
+x≥10
+to be inadequate, it is required that the integer
+⌊x/10⌋
+is inadequate, but that's not the only condition. Let's sort all the inadequate integers. Let
+⌊x/10⌋
+have number
+k
+in this order. Then, the integer
+x
+is inadequate only if the last digit of
+x
+is strictly less than the reminder of division of
+k
+by
+11
+.
+Here
+⌊x/10⌋
+denotes
+x/10
+rounded down.
+Thus, if
+x
+is the
+m
+-th in increasing order inadequate number, and
+m
+gives the remainder
+c
+when divided by
+11
+, then integers
+10⋅x+0,10⋅x+1…,10⋅x+(c−1)
+are inadequate, while integers
+10⋅x+c,10⋅x+(c+1),…,10⋅x+9
+are not inadequate.
+The first several inadequate integers are
+1,2,3,4,5,6,7,8,9,10,20,21,30,31,32…
+. After that, since
+4
+is the fourth inadequate integer,
+40,41,42,43
+are inadequate, while
+44,45,46,…,49
+are not inadequate; since
+10
+is the
+10
+-th inadequate number, integers
+100,101,102,…,109
+are all inadequate. And since
+20
+is the
+11
+-th inadequate number, none of
+200,201,202,…,209
+is inadequate.
+You wrote down all the prices you have seen in a trip. Unfortunately, all integers got concatenated in one large digit string
+s
+and you lost the bounds between the neighboring integers. You are now interested in the number of substrings of the resulting string that form an inadequate number. If a substring appears more than once at different positions, all its appearances are counted separately.
+Input
+The only line contains the string
+s
+(
+1≤|s|≤
+10
+5
+), consisting only of digits. It is guaranteed that the first digit of
+s
+is not zero.
+Output
+In the only line print the number of substrings of
+s
+that form an inadequate number.
+Examples
+input
+Copy
+4021
+output
+Copy
+6
+input
+Copy
+110
+output
+Copy
+3
+Note
+In the first example the inadequate numbers in the string are
+1,2,4,21,40,402
+.
+In the second example the inadequate numbers in the string are
+1
+and
+10
+, and
+1
+appears twice (on the first and on the second positions).

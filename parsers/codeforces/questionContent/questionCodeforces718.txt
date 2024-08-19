@@ -1,0 +1,155 @@
+D. Recover the Tree
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Rhodoks has a tree with
+n
+vertices, but he doesn't remember its structure. The vertices are indexed from
+1
+to
+n
+.
+A segment
+[l,r]
+(
+1≤l≤r≤n
+) is good if the vertices with indices
+l
+,
+l+1
+, ...,
+r
+form a connected component in Rhodoks' tree. Otherwise, it is bad.
+For example, if the tree is the one in the picture, then only the segment
+[3,4]
+is bad while all the other segments are good.
+For each of the
+n(n+1)
+2
+segments, Rhodoks remembers whether it is good or bad. Can you help him recover the tree? If there are multiple solutions, print any.
+It is guaranteed that the there is at least one tree satisfying Rhodoks' description.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤1000
+). The description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤2000
+) — the number of vertices in the tree.
+Then
+n
+lines follow. The
+i
+-th of these lines contains a string
+goo
+d
+i
+of length
+n+1−i
+consisting of 0 and 1. If the segment
+[i,i+j−1]
+is good then the
+j
+-th character of
+goo
+d
+i
+is 1, otherwise
+j
+-th character of
+goo
+d
+i
+is 0.
+It is guaranteed that the there is at least one tree consistent with the given data.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2000
+.
+Output
+For each test case, print
+n−1
+lines describing the tree you recover.
+The
+i
+-th line should contain two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+), denoting an edge between vertices
+u
+i
+and
+v
+i
+.
+If there are multiple solutions, print any.
+Example
+input
+Copy
+3
+4
+1111
+111
+10
+1
+6
+111111
+11111
+1111
+111
+11
+1
+12
+100100000001
+11100000001
+1000000000
+100000000
+10010001
+1110000
+100000
+10000
+1001
+111
+10
+1
+output
+Copy
+1 2
+2 3
+2 4
+1 2
+2 3
+3 4
+4 5
+5 6
+2 3
+6 7
+10 11
+2 4
+6 8
+10 12
+1 4
+5 8
+9 12
+5 12
+2 12
+Note
+The first test case is explained in the statement.
+In the second test case, one possible tree is as follows:
+In the third test case, one possible tree is as follows:

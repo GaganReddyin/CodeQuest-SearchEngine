@@ -1,0 +1,126 @@
+C1. Good Subarrays (Easy Version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of this problem. In this version, we do not have queries. Note that we have multiple test cases in this version. You can make hacks only if both versions of the problem are solved.
+An array
+b
+of length
+m
+is good if for all
+i
+the
+i
+-th element is greater than or equal to
+i
+. In other words,
+b
+is good if and only if
+b
+i
+≥i
+for all
+i
+(
+1≤i≤m
+).
+You are given an array
+a
+consisting of
+n
+positive integers. Find the number of pairs of indices
+(l,r)
+, where
+1≤l≤r≤n
+, such that the array
+[
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+]
+is good.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤2⋅
+10
+5
+). Description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+), the length of the array
+a
+.
+The second line of each test case contains
+n
+space-separated integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+), representing the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print the number of suitable pairs of indices.
+Example
+input
+Copy
+3
+3
+1 2 3
+3
+1 1 1
+4
+2 1 4 3
+output
+Copy
+6
+3
+7
+Note
+In the first test case, all subarrays of
+a
+are good, so all pairs are suitable.
+In the second test case, the pairs
+(1,1)
+,
+(2,2)
+, and
+(3,3)
+are suitable. For example, when
+(l,r)=(1,2)
+, the array
+b=[1,1]
+is not good because
+b
+2
+<2
+.

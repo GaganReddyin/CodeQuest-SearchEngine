@@ -1,0 +1,357 @@
+B. Identify the Operations
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+We start with a permutation
+a
+1
+,
+a
+2
+,…,
+a
+n
+and with an empty array
+b
+. We apply the following operation
+k
+times.
+On the
+i
+-th iteration, we select an index
+t
+i
+(
+1≤
+t
+i
+≤n−i+1
+), remove
+a
+t
+i
+from the array, and append one of the numbers
+a
+t
+i
+−1
+or
+a
+t
+i
++1
+(if
+t
+i
+−1
+or
+t
+i
++1
+are within the array bounds) to the right end of the array
+b
+. Then we move elements
+a
+t
+i
++1
+,…,
+a
+n
+to the left in order to fill in the empty space.
+You are given the initial permutation
+a
+1
+,
+a
+2
+,…,
+a
+n
+and the resulting array
+b
+1
+,
+b
+2
+,…,
+b
+k
+. All elements of an array
+b
+are distinct. Calculate the number of possible sequences of indices
+t
+1
+,
+t
+2
+,…,
+t
+k
+modulo
+998244353
+.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤100000
+), denoting the number of test cases, followed by a description of the test cases.
+The first line of each test case contains two integers
+n,k
+(
+1≤k<n≤200000
+): sizes of arrays
+a
+and
+b
+.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+): elements of
+a
+. All elements of
+a
+are distinct.
+The third line of each test case contains
+k
+integers
+b
+1
+,
+b
+2
+,…,
+b
+k
+(
+1≤
+b
+i
+≤n
+): elements of
+b
+. All elements of
+b
+are distinct.
+The sum of all
+n
+among all test cases is guaranteed to not exceed
+200000
+.
+Output
+For each test case print one integer: the number of possible sequences modulo
+998244353
+.
+Example
+input
+Copy
+3
+5 3
+1 2 3 4 5
+3 2 5
+4 3
+4 3 2 1
+4 3 1
+7 4
+1 4 7 3 6 2 5
+3 2 4 5
+output
+Copy
+2
+0
+4
+Note
+Let's denote as
+a
+1
+a
+2
+…
+a
+i
+a
+i+1
+–
+–
+–
+–
+…
+a
+n
+→
+a
+1
+a
+2
+…
+a
+i−1
+a
+i+1
+…
+a
+n−1
+an operation over an element with index
+i
+: removal of element
+a
+i
+from array
+a
+and appending element
+a
+i+1
+to array
+b
+.
+In the first example test, the following two options can be used to produce the given array
+b
+:
+12
+3
+–
+4
+5→1
+2
+–
+3
+5→1
+2
+5
+–
+→12
+;
+(
+t
+1
+,
+t
+2
+,
+t
+3
+)=(4,3,2)
+;
+12
+3
+–
+4
+5→
+1
+2
+–
+35→2
+3
+5
+–
+→15
+;
+(
+t
+1
+,
+t
+2
+,
+t
+3
+)=(4,1,2)
+.
+In the second example test, it is impossible to achieve the given array no matter the operations used. That's because, on the first application, we removed the element next to
+4
+, namely number
+3
+, which means that it couldn't be added to array
+b
+on the second step.
+In the third example test, there are four options to achieve the given array
+b
+:
+14
+7
+3
+–
+625→143
+6
+2
+–
+5→
+1
+4
+–
+325→43
+2
+5
+–
+→435
+;
+14
+7
+3
+–
+625→143
+6
+2
+–
+5→1
+4
+–
+3
+25→14
+2
+5
+–
+→145
+;
+147
+3
+–
+6
+25→147
+3
+2
+–
+5→
+1
+4
+–
+725→47
+2
+5
+–
+→475
+;
+147
+3
+–
+6
+25→147
+3
+2
+–
+5→1
+4
+–
+7
+25→14
+2
+5
+–
+→145
+;

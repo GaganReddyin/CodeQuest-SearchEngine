@@ -1,0 +1,173 @@
+C. Star Trek
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The United Federation of Planets is an alliance of
+N
+planets, they are indexed from
+1
+to
+N
+. Some planets are connected by space tunnels. In a space tunnel, a starship can fly both ways really fast. There are exactly
+N−1
+space tunnels, and we can travel from any planet to any other planet in the Federation using these tunnels.
+It's well known that there are
+D
+additional parallel universes. These are exact copies of our universe, they have the same planets and space tunnels. They are indexed from
+1
+to
+D
+(our universe has index
+0
+). We denote the planet
+x
+in universe
+i
+by
+P
+i
+x
+. We can travel from one universe to another using dimension portals. For every
+i
+(
+0≤i≤D−1
+), we will place exactly one portal that allows us to fly from
+P
+i
+A
+i
+to
+P
+i+1
+B
+i
+, for some planet indices
+A
+i
+and
+B
+i
+(i.e.
+1≤
+A
+i
+,
+B
+i
+≤N
+).
+Once all the portals are placed, Starship Batthyány will embark on its maiden voyage. It is currently orbiting around
+P
+0
+1
+. Captain Ágnes and Lieutenant Gábor have decided to play the following game: they choose alternately a destination (a planet) to fly to. This planet can be in the same universe, if a space tunnel goes there, or it can be in another universe, if a portal goes there. Their aim is to visit places where no one has gone before. That's why, once they have visited a planet
+P
+i
+x
+, they never go back there (but they can visit the planet
+x
+in another universe). Captain Ágnes chooses the first destination (then Gábor, then Ágnes etc.). If somebody can't choose a planet where they have not been before in his/her turn, he/she loses.
+Captain Ágnes and Lieutenant Gábor are both very clever: they know the locations of all tunnels and portals, and they both play optimally. For how many different placements of portals does Captain Ágnes win the game? Two placements are different if there is an index
+i
+(
+0≤i≤D−1
+), where the
+i
+th portal connects different pairs of planets in the two placements (i.e
+A
+i
+or
+B
+i
+differs).
+This number can be very big, so we are interested in it modulo
+10
+9
++7
+.
+Input
+The first line contains two space-separated integers,
+N
+(
+1≤N≤
+10
+5
+) – the number of planets and
+D
+(
+1≤D≤
+10
+18
+) – the number of additional parallel universes. Each of the next
+N−1
+lines contains two space-separated integers
+u
+and
+v
+(
+1≤u,v≤N
+), denoting that
+P
+i
+u
+and
+P
+i
+v
+are connected by a space tunnel for all
+i
+(
+0≤i≤D
+).
+Output
+You should print a single integer, the number of possible placements of portals where Captain Ágnes wins modulo
+10
+9
++7
+.
+Scoring
+Subtask
+1
+2
+3
+4
+5
+6
+7
+8
+Points
+0
+7
+8
+15
+15
+20
+20
+15
+Constraints
+samples
+N=2
+N≤100andD=1
+N≤1000andD=1
+D=1
+N≤1000andD≤
+10
+5
+D≤
+10
+5
+no additional constraints
+Example
+input
+Copy
+3 1
+1 2
+2 3
+output
+Copy
+4
+Note
+There is only 1 portal and
+3⋅3=9
+different placements. The following 4 placements are when the Captain wins.

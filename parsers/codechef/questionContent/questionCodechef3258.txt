@@ -1,0 +1,169 @@
+Bitwise Operations on Circle
+Problem
+You are given an array
+C of size
+N. You arrange the elements of the array
+C in a circle in clockwise manner.
+You can perform the following two types of operations exactly
+(N−2) times in total:
+Operation
+1: Select two adjacent elements
+X and
+Y, and replace
+X and
+Y with
+X
+∣
+Y.
+Operation
+2: Select two adjacent elements
+X and
+Y, and replace
+X and
+Y with
+X
+&
+Y.
+Here
+∣ and
+& denote the bitwise OR and bitwise AND respectively.
+Find the maximum difference possible between the two remaining elements after
+(N−2) operations.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N, the size of
+C.
+The next line contains
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+.
+Output Format
+For each test case, output on a new line, the maximum difference possible between the two remaining elements after
+(N−2) operations.
+Constraints
+1≤T≤10
+4
+3≤N≤2⋅10
+5
+0≤C
+i
+<2
+30
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+4
+2 0 1 3
+4
+1 2 5 6
+3
+7
+Explanation:
+Test case
+1: Consider the following
+2 operations:
+Do operation
+1 for
+C
+4
+and
+C
+1
+(
+C
+1
+and
+C
+4
+are adjacent). Here,
+C
+4
+∣C
+1
+=3∣2=3. Thus, the array becomes,
+C=[3,0,1]. Note that, we can also write
+C as
+[0,1,3].
+Do operation
+2 for
+C
+2
+and
+C
+3
+in the updated array (
+C
+2
+and
+C
+3
+are adjacent). Here,
+C
+2
+&C
+3
+=0&1=0. Thus, the array becomes,
+C=[3,0].
+The difference of the remaining elements is
+∣3−0∣=3. It can be shown that this is the maximum possible difference after
+2 operations.
+Test case
+2: Consider the following
+2 operations:
+Do operation
+1 for
+C
+2
+and
+C
+3
+(
+C
+2
+and
+C
+3
+are adjacent). Here,
+C
+2
+∣C
+3
+=2∣5=7. Thus, the array becomes,
+C=[1,7,6].
+Do operation
+2 for
+C
+1
+and
+C
+3
+in the updated array (
+C
+1
+and
+C
+3
+are adjacent). Here,
+C
+1
+&C
+3
+=1&6=0. Thus, the array becomes,
+C=[7,0].
+The difference of the remaining elements is
+∣7−0∣=7. It can be shown that this is the maximum possible difference after
+2 operations.

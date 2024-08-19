@@ -1,0 +1,54 @@
+Queen Blocks
+Problem
+You are given an
+8×8 chessboard. Your enemy king is at point
+(X,Y)
+(1≤X,Y≤8).
+You need to place some number of queen pieces on the chessboard such that the following conditions are satisfied:
+The king should not be under attack by any of the queens that you have placed.
+The king should not be able to make any move.
+Note that a king can move one unit in any of the
+8 direction while a queen can attack horizontally, vertically as well as diagonally.
+Find the minimum number of queens required to satisfy the given conditions. Print the chessboard where
+0 denotes empty cells,
+1 denotes the king, and
+2 denotes the queen(s) placed by you in some position(s).
+In case of multiple answers, print any.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The only line of each test case contains two space-separated integers
+A and
+B — the coordinates of the king.
+Output Format
+For each test case, output a
+8×8 grid consisting of King, Queen(s) and blank cells.
+Print the chessboard in
+8 lines where each line has
+8 space-separated integers where
+0 denotes empty cells,
+1 denotes the king, and
+2 denotes the queen(s) placed by you in some position(s).
+Constraints
+1≤T≤64
+1≤A,B≤8
+Sample 1:
+Input
+Output
+1
+2 1
+0 0 2 0 0 0 0 0
+1 0 0 0 0 0 0 0
+0 0 2 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+Explanation:
+Test case
+1: We can place
+2 queens at
+(1,3) and
+(3,3) respectively. Thus, the king at
+(2,1) has no safe squares to go to and is not under attack.

@@ -1,0 +1,168 @@
+D. Moscow Gorillas
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In winter, the inhabitants of the Moscow Zoo are very bored, in particular, it concerns gorillas. You decided to entertain them and brought a permutation
+p
+of length
+n
+to the zoo.
+A permutation of length
+n
+is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in any order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+occurs twice in the array) and
+[1,3,4]
+is also not a permutation (
+n=3
+, but
+4
+is present in the array).
+The gorillas had their own permutation
+q
+of length
+n
+. They suggested that you count the number of pairs of integers
+l,r
+(
+1≤l≤r≤n
+) such that
+MEX([
+p
+l
+,
+p
+l+1
+,…,
+p
+r
+])=MEX([
+q
+l
+,
+q
+l+1
+,…,
+q
+r
+])
+.
+The
+MEX
+of the sequence is the minimum integer positive number missing from this sequence. For example,
+MEX([1,3])=2
+,
+MEX([5])=1
+,
+MEX([3,1,2,6])=4
+.
+You do not want to risk your health, so you will not dare to refuse the gorillas.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the permutations length.
+The second line contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the elements of the permutation
+p
+.
+The third line contains
+n
+integers
+q
+1
+,
+q
+2
+,…,
+q
+n
+(
+1≤
+q
+i
+≤n
+) — the elements of the permutation
+q
+.
+Output
+Print a single integer — the number of suitable pairs
+l
+and
+r
+.
+Examples
+input
+Copy
+3
+1 3 2
+2 1 3
+output
+Copy
+2
+input
+Copy
+7
+7 3 6 2 1 5 4
+6 7 2 5 3 1 4
+output
+Copy
+16
+input
+Copy
+6
+1 2 3 4 5 6
+6 5 4 3 2 1
+output
+Copy
+11
+Note
+In the first example, two segments are correct –
+[1,3]
+with
+MEX
+equal to
+4
+in both arrays and
+[3,3]
+with
+MEX
+equal to
+1
+in both of arrays.
+In the second example, for example, the segment
+[1,4]
+is correct, and the segment
+[6,7]
+isn't correct, because
+MEX(5,4)≠MEX(1,4)
+.

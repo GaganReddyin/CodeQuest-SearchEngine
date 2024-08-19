@@ -1,0 +1,70 @@
+Make It
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Roger is the mayor of a city with
+N citizens (numbered
+1 through
+N). On each day, each citizen has to pay a tax; let's denote the tax paid by the
+i-th citizen by
+A
+i
+.
+One day, Roger was extremely bored, so he decided to start a return-tax-for-fun program. The program is simple: on each day, Roger picks some non-empty group of citizens and returns to them the taxes they paid that day. However, picking some random citizens is not very fun, and Roger has always been fond of the number
+K and its multiples, so he decided to only pick groups of citizens such that the product of the taxes returned to them is a multiple of
+K. Among all such choices, he picks a group which minimises the sum of the returned taxes (he does not want to waste too much money).
+We know that Roger is a moody person. Sometimes, he chooses two integers
+1≤L≤R≤N and decides that he will not consider the citizens numbered
+L through
+R for the return-tax-for-fun program, i.e. the sum of returned taxes should be the smallest possible among all groups that do not contain any of these citizens. Roger told Melanie, his secretary, to do all the work and report to him the smallest sum of taxes that should be returned. Now, Melanie is looking for your help.
+You should answer
+Q queries. In each query, you are given the integers
+L and
+R and you should compute the smallest sum of taxes that should be returned or determine that there is no way to choose a group of citizens such that the product of the taxes returned to them is a multiple of
+K. Note that the queries are independent — a citizen that is not considered for the return-tax-for-fun program in one query may be considered for the program again in subsequent queries.
+Input
+The first line of the input contains three space-separated integers
+N,
+Q and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Q lines follow. Each of these lines contains two space-separated integers
+L and
+R describing a query.
+Output
+For each query, print a single line containing one integer — the smallest returned sum, or
+−1 if it is impossible to pick a valid group of citizens.
+Constraints
+1≤N,Q≤10
+5
+1≤K≤10
+8
+1≤A
+i
+≤10
+8
+for each valid
+i
+1≤L≤R≤N
+Sample 1:
+Input
+Output
+5 5 24
+6 3 12 2 8
+3 3
+2 4
+3 4
+1 3
+2 2
+11
+14
+11
+-1
+14

@@ -1,0 +1,105 @@
+Dot It
+Problem
+###Read problems statements Bengali , Mandarin chinese , Russian and Vietnamese as well.
+There are two sequences
+A
+1
+,A
+2
+,…,A
+N
+and
+B
+1
+,B
+2
+,…,B
+N
+. Answer
+Q queries on these sequences.
+In each query, you should calculate the dot product of subsequences
+A
+x
+,A
+x+1
+,…,A
+x+l−1
+and
+B
+y
+,B
+y+1
+,…,B
+y+l−1
+, i.e. the value of the expression
+∑
+k=0
+l−1
+A
+x+k
+B
+y+k
+.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Each of the following
+Q lines contains three space-separated integers
+x,
+y and
+l describing one query.
+Output
+For each query, print a single line containing one integer — the answer to the query (the dot product).
+Constraints
+1≤T≤30,000
+1≤N,Q≤10
+5
+1≤A
+i
+,B
+i
+≤10
+4
+for each valid
+i
+the sum of
+N for all test cases does not exceed
+10
+5
+the sum of
+Q for all test cases does not exceed
+10
+5
+Sample 1:
+Input
+Output
+1
+5 2
+4 6 5 2 7
+3 2 4 6 3
+2 4 2
+1 1 1
+51
+12

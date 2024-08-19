@@ -1,0 +1,90 @@
+D. Invertation in Tournament
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a tournament — complete directed graph.
+In one operation you can pick any vertex
+v
+and change the direction of all edges with
+v
+on one of the ends (i.e all edges
+u→v
+change their orientation to
+v→u
+and vice versa).
+You want to make the tournament strongly connected with the smallest possible number of such operations if it is possible.
+Also, if it is possible, you need to find the number of ways to make this number of operations to make graph strongly connected (two ways are different if for some
+i
+vertex that we chose on
+i
+-th operation in one way is different from vertex that we chose on
+i
+-th operation in another way). You only need to find this value modulo
+998244353
+.
+Input
+The first line of input contains one integer
+n
+(
+3≤n≤2000
+): the number of vertices in the tournament.
+Following
+n
+lines contain a description of the given tournament, each of them contains a binary string of length
+n
+. If
+j
+-th character of
+i
+-th string is equal to '1', then the graph has an edge
+i→j
+.
+It is guaranteed that there are no edges
+i→i
+and the graph has exactly one edge among
+i→j
+and
+j→i
+for different
+i
+and
+j
+.
+Output
+If it is not possible to convert tournament to strongly connected with the given operations, output "-1".
+Otherwise, output two integers: the smallest number of operations that you need to make the given graph strongly connected and the number of ways to do this number of operations to make graph strongly connected, modulo
+998244353
+.
+Examples
+input
+Copy
+3
+010
+001
+100
+output
+Copy
+0 1
+input
+Copy
+4
+0010
+1000
+0100
+1110
+output
+Copy
+-1
+input
+Copy
+6
+010000
+001000
+100000
+111001
+111100
+111010
+output
+Copy
+2 18

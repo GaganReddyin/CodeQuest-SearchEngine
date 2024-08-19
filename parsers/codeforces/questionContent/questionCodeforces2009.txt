@@ -1,0 +1,164 @@
+C. No More Inversions
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a sequence
+a
+with
+n
+elements
+1,2,3,…,k−1,k,k−1,k−2,…,k−(n−k)
+(
+k≤n<2k
+).
+Let's call as inversion in
+a
+a pair of indices
+i<j
+such that
+a[i]>a[j]
+.
+Suppose, you have some permutation
+p
+of size
+k
+and you build a sequence
+b
+of size
+n
+in the following manner:
+b[i]=p[a[i]]
+.
+Your goal is to find such permutation
+p
+that the total number of inversions in
+b
+doesn't exceed the total number of inversions in
+a
+, and
+b
+is lexicographically maximum.
+Small reminder: the sequence of
+k
+integers is called a permutation if it contains all integers from
+1
+to
+k
+exactly once.
+Another small reminder: a sequence
+s
+is lexicographically smaller than another sequence
+t
+, if either
+s
+is a prefix of
+t
+, or for the first
+i
+such that
+s
+i
+≠
+t
+i
+,
+s
+i
+<
+t
+i
+holds (in the first position that these sequences are different,
+s
+has smaller number than
+t
+).
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first and only line of each test case contains two integers
+n
+and
+k
+(
+k≤n<2k
+;
+1≤k≤
+10
+5
+) — the length of the sequence
+a
+and its maximum.
+It's guaranteed that the total sum of
+k
+over test cases doesn't exceed
+10
+5
+.
+Output
+For each test case, print
+k
+integers — the permutation
+p
+which maximizes
+b
+lexicographically without increasing the total number of inversions.
+It can be proven that
+p
+exists and is unique.
+Example
+input
+Copy
+4
+1 1
+2 2
+3 2
+4 3
+output
+Copy
+1 
+1 2 
+2 1 
+1 3 2 
+Note
+In the first test case, the sequence
+a=[1]
+, there is only one permutation
+p=[1]
+.
+In the second test case, the sequence
+a=[1,2]
+. There is no inversion in
+a
+, so there is only one permutation
+p=[1,2]
+which doesn't increase the number of inversions.
+In the third test case,
+a=[1,2,1]
+and has
+1
+inversion. If we use
+p=[2,1]
+, then
+b=[p[a[1]],p[a[2]],p[a[3]]]=[2,1,2]
+and also has
+1
+inversion.
+In the fourth test case,
+a=[1,2,3,2]
+, and since
+p=[1,3,2]
+then
+b=[1,3,2,3]
+. Both
+a
+and
+b
+have
+1
+inversion and
+b
+is the lexicographically maximum.

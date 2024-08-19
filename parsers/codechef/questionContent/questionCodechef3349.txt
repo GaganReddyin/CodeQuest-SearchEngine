@@ -1,0 +1,45 @@
+Chef, Leonardo And Queries
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef has a tree with N nodes numbered 1 through N. Initially, each node has value 0.
+Chef's best friend Leonardo loves queries on trees. He asked Chef to perform Q queries. Each query is of one of the following two types:
+1 v k a b: Consider f(0) = a, f(1) = b, f(i) = f(i - 1) + f(i - 2) for i ≥ 2. For each node u of the tree, let d be the distance (in edges) from v to u. Then, if d ≤ k, Chef must add f(d) to the value of node u.
+2 v: Print the value of node v modulo 10^9 + 7.
+Help Chef perform Leonardo's queries!
+Input
+The first line of the input contains one integer T denoting the number of test cases.
+The first line of each test case contains two space-separated integers N and Q.
+Each of the next N-1 lines contains two space-separated integers x and y denoting an edge between nodes x and y.
+Q lines follow. Each of these lines describes one query in the format above.
+Output
+For each query of type 2, print the answer to it on a separate line.
+Constraints
+1 ≤ T ≤ 150
+1 ≤ N, Q ≤ 300,000
+1 ≤ sum of N over all testcases ≤ 300,000
+1 ≤ sum of Q over all testcases ≤ 300,000
+1 ≤ v ≤ N
+0 ≤ k ≤ N
+0 ≤ a, b ≤ 1,000,000,000
+Subtasks
+Subtask #1 (15 points):
+sum of all N ≤ 3000
+sum of all Q ≤ 3000
+Subtask #2 (85 points): original constraints
+Sample 1:
+Input
+Output
+1
+6 5
+4 5
+1 5
+5 2
+3 4
+6 1
+1 2 0 3 3
+2 2
+1 4 2 1 5
+1 1 2 5 4
+2 4
+3
+10

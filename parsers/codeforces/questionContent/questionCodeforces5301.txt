@@ -1,0 +1,19 @@
+E. Twisted Circuit
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Input
+The input consists of four lines, each line containing a single digit 0 or 1.
+Output
+Output a single digit, 0 or 1.
+Example
+input
+Copy
+0
+1
+1
+0
+output
+Copy
+0

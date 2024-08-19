@@ -1,0 +1,93 @@
+Ada Function
+Problem
+###Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Ada has a set of
+N non-negative integers
+S={x
+1
+,x
+2
+,…,x
+N
+}. She defined the function
+W as follows:
+W({})=0.
+If
+S={a}, then
+W(S)=a.
+If
+S={a,b} (so
+∣S∣=2), then
+W(S)=(a⊕b)−1.
+If
+∣S∣≥3, then to calculate
+W(S), find any two elements of
+S that are congruent (have the same remainders) modulo the highest possible power of
+2 (the highest power for which such a pair exists). Let's denote them by
+a and
+b. Then
+W(S)=W({a,b})⊕W(S∖{a,b}).
+It is guaranteed that
+W(S) is well-defined, i.e. does not depend on the exact choice of the two congruent elements.
+Here,
+⊕ represents the binary XOR operation and
+A∖B represents set difference.
+Ada needs to calculate the function
+W for each set that is created by removing exactly one element from
+S. Formally, she wants to find
+W(S∖{x
+i
+}) for each valid
+i. Can you help her?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The next line contains
+N space-separated integers
+x
+1
+,x
+2
+,…,x
+N
+.
+Output
+For each test case, print a single line containing
+N space-separated integers. For each valid
+i, the
+i-th of these integers should denote
+W(S∖{x
+i
+}).
+Constraints
+1≤T≤10
+6
+1≤N≤10
+5
+0≤x
+i
+≤10
+18
+for each valid
+i
+x
+1
+,x
+2
+,…,x
+N
+are pairwise distinct
+the sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+1
+6
+0 1 2 5 7 8
+13 4 3 0 6 5

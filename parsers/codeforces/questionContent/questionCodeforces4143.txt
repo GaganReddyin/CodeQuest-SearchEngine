@@ -1,0 +1,137 @@
+E. Grid Sort
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an
+n×m
+grid. Each grid cell is filled with a unique integer from
+1
+to
+nm
+so that each integer appears exactly once.
+In one operation, you can choose an arbitrary cycle of the grid and move all integers along that cycle one space over. Here, a cycle is any sequence that satisfies the following conditions:
+There are at least four squares.
+Each square appears at most once.
+Every pair of adjacent squares, and also the first and last squares, share an edge.
+For example, if we had the following grid:
+We can choose an arbitrary cycle like this one:
+To get the following grid:
+In this particular case, the chosen cycle can be represented as the sequence
+[1,2,3,6,5,8,7,4]
+, the numbers are in the direction that we want to rotate them in.
+Find any sequence of operations to sort the grid so that the array created by concatenating the rows from the highest to the lowest is sorted (look at the first picture above).
+Note you do not need to minimize number of operations or sum of cycle lengths. The only constraint is that the sum of all cycles lengths must not be greater than
+10
+5
+. We can show that an answer always exists under the given constraints. Output any valid sequence of moves that will sort the grid.
+Input
+The first line contains two integers
+n
+and
+m
+(
+3≤n,m≤20
+) — the dimensions of the grid.
+Each of the next
+n
+lines contains
+m
+integers
+x
+i,1
+,
+x
+i,2
+,…,
+x
+i,m
+(
+1≤
+x
+i,j
+≤nm
+), denoting the values of the block in row
+i
+and column
+j
+.
+It is guaranteed that all
+x
+i,j
+are distinct.
+Output
+First, print a single integer
+k
+, the number of operations (
+k≥0
+).
+On each of the next
+k
+lines, print a cycle as follows:
+s 
+y
+1
+ y
+2
+ … 
+y
+s
+s
+y
+y
+y
+Here,
+s
+is the number of blocks to move (
+s≥4
+). Here we have block
+y
+1
+moving to where block
+y
+2
+is, block
+y
+2
+moving to where block
+y
+3
+is, and so on with block
+y
+s
+moving to where block
+y
+1
+is.
+The sum of
+s
+over all operations must be at most
+10
+5
+.
+Examples
+input
+Copy
+3 3
+4 1 2
+7 6 3
+8 5 9
+output
+Copy
+1
+8 1 4 7 8 5 6 3 2
+input
+Copy
+3 5
+1 2 3 5 10
+11 6 4 14 9
+12 7 8 13 15
+output
+Copy
+3
+4 4 14 13 8
+4 5 10 9 4
+4 12 7 6 11
+Note
+The first sample is the case in the statement. Here, we can use the cycle in reverse order to sort the grid.

@@ -1,0 +1,60 @@
+Fractions
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+For positive integers
+a and
+b, we say that a fraction
+b
+a
+is good if it is equal to
+m+1
+m
+for some positive integer
+m.
+You are given an integer
+N. Find the number of pairs of integers
+i,j such that
+1≤i,j≤N and the fraction
+i+1
+i
+⋅
+j
+j+1
+is good.
+Input
+The first and only line of the input contains a single integer
+N.
+Output
+Print a single line containing one integer ― the number of pairs of integers
+i,j (
+1≤i,j≤N) such that
+i+1
+i
+⋅
+j
+j+1
+is good.
+Constraints
+1≤N≤1,000,000
+Subtasks
+Subtask #1 (5 points):
+1≤N≤2,000
+Subtask #2 (10 points):
+1≤N≤100,000
+Subtask #3 (85 points): original constraints
+Sample 1:
+Input
+Output
+5
+8
+Explanation:
+The following eight pairs
+(i,j) give good fractions:
+(1,2),
+(1,3),
+(2,3),
+(2,4),
+(2,5),
+(3,4),
+(3,5) and
+(4,5).

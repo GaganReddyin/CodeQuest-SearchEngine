@@ -1,0 +1,133 @@
+Split and Maximize
+Problem
+Let
+f be a function, such that, for an array
+A of size
+M,
+f(A) is defined as
+$f(A) = \sum_{i=1}^{M}\sum_{j=1, j \ne i}^{j=M} (A_i\cdot A_j)$
+You are given an array
+C of size
+N. In one operation on the array, you can:
+Choose an index
+i
+(1≤i≤∣C∣)
+Select two positive integers
+X and
+Y such that
+X+Y=C
+i
+Remove the element
+C
+i
+from the array
+C
+Insert the elements
+X and
+Y to the array
+C
+Find the maximum value of
+f(C) that can be obtained using any (possibly zero) number of given operations. Since this value can be huge, output the answer modulo
+998244353.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains an integer
+N, denoting the size of the array.
+The next line contains
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+, the elements of the array
+C.
+Output Format
+For each test case, output on a new line, the maximum value of
+f(C) that can be obtained using any (possibly zero) number of given operations. Since this value can be huge, output the answer modulo
+998244353.
+Constraints
+1≤T≤10
+3
+1≤N≤2⋅10
+5
+1≤C
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+2
+1 2
+2
+1 3
+6
+12
+Explanation:
+Test case
+1: Using one operation, we choose
+i=2, set
+X=1 and
+Y=1, remove
+2 from the array, and insert
+X and
+Y. Thus, the final array is
+C=[1,1,1].
+Here,
+f(C)=(A
+1
+⋅A
+2
+)+(A
+1
+⋅A
+3
+)+(A
+2
+⋅A
+1
+)+(A
+2
+⋅A
+3
+)+(A
+3
+⋅A
+1
+)+(A
+3
+⋅A
+2
+)=1+1+1+1+1+1=6.
+Test case
+2:
+Operation
+1: We choose
+i=2, set
+X=1 and
+Y=2, remove
+3 from the array, and insert
+X and
+Y. Thus, the final array is
+C=[1,1,2].
+Operation
+2: We choose
+i=3, set
+X=1 and
+Y=1, remove
+3 from the array, and insert
+X and
+Y. Thus, the final array is
+C=[1,1,1,1].
+Here,
+f(C)=12.

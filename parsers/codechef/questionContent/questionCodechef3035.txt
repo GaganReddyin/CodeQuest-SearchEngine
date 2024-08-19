@@ -1,0 +1,103 @@
+Learning Dishes
+Problem
+###Read problems statements Bengali , Mandarin chinese and Vietnamese as well.
+In Chefland, there are
+N cities (numbered
+1 through
+N) connected by
+N−1 bidirectional roads in such a way that it is possible to reach any city from any other city. Each city has its own traditional dish for which it is famous; let's denote the tastiness of the dish in city
+i by
+A
+i
+.
+Chef is currently learning how to prepare tastier dishes. At any point, he can only remember how to cook one dish. Initially, the tastiness of the dish he can cook is
+W. Chef is going to travel from city
+1 to city
+v. In each city he visits (including
+1 and
+v), if the tastiness of the traditional dish of this city is strictly greater than the tastiness of the dish he can currently cook, then he forgets the dish he can currently cook and learns the traditional dish of this city.
+Now, Chef is wondering how many times he is going to learn a new dish during his trip. You should answer
+Q independent queries. In each query, you are given the initial tastiness
+W and Chef's final destination
+v; compute the number of times Chef learns a new dish. Note that the input is given in a special format, so you have to answer the queries online.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains one integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+N−1 space-separated integers
+P
+2
+,P
+3
+,…,P
+N
+, meaning there's an edge between
+i and
+P
+i
+.
+The fourth line contains one integer
+Q.
+Each of the following
+Q lines contains two space-separated integers
+A and
+B describing a query in the following format:
+Let's denote the answer to the previous query by
+Pr (
+Pr=0 if this is the first query).
+For this query,
+v=A⊕Pr and
+W=B⊕Pr.
+Output
+For each query, print a single line containing one integer — the number of times Chef learns a new dish.
+Constraints
+1≤T≤1000
+2≤N≤10
+6
+1≤Q≤10
+6
+1≤A
+i
+≤10
+8
+for each valid
+i
+1≤P
+i
+≤i−1 for each valid
+i
+1≤W≤10
+8
+1≤v≤N
+the sum of
+N for all test cases does not exceed
+10
+6
+the sum of
+Q for all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+1
+5
+2 3 1 4 5
+1 2 2 3
+2
+2 1
+1 0
+2
+1

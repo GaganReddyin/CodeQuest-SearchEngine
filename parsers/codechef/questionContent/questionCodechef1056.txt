@@ -1,0 +1,14 @@
+Greg and Grid
+Problem
+Recently, Greg got a grid with n rows and m columns. Rows are indexed from 1 to n and columns are indexed from 1 to m. The cell $ ( i , j )$ is the cell of intersection of row i and column j. Each cell has a number written on it. The number written on cell $( i , j )$ is equal to $(i+j)$. Now, Greg wants to select some cells from the grid, such that for every pair of selected cells ,the numbers on the cells are co-prime. Determine the maximum number of cells that Greg can select.
+Input
+Single line containing integers n and m denoting number of rows and number of columns respectively.
+Output
+Single line containing the answer.
+Constraints
+$1 \leq n,m \leq 10^{6}$
+Sample 1:
+Input
+Output
+3 4
+4

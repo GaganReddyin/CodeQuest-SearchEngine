@@ -1,0 +1,172 @@
+F. Bad Cryptography
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+In modern cryptography much is tied to the algorithmic complexity of solving several problems. One of such problems is a discrete logarithm problem. It is formulated as follows:
+Let's fix a finite field and two it's elements
+a
+and
+b
+. One need to fun such
+x
+that
+a
+x
+=b
+or detect there is no such x.
+It is most likely that modern mankind cannot solve the problem of discrete logarithm for a sufficiently large field size. For example, for a field of residues modulo prime number, primes of 1024 or 2048 bits are considered to be safe. However, calculations with such large numbers can place a significant load on servers that perform cryptographic operations. For this reason, instead of a simple module residue field, more complex fields are often used. For such field no fast algorithms that use a field structure are known, smaller fields can be used and operations can be properly optimized.
+Developer Nikolai does not trust the generally accepted methods, so he wants to invent his own. Recently, he read about a very strange field — nimbers, and thinks it's a great fit for the purpose.
+The field of nimbers is defined on a set of integers from 0 to
+2
+2
+k
+−1
+for some positive integer
+k
+. Bitwise exclusive or (
+⊕
+) operation is used as addition. One of ways to define multiplication operation (
+⊙
+) is following properties:
+0⊙a=a⊙0=0
+1⊙a=a⊙1=a
+a⊙b=b⊙a
+a⊙(b⊙c)=(a⊙b)⊙c
+a⊙(b⊕c)=(a⊙b)⊕(a⊙c)
+If
+a=
+2
+2
+n
+for some integer
+n>0
+, and
+b<a
+, then
+a⊙b=a⋅b
+.
+If
+a=
+2
+2
+n
+for some integer
+n>0
+, then
+a⊙a=
+3
+2
+⋅a
+.
+For example:
+4⊙4=6
+8⊙8=4⊙2⊙4⊙2=4⊙4⊙2⊙2=6⊙3=(4⊕2)⊙3=(4⊙3)⊕(2⊙(2⊕1))=(4⊙3)⊕(2⊙2)⊕(2⊙1)=12⊕3⊕2=13.
+32⊙64=(16⊙2)⊙(16⊙4)=(16⊙16)⊙(2⊙4)=24⊙8=(16⊕8)⊙8=(16⊙8)⊕(8⊙8)=128⊕13=141
+5⊙6=(4⊕1)⊙(4⊕2)=(4⊙4)⊕(4⊙2)⊕(4⊙1)⊕(1⊙2)=6⊕8⊕4⊕2=8
+Formally, this algorithm can be described by following pseudo-code.
+multiply(a, b) {
+   ans = 0
+   for p1 in bits(a)       // numbers of bits of a equal to one
+       for p2 in bits(b)   // numbers of bits of b equal to one
+          ans = ans xor multiply_powers_of_2(1 << p1, 1 << p2)
+   return ans;
+}
+multiply_powers_of_2(a, b) {
+    if (a == 1 or b == 1) return a * b
+    n = maximal value, such 2^{2^{n}} <= max(a, b)
+    power = 2^{2^{n}};
+    if (a >= power and b >= power) {
+        return multiply(power * 3 / 2, multiply_powers_of_2(a / power, b / power))
+    } else if (a >= power) {
+        return multiply_powers_of_2(a / power, b) * power
+    } else {
+        return multiply_powers_of_2(a, b / power) * power
+    }
+}
+It can be shown, that this operations really forms a field. Moreover, than can make sense as game theory operations, but that's not related to problem much. With the help of appropriate caching and grouping of operations, it is possible to calculate the product quickly enough, which is important to improve speed of the cryptoalgorithm. More formal definitions as well as additional properties can be clarified in the wikipedia article at link. The authors of the task hope that the properties listed in the statement should be enough for the solution.
+Powering for such muliplication is defined in same way, formally
+a
+⊙k
+=
+a⊙a⊙⋯⊙a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+k times
+.
+You need to analyze the proposed scheme strength. For pairs of numbers
+a
+and
+b
+you need to find such
+x
+, that
+a
+⊙x
+=b
+, or determine that it doesn't exist.
+Input
+In the first line of input there is single integer
+t
+(
+1≤t≤100
+) — number of pairs, for which you need to find the discrete logarithm.
+In each of next
+t
+line there is a pair of integers
+a
+b
+(
+1≤a,b<
+2
+64
+).
+Output
+For each pair you should print one integer
+x
+(
+0≤x<
+2
+64
+), such that
+a
+⊙x
+=b
+, or -1 if no such x exists. It can be shown, that if any such
+x
+exists, there is one inside given bounds. If there are several good values, you can output any of them.
+Example
+input
+Copy
+7
+2 2
+1 1
+2 3
+8 10
+8 2
+321321321321 2
+123214213213 4356903202345442785
+output
+Copy
+1
+1
+2
+4
+-1
+6148914691236517205
+68943624821423112

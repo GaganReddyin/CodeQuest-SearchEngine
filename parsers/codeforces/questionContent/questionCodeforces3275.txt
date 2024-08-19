@@ -1,0 +1,104 @@
+D. Coloring Edges
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a directed graph with
+n
+vertices and
+m
+directed edges without self-loops or multiple edges.
+Let's denote the
+k
+-coloring of a digraph as following: you color each edge in one of
+k
+colors. The
+k
+-coloring is good if and only if there no cycle formed by edges of same color.
+Find a good
+k
+-coloring of given digraph with minimum possible
+k
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤5000
+,
+1≤m≤5000
+) — the number of vertices and edges in the digraph, respectively.
+Next
+m
+lines contain description of edges — one per line. Each edge is a pair of integers
+u
+and
+v
+(
+1≤u,v≤n
+,
+u≠v
+) — there is directed edge from
+u
+to
+v
+in the graph.
+It is guaranteed that each ordered pair
+(u,v)
+appears in the list of edges at most once.
+Output
+In the first line print single integer
+k
+— the number of used colors in a good
+k
+-coloring of given graph.
+In the second line print
+m
+integers
+c
+1
+,
+c
+2
+,…,
+c
+m
+(
+1≤
+c
+i
+≤k
+), where
+c
+i
+is a color of the
+i
+-th edge (in order as they are given in the input).
+If there are multiple answers print any of them (you still have to minimize
+k
+).
+Examples
+input
+Copy
+4 5
+1 2
+1 3
+3 4
+2 4
+1 4
+output
+Copy
+1
+1 1 1 1 1 
+input
+Copy
+3 3
+1 2
+2 3
+3 1
+output
+Copy
+2
+1 1 2 

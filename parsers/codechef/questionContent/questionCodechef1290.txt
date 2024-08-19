@@ -1,0 +1,76 @@
+Three Numbers
+Problem
+Chef has three numbers
+A,B, and
+C.
+He can do the following type of operation:
+Select two numbers amongst
+A,B, and
+C;
+Add
+1 to the selected numbers;
+Subtract
+1 from the remaining number.
+Determine whether Chef can make all the three numbers equal after applying the above operation any number of times.
+If yes, output the minimum number of operations required by Chef.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of single line containing
+3 space-separated integers
+A,B, and
+C.
+Output Format
+For each test case, output
+−1 if the numbers cannot be made equal, else output the minimum number of operations required to make them equal.
+Constraints
+1≤T≤10
+4
+1≤A,B,C≤10
+9
+Sample 1:
+Input
+Output
+4
+1 1 2
+3 7 3
+4 4 4
+1 2 3
+-1
+2
+0
+-1
+Explanation:
+Test case
+1: It can be proven that we cannot make the numbers equal using any number of operations.
+Test case
+2: We require a minimum of
+2 operations to make the numbers equal:
+Operation
+1: Select the numbers
+A and
+C. Thus,
+A and
+C become
+3+1=4 and
+3+1=4 respectively. Also,
+B becomes
+7−1=6.
+Operation
+2: Select the numbers
+A and
+C. Thus,
+A and
+C become
+4+1=5 and
+4+1=5 respectively. Also,
+C becomes
+6−1=5.
+Thus, all
+3 numbers are equal after
+2 operations.
+Test case
+3: Since all
+3 numbers are already equal, we require no operations.
+Test case
+4: It can be proven that we cannot make the numbers equal using any number of operations.

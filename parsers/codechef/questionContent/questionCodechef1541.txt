@@ -1,0 +1,151 @@
+Angled Flip
+Problem
+You are given two
+N×M integer matrices
+A and
+B. You are allowed to perform the following operation on
+A as many times as you like (possibly, zero):
+Pick any square submatrix of
+A and flip it about either its main diagonal or its antidiagonal.
+For example, suppose you choose the submatrix
+⎣
+⎡
+123
+456
+789
+⎦
+⎤
+.
+It can be converted into either
+⎣
+⎡
+147
+258
+369
+⎦
+⎤
+by flipping about the main diagonal, or
+⎣
+⎡
+963
+852
+741
+⎦
+⎤
+by flipping about the antidiagonal.
+Is it possible to convert
+A to
+B by performing this operation several (possibly, zero) times?
+Note: For the purposes of this problem, a submatrix of a matrix is the intersection of a contiguous segment of rows with a contiguous segment of columns.
+For example, if
+A=
+⎣
+⎡
+123
+456
+789
+⎦
+⎤
+then
+[
+2
+],
+[
+56
+89
+], and
+[
+1
+4
+] are submatrices of
+A, while
+[
+13
+79
+] is not.
+A square submatrix is a submatrix with the same number of rows and columns.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of rows and columns of the matrices, respectively.
+The next
+N lines describe the matrix
+A. The
+i-th of these lines contains
+M space-separated integers ― the values
+A
+i,1
+,A
+i,2
+,…,A
+i,M
+.
+The next
+N lines describe the matrix
+B. The
+i-th of these lines contains
+M space-separated integers ― the values
+B
+i,1
+,B
+i,2
+,…,B
+i,M
+.
+Output Format
+For each test case, print YES if its possible to convert
+A to
+B, else print NO.
+Each character of the output may be printed in either uppercase or lowercase. For example, the strings YES, yes, yeS, YeS will all be treated as identical.
+Constraints
+1≤T≤10
+4
+1≤N,M≤3⋅10
+5
+1≤A
+i,j
+,B
+i,j
+≤10
+9
+The sum of
+N⋅M over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+2 3
+1 2 3
+4 5 6
+1 4 3
+6 5 2
+3 3
+12 11 8
+7 1 1
+9 2 4
+4 1 8
+2 1 11
+9 7 12
+YES
+YES
+Explanation:
+Test case
+1:
+A can be converted to
+B as follows:
+[
+123
+456
+]→[
+163
+452
+]→[
+143
+652
+]

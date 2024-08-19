@@ -1,0 +1,164 @@
+B. Filling the Grid
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Suppose there is a
+h×w
+grid consisting of empty or full cells. Let's make some definitions:
+r
+i
+is the number of consecutive full cells connected to the left side in the
+i
+-th row (
+1≤i≤h
+). In particular,
+r
+i
+=0
+if the leftmost cell of the
+i
+-th row is empty.
+c
+j
+is the number of consecutive full cells connected to the top end in the
+j
+-th column (
+1≤j≤w
+). In particular,
+c
+j
+=0
+if the topmost cell of the
+j
+-th column is empty.
+In other words, the
+i
+-th row starts exactly with
+r
+i
+full cells. Similarly, the
+j
+-th column starts exactly with
+c
+j
+full cells.
+These are the
+r
+and
+c
+values of some
+3×4
+grid. Black cells are full and white cells are empty.
+You have values of
+r
+and
+c
+. Initially, all cells are empty. Find the number of ways to fill grid cells to satisfy values of
+r
+and
+c
+. Since the answer can be very large, find the answer modulo
+1000000007(
+10
+9
++7)
+. In other words, find the remainder after division of the answer by
+1000000007(
+10
+9
++7)
+.
+Input
+The first line contains two integers
+h
+and
+w
+(
+1≤h,w≤
+10
+3
+) — the height and width of the grid.
+The second line contains
+h
+integers
+r
+1
+,
+r
+2
+,…,
+r
+h
+(
+0≤
+r
+i
+≤w
+) — the values of
+r
+.
+The third line contains
+w
+integers
+c
+1
+,
+c
+2
+,…,
+c
+w
+(
+0≤
+c
+j
+≤h
+) — the values of
+c
+.
+Output
+Print the answer modulo
+1000000007(
+10
+9
++7)
+.
+Examples
+input
+Copy
+3 4
+0 3 1
+0 2 3 0
+output
+Copy
+2
+input
+Copy
+1 1
+0
+1
+output
+Copy
+0
+input
+Copy
+19 16
+16 16 16 16 15 15 0 5 0 4 9 9 1 4 4 0 8 16 12
+6 12 19 15 8 6 19 19 14 6 9 16 10 11 15 4
+output
+Copy
+797922655
+Note
+In the first example, this is the other possible case.
+In the second example, it's impossible to make a grid to satisfy such
+r
+,
+c
+values.
+In the third example, make sure to print answer modulo
+(
+10
+9
++7)
+.

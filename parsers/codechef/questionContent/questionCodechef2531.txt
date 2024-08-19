@@ -1,0 +1,109 @@
+Integer concatenation
+Problem
+Concatenation of two integers is obtained as follows: First, convert both integers to strings. Then concatenate both strings into one and convert this concatenated string back to integer.
+For example, concatenation of
+6 and
+7 is
+CONC(6,7)=67, concatenation of
+123 and
+45 is
+CONC(123,45)=12345.
+You are given an array
+A consisting of
+N integers. You are also given two integers
+L and
+R. Find the number of pairs (
+i,
+j) such that
+1≤i,j≤N and
+L≤CONC(A
+i
+,A
+j
+)≤R
+Note: Since the size of the input and output is large, please use fast input-output methods.
+Input Format
+The first line will contain
+T, the number of test cases. Then
+T test cases follow.
+The first line of each test case contains three integers
+N,L,R.
+The second line of each test case line contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each testcase, output in a single line the number of suitable pairs.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤L≤R≤10
+15
+1≤A
+i
+≤10
+7
+Sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+4
+2 10 52
+2 5
+3 58 100
+4 2 3
+4 100 1000
+1 10 100 1000
+5 28 102
+3 2 1 9 10
+3
+0
+2
+11
+Explanation:
+Test case 1:
+(i=1,j=1):
+CONC(A
+1
+,A
+1
+)=22 and
+10≤22≤52.
+(i=1,j=2):
+CONC(A
+1
+,A
+2
+)=25 and
+10≤25≤52.
+(i=2,j=1):
+CONC(A
+2
+,A
+1
+)=52 and
+10≤52≤52.
+(i=2,j=2):
+CONC(A
+2
+,A
+2
+)=55 and
+10≤55 but
+55≰52.
+So there are three suitable pairs.
+Test case 2: There is no suitable pair.
+Test case 3: The suitable pairs are
+(2,1) and
+(1,2).

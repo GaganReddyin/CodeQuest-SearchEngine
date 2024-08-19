@@ -1,0 +1,123 @@
+Marbles
+Problem
+"You have a reason to leave this place, but I don't."
+In the fourth game, Sang-Woo and Ali are competing against each other. Sang-Woo is the more intelligent one between them, and he plans to win the game by cheating. Ali is your childhood friend and you want to help him win this game. The game goes as follows.
+Both of them are given
+2 strings —
+S and
+P — of equal length (say
+N). The task is to find the minimum number of operations required to convert the string
+P into
+S. Every character of both
+S and
+P is either a lowercase English alphabet or
+?.
+First, before performing any operation, you must choose a single lowercase character from the English alphabet, and replace every occurrence of
+? with this character. Note that every
+? present in either
+S or
+P is replaced by the exact same character. This does not count as an operation.
+Once the above step is done, you are allowed to perform the following two operations on
+P any number of times:
+Pick an index
+1≤i≤N such that
+P
+i
+is a vowel, and change
+P
+i
+to any consonant.
+Pick an index
+1≤i≤N such that
+P
+i
+is a consonant, and change
+P
+i
+to any vowel.
+Note: The vowels are the
+5 characters
+{a,e,i,o,u} — the other
+21 are consonants.
+Find the minimum number of operations required to convert
+P into
+S.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N, denoting the length of strings
+S and
+P.
+The second and third lines contain strings
+S and
+P respectively.
+Output Format
+For each test case, output in a single line the minimum number of operations required to convert
+P into
+S.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+The sum of all
+N across all test cases does not exceed
+5∗10
+5
+.
+∣S∣=∣P∣
+Every character of both
+S and
+P is either a lowercase English alphabet or
+?.
+Every
+? present in
+S and
+P should be assigned the same character.
+Sample 1:
+Input
+Output
+3
+5
+ab?c?
+aeg?k
+6
+abcde?
+ehio??
+4
+abcd
+abcd
+4
+6
+0
+Explanation:
+Test Case 1: First, replace every
+? by
+u. This gives us
+S=abucu and
+P=aeguk. Now
+P can be converted to
+S as follows:
+Convert
+P
+2
+=e to
+b in 1 operation.
+Convert
+P
+3
+=g to
+u in 1 operation.
+Convert
+P
+4
+=u to
+c in 1 operation.
+Convert
+P
+5
+=k to
+u in 1 operation.
+Test Case 3: The strings are already equal, so no operations are required.

@@ -1,0 +1,43 @@
+A. Display Size
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A big company decided to launch a new series of rectangular displays, and decided that the display must have exactly n pixels.
+Your task is to determine the size of the rectangular display — the number of lines (rows) of pixels a and the number of columns of pixels b, so that:
+there are exactly n pixels on the display;
+the number of rows does not exceed the number of columns, it means a ≤ b;
+the difference b - a is as small as possible.
+Input
+The first line contains the positive integer n (1 ≤ n ≤ 106) — the number of pixels display should have.
+Output
+Print two integers — the number of rows and columns on the display.
+Examples
+input
+Copy
+8
+output
+Copy
+2 4
+input
+Copy
+64
+output
+Copy
+8 8
+input
+Copy
+5
+output
+Copy
+1 5
+input
+Copy
+999999
+output
+Copy
+999 1001
+Note
+In the first example the minimum possible difference equals 2, so on the display should be 2 rows of 4 pixels.
+In the second example the minimum possible difference equals 0, so on the display should be 8 rows of 8 pixels.
+In the third example the minimum possible difference equals 4, so on the display should be 1 row of 5 pixels.

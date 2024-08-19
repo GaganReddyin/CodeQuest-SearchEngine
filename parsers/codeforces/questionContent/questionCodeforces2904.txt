@@ -1,0 +1,208 @@
+F. Berland Beauty
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+railway stations in Berland. They are connected to each other by
+n−1
+railway sections. The railway network is connected, i.e. can be represented as an undirected tree.
+You have a map of that network, so for each railway section you know which stations it connects.
+Each of the
+n−1
+sections has some integer value of the scenery beauty. However, these values are not marked on the map and you don't know them. All these values are from
+1
+to
+10
+6
+inclusive.
+You asked
+m
+passengers some questions: the
+j
+-th one told you three values:
+his departure station
+a
+j
+;
+his arrival station
+b
+j
+;
+minimum scenery beauty along the path from
+a
+j
+to
+b
+j
+(the train is moving along the shortest path from
+a
+j
+to
+b
+j
+).
+You are planning to update the map and set some value
+f
+i
+on each railway section — the scenery beauty. The passengers' answers should be consistent with these values.
+Print any valid set of values
+f
+1
+,
+f
+2
+,…,
+f
+n−1
+, which the passengers' answer is consistent with or report that it doesn't exist.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤5000
+) — the number of railway stations in Berland.
+The next
+n−1
+lines contain descriptions of the railway sections: the
+i
+-th section description is two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n,
+x
+i
+≠
+y
+i
+), where
+x
+i
+and
+y
+i
+are the indices of the stations which are connected by the
+i
+-th railway section. All the railway sections are bidirected. Each station can be reached from any other station by the railway.
+The next line contains a single integer
+m
+(
+1≤m≤5000
+) — the number of passengers which were asked questions. Then
+m
+lines follow, the
+j
+-th line contains three integers
+a
+j
+,
+b
+j
+and
+g
+j
+(
+1≤
+a
+j
+,
+b
+j
+≤n
+;
+a
+j
+≠
+b
+j
+;
+1≤
+g
+j
+≤
+10
+6
+) — the departure station, the arrival station and the minimum scenery beauty along his path.
+Output
+If there is no answer then print a single integer -1.
+Otherwise, print
+n−1
+integers
+f
+1
+,
+f
+2
+,…,
+f
+n−1
+(
+1≤
+f
+i
+≤
+10
+6
+), where
+f
+i
+is some valid scenery beauty along the
+i
+-th railway section.
+If there are multiple answers, you can print any of them.
+Examples
+input
+Copy
+4
+1 2
+3 2
+3 4
+2
+1 2 5
+1 3 3
+output
+Copy
+5 3 5
+input
+Copy
+6
+1 2
+1 6
+3 1
+1 5
+4 1
+4
+6 1 3
+3 4 1
+6 5 2
+1 2 5
+output
+Copy
+5 3 1 2 1 
+input
+Copy
+6
+1 2
+1 6
+3 1
+1 5
+4 1
+4
+6 1 1
+3 4 3
+6 5 3
+1 2 4
+output
+Copy
+-1

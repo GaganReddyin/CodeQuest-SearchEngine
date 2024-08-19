@@ -1,0 +1,147 @@
+Grid Path
+Problem
+There is a grid containing
+N rows and
+N columns. The cell at the
+i
+th
+row from the top and
+j
+th
+column from the left is a passable space if
+S
+i,j
+is '.' and a blocked cell if
+S
+i,j
+is '#'.
+Chef is at the top-left cell and wants to reach the bottom-right cell. Chef can move one cell down, or right to a passable cell. He can't leave the grid. If Chef is at the cell
+(i,j), he can collect
+A
+i,j
+coins.
+Now, Chef has a special ability using which he can make all the blocked cells in a path of length
+K into passable cells. Chef uses this ability before moving from the top-left cell. It is possible that some of the cells in the chosen
+K length path are already passable. More formally, Chef can choose a sequence of
+K cells such that for each
+i
+(1≤i<K), the
+i
+th
+and
+(i+1)
+th
+cells of the sequence are adjacent and make all these
+K cells passable.
+Find the maximum amount of coins Chef can collect in the path from the top-left cell to the bottom-right cell. Print
+−1 if it is impossible to reach the bottom-right cell.
+Note: Two cells are considered to be adjacent if they share a common side. The cell
+(i,j) has four adjacent cells i.e. the cells
+(i−1,j),
+(i+1,j),
+(i,j−1) and
+(i,j+1). It is guaranteed that the top-left cell of the grid is a passable cell.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N,K.
+N lines follow. The
+i
+th
+of these lines contains a string
+S
+i
+of length
+N. The
+j
+th
+character of
+S
+i
+is '.' if the cell
+(i,j) is passable, or '#' if it is a blocked cell.
+Next
+N lines follow. The
+i
+th
+of these lines contains
+N space-separated integers
+A
+i,j
+, denoting the number of coins in the cell
+(i,j).
+Output Format
+For each test case, print a single line containing one integer - the maximum amount of coin Chef can collect in the path or
+−1 if it is impossible to reach the bottom-right cell.
+Constraints
+1≤T≤4⋅10
+3
+2≤N≤150
+0≤K≤2⋅N−2
+1≤A
+i,j
+≤10
+5
+S
+i,j
+is either '.' or '#'.
+It is guaranteed that the top-left cell of the grid is a passable cell.
+Sum
+N
+2
+over all testcases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2 1
+.#
+#.
+1 2
+3 4
+3 3
+.#.
+#.#
+..#
+1 1 1
+1 1 1
+1 1 1
+5 4 
+.....
+#####
+.....
+#####
+.....
+2 3 4 1 5
+1 7 15 12 2
+2 5 10 8 3
+9 9 9 9 9
+1 2 3 4 5
+8
+-1
+62
+Explanation:
+Test case
+1: Chef breaks the blocked cell
+(2,1) and choose the path -
+(1,1)→(2,1)→(2,2). Total coins collected in the path is
+1+3+4=8.
+Test case
+2: There is no way to choose a path of length
+3 such that after breaking the blocked cells in the path, it is possible to reach the bottom-right cell.
+Test case
+3: Chef chooses the path of consisting of cells
+(2,3),
+(2,4),
+(3,4),
+(4,4) and break the blocked cells in this path. Then Chef chooses the path -
+(1,1)→(1,2)→(1,3)→(2,3)→(2,4)→(3,4)→(4,4)→(5,4)
+→(5,5). Total coins collected in the path is
+2+3+4
++15+12+8
++9+4+5=62.

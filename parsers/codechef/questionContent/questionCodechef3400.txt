@@ -1,0 +1,159 @@
+Array Partition
+Problem
+You are given an array
+A of
+N integers, and an integer
+X. For each
+K in the range
+[1,N], determine the number of ways to partition the array into exactly
+K non-empty subarrays such that the maxima of each of the subarrays are at least
+X.
+The number of ways can be large, so output it modulo
+998244353.
+Note: The input and output are large, so use fast input-output methods.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case contains two lines of input.
+The first line of each test case consists of two space-separated integers
+N and
+X.
+The second line consists of
+N space-separated integers denoting the elements of the array
+A.
+Output Format
+For each test case, output a single line containing
+N space-separated integers, the
+i-th of which denotes the number of ways to partition the array into exactly
+i non-empty subarrays such that the maxima of each of the
+i subarrays are at least
+X. Print the answer modulo
+998244353.
+Constraints
+1≤T≤7⋅10
+4
+1≤N≤10
+6
+1≤X≤10
+9
+1≤A
+i
+≤10
+9
+The sum of
+N across all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (20 points):
+1≤T≤200
+1≤N≤10
+3
+The sum of
+N across all test cases does not exceed
+2⋅10
+3
+Time Limit =
+1 second
+Subtask #2 (80 points):
+Original constraints
+Time Limit =
+1.75 seconds
+Sample 1:
+Input
+Output
+3
+5 3
+4 1 7 1 6
+4 2
+2 2 2 1
+3 4
+5 6 7
+1 4 4 0 0 
+1 2 1 0 
+1 2 1
+Explanation:
+In the below explanation,
+[L,R] denotes the subarray consisting of elements
+A
+L
+,A
+L+1
+,…,A
+R
+.
+Test case
+1:
+The number of partitions having exactly
+1 subarray is
+1, which is the array itself.
+The number of partitions having exactly
+2 subarrays is
+4, which are
+[1,1]+
+[2,5],
+[1,2]+
+[3,5],
+[1,3]+
+[4,5],
+[1,4]+
+[5,5].
+The number of partitions having exactly
+3 subarrays is
+4, which are
+[1,1]+
+[2,3]+
+[4,5],
+[1,1]+
+[2,4]+
+[5,5],
+[1,2]+
+[3,3]+
+[4,5],
+[1,2]+
+[3,4]+
+[5,5].
+The number of partitions having
+4 or
+5 subarrays is
+0.
+Test case
+2:
+The number of partitions having exactly
+1 subarray is
+1, which is the array itself.
+The number of partitions having exactly
+2 subarrays is
+2, which are
+[1,1]+
+[2,4],
+[1,2]+
+[3,4].
+The number of partitions having exactly
+3 subarrays is
+1, which is
+[1,1]+
+[2,2]+
+[3,4].
+The number of partitions having exactly
+4 subarrays is
+0.
+Test Case
+3:
+The number of partitions having exactly
+1 subarray is
+1, which is the array itself.
+The number of partitions having exactly
+2 subarrays is
+2, which are
+[1,1]+
+[2,3],
+[1,2]+
+[3,3].
+The number of partitions having exactly
+3 subarrays is
+1, which is
+[1,1]+
+[2,2]+
+[3,3].

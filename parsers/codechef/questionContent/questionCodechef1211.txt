@@ -1,0 +1,130 @@
+Contruct Array
+Problem
+You are given a positive integer
+N.
+Consider an array
+A of length
+N. Let
+P
+i
+denote the sum of the first
+i elements of
+A and
+S
+i
+denote the sum of the last
+i elements of
+A.
+You need to construct the array
+A of size
+N such that all of the following conditions are met:
+−10
+9
+≤A
+i
+≤10
+9
+, for all
+(1≤i≤N)
+P
+i
+>S
+i
+if
+i is odd, for each
+(1≤i<N)
+P
+i
+<S
+i
+if
+i is even, for each
+(1≤i<N)
+If there are multiple solutions, you can print any of them.
+If there is no such array, print
+−1 instead.
+Input Format
+Each test contains multiple test cases. The first line contains the number of test cases
+T.
+The only line of each test case contains a single integer
+N, where
+N is the length of the required array.
+Output Format
+For each test case, if a valid array exists, print
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+satisfying all the given conditions.
+If there are multiple solutions, you can print any of them.
+If there is no such array, print
+−1 instead.
+Constraints
+1≤T≤10
+3
+2≤N≤10
+5
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+3
+4
+343 -343
+-1
+0 -5 343 -100
+Explanation:
+Test case
+1: All elements are in the given range for the array
+A=[343,−343].
+For
+i=1: Since
+i is odd,
+P
+1
+=343 is greater than
+S
+1
+=−343.
+Test case
+2: It can be proved that no array of length
+3 exists satisfying all conditions.
+Test case
+3: All elements are in the given range for the array
+A=[0,−5,343,−100].
+For
+i=1: Since
+i is odd,
+P
+1
+=0 is greater than
+S
+1
+=−100.
+For
+i=2: Since
+i is even,
+P
+2
+=0+(−5)=−5 is less than
+S
+2
+=343+(−100)=243.
+For
+i=3: Since
+i is odd,
+P
+3
+=0+(−5)+343=338 is greater than
+S
+3
+=(−5)+343+(−100)=238.

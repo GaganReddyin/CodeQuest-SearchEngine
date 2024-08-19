@@ -1,0 +1,77 @@
+Sum and OR
+Problem
+Chef has two integers
+X and
+S. He is interested in sequences of non-negative integers such that the sum of their elements is
+S and the bitwise OR of their elements is
+X. Chef would like to know the shortest possible length such a sequence can have.
+Formally, find the smallest positive integer
+N such that there exists a sequence
+A=[A
+1
+,A
+2
+,…,A
+N
+] satisfying the following conditions:
+Each
+A
+i
+is a non-negative integer
+A
+1
++A
+2
++…+A
+N
+=S
+A
+1
+∨A
+2
+∨…∨A
+N
+=X
+where
+∨ denotes the bitwise OR operation.
+If there does not exist any sequence which satisfies the above conditions, output
+−1. Otherwise, output the minimum possible length of such a sequence.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line of input, containing two space-separated integers
+X and
+S — the required bitwise OR and sum, respectively.
+Output Format
+For each test case, output a single line containing one integer — the shortest possible length of such a sequence, or
+−1 if no such sequence exists.
+Constraints
+1≤T≤1000
+1≤X≤S≤10
+9
+Subtasks
+Subtask #1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+3
+13 23
+6 13
+1 25
+3
+-1
+25
+Explanation:
+Test Case
+1: One of the valid arrays of length
+3 is
+[9,9,5]. It can be shown that there is no valid array with length
+<3.
+Test Case
+2: There does not exist any sequence whose sum is
+13 and bitwise OR is
+6.
+Test Case
+3: The valid array of minimum length contains
+25 ones.

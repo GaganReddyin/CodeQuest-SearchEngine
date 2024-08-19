@@ -1,0 +1,82 @@
+A. Trust Nobody
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a group of
+n
+people. Some of them might be liars, who always tell lies. Other people always tell the truth. The
+i
+-th person says "There are at least
+l
+i
+liars amongst us". Determine if what people are saying is contradictory, or if it is possible. If it is possible, output the number of liars in the group. If there are multiple possible answers, output any one of them.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤100
+).
+The second line of each test case contains
+n
+integers
+l
+i
+(
+0≤
+l
+i
+≤n
+) — the number said by the
+i
+-th person.
+It's guaranteed that the sum of all
+n
+does not exceed
+10
+4
+.
+Output
+For each test case output a single integer. If what people are saying is contradictory, output
+−1
+. Otherwise, output the number of liars in the group. If there are multiple possible answers, output any one of them.
+Example
+input
+Copy
+7
+2
+1 2
+2
+2 2
+2
+0 0
+1
+1
+1
+0
+5
+5 5 3 3 5
+6
+5 3 6 6 3 5
+output
+Copy
+1
+-1
+0
+-1
+0
+3
+4
+Note
+In the first example, the only possible answer is that the second person is a liar, so the answer is
+1
+liar.
+In the second example, it can be proven that we can't choose the liars so that all the requirements are satisfied.
+In the third example, everybody tells the truth, so the answer is
+0
+liars.

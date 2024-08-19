@@ -1,0 +1,164 @@
+E. Coloring
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+points on the plane, the coordinates of the
+i
+-th point are
+(
+x
+i
+,
+y
+i
+)
+. No two points have the same coordinates.
+The distance between points
+i
+and
+j
+is defined as
+d(i,j)=|
+x
+i
+−
+x
+j
+|+|
+y
+i
+−
+y
+j
+|
+.
+For each point, you have to choose a color, represented by an integer from
+1
+to
+n
+. For every ordered triple of different points
+(a,b,c)
+, the following constraints should be met:
+if
+a
+,
+b
+and
+c
+have the same color, then
+d(a,b)=d(a,c)=d(b,c)
+;
+if
+a
+and
+b
+have the same color, and the color of
+c
+is different from the color of
+a
+, then
+d(a,b)<d(a,c)
+and
+d(a,b)<d(b,c)
+.
+Calculate the number of different ways to choose the colors that meet these constraints.
+Input
+The first line contains one integer
+n
+(
+2≤n≤100
+) — the number of points.
+Then
+n
+lines follow. The
+i
+-th of them contains two integers
+x
+i
+and
+y
+i
+(
+0≤
+x
+i
+,
+y
+i
+≤
+10
+8
+).
+No two points have the same coordinates (i. e. if
+i≠j
+, then either
+x
+i
+≠
+x
+j
+or
+y
+i
+≠
+y
+j
+).
+Output
+Print one integer — the number of ways to choose the colors for the points. Since it can be large, print it modulo
+998244353
+.
+Examples
+input
+Copy
+3
+1 0
+3 0
+2 1
+output
+Copy
+9
+input
+Copy
+5
+1 2
+2 4
+3 4
+4 4
+1 3
+output
+Copy
+240
+input
+Copy
+4
+1 0
+3 0
+2 1
+2 0
+output
+Copy
+24
+Note
+In the first test, the following ways to choose the colors are suitable:
+[1,1,1]
+;
+[2,2,2]
+;
+[3,3,3]
+;
+[1,2,3]
+;
+[1,3,2]
+;
+[2,1,3]
+;
+[2,3,1]
+;
+[3,1,2]
+;
+[3,2,1]
+.

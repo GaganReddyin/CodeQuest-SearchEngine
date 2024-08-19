@@ -1,0 +1,161 @@
+Balancing Network Revisited
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider
+N parallel wires running from left to right. The wires are numbered
+1 through
+N from top to bottom. There are
+M devices called balancers, numbered
+1 through
+M from left to right. For each valid
+i, balancer
+i connects wires
+x
+i
+and
+y
+i
+(
+x
+i
+<y
+i
+). Let's call such a structure of wires and balancers a balancing network.
+Each balancer can be directed either upwards or downwards. The directions of all balancers define the state of the balancing network.
+Consider a token that starts moving to the right along some wire, from a point on that wire which is to the left of all balancers. During this process, the token encounters each balancer exactly once. Whenever the token encounters a balancer
+i, the following happens:
+if the token is moving along the wire
+x
+i
+and balancer
+i is directed downwards, the token moves down to the wire
+y
+i
+otherwise, if the token is moving along the wire
+y
+i
+and balancer
+i is directed upwards, the token moves up to the wire
+x
+i
+in all other cases, the token does not move to a different wire
+afterwards, the token keeps moving to the right
+We say that a state of the balancing network:
+transforms a wire
+i into a wire
+j, if a token that starts moving along the wire
+i ends up on the wire
+j after passing through all
+M balancers
+unifies wires
+i and
+j, if it transforms both of these wires into the same wire (possibly different from each of them)
+is
+k-non-unifying, if there is a set of
+k distinct wires such that this state does not unify any pair of wires from this set
+For a given balancing network, please find any
+⌈
+2
+N
+⌉-non-unifying state or determine that there is no such state.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+M lines follow. For each
+i (
+1≤i≤M), the
+i-th of these lines contains two space-separated integers
+x
+i
+and
+y
+i
+.
+Output
+For each test case:
+If there is no
+⌈
+2
+N
+⌉-non-unifying state for the given balancing network, print a single line containing the string "failure" (without quotes).
+Otherwise, print a single line containing a string with length
+M. This string should describe some
+⌈
+2
+N
+⌉-non-unifying state. For each valid
+i, its
+i-th character should be either '^' if the
+i-th balancer is directed upwards or 'v' if the
+i-th balancer is directed downwards.
+Constraints
+1≤T≤10
+3
+2≤N≤10
+6
+1≤M≤10
+6
+1≤x
+i
+<y
+i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+the sum of
+M over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (7 points):
+M≤10
+Subtask #2 (14 points):
+N≤10
+M≤10
+3
+the sum of
+M over all test cases does not exceed
+10
+4
+Subtask #3 (29 points):
+N,M≤100
+Subtask #4 (50 points): original constraints
+Example Input
+2
+3 3
+1 2
+2 3
+1 3
+5 6
+1 2
+3 4
+1 3
+2 4
+2 3
+1 4
+Example Output
+^^^
+v^vv^v
+Explanation
+Example case 1: The state where all balancers are directed upwards ("^^^") transforms wire
+1 into itself, wire
+2 into wire
+1 and wire
+3 into wire
+2. We can see that this state does not unify wires
+1 and
+3 (or wires
+2 and
+3), thus it is
+2-non-unifying. Another
+2-non-unifying state of this balancing network is "^^v". The remaining
+6 states are not
+2-non-unifying.
+Example case 2:

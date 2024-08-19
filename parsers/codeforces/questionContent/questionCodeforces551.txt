@@ -1,0 +1,112 @@
+D. Reset K Edges
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a rooted tree, consisting of
+n
+vertices. The vertices are numbered from
+1
+to
+n
+, the root is the vertex
+1
+.
+You can perform the following operation at most
+k
+times:
+choose an edge
+(v,u)
+of the tree such that
+v
+is a parent of
+u
+;
+remove the edge
+(v,u)
+;
+add an edge
+(1,u)
+(i. e. make
+u
+with its subtree a child of the root).
+The height of a tree is the maximum depth of its vertices, and the depth of a vertex is the number of edges on the path from the root to it. For example, the depth of vertex
+1
+is
+0
+, since it's the root, and the depth of all its children is
+1
+.
+What's the smallest height of the tree that can be achieved?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains two integers
+n
+and
+k
+(
+2≤n≤2⋅
+10
+5
+;
+0≤k≤n−1
+) — the number of vertices in the tree and the maximum number of operations you can perform.
+The second line contains
+n−1
+integers
+p
+2
+,
+p
+3
+,…,
+p
+n
+(
+1≤
+p
+i
+<i
+) — the parent of the
+i
+-th vertex. Vertex
+1
+is the root.
+The sum of
+n
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the smallest height of the tree that can achieved by performing at most
+k
+operations.
+Example
+input
+Copy
+5
+5 1
+1 1 2 2
+5 2
+1 1 2 2
+6 0
+1 2 3 4 5
+6 1
+1 2 3 4 5
+4 3
+1 1 1
+output
+Copy
+2
+1
+5
+3
+1

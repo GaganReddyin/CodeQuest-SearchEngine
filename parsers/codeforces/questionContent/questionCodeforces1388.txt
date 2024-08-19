@@ -1,0 +1,144 @@
+E. Bored Bakry
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Bakry got bored of solving problems related to xor, so he asked you to solve this problem for him.
+You are given an array
+a
+of
+n
+integers
+[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+.
+Let's call a subarray
+a
+l
+,
+a
+l+1
+,
+a
+l+2
+,…,
+a
+r
+good if
+a
+l
+&
+a
+l+1
+&
+a
+l+2
+…&
+a
+r
+>
+a
+l
+⊕
+a
+l+1
+⊕
+a
+l+2
+…⊕
+a
+r
+, where
+⊕
+denotes the bitwise XOR operation and
+&
+denotes the bitwise AND operation.
+Find the length of the longest good subarray of
+a
+, or determine that no such subarray exists.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+6
+) — the length of the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+) — elements of the array.
+Output
+Print a single integer — the length of the longest good subarray. If there are no good subarrays, print
+0
+.
+Examples
+input
+Copy
+2
+5 6
+output
+Copy
+2
+input
+Copy
+3
+2 4 3
+output
+Copy
+0
+input
+Copy
+6
+8 1 3 3 1 2
+output
+Copy
+4
+Note
+In the first case, the answer is
+2
+, as the whole array is good:
+5&6=4>5⊕6=3
+.
+In the third case, the answer is
+4
+, and one of the longest good subarrays is
+[
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+5
+]
+:
+1&3&3&1=1>1⊕3⊕3⊕1=0
+.

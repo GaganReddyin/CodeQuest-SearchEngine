@@ -1,0 +1,190 @@
+Create Permutation
+Problem
+###Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+Consider a list
+L of permutations, where a permutation with length
+x denotes a permutation of integers
+1 through
+x and the elements of this list are indexed starting from
+1. Initially, the list contains a single permutation with length
+1 (i.e.
+L
+1
+=(1)).
+You may create new permutations and append them to
+L using operations with the following form:
+Choose two (not necessarily distinct) valid indices
+i and
+j.
+Let's denote the permutations
+L
+i
+and
+L
+j
+by
+(A
+1
+,A
+2
+,…,A
+S
+) and
+(B
+1
+,B
+2
+,…,B
+R
+) respectively.
+Create a new permutation in one of the following ways (note that the permutations
+L
+i
+and
+L
+j
+in the list
+L are not actually changed):
+Add
+S to each element of
+L
+j
+, then concatenate
+L
+i
+and
+L
+j
+, i.e. the resulting permutation is
+C=(A
+1
+,A
+2
+,…,A
+S
+,B
+1
++S,B
+2
++S,…,B
+R
++S). For example, if
+L
+i
+=(1,4,2,3) and
+L
+j
+=(2,1), then
+C=(1,4,2,3,6,5).
+Add
+R to each element of
+L
+i
+, then concatenate
+L
+i
+and
+L
+j
+, i.e. the resulting permutation is
+C=(A
+1
++R,A
+2
++R,…,A
+S
++R,B
+1
+,B
+2
+,…,B
+R
+). For example, if
+L
+i
+=(1,4,2,3) and
+L
+j
+=(2,1), then
+C=(3,6,4,5,2,1).
+Append
+C to
+L, i.e. if
+L contained
+p permutations before this operation, then
+C becomes permutation
+L
+p+1
+.
+You are given a permutation
+P=(P
+1
+,P
+2
+,…,P
+N
+). You should create this permutation using at most
+2N operations (the last of these operations must append
+P to
+L) or determine that it is impossible. It is not required to use the minimum number of operations.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output
+For each test case, if it is impossible to create the given permutation, print a single line containing the string "NO" (without quotes). Otherwise:
+Print a line containing the string "YES" (without quotes).
+Then, print a line containing a single integer
+K — the number of operations you want to perform (
+1≤K≤2N).
+Then, print
+K lines. Each of these lines should contain three space-separated integers
+i,
+j and
+w describing one operation (
+1≤w≤2), where
+w=1 or
+w=2 denotes that you want to create the new permutation in the first way or the second way (described above), respectively.
+Your solution will be considered incorrect if either
+i or
+j is invalid for any of your operations or if at the end, the last permutation in the list is not equal to
+P.
+Constraints
+1≤T≤1,000
+2≤N≤10
+6
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (50 points):
+N≤1,000
+the sum of
+N over all test cases does not exceed
+5,000
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+3
+3 1 2
+4
+3 1 4 2
+YES
+2
+1 1 1
+1 2 2
+NO

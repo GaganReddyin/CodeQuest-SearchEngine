@@ -1,0 +1,164 @@
+H. Yuezheng Ling and Dynamic Tree
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Yuezheng Ling gives Luo Tianyi a tree which has
+n
+nodes, rooted at
+1
+.
+Luo Tianyi will tell you that the parent of the
+i
+-th node is
+a
+i
+(
+1≤
+a
+i
+<i
+for
+2≤i≤n
+), and she will ask you to perform
+q
+queries of
+2
+types:
+She'll give you three integers
+l
+,
+r
+and
+x
+(
+2≤l≤r≤n
+,
+1≤x≤
+10
+5
+). You need to replace
+a
+i
+with
+max(
+a
+i
+−x,1)
+for all
+i
+with
+l≤i≤r
+.
+She'll give you two integers
+u
+,
+v
+(
+1≤u,v≤n
+). You need to find the LCA of nodes
+u
+and
+v
+(their lowest common ancestor).
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n,q≤
+10
+5
+) — the number of nodes and the number of queries, respectively.
+The second line contains
+n−1
+integers
+a
+2
+,
+a
+3
+,…,
+a
+n
+(
+1≤
+a
+i
+<i
+), where
+a
+i
+is the parent of the node
+i
+.
+Next
+q
+lines contain queries. For each query, the first integer of each line is
+t
+(
+t=1
+or
+2
+) — the type of the query.
+If
+t=1
+, this represents the query of the first type. Then, three integers will follow:
+l
+,
+r
+,
+x
+(
+2≤l≤r≤n
+,
+1≤x≤
+10
+5
+), meaning that you have to replace
+a
+i
+with
+max(
+a
+i
+−x,1)
+for all
+i
+with
+l≤i≤r
+.
+If
+t=2
+, this represents the query of the second type. Then, two integers will follow:
+u
+and
+v
+(
+1≤u,v≤n
+), and you have to find the LCA of
+u
+and
+v
+.
+It's guaranteed that there is at least one query of the second type.
+Output
+For each query of the second type output answer on a new line.
+Example
+input
+Copy
+6 4
+1 2 3 3 4
+2 3 4
+1 2 3 1
+2 5 6
+2 2 3
+output
+Copy
+3
+3
+1
+Note
+The tree in example is shown below.
+After the query of the first type, the tree changes and is looking as shown below.

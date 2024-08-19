@@ -1,0 +1,111 @@
+Matchsticks
+Problem
+Chef Ceil has some matchsticks in his kitchen.
+Detail of matchsticks:
+There are
+N matchsticks in total. They are numbered from to
+0 to
+N−1 inclusive. The
+i
+th
+matchstick takes
+b
+i
+time to burn when lighted at one end, and it burns at a uniform rate.
+If lighted at both ends simultaneously, the matchstick will take only half of the original time to burn down.
+Arrangement:
+He ties rear end of the all the matchsticks together at one point and the front end is kept free. The matchstick numbered
+i is adjacent to matchstick numbered
+i+1 for all
+0≤i≤N−2.
+Bodies of matchsticks do not touch each other, except at the rear end.
+Task:
+There are
+Q queries, in each query we ask: If he lights the free end of all matchsticks numbered between
+L and
+R inclusive, what will be the time needed for all matchsticks to get completely burnt?
+Input
+First line of input contains a single integer
+N.
+The next line contains
+N space separated integers, the
+i
+th
+of which is
+b
+i
+The next line contains a single integer
+Q
+The next
+Q lines each contain two space separated integers -
+L and
+R. The
+i
+th
+line represents the
+i
+th
+query.
+Output
+For each query, print the answer on a new line.
+Constraints:
+1≤N≤10
+5
+1≤b
+i
+≤10
+8
+1≤Q≤10
+5
+0≤L≤R≤N−1
+Sample 1:
+Input
+Output
+1
+5
+1
+0 0
+5.0
+Sample 2:
+Input
+Output
+2
+3 5
+1
+0 1
+4.0
+Sample 3:
+Input
+Output
+18
+3 4 2 1 5 7 9 7 10 5 12 3 1 1 2 1 3 2
+1
+4 10
+9.0
+Explanation:
+Test Case 3: , in the figure above, yellow colored matches are lighted by a lighter simultaneously.
+The numbers indicate the time required to burn that matchstick (if lighted at one end).
+Now the first lighted matchstick will completely burn in
+5 seconds. Then it will light up all the rest matches from the rear end.
+Some matches will have fire at both ends and thus after
+5 seconds, they will start burning with twice the original rate.
+Thus time taken for matches to burn completely will be : (from left to right):
+8.0,
+9.0,
+7.0,
+6.0,
+5.0,
+6.0,
+7.0,
+6.0,
+7.5,
+5.0,
+8.5,
+8.0,
+6.0,
+6.0,
+7.0,
+6.0,
+8.0,
+7.0. So, the answer will be
+9.0 (the maximum among these).

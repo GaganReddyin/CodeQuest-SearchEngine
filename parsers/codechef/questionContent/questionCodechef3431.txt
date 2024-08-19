@@ -1,0 +1,114 @@
+LR Shirts
+Problem
+There are
+N people standing in a line from left to right. The
+i-th person from the left has a height
+H
+i
+.
+H is a permutation of
+1 to
+N.
+First, you must assign each of them a shirt with the letter
+L or
+R on it. Then you may perform the following operation any number of times (possibly zero):
+Choose a person with
+L on their shirt and move them to the left end of the line.
+Choose a person with
+R on their shirt and move them to the right end of the line.
+For example, if
+H=[4,1,2,3] and we assign the shirts to the people as
+[(4,R),(1,L),(2,L),(3,R)], then if we move person
+1 to the right end of the line the arrangement of people becomes
+[(1,L),(2,L),(3,R),(4,R)]
+An assignment of shirts is called good if it is possible to sort the people in the line in non-decreasing order of height from left to right by using this operation zero or more times.
+How many good assignments of shirts exist? Since this number may be large, print it modulo
+10
+9
++7.
+One assignment of shirts is different from another assignment if there exists at least one person who is assigned a shirt with a different letter on it.
+Input Format
+The first line of the input contains a single integer
+T - the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N - the number of people.
+The second line contains
+N space-separated integers
+H
+1
+,H
+2
+,…,H
+N
+- the heights of the
+N people.
+Output Format
+For each test case, print a single line containing one integer ― the number of good assignments of shirts modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+6
+1≤H
+i
+≤N
+H is a permutation of
+1,2,…,N.
+the sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+6
+2
+2 1
+1
+1
+5
+1 2 3 4 5
+4
+1 3 4 2
+7
+6 1 7 3 5 4 2
+9
+6 5 9 3 7 1 2 4 8
+3
+2
+32
+7
+11
+16
+Explanation:
+Test case 1:
+For the assignment
+[L,L], we can sort the line in non-decreasing order by moving person
+2 to the left end of the line.
+For the assignment
+[R,R], we can sort the line in non-decreasing order by moving person
+1 to the right end of the line.
+For the assignment
+[R,L], we can sort the line in non-decreasing order by moving person
+1 to the right end of the line or by moving person
+2 to the left end of the line.
+For the assignment
+[L,R], all possible operations don't change the order of people in the line. So it is impossible to sort line in non-descending order of height.
+Test case 2: A line with a single person is always sorted in non-decreasing order regardless of the operations performed, so both possible assignments of shirts are valid.
+Test case 3: For any assignment of shirts, we can sort the line in non-descending order by performing zero operations as the line is already sorted in non-decreasing order. So all
+2
+5
+=32 assignments of shirts are valid.
+Test case 4: The
+7 good assignments of shirts are:
+LLLL
+LRLL
+LLRL
+LRRL
+RRRL
+LRRR
+RRRR

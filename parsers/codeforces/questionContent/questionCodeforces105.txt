@@ -1,0 +1,111 @@
+D. Umka and a Long Flight
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The girl Umka loves to travel and participate in math olympiads. One day she was flying by plane to the next olympiad and out of boredom explored a huge checkered sheet of paper.
+Denote the
+n
+-th Fibonacci number as
+F
+n
+=
+⎧
+⎩
+⎨
+1,
+1,
+F
+n−2
++
+F
+n−1
+,
+n=0;
+n=1;
+n≥2.
+A checkered rectangle with a height of
+F
+n
+and a width of
+F
+n+1
+is called a Fibonacci rectangle of order
+n
+.
+Umka has a Fibonacci rectangle of order
+n
+. Someone colored a cell in it at the intersection of the row
+x
+and the column
+y
+.
+It is necessary to cut this rectangle exactly into
+n+1
+squares in such way that
+the painted cell was in a square with a side of
+1
+;
+there was at most one pair of squares with equal sides;
+the side of each square was equal to a Fibonacci number.
+Will Umka be able to cut this rectangle in that way?
+Input
+The first line contains an integer
+t
+(
+1≤t≤2⋅
+10
+5
+) — number of test cases.
+For each test case the integers
+n
+,
+x
+,
+y
+are given (
+1≤n≤44
+,
+1≤x≤
+F
+n
+,
+1≤y≤
+F
+n+1
+) — the order of the Fibonacci rectangle and the coordinates of the colored cell.
+Output
+For each test case, print "YES" if the answer is positive, and "NO" otherwise.
+You can print "YES" and "NO" in any case (for example, the strings "yEs", "yes" and "Yes" will be recognized as a positive answer).
+Example
+input
+Copy
+12
+1 1 1
+2 1 2
+3 1 4
+3 3 2
+4 4 6
+4 3 3
+5 6 5
+5 4 12
+5 2 12
+4 2 1
+1 1 2
+44 758465880 1277583853
+output
+Copy
+YES
+NO
+YES
+YES
+YES
+NO
+YES
+NO
+NO
+YES
+YES
+NO
+Note
+The first, third and fourth test cases.

@@ -1,0 +1,249 @@
+C. Fishingprince Plays With Array
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Fishingprince is playing with an array
+[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+. He also has a magic number
+m
+.
+He can do the following two operations on it:
+Select
+1≤i≤n
+such that
+a
+i
+is divisible by
+m
+(that is, there exists an integer
+t
+such that
+m⋅t=
+a
+i
+). Replace
+a
+i
+with
+m
+copies of
+a
+i
+m
+. The order of the other elements doesn't change. For example, when
+m=2
+and
+a=[2,3]
+and
+i=1
+,
+a
+changes into
+[1,1,3]
+.
+Select
+1≤i≤n−m+1
+such that
+a
+i
+=
+a
+i+1
+=⋯=
+a
+i+m−1
+. Replace these
+m
+elements with a single
+m⋅
+a
+i
+. The order of the other elements doesn't change. For example, when
+m=2
+and
+a=[3,2,2,3]
+and
+i=2
+,
+a
+changes into
+[3,4,3]
+.
+Note that the array length might change during the process. The value of
+n
+above is defined as the current length of the array (might differ from the
+n
+in the input).
+Fishingprince has another array
+[
+b
+1
+,
+b
+2
+,…,
+b
+k
+]
+. Please determine if he can turn
+a
+into
+b
+using any number (possibly zero) of operations.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+1≤n≤5⋅
+10
+4
+,
+2≤m≤
+10
+9
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+The third line of each test case contains one integer
+k
+(
+1≤k≤5⋅
+10
+4
+).
+The fourth line of each test case contains
+k
+integers
+b
+1
+,
+b
+2
+,…,
+b
+k
+(
+1≤
+b
+i
+≤
+10
+9
+).
+It is guaranteed that the sum of
+n+k
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print Yes if it is possible to turn
+a
+into
+b
+, and No otherwise. You can print each letter in any case (upper or lower).
+Example
+input
+Copy
+5
+5 2
+1 2 2 4 2
+4
+1 4 4 2
+6 2
+1 2 2 8 2 2
+2
+1 16
+8 3
+3 3 3 3 3 3 3 3
+4
+6 6 6 6
+8 3
+3 9 6 3 12 12 36 12
+16
+9 3 2 2 2 3 4 12 4 12 4 12 4 12 4 4
+8 3
+3 9 6 3 12 12 36 12
+7
+12 2 4 3 4 12 56
+output
+Copy
+Yes
+Yes
+No
+Yes
+No
+Note
+In the first test case of the sample, we can do the second operation with
+i=2
+:
+[1,2,2,4,2]→[1,4,4,2]
+.
+In the second testcase of the sample, we can:
+do the second operation with
+i=2
+:
+[1,2,2,8,2,2]→[1,4,8,2,2]
+.
+do the second operation with
+i=4
+:
+[1,4,8,2,2]→[1,4,8,4]
+.
+do the first operation with
+i=3
+:
+[1,4,8,4]→[1,4,4,4,4]
+.
+do the second operation with
+i=2
+:
+[1,4,4,4,4]→[1,8,4,4]
+.
+do the second operation with
+i=3
+:
+[1,8,4,4]→[1,8,8]
+.
+do the second operation with
+i=2
+:
+[1,8,8]→[1,16]
+.

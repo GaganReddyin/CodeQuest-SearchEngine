@@ -1,0 +1,76 @@
+Permutation Subsequence
+Problem
+Chefina has an array
+A consisting of
+N positive integers.
+A permutation subsequence of length
+M is a subsequence that represents a permutation of length
+M.
+Now, Chefina asks Chef to find the count of permutation subsequences in array
+A. The count can be very large, so output it modulo
+1000000007
+(10
+9
++7).
+As a reminder:
+A subsequence of an array is obtained by deleting some (possibly zero) elements from the array without changing the order of the remaining elements.
+A permutation of length
+M is an array of length
+M in which every element from
+1 to
+M occurs exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the length of array
+A.
+The next line contains
+N space-separated integers, the elements of the array
+A.
+Output Format
+For each test case, output on a new line, the count of permutation subsequences in array
+A, modulo
+10
+9
++7.
+Constraints
+1≤T≤2⋅10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+1 2 3 2 4
+6
+1 3 5 8 9 8
+7
+1
+Explanation:
+Test case
+1: Chef can get
+7 permutation subsequences:
+[1] ,
+[1,2] ,
+[1,2] ,
+[1,2,3] ,
+[1,3,2] ,
+[1,2,3,4] ,
+[1,3,2,4].
+Test case
+2: Chef can get
+1 permutation subsequence:
+[1]

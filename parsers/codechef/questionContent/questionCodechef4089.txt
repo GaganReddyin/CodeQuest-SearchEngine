@@ -1,0 +1,81 @@
+Binary String Game
+Problem
+There is a binary string
+S. Alice and Bob are playing a game on it.
+Each turn, the following happens:
+Alice selects a
+01 subsequence in
+S and removes it from
+S. (a
+01 subsequence is a length
+2 subsequence whose first character is
+0 and second character is
+1)
+Bob selects a
+01 subsequence in
+S and removes it from
+S.
+After both players have moved, the turn is called completed and Alice scores
+1 point. Then, the next turn begins.
+If either player is unable to move (there isn't any
+01 subsequence left in
+S), that turn ends immediately and the game ends.
+Alice tries to maximize her points, while Bob tries to minimize Alice's points. Find how many points Alice would score if both players play optimally.
+Input Format
+The first line contains a single integer
+T — the number of test cases.
+Each of the next
+T lines contains a binary string
+S.
+Output Format
+For each test case, output on a new line a single integer — Alice's score when both players play optimally.
+Constraints
+1≤T≤2⋅10
+5
+The sum of
+∣S∣ across all tests doesn't exceed
+2⋅10
+5
+Subtasks
+Subtask 1 (25 Points):
+The sum of
+∣S∣ across all tests doesn't exceed
+100
+Subtask 2 (25 Points):
+The sum of
+∣S∣ across all tests doesn't exceed
+1500
+Subtask 3 (50 Points):
+No further constraints.
+Sample 1:
+Input
+Output
+4
+01010101
+0101
+10
+01001011
+1 
+1 
+0 
+2
+Explanation:
+In the first example, this is one of the possible outcomes.
+Turn
+1:
+Alice removes subsequence
+(1,2) from
+S, so
+S becomes 010101.
+Bob removes subsequence
+(3,6) from
+S, so
+S becomes 0110.
+Alice scores one point and the first turn ends.
+Turn 2:
+Alice removes subsequence
+(1,2) from
+S, so
+S becomes 10.
+Bob has nothing to do, so the game ends immediately.
+Thus, Alice has one point in total.

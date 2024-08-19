@@ -1,0 +1,162 @@
+Yet Another LIS Problem
+Problem
+Nayra doesn't like stories of people receiving random arrays as birthday presents, but this time she received random arrays as presents for her own birthday! After struggling for a day trying to figure out what to do with the array, she asked Aryan for help. He gave her the following problem.
+You are given
+3 integers
+M,
+P and
+N.
+For an array
+A, let
+f(A) be defined as the length of the longest strictly increasing subsequence of
+A and let
+g(A)=(f(A))
+P
+.
+Consider all distinct arrays
+A of length
+N such that
+1≤A
+i
+≤M for all
+(1≤i≤N). Calculate the sum of
+g(A) over all such
+M
+N
+arrays. Since the answer can be huge, print it modulo
+754974721.
+Each test case has
+Q queries. For all
+Q queries,
+M and
+P remain the same, only
+N varies.
+Input Format
+First line will contain
+T, the number of test cases. Then the test cases follow.
+First line of each test case contains three integers
+M,P, and
+Q.
+Second line of each test case contains
+Q integers, values of
+N for each query.
+Output Format
+For each testcase, output in a single line containing
+Q space-separated integers, answers for each query modulo
+754974721.
+Constraints
+1≤T≤4
+1≤M≤14
+1≤P≤10
+6
+1≤N≤10
+9
+1≤Q≤50
+Sample 1:
+Input
+Output
+4
+1 1 2
+1 2
+2 1 2
+1 2
+2 2 2
+1 2
+2 1000000 2
+1 2
+1 1 
+2 5 
+2 7 
+2 392816544
+Explanation:
+Test case
+1: In the first query there are
+1
+1
+=1 distinct arrays. The array is :
+[1].
+f([1])= LIS of
+[1]=1. Also,
+g([1])=(f([1]))
+1
+=1
+1
+=1.
+Sum of
+g(A) is
+1.
+In the second query there are
+1
+2
+=1 distinct arrays. The array is :
+[1,1].
+f([1,1])= LIS of
+[1,1]=1. Also,
+g([1,1])=(f([1,1]))
+1
+=1
+1
+=1.
+Sum of
+g(A) is
+1.
+Test case
+2: In the first query there are
+2
+1
+=2 distinct arrays. The arrays are :
+[1] and
+[2].
+f([1])= LIS of
+[1]=1. Also,
+g([1])=(f([1]))
+1
+=1
+1
+=1.
+f([2])= LIS of
+[2]=1. Also,
+g([2])=(f([2]))
+1
+=1
+1
+=1. Sum of
+g(A) is
+1+1=2.
+In the second query there are
+2
+2
+=4 distinct arrays. The arrays are :
+[1,1],[1,2],[2,1] and
+[2,2].
+f([1,1])= LIS of
+[1,1]=1. Also,
+g([1,1])=(f([1,1]))
+1
+=1
+1
+=1.
+f([1,2])= LIS of
+[1,2]=2. Also,
+g([1,2])=(f([1,2]))
+1
+=2
+1
+=2.
+f([2,1])= LIS of
+[2,1]=1. Also,
+g([2,1])=(f([2,1]))
+1
+=1
+1
+=1.
+f([2,2])= LIS of
+[2,2]=1. Also,
+g([2,2])=(f([2,2]))
+1
+=1
+1
+=1.
+Sum of
+g(A) is
+1+2+1+1=5.

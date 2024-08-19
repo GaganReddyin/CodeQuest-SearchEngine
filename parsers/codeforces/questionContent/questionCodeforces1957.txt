@@ -1,0 +1,159 @@
+E. Skyline Photo
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice is visiting New York City. To make the trip fun, Alice will take photos of the city skyline and give the set of photos as a present to Bob. However, she wants to find the set of photos with maximum beauty and she needs your help.
+There are
+n
+buildings in the city, the
+i
+-th of them has positive height
+h
+i
+. All
+n
+building heights in the city are different. In addition, each building has a beauty value
+b
+i
+. Note that beauty can be positive or negative, as there are ugly buildings in the city too.
+A set of photos consists of one or more photos of the buildings in the skyline. Each photo includes one or more buildings in the skyline that form a contiguous segment of indices. Each building needs to be in exactly one photo. This means that if a building does not appear in any photo, or if a building appears in more than one photo, the set of pictures is not valid.
+The beauty of a photo is equivalent to the beauty
+b
+i
+of the shortest building in it. The total beauty of a set of photos is the sum of the beauty of all photos in it. Help Alice to find the maximum beauty a valid set of photos can have.
+Input
+The first line contains an integer
+n
+(
+1≤n≤3⋅
+10
+5
+), the number of buildings on the skyline.
+The second line contains
+n
+distinct integers
+h
+1
+,
+h
+2
+,…,
+h
+n
+(
+1≤
+h
+i
+≤n
+). The
+i
+-th number represents the height of building
+i
+.
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−
+10
+9
+≤
+b
+i
+≤
+10
+9
+). The
+i
+-th number represents the beauty of building
+i
+.
+Output
+Print one number representing the maximum beauty Alice can achieve for a valid set of photos of the skyline.
+Examples
+input
+Copy
+5
+1 2 3 5 4
+1 5 3 2 4
+output
+Copy
+15
+input
+Copy
+5
+1 4 3 2 5
+-3 4 -10 2 7
+output
+Copy
+10
+input
+Copy
+2
+2 1
+-2 -3
+output
+Copy
+-3
+input
+Copy
+10
+4 7 3 2 5 1 9 10 6 8
+-4 40 -46 -8 -16 4 -10 41 12 3
+output
+Copy
+96
+Note
+In the first example, Alice can achieve maximum beauty by taking five photos, each one containing one building.
+In the second example, Alice can achieve a maximum beauty of
+10
+by taking four pictures: three just containing one building, on buildings
+1
+,
+2
+and
+5
+, each photo with beauty
+−3
+,
+4
+and
+7
+respectively, and another photo containing building
+3
+and
+4
+, with beauty
+2
+.
+In the third example, Alice will just take one picture of the whole city.
+In the fourth example, Alice can take the following pictures to achieve maximum beauty: photos with just one building on buildings
+1
+,
+2
+,
+8
+,
+9
+, and
+10
+, and a single photo of buildings
+3
+,
+4
+,
+5
+,
+6
+, and
+7
+.

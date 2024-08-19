@@ -1,0 +1,48 @@
+C. Laboratory Work
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Anya and Kirill are doing a physics laboratory work. In one of the tasks they have to measure some value n times, and then compute the average value to lower the error.
+Kirill has already made his measurements, and has got the following integer values: x1, x2, ..., xn. It is important that the values are close to each other, namely, the difference between the maximum value and the minimum value is at most 2.
+Anya does not want to make the measurements, however, she can't just copy the values from Kirill's work, because the error of each measurement is a random value, and this coincidence will be noted by the teacher. Anya wants to write such integer values y1, y2, ..., yn in her work, that the following conditions are met:
+the average value of x1, x2, ..., xn is equal to the average value of y1, y2, ..., yn;
+all Anya's measurements are in the same bounds as all Kirill's measurements, that is, the maximum value among Anya's values is not greater than the maximum value among Kirill's values, and the minimum value among Anya's values is not less than the minimum value among Kirill's values;
+the number of equal measurements in Anya's work and Kirill's work is as small as possible among options with the previous conditions met. Formally, the teacher goes through all Anya's values one by one, if there is equal value in Kirill's work and it is not strike off yet, he strikes off this Anya's value and one of equal values in Kirill's work. The number of equal measurements is then the total number of strike off values in Anya's work.
+Help Anya to write such a set of measurements that the conditions above are met.
+Input
+The first line contains a single integer n (1 ≤ n ≤ 100 000) — the numeber of measurements made by Kirill.
+The second line contains a sequence of integers x1, x2, ..., xn ( - 100 000 ≤ xi ≤ 100 000) — the measurements made by Kirill. It is guaranteed that the difference between the maximum and minimum values among values x1, x2, ..., xn does not exceed 2.
+Output
+In the first line print the minimum possible number of equal measurements.
+In the second line print n integers y1, y2, ..., yn — the values Anya should write. You can print the integers in arbitrary order. Keep in mind that the minimum value among Anya's values should be not less that the minimum among Kirill's values, and the maximum among Anya's values should be not greater than the maximum among Kirill's values.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+6
+-1 1 1 0 0 -1
+output
+Copy
+2
+0 0 0 0 0 0 
+input
+Copy
+3
+100 100 101
+output
+Copy
+3
+101 100 100 
+input
+Copy
+7
+-10 -9 -10 -8 -10 -9 -9
+output
+Copy
+5
+-10 -10 -9 -9 -9 -9 -9 
+Note
+In the first example Anya can write zeros as here measurements results. The average value is then equal to the average value of Kirill's values, and there are only two equal measurements.
+In the second example Anya should write two values 100 and one value 101 (in any order), because it is the only possibility to make the average be the equal to the average of Kirill's values. Thus, all three measurements are equal.
+In the third example the number of equal measurements is 5.

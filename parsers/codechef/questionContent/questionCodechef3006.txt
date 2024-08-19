@@ -1,0 +1,26 @@
+Shuffling
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef simulating the next process, imagine that we have an array A = {1, 2, ..., M}. Split it into two arrays with equal size with odd and even indexes from it. After that let's erase in each array numbers on the place [S*X/Y], where S denoting the size of array and merge these arrays(the first element of the second array will be after the last element of the first array), after the first operation A will contain exactly M-2 elements after that, after the second operations M-4 and so on. Chef making this procedure until A has more than 2 elements. In the end he wants to know the value of bitwise XOR elements that remain. He needs your help!
+Input
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows. The first line of each test case contains three non-negative integers M, X and Y.
+Output
+Output in a single line the value of bitwise XOR of two elements that remain in the array A after M/2-1 operations split/merge as described above.
+Constraints
+1 ≤ T ≤ 1000
+1 ≤ M ≤ 106
+M is even
+0 ≤ X < Y ≤ 106
+Sum of M over all test cases ≤ 5*106
+Subtasks
+Subtask #1: (30 points) Sum of M over all test cases ≤ 104
+Subtask #2: (10 points) X = 0
+Subtask #3: (60 points) Original constraints
+Sample 1:
+Input
+Output
+1
+6 1 2
+4
+Explanation:
+Example case 1. Initially we have A = {1, 2, 3, 4, 5, 6}. After splitting in two arrays we will have A' = {1, 3, 5} and B' = {2, 4, 6}. Let's erase from 0-indexed A' and B' elements with index = [3*1/2]=1(3 and 4 respectively). After that merge A' and B' -> A = {1, 5, 2, 6}, split A once again in A' = {1, 2} and B' = {5, 6} and erase elements with index = [2*1/2]=1(2 and 6 respectively), merge arrays A' and B' -> A = {1, 5}. Answer is bitwise XOR of 1 and 5 = 4.

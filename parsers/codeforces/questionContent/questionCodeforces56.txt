@@ -1,0 +1,158 @@
+A. A-characteristic
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+consisting of numbers
+1
+and
+−1
+. Define
+A
+-characteristic of this array as a number of pairs of indices
+1≤i<j≤n
+, such that
+a
+i
+⋅
+a
+j
+=1
+.
+Find any array
+a
+with given length
+n
+with
+A
+-characteristic equal to the given value
+k
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100
+). The description of the test cases follows.
+The only line of each test case contains two integers
+n
+and
+k
+(
+2≤n≤100
+;
+0≤k≤
+(n−1)n
+2
+) — the length of required array and required
+A
+-characteristic.
+Output
+For each test case, if there is no array
+a
+with given
+A
+-characteristic
+k
+, print NO.
+Otherwise, print YES and
+n
+numbers
+1
+and
+−1
+, which form the required array
+a
+. If there are multiple answers, print any of them.
+Example
+input
+Copy
+7
+2 0
+2 1
+3 1
+3 2
+3 3
+5 4
+5 5
+output
+Copy
+YES
+1 -1 
+YES
+1 1 
+YES
+1 -1 1 
+NO
+YES
+1 1 1 
+YES
+-1 1 -1 1 1 
+NO
+Note
+In the first test case, there is only one pair of different elements in the array, and their product is
+a
+1
+⋅
+a
+2
+=−1≠1
+, hence its
+A
+-characteristic is
+0
+.
+In the second test case, there is only one pair of different elements in the array, and their product is
+a
+1
+⋅
+a
+2
+=1
+, hence its
+A
+-characteristic is
+1
+.
+In the third test case, there are three pairs of different elements in the array, and their product are:
+a
+1
+⋅
+a
+2
+=−1
+,
+a
+1
+⋅
+a
+3
+=1
+,
+a
+2
+⋅
+a
+3
+=−1
+, hence its
+A
+-characteristic is
+1
+.
+In the fourth test case, we can show, that there is no array with length
+3
+, which
+A
+-characteristic is
+2
+.

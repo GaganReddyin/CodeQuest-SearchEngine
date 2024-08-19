@@ -1,0 +1,164 @@
+E. Expand the Path
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider a grid of size
+n×n
+. The rows are numbered top to bottom from
+1
+to
+n
+, the columns are numbered left to right from
+1
+to
+n
+.
+The robot is positioned in a cell
+(1,1)
+. It can perform two types of moves:
+D — move one cell down;
+R — move one cell right.
+The robot is not allowed to move outside the grid.
+You are given a sequence of moves
+s
+ — the initial path of the robot. This path doesn't lead the robot outside the grid.
+You are allowed to perform an arbitrary number of modifications to it (possibly, zero). With one modification, you can duplicate one move in the sequence. That is, replace a single occurrence of D with DD or a single occurrence of R with RR.
+Count the number of cells such that there exists at least one sequence of modifications that the robot visits this cell on the modified path and doesn't move outside the grid.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains the single integer
+n
+(
+2≤n≤
+10
+8
+) — the number of rows and columns in the grid.
+The second line of each testcase contains a non-empty string
+s
+, consisting only of characters D and R, — the initial path of the robot. This path doesn't lead the robot outside the grid.
+The total length of strings
+s
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the number of cells such that there exists at least one sequence of modifications that the robot visits this cell on the modified path and doesn't move outside the grid.
+Example
+input
+Copy
+3
+4
+RD
+5
+DRDRDRDR
+3
+D
+output
+Copy
+13
+9
+3
+Note
+In the first testcase, it's enough to consider the following modified paths:
+RD
+→
+RRD
+→
+RRRD
+→
+RRRDD
+→
+RRRDDD — this path visits cells
+(1,1)
+,
+(1,2)
+,
+(1,3)
+,
+(1,4)
+,
+(2,4)
+,
+(3,4)
+and
+(4,4)
+;
+RD
+→
+RRD
+→
+RRDD
+→
+RRDDD — this path visits cells
+(1,1)
+,
+(1,2)
+,
+(1,3)
+,
+(2,3)
+,
+(3,3)
+and
+(4,3)
+;
+RD
+→
+RDD
+→
+RDDD — this path visits cells
+(1,1)
+,
+(1,2)
+,
+(2,2)
+,
+(3,2)
+and
+(4,2)
+.
+Thus, the cells that are visited on at least one modified path are:
+(1,1)
+,
+(1,2)
+,
+(1,3)
+,
+(1,4)
+,
+(2,2)
+,
+(2,3)
+,
+(2,4)
+,
+(3,2)
+,
+(3,3)
+,
+(3,4)
+,
+(4,2)
+,
+(4,3)
+and
+(4,4)
+.
+In the second testcase, there is no way to modify the sequence without moving the robot outside the grid. So the only visited cells are the ones that are visited on the path DRDRDRDR.
+In the third testcase, the cells that are visited on at least one modified path are:
+(1,1)
+,
+(2,1)
+and
+(3,1)
+.
+Here are the cells for all testcases:

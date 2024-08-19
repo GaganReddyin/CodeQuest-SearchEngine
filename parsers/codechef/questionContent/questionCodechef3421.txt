@@ -1,0 +1,91 @@
+Xor Array
+Problem
+You are given an array
+A consisting of
+N distinct positive integers.
+In one operation, you can:
+Choose a non-negative integer
+X;
+For all
+(1≤i≤N), set
+A
+i
+:=A
+i
+⊕X, where
+⊕ denotes the bitwise XOR operation.
+Find the maximum possible length of the longest strictly increasing subarray after performing the given operation exactly once.
+Note:
+An array
+P is a subarray of an array
+Q if
+P can be obtained from
+Q by deletion of several (possibly zero or all) elements from the beginning and several (possibly zero or all) elements from the end.
+The longest strictly increasing subarray of
+Q is the longest (having most elements) subarray of
+Q which is sorted in strictly increasing order.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input:
+The first line of each test case contains
+N - the size of the array.
+The next line contains
+N space-separated integers,
+A
+1
+,A
+2
+,…A
+N
+, the elements of the array
+A.
+Output Format
+For each test case, output on a new line, the maximum possible length of the longest strictly increasing subarray after performing the given operation exactly once.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤A
+i
+<2
+30
+Elements of array
+A are distinct.
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+3
+3
+3 2 5
+4
+10 20 30 40
+5
+14 11 9 3 7
+3
+4
+4
+Explanation:
+Test case
+1: Choose
+X=1. Thus the elements of the array become
+[3⊕1,2⊕1,5⊕1]=[2,3,4]. Thus, the longest strictly increasing subarray is
+[2,3,4] having length
+3.
+Test case
+2: Choose
+X=0. Thus the elements of the array become
+[10⊕0,20⊕0,30⊕0,40⊕0]=[10,20,30,40]. Thus, the longest strictly increasing subarray is
+[10,20,30,40] having length
+4.
+Test case
+3: Choose
+X=15. Thus the elements of the array become
+[14⊕15,11⊕15,9⊕15,3⊕15,7⊕15]=[1,4,6,12,8]. Thus, the longest strictly increasing subarray is
+[1,4,6,12] having length
+4.

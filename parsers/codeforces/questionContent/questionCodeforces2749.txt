@@ -1,0 +1,32 @@
+C. ...And after happily lived ever they
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Input
+The input contains a single integer
+a
+(
+0≤a≤63
+).
+Output
+Output a single number.
+Examples
+input
+Copy
+2
+output
+Copy
+2
+input
+Copy
+5
+output
+Copy
+24
+input
+Copy
+35
+output
+Copy
+50

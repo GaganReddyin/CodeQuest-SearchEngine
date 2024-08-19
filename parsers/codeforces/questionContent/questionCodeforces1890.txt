@@ -1,0 +1,154 @@
+B. Let's Go Hiking
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+On a weekend, Qingshan suggests that she and her friend Daniel go hiking. Unfortunately, they are busy high school students, so they can only go hiking on scratch paper.
+A permutation
+p
+is written from left to right on the paper. First Qingshan chooses an integer index
+x
+(
+1≤x≤n
+) and tells it to Daniel. After that, Daniel chooses another integer index
+y
+(
+1≤y≤n
+,
+y≠x
+).
+The game progresses turn by turn and as usual, Qingshan moves first. The rules follow:
+If it is Qingshan's turn, Qingshan must change
+x
+to such an index
+x
+′
+that
+1≤
+x
+′
+≤n
+,
+|
+x
+′
+−x|=1
+,
+x
+′
+≠y
+, and
+p
+x
+′
+<
+p
+x
+at the same time.
+If it is Daniel's turn, Daniel must change
+y
+to such an index
+y
+′
+that
+1≤
+y
+′
+≤n
+,
+|
+y
+′
+−y|=1
+,
+y
+′
+≠x
+, and
+p
+y
+′
+>
+p
+y
+at the same time.
+The person who can't make her or his move loses, and the other wins. You, as Qingshan's fan, are asked to calculate the number of possible
+x
+to make Qingshan win in the case both players play optimally.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the length of the permutation.
+The second line contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the permutation.
+Output
+Print the number of possible values of
+x
+that Qingshan can choose to make her win.
+Examples
+input
+Copy
+5
+1 2 5 4 3
+output
+Copy
+1
+input
+Copy
+7
+1 2 4 6 5 3 7
+output
+Copy
+0
+Note
+In the first test case, Qingshan can only choose
+x=3
+to win, so the answer is
+1
+.
+In the second test case, if Qingshan will choose
+x=4
+, Daniel can choose
+y=1
+. In the first turn (Qingshan's) Qingshan chooses
+x
+′
+=3
+and changes
+x
+to
+3
+. In the second turn (Daniel's) Daniel chooses
+y
+′
+=2
+and changes
+y
+to
+2
+. Qingshan can't choose
+x
+′
+=2
+because
+y=2
+at this time. Then Qingshan loses.

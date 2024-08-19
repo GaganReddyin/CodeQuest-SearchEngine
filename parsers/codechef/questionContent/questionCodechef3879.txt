@@ -1,0 +1,152 @@
+Chef and Working Plan
+Problem
+Read problem statements in Hindi, Vietnamese, Mandarin Chinese, Russian and Bengali as well.
+These days, Chef is working on opening a restaurant. Obviously, Chef dislikes running the restaurant by himself. In order to avoid such a terrible thing, he decided to hire exactly
+M workers (numbered
+1 through
+M) to help him.
+The workers will choose some positive integer constants
+a
+1
+,a
+2
+,…,a
+M
+. A worker with a constant
+a wants to be paid a fixed salary after each
+a days. Chef is very orderly, so he wants to choose a Chef-year — a period of
+x days, and a Chef-week — a period of
+y days, where
+x and
+y depend on the workers' constants in such a way that Chef can always pay each worker's salary at the end of a Chef-week and all the workers are paid their salaries at once at the end of a Chef-year.
+Chef also wants a Chef-year to be as short as possible and a Chef-week to be as long as possible. It can be shown that these conditions are satisfied when
+x is the lowest common multiple of
+a
+1
+,a
+2
+,…,a
+M
+and
+y is the greatest common divisor of
+a
+1
+,a
+2
+,…,a
+M
+. For a group of
+M workers with known
+a
+1
+,a
+2
+,…,a
+M
+, Chef then defines the value of the group as
+x
+p
+f(y)，where
+f(x)=∑
+i=0
+q
+f
+i
+x
+q−i
+is a polynomial of degree
+q.
+Now, Chef wants to know the sum of values of the group of
+M workers over all possible sequences
+a
+1
+,a
+2
+,…,a
+M
+which meet the constraint
+x≤N. Since the answer may be extremely large, you should compute it modulo
+10
+9
++7.
+Note: This problem has a stricter submission limit, each user may only submit this problem at most 50 times during the contest.
+Input
+The first line of the input contains four space-separated integers
+N,
+M,
+p and
+q.
+The second line contains
+q+1 space-separated integers
+f
+0
+,f
+1
+,…,f
+q
+— the coefficients of the polynomial
+f.
+Output
+Print a single line containing one integer — the sum of values for all possible groups of workers modulo
+10
+9
++7.
+Constraints
+1≤N≤5×10
+12
+1≤M≤10
+9
+0≤p,q≤20
+0≤f
+i
+<10
+9
++7 for each valid
+i
+f
+0
+
+=0
+Subtasks
+Subtask #1 (5 points):
+1≤N,M≤1,000
+time limit 1 second
+Subtask #2 (10 points):
+1≤N,M≤10
+7
+time limit 5 seconds
+Subtask #3 (10 points):
+M=2,p=0,q=1,f
+1
+=0
+1≤N≤10
+11
+Subtask #4 (25 points):
+1≤N≤10
+11
+Subtask #5 (50 points): original constraints
+Sample 1:
+Input
+Output
+5 2 1 1
+1 0
+99
+Explanation:
+There are
+15 possible sequences:
+[1,1],
+[1,2],
+[1,3],
+[1,4],
+[1,5],
+[2,1],
+[2,2],
+[2,4],
+[3,1],
+[3,3],
+[4,1],
+[4,2],
+[4,4],
+[5,1],
+[5,5]. The sum of corresponding values is
+1+2+3+4+5+2+4+8+3+9+4+8+16+5+25=99.

@@ -1,0 +1,113 @@
+Minimum BFS Length
+Problem
+Jack is learning Breadth first search on trees.
+He creates the actual structure of tree on the ground with
+N nodes where each edge is of unit length.
+Initially, he stands on node
+1 and starts performing BFS on this tree.
+Since he is lazy, he asks you to find the minimum possible distance that he needs to travel in order to visit all the
+N nodes using BFS.
+Note that Jack can only walk on the edges of the tree and as soon as all the nodes are visited, he stops walking.
+Please read sample explanation for clarity.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of
+N lines of input.
+The first line of each test case contains a single integer
+N, denoting the number of nodes in the tree.
+The next
+N−1 lines describe the edges. The
+i
+th
+of these
+N−1 lines contain two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, output on a new line, the minimum possible distance that he needs to travel in order to visit all the
+N nodes using BFS.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤u
+i
+,v
+i
+≤N
+u
+i
+
+=v
+i
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+5
+1 2
+1 3
+2 4
+2 5
+6
+Explanation:
+Test case
+1: Using BFS, Jack travels the nodes in the order
+[1,3,2,5,4]. The total distance covered by him is:
+Node
+1 to node
+3:
+dis(1,3)=1
+Node
+3 to node
+2:
+dis(3,2)=dis(3,1)+dis(1,2)=1+1=2
+Node
+2 to node
+5:
+dis(2,5)=1
+Node
+5 to node
+4:
+dis(5,4)=dis(5,2)+dis(2,4)=1+1=2
+Thus, the total distance travelled is
+6.
+Consider another order of visiting the nodes using BFS:
+[1,2,3,4,5]. The total distance covered by him in this order is:
+Node
+1 to node
+2:
+dis(1,2)=1
+Node
+2 to node
+3:
+dis(2,3)=dis(2,1)+dis(1,3)=1+1=2
+Node
+3 to node
+4:
+dis(3,4)=dis(3,1)+dis(1,2)+dis(2,4)=1+1+1=3
+Node
+4 to node
+5:
+dis(4,5)=dis(4,2)+dis(2,5)=1+1=2
+Thus, the total distance travelled using this order is
+8.
+It can be shown that out of all possible BFS orders,
+6 is the minimum possible distance we need to cover to visit all nodes.

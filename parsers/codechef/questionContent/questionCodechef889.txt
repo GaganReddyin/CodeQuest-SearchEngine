@@ -1,0 +1,92 @@
+Array Halves
+Problem
+Chef has a permutation
+P of length
+2⋅N. He can perform the following operation on
+P:
+Select an index
+i
+(1≤i<2⋅N) and swap
+P
+i
+and
+P
+i+1
+.
+Chef would call the permutation
+P good, if the maximum element of the first half of
+P is less than the minimum element of the second half of
+P.
+Formally
+(1≤i≤N)
+max
+P
+i
+<
+(N<i≤2⋅N)
+min
+P
+i
+.
+Find the minimum number of operations Chef needs to apply to make
+P good.
+Note: A permutation of length
+N is an array where every integer from
+1 to
+N occurs exactly once.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — half the size of the permutation
+P.
+The second line of each test case contains
+2⋅N space-separated integers
+P
+1
+,P
+2
+,…,P
+2⋅N
+denoting the permutation
+P.
+Output Format
+For each test case, output the minimum number of operations required to make
+P good.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+P is a permutation of length
+2⋅N
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+3 2 1 4
+3
+1 2 3 4 5 6
+3
+6 5 4 3 2 1
+2
+0
+9
+Explanation:
+Test case
+1: We can perform the following operations:
+Apply operation at
+i=1:
+[3,2,1,4]→[2,3,1,4]
+Apply operation at
+i=2:
+[2,3,1,4]→[2,1,3,4]
+Test case
+2:
+P is already good.

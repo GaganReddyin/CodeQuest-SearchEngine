@@ -1,0 +1,93 @@
+Penalty Shots
+Problem
+Read problem statements in Russian, Mandarin Chinese, Bengali, and Vietnamese as well.
+It's the soccer match finals in Chefland and as always it has reached the penalty shotouts. Each team is given
+5 shots to make and the team scoring a goal on the maximum number of shots wins the game. If both the teams' scores are equal, then the game is considered a draw and we would have
+2 champions.
+Given ten integers
+A
+1
+,A
+2
+,…,A
+10
+, where the odd indexed integers(
+A
+1
+,A
+3
+,
+A
+5
+,
+A
+7
+,A
+9
+) represent the outcome of the shots made by team
+1 and even indexed integers(
+A
+2
+,A
+4
+,A
+6
+,A
+8
+,A
+10
+) represent the outcome of the shots made by team
+2 (here
+A
+i
+=1 indicates that it's a goal and
+A
+i
+=0 indicates a miss), determine the winner or find if the game ends in a draw.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains ten space-separated integers
+A
+1
+,A
+2
+,…,A
+10
+.
+Output Format
+For each test case, print a single line containing one integer -
+0 if the game ends in a draw or
+1 if the first team wins or
+2 if the second team wins.
+Constraints
+1≤T≤1024
+0≤A
+i
+≤1
+Sample 1:
+Input
+Output
+4
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 1
+1 0 1 0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 1 1 0
+0
+2
+1
+1
+Explanation:
+Test case
+1: No team scores any goal, so the game ends in a draw.
+Test case
+2: The second team is able to score in their final shot, while the first team has scored 0 goals and hence the second team wins.
+Test case
+3: The first team is successfully able to make their first
+2 shots count and whereas the second team has not scored any goals. Therefore the first team wins.
+Test case
+4: Team
+2 misses their final shot and hence team
+1 wins the game with the final score of
+5−4.

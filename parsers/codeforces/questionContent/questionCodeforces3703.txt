@@ -1,0 +1,120 @@
+E. Superhero Battle
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A superhero fights with a monster. The battle consists of rounds, each of which lasts exactly
+n
+minutes. After a round ends, the next round starts immediately. This is repeated over and over again.
+Each round has the same scenario. It is described by a sequence of
+n
+numbers:
+d
+1
+,
+d
+2
+,…,
+d
+n
+(
+−
+10
+6
+≤
+d
+i
+≤
+10
+6
+). The
+i
+-th element means that monster's hp (hit points) changes by the value
+d
+i
+during the
+i
+-th minute of each round. Formally, if before the
+i
+-th minute of a round the monster's hp is
+h
+, then after the
+i
+-th minute it changes to
+h:=h+
+d
+i
+.
+The monster's initial hp is
+H
+. It means that before the battle the monster has
+H
+hit points. Print the first minute after which the monster dies. The monster dies if its hp is less than or equal to
+0
+. Print -1 if the battle continues infinitely.
+Input
+The first line contains two integers
+H
+and
+n
+(
+1≤H≤
+10
+12
+,
+1≤n≤2⋅
+10
+5
+). The second line contains the sequence of integers
+d
+1
+,
+d
+2
+,…,
+d
+n
+(
+−
+10
+6
+≤
+d
+i
+≤
+10
+6
+), where
+d
+i
+is the value to change monster's hp in the
+i
+-th minute of a round.
+Output
+Print -1 if the superhero can't kill the monster and the battle will last infinitely. Otherwise, print the positive integer
+k
+such that
+k
+is the first minute after which the monster is dead.
+Examples
+input
+Copy
+1000 6
+-100 -200 -300 125 77 -4
+output
+Copy
+9
+input
+Copy
+1000000000000 5
+-1 0 0 0 0
+output
+Copy
+4999999999996
+input
+Copy
+10 4
+-3 -6 5 4
+output
+Copy
+-1

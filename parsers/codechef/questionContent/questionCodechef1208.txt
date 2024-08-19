@@ -1,0 +1,60 @@
+XOR-ORED
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Given an array
+A of
+N non-negative integers, you can choose any non-negative integer
+X and replace every element
+A
+i
+with
+(A
+i
+⊕X) Here,
+⊕ denotes the bitwise XOR operation.
+Using the above operation exactly once, your goal is to minimize the bitwise OR of the new array. In other words, find
+X such that
+(A
+1
+⊕X)∨⋯∨(A
+N
+⊕X) is minimized, where
+∨ denotes the bitwise OR operation.
+Find the value of
+X and the minimum possible bitwise OR of the new array.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then
+T test cases follow.
+The first line of each test case contains a single integer
+N - the length of the array.
+The next line contains
+N integers
+A
+1
+,…,A
+N
+.
+Output Format
+For each test case, print two integers:
+X and the minimum possible bitwise OR of the new array.
+If there are multiple values of
+X that achieve the minimum bitwise OR, print any of them.
+Constraints
+1≤T≤5000
+1≤N≤100
+0≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+1
+2
+4 6
+6 2
+Explanation:
+Here, if we take
+X=6, then our expression would become
+(4⊕6)∨(6⊕6)=2∨0=2, which is the minimum possible.

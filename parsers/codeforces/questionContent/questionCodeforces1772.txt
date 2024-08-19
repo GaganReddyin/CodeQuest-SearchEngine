@@ -1,0 +1,179 @@
+D. Explorer Space
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are wandering in the explorer space of the 2050 Conference.
+The explorer space can be viewed as an undirected weighted grid graph with size
+n×m
+. The set of vertices is
+{(i,j)|1≤i≤n,1≤j≤m}
+. Two vertices
+(
+i
+1
+,
+j
+1
+)
+and
+(
+i
+2
+,
+j
+2
+)
+are connected by an edge if and only if
+|
+i
+1
+−
+i
+2
+|+|
+j
+1
+−
+j
+2
+|=1
+.
+At each step, you can walk to any vertex connected by an edge with your current vertex. On each edge, there are some number of exhibits. Since you already know all the exhibits, whenever you go through an edge containing
+x
+exhibits, your boredness increases by
+x
+.
+For each starting vertex
+(i,j)
+, please answer the following question: What is the minimum possible boredness if you walk from
+(i,j)
+and go back to it after exactly
+k
+steps?
+You can use any edge for multiple times but the boredness on those edges are also counted for multiple times. At each step, you cannot stay on your current vertex. You also cannot change direction while going through an edge. Before going back to your starting vertex
+(i,j)
+after
+k
+steps, you can visit
+(i,j)
+(or not) freely.
+Input
+The first line contains three integers
+n
+,
+m
+and
+k
+(
+2≤n,m≤500,1≤k≤20
+).
+The
+j
+-th number (
+1≤j≤m−1
+) in the
+i
+-th line of the following
+n
+lines is the number of exibits on the edge between vertex
+(i,j)
+and vertex
+(i,j+1)
+.
+The
+j
+-th number (
+1≤j≤m
+) in the
+i
+-th line of the following
+n−1
+lines is the number of exibits on the edge between vertex
+(i,j)
+and vertex
+(i+1,j)
+.
+The number of exhibits on each edge is an integer between
+1
+and
+10
+6
+.
+Output
+Output
+n
+lines with
+m
+numbers each. The
+j
+-th number in the
+i
+-th line,
+answe
+r
+ij
+, should be the minimum possible boredness if you walk from
+(i,j)
+and go back to it after exactly
+k
+steps.
+If you cannot go back to vertex
+(i,j)
+after exactly
+k
+steps,
+answe
+r
+ij
+should be
+−1
+.
+Examples
+input
+Copy
+3 3 10
+1 1
+1 1
+1 1
+1 1 1
+1 1 1
+output
+Copy
+10 10 10
+10 10 10
+10 10 10
+input
+Copy
+2 2 4
+1
+3
+4 2
+output
+Copy
+4 4
+10 6
+input
+Copy
+2 2 3
+1
+2
+3 4
+output
+Copy
+-1 -1
+-1 -1
+Note
+In the first example, the answer is always
+10
+no matter how you walk.
+In the second example,
+answe
+r
+21
+=10
+, the path is
+(2,1)→(1,1)→(1,2)→(2,2)→(2,1)
+, the boredness is
+4+1+2+3=10
+.

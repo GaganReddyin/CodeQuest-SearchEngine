@@ -1,0 +1,90 @@
+Maximum Diversity
+Problem
+For a given array
+B, we can divide the array into
+2 non-empty subsequences, such that, each element of the array is present in exactly one of the subsequences.
+Let
+X and
+Y denote the GCD of all elements of the first and second subsequence respectively.
+We define the maximum diversity of the array
+B as:
+MXDV(B)=max(X−Y), over all possible pairs of subsequences.
+Given an array
+A of
+N non-negative integers and a non-negative integer
+K, find the length of the smallest subarray
+S of array
+A such that
+MXDV(S)≥K.
+If no such subarray exists, print
+−1.
+Input Format
+First line contains
+T − the number of test cases. The description of the test cases is as follows.
+The first line of each test case contains two integers
+N,
+K − the length of array
+A and the value of
+K.
+The second line of each test case contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output a single integer − the length of the smallest subarray
+S of array
+A such that
+MXDV(S)≥K. If no such subarray exists, print
+−1.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+0≤K≤10
+6
+1≤A
+i
+≤10
+6
+Sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+6 5
+10 3 9 12 12 8
+6 8
+10 3 9 12 12 8
+6 10
+10 3 9 12 12 8
+2
+3
+4
+Explanation:
+Test case
+1: One possible subarray
+S can be
+[3,9] and the subsequences thus formed can be
+[9],
+[3]. The value of
+X−Y=9−3=6. It can be shown that this is the smallest array for which
+MXDV(S)=6≥5.
+Test case
+2: One of the possible subarray
+S can be
+[10,3,9] and the subsequences thus formed can be
+[9],
+[10,3]. The value of
+X−Y=9−1=8. It can be proven that there is no subarray
+S with less than
+3 elements which can have
+MXDV(S)=8≥8.

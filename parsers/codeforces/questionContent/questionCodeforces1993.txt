@@ -1,0 +1,228 @@
+F. Unusual Matrix
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two binary square matrices
+a
+and
+b
+of size
+n×n
+. A matrix is called binary if each of its elements is equal to
+0
+or
+1
+. You can do the following operations on the matrix
+a
+arbitrary number of times (0 or more):
+vertical xor. You choose the number
+j
+(
+1≤j≤n
+) and for all
+i
+(
+1≤i≤n
+) do the following:
+a
+i,j
+:=
+a
+i,j
+⊕1
+(
+⊕
+ — is the operation xor (exclusive or)).
+horizontal xor. You choose the number
+i
+(
+1≤i≤n
+) and for all
+j
+(
+1≤j≤n
+) do the following:
+a
+i,j
+:=
+a
+i,j
+⊕1
+.
+Note that the elements of the
+a
+matrix change after each operation.
+For example, if
+n=3
+and the matrix
+a
+is:
+⎛
+⎝
+⎜
+1
+0
+1
+1
+0
+1
+0
+1
+0
+⎞
+⎠
+⎟
+Then the following sequence of operations shows an example of transformations:
+vertical xor,
+j=1
+.
+a=
+⎛
+⎝
+⎜
+0
+1
+0
+1
+0
+1
+0
+1
+0
+⎞
+⎠
+⎟
+horizontal xor,
+i=2
+.
+a=
+⎛
+⎝
+⎜
+0
+0
+0
+1
+1
+1
+0
+0
+0
+⎞
+⎠
+⎟
+vertical xor,
+j=2
+.
+a=
+⎛
+⎝
+⎜
+0
+0
+0
+0
+0
+0
+0
+0
+0
+⎞
+⎠
+⎟
+Check if there is a sequence of operations such that the matrix
+a
+becomes equal to the matrix
+b
+.
+Input
+The first line contains one integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Then
+t
+test cases follow.
+The first line of each test case contains one integer
+n
+(
+1≤n≤1000
+) — the size of the matrices.
+The following
+n
+lines contain strings of length
+n
+, consisting of the characters '0' and '1' — the description of the matrix
+a
+.
+An empty line follows.
+The following
+n
+lines contain strings of length
+n
+, consisting of the characters '0' and '1' — the description of the matrix
+b
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+1000
+.
+Output
+For each test case, output on a separate line:
+"YES", there is such a sequence of operations that the matrix
+a
+becomes equal to the matrix
+b
+;
+"NO" otherwise.
+You can output "YES" and "NO" in any case (for example, the strings yEs, yes, Yes and YES will be recognized as positive).
+Example
+input
+Copy
+3
+3
+110
+001
+110
+
+000
+000
+000
+3
+101
+010
+101
+
+010
+101
+010
+2
+01
+11
+
+10
+10
+output
+Copy
+YES
+YES
+NO
+Note
+The first test case is explained in the statements.
+In the second test case, the following sequence of operations is suitable:
+horizontal xor,
+i=1
+;
+horizontal xor,
+i=2
+;
+horizontal xor,
+i=3
+;
+It can be proved that there is no sequence of operations in the third test case so that the matrix
+a
+becomes equal to the matrix
+b
+.

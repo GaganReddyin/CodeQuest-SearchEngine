@@ -1,0 +1,117 @@
+The One Where They Get Back Together
+Problem
+F.R.I.E.N.D.S stars Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer have come together for the much-awaited reunion. The whole cast is going to shoot for the episode on the sets of their show. Being a huge fan, Chef's family is excited to watch the live shoot.
+The set has infinite rows with infinite seats in each row for the audience. The seats are numbered starting from
+1 as shown in the image above. Let the seat number of the seat in the
+i
+th
+row and
+j
+th
+column be
+S
+i,j
+. The price of a seat is equal to the seat number of that particular seat.
+Chef wants to reserve exactly
+N seats for his family members such that the reserved seats form a rectangle and all the family members stay together.
+Chef is allowed to choose a reduction price
+X. After choosing the value of reduction price; if Chef has chosen the seat in the
+i
+th
+row and
+j
+th
+column, the price of this seat becomes
+∣S
+i,j
+−X∣ for Chef. The total price of the seats selected by Chef is equal to the sum of individual prices of seats (after applying the reduction price).
+Find the minimum possible total price Chef will have to pay for a selection of seats which form a rectangle of area exactly
+N. Since this number can be huge, print it modulo (
+10
+9
++7).
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, one integer
+N, denoting the number of people in Chef's family.
+Output Format
+For each testcase, output in a single line the minimum price Chef has to pay for reserving
+N seats modulo (
+10
+9
++7).
+Constraints
+1≤T≤2000
+1≤N≤4∗10
+5
+Sample 1:
+Input
+Output
+3
+1
+4
+2021
+0
+5
+1364637
+Explanation:
+Test case 1: One of the possible optimal selections would be seat number
+5 and
+X =
+5. Cost equals |seat number - X|, i.e.
+0.
+Test case 2: Chef needs
+4 seats. Some possible selections are shown through rectangles in red, purple and green.
+Seats coloured in purple:
+[2,4,7,11]. If Chef chooses
+X =
+2, Cost is |
+2 -
+2| + |
+4 -
+2| + |
+7 -
+2| + |
+11 -
+2| =
+16. For
+X =
+11, Cost is |
+2 -
+11| + |
+4 -
+11| + |
+7 -
+11| + |
+11 -
+11| =
+20.
+Seats coloured in red:
+[1,2,3,5]. If Chef chooses
+X =
+1, Cost is |
+1 -
+1| + |
+2 -
+1| + |
+3 -
+1| + |
+5 -
+1| =
+7. For
+X =
+3, Cost is |
+1 -
+3| + |
+2 -
+3| + |
+3 -
+3| + |
+5 -
+3| =
+5. We can calculate the cost for other values of
+X similarly.
+In this case, one of the optimal selections would be seats coloured in red, with
+X =
+3.

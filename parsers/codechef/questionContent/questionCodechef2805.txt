@@ -1,0 +1,84 @@
+Maximum Palindrome
+Problem
+You are given an integer
+N≥2. Construct string
+S of length
+N containing only lowercase Latin alphabets, such that
+S contains at least
+2 distinct characters.
+The number of circular shifts of
+S which are palindromes is maximum among all strings of length
+N containing at least
+2 distinct characters.
+If there are multiple possible strings satisfying this condition, you may print any of them.
+Note that a string of length
+N has exactly
+N circular shifts - even if some of them might be equal as strings, they are considered to be different shifts as long as they are obtained by shifting
+S by different amounts. For example,
+ababab has
+6 circular shifts even though they only form
+2 distinct strings between them (namely
+ababab and
+bababa).
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line of input, containing one integer
+N - the length of the string to be constructed.
+Output Format
+For each test case, output in a single line the string
+S you construct.
+Note: You will get a Wrong Answer verdict if any of the following cases occur:
+The length of the output string is not equal to
+N.
+The output string has characters other than lowercase Latin alphabets, i.e,
+[a−z].
+The output string has all characters the same.
+There exists a string
+S
+′
+of length
+N with at least
+2 distinct characters, such that the output string has strictly fewer circular shifts being palindromes than
+S
+′
+does.
+Constraints
+1≤T≤1000
+2≤N≤2⋅10
+5
+Sum of
+N over all tests is atmost
+2⋅10
+5
+.
+S must contain only lowercase Latin alphabets.
+S must contain at least
+2 distinct characters.
+Sample 1:
+Input
+Output
+3
+2
+3
+6
+ab
+gcc
+abccba
+Explanation:
+Test Case
+1: No palindrome is possible with a string of length
+2 having
+2 distinct characters.
+Test Case
+2: At most one circular shift of a string of length
+3 can be a palindrome. For the given string
+gcc, the circular shifts are
+{gcc, cgc, ccg} of which only
+cgc is a palindrome.
+Test Case
+3: At most two circular shifts of a string of length
+6 can be a palindrome. For the given string
+abccba, the circular shifts are
+{abccba, aabccb, baabcc, cbaabc, ccbaab, bccbaa}, out of which only the first and fourth strings are palindromes.

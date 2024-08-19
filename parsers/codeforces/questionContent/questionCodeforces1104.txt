@@ -1,0 +1,172 @@
+E. Special Positions
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of length
+n
+. Also you are given
+m
+distinct positions
+p
+1
+,
+p
+2
+,…,
+p
+m
+(
+1≤
+p
+i
+≤n
+).
+A non-empty subset of these positions
+T
+is randomly selected with equal probability and the following value is calculated:
+∑
+i=1
+n
+(
+a
+i
+⋅
+min
+j∈T
+|i−j|).
+n
+In other word, for each index of the array,
+a
+i
+and the distance to the closest chosen position are multiplied, and then these values are summed up.
+Find the expected value of this sum.
+This value must be found modulo
+998244353
+. More formally, let
+M=998244353
+. It can be shown that the answer can be represented as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≠0
+(mod
+M
+). Output the integer equal to
+p⋅
+q
+−1
+(mod
+M
+). In other words, output such integer
+x
+that
+0≤x<M
+and
+x⋅q=p
+(mod
+M
+).
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤m≤n≤
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+<998244353
+).
+The third line contains
+m
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+m
+(
+1≤
+p
+i
+≤n
+).
+For every
+1≤i<m
+it is guaranteed that
+p
+i
+<
+p
+i+1
+.
+Output
+Print a single integer — the answer to the problem.
+Examples
+input
+Copy
+4 2
+1 2 3 4
+1 4
+output
+Copy
+665496247
+input
+Copy
+6 6
+4 2 4 2 4 2
+1 2 3 4 5 6
+output
+Copy
+855638030
+Note
+In the first test:
+If only
+1
+is choosen, than the value equals to
+1⋅0+2⋅1+3⋅2+4⋅3=20
+.
+If only
+4
+is choosen, than the value equals to
+1⋅3+2⋅2+3⋅1+4⋅0=10
+.
+If both positions are chosen, than the value equals to
+1⋅0+2⋅1+3⋅1+4⋅0=5
+.
+The answer to the problem is
+20+10+5
+3
+=
+35
+3
+=665496247
+(modulo
+998244353
+).

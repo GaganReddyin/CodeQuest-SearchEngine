@@ -1,0 +1,127 @@
+Counting Is Fun
+Problem
+Suppose
+f(X,Y,Z) denotes the number of arrays
+A of length
+X such that:
+1≤A
+i
+≤Y, for all
+(1≤i≤X);
+There are at most
+Z values of
+i
+(2≤i≤X) such that
+A
+i
+=A
+i−1
+. In other words, for at most
+Z indices, the element at a given index is equal to the previous element.
+You are given an integer
+M and
+Q queries. The
+i
+th
+query is of the form:
+N
+i
+K
+i
+: Given integers
+N
+i
+and
+K
+i
+, find the value
+f(N
+i
+,M,K
+i
+).
+Since output might be too large, print it modulo
+998244353.
+Input Format
+The first line of input contains a single integer
+M.
+The second line of input contains an integer
+Q, the number of queries.
+Each of the next
+Q lines contains two integers
+N
+i
+and
+K
+i
+.
+Output Format
+Print
+Q lines, where, in the
+i
+th
+line, print a single integer
+f(N
+i
+,M,K
+i
+), the answer for
+i
+th
+query modulo
+998244353.
+Constraints
+2≤M≤10
+3
+1≤Q≤10
+5
+2≤N
+i
+≤10
+5
+0≤K
+i
+≤N
+i
+−1
+Sample 1:
+Input
+Output
+2
+3
+3 2
+3 1
+3 0
+8
+6
+2
+Explanation:
+Suppose
+g(A) gives number of indices
+i
+(2≤i≤∣A∣) such that
+A
+i
+=A
+i−1
+.
+Arrays
+A having:
+g(A)=0:
+[1,2,1],
+[2,1,2].
+g(A)=1:
+[1,1,2],
+[2,1,1],
+[1,2,2],
+[2,2,1]
+g(A)=2:
+[1,1,1],
+[2,2,2]
+Now we can answer queries easily.
+Query 1:
+f(3,2,2)=g(0)+g(1)+g(2)=8
+Query 2:
+f(3,2,1)=g(0)+g(1)=6
+Query 3:
+f(3,2,0)=g(0)=2

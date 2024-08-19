@@ -1,0 +1,157 @@
+H. Zigu Zagu
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a binary string
+a
+of length
+n
+consisting only of digits
+0
+and
+1
+.
+You are given
+q
+queries. In the
+i
+-th query, you are given two indices
+l
+and
+r
+such that
+1≤l≤r≤n
+.
+Let
+s=a[l,r]
+. You are allowed to do the following operation on
+s
+:
+Choose two indices
+x
+and
+y
+such that
+1≤x≤y≤|s|
+. Let
+t
+be the substring
+t=s[x,y]
+. Then for all
+1≤i≤|t|−1
+, the condition
+t
+i
+≠
+t
+i+1
+has to hold. Note that
+x=y
+is always a valid substring.
+Delete the substring
+s[x,y]
+from
+s
+.
+For each of the
+q
+queries, find the minimum number of operations needed to make
+s
+an empty string.
+Note that for a string
+s
+,
+s[l,r]
+denotes the subsegment
+s
+l
+,
+s
+l+1
+,…,
+s
+r
+.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n,q≤2⋅
+10
+5
+)  — the length of the binary string
+a
+and the number of queries respectively.
+The second line contains a binary string
+a
+of length
+n
+(
+a
+i
+∈{0,1}
+).
+Each of the next
+q
+lines contains two integers
+l
+and
+r
+(
+1≤l≤r≤n
+)  — representing the substring of each query.
+Output
+Print
+q
+lines, the
+i
+-th line representing the minimum number of operations needed for the
+i
+-th query.
+Examples
+input
+Copy
+5 3
+11011
+2 4
+1 5
+3 5
+output
+Copy
+1
+3
+2
+input
+Copy
+10 3
+1001110110
+1 10
+2 5
+5 10
+output
+Copy
+4
+2
+3
+Note
+In the first test case,
+The substring is
+101
+, so we can do one operation to make the substring empty.
+The substring is
+11011
+, so we can do one operation on
+s[2,4]
+to make
+11
+, then use two more operations to make the substring empty.
+The substring is
+011
+, so we can do one operation on
+s[1,2]
+to make
+1
+, then use one more operation to make the substring empty.

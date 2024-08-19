@@ -1,0 +1,191 @@
+Bad Luck
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+Chef has failed miserably in several cooking competitions, which makes him think that he's been out of luck recently. Therefore, he decided to build a magic circle using his
+N chopsticks (numbered
+1 through
+N), hoping that it would somehow improve his luck.
+The magic circle consists of
+N chopsticks placed on an infinite straight line (so it's not actually a circle). The line is drawn on the ground and chopsticks should be stuck vertically into the ground.
+The chopsticks have lengths
+x
+1
+,x
+2
+,⋯,x
+N
+. For each valid
+i, the
+i-th chopstick can be placed on the line at any integer position
+y
+i
+; then it casts a shadow on the range
+[y
+i
+,y
+i
++x
+i
+] on the line. No two chopsticks may be placed at the same position.
+The positions of the chopsticks should satisfy an additional condition: for each pair of neighbouring chopsticks
+i and
+j (such that there are no other chopsticks between them), the distances between these neighbouring chopsticks
+∣y
+i
+−y
+j
+∣ must fall in a given range
+[L,U].
+The magic power of the circle depends on the total shadowed length
+S=∣⋃
+i
+[y
+i
+,y
+i
++x
+i
+]∣. While Chef expects the circle to have the maximum effect, he must prepare for the worst-case scenario — due to his recent bad luck. Please help Chef find both the minimum and the maximum value of
+S.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+L and
+U.
+The second line contains
+N space-separated integers
+x
+1
+,x
+2
+,⋯,x
+N
+.
+Output Format
+For each test case, print a single line containing two space-separated integers
+S
+min
+and
+S
+max
+.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤L≤U≤10
+9
+1≤x
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (5 points):
+T≤5
+N≤3
+Subtask #2 (15 points):
+T≤5
+N≤11, and additionally
+N>5 in at most one test case
+Subtask #3 (30 points):
+N≤200
+Subtask #4 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+2 2 4
+8 5
+3 1 2
+1 2 3
+5 3 5
+1 9 2 6 6
+8 12
+3 6
+13 22
+Explanation:
+Example case 1:
+To minimize
+S, we may set
+y
+1
+=0 and
+y
+2
+=2.
+To maximize
+S, we may set
+y
+1
+=4 and
+y
+2
+=0.
+Example case 2:
+To minimize
+S, we may set
+y
+1
+=2,
+y
+2
+=1 and
+y
+3
+=0.
+To maximize
+S, we may set
+y
+1
+=0,
+y
+2
+=1 and
+y
+3
+=3.
+Example case 3:
+To minimize
+S, we may set
+y
+1
+=0,
+y
+2
+=3,
+y
+3
+=12,
+y
+4
+=6 and
+y
+5
+=9.
+To maximize
+S, we may set
+y
+1
+=0,
+y
+2
+=20,
+y
+3
+=5,
+y
+4
+=10 and
+y
+5
+=15.

@@ -1,0 +1,31 @@
+C. Simple Strings
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+zscoder loves simple strings! A string t is called simple if every pair of adjacent characters are distinct. For example ab, aba, zscoder are simple whereas aa, add are not simple.
+zscoder is given a string s. He wants to change a minimum number of characters so that the string s becomes simple. Help him with this task!
+Input
+The only line contains the string s (1 ≤ |s| ≤ 2·105) — the string given to zscoder. The string s consists of only lowercase English letters.
+Output
+Print the simple string s' — the string s after the minimal number of changes. If there are multiple solutions, you may output any of them.
+Note that the string s' should also consist of only lowercase English letters.
+Examples
+input
+Copy
+aab
+output
+Copy
+bab
+input
+Copy
+caaab
+output
+Copy
+cabab
+input
+Copy
+zscoder
+output
+Copy
+zscoder

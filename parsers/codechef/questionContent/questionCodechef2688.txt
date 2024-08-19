@@ -1,0 +1,144 @@
+Alice and the Array
+Problem
+Alice is playing a game with permutations of size
+N.
+She selects a random permutation
+P of size
+N and a random index
+i
+(1≤i≤N);
+She keeps incrementing the index
+i until:
+The next element is greater than the current element
+(P
+(i+1)
+>P
+i
+), or;
+She reaches the last index
+(i=N).
+Find the expected number of indices that Alice will visit throughout the game.
+It can be shown that this expected value can be expressed as a fraction
+Q
+P
+, where
+P and
+Q are coprime integers,
+P≥0,Q>0 and
+Q is coprime with
+10
+9
++7. You should compute
+P⋅Q
+−1
+%(10
+9
++7), where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+10
+9
++7.
+Note that a permutation of size
+N consists of all integers from
+1 to
+N, where each element is present exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of single lines of input containing an integer
+N, the size of permutation.
+Output Format
+For each test case, print in a single line, the expected number of indices that Alice will visit throughout the game.
+It can be shown that this expected value can be expressed as a fraction
+Q
+P
+, where
+P and
+Q are coprime integers,
+P≥0,Q>0 and
+Q is coprime with
+10
+9
++7. You should compute
+P⋅Q
+−1
+%(10
+9
++7), where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+3
+1≤N≤2⋅10
+5
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+1
+250000003
+388888893
+Explanation:
+Test case
+1: There is only one possible way to select a permutation of size
+1 and an index from the permutation
+1. Thus, we choose
+P={1} and
+i=1. The number of indices covered after this choice is
+1.
+Test case
+2: The possible cases are:
+P={1,2} and
+i=1: We cannot increment the index
+i=1 as
+P
+2
+>P
+1
+. Thus, number of indices covered is
+1.
+P={1,2} and
+i=2: We cannot increment the index
+i=2 as it is the last index. Thus, number of indices covered is
+1.
+P={2,1} and
+i=1: We can increment the index
+i=1 as
+P
+2
+<P
+1
+. We reach index
+i=2. Now we cannot increment the index. Thus, number of indices covered is
+2.
+P={2,1} and
+i=2: We cannot increment the index
+i=2 as it is the last index. Thus, number of indices covered is
+1.
+Thus, the expected value of number of indices visited is
+4
+3
+⋅1+
+4
+1
+⋅2=
+4
+5
+.

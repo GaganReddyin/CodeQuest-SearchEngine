@@ -1,0 +1,6 @@
+11. Labyrinth-11
+time limit per test8 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+See the problem statement here: http://codeforces.com/contest/921/problem/01.

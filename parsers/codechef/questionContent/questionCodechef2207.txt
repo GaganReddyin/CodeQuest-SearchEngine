@@ -1,0 +1,96 @@
+Binary Concatenation 
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider the following function, where + denotes string concatenation.
+function BinaryConcatenation(integer X, integer Y):
+        string binX = binary representation of X without leading zeroes
+        string binY = binary representation of Y without leading zeroes
+
+        string binXplusY = binX + binY
+        string binYplusX = binY + binX
+
+        integer XplusY = Convert binary representation binXplusY to integer
+        integer YplusX = Convert binary representation binYplusX to integer
+        return XplusY - YplusX
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+, Find the maximum value of BinaryConcatenation(
+A
+i
+,
+A
+j
+) over all valid
+i and
+j.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the maximum of BinaryConcatenation.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+5
+1≤A
+i
+<2
+30
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (50 points): the sum of
+N over all test cases does not exceed
+1,000
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+2
+5 9
+7
+1 2 4 8 16 64 128
+12
+127
+Explanation:
+Example case 1: The maximum value is
+12= BinaryConcatenation(
+5,
+9). The function computes the following:
+binX = "101"
+binY = "1001"
+binXplusY = "1011001"
+binYplusX = "1001101"
+XplusY =
+89
+YplusX =
+77
+the return value is
+89−77=12
+Example case 2: The maximum value is
+127= BinaryConcatenation(
+1,
+128).

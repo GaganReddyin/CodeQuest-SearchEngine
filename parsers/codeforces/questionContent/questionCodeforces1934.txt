@@ -1,0 +1,87 @@
+G. String Counting
+time limit per test10 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You have
+c
+1
+letters 'a',
+c
+2
+letters 'b', ...,
+c
+26
+letters 'z'. You want to build a beautiful string of length
+n
+from them (obviously, you cannot use the
+i
+-th letter more than
+c
+i
+times). Each
+c
+i
+is greater than
+n
+3
+.
+A string is called beautiful if there are no palindromic contiguous substrings of odd length greater than
+1
+in it. For example, the string "abacaba" is not beautiful, it has several palindromic substrings of odd length greater than
+1
+(for example, "aca"). Another example: the string "abcaa" is beautiful.
+Calculate the number of different strings you can build, and print the answer modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+3≤n≤400
+).
+The second line contains
+26
+integers
+c
+1
+,
+c
+2
+, ...,
+c
+26
+(
+n
+3
+<
+c
+i
+≤n
+).
+Output
+Print one integer — the number of strings you can build, taken modulo
+998244353
+.
+Examples
+input
+Copy
+4
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+output
+Copy
+422500
+input
+Copy
+3
+2 2 2 2 2 2 3 3 3 2 2 2 2 2 2 3 3 3 2 2 3 2 2 3 2 2
+output
+Copy
+16900
+input
+Copy
+400
+348 322 247 158 209 134 151 267 268 176 214 379 372 291 388 135 147 304 169 149 193 351 380 368 181 340
+output
+Copy
+287489790

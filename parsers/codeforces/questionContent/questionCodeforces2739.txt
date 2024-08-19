@@ -1,0 +1,102 @@
+E. Height All the Same
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Alice has got addicted to a game called Sirtet recently.
+In Sirtet, player is given an
+n×m
+grid. Initially
+a
+i,j
+cubes are stacked up in the cell
+(i,j)
+. Two cells are called adjacent if they share a side. Player can perform the following operations:
+stack up one cube in two adjacent cells;
+stack up two cubes in one cell.
+Cubes mentioned above are identical in height.
+Here is an illustration of the game. States on the right are obtained by performing one of the above operations on the state on the left, and grey cubes are added due to the operation.
+Player's goal is to make the height of all cells the same (i.e. so that each cell has the same number of cubes in it) using above operations.
+Alice, however, has found out that on some starting grids she may never reach the goal no matter what strategy she uses. Thus, she is wondering the number of initial grids such that
+L≤
+a
+i,j
+≤R
+for all
+1≤i≤n
+,
+1≤j≤m
+;
+player can reach the goal using above operations.
+Please help Alice with it. Notice that the answer might be large, please output the desired value modulo
+998,244,353
+.
+Input
+The only line contains four integers
+n
+,
+m
+,
+L
+and
+R
+(
+1≤n,m,L,R≤
+10
+9
+,
+L≤R
+,
+n⋅m≥2
+).
+Output
+Output one integer, representing the desired answer modulo
+998,244,353
+.
+Examples
+input
+Copy
+2 2 1 1
+output
+Copy
+1
+input
+Copy
+1 2 1 2
+output
+Copy
+2
+Note
+In the first sample, the only initial grid that satisfies the requirements is
+a
+1,1
+=
+a
+2,1
+=
+a
+1,2
+=
+a
+2,2
+=1
+. Thus the answer should be
+1
+.
+In the second sample, initial grids that satisfy the requirements are
+a
+1,1
+=
+a
+1,2
+=1
+and
+a
+1,1
+=
+a
+1,2
+=2
+. Thus the answer should be
+2
+.

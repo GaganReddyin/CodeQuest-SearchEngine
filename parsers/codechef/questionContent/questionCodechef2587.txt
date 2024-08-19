@@ -1,0 +1,72 @@
+Maximum Size Hollow Square
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Vietnamese, and Bengali as well.
+You are given a grid with
+N rows and
+M columns, where each cell contains either '0' or '1'.
+You may perform the following operation up to
+K times: choose two different cells and swap the values in them. Find the largest possible side length of a square subgrid which contains only '0'-s after performing these operations.
+Input
+The first line of the input contains a single integer
+T, total number of testcases.
+Each testcase contains
+N+1 lines of input.
+The first line contains three space-separated integers
+N,
+M and
+K.
+N lines follow. For each valid
+i, the
+i-th of these lines contains a single string with length
+M describing the
+i-th row of the grid.
+Output
+For each testcase, print a single line containing one integer ― the largest side length of a square subgrid containing only '0'-s.
+Constraints
+1≤T≤2000
+1≤N,M≤1000
+0≤K≤N∗M
+Sum of
+N∗M over all tests is atmost
+3∗10
+6
+Each string contains only characters '0' and '1'
+Example Input
+3
+5 5 10
+11111
+10001
+10001
+10001
+11111
+3 7 1
+1100110
+1000111
+1100011
+3 7 2
+1100110
+1000111
+1100011
+Example Output
+3
+2
+3
+Explanation
+Case 1: Since all the '0'-s in the grid already form a square with side length
+3, no swaps are required.
+Case 2: If we could swap the values in pairs of cells
+(0,1),
+(0,6) and
+(2,1),
+(2,4), we would get a square with side length
+3 using
+2 swaps. But since the maximum possible number of swaps is
+1, the answer cannot be greater than
+2.
+Case 3: We can swap the values in pairs of cells
+(0,1),
+(0,6) and
+(2,1),
+(2,4). Then, we get a square with side length
+3 using
+2 swaps.

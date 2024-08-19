@@ -1,0 +1,101 @@
+Permutation Deletion
+Problem
+You are given an array
+A of length
+N, which initially is a permutation of integers from
+1 to
+N.
+We want to make the array empty by performing the following operation
+N times: choose any index
+i and remove
+A
+i
+from
+A, which decrements the size of
+A by
+1.
+We will perform exactly
+N such operations. Apparently, there are
+N! ways to do this. But now we wonder how many ways satisfy that, during the process, the array doesn't contain any consecutive monotone triples?
+A consecutive monotone triple is a tuple of consecutive elements
+(i,i+1,i+2) which satisfy
+A
+i
+<A
+i+1
+<A
+i+2
+or
+A
+i
+>A
+i+1
+>A
+i+2
+.
+Since the answer may be large, print it modulo
+10
+9
++7.
+Input Format
+The first line contains a single integer
+T
+− the number of test cases.
+The first line of each test case contains the single integer
+N.
+The second line of each testcases contains
+n integers
+A
+1
+,A
+2
+,…,A
+N
+− the initial array
+A.
+Output Format
+For each test case print a single integer
+− the answer modulo
+10
+9
++7.
+Constraints
+1≤T≤1000
+3≤N≤200000
+1≤A
+i
+≤N
+The sum of
+N over all test cases doesn't exceed
+200000.
+A
+i
+
+=A
+j
+for
+i
+
+=j
+Initially
+A doesn't contain consecutive monotone triples.
+Subtasks
+Subtask 1 (50 points): The sum of
+N over all test cases doesn't exceed
+5000. Subtask 2 (50 points): No additional constraints.
+Sample 1:
+Input
+Output
+2
+4
+1 3 2 4
+4
+1 4 2 3
+12
+18
+Explanation:
+In the second testcase, an example of a valid deletion is
+[1,4,2,3]→[1,4,3]→[1,3]→[1].
+Meanwhile
+[1,4,2,3]→[1,2,3]→[1,3]→[1] is not a valid deletion since
+[1,2,3] contains a consectutive monoton triple.

@@ -1,0 +1,84 @@
+E2. Daleks' Invasion (medium)
+time limit per test15 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+After a successful field test, Heidi is considering deploying a trap along some Corridor, possibly not the first one. She wants to avoid meeting the Daleks inside the Time Vortex, so for abundance of caution she considers placing the traps only along those Corridors that are not going to be used according to the current Daleks' plan – which is to use a minimum spanning tree of Corridors. Heidi knows that all energy requirements for different Corridors are now different, and that the Daleks have a single unique plan which they are intending to use.
+Your task is to calculate the number
+E
+max
+(c)
+, which is defined in the same way as in the easy version – i.e., the largest
+e≤
+10
+9
+such that if we changed the energy of corridor
+c
+to
+e
+, the Daleks might use it – but now for every corridor that Heidi considers.
+Input
+The first line: number
+n
+of destinations, number
+m
+of Time Corridors (
+2≤n≤
+10
+5
+,
+n−1≤m≤
+10
+6
+). The next
+m
+lines: destinations
+a
+,
+b
+and energy
+e
+(
+1≤a,b≤n
+,
+a≠b
+,
+0≤e≤
+10
+9
+).
+No pair
+{a,b}
+will repeat. The graph is guaranteed to be connected. All energy requirements
+e
+are distinct.
+Output
+Output
+m−(n−1)
+lines, each containing one integer:
+E
+max
+(
+c
+i
+)
+for the
+i
+-th Corridor
+c
+i
+from the input that is not part of the current Daleks' plan (minimum spanning tree).
+Example
+input
+Copy
+3 3
+1 2 8
+2 3 3
+3 1 4
+output
+Copy
+4
+Note
+If
+m=n−1
+, then you need not output anything.

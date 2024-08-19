@@ -1,0 +1,95 @@
+C. Ehab and a Special Coloring Problem
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're given an integer
+n
+. For every integer
+i
+from
+2
+to
+n
+, assign a positive integer
+a
+i
+such that the following conditions hold:
+For any pair of integers
+(i,j)
+, if
+i
+and
+j
+are coprime,
+a
+i
+≠
+a
+j
+.
+The maximal value of all
+a
+i
+should be minimized (that is, as small as possible).
+A pair of integers is called coprime if their greatest common divisor is
+1
+.
+Input
+The only line contains the integer
+n
+(
+2≤n≤
+10
+5
+).
+Output
+Print
+n−1
+integers,
+a
+2
+,
+a
+3
+,
+…
+,
+a
+n
+(
+1≤
+a
+i
+≤n
+).
+If there are multiple solutions, print any of them.
+Examples
+input
+Copy
+4
+output
+Copy
+1 2 1 
+input
+Copy
+3
+output
+Copy
+2 1
+Note
+In the first example, notice that
+3
+and
+4
+are coprime, so
+a
+3
+≠
+a
+4
+. Also, notice that
+a=[1,2,3]
+satisfies the first condition, but it's not a correct answer because its maximal value is
+3
+.

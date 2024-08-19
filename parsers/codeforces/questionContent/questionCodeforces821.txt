@@ -1,0 +1,134 @@
+C. Keshi in Search of AmShZ
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+AmShZ has traveled to Italy from Iran for the Thom Yorke concert. There are
+n
+cities in Italy indexed from
+1
+to
+n
+and
+m
+directed roads indexed from
+1
+to
+m
+. Initially, Keshi is located in the city
+1
+and wants to go to AmShZ's house in the city
+n
+. Since Keshi doesn't know the map of Italy, AmShZ helps him to see each other as soon as possible.
+In the beginning of each day, AmShZ can send one of the following two messages to Keshi:
+AmShZ sends the index of one road to Keshi as a blocked road. Then Keshi will understand that he should never use that road and he will remain in his current city for the day.
+AmShZ tells Keshi to move. Then, Keshi will randomly choose one of the cities reachable from his current city and move there. (city
+B
+is reachable from city
+A
+if there's an out-going road from city
+A
+to city
+B
+which hasn't become blocked yet). If there are no such cities, Keshi will remain in his current city.
+Note that AmShZ always knows Keshi's current location.
+AmShZ and Keshi want to find the smallest possible integer
+d
+for which they can make sure that they will see each other after at most
+d
+days. Help them find
+d
+.
+Input
+The first line of the input contains two integers
+n
+and
+m
+(2≤n≤2⋅
+10
+5
+,1≤m≤2⋅
+10
+5
+)
+ — the number of cities and roads correspondingly.
+The
+i
+-th line of the following
+m
+lines contains two integers
+v
+i
+and
+u
+i
+(1≤
+v
+i
+,
+u
+i
+≤n,
+v
+i
+≠
+u
+i
+)
+, denoting a directed road going from city
+v
+i
+to city
+u
+i
+.
+It is guaranteed that there is at least one route from city
+1
+to city
+n
+. Note that there may be more than one road between a pair of cities in each direction.
+Output
+Output the smallest possible integer
+d
+to make sure that AmShZ and Keshi will see each other after at most
+d
+days.
+Examples
+input
+Copy
+2 1
+1 2
+output
+Copy
+1
+input
+Copy
+4 4
+1 2
+1 4
+2 4
+1 4
+output
+Copy
+2
+input
+Copy
+5 7
+1 2
+2 3
+3 5
+1 4
+4 3
+4 5
+3 1
+output
+Copy
+4
+Note
+In the first sample, it's enough for AmShZ to send the second type of message.
+In the second sample, on the first day, AmShZ blocks the first road. So the only reachable city from city
+1
+will be city
+4
+. Hence on the second day, AmShZ can tell Keshi to move and Keshi will arrive at AmShZ's house.
+It's also possible for AmShZ to tell Keshi to move for two days.

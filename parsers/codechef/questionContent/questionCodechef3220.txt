@@ -1,0 +1,90 @@
+Farmers of Wasseypur
+Problem
+Not everything in Wasseypur is about gangs and guns. There are normal people too! Ashok is a simple farmer who has the misfortune of living in Wasseypur. He plants his seeds and works the land with his family like an honest man.
+Through his hard work and grit he can turn his seeds into lush crops. However, not all seeds are equal - some seeds are good, some are bad. Seeds can be one of
+4 types -
+{−2,−1,1,2}. Ashok goes to the farmer's market to buy some seeds where he meets Uday, an eccentric rich merchant. Ashok doesn't have enough money to buy all the seeds he can plant. Taking pity on him, Uday proposes a strange game.
+Uday sets out
+N seeds out in a pattern resembling a tree. Ashok can then choose one simple path in this tree and take every seed along this path. The path must not be empty, i.e, it should contain at least one vertex of the tree.
+The total yield of the seeds Ashok receives equals the product of all their types. Given this tree and the type of seed placed at each vertex, what is the maximum yield Ashok can obtain?
+The answer can be large, so print it modulo
+10
+9
++7. If the answer is negative, print the positive remainder obtained on division by
+10
+9
++7 - that is, if the answer is
+−1, print
+1000000006.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N, denoting the number of seeds.
+Each of the next
+N−1 lines contains two integers
+a and
+b, denoting that the
+a-th and
+b-th seeds are connected in tree.
+The
+(N+1)-th line of each test case consists of
+N integers,
+S
+1
+,S
+2
+,S
+3
+,…S
+N
+,
+S
+i
+represents the type of the
+i
+th
+seed.
+Output Format
+For each test case, print a single integer denoting the maximum yield that Ashok can get modulo
+10
+9
++7.
+Constraints
+1≤T≤10000
+1≤N≤10
+5
+S
+i
+∈{−2,−1,1,2}
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+1 2
+2 3
+3 4
+1 5
+2 2 -1 -2 2
+5
+1 2
+1 3
+1 4
+1 5
+-1 -1 -1 -1 2
+16
+2
+Explanation:
+Test case 1:
+One possible path giving the maximum product is
+{5,1,2,3,4}.
+Test case 2:
+One possible path giving maximum product is
+{2,1,5}.

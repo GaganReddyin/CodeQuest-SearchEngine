@@ -1,0 +1,34 @@
+E. Chess Championship
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Ostap is preparing to play chess again and this time he is about to prepare. Thus, he was closely monitoring one recent chess tournament. There were m players participating and each pair of players played exactly one game. The victory gives 2 points, draw — 1 points, lose — 0 points.
+Ostap is lazy, so he never tries to remember the outcome of each game. Instead, he computes the total number of points earned by each of the players (the sum of his points in all games which he took part in), sort these value in non-ascending order and then remembers first n integers in this list.
+Now the Great Strategist Ostap wonders whether he remembers everything correct. He considers that he is correct if there exists at least one tournament results table such that it will produce the given integers. That means, if we count the sum of points for each player, sort them and take first n elements, the result will coincide with what Ostap remembers. Can you check if such table exists?
+Input
+The first line of the input contains two integers m and n (1 ≤ n ≤ m ≤ 3000) — the number of participants of the tournament and the number of top results Ostap remembers.
+The second line contains n integers, provided in non-ascending order — the number of points earned by top participants as Ostap remembers them. It's guaranteed that this integers are non-negative and do not exceed 2·m.
+Output
+If there is no tournament such that Ostap can obtain the given set of integers using the procedure described in the statement, then print "no" in the only line of the output. Otherwise, the first line of the output should contain the word "yes". Next m lines should provide the description of any valid tournament. Each of these lines must contain m characters 'X', 'W', 'D' and 'L'. Character 'X' should always be located on the main diagonal (and only there), that is on the i-th position of the i-th string. Character 'W' on the j-th position of the i-th string means that the i-th player won the game against the j-th. In the same way character 'L' means loose and 'D' means draw.
+The table you print must be consistent and the points earned by best n participants should match the memory of Ostap. If there are many possible answers, print any of them.
+Examples
+input
+Copy
+5 5
+8 6 4 2 0
+output
+Copy
+yes
+XWWWW
+LXWWW
+LLXWW
+LLLXW
+LLLLX
+input
+Copy
+5 1
+9
+output
+Copy
+no

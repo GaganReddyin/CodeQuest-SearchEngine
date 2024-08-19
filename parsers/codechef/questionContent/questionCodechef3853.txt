@@ -1,0 +1,135 @@
+Planning the Trip
+Problem
+Toad has been asked to plan the next trip in Mushroom World. To do this, he is required to solve the following problem, can you help him?
+Given a tree with
+N nodes, a Depth-first search function for it is defined below.
+vector adj[N+1];
+int tin[N+1];
+int timer = 0;
+
+void DFS(int U, int P) {
+    tin[U] = timer++;
+    sort(adj[U].begin(), adj[U].end());
+    for (int V: adj[U])
+        if (V != P)
+            DFS(V, U);
+}
+You are asked
+Q queries of the form:
+A X: Given positive integers
+A and
+X, find an integer
+B (
+1≤B≤N), such that, if we start the Depth-first search from node
+A, tin[B] = X.
+The queries will need to be answered online, see input format for more details.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case is a single integer
+N, the number of nodes in the tree.
+The next
+N−1 lines describe the edges. The
+i
+th
+of these
+N−1 lines contains two space-separated integers
+U
+i
+and
+V
+i
+, denoting a bidirectional edge between
+U
+i
+and
+V
+i
+.
+The next line is a single integer
+Q, the number of queries you have to answer.
+Each of the following
+Q lines contain two space-separated
+C and
+D integers describing a query, the parameters for
+A and
+X can be calculated as follows:
+Let last be the answer to the previous query, or
+0 if this is the first query in this test case.
+Set
+A=(C ⊕ last
+) and
+X=(D ⊕ last
+). Here,
+⊕ is the bitwise XOR operator.
+Output Format
+For each test case, output in
+Q different lines, the answer to each query.
+Constraints
+1≤T≤1000
+1≤N,Q≤3⋅10
+5
+1≤U
+i
+,V
+i
+≤N
+U
+i
+
+=V
+i
+1≤A
+i
+≤N
+0≤X
+i
+<N
+The sum of
+N and
+Q over all test cases won't exceed
+3⋅10
+5
+respectively.
+Sample 1:
+Input
+Output
+2
+3
+1 2
+2 3
+1
+1 2
+5
+1 2
+5 4
+1 5
+5 3
+2
+1 2
+6 1
+3
+5
+4
+Explanation:
+Test case
+1: The order in which DFS visits the vertices is
+[1,2,3], which means vertex
+3 will have tin[3] = 2.
+Test case
+2:
+Query
+1: Here
+A=1 and
+X=2. The order in which DFS visits the vertices starting from
+1 is
+[1,2,5,3,4], which means vertex
+5 will have tin[5] = 2.
+Query
+2: The answer to the last query, last = 5. Thus,
+A=6⊕5=3 and
+X=1⊕5=4. The order in which DFS visits the vertices starting from
+3 is
+[3,5,1,2,4], which means vertex
+4 will have tin[4] = 4.

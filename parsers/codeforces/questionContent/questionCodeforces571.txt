@@ -1,0 +1,337 @@
+D. Equal Binary Subsequences
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Everool has a binary string
+s
+of length
+2n
+. Note that a binary string is a string consisting of only characters
+0
+and
+1
+. He wants to partition
+s
+into two disjoint equal subsequences. He needs your help to do it.
+You are allowed to do the following operation exactly once.
+You can choose any subsequence (possibly empty) of
+s
+and rotate it right by one position.
+In other words, you can select a sequence of indices
+b
+1
+,
+b
+2
+,…,
+b
+m
+, where
+1≤
+b
+1
+<
+b
+2
+<…<
+b
+m
+≤2n
+. After that you simultaneously set
+s
+b
+1
+:=
+s
+b
+m
+,
+s
+:=
+s
+s
+b
+2
+:=
+s
+b
+1
+,
+s
+:=
+s
+…,
+…
+,
+s
+b
+m
+:=
+s
+b
+m−1
+.
+s
+:=
+s
+Can you partition
+s
+into two disjoint equal subsequences after performing the allowed operation exactly once?
+A partition of
+s
+into two disjoint equal subsequences
+s
+p
+and
+s
+q
+is two increasing arrays of indices
+p
+1
+,
+p
+2
+,…,
+p
+n
+and
+q
+1
+,
+q
+2
+,…,
+q
+n
+, such that each integer from
+1
+to
+2n
+is encountered in either
+p
+or
+q
+exactly once,
+s
+p
+=
+s
+p
+1
+s
+p
+2
+…
+s
+p
+n
+,
+s
+q
+=
+s
+q
+1
+s
+q
+2
+…
+s
+q
+n
+, and
+s
+p
+=
+s
+q
+.
+If it is not possible to partition after performing any kind of operation, report
+−1
+.
+If it is possible to do the operation and partition
+s
+into two disjoint subsequences
+s
+p
+and
+s
+q
+, such that
+s
+p
+=
+s
+q
+, print elements of
+b
+and indices of
+s
+p
+, i. e. the values
+p
+1
+,
+p
+2
+,…,
+p
+n
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+5
+). Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+), where
+2n
+is the length of the binary string.
+The second line of each test case contains the binary string
+s
+of length
+2n
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, follow the following output format.
+If there is no solution, print
+−1
+.
+Otherwise,
+In the first line, print an integer
+m
+(
+0≤m≤2n
+), followed by
+m
+distinct indices
+b
+1
+,
+b
+2
+, ...,
+b
+m
+(in increasing order).
+In the second line, print
+n
+distinct indices
+p
+1
+,
+p
+2
+, ...,
+p
+n
+(in increasing order).
+If there are multiple solutions, print any.
+Example
+input
+Copy
+4
+2
+1010
+3
+100010
+2
+1111
+2
+1110
+output
+Copy
+0
+1 2
+2 3 5
+1 2 5
+3 2 3 4
+1 4
+-1
+Note
+In the first test case,
+b
+is empty. So string
+s
+is not changed. Now
+s
+p
+=
+s
+1
+s
+2
+=10
+, and
+s
+q
+=
+s
+3
+s
+4
+=10
+.
+In the second test case,
+b=[3,5]
+. Initially
+s
+3
+=0
+, and
+s
+5
+=1
+. On performing the operation, we simultaneously set
+s
+3
+=1
+, and
+s
+5
+=0
+.
+So
+s
+is updated to 101000 on performing the operation.
+Now if we take characters at indices
+[1,2,5]
+in
+s
+p
+, we get
+s
+1
+=100
+. Also characters at indices
+[3,4,6]
+are in
+s
+q
+. Thus
+s
+q
+=100
+. We are done as
+s
+p
+=
+s
+q
+.
+In fourth test case, it can be proved that it is not possible to partition the string after performing any operation.

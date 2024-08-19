@@ -1,0 +1,99 @@
+XOR and AND
+Problem
+Alice has an array
+A of length
+N. She is interested in finding the number of pairs
+(i,j) such that
+1≤i<j≤N and
+A
+i
+⊕A
+j
+<A
+i
+&A
+j
+.
+⊕ represents the Bitwise XOR operator.
+& represents the Bitwise AND operator.
+Input Format
+The first line of input will contain an integer
+T — number of test cases. Then the test cases follow.
+Each test case contains two lines of input.
+The first line of each test case contains an integer
+N, the length of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output the number of pairs
+(i,j) such that
+1≤i<j≤N and
+A
+i
+⊕A
+j
+<A
+i
+&A
+j
+.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+4
+1 1 2 3
+4
+1 2 3 4
+2
+1
+Explanation:
+Test case
+1: The two pairs of indices satisfying the condition are
+(1,2) and
+(3,4), because
+A
+1
+⊕A
+2
+=0 and
+A
+1
+&A
+2
+=1
+A
+3
+⊕A
+4
+=1 and
+A
+3
+&A
+4
+=2
+Test case
+2: The only pair of indices satisfying the condition is
+(2,3).

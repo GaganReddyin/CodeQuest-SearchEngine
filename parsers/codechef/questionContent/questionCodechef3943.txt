@@ -1,0 +1,65 @@
+Chefina and Swaps
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chefina calls a sequence good if there is no way to divide it into two non-empty contiguous subsequences (not necessarily with equal length) such that the bitwise OR of the elements of one subsequence is equal to the bitwise OR of the elements of the other subsequence.
+You are given a sequence of positive integers
+A
+1
+,A
+2
+,…,A
+N
+. Chefina asked Chef to reorder the elements of this sequence (possibly leaving it unchanged) in such a way that the resulting sequence would be good ― if it is possible. However, that was an easy task for Chef, so whenever it is possible to make the given sequence good, Chefina asked him to do it by swapping adjacent pairs of its elements and to use the smallest possible number of swaps.
+Find the smallest number of swaps Chef needs to perform in order to make the given sequence good or determine that there is no way to make it good.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer ― the smallest number of swaps Chef needs to make the sequence good or
+−1 if it is impossible.
+Constraints
+1≤T≤1,000
+1≤N≤10
+5
+1≤A
+i
+≤10
+6
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Subtasks
+Subtask #1 (50 points):
+N≤1,000
+the sum of
+N over all test cases does not exceed
+5,000
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+3
+3 6 7
+2
+4 4
+7
+2 3 9 13 14 6 13
+1
+-1
+5

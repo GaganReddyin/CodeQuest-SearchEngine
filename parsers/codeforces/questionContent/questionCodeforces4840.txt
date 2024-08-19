@@ -1,0 +1,36 @@
+C. Marco and GCD Sequence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In a dream Marco met an elderly man with a pair of black glasses. The man told him the key to immortality and then disappeared with the wind of time.
+When he woke up, he only remembered that the key was a sequence of positive integers of some length n, but forgot the exact sequence. Let the elements of the sequence be a1, a2, ..., an. He remembered that he calculated gcd(ai, ai + 1, ..., aj) for every 1 ≤ i ≤ j ≤ n and put it into a set S. gcd here means the greatest common divisor.
+Note that even if a number is put into the set S twice or more, it only appears once in the set.
+Now Marco gives you the set S and asks you to help him figure out the initial sequence. If there are many solutions, print any of them. It is also possible that there are no sequences that produce the set S, in this case print -1.
+Input
+The first line contains a single integer m (1 ≤ m ≤ 1000) — the size of the set S.
+The second line contains m integers s1, s2, ..., sm (1 ≤ si ≤ 106) — the elements of the set S. It's guaranteed that the elements of the set are given in strictly increasing order, that means s1 < s2 < ... < sm.
+Output
+If there is no solution, print a single line containing -1.
+Otherwise, in the first line print a single integer n denoting the length of the sequence, n should not exceed 4000.
+In the second line print n integers a1, a2, ..., an (1 ≤ ai ≤ 106) — the sequence.
+We can show that if a solution exists, then there is a solution with n not exceeding 4000 and ai not exceeding 106.
+If there are multiple solutions, print any of them.
+Examples
+input
+Copy
+4
+2 4 6 12
+output
+Copy
+3
+4 6 12
+input
+Copy
+2
+2 3
+output
+Copy
+-1
+Note
+In the first example 2 = gcd(4, 6), the other elements from the set appear in the sequence, and we can show that there are no values different from 2, 4, 6 and 12 among gcd(ai, ai + 1, ..., aj) for every 1 ≤ i ≤ j ≤ n.

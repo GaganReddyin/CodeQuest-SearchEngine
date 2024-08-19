@@ -1,0 +1,237 @@
+G. Yet Another LCP Problem
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let
+LCP(s,t)
+be the length of the longest common prefix of strings
+s
+and
+t
+. Also let
+s[x…y]
+be the substring of
+s
+from index
+x
+to index
+y
+(inclusive). For example, if
+s=
+"abcde", then
+s[1…3]=
+"abc",
+s[2…5]=
+"bcde".
+You are given a string
+s
+of length
+n
+and
+q
+queries. Each query is a pair of integer sets
+a
+1
+,
+a
+2
+,…,
+a
+k
+and
+b
+1
+,
+b
+2
+,…,
+b
+l
+. Calculate
+∑
+i=1
+i=k
+∑
+j=1
+j=l
+LCP(s[
+a
+i
+…n],s[
+b
+j
+…n])
+for each query.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n,q≤2⋅
+10
+5
+) — the length of string
+s
+and the number of queries, respectively.
+The second line contains a string
+s
+consisting of lowercase Latin letters (
+|s|=n
+).
+Next
+3q
+lines contains descriptions of queries — three lines per query. The first line of each query contains two integers
+k
+i
+and
+l
+i
+(
+1≤
+k
+i
+,
+l
+i
+≤n
+) — sizes of sets
+a
+and
+b
+respectively.
+The second line of each query contains
+k
+i
+integers
+a
+1
+,
+a
+2
+,…
+a
+k
+i
+(
+1≤
+a
+1
+<
+a
+2
+<⋯<
+a
+k
+i
+≤n
+) — set
+a
+.
+The third line of each query contains
+l
+i
+integers
+b
+1
+,
+b
+2
+,…
+b
+l
+i
+(
+1≤
+b
+1
+<
+b
+2
+<⋯<
+b
+l
+i
+≤n
+) — set
+b
+.
+It is guaranteed that
+∑
+i=1
+i=q
+k
+i
+≤2⋅
+10
+5
+and
+∑
+i=1
+i=q
+l
+i
+≤2⋅
+10
+5
+.
+Output
+Print
+q
+integers — answers for the queries in the same order queries are given in the input.
+Example
+input
+Copy
+7 4
+abacaba
+2 2
+1 2
+1 2
+3 1
+1 2 3
+7
+1 7
+1
+1 2 3 4 5 6 7
+2 2
+1 5
+1 5
+output
+Copy
+13
+2
+12
+16
+Note
+Description of queries:
+In the first query
+s[1…7]=abacaba
+and
+s[2…7]=bacaba
+are considered. The answer for the query is
+LCP(abacaba,abacaba)+LCP(abacaba,bacaba)+LCP(bacaba,abacaba)+LCP(bacaba,bacaba)=7+0+0+6=13
+.
+In the second query
+s[1…7]=abacaba
+,
+s[2…7]=bacaba
+,
+s[3…7]=acaba
+and
+s[7…7]=a
+are considered. The answer for the query is
+LCP(abacaba,a)+LCP(bacaba,a)+LCP(acaba,a)=1+0+1=2
+.
+In the third query
+s[1…7]=abacaba
+are compared with all suffixes. The answer is the sum of non-zero values:
+LCP(abacaba,abacaba)+LCP(abacaba,acaba)+LCP(abacaba,aba)+LCP(abacaba,a)=7+1+3+1=12
+.
+In the fourth query
+s[1…7]=abacaba
+and
+s[5…7]=aba
+are considered. The answer for the query is
+LCP(abacaba,abacaba)+LCP(abacaba,aba)+LCP(aba,abacaba)+LCP(aba,aba)=7+3+3+3=16
+.

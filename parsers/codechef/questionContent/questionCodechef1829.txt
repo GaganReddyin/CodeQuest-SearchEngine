@@ -1,0 +1,115 @@
+Chef and Magical Steps
+Problem
+Chef has a new customer and he wants to prepare his order as soon as possible. While preparing, he sees that the mint sauce is finished. He has to run upstairs to get it from other kitchen. Chef is currently on the
+X
+th
+stair. He has to climb all the way up to the
+Y
+th
+stair in minimum number of steps. In one step, Chef can do one of the following things:
+Climb a single stair. ( i.e go from the
+X
+th
+stair to the
+(X+1)
+th
+stair. )
+Climb two stairs only if the final stair falls at a prime number position. ( i.e. go from the
+X
+th
+stair to the
+(X+2)
+th
+stair, only if
+(X+2) is a prime number)
+Help Chef reach the
+Y
+th
+stair from the
+X
+th
+stair in minimum number of steps.
+See Explanation for more clarity.
+Note: The input files are large. The use of Fast I/O is recommended.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains
+X and
+Y denoting the starting stair and ending stair respectively.
+Output Format
+Output a single integer representing minimum number of steps chef can take to reach from
+X
+th
+to
+Y
+th
+stair.
+Constraints
+1≤T≤10
+6
+1≤X<Y≤10
+7
+Sample 1:
+Input
+Output
+4
+2 10
+5 12
+34 43
+57 63
+6
+5
+6
+4
+Explanation:
+Test case
+1: Chef starts from
+2
+nd
+, goes to
+3
+rd
+stair, then to
+5
+th
+stair as
+5 or
+(3+2) is prime number. Now, from
+5
+th
+stair, Chef goes to
+7
+th
+stair as
+7 or
+(5+2) is a prime number, then Chef goes to
+8
+th
+stair, then to
+9
+th
+stair and finally to
+10
+th
+stair. This approach takes a total of
+6 steps which is the minimum possible number of steps Chef can take to reach the
+10
+th
+stair starting from the
+2
+nd
+stair.
+Test case
+3: Starting from the
+34
+th
+stair, Chef moves through the stairs as following.
+34 →
+35 →
+37 →
+38 →
+39 →
+41 →
+43.

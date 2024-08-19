@@ -1,0 +1,110 @@
+Army Training
+Problem
+Chef is a high-ranked army officer and he has been given the job to train the army.
+The army consists of
+N soldiers where each soldier has
+3 parameters:
+Attack points:
+A
+i
+where
+(0<A
+i
+<1000);
+Defense points:
+(1000−A
+i
+);
+Soldier type: ATTACK or DEFENSE.
+For the whole army:
+Attack value of the army is defined as the sum of attack points of all ATTACK type soldiers.
+Defense value of the army is defined as the sum of defense points of all DEFENSE type soldiers.
+Rating of the army is defined as the product of Attack value and Defense value of the army.
+Assign the soldier type to each of the soldiers to maximize the rating of the army. Print the maximum rating.
+NOTE: The output may exceed the range of a
+32-bit integer.
+Remember to use
+64-bit data types, such as long long in C++.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the number of soldiers in the army.
+The next line contains the array
+A — where
+A
+i
+denotes the attack points of the
+i
+th
+soldier.
+Output Format
+For each test case, output on a new line the maximum possible rating that can be achieved.
+Constraints
+1≤T≤100
+2≤N≤1000
+0<A
+i
+<1000
+Sum of
+N over all test cases does not exceed
+2000.
+Sample 1:
+Input
+Output
+4
+2
+500 500
+3
+500 500 500
+4
+100 800 300 500
+4
+300 700 800 200
+250000
+500000
+2080000
+2250000
+Explanation:
+Test case
+1: Soldier
+1 should be used for ATTACK while soldier
+2 should be used for DEFENSE. Thus, the attack value as well as the defense value equals
+500. The rating
+=500⋅500=250000. It can be proven that this is the maximum possible rating that we can achieve for the given army.
+Test case
+2:
+Soldier
+1 and
+2 should be used for ATTACK. So, attack value
+=500+500=1000
+Soldier
+3 should be used for DEFENSE. So, defense value
+=(1000−500)=500
+So, rating
+=1000⋅500=500000. This is the maximum possible rating that we can achieve for the given army.
+Test case
+3:
+Soldier
+2 and
+4 should be used for ATTACK. So, attack value
+=800+500=1300
+Soldier
+1 and
+3 should be used for DEFENSE. So, defense value
+=(1000−100)+(1000−300)=1600
+So, rating
+=1300⋅1600=2080000. This is the maximum possible rating that we can achieve for the given army.
+Test case
+4:
+Soldier
+2 and
+3 should be used for ATTACK. So, attack value
+=700+800=1500
+Soldier
+1 and
+4 should be used for DEFENSE. So, defense value
+=(1000−300)+(1000−200)=1500
+So, rating
+=1500⋅1500=2250000. This is the maximum possible rating that we can achieve for the given army.

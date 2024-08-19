@@ -1,0 +1,146 @@
+A. Minimums and Maximums
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+An array is beautiful if both of the following two conditions meet:
+there are at least
+l
+1
+and at most
+r
+1
+elements in the array equal to its minimum;
+there are at least
+l
+2
+and at most
+r
+2
+elements in the array equal to its maximum.
+For example, the array
+[2,3,2,4,4,3,2]
+has
+3
+elements equal to its minimum (
+1
+-st,
+3
+-rd and
+7
+-th) and
+2
+elements equal to its maximum (
+4
+-th and
+5
+-th).
+Another example: the array
+[42,42,42]
+has
+3
+elements equal to its minimum and
+3
+elements equal to its maximum.
+Your task is to calculate the minimum possible number of elements in a beautiful array.
+Input
+The first line contains one integer
+t
+(
+1≤t≤5000
+) — the number of test cases.
+Each test case consists of one line containing four integers
+l
+1
+,
+r
+1
+,
+l
+2
+and
+r
+2
+(
+1≤
+l
+1
+≤
+r
+1
+≤50
+;
+1≤
+l
+2
+≤
+r
+2
+≤50
+).
+Output
+For each test case, print one integer — the minimum possible number of elements in a beautiful array.
+Example
+input
+Copy
+7
+3 5 4 6
+5 8 5 5
+3 3 10 12
+1 5 3 3
+1 1 2 2
+2 2 1 1
+6 6 6 6
+output
+Copy
+4
+5
+13
+3
+3
+3
+6
+Note
+Optimal arrays in the test cases of the example:
+[1,1,1,1]
+, it has
+4
+minimums and
+4
+maximums;
+[4,4,4,4,4]
+, it has
+5
+minimums and
+5
+maximums;
+[1,2,1,2,2,1,2,2,2,2,2,2,2]
+, it has
+3
+minimums and
+10
+maximums;
+[8,8,8]
+, it has
+3
+minimums and
+3
+maximums;
+[4,6,6]
+, it has
+1
+minimum and
+2
+maximums;
+[3,4,3]
+, it has
+2
+minimums and
+1
+maximum;
+[5,5,5,5,5,5]
+, it has
+6
+minimums and
+6
+maximums.

@@ -1,0 +1,130 @@
+D. Maximum Product Strikes Back
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+integers. For each
+i
+(
+1≤i≤n
+) the following inequality is true:
+−2≤
+a
+i
+≤2
+.
+You can remove any number (possibly
+0
+) of elements from the beginning of the array and any number (possibly
+0
+) of elements from the end of the array. You are allowed to delete the whole array.
+You need to answer the question: how many elements should be removed from the beginning of the array, and how many elements should be removed from the end of the array, so that the result will be an array whose product (multiplication) of elements is maximal. If there is more than one way to get an array with the maximum product of elements on it, you are allowed to output any of them.
+The product of elements of an empty array (array of length
+0
+) should be assumed to be
+1
+.
+Input
+The first line of input data contains an integer
+t
+(
+1≤t≤
+10
+4
+) —the number of test cases in the test.
+Then the descriptions of the input test cases follow.
+The first line of each test case description contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+) —the length of array
+a
+.
+The next line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+|
+a
+i
+|≤2
+) — elements of array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output two non-negative numbers
+x
+and
+y
+(
+0≤x+y≤n
+) — such that the product (multiplication) of the array numbers, after removing
+x
+elements from the beginning and
+y
+elements from the end, is maximal.
+If there is more than one way to get the maximal product, it is allowed to output any of them. Consider the product of numbers on empty array to be
+1
+.
+Example
+input
+Copy
+5
+4
+1 2 -1 2
+3
+1 1 -2
+5
+2 0 -2 2 -1
+3
+-2 -1 -1
+3
+-1 -2 -2
+output
+Copy
+0 2
+3 0
+2 0
+0 1
+1 0
+Note
+In the first case, the maximal value of the product is
+2
+. Thus, we can either delete the first three elements (obtain array
+[2]
+), or the last two and one first element (also obtain array
+[2]
+), or the last two elements (obtain array
+[1,2]
+). Thus, in the first case, the answers fit: "3 0", or "1 2", or "0 2".
+In the second case, the maximum value of the product is
+1
+. Then we can remove all elements from the array because the value of the product on the empty array will be
+1
+. So the answer is "3 0", but there are other possible answers.
+In the third case, we can remove the first two elements of the array. Then we get the array:
+[−2,2,−1]
+. The product of the elements of the resulting array is
+(−2)⋅2⋅(−1)=4
+. This value is the maximum possible value that can be obtained. Thus, for this case the answer is: "2 0".

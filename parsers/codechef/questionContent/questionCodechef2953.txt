@@ -1,0 +1,96 @@
+Weird Product
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+and an integer
+X. The weirdness of a contiguous subsequence
+A
+l
+,A
+l+1
+,…,A
+r
+is defined as
+W(l,r)=∑
+i=l
+r
+A
+i
+⋅X
+i−l
+. Find
+P=∏
+i=1
+N
+∏
+j=i
+N
+W(i,j)
+2
+modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+X.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer
+P modulo
+998,244,353.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+0<X<998,244,353
+0≤A
+i
+<998,244,353 for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (15 points):
+A
+1
+=A
+2
+=…=A
+N
+Subtask #2 (85 points): original constraints
+Sample 1:
+Input
+Output
+4
+3 1
+2 1 1
+1 7
+1
+5 998244351
+5 5 5 5 5
+10 69
+2 0 1 6 3 3 1 0 5 1
+2304
+1
+253808779
+0

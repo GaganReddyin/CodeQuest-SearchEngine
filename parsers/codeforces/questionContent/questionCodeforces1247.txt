@@ -1,0 +1,119 @@
+A. Forbidden Subsequence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given strings
+S
+and
+T
+, consisting of lowercase English letters. It is guaranteed that
+T
+is a permutation of the string abc.
+Find string
+S
+′
+, the lexicographically smallest permutation of
+S
+such that
+T
+is not a subsequence of
+S
+′
+.
+String
+a
+is a permutation of string
+b
+if the number of occurrences of each distinct character is the same in both strings.
+A string
+a
+is a subsequence of a string
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero or all) elements.
+A string
+a
+is lexicographically smaller than a string
+b
+if and only if one of the following holds:
+a
+is a prefix of
+b
+, but
+a≠b
+;
+in the first position where
+a
+and
+b
+differ, the string
+a
+has a letter that appears earlier in the alphabet than the corresponding letter in
+b
+.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains a string
+S
+(
+1≤|S|≤100
+), consisting of lowercase English letters.
+The second line of each test case contains a string
+T
+that is a permutation of the string abc. (Hence,
+|T|=3
+).
+Note that there is no limit on the sum of
+|S|
+across all test cases.
+Output
+For each test case, output a single string
+S
+′
+, the lexicographically smallest permutation of
+S
+such that
+T
+is not a subsequence of
+S
+′
+.
+Example
+input
+Copy
+7
+abacaba
+abc
+cccba
+acb
+dbsic
+bac
+abracadabra
+abc
+dddddddddddd
+cba
+bbc
+abc
+ac
+abc
+output
+Copy
+aaaacbb
+abccc
+bcdis
+aaaaacbbdrr
+dddddddddddd
+bbc
+ac
+Note
+In the first test case, both aaaabbc and aaaabcb are lexicographically smaller than aaaacbb, but they contain abc as a subsequence.
+In the second test case, abccc is the smallest permutation of cccba and does not contain acb as a subsequence.
+In the third test case, bcdis is the smallest permutation of dbsic and does not contain bac as a subsequence.

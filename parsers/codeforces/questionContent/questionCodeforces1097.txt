@@ -1,0 +1,101 @@
+D. Cross Coloring
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a sheet of paper that can be represented with a grid of size
+n×m
+:
+n
+rows and
+m
+columns of cells. All cells are colored in white initially.
+q
+operations have been applied to the sheet. The
+i
+-th of them can be described as follows:
+x
+i
+y
+i
+ — choose one of
+k
+non-white colors and color the entire row
+x
+i
+and the entire column
+y
+i
+in it. The new color is applied to each cell, regardless of whether the cell was colored before the operation.
+The sheet after applying all
+q
+operations is called a coloring. Two colorings are different if there exists at least one cell that is colored in different colors.
+How many different colorings are there? Print the number modulo
+998244353
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of the testcase contains four integers
+n,m,k
+and
+q
+(
+1≤n,m,k,q≤2⋅
+10
+5
+) — the size of the sheet, the number of non-white colors and the number of operations.
+The
+i
+-th of the following
+q
+lines contains a description of the
+i
+-th operation — two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+≤n
+;
+1≤
+y
+i
+≤m
+) — the row and the column the operation is applied to.
+The sum of
+q
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the number of different colorings modulo
+998244353
+.
+Example
+input
+Copy
+2
+1 1 3 2
+1 1
+1 1
+2 2 2 3
+2 1
+1 1
+2 2
+output
+Copy
+3
+4

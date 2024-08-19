@@ -1,0 +1,136 @@
+Convex Hulk
+Problem
+Read problem statements in Bengali, Russian, Mandarin and Vietnamese as well.
+Hulk has a set of distinct points
+P in the 2D plane. His signature move is
+Hulk
+Smash. He performed
+Hulk
+Smash on the set
+P which caused the points to change, and so he obtained a new set of points
+P
+′
+.
+More formally,
+Hulk
+Smash makes the new set
+P
+′
+in the following way:
+Initially, let
+P
+′
+be empty.
+For every
+P
+i
+and
+P
+j
+such that
+1≤i<j≤N , add the mid point of
+P
+i
+and
+P
+j
+to the set
+P
+′
+(only if it didn't exist in it already).
+So,
+P
+′
+is the set of midpoints of line segments connecting pairs of distinct points of
+P. Note that points from
+P do not necessarily have to be in
+P
+′
+. See the samples below for a graphical example.
+Find the number of points of
+P
+′
+which lie on the convex hull of
+P
+′
+. A point is said to lie on the convex hull if the shape of the convex hull is changed when this point is removed.
+Input Format
+The first line contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N, denoting the size of
+P.
+The next
+N lines contain two space-separated integers each, where the
+i-th line contains
+P
+i
+.x,P
+i
+.y denoting the x-coordinate and y-coordinate of the
+i-th point.
+Output Format
+For each test case, print a single line containing one integer - the number of points of
+P
+′
+which lie on its convex hull.
+Constraints
+1≤T≤20
+3≤N≤2⋅10
+5
+−5⋅10
+8
+≤P
+i
+.x,P
+i
+.y≤5⋅10
+8
+The convex hull of the input set
+P has positive area
+Sum of
+N over all tests cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask 1 (20 points):
+Sum of
+N over all test cases does not exceed
+10
+3
+Subtask 2 (80 points):
+Original constraints
+Sample 1:
+Input
+Output
+2
+7
+1 7
+-6 -5
+1 -6
+-6 7
+-4 3
+-2 6
+-3 -6
+4
+1 8
+1 4
+1 0
+5 4
+8
+4
+Explanation:
+In the below images, the set of points
+P is denoted by the color pink, the set of points
+P
+′
+is denoted by the color green. The blue point is the origin.
+The below image represents the first test case
+The below image represents the second test case
+Note that by our definition, points
+(1,4) and
+(3,4) are not considered to lie on the convex hull of
+P
+′
+, because removing one of them does not change the shape of the hull.

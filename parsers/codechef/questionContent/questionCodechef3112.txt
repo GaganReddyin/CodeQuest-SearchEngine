@@ -1,0 +1,106 @@
+Maximum and Minimum
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian and Vietnamese as well.
+Chef loves graphs. To express his love, he defines a function
+f(G,x,y) for an undirected connected graph
+G with weighted edges and two of its vertices
+x,
+y.
+f(G,x,y) is defined as the minimum of weights of all paths in
+G between the vertices
+x and
+y, where the weight of a path is the maximum of weights of edges in this path.
+Chef has two connected graphs
+G
+1
+and
+G
+2
+. Each of these graphs has
+N vertices (labelled
+1 through
+N) and
+M edges. Calculate
+S=∑
+i=1
+N−1
+∑
+j=i+1
+N
+f(G
+1
+,i,j)⋅f(G
+2
+,i,j) modulo
+998,244,353.
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+M lines follow. Each of these lines contains three space-separated integers
+u,
+v and
+w denoting that vertices
+u and
+v in
+G
+1
+are connected by an edge with weight
+w.
+M more lines follow. Each of these lines contains three space-separated integers
+u,
+v and
+w denoting that vertices
+u and
+v in
+G
+2
+are connected by an edge with weight
+w.
+Output
+Print a single line containing one integer — the sum
+S modulo
+998,244,353.
+Constraints
+1≤N≤10
+5
+M=2N
+1≤u,v≤N
+1≤w≤10
+8
+G
+1
+and
+G
+2
+are connected graphs
+Subtasks
+Subtask #1 (20 points):
+N=2,000
+Subtask #2 (30 points):
+N=10
+5
+G
+1
+and
+G
+2
+are identical graphs
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+3 6
+1 2 3
+2 3 1
+3 1 2
+1 2 4
+2 3 5
+3 1 6
+1 2 2
+2 3 1
+3 1 3
+1 2 5
+2 3 4
+3 1 6
+9

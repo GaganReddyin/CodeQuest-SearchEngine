@@ -1,0 +1,53 @@
+Mixing Colors
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef Dobby had recently studied about Primary and Secondary colors. He came to know that by mixing colors he can sometimes get a new colour. For this problem we consider only 3 colors : Red, Green and Yellow. The different ways of mixing them and the final colour we obtain is shown below.
+Bhuvan, Chef Tobby friend, was playing another game on grid of size N * N where rows are numbered from 1 to N from up to bottom and columns are numbered from 1 to N from left to right. Chef Dobby wasn't happy as the Bhuvan grid had no colors at all. So, he thought of coloring Bhuvan's grid. So Chef Tobby started his operation, but Bhuvan said that he could only colour the grid M times. Chef Tobby decided that each of his operation could be one of the following :
+Color row i with red color.
+Color row i with green color.
+Color col j with red color.
+Color col j with green color.
+Color diagonal x (= i + j) with red color.
+Color diagonal x (= i + j) with green color.
+
+
+Note: diagonal x is the set of all cells that are in intersection of row i and column j such that i+j = x.
+Note2: if a cell is already colored then we apply the mixture rules in the above picture between the new color and the existing color.
+
+Bhuvan's asks you to determine the number of cells of each color after all the operations are performed.
+Input section
+The first line contains 2 integers, N and M, denoting the size of the grid and number of opeartions performed by Chef Tobby.
+Each of the next M lines contains 3 space separated integers, type, idx, color, which mean the following :
+type = 1, operation performed on row
+type = 2, operation performed on column
+type = 3, operation performed on diagonal
+idx = index of corresponding row, column or diagonal
+color = 0, color the cells of grid Green
+color = 1, color the cells of grid Red
+
+The input files are upto 1 MB. So prefer to use faster I/O methods, for example : scanf/printf in C++, Buffered-Reader in Java etc.
+Output section
+Output 4 integers, denoting the number of cells with no color, cells with red color, cells with green color and cells with yellow color in the grid after all the operations are performed.
+Input constraints
+1 ≤ N ≤ 105
+1 ≤ M ≤ 105
+1 ≤ type ≤ 3
+1 ≤ idx_row, idx_column ≤ N
+2 ≤ idx_diagonal ≤ 2 * N
+0 ≤ color ≤ 1
+Sample Input
+5 10
+2 4 1
+3 3 1
+2 1 1
+3 7 0
+1 3 1
+3 3 0
+3 8 0
+1 5 0
+2 4 1
+2 2 0
+Sample Output
+4 6 7 8
+Explanation
+You can refer to the below image which shows the colored grid after each step.

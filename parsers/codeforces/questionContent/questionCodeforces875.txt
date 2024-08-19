@@ -1,0 +1,312 @@
+F. MCMF?
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two integer arrays
+a
+and
+b
+(
+b
+i
+≠0
+and
+|
+b
+i
+|≤
+10
+9
+). Array
+a
+is sorted in non-decreasing order.
+The cost of a subarray
+a[l:r]
+is defined as follows:
+If
+∑
+j=l
+r
+b
+j
+≠0
+, then the cost is not defined.
+Otherwise:
+Construct a bipartite flow graph with
+r−l+1
+vertices, labeled from
+l
+to
+r
+, with all vertices having
+b
+i
+<0
+on the left and those with
+b
+i
+>0
+on right. For each
+i,j
+such that
+l≤i,j≤r
+,
+b
+i
+<0
+and
+b
+j
+>0
+, draw an edge from
+i
+to
+j
+with infinite capacity and cost of unit flow as
+|
+a
+i
+−
+a
+j
+|
+.
+Add two more vertices: source
+S
+and sink
+T
+.
+For each
+i
+such that
+l≤i≤r
+and
+b
+i
+<0
+, add an edge from
+S
+to
+i
+with cost
+0
+and capacity
+|
+b
+i
+|
+.
+For each
+i
+such that
+l≤i≤r
+and
+b
+i
+>0
+, add an edge from
+i
+to
+T
+with cost
+0
+and capacity
+|
+b
+i
+|
+.
+The cost of the subarray is then defined as the minimum cost of maximum flow from
+S
+to
+T
+.
+You are given
+q
+queries in the form of two integers
+l
+and
+r
+. You have to compute the cost of subarray
+a[l:r]
+for each query, modulo
+10
+9
++7
+.
+If you don't know what the minimum cost of maximum flow means, read here.
+Input
+The first line of input contains two integers
+n
+and
+q
+(2≤n≤2⋅
+10
+5
+,1≤q≤2⋅
+10
+5
+)
+ — length of arrays
+a
+,
+b
+and the number of queries.
+The next line contains
+n
+integers
+a
+1
+,
+a
+2
+…
+a
+n
+(
+0≤
+a
+1
+≤
+a
+2
+…≤
+a
+n
+≤
+10
+9
+)
+ — the array
+a
+. It is guaranteed that
+a
+is sorted in non-decreasing order.
+The next line contains
+n
+integers
+b
+1
+,
+b
+2
+…
+b
+n
+(−
+10
+9
+≤
+b
+i
+≤
+10
+9
+,
+b
+i
+≠0)
+ — the array
+b
+.
+The
+i
+-th of the next
+q
+lines contains two integers
+l
+i
+,
+r
+i
+(1≤
+l
+i
+≤
+r
+i
+≤n)
+. It is guaranteed that
+∑
+j=
+l
+i
+r
+i
+b
+j
+=0
+.
+Output
+For each query
+l
+i
+,
+r
+i
+ — print the cost of subarray
+a[
+l
+i
+:
+r
+i
+]
+modulo
+10
+9
++7
+.
+Example
+input
+Copy
+8 4
+1 2 4 5 9 10 10 13
+6 -1 1 -3 2 1 -1 1
+2 3
+6 7
+3 5
+2 6
+output
+Copy
+2
+0
+9
+15
+Note
+In the first query, the maximum possible flow is
+1
+i.e one unit from source to
+2
+, then one unit from
+2
+to
+3
+, then one unit from
+3
+to sink. The cost of the flow is
+0⋅1+|2−4|⋅1+0⋅1=2
+.
+In the second query, the maximum possible flow is again
+1
+i.e from source to
+7
+,
+7
+to
+6
+, and
+6
+to sink with a cost of
+0⋅|10−10|⋅1+0⋅1=0
+.
+In the third query, the flow network is shown on the left with capacity written over the edge and the cost written in bracket. The image on the right shows the flow through each edge in an optimal configuration.
+Maximum flow is
+3
+with a cost of
+0⋅3+1⋅1+4⋅2+0⋅1+0⋅2=9
+.
+In the fourth query, the flow network looks as –
+The minimum cost maximum flow is achieved in the configuration –
+The maximum flow in the above network is 4 and the minimum cost of such flow is 15.

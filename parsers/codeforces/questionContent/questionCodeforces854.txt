@@ -1,0 +1,220 @@
+E. Become Big For Me
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Come, let's build a world where even the weak are not forgotten!
+—Kijin Seija, Double Dealing Characters
+Shinmyoumaru has a mallet that can turn objects bigger or smaller. She is testing it out on a sequence
+a
+and a number
+v
+whose initial value is
+1
+. She wants to make
+v=
+gcd
+i≠j
+{
+a
+i
+⋅
+a
+j
+}
+by no more than
+10
+5
+operations (
+gcd
+i≠j
+{
+a
+i
+⋅
+a
+j
+}
+denotes the
+gcd
+of all products of two distinct elements of the sequence
+a
+).
+In each operation, she picks a subsequence
+b
+of
+a
+, and does one of the followings:
+Enlarge:
+v=v⋅lcm(b)
+Reduce:
+v=
+v
+lcm(b)
+Note that she does not need to guarantee that
+v
+is an integer, that is,
+v
+does not need to be a multiple of
+lcm(b)
+when performing Reduce.
+Moreover, she wants to guarantee that the total length of
+b
+chosen over the operations does not exceed
+10
+6
+. Fine a possible operation sequence for her. You don't need to minimize anything.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the size of sequence
+a
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,⋯,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+) — the sequence
+a
+.
+It can be shown that the answer exists.
+Output
+The first line contains a non-negative integer
+k
+(
+0≤k≤
+10
+5
+) — the number of operations.
+The following
+k
+lines contains several integers. For each line, the first two integers
+f
+(
+f∈{0,1}
+) and
+p
+(
+1≤p≤n
+) stand for the option you choose (
+0
+for Enlarge and
+1
+for Reduce) and the length of
+b
+. The other
+p
+integers of the line
+i
+1
+,
+i
+2
+,…,
+i
+p
+(
+1≤
+i
+1
+<
+i
+2
+<…<
+i
+p
+≤n
+) represents the indexes of the subsequence. Formally,
+b
+j
+=
+a
+i
+j
+.
+Examples
+input
+Copy
+3
+6 10 15
+output
+Copy
+1
+0 3 1 2 3
+input
+Copy
+4
+2 4 8 16
+output
+Copy
+2
+0 1 4
+1 1 1
+Note
+Test case 1:
+gcd
+i≠j
+{
+a
+i
+⋅
+a
+j
+}=gcd{60,90,150}=30
+.
+Perform
+v=v⋅lcm{
+a
+1
+,
+a
+2
+,
+a
+3
+}=30
+.
+Test case 2:
+gcd
+i≠j
+{
+a
+i
+⋅
+a
+j
+}=8
+.
+Perform
+v=v⋅lcm{
+a
+4
+}=16
+.
+Perform
+v=
+v
+lcm{
+a
+1
+}
+=8
+.

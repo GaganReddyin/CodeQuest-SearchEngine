@@ -1,0 +1,85 @@
+Make it Divisible
+Problem
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+Chef has an array
+A of length
+N.
+Since Chef's favorite number is
+3, he wants to make all numbers in the array a multiple of
+3.
+Chef can do the following operation:
+Select any
+2 different indices
+i and
+j and increase
+A
+i
+by
+1 and decrease
+A
+j
+by
+1.
+Help Chef find out the minimum number of operations required (or report its not possible) to achieve his objective.
+Input Format
+The first line will contain
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains
+N, denoting the length of the array.
+The second line of each testcase contains
+N space separated integers
+A
+i
+.
+Output Format
+Output the minimum number of operations required to make all numbers divisible by
+3.
+If it is not possible to make every number divisible by
+3, then output
+−1.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+3
+1 2 3
+4
+6 3 9 12
+2
+4 3
+1
+0
+-1
+Explanation:
+Test Case
+1: Chef can select the indices
+2 and
+1 and thus increase
+A
+2
+by
+1 and decrease
+A
+1
+by
+1. Thus the array becomes
+[0,3,3]. So every number is now divisible by
+3.
+Test Case
+2: Since all the numbers are already multiples of
+3, Chef will not need to apply the operation at all.
+Test Case
+3: There is no way to make all the numbers a multiple of
+3.

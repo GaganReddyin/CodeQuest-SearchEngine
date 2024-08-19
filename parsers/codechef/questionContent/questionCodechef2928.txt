@@ -1,0 +1,137 @@
+Tree Game
+Problem
+There are
+N cities numbered from
+1 to
+N, connected by
+(N−1) roads such that every city is reachable from every other city (they form a tree structure). The
+i
+th
+city has a population
+P
+i
+.
+Alice and Bob are initially standing at cities
+A and
+B respectively. They decide to play a game, such that, at every turn:
+First, Alice makes a move by moving to some adjacent city unvisited by her (maybe visited by Bob).
+Then, Bob moves to some adjacent city unvisited by him (maybe visited by Alice). Note that two cities are adjacent, if they are connected directly by a road.
+Now, if the total population in Alice's path from
+A to her current city is strictly greater than that of Bob's path from
+B to his current city, Alice is awarded a point.
+If both of them can make their next move the game continues, otherwise the game immediately ends.
+Alice wants to maximise her score and Bob wants to minimise Alice's score. Find the final score of Alice if both play optimally.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of input contains three space-separated integers
+N,
+A, and
+B — the number of cities, the initial cities in which Alice and Bob are standing.
+The second line of input contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+, where
+P
+i
+is the population of
+i
+th
+city.
+Each of the next
+N−1 lines contains two space-separated integers
+u
+i
+and
+v
+i
+, defining that there is a road between city
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, print a single line, containing one integer, Alice's final score if both the players play optimally.
+Constraints
+1≤T≤1000
+1≤N≤5000
+1≤A,B≤N
+1≤P
+i
+≤10
+9
+1≤u
+i
+,v
+i
+≤N
+u
+i
+
+=v
+i
+for each
+1≤i≤N.
+The sum of
+N over all test cases won't exceed
+5000.
+Sample 1:
+Input
+Output
+3
+6 2 4
+4 1 5 2 2 3
+1 2
+3 2
+4 2
+6 4
+4 5
+2 1 1
+2 3
+1 2
+2 2 1
+1 2
+1 2
+1
+0
+1
+Explanation:
+Test case
+1: Let the total population covered by Alice is
+X and by Bob be
+Y.
+Initially, Alice is at city
+2 and Bob is at city
+4, so
+X=P
+2
+=1 and
+Y=P
+4
+=2. Since
+X≤Y, Alice does not get any point.
+Now, Alice moves to city
+3 and Bob moves to city
+6, hence
+X=X+P
+3
+=1+5=6 and
+Y=Y+P
+6
+=2+3=5. Since
+X>Y, Alice gets a point.
+After this, neither Alice nor Bob has a possible move.
+Thus, the final score of Alice is
+1.
+Test case
+2: Initially both of them are standing at the city
+1 and then move to the city
+2. Thus, both of them cover the same population at each time. Hence, Alice does not get any points.

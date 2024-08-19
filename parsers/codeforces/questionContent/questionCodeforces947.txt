@@ -1,0 +1,74 @@
+F. Permutation Counting
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Calculate the number of permutations
+p
+of size
+n
+with exactly
+k
+inversions (pairs of indices
+(i,j)
+such that
+i<j
+and
+p
+i
+>
+p
+j
+) and exactly
+x
+indices
+i
+such that
+p
+i
+>
+p
+i+1
+.
+Yep, that's the whole problem. Good luck!
+Input
+The first line contains one integer
+t
+(
+1≤t≤3⋅
+10
+4
+) — the number of test cases.
+Each test case consists of one line which contains three integers
+n
+,
+k
+and
+x
+(
+1≤n≤998244352
+;
+1≤k≤11
+;
+1≤x≤11
+).
+Output
+For each test case, print one integer — the answer to the problem, taken modulo
+998244353
+.
+Example
+input
+Copy
+5
+10 6 4
+7 3 1
+163316 11 7
+136373 11 1
+325902 11 11
+output
+Copy
+465
+12
+986128624
+7636394
+57118194

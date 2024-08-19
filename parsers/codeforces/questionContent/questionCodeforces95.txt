@@ -1,0 +1,179 @@
+F. Communication Towers
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+communication towers, numbered from
+1
+to
+n
+, and
+m
+bidirectional wires between them. Each tower has a certain set of frequencies that it accepts, the
+i
+-th of them accepts frequencies from
+l
+i
+to
+r
+i
+.
+Let's say that a tower
+b
+is accessible from a tower
+a
+, if there exists a frequency
+x
+and a sequence of towers
+a=
+v
+1
+,
+v
+2
+,…,
+v
+k
+=b
+, where consecutive towers in the sequence are directly connected by a wire, and each of them accepts frequency
+x
+. Note that accessibility is not transitive, i. e if
+b
+is accessible from
+a
+and
+c
+is accessible from
+b
+, then
+c
+may not be accessible from
+a
+.
+Your task is to determine the towers that are accessible from the
+1
+-st tower.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤2⋅
+10
+5
+;
+0≤m≤4⋅
+10
+5
+) — the number of communication towers and the number of wires, respectively.
+Then
+n
+lines follows, the
+i
+-th of them contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤2⋅
+10
+5
+) — the boundaries of the acceptable frequencies for the
+i
+-th tower.
+Then
+m
+lines follows, the
+i
+-th of them contains two integers
+v
+i
+and
+u
+i
+(
+1≤
+v
+i
+,
+u
+i
+≤n
+;
+v
+i
+≠
+u
+i
+) — the
+i
+-th wire that connects towers
+v
+i
+and
+u
+i
+. There are no two wires connecting the same pair of towers.
+Output
+In a single line, print distinct integers from
+1
+to
+n
+in ascending order — the indices of the communication towers that are accessible from the
+1
+-st tower.
+Examples
+input
+Copy
+6 5
+3 5
+1 2
+2 4
+2 3
+3 3
+4 6
+1 3
+6 1
+3 5
+3 6
+2 3
+output
+Copy
+1 3 5 6 
+input
+Copy
+3 1
+2 3
+1 4
+1 1
+1 3
+output
+Copy
+1 
+input
+Copy
+5 5
+1 3
+2 3
+2 2
+3 5
+2 4
+1 2
+2 3
+3 4
+4 1
+4 5
+output
+Copy
+1 2 3 4 5 

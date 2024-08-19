@@ -1,0 +1,141 @@
+F. Strange Triples
+time limit per test10 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call a triple of positive integers (
+a,b,n
+) strange if the equality
+an
+nb
+=
+a
+b
+holds, where
+an
+is the concatenation of
+a
+and
+n
+and
+nb
+is the concatenation of
+n
+and
+b
+. For the purpose of concatenation, the integers are considered without leading zeroes.
+For example, if
+a=1
+,
+b=5
+and
+n=9
+, then the triple is strange, because
+19
+95
+=
+1
+5
+. But
+a=7
+,
+b=3
+and
+n=11
+is not strange, because
+711
+113
+≠
+7
+3
+.
+You are given three integers
+A
+,
+B
+and
+N
+. Calculate the number of strange triples
+(a,b,n
+), such that
+1≤a<A
+,
+1≤b<B
+and
+1≤n<N
+.
+Input
+The only line contains three integers
+A
+,
+B
+and
+N
+(
+1≤A,B≤
+10
+5
+;
+1≤N≤
+10
+9
+).
+Output
+Print one integer — the number of strange triples
+(a,b,n
+) such that
+1≤a<A
+,
+1≤b<B
+and
+1≤n<N
+.
+Examples
+input
+Copy
+5 6 10
+output
+Copy
+7
+input
+Copy
+10 10 100
+output
+Copy
+29
+input
+Copy
+1 10 25
+output
+Copy
+0
+input
+Copy
+4242 6969 133333337
+output
+Copy
+19536
+input
+Copy
+94841 47471 581818184
+output
+Copy
+98715
+Note
+In the first example, there are
+7
+strange triples:
+(1,1,1
+), (
+1,4,6
+), (
+1,5,9
+), (
+2,2,2
+), (
+2,5,6
+), (
+3,3,3
+) and (
+4,4,4
+).

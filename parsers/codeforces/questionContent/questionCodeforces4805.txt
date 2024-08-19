@@ -1,0 +1,73 @@
+D. Weighting a Tree
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a connected undirected graph with n vertices and m edges. The vertices are enumerated from 1 to n.
+You are given n integers c1, c2, ..., cn, each of them is between  - n and n, inclusive. It is also guaranteed that the parity of cv equals the parity of degree of vertex v. The degree of a vertex is the number of edges connected to it.
+You are to write a weight between  - 2·n2 and 2·n2 (inclusive) on each edge in such a way, that for each vertex v the sum of weights on edges connected to this vertex is equal to cv, or determine that this is impossible.
+Input
+The first line contains two integers n and m (2 ≤ n ≤ 105, n - 1 ≤ m ≤ 105) — the number of vertices and the number of edges.
+The next line contains n integers c1, c2, ..., cn ( - n ≤ ci ≤ n), where ci is the required sum of weights of edges connected to vertex i. It is guaranteed that the parity of ci equals the parity of degree of vertex i.
+The next m lines describe edges of the graph. The i-th of these lines contains two integers ai and bi (1 ≤ ai, bi ≤ n; ai ≠ bi), meaning that the i-th edge connects vertices ai and bi.
+It is guaranteed that the given graph is connected and does not contain loops and multiple edges.
+Output
+If there is no solution, print "NO".
+Otherwise print "YES" and then m lines, the i-th of them is the weight of the i-th edge wi ( - 2·n2 ≤ wi ≤ 2·n2).
+Examples
+input
+Copy
+3 3
+2 2 2
+1 2
+2 3
+1 3
+output
+Copy
+YES
+1
+1
+1
+input
+Copy
+4 3
+-1 0 2 1
+1 2
+2 3
+3 4
+output
+Copy
+YES
+-1
+1
+1
+input
+Copy
+6 6
+3 5 5 5 1 5
+1 4
+3 2
+4 3
+4 5
+3 5
+5 6
+output
+Copy
+YES
+3
+5
+3
+-1
+-3
+5
+input
+Copy
+4 4
+4 4 2 4
+1 2
+2 3
+3 4
+4 1
+output
+Copy
+NO

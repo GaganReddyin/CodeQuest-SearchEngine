@@ -1,0 +1,168 @@
+Maximum Value from Binary strings
+Problem
+You are given two binary strings
+A and
+B, each of length
+N.
+Consider a non-empty substring
+A
+′
+of
+A and a non-empty substring
+B
+′
+of
+B, both of the same length. Let
+X=A
+′
+⊕B
+′
+be the string obtained by taking the exclusive OR of
+A
+′
+and
+B
+′
+.
+You are also given a function
+f(X), defined as
+f(X)=⌊
+2
+X
+10
+∣X∣
+⌋
+where
+∣X∣ denotes the length of
+X and
+X
+10
+denotes the decimal value of the binary integer represented by
+X. For example, if
+X=0110101, then
+∣X∣=7 and
+X
+10
+=53, so
+f(X)=⌊7/2
+53
+⌋=0.
+Your task is to maximize the value of the function
+f(X) for the given strings
+A and
+B, by choosing
+A
+′
+and
+B
+′
+appropriately.
+Note: The exclusive OR of two binary strings
+A and
+B such that
+∣A∣=∣B∣=k is the unique binary string
+X of length
+k such that
+X
+i
+=1 if and only if
+A
+i
+
+=B
+i
+.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+Each test case consists of three lines of input.
+The first line of each test case contains an integer
+N — the length of the binary strings
+A and
+B.
+The second line of each test case contains a binary string
+A of length
+N.
+The third line of each test case contains a binary string
+B of length
+N.
+Output Format
+For each test case, output on a new line the maximum value of the function.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+A and
+B are binary strings
+The sum of
+N across all test cases does not exceed
+5⋅10
+5
+Sample 1:
+Input
+Output
+3
+3
+101
+010
+5
+00000
+11111
+6
+101001
+001010
+2
+0
+4
+Explanation:
+Test case
+1: We calculate the value of
+f(X) for a few choices of
+X:
+If
+A
+′
+=10 and
+B
+′
+=01, then
+X=11. This gives
+f(X)=⌊2/2
+3
+⌋=⌊2/8⌋=0
+If
+A
+′
+=01 and
+B
+′
+=10, then
+X=11. This gives
+f(X)=⌊2/2
+3
+⌋=0
+If
+A
+′
+=10 and
+B
+′
+=10, then
+X=00. This gives
+f(X)=⌊2/2
+0
+⌋=2
+If
+A
+′
+=101 and
+B
+′
+=010, then
+X=111. This gives
+f(X)=⌊3/2
+7
+⌋=0
+It can be verified that the maximum value of
+f is
+2.

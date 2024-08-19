@@ -1,0 +1,117 @@
+Lulymp
+Problem
+Once in the magic city of Lulympus, students were preparing for the final stage of Lulympiad, the national team selection for the IOI. After solving 3SAT in polynomial time complexity, learning the 4D convex hull trick and many other trivial techniques, Chef Lulus AKed the "Baraj Seniori" and decided to take a break and solve the following trivial problem:
+You are given a positive integer
+N. Let
+P be the set of all permutations of length
+N. Find the value of the following expression:
+∑
+p∈P
+∑
+i=1
+N
+gcd(p
+1
+,p
+2
+,…,p
+i
+).
+Here
+gcd(p
+1
+,p
+2
+,…,p
+i
+) denotes their greatest common divisor.
+Since the answer can be large, print it modulo
+MOD.
+Input Format
+The first and only line of input contains two integers
+N,
+MOD - the parameters defined in the statement.
+Output Format
+Print one integer, the value of
+∑
+p∈P
+∑
+i=1
+N
+gcd(p
+1
+,p
+2
+,…,p
+i
+) modulo
+MOD.
+Constraints
+1≤N≤10
+6
+10
+8
+≤MOD≤10
+9
+MOD is a prime number
+Sample 1:
+Input
+Output
+2 100001029
+5
+Explanation:
+Test case 1:
+P={[1,2],[2,1]}.
+For
+p=[1,2],
+∑
+i=1
+N
+gcd(p
+1
+,p
+2
+,…,p
+i
+)=gcd(1)+gcd(1,2)=1+1=2
+For
+p=[2,1],
+∑
+i=1
+N
+gcd(p
+1
+,p
+2
+,…,p
+i
+)=gcd(2)+gcd(2,1)=2+1=3
+Therefore
+∑
+p∈P
+∑
+i=1
+N
+gcd(p
+1
+,p
+2
+,…,p
+i
+)=2+3=5.
+Sample 2:
+Input
+Output
+3 100000921
+24
+Explanation:
+The permutations of length 3 are
+[1,2,3]
+[1,3,2]
+[2,1,3]
+[2,3,1]
+[3,1,2]
+[3,2,1]
+The first permutation contributes with
+gcd(1)+gcd(1,2)+gcd(1,2,3)=3. Similarly for all permutations summing the contributions we get
+24.

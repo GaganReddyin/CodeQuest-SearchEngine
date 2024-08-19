@@ -1,0 +1,192 @@
+F. Conditional Mix
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Pak Chanek is given an array
+a
+of
+n
+integers. For each
+i
+(
+1≤i≤n
+), Pak Chanek will write the one-element set
+{
+a
+i
+}
+on a whiteboard.
+After that, in one operation, Pak Chanek may do the following:
+Choose two different sets
+S
+and
+T
+on the whiteboard such that
+S∩T=∅
+(
+S
+and
+T
+do not have any common elements).
+Erase
+S
+and
+T
+from the whiteboard and write
+S∪T
+(the union of
+S
+and
+T
+) onto the whiteboard.
+After performing zero or more operations, Pak Chanek will construct a multiset
+M
+containing the sizes of all sets written on the whiteboard. In other words, each element in
+M
+corresponds to the size of a set after the operations.
+How many distinct
+†
+†
+multisets
+M
+can be created by this process? Since the answer may be large, output it modulo
+998244353
+.
+†
+†
+Multisets
+B
+and
+C
+are different if and only if there exists a value
+k
+such that the number of elements with value
+k
+in
+B
+is different than the number of elements with value
+k
+in
+C
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+).
+Output
+Output the number of distinct multisets
+M
+modulo
+998244353
+.
+Examples
+input
+Copy
+6
+1 1 2 1 4 3
+output
+Copy
+7
+input
+Copy
+7
+3 5 4 3 7 4 5
+output
+Copy
+11
+Note
+In the first example, the possible multisets
+M
+are
+{1,1,1,1,1,1}
+,
+{1,1,1,1,2}
+,
+{1,1,1,3}
+,
+{1,1,2,2}
+,
+{1,1,4}
+,
+{1,2,3}
+, and
+{2,2,2}
+.
+As an example, let's consider a possible sequence of operations.
+In the beginning, the sets are
+{1}
+,
+{1}
+,
+{2}
+,
+{1}
+,
+{4}
+, and
+{3}
+.
+Do an operation on sets
+{1}
+and
+{3}
+. Now, the sets are
+{1}
+,
+{1}
+,
+{2}
+,
+{4}
+, and
+{1,3}
+.
+Do an operation on sets
+{2}
+and
+{4}
+. Now, the sets are
+{1}
+,
+{1}
+,
+{1,3}
+, and
+{2,4}
+.
+Do an operation on sets
+{1,3}
+and
+{2,4}
+. Now, the sets are
+{1}
+,
+{1}
+, and
+{1,2,3,4}
+.
+The multiset
+M
+that is constructed is
+{1,1,4}
+.

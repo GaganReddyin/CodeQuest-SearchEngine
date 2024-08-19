@@ -1,0 +1,190 @@
+E. Sum Over Zero
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of
+n
+integers. Consider
+S
+as a set of segments satisfying the following conditions.
+Each element of
+S
+should be in form
+[x,y]
+, where
+x
+and
+y
+are integers between
+1
+and
+n
+, inclusive, and
+x≤y
+.
+No two segments in
+S
+intersect with each other. Two segments
+[a,b]
+and
+[c,d]
+intersect if and only if there exists an integer
+x
+such that
+a≤x≤b
+and
+c≤x≤d
+.
+For each
+[x,y]
+in
+S
+,
+a
+x
++
+a
+x+1
++…+
+a
+y
+≥0
+.
+The length of the segment
+[x,y]
+is defined as
+y−x+1
+.
+f(S)
+is defined as the sum of the lengths of every element in
+S
+. In a formal way,
+f(S)=
+∑
+[x,y]∈S
+(y−x+1)
+. Note that if
+S
+is empty,
+f(S)
+is
+0
+.
+What is the maximum
+f(S)
+among all possible
+S
+?
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The next line is followed by
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+).
+Output
+Print a single integer, the maximum
+f(S)
+among every possible
+S
+.
+Examples
+input
+Copy
+5
+3 -3 -2 5 -4
+output
+Copy
+4
+input
+Copy
+10
+5 -2 -4 -6 2 3 -6 5 3 -2
+output
+Copy
+9
+input
+Copy
+4
+-1 -2 -3 -4
+output
+Copy
+0
+Note
+In the first example,
+S={[1,2],[4,5]}
+can be a possible
+S
+because
+a
+1
++
+a
+2
+=0
+and
+a
+4
++
+a
+5
+=1
+.
+S={[1,4]}
+can also be a possible solution.
+Since there does not exist any
+S
+that satisfies
+f(S)>4
+, the answer is
+4
+.
+In the second example,
+S={[1,9]}
+is the only set that satisfies
+f(S)=9
+. Since every possible
+S
+satisfies
+f(S)≤9
+, the answer is
+9
+.
+In the third example,
+S
+can only be an empty set, so the answer is
+0
+.

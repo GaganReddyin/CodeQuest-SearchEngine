@@ -1,0 +1,68 @@
+Scoring Pairs
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef likes assigning scores to pairs of numbers in an unusual way:
+Consider a pair
+(X,Y) of integers in decimal representation. If they don't have the same number of digits, add leading zeros to the smaller of these integers until they have the same number of digits. Let's denote the number of digits in each of the resulting decimal representations by
+D.
+Reorder the digits of
+Y in an arbitrary way.
+For each
+i (
+1≤i≤D), calculate the absolute difference between the
+i-th digit of
+X and the
+i-th digit of
+Y, and sum up these differences.
+The score of the pair
+(X,Y) is the minimum possible value of this sum.
+Consider the pair
+(3178,10920) as an example. The scoring procedure would be:
+Add a leading zero to
+X, so the decimal representations are "03178" and "10920".
+Reorder "10920" e.g. to "01029".
+The score is
+∣0−0∣+∣3−1∣+∣1−0∣+∣7−2∣+∣8−9∣=9, since it is impossible to achieve a smaller sum.
+Now, Chef has a range
+[L,R], and he wants to calculate the sum of scores of all pairs of integers in this range ― formally,
+∑
+i=L
+R
+∑
+j=L
+R
+score(i,j). Since he is very busy with all his problem cooking, he asks you to write a program that would compute this sum. Since it could be very large, compute it modulo
+1,000,000,007.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+L and
+R.
+Output
+For each test case, print a single line containing one integer ― the sum of scores modulo
+1,000,000,007.
+Constraints
+1≤T≤50
+1≤L≤R≤10
+18
+Subtasks
+Subtask #1 (10 points):
+R≤10
+3
+Subtask #2 (40 points):
+R≤10
+9
+Subtask #3 (20 points):
+R≤10
+12
+Subtask #4 (30 points): original constraints
+Sample 1:
+Input
+Output
+2
+1 10
+3 17
+312
+724

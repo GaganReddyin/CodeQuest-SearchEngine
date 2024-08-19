@@ -1,0 +1,89 @@
+Clear the Array
+Problem
+Read problems statements in Mandarin Chinese, Russian, and Bengali as well.
+You are given an array
+A of
+N elements. You can do the following operations on that array:
+Remove the leftmost element of the array, with index
+l, for the cost
+A
+l
+. This can be done any number of times if the array is non-empty (has at least
+1 element).
+Remove the rightmost element of the array, with index
+r, for the cost
+A
+r
+. This can be done any number of times if the array is non-empty (has at least
+1 element).
+Remove both the leftmost and rightmost element, with indexes
+l and
+r respectively, for a fixed cost
+X which is given. This operation can only be done
+K times and only if the array has at least
+2 elements left.
+If the array has only
+1 element left, then the rightmost element is the same as the leftmost element so the first and second operations will have the same cost.
+You have to print the minimum cost to clear the array (remove all elements using one of the three operations above).
+NOTE: The answer may not fit in 32-bit integers, so please use 64-bit data types in your programming language.
+Input Format
+The first line of the input contains
+T - the number of test cases. Then the test cases follow.
+Each test case contains 2 lines of input.
+The first line of each test case contains three integers:
+N,
+K, and
+X separated by spaces.
+The second line of each test case contains
+N space-separated positive integers,
+A
+1
+,A
+2
+,…A
+N
+.
+Output Format
+For each test case, output on one line the minimum cost to clear the array.
+Constraints
+1≤T≤200
+1≤N≤5000
+0≤K≤⌊
+2
+N
+⌋
+1≤X≤10
+9
+1≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+3
+5 2 7
+9 10 11 12 13
+5 0 7
+9 9 9 9 9
+5 2 7
+9 1 2 3 10
+23
+45
+13
+Explanation:
+For the first test case, we can remove
+A
+1
+for cost
+9, which makes the array
+[10,11,12,13]. Then we can do the third operation to remove
+10 and
+13 for cost
+7, which makes the array
+[11,12]. We can again do the third operation to remove
+11 and
+12 for cost
+7 which clears the array.
+The total cost is therefore
+23, which is the minimum cost possible.

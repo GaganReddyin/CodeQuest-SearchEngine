@@ -1,0 +1,42 @@
+Pappu and DFS
+Problem
+Pappu today learnt that there can be many orderings of DFS possible in the same graph. Now he wants to know whether it is possible to obtains a particular permutation by performing DFS on the given graph. He usually asks his mom for help but since she is out of town, he wants you to help him.
+You are given a graph with
+n nodes numbered from 1 to
+n and
+m edges. You are also given a permutation
+P of the numbers from 1 to
+n. You have to print ‘YES’ (without quotes) if it is possible to obtain the same permutation by applying DFS on the given graph.
+You can read about DFS here. Note that we are concerned with the preorder. That is, the list of the vertices in the order in which they were first visited by the DFS algorithm.
+###Input:
+First line will contain
+T, number of testcases. Then the testcases follow.
+First line of each test case contains two integers
+n and
+m.
+The next
+m lines contains 2 integers
+a and
+b denoting that there is an edge between node
+a and node
+b.
+Next line contains
+n integers denoting the permutation
+P.
+###Output: For each test case, print "YES" (without quotes) if it is possible to obtain the permutation
+P else "NO".
+###Constraints
+1≤T≤10
+1≤n≤50,000
+P is a permutation of integers between
+1 and
+n, both inclusive.
+n−1≤m≤min(n∗(n−1)/2,10
+5
+)
+1≤a,b≤n
+It is guaranteed that there is a path between any two nodes. Also, there is no edge connecting a node to itself or multiple edges between the same pair of nodes.
+###Sample Input: 2 3 2 1 2 2 3 1 2 3 3 2 1 2 2 3 1 3 2
+###Sample Output: YES NO
+###Explanation:
+In the first case since there are edges between 1-2 and 2-3 therefore we can have dfs order - 1-2-3. In the second case there is no way to obtain the permutation.

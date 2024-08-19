@@ -1,0 +1,39 @@
+G. Large Bouquets
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A flower shop has got n bouquets, and the i-th bouquet consists of ai flowers. Vasya, the manager of the shop, decided to make large bouquets from these bouquets.
+Vasya thinks that a bouquet is large if it is made of two or more initial bouquets, and there is a constraint: the total number of flowers in a large bouquet should be odd. Each of the initial bouquets can be a part of at most one large bouquet. If an initial bouquet becomes a part of a large bouquet, all its flowers are included in the large bouquet.
+Determine the maximum possible number of large bouquets Vasya can make.
+Input
+The first line contains a single positive integer n (1 ≤ n ≤ 105) — the number of initial bouquets.
+The second line contains a sequence of integers a1, a2, ..., an (1 ≤ ai ≤ 106) — the number of flowers in each of the initial bouquets.
+Output
+Print the maximum number of large bouquets Vasya can make.
+Examples
+input
+Copy
+5
+2 3 4 2 7
+output
+Copy
+2
+input
+Copy
+6
+2 2 6 8 6 12
+output
+Copy
+0
+input
+Copy
+3
+11 4 10
+output
+Copy
+1
+Note
+In the first example Vasya can make 2 large bouquets. For example, the first bouquet can contain the first and the fifth initial bouquets (the total number of flowers is then equal to 9), and the second bouquet can consist of the second and the third initial bouquets (the total number of flowers is then equal to 7). The fourth initial bouquet is unused in this scheme.
+In the second example it is not possible to form a single bouquet with odd number of flowers.
+In the third example Vasya can make one large bouquet. For example, he can make it using all three initial bouquets. The size of the large bouquet is then equal to 11 + 4 + 10 = 25.

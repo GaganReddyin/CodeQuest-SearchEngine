@@ -1,0 +1,156 @@
+Median Rearrangement
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+You have an
+n×n matrix
+a. You can rearrange the elements of the matrix in any way. Let
+m
+1
+,m
+2
+,…,m
+n
+be the medians of each row in
+a after the rearrangement. The goodness of the matrix
+a is defined as the minimum median among the medians of all rows i.e
+min(m
+1
+,m
+2
+,…,m
+n
+). Naturally, rearranging values also comes with a cost. The cost of rearrangement is defined as
+m
+1
++m
+2
++⋯+m
+n
+.
+Find the maximum goodness you can achieve after rearranging a matrix
+a such that the cost of rearrangement doesn't exceed
+k or
+−1 if the answer doesn't exist.
+The median of an array
+a consisting of
+n elements is the
+⌈
+2
+n+1
+⌉
+th
+smallest element of
+a. The median of
+[4,8,6,1] is
+6 and the median of
+[1,6,2,4,5] is
+4.
+Input Format
+The first line of the input contains a single integer
+t denoting the number of test cases. The description of
+t test cases follows.
+The first line of each test case consists of two space-separated integers
+n and
+k.
+n lines follow, each consisting of
+n space-separated integers denoting the matrix
+a
+Output Format
+For each test case, print a single line containing one integer - the maximum goodness you can achieve such that the rearrangement cost does not exceed
+k or -1 if the answer doesn't exist.
+Constraints
+1≤t≤100
+1≤n≤1000
+1≤k≤10
+14
+1≤a
+i,j
+≤10
+9
+1≤∑n≤1000
+Subtasks
+Subtask 1 (20 points):
+k=10
+14
+Subtask 2 (40 points):
+1≤∑n≤70
+Subtask 3 (40 points): Original constraints
+Sample 1:
+Input
+Output
+3
+4 100
+13 2 1 16
+15 24 3 3
+5 17 9 8
+9 6 11 32
+4 40
+13 2 1 16
+15 24 3 3
+5 17 9 8
+9 6 11 32
+3 1
+3 4 2
+5 7 9
+2 1 1
+9
+6
+-1
+Explanation:
+Test case
+1: We rearrange the matrix as follows:
+⎣
+⎡
+11
+17
+5
+32
+2
+3
+15
+9
+1
+13
+6
+8
+16
+3
+24
+9
+⎦
+⎤
+. The medians of each row are
+11,13,15,9 respectively. The goodness is
+9 and the cost is
+48. There are other rearrangements that may yield the same goodness but
+9 is the maximum goodness we can get.
+Test case
+2: The rearranged matrix is:
+⎣
+⎡
+17
+2
+11
+5
+3
+1
+32
+24
+8
+6
+15
+9
+3
+16
+13
+9
+⎦
+⎤
+. The medians of each row are
+8,6,15,9 respectively. The goodness is
+6 and the cost is
+38. There are other rearrangements that may yield the same goodness but
+6 is the maximum goodness we can get.
+Test case
+3: No matter how we rearrange the elements, the cost is always greater than
+k.

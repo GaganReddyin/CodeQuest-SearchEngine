@@ -1,0 +1,212 @@
+Chefina and Strange Tree
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese.
+In Chefland, there are
+N cities (numbered
+1 through
+N) connected by
+N−1 bidirectional roads. Each city has exactly one garden. For each valid
+i, let's denote the population of the
+i-th city by
+A
+i
+and the initial number of fruits in its garden by
+B
+i
+; also, at any time, let's denote the current number of fruits in its garden by
+F
+i
+(
+F
+i
+=B
+i
+initially).
+You are given a permutation
+P of the integers
+1 through
+N. For each
+i (
+1≤i≤N), during the
+i-th of the next
+N days, the people of the city
+P
+i
+do the following:
+For each city
+j which is reachable from the city
+P
+i
+(including the city
+P
+i
+itself), visit the city
+j and consume
+min(A
+P
+i
+,F
+j
+) fruits from the garden of the city
+j; afterwards,
+F
+j
+decreases by
+min(A
+P
+i
+,F
+j
+).
+Return to the city
+P
+i
+and cut off all the roads that are connecting it to other cities, so that nobody can visit the city
+P
+i
+or visit any other city from their city if it requires passing through the city
+P
+i
+.
+For each valid
+i, let
+D
+i
+be the first day when the number of fruits in the
+i-th city's garden becomes zero, or
+−1 if the fruits in its garden never end up all eaten. Find
+D
+1
+,D
+2
+,…,D
+N
+.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+Each of the next
+N−1 lines contains two space-separated integers
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+The next line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The last line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Output
+For each test case, print a single line containing
+N space-separated integers
+D
+1
+,D
+2
+,…,D
+N
+.
+Constraints
+1≤T≤10
+5
+1≤N≤2⋅10
+5
+1≤u,v≤N
+1≤P
+i
+≤N for each valid
+i
+1≤A
+i
+,B
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Subtasks
+Subtask #1 (30 points):
+N≤10
+3
+the sum of
+N over all test cases does not exceed
+5⋅10
+3
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+2
+3
+1 2
+2 3
+1 2 3
+1 2 3
+1 3 6
+3
+1 2
+1 3
+1 2 3
+5 6 3
+4 10 12
+1 2 3
+1 2 -1
+Explanation:
+Example case 1: The process is as follows:
+On day
+1, people from city
+1 eat
+1 fruit from each garden. Afterwards, there are
+[0,2,5] fruits in the gardens of cities
+[1,2,3] respectively, so the answer for city
+1 is
+1, since the number of fruits in this garden becomes zero on day
+1.
+Then, on day
+2, people from city
+2 eat
+2 fruits from each of the gardens in cities
+2 and
+3. Afterwards, there are
+0 fruits in the garden of city
+2 (so the answer for city
+2 is
+2, since the number of fruits in this garden becomes zero on this day) and
+3 fruits in the garden of city
+3.
+Finally, on day
+3, people from city
+3 eat
+3 fruits from the garden of city
+3, so the answer for city
+3 is
+3.

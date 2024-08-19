@@ -1,0 +1,75 @@
+E1. Rubik's Cube Coloring (easy version)
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It is the easy version of the problem. The difference is that in this version, there are no nodes with already chosen colors.
+Theofanis is starving, and he wants to eat his favorite food, sheftalia. However, he should first finish his homework. Can you help him with this problem?
+You have a perfect binary tree of
+2
+k
+−1
+nodes — a binary tree where all vertices
+i
+from
+1
+to
+2
+k−1
+−1
+have exactly two children: vertices
+2i
+and
+2i+1
+. Vertices from
+2
+k−1
+to
+2
+k
+−1
+don't have any children. You want to color its vertices with the
+6
+Rubik's cube colors (White, Green, Red, Blue, Orange and Yellow).
+Let's call a coloring good when all edges connect nodes with colors that are neighboring sides in the Rubik's cube.
+A picture of Rubik's cube and its 2D map.
+More formally:
+a white node can not be neighboring with white and yellow nodes;
+a yellow node can not be neighboring with white and yellow nodes;
+a green node can not be neighboring with green and blue nodes;
+a blue node can not be neighboring with green and blue nodes;
+a red node can not be neighboring with red and orange nodes;
+an orange node can not be neighboring with red and orange nodes;
+You want to calculate the number of the good colorings of the binary tree. Two colorings are considered different if at least one node is colored with a different color.
+The answer may be too large, so output the answer modulo
+10
+9
++7
+.
+Input
+The first and only line contains the integers
+k
+(
+1≤k≤60
+) — the number of levels in the perfect binary tree you need to color.
+Output
+Print one integer — the number of the different colorings modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+3
+output
+Copy
+24576
+input
+Copy
+14
+output
+Copy
+934234
+Note
+In the picture below, you can see one of the correct colorings of the first example.

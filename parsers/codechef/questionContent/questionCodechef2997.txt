@@ -1,0 +1,32 @@
+Evaluate the polynomial
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+You are given a polynomial of degree N with integer coefficients. Your task is to find the value of this polynomial at some K different integers, modulo 786433.
+Input
+The first line of the input contains an integer N denoting the degree of the polynomial.
+The following line of each test case contains (N+1) integers denoting the coefficients of the polynomial. The ith numbers in this line denotes the coefficient ai-1 in the polynomial a0 + a1 × x1 + a2 × x2 + ... + aN × xN.
+The following line contains a single integer Q denoting the number of queries.
+The jth of the following Q lines contains an integer number xj denoting the query.
+Output
+For each query, output a single line containing the answer to the corresponding query. In other words, the jth line of the output should have an integer equal to a0 + a1 × xj + a2 × xj2 + ... + aN × xjN modulo 786433.
+Constraints and Subtasks
+0 ≤ ai, xj < 786433
+Subtask #1 (37 points): 0 ≤ N, Q ≤ 1000
+Subtask #2 (63 points): 0 ≤ N, Q ≤ 2.5 × 105
+Example
+Input:
+2
+1 2 3
+3
+7
+8
+9
+Output:
+162
+209
+262
+Explanation
+Example case 1.
+Query 1: 1 + 2 × 7 + 3 × 7 × 7 = 162
+Query 2: 1 + 2 × 8 + 3 × 8 × 8 = 209
+Query 3: 1 + 2 × 9 + 3 × 9 × 9 = 262

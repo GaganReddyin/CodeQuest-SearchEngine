@@ -1,0 +1,41 @@
+B. Kids' Riddle
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Programmers' kids solve this riddle in 5-10 minutes. How fast can you do it?
+Input
+The input contains a single integer n (0 ≤ n ≤ 2000000000).
+Output
+Output a single integer.
+Examples
+input
+Copy
+11
+output
+Copy
+2
+input
+Copy
+14
+output
+Copy
+0
+input
+Copy
+61441
+output
+Copy
+2
+input
+Copy
+571576
+output
+Copy
+10
+input
+Copy
+2128506
+output
+Copy
+3

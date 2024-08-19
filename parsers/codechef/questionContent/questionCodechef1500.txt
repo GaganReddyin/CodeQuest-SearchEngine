@@ -1,0 +1,48 @@
+Prime Tuples
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+A tuple
+(a,b,c) is considered good if it consists of three prime numbers
+a,
+b and
+c such that
+a<b<c≤N and
+a+b=c.
+Two tuples are considered different if they differ in at least one position. Given
+N, find the number of good tuples that can be formed by integers from
+1 to
+N.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The following
+T lines contain a single integer
+N.
+Output
+For each test case, print a single line containing one integer — the number of good tuples which can be formed using integers from
+1 to
+N.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+6
+Sample 1:
+Input
+Output
+2
+3
+6
+0
+1
+Explanation:
+Example case 1: There are no good tuples.
+(1,2,3) is not a good tuple since
+1 is not prime.
+Example case 2:
+(2,3,5) is a good tuple since
+2,
+3 and
+5 are prime and
+2+3=5.

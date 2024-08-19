@@ -1,0 +1,105 @@
+E2. Divisible Numbers (hard version)
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an hard version of the problem. The only difference between an easy and a hard version is the constraints on
+a
+,
+b
+,
+c
+and
+d
+.
+You are given
+4
+positive integers
+a
+,
+b
+,
+c
+,
+d
+with
+a<c
+and
+b<d
+. Find any pair of numbers
+x
+and
+y
+that satisfies the following conditions:
+a<x≤c
+,
+b<y≤d
+,
+x⋅y
+is divisible by
+a⋅b
+.
+Note that required
+x
+and
+y
+may not exist.
+Input
+The first line of the input contains a single integer
+t
+(1≤t≤10
+), the number of test cases.
+The descriptions of the test cases follow.
+The only line of each test case contains four integers
+a
+,
+b
+,
+c
+and
+d
+(
+1≤a<c≤
+10
+9
+,
+1≤b<d≤
+10
+9
+).
+Output
+For each test case print a pair of numbers
+a<x≤c
+and
+b<y≤d
+such that
+x⋅y
+is divisible by
+a⋅b
+. If there are multiple answers, print any of them. If there is no such pair of numbers, then print -1 -1.
+Example
+input
+Copy
+10
+1 1 2 2
+3 4 5 7
+8 9 15 18
+12 21 14 24
+36 60 48 66
+1024 729 373248 730
+1024 729 373247 730
+5040 40320 40319 1000000000
+999999999 999999999 1000000000 1000000000
+268435456 268435456 1000000000 1000000000
+output
+Copy
+2 2
+4 6
+12 12
+-1 -1
+-1 -1
+373248 730
+-1 -1
+15120 53760
+-1 -1
+536870912 536870912

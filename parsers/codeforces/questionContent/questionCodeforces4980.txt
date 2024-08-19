@@ -1,0 +1,37 @@
+A. k-rounding
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For a given positive integer n denote its k-rounding as the minimum positive integer x, such that x ends with k or more zeros in base 10 and is divisible by n.
+For example, 4-rounding of 375 is 375·80 = 30000. 30000 is the minimum integer such that it ends with 4 or more zeros and is divisible by 375.
+Write a program that will perform the k-rounding of n.
+Input
+The only line contains two integers n and k (1 ≤ n ≤ 109, 0 ≤ k ≤ 8).
+Output
+Print the k-rounding of n.
+Examples
+input
+Copy
+375 4
+output
+Copy
+30000
+input
+Copy
+10000 1
+output
+Copy
+10000
+input
+Copy
+38101 0
+output
+Copy
+38101
+input
+Copy
+123456789 8
+output
+Copy
+12345678900000000

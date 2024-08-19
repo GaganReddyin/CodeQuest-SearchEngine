@@ -1,0 +1,116 @@
+E. Phoenix and Berries
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Phoenix is picking berries in his backyard. There are
+n
+shrubs, and each shrub has
+a
+i
+red berries and
+b
+i
+blue berries.
+Each basket can contain
+k
+berries. But, Phoenix has decided that each basket may only contain berries from the same shrub or berries of the same color (red or blue). In other words, all berries in a basket must be from the same shrub or/and have the same color.
+For example, if there are two shrubs with
+5
+red and
+2
+blue berries in the first shrub and
+2
+red and
+1
+blue berries in the second shrub then Phoenix can fill
+2
+baskets of capacity
+4
+completely:
+the first basket will contain
+3
+red and
+1
+blue berries from the first shrub;
+the second basket will contain the
+2
+remaining red berries from the first shrub and
+2
+red berries from the second shrub.
+Help Phoenix determine the maximum number of baskets he can fill completely!
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n,k≤500
+) — the number of shrubs and the basket capacity, respectively.
+The
+i
+-th of the next
+n
+lines contain two integers
+a
+i
+and
+b
+i
+(
+0≤
+a
+i
+,
+b
+i
+≤
+10
+9
+) — the number of red and blue berries in the
+i
+-th shrub, respectively.
+Output
+Output one integer — the maximum number of baskets that Phoenix can fill completely.
+Examples
+input
+Copy
+2 4
+5 2
+2 1
+output
+Copy
+2
+input
+Copy
+1 5
+2 3
+output
+Copy
+1
+input
+Copy
+2 5
+2 1
+1 3
+output
+Copy
+0
+input
+Copy
+1 2
+1000000000 1
+output
+Copy
+500000000
+Note
+The first example is described above.
+In the second example, Phoenix can fill one basket fully using all the berries from the first (and only) shrub.
+In the third example, Phoenix cannot fill any basket completely because there are less than
+5
+berries in each shrub, less than
+5
+total red berries, and less than
+5
+total blue berries.
+In the fourth example, Phoenix can put all the red berries into baskets, leaving an extra blue berry behind.

@@ -1,0 +1,315 @@
+C. The Hard Work of Paparazzi
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are a paparazzi working in Manhattan.
+Manhattan has
+r
+south-to-north streets, denoted by numbers
+1,2,…,r
+in order from west to east, and
+r
+west-to-east streets, denoted by numbers
+1,2,…,r
+in order from south to north. Each of the
+r
+south-to-north streets intersects each of the
+r
+west-to-east streets; the intersection between the
+x
+-th south-to-north street and the
+y
+-th west-to-east street is denoted by
+(x,y)
+. In order to move from the intersection
+(x,y)
+to the intersection
+(
+x
+′
+,
+y
+′
+)
+you need
+|x−
+x
+′
+|+|y−
+y
+′
+|
+minutes.
+You know about the presence of
+n
+celebrities in the city and you want to take photos of as many of them as possible. More precisely, for each
+i=1,…,n
+, you know that the
+i
+-th celebrity will be at the intersection
+(
+x
+i
+,
+y
+i
+)
+in exactly
+t
+i
+minutes from now (and he will stay there for a very short time, so you may take a photo of him only if at the
+t
+i
+-th minute from now you are at the intersection
+(
+x
+i
+,
+y
+i
+)
+). You are very good at your job, so you are able to take photos instantaneously. You know that
+t
+i
+<
+t
+i+1
+for any
+i=1,2,…,n−1
+.
+Currently you are at your office, which is located at the intersection
+(1,1)
+. If you plan your working day optimally, what is the maximum number of celebrities you can take a photo of?
+Input
+The first line of the input contains two positive integers
+r,n
+(
+1≤r≤500
+,
+1≤n≤100,000
+) – the number of south-to-north/west-to-east streets and the number of celebrities.
+Then
+n
+lines follow, each describing the appearance of a celebrity. The
+i
+-th of these lines contains
+3
+positive integers
+t
+i
+,
+x
+i
+,
+y
+i
+(
+1≤
+t
+i
+≤1,000,000
+,
+1≤
+x
+i
+,
+y
+i
+≤r
+)  — denoting that the
+i
+-th celebrity will appear at the intersection
+(
+x
+i
+,
+y
+i
+)
+in
+t
+i
+minutes from now.
+It is guaranteed that
+t
+i
+<
+t
+i+1
+for any
+i=1,2,…,n−1
+.
+Output
+Print a single integer, the maximum number of celebrities you can take a photo of.
+Examples
+input
+Copy
+10 1
+11 6 8
+output
+Copy
+0
+input
+Copy
+6 9
+1 2 6
+7 5 1
+8 5 5
+10 3 1
+12 4 4
+13 6 2
+17 6 6
+20 1 4
+21 5 4
+output
+Copy
+4
+input
+Copy
+10 4
+1 2 1
+5 10 9
+13 8 8
+15 9 9
+output
+Copy
+1
+input
+Copy
+500 10
+69 477 122
+73 186 235
+341 101 145
+372 77 497
+390 117 440
+494 471 37
+522 300 498
+682 149 379
+821 486 359
+855 157 386
+output
+Copy
+3
+Note
+Explanation of the first testcase: There is only one celebrity in the city, and he will be at intersection
+(6,8)
+exactly
+11
+minutes after the beginning of the working day. Since you are initially at
+(1,1)
+and you need
+|1−6|+|1−8|=5+7=12
+minutes to reach
+(6,8)
+you cannot take a photo of the celebrity. Thus you cannot get any photo and the answer is
+0
+.
+Explanation of the second testcase: One way to take
+4
+photos (which is the maximum possible) is to take photos of celebrities with indexes
+3,5,7,9
+(see the image for a visualization of the strategy):
+To move from the office at
+(1,1)
+to the intersection
+(5,5)
+you need
+|1−5|+|1−5|=4+4=8
+minutes, so you arrive at minute
+8
+and you are just in time to take a photo of celebrity
+3
+.
+Then, just after you have taken a photo of celebrity
+3
+, you move toward the intersection
+(4,4)
+. You need
+|5−4|+|5−4|=1+1=2
+minutes to go there, so you arrive at minute
+8+2=10
+and you wait until minute
+12
+, when celebrity
+5
+appears.
+Then, just after you have taken a photo of celebrity
+5
+, you go to the intersection
+(6,6)
+. You need
+|4−6|+|4−6|=2+2=4
+minutes to go there, so you arrive at minute
+12+4=16
+and you wait until minute
+17
+, when celebrity
+7
+appears.
+Then, just after you have taken a photo of celebrity
+7
+, you go to the intersection
+(5,4)
+. You need
+|6−5|+|6−4|=1+2=3
+minutes to go there, so you arrive at minute
+17+3=20
+and you wait until minute
+21
+to take a photo of celebrity
+9
+.
+Explanation of the third testcase: The only way to take
+1
+photo (which is the maximum possible) is to take a photo of the celebrity with index
+1
+(since
+|2−1|+|1−1|=1
+, you can be at intersection
+(2,1)
+after exactly one minute, hence you are just in time to take a photo of celebrity
+1
+).
+Explanation of the fourth testcase: One way to take
+3
+photos (which is the maximum possible) is to take photos of celebrities with indexes
+3,8,10
+:
+To move from the office at
+(1,1)
+to the intersection
+(101,145)
+you need
+|1−101|+|1−145|=100+144=244
+minutes, so you can manage to be there when the celebrity
+3
+appears (at minute
+341
+).
+Then, just after you have taken a photo of celebrity
+3
+, you move toward the intersection
+(149,379)
+. You need
+|101−149|+|145−379|=282
+minutes to go there, so you arrive at minute
+341+282=623
+and you wait until minute
+682
+, when celebrity
+8
+appears.
+Then, just after you have taken a photo of celebrity
+8
+, you go to the intersection
+(157,386)
+. You need
+|149−157|+|379−386|=8+7=15
+minutes to go there, so you arrive at minute
+682+15=697
+and you wait until minute
+855
+to take a photo of celebrity
+10
+.

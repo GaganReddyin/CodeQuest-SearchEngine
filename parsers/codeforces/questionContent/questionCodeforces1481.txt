@@ -1,0 +1,143 @@
+A. Book
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a book with
+n
+chapters.
+Each chapter has a specified list of other chapters that need to be understood in order to understand this chapter. To understand a chapter, you must read it after you understand every chapter on its required list.
+Currently you don't understand any of the chapters. You are going to read the book from the beginning till the end repeatedly until you understand the whole book. Note that if you read a chapter at a moment when you don't understand some of the required chapters, you don't understand this chapter.
+Determine how many times you will read the book to understand every chapter, or determine that you will never understand every chapter no matter how many times you read the book.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤2⋅
+10
+4
+).
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — number of chapters.
+Then
+n
+lines follow. The
+i
+-th line begins with an integer
+k
+i
+(
+0≤
+k
+i
+≤n−1
+) — number of chapters required to understand the
+i
+-th chapter. Then
+k
+i
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,
+k
+i
+(
+1≤
+a
+i,j
+≤n,
+a
+i,j
+≠i,
+a
+i,j
+≠
+a
+i,l
+for
+j≠l
+) follow — the chapters required to understand the
+i
+-th chapter.
+It is guaranteed that the sum of
+n
+and sum of
+k
+i
+over all testcases do not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, if the entire book can be understood, print how many times you will read it, otherwise print
+−1
+.
+Example
+input
+Copy
+5
+4
+1 2
+0
+2 1 4
+1 2
+5
+1 5
+1 1
+1 2
+1 3
+1 4
+5
+0
+0
+2 1 2
+1 2
+2 2 1
+4
+2 2 3
+0
+0
+2 3 2
+5
+1 2
+1 3
+1 4
+1 5
+0
+output
+Copy
+2
+-1
+1
+2
+5
+Note
+In the first example, we will understand chapters
+{2,4}
+in the first reading and chapters
+{1,3}
+in the second reading of the book.
+In the second example, every chapter requires the understanding of some other chapter, so it is impossible to understand the book.
+In the third example, every chapter requires only chapters that appear earlier in the book, so we can understand everything in one go.
+In the fourth example, we will understand chapters
+{2,3,4}
+in the first reading and chapter
+1
+in the second reading of the book.
+In the fifth example, we will understand one chapter in every reading from
+5
+to
+1
+.

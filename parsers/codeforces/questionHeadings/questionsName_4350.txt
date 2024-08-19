@@ -1,0 +1,1 @@
+D1. Oracle for f(x) = b * x mod 2

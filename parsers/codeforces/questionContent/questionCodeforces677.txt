@@ -1,0 +1,349 @@
+F. Madoka and The First Session
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Oh no, on the first exam Madoka got this hard problem:
+Given integer
+n
+and
+m
+pairs of integers (
+v
+i
+,
+u
+i
+). Also there is an array
+b
+1
+,
+b
+2
+,…,
+b
+n
+, initially filled with zeros.
+Then for each index
+i
+, where
+1≤i≤m
+, perform either
+b
+v
+i
+:=
+b
+v
+i
+−1
+and
+b
+u
+i
+:=
+b
+u
+i
++1
+, or
+b
+v
+i
+:=
+b
+v
+i
++1
+and
+b
+u
+i
+:=
+b
+u
+i
+−1
+. Note that exactly one of these operations should be performed for every
+i
+.
+Also there is an array
+s
+of length
+n
+consisting of
+0
+and
+1
+. And there is an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+, where it is guaranteed, that if
+s
+i
+=0
+holds, then
+a
+i
+=0
+.
+Help Madoka and determine whenever it is possible to perform operations in such way that for every
+i
+, where
+s
+i
+=1
+it holds that
+a
+i
+=
+b
+i
+. If it possible you should also provide Madoka with a way to perform operations.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤10000,1≤m≤10000
+) — the length of the array
+a
+and the number of pair of integers.
+The second line contains
+n
+integers
+s
+1
+,
+s
+2
+,…
+s
+n
+(
+0≤
+s
+i
+≤1
+) — the elements of the array
+s
+.
+The third line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+|
+a
+i
+|≤m
+) — the elements of the array
+a
+. It is guaranteed that if
+s
+i
+=0
+holds, then
+a
+i
+=0
+.
+i
+-th of the following
+m
+lines contains two integers
+v
+i
+and
+u
+i
+(
+1≤
+v
+i
+,
+u
+i
+≤n,
+v
+i
+≠
+u
+i
+) — the indexes of the elements of the array
+b
+to which the operation is performed. It is also guaranteed that there are no two indices
+i
+and
+j
+, where
+1≤i<j≤m
+, such that
+(
+v
+i
+,
+u
+i
+)=(
+v
+j
+,
+u
+j
+)
+or
+(
+v
+i
+,
+u
+i
+)=(
+u
+j
+,
+v
+j
+)
+.
+Output
+In the first line print "YES" if it is possible to perform operations in the required way, and "NO" otherwise.
+You may print each letter in any case (for example, "YES", "Yes", "yes", "yEs" will all be recognized as positive answer).
+In case you printed "YES", print
+m
+pairs of integers. If for pair
+(
+v
+i
+,
+u
+i
+)
+we should perform
+b
+v
+i
+:=
+b
+v
+i
+−1
+and
+b
+u
+i
+:=
+b
+u
+i
++1
+, print
+(
+v
+i
+,
+u
+i
+)
+. Otherwise print
+(
+u
+i
+,
+v
+i
+)
+. If there are multiple ways to get the correct answer, you can print any of them.
+You can print pairs in any order.
+Examples
+input
+Copy
+5 5
+1 1 1 1 1
+-2 0 2 1 -1
+1 5
+1 4
+3 5
+3 4
+4 5
+output
+Copy
+YES
+1 5
+1 4
+5 3
+4 3
+5 4
+input
+Copy
+5 5
+0 1 0 1 0
+0 1 0 0 0
+1 3
+2 3
+3 5
+3 4
+4 5
+output
+Copy
+YES
+3 1
+3 2
+5 3
+3 4
+4 5
+input
+Copy
+4 4
+1 1 1 1
+0 2 -2 2
+1 3
+1 4
+2 3
+2 4
+output
+Copy
+NO
+Note
+In the first example, the array
+b
+will change as follows:
+[0,0,0,0,0]→[−1,0,0,1,0]→[−2,0,0,1,1]→[−2,0,1,0,1]→[−2,0,2,0,0]→[−2,0,2,1,−1]
+.
+a
+i
+=
+b
+i
+for all indices
+i
+from
+1
+to
+5
+.
+In the second example, it is enough for us that
+b
+2
+=1
+at the end, since only
+s
+2
+=1
+.
+In the third example, the operations cannot be performed as required.

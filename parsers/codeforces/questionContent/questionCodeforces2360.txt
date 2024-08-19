@@ -1,0 +1,115 @@
+G. Mercenaries
+time limit per test7 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Polycarp plays a (yet another!) strategic computer game. In this game, he leads an army of mercenaries.
+Polycarp wants to gather his army for a quest. There are
+n
+mercenaries for hire, and the army should consist of some subset of them.
+The
+i
+-th mercenary can be chosen if the resulting number of chosen mercenaries is not less than
+l
+i
+(otherwise he deems the quest to be doomed) and not greater than
+r
+i
+(he doesn't want to share the trophies with too many other mercenaries). Furthermore,
+m
+pairs of mercenaries hate each other and cannot be chosen for the same quest.
+How many non-empty subsets does Polycarp need to consider? In other words, calculate the number of non-empty subsets of mercenaries such that the size of this subset belongs to
+[
+l
+i
+,
+r
+i
+]
+for each chosen mercenary, and there are no two mercenaries in the subset that hate each other.
+The answer may be large, so calculate it modulo
+998244353
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤3⋅
+10
+5
+,
+0≤m≤min(20,
+n(n−1)
+2
+)
+) — the number of mercenaries and the number of pairs of mercenaries that hate each other.
+Then
+n
+lines follow, the
+i
+-th of them contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+).
+Then
+m
+lines follow, the
+i
+-th of them contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+<
+b
+i
+≤n
+) denoting that the mercenaries
+a
+i
+and
+b
+i
+hate each other. There are no two equal pairs in this list.
+Output
+Print one integer — the number of non-empty subsets meeting the constraints, taken modulo
+998244353
+.
+Examples
+input
+Copy
+3 0
+1 1
+2 3
+1 3
+output
+Copy
+3
+input
+Copy
+3 1
+1 1
+2 3
+1 3
+2 3
+output
+Copy
+2

@@ -1,0 +1,132 @@
+A. Charmed by the Game
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Alice and Borys are playing tennis.
+A tennis match consists of games. In each game, one of the players is serving and the other one is receiving.
+Players serve in turns: after a game where Alice is serving follows a game where Borys is serving, and vice versa.
+Each game ends with a victory of one of the players. If a game is won by the serving player, it's said that this player holds serve. If a game is won by the receiving player, it's said that this player breaks serve.
+It is known that Alice won
+a
+games and Borys won
+b
+games during the match. It is unknown who served first and who won which games.
+Find all values of
+k
+such that exactly
+k
+breaks could happen during the match between Alice and Borys in total.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+3
+). Description of the test cases follows.
+Each of the next
+t
+lines describes one test case and contains two integers
+a
+and
+b
+(
+0≤a,b≤
+10
+5
+;
+a+b>0
+) — the number of games won by Alice and Borys, respectively.
+It is guaranteed that the sum of
+a+b
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case print two lines.
+In the first line, print a single integer
+m
+ (
+1≤m≤a+b+1
+) — the number of values of
+k
+such that exactly
+k
+breaks could happen during the match.
+In the second line, print
+m
+distinct integers
+k
+1
+,
+k
+2
+,…,
+k
+m
+(
+0≤
+k
+1
+<
+k
+2
+<…<
+k
+m
+≤a+b
+) — the sought values of
+k
+in increasing order.
+Example
+input
+Copy
+3
+2 1
+1 1
+0 5
+output
+Copy
+4
+0 1 2 3
+2
+0 2
+2
+2 3
+Note
+In the first test case, any number of breaks between
+0
+and
+3
+could happen during the match:
+Alice holds serve, Borys holds serve, Alice holds serve:
+0
+breaks;
+Borys holds serve, Alice holds serve, Alice breaks serve:
+1
+break;
+Borys breaks serve, Alice breaks serve, Alice holds serve:
+2
+breaks;
+Alice breaks serve, Borys breaks serve, Alice breaks serve:
+3
+breaks.
+In the second test case, the players could either both hold serves (
+0
+breaks) or both break serves (
+2
+breaks).
+In the third test case, either
+2
+or
+3
+breaks could happen:
+Borys holds serve, Borys breaks serve, Borys holds serve, Borys breaks serve, Borys holds serve:
+2
+breaks;
+Borys breaks serve, Borys holds serve, Borys breaks serve, Borys holds serve, Borys breaks serve:
+3
+breaks.

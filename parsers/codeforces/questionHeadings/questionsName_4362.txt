@@ -1,0 +1,1 @@
+H. Oracle for f(x) = parity of the number of 1s in x

@@ -1,0 +1,102 @@
+Easy Fibonacci
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+The Fibonacci sequence
+F
+0
+,F
+1
+,… is a special infinite sequence of non-negative integers, where
+F
+0
+=0,
+F
+1
+=1 and for each integer
+n≥2,
+F
+n
+=F
+n−1
++F
+n−2
+.
+Consider the sequence
+D of the last decimal digits of the first
+N Fibonacci numbers, i.e.
+D=(F
+0
+%10,F
+1
+%10,…,F
+N−1
+%10). Now, you should perform the following process:
+Let
+D=(D
+1
+,D
+2
+,…,D
+l
+).
+If
+l=1, the process ends.
+Create a new sequence
+E=(D
+2
+,D
+4
+,…,D
+2⌊l/2⌋
+). In other words,
+E is the sequence created by removing all odd-indexed elements from
+D.
+Change
+D to
+E.
+When this process terminates, the sequence
+D contains only one number. You have to find this number.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output
+For each test case, print a single line containing one integer ― the last remaining number.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+18
+Subtasks
+Subtask #1 (20 points):
+1≤T≤10
+5
+1≤N≤10
+7
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+1
+9
+3
+Explanation:
+Test case
+1: The first
+N Fibonacci numbers are
+(0,1,1,2,3,5,8,13,21). The corresponding sequence
+D is
+(0,1,1,2,3,5,8,3,1).
+Remove all elements at odd indices of
+D:
+(0,1,1,2,3,5,8,3,1)→(1,2,5,3).
+Remove all elements at odd indices of
+D:
+(1,2,5,3)→(2,3).
+Remove all elements at odd indices of
+D:
+(2,3)→(3).
+The remaining element is
+3.

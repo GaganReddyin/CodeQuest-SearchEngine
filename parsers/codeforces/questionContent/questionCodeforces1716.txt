@@ -1,0 +1,124 @@
+F. AmShZ Farm
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+To AmShZ, all arrays are equal, but some arrays are more-equal than others. Specifically, the arrays consisting of
+n
+elements from
+1
+to
+n
+that can be turned into permutations of numbers from
+1
+to
+n
+by adding a non-negative integer to each element.
+Mashtali who wants to appear in every problem statement thinks that an array
+b
+consisting of
+k
+elements is compatible with a more-equal array
+a
+consisting of
+n
+elements if for each
+1≤i≤k
+we have
+1≤
+b
+i
+≤n
+and also
+a
+b
+1
+=
+a
+b
+2
+=…=
+a
+b
+k
+.
+Find the number of pairs of arrays
+a
+and
+b
+such that
+a
+is a more-equal array consisting of
+n
+elements and
+b
+is an array compatible with
+a
+consisting of
+k
+elements modulo
+998244353
+.
+Note that the elements of
+b
+are not necessarily distinct, same holds for
+a
+.
+Input
+The first line of input contains two integers
+n
+and
+k
+(1≤n≤
+10
+9
+,1≤k≤
+10
+5
+)
+.
+Output
+Print a single integer — the answer to the problem modulo
+998244353
+.
+Examples
+input
+Copy
+1 1
+output
+Copy
+1
+input
+Copy
+2 2
+output
+Copy
+8
+input
+Copy
+5 4
+output
+Copy
+50400
+input
+Copy
+20 100
+output
+Copy
+807645526
+input
+Copy
+10000000 10000
+output
+Copy
+883232350
+Note
+There are eight possible pairs for the second example:
+a={1,1},b={1,1}
+a={1,1},b={1,2}
+a={1,1},b={2,1}
+a={1,1},b={2,2}
+a={1,2},b={1,1}
+a={1,2},b={2,2}
+a={2,1},b={1,1}
+a={2,1},b={2,2}

@@ -1,0 +1,88 @@
+Minimum Sum
+Problem
+You are given an array
+A
+1
+,A
+2
+,…,A
+N
+of length
+N. You can perform the following operation any number of times (possibly 0 times) :
+Choose any two indices
+i and
+j and replace either
+A
+i
+or
+A
+j
+with
+gcd(A
+i
+,A
+j
+).
+Find the minimum possible sum (ie.
+A
+1
++A
+2
++⋯+A
+N
+) that you can achieve, and output that.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first line of each test case contains an integer
+N - the length of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line the minimum sum of the array that can be achieved.
+Constraints
+1≤T≤100
+2≤N≤10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+3∗10
+5
+.
+Sample 1:
+Input
+Output
+2
+2
+5 10
+3
+2 2 6
+10
+6
+Explanation:
+Test case
+1: Choose
+i=1,j=2 and replace
+A
+2
+with
+gcd(5,10)=5.
+Test case
+2: Choose
+i=1,j=3 and replace
+A
+3
+with
+gcd(2,6)=2.

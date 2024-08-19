@@ -1,0 +1,16 @@
+A. Numbers Joke
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Input
+The input contains a single integer a (1 ≤ a ≤ 30).
+Output
+Output a single integer.
+Example
+input
+Copy
+3
+output
+Copy
+27

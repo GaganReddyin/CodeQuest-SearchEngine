@@ -1,0 +1,236 @@
+B. A Perfectly Balanced String?
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call a string
+s
+perfectly balanced if for all possible triplets
+(t,u,v)
+such that
+t
+is a non-empty substring of
+s
+and
+u
+and
+v
+are characters present in
+s
+, the difference between the frequencies of
+u
+and
+v
+in
+t
+is not more than
+1
+.
+For example, the strings "aba" and "abc" are perfectly balanced but "abb" is not because for the triplet ("bb",'a','b'), the condition is not satisfied.
+You are given a string
+s
+consisting of lowercase English letters only. Your task is to determine whether
+s
+is perfectly balanced or not.
+A string
+b
+is called a substring of another string
+a
+if
+b
+can be obtained by deleting some characters (possibly
+0
+) from the start and some characters (possibly
+0
+) from the end of
+a
+.
+Input
+The first line of input contains a single integer
+t
+(
+1≤t≤2⋅
+10
+4
+) denoting the number of testcases.
+Each of the next
+t
+lines contain a single string
+s
+(
+1≤|s|≤2⋅
+10
+5
+), consisting of lowercase English letters.
+It is guaranteed that the sum of
+|s|
+over all testcases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print "YES" if
+s
+is a perfectly balanced string, and "NO" otherwise.
+You may print each letter in any case (for example, "YES", "Yes", "yes", "yEs" will all be recognized as positive answer).
+Example
+input
+Copy
+5
+aba
+abb
+abc
+aaaaa
+abcba
+output
+Copy
+YES
+NO
+YES
+YES
+NO
+Note
+Let
+f
+t
+(c)
+represent the frequency of character
+c
+in string
+t
+.
+For the first testcase we have
+t
+f
+t
+(a)
+f
+t
+(b)
+a
+1
+0
+ab
+1
+1
+aba
+2
+1
+b
+0
+1
+ba
+1
+1
+It can be seen that for any substring
+t
+of
+s
+, the difference between
+f
+t
+(a)
+and
+f
+t
+(b)
+is not more than
+1
+. Hence the string
+s
+is perfectly balanced.
+For the second testcase we have
+t
+f
+t
+(a)
+f
+t
+(b)
+a
+1
+0
+ab
+1
+1
+abb
+1
+2
+b
+0
+1
+bb
+0
+2
+It can be seen that for the substring
+t=bb
+, the difference between
+f
+t
+(a)
+and
+f
+t
+(b)
+is
+2
+which is greater than
+1
+. Hence the string
+s
+is not perfectly balanced.
+For the third testcase we have
+t
+f
+t
+(a)
+f
+t
+(b)
+f
+t
+(c)
+a
+1
+0
+0
+ab
+1
+1
+0
+abc
+1
+1
+1
+b
+0
+1
+0
+bc
+0
+1
+1
+c
+0
+0
+1
+It can be seen that for any substring
+t
+of
+s
+and any two characters
+u,v∈{a,b,c}
+, the difference between
+f
+t
+(u)
+and
+f
+t
+(v)
+is not more than
+1
+. Hence the string
+s
+is perfectly balanced.

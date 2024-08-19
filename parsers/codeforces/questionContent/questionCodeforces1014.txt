@@ -1,0 +1,137 @@
+E. Narrow Components
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a matrix
+a
+, consisting of
+3
+rows and
+n
+columns. Each cell of the matrix is either free or taken.
+A free cell
+y
+is reachable from a free cell
+x
+if at least one of these conditions hold:
+x
+and
+y
+share a side;
+there exists a free cell
+z
+such that
+z
+is reachable from
+x
+and
+y
+is reachable from
+z
+.
+A connected component is a set of free cells of the matrix such that all cells in it are reachable from one another, but adding any other free cell to the set violates this rule.
+You are asked
+q
+queries about the matrix. Each query is the following:
+l
+r
+ — count the number of connected components of the matrix, consisting of columns from
+l
+to
+r
+of the matrix
+a
+, inclusive.
+Print the answers to all queries.
+Input
+The first line contains an integer
+n
+(
+1≤n≤5⋅
+10
+5
+) — the number of columns of matrix
+a
+.
+The
+i
+-th of the next three lines contains a description of the
+i
+-th row of the matrix
+a
+ — a string, consisting of
+n
+characters. Each character is either
+1
+(denoting a free cell) or
+0
+(denoting a taken cell).
+The next line contains an integer
+q
+(
+1≤q≤3⋅
+10
+5
+) — the number of queries.
+The
+j
+-th of the next
+q
+lines contains two integers
+l
+j
+and
+r
+j
+(
+1≤
+l
+j
+≤
+r
+j
+≤n
+) — the description of the
+j
+-th query.
+Output
+Print
+q
+integers — the
+j
+-th value should be equal to the number of the connected components of the matrix, consisting of columns from
+l
+j
+to
+r
+j
+of the matrix
+a
+, inclusive.
+Example
+input
+Copy
+12
+100101011101
+110110010110
+010001011101
+8
+1 12
+1 1
+1 2
+9 9
+8 11
+9 12
+11 12
+4 6
+output
+Copy
+7
+1
+1
+2
+1
+3
+3
+3

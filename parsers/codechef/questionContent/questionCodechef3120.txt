@@ -1,0 +1,129 @@
+Visit Them All
+Problem
+You are given a binary string
+S of length
+N.
+Let
+G be a complete directed graph of
+N vertices numbered from
+1 to
+N. There is a directed edge going from vertex
+u to
+v if one of the following is true:
+S
+u
+=S
+v
+and
+u<v
+S
+u
+
+=S
+v
+and
+u>v
+For example, if
+S=1010 then
+G looks like this:
+You will be given
+Q queries of two different types:
+1
+L
+R - Flip all the bits in
+S in range
+[L,R] and update
+G accordingly.
+2
+L
+R
+X - Find whether there is a path that starts from vertex
+X and visits each vertex in
+G[L,R] exactly once (a hamiltonian path in other words).
+G[L,R] is the subgraph induced by the vertices in the range
+[L,R] and the edges connecting them. For example, if
+S=1010 then
+G[2,4] consists of the vertices
+2,
+3, and
+4, and the three edges
+2→4,
+4→3, and
+3→2.
+Input Format
+The first line contains two integers,
+N and
+Q.
+The second line contains a binary string
+S of length
+N.
+The
+i
+th
+line of the next
+Q lines contains the description of the
+i
+th
+query.
+Output Format
+For each query of type
+2, print a single line containing YES if there's a hamiltonian path starting from vertex
+X, or NO otherwise.
+You may print each character of the string in uppercase or lowercase (for example, the strings yEs, yes, Yes and YES will all be treated as identical).
+Constraints
+1≤N,Q≤5⋅10
+5
+For queries of type
+1,
+1≤L≤R≤N
+For queries of type
+2,
+1≤L≤X≤R≤N
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+5 7
+11011
+2 1 5 3
+2 3 5 3
+2 3 5 4
+1 4 5
+2 1 5 2
+1 2 3
+2 3 5 4
+YES
+NO
+YES
+NO
+YES
+Explanation:
+Here's what
+G initially looks like:
+First query:
+3→1→2→4→5 is a possible hamiltonian path.
+Second query: There's no hamiltonian path that visits the vertices
+3,
+4, and
+5 which starts from
+3.
+Third query:
+4→5→3 is a possible hamiltonian path.
+Fourth query: Flip the bits in the range
+[4,5] so
+S becomes equal to
+11000.
+Fifth query: There's no hamiltonian path that visits the vertices
+1,
+2,
+3,
+4, and
+5 which starts from
+2.
+Sixth query: Flip the bits in the range
+[2,3] so
+S becomes equal to
+10100.
+Seventh query:
+4→5→3 is a possible hamiltonian path.

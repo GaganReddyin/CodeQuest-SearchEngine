@@ -1,0 +1,179 @@
+D. Cute Sequences
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a positive integer
+m
+, we say that a sequence
+x
+1
+,
+x
+2
+,…,
+x
+n
+of positive integers is
+m
+-cute if for every index
+i
+such that
+2≤i≤n
+it holds that
+x
+i
+=
+x
+i−1
++
+x
+i−2
++⋯+
+x
+1
++
+r
+i
+for some positive integer
+r
+i
+satisfying
+1≤
+r
+i
+≤m
+.
+You will be given
+q
+queries consisting of three positive integers
+a
+,
+b
+and
+m
+. For each query you must determine whether or not there exists an
+m
+-cute sequence whose first term is
+a
+and whose last term is
+b
+. If such a sequence exists, you must additionally find an example of it.
+Input
+The first line contains an integer number
+q
+(
+1≤q≤
+10
+3
+) — the number of queries.
+Each of the following
+q
+lines contains three integers
+a
+,
+b
+, and
+m
+(
+1≤a,b,m≤
+10
+14
+,
+a≤b
+), describing a single query.
+Output
+For each query, if no
+m
+-cute sequence whose first term is
+a
+and whose last term is
+b
+exists, print
+−1
+.
+Otherwise print an integer
+k
+(
+1≤k≤50
+), followed by
+k
+integers
+x
+1
+,
+x
+2
+,…,
+x
+k
+(
+1≤
+x
+i
+≤
+10
+14
+). These integers must satisfy
+x
+1
+=a
+,
+x
+k
+=b
+, and that the sequence
+x
+1
+,
+x
+2
+,…,
+x
+k
+is
+m
+-cute.
+It can be shown that under the problem constraints, for each query either no
+m
+-cute sequence exists, or there exists one with at most
+50
+terms.
+If there are multiple possible sequences, you may print any of them.
+Example
+input
+Copy
+2
+5 26 2
+3 9 1
+output
+Copy
+4 5 6 13 26
+-1
+Note
+Consider the sample. In the first query, the sequence
+5,6,13,26
+is valid since
+6=5+1
+,
+13=6+5+2
+and
+26=13+6+5+2
+have the bold values all between
+1
+and
+2
+, so the sequence is
+2
+-cute. Other valid sequences, such as
+5,7,13,26
+are also accepted.
+In the second query, the only possible
+1
+-cute sequence starting at
+3
+is
+3,4,8,16,…
+, which does not contain
+9
+.

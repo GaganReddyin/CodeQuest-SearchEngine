@@ -1,0 +1,103 @@
+A. Death Note
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You received a notebook which is called Death Note. This notebook has infinite number of pages. A rule is written on the last page (huh) of this notebook. It says: "You have to write names in this notebook during
+n
+consecutive days. During the
+i
+-th day you have to write exactly
+a
+i
+names.". You got scared (of course you got scared, who wouldn't get scared if he just receive a notebook which is named Death Note with a some strange rule written in it?).
+Of course, you decided to follow this rule. When you calmed down, you came up with a strategy how you will write names in the notebook. You have calculated that each page of the notebook can contain exactly
+m
+names. You will start writing names from the first page. You will write names on the current page as long as the limit on the number of names on this page is not exceeded. When the current page is over, you turn the page. Note that you always turn the page when it ends, it doesn't matter if it is the last day or not. If after some day the current page still can hold at least one name, during the next day you will continue writing the names from the current page.
+Now you are interested in the following question: how many times will you turn the page during each day? You are interested in the number of pages you will turn each day from
+1
+to
+n
+.
+Input
+The first line of the input contains two integers
+n
+,
+m
+(
+1≤n≤2⋅
+10
+5
+,
+1≤m≤
+10
+9
+) — the number of days you will write names in the notebook and the number of names which can be written on each page of the notebook.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+), where
+a
+i
+means the number of names you will write in the notebook during the
+i
+-th day.
+Output
+Print exactly
+n
+integers
+t
+1
+,
+t
+2
+,…,
+t
+n
+, where
+t
+i
+is the number of times you will turn the page during the
+i
+-th day.
+Examples
+input
+Copy
+3 5
+3 7 9
+output
+Copy
+0 2 1 
+input
+Copy
+4 20
+10 9 19 2
+output
+Copy
+0 0 1 1 
+input
+Copy
+1 100
+99
+output
+Copy
+0 
+Note
+In the first example pages of the Death Note will look like this
+[1,1,1,2,2],[2,2,2,2,2],[3,3,3,3,3],[3,3,3,3]
+. Each number of the array describes during which day name on the corresponding position will be written. It is easy to see that you should turn the first and the second page during the second day and the third page during the third day.

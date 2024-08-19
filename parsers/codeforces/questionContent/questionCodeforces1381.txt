@@ -1,0 +1,103 @@
+D2. Half of Same
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem is a complicated version of D1, but it has significant differences, so read the whole statement.
+Polycarp has an array of
+n
+(
+n
+is even) integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Polycarp conceived of a positive integer
+k
+. After that, Polycarp began performing the following operations on the array: take an index
+i
+(
+1≤i≤n
+) and reduce the number
+a
+i
+by
+k
+.
+After Polycarp performed some (possibly zero) number of such operations, it turned out that at least half of the numbers in the array became the same. Find the maximum
+k
+at which such a situation is possible, or print
+−1
+if such a number can be arbitrarily large.
+Input
+The first line contains one integer
+t
+(
+1≤t≤10
+) — the number of test cases. Then
+t
+test cases follow.
+Each test case consists of two lines. The first line contains an even integer
+n
+(
+4≤n≤40
+) (
+n
+is even). The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…
+a
+n
+(
+−
+10
+6
+≤
+a
+i
+≤
+10
+6
+).
+It is guaranteed that the sum of all
+n
+specified in the given test cases does not exceed
+100
+.
+Output
+For each test case output on a separate line an integer
+k
+(
+k≥1
+) — the maximum possible number that Polycarp used in operations on the array, or
+−1
+, if such a number can be arbitrarily large.
+Example
+input
+Copy
+4
+6
+48 13 22 -15 16 35
+8
+-1 0 1 -1 0 1 -1 0
+4
+100 -1000 -1000 -1000
+4
+1 1 1 1
+output
+Copy
+13
+2
+-1
+-1

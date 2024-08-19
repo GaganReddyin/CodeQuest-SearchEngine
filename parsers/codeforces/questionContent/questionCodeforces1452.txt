@@ -1,0 +1,116 @@
+B. Building Forest Trails
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+villages lying equidistant on a circle in the middle of a thick, impassable forest. From ancient times, it was impossible to move from one village to another, but technical progress has changed a lot. Now, there is a technology to build passable trails in the forest.
+The building process consists of
+m
+events. Each event is either building a trail or querying if two villages are connected. Trails are built as straight lines connecting two villages. After a trail is built, anybody can walk along the trail from one village to another.
+Moreover, if two trails cross, anybody can turn at the intersection, and if other trails leave a village you have just reached, they can also be used to walk along. So, for example, if villages are numbered
+1
+to
+6
+in the order around the circle, and there are trails
+1
+to
+3
+,
+2
+to
+4
+, and
+4
+to
+6
+, then all villages, except the
+5
+-th, are reachable from the
+1
+-st village.
+Given a list of
+m
+events, for each query, find if two given villages are reachable from each other at that moment.
+Input
+The first line contains two integers
+n
+(
+2≤n≤2⋅
+10
+5
+) and
+m
+(
+1≤m≤3⋅
+10
+5
+) — the number of villages and the number of events respectively.
+Next
+m
+lines contain events. Each event description consists of three integers
+e
+(
+e
+is
+1
+or
+2
+),
+v
+(
+1≤v≤n
+), and
+u
+(
+1≤u≤n
+,
+u≠v
+). If
+e=1
+, then the event is building a trail between villages
+v
+and
+u
+. If
+e=2
+, then the event is a query if the villages
+v
+and
+u
+are connected. It is guaranteed that each trail is built at most once.
+Villages are numbered
+1
+to
+n
+in clockwise order around the circle.
+Output
+For each query print one character '0' if villages are not reachable, and '1' if villages are reachable from each other. Print answers for all queries as a single string in one line.
+Examples
+input
+Copy
+6 9
+1 1 3
+1 4 6
+2 3 4
+1 2 4
+2 1 2
+2 1 3
+2 1 4
+2 6 1
+2 5 3
+output
+Copy
+011110
+input
+Copy
+2 5
+2 1 2
+2 2 1
+1 1 2
+2 1 2
+2 2 1
+output
+Copy
+0011

@@ -1,0 +1,102 @@
+E. Natasha, Sasha and the Prefix Sums
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Natasha's favourite numbers are
+n
+and
+1
+, and Sasha's favourite numbers are
+m
+and
+−1
+. One day Natasha and Sasha met and wrote down every possible array of length
+n+m
+such that some
+n
+of its elements are equal to
+1
+and another
+m
+elements are equal to
+−1
+. For each such array they counted its maximal prefix sum, probably an empty one which is equal to
+0
+(in another words, if every nonempty prefix sum is less to zero, then it is considered equal to zero). Formally, denote as
+f(a)
+the maximal prefix sum of an array
+a
+1,…,l
+of length
+l≥0
+. Then:
+f(a)=max(0,
+max
+1≤i≤l
+∑
+j=1
+i
+a
+j
+)
+i
+Now they want to count the sum of maximal prefix sums for each such an array and they are asking you to help. As this sum can be very large, output it modulo
+998244853
+.
+Input
+The only line contains two integers
+n
+and
+m
+(
+0≤n,m≤2000
+).
+Output
+Output the answer to the problem modulo
+998244853
+.
+Examples
+input
+Copy
+0 2
+output
+Copy
+0
+input
+Copy
+2 0
+output
+Copy
+2
+input
+Copy
+2 2
+output
+Copy
+5
+input
+Copy
+2000 2000
+output
+Copy
+674532367
+Note
+In the first example the only possible array is [-1,-1], its maximal prefix sum is equal to
+0
+.
+In the second example the only possible array is [1,1], its maximal prefix sum is equal to
+2
+.
+There are
+6
+possible arrays in the third example:
+[1,1,-1,-1], f([1,1,-1,-1]) = 2
+[1,-1,1,-1], f([1,-1,1,-1]) = 1
+[1,-1,-1,1], f([1,-1,-1,1]) = 1
+[-1,1,1,-1], f([-1,1,1,-1]) = 1
+[-1,1,-1,1], f([-1,1,-1,1]) = 0
+[-1,-1,1,1], f([-1,-1,1,1]) = 0
+So the answer for the third example is
+2+1+1+1+0+0=5
+.

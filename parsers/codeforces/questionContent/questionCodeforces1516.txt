@@ -1,0 +1,187 @@
+D1. Two Hundred Twenty One (easy version)
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The difference between the versions is that the easy version does not require you to output the numbers of the rods to be removed. You can make hacks only if all versions of the problem are solved.
+Stitch likes experimenting with different machines with his friend Sparky. Today they built another machine.
+The main element of this machine are
+n
+rods arranged along one straight line and numbered from
+1
+to
+n
+inclusive. Each of these rods must carry an electric charge quantitatively equal to either
+1
+or
+−1
+(otherwise the machine will not work). Another condition for this machine to work is that the sign-variable sum of the charge on all rods must be zero.
+More formally, the rods can be represented as an array of
+n
+numbers characterizing the charge: either
+1
+or
+−1
+. Then the condition must hold:
+a
+1
+−
+a
+2
++
+a
+3
+−
+a
+4
++…=0
+, or
+∑
+i=1
+n
+(−1
+)
+i−1
+⋅
+a
+i
+=0
+.
+Sparky charged all
+n
+rods with an electric current, but unfortunately it happened that the rods were not charged correctly (the sign-variable sum of the charge is not zero). The friends decided to leave only some of the rods in the machine. Sparky has
+q
+questions. In the
+i
+th question Sparky asks: if the machine consisted only of rods with numbers
+l
+i
+to
+r
+i
+inclusive, what minimal number of rods could be removed from the machine so that the sign-variable sum of charges on the remaining ones would be zero? Perhaps the friends got something wrong, and the sign-variable sum is already zero. In that case, you don't have to remove the rods at all.
+If the number of rods is zero, we will assume that the sign-variable sum of charges is zero, that is, we can always remove all rods.
+Help your friends and answer all of Sparky's questions!
+Input
+Each test contains multiple test cases.
+The first line contains one positive integer
+t
+(
+1≤t≤
+10
+3
+), denoting the number of test cases. Description of the test cases follows.
+The first line of each test case contains two positive integers
+n
+and
+q
+(
+1≤n,q≤3⋅
+10
+5
+) — the number of rods and the number of questions.
+The second line of each test case contains a non-empty string
+s
+of length
+n
+, where the charge of the
+i
+-th rod is
+1
+if
+s
+i
+is the "+" symbol, or
+−1
+if
+s
+i
+is the "-" symbol.
+Each next line from the next
+q
+lines contains two positive integers
+l
+i
+ans
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+) — numbers, describing Sparky's questions.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+3⋅
+10
+5
+, and the sum of
+q
+over all test cases does not exceed
+3⋅
+10
+5
+.
+Output
+For each test case, print a single integer — the minimal number of rods that can be removed.
+Example
+input
+Copy
+3
+14 1
++--++---++-++-
+1 14
+14 3
++--++---+++---
+1 14
+6 12
+3 10
+4 10
++-+-
+1 1
+1 2
+1 3
+1 4
+2 2
+2 3
+2 4
+3 3
+3 4
+4 4
+output
+Copy
+2
+2
+1
+0
+1
+2
+1
+2
+1
+2
+1
+1
+2
+1
+Note
+In the first test case for the first query you can remove the rods numbered
+5
+and
+8
+, then the following set of rods will remain: +--+--++-++-. It is easy to see that here the sign-variable sum is zero.
+In the second test case:
+For the first query, we can remove the rods numbered
+1
+and
+11
+, then the following set of rods will remain: --++---++---. It is easy to see that here the sign-variable sum is zero.
+For the second query we can remove the rod numbered
+9
+, then the following set of rods will remain: ---++-. It is easy to see that here the variable sum is zero.
+For the third query we can not remove the rods at all.

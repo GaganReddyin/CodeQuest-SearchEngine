@@ -1,0 +1,136 @@
+E. Oolimry and Suffix Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Once upon a time, Oolimry saw a suffix array. He wondered how many strings can produce this suffix array.
+More formally, given a suffix array of length
+n
+and having an alphabet size
+k
+, count the number of strings that produce such a suffix array.
+Let
+s
+be a string of length
+n
+. Then the
+i
+-th suffix of
+s
+is the substring
+s[i…n−1]
+. A suffix array is the array of integers that represent the starting indexes of all the suffixes of a given string, after the suffixes are sorted in the lexicographic order. For example, the suffix array of oolimry is
+[3,2,4,1,0,5,6]
+as the array of sorted suffixes is
+[imry,limry,mry,olimry,oolimry,ry,y]
+.
+A string
+x
+is lexicographically smaller than string
+y
+, if either
+x
+is a prefix of
+y
+(and
+x≠y
+), or there exists such
+i
+that
+x
+i
+<
+y
+i
+, and for any
+1≤j<i
+,
+x
+j
+=
+y
+j
+.
+Input
+The first line contain 2 integers
+n
+and
+k
+(
+1≤n≤200000,1≤k≤200000
+) — the length of the suffix array and the alphabet size respectively.
+The second line contains
+n
+integers
+s
+0
+,
+s
+1
+,
+s
+2
+,…,
+s
+n−1
+(
+0≤
+s
+i
+≤n−1
+) where
+s
+i
+is the
+i
+-th element of the suffix array i.e. the starting position of the
+i
+-th lexicographically smallest suffix. It is guaranteed that for all
+0≤i<j≤n−1
+,
+s
+i
+≠
+s
+j
+.
+Output
+Print how many strings produce such a suffix array. Since the number can be very large, print the answer modulo
+998244353
+.
+Examples
+input
+Copy
+3 2
+0 2 1
+output
+Copy
+1
+input
+Copy
+5 1
+0 1 2 3 4
+output
+Copy
+0
+input
+Copy
+6 200000
+0 1 2 3 4 5
+output
+Copy
+822243495
+input
+Copy
+7 6
+3 2 4 1 0 5 6
+output
+Copy
+36
+Note
+In the first test case, "abb" is the only possible solution.
+In the second test case, it can be easily shown no possible strings exist as all the letters have to be equal.
+In the fourth test case, one possible string is "ddbacef".
+Please remember to print your answers modulo
+998244353
+.

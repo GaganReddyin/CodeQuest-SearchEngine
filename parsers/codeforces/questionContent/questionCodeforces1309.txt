@@ -1,0 +1,143 @@
+F. MEX counting
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For an array
+c
+of nonnegative integers,
+MEX(c)
+denotes the smallest nonnegative integer that doesn't appear in it. For example,
+MEX([0,1,3])=2
+,
+MEX([42])=0
+.
+You are given integers
+n,k
+, and an array
+[
+b
+1
+,
+b
+2
+,…,
+b
+n
+]
+.
+Find the number of arrays
+[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+, for which the following conditions hold:
+0≤
+a
+i
+≤n
+for each
+i
+for each
+i
+from
+1
+to
+n
+.
+|MEX([
+a
+1
+,
+a
+2
+,…,
+a
+i
+])−
+b
+i
+|≤k
+for each
+i
+from
+1
+to
+n
+.
+As this number can be very big, output it modulo
+998244353
+.
+Input
+The first line of the input contains two integers
+n,k
+(
+1≤n≤2000
+,
+0≤k≤50
+).
+The second line of the input contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−k≤
+b
+i
+≤n+k
+) — elements of the array
+b
+.
+Output
+Output a single integer — the number of arrays which satisfy the conditions from the statement, modulo
+998244353
+.
+Examples
+input
+Copy
+4 0
+0 0 0 0
+output
+Copy
+256
+input
+Copy
+4 1
+0 0 0 0
+output
+Copy
+431
+input
+Copy
+4 1
+0 0 1 1
+output
+Copy
+509
+input
+Copy
+5 2
+0 0 2 2 0
+output
+Copy
+6546
+input
+Copy
+3 2
+-2 0 4
+output
+Copy
+11

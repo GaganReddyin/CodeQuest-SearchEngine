@@ -1,0 +1,88 @@
+B. Kavi on Pairing Duty
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Kavi has
+2n
+points lying on the
+OX
+axis,
+i
+-th of which is located at
+x=i
+.
+Kavi considers all ways to split these
+2n
+points into
+n
+pairs. Among those, he is interested in good pairings, which are defined as follows:
+Consider
+n
+segments with ends at the points in correspondent pairs. The pairing is called good, if for every
+2
+different segments
+A
+and
+B
+among those, at least one of the following holds:
+One of the segments
+A
+and
+B
+lies completely inside the other.
+A
+and
+B
+have the same length.
+Consider the following example:
+A
+is a good pairing since the red segment lies completely inside the blue segment.
+B
+is a good pairing since the red and the blue segment have the same length.
+C
+is not a good pairing since none of the red or blue segments lies inside the other, neither do they have the same size.
+Kavi is interested in the number of good pairings, so he wants you to find it for him. As the result can be large, find this number modulo
+998244353
+.
+Two pairings are called different, if some two points are in one pair in some pairing and in different pairs in another.
+Input
+The single line of the input contains a single integer
+n
+(1≤n≤
+10
+6
+)
+.
+Output
+Print the number of good pairings modulo
+998244353
+.
+Examples
+input
+Copy
+1
+output
+Copy
+1
+input
+Copy
+2
+output
+Copy
+3
+input
+Copy
+3
+output
+Copy
+6
+input
+Copy
+100
+output
+Copy
+688750769
+Note
+The good pairings for the second example are:
+In the third example, the good pairings are:

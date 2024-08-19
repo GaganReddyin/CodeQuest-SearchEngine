@@ -1,0 +1,166 @@
+D. Bubble Popping
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+N
+bubbles in a coordinate plane. Bubbles are so tiny that it can be assumed that each bubble is a point
+(
+X
+i
+,
+Y
+i
+)
+.
+Q
+Bubble Cup finalists plan to play with the bubbles. Each finalist would link to use infinitely long Bubble Cup stick to pop some bubbles. The
+i
+-th finalist would like to place the stick in the direction of vector
+(dxi,dyi)
+, and plays the following game until
+K
+i
+bubbles are popped. The game starts with finalist placing the stick in the direction of vector
+(d
+x
+i
+,d
+y
+i
+)
+, and sweeping it from the infinity to the left until it hits some bubble, which is immediately popped. It is guaranteed that only one bubble will be hit in this step. After that the finalist starts rotating the stick in the counter clockwise direction with the center of rotation in point where the previous bubble was popped. When the next bubble is hit, it is immediately popped and becomes the new center of rotation. The process continues until
+K
+i
+bubbles have been popped. It is guaranteed that the stick won't hit two bubbles simultaneously in this process.
+For each finalist find which bubble would be popped the last. Note that each game starts with the configuration of all
+N
+bubbles, so the games don't depend on the previous games.
+Input
+The first line contains one integer
+N
+— the number of bubbles. (
+1≤N≤
+10
+5
+)
+Each of the next
+N
+lines contains two integers. The
+i
+-th line contains integers
+X
+i
+and
+Y
+i
+— the coordinates of the
+i
+-th bubble. (
+−
+10
+9
+≤
+X
+i
+,
+Y
+i
+≤
+10
+9
+,
+(
+X
+i
+,
+Y
+i
+)≠(
+X
+j
+,
+Y
+j
+)
+for
+i≠j
+)
+The next line contains one integer
+Q
+— the number of finalists willing to play with the bubbles. (
+1≤Q≤
+10
+5
+)
+Each of the next Q lines contains 3 integers. The
+i
+-th line contains integers
+d
+x
+i
+,
+d
+y
+i
+and
+K
+i
+. (
+−
+10
+9
+≤d
+x
+i
+,d
+y
+i
+≤
+10
+9
+,
+1≤
+K
+i
+≤N
+)
+Output
+For each of the
+Q
+finalists, print the index of the bubble which would be popped last, in the separate line.
+Examples
+input
+Copy
+4
+0 0
+1 0
+0 1
+1 1
+2
+1 -1 3
+-1 1 4
+output
+Copy
+4
+2
+input
+Copy
+4
+1 1
+2 2
+7 1
+1 7
+3
+2 2 1
+1 -5 4
+-6 5 3
+output
+Copy
+3
+2
+3
+Note
+There are two finalists willing to play with the bubbles. If the first finalist plays with the bubbles, then the bubbles at coordinates (0, 0), (1, 0) and (1, 1) would be popped in that order. Their indexes are 1, 2 and 4, so the answer is 4. If the second finalist plays with the bubbles, then the bubbles at coordinates (1, 1), (0, 1), (0, 0) and (1, 0) would be popped in that order, so the answer is 2.
+Visualization: link.

@@ -1,0 +1,81 @@
+Construct a String
+Problem
+Read problems statements in Mandarin Chinese, Russian, and Bengali as well.
+Consider a string
+s. The following operation can be performed on it successively several (possibly zero) times.
+Select any non empty suffix of
+s and append it to
+s
+For example, if
+s=abcd, then
+s can become either
+abcdd,
+abcdcd,
+abcdbcd or
+abcdabcd after one operation. Successive operations are now performed on the new string.
+You are given a string
+t, the resultant string after applying several (possibly zero) operations on some string. You must find any such string
+s of the shortest length from which
+t can be obtained after some sequence of operations. It can be proven that such a string always exists.
+Input Format
+The first line contains one number
+T, the number of test cases.
+The only line of each test case contains the string
+t.
+Output Format
+For each test case print a string
+s of the shortest possible length which satisfies the requirements. If there are multiple such strings, you may print any.
+Constraints
+1≤T≤100
+1≤∣t∣≤2⋅10
+5
+String
+t contains only lowercase english alphabets.
+The total length of all the strings in the input is at most
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+abbabbbabb
+abbbabbbb
+codechefcheff
+ab
+ab
+codechef
+Explanation:
+Test case
+1: String
+ab satisfies the requirements.
+ab
+→
+abb
+→
+abbabb
+→
+abbabbbabb
+No string of length less than
+2 exists from which
+abbabbbabb can be obtained after some operations.
+Test case
+2: String
+ab satisfies the requirements.
+ab
+→
+abb
+→
+abbb
+→
+abbbabbb
+→
+abbbabbbb
+Test case
+3: String
+codechef satisfies the requirements.
+codechef
+→
+codechefchef
+→
+codechefcheff

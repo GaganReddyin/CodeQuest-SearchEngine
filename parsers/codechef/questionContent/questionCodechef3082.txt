@@ -1,0 +1,106 @@
+Winning Ways
+Problem
+Read problem statements in Hindi, Bengali, and Mandarin Chinese, Russian, and Vietnamese as well.
+Welcome to the finals of Chef's Combinatorial Games Competition 2019! The finalists Irshad and Mehedi are ready to play against each other no matter what game is given. As it is the final round, Chef prepared a completely new game with the following rules:
+There are
+K stacks of stones (numbered
+1 through
+K). For each valid
+i, the
+i-th stack has a threshold
+H
+i
+.
+Initially, each stack contains one stone.
+The players alternate turns; Irshad plays first.
+During each turn, the current player must choose one or two stacks and make a move in each chosen stack.
+To make a move in a stack
+i containing
+x stones at the beginning of the current turn, the current player must add one or more stones to this stack in such a way that the resulting number of stones
+y (
+y>x) divides that stack's threshold
+H
+i
+. (If this stack already contains
+H
+i
+stones, it is impossible to make a move.)
+When it is impossible to make a move in any stack, the current player loses the game.
+Of course, Irshad and Mehedi are brilliant programmers, so they can easily play this game optimally for given thresholds. Therefore, to spice up the game, Chef chose
+K people from the audience and gave one stack to each of them. He also provided a set
+S={x
+1
+,x
+2
+,…,x
+N
+}. Each of the chosen people should uniformly randomly, independently from all other people, choose the threshold of his/her stack from the set
+S.
+While this is happening, Irshad asks you: "Hey, in how many ways can these people set the thresholds such that I win?" You need to find the answer modulo
+1,000,000,007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+N lines follow. For each valid
+i, the
+i-th of these lines contains a single integer
+x
+i
+.
+Output
+For each test case, print a single line containing one integer ― the number of ways to choose the thresholds such that Irshad wins, modulo
+1,000,000,007 (
+10
+9
++7).
+Constraints
+1≤T≤5
+1≤N≤100,000
+1≤K≤10
+9
+1≤x
+i
+≤10
+9
+for each valid
+i
+x
+1
+,x
+2
+,…,x
+N
+are pairwise distinct
+Subtasks
+Subtask #1 (10 points):
+N,K≤12
+x
+i
+≤12 for each valid
+i
+Subtask #2 (30 points):
+N,K≤50,000
+x
+i
+≤50,000 for each valid
+i
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+1
+2 3
+2
+4
+6
+Explanation:
+Example case 1: There are two choices of thresholds that are losing for Irshad:
+(2,2,2) and
+(4,4,4). If these thresholds are used, Mehedi always wins regarless of Irshad's moves. All six remaining choices are winning for Irshad.

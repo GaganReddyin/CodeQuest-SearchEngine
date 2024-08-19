@@ -1,0 +1,36 @@
+Sereja and Two Lines
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Sereja has a matrix A with N rows and M columns with positive integer elements. Consider the multiset Sij made from the elements in the ith row, along with those in the jth column of A (do not count the element Aij twice). Then, define a matrix F as Fij = maxx ∈ Sijcount(x, Sij), where count(x, S) gives the number of times a number x occurs in the multiset S.
+For example, for the matrix
+1 2 1 2
+3 4 1 2
+1 1 1 1
+2 2 2 2
+The matrix F is
+3 3 4 4
+3 3 3 3
+5 4 6 4
+4 5 4 6
+Your task is to find the value of the maximum element of F.
+Input
+The first line of input contains a single integer T, the number of test cases. T tests follow. First line of each test case contains two integers, N and M. Each of the next N lines contain M numbers, representing the matrix A.
+Output
+For each test case, output a line containing a single integer, the answer to the problem.
+Constraints
+1 ≤ sum of N*M over all testcases ≤ 106
+1 ≤ A[i][j] ≤ 106
+Sub tasks
+Sub task #1: 1 ≤ N, M ≤ 10 (10 points)
+Sub task #2: 1 ≤ N, M ≤ 100 (20 points)
+Sub task #3: original constraints (70 points)
+Sample 1:
+Input
+Output
+1
+4 4
+1 2 1 2
+3 4 1 2
+1 1 1 1
+2 2 2 2
+6

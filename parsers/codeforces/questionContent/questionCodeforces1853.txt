@@ -1,0 +1,149 @@
+C. Travelling Salesman Problem
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cities numbered from
+1
+to
+n
+, and city
+i
+has beauty
+a
+i
+.
+A salesman wants to start at city
+1
+, visit every city exactly once, and return to city
+1
+.
+For all
+i≠j
+, a flight from city
+i
+to city
+j
+costs
+max(
+c
+i
+,
+a
+j
+−
+a
+i
+)
+dollars, where
+c
+i
+is the price floor enforced by city
+i
+. Note that there is no absolute value. Find the minimum total cost for the salesman to complete his trip.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the number of cities.
+The
+i
+-th of the next
+n
+lines contains two integers
+a
+i
+,
+c
+i
+(
+0≤
+a
+i
+,
+c
+i
+≤
+10
+9
+) — the beauty and price floor of the
+i
+-th city.
+Output
+Output a single integer — the minimum total cost.
+Examples
+input
+Copy
+3
+1 9
+2 1
+4 1
+output
+Copy
+11
+input
+Copy
+6
+4 2
+8 4
+3 0
+2 3
+7 1
+0 1
+output
+Copy
+13
+Note
+In the first test case, we can travel in order
+1→3→2→1
+.
+The flight
+1→3
+costs
+max(
+c
+1
+,
+a
+3
+−
+a
+1
+)=max(9,4−1)=9
+.
+The flight
+3→2
+costs
+max(
+c
+3
+,
+a
+2
+−
+a
+3
+)=max(1,2−4)=1
+.
+The flight
+2→1
+costs
+max(
+c
+2
+,
+a
+1
+−
+a
+2
+)=max(1,1−2)=1
+.
+The total cost is
+11
+, and we cannot do better.

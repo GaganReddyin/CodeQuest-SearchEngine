@@ -1,0 +1,41 @@
+Chef and Gcd Queries
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef likes solving problems involving a lot of queries with numbers. One day, he found a new problem which he finds difficult to solve. Therefore, he's asking for your help!
+You are given a sequence A1, A2, ..., AN and Q queries. There are two types of queries:
+1 X Y — Set AX = Y.
+2 L R G — Compute the number of indices i such that L ≤ i ≤ R and gcd(G, Ai) = 1.
+Find the answer to each query of the second type.
+Note: gcd(X, Y) denotes the greatest common divisor — the highest positive integer which divides both X and Y.
+Input
+The first line of the input contains a single integer N denoting the number of elements in the sequence.
+The second line contains N space-separated integers A1, A2, ..., AN.
+The third line contains a single integer Q denoting the number of queries.
+Each of the following Q lines describes one query in the following format:
+1 X Y for a query of the first type
+2 L R G for a query of the second type
+Output
+For each query of type 2, print a single line containing one integer - the answer to the query.
+Constraints
+1 ≤ N, Q ≤ 5 · 104
+1 ≤ L ≤ R ≤ N
+1 ≤ X ≤ N
+1 ≤ Y, G ≤ 105
+1 ≤ Ai ≤ 105 for each valid i
+Subtasks
+Subtask #1 (15 points): 1 ≤ N, Q ≤ 1000
+Subtask #2 (85 points): original constraints
+Sample 1:
+Input
+Output
+4
+2 3 4 5
+3
+2 1 4 2
+1 2 6
+2 1 4 2
+2
+1
+Explanation:
+In the first query, gcd(A2, 2) = 1 and gcd(A4, 2) = 1, so the answer is 2.
+In the third query, only gcd(A4, 2) is equal to 1, so the answer is 1.

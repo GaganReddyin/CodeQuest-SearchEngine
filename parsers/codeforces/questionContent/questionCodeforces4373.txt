@@ -1,0 +1,156 @@
+D. Yet Another Problem On a Subsequence
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The sequence of integers
+a
+1
+,
+a
+2
+,…,
+a
+k
+is called a good array if
+a
+1
+=k−1
+and
+a
+1
+>0
+. For example, the sequences
+[3,−1,44,0],[1,−99]
+are good arrays, and the sequences
+[3,7,8],[2,5,4,1],[0]
+— are not.
+A sequence of integers is called good if it can be divided into a positive number of good arrays. Each good array should be a subsegment of sequence and each element of the sequence should belong to exactly one array. For example, the sequences
+[2,−3,0,1,4]
+,
+[1,2,3,−3,−9,4]
+are good, and the sequences
+[2,−3,0,1]
+,
+[1,2,3,−3−9,4,1]
+— are not.
+For a given sequence of numbers, count the number of its subsequences that are good sequences, and print the number of such subsequences modulo 998244353.
+Input
+The first line contains the number
+n (1≤n≤
+10
+3
+)
+— the length of the initial sequence. The following line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+ (−
+10
+9
+≤
+a
+i
+≤
+10
+9
+)
+— the sequence itself.
+Output
+In the single line output one integer — the number of subsequences of the original sequence that are good sequences, taken modulo 998244353.
+Examples
+input
+Copy
+3
+2 1 1
+output
+Copy
+2
+input
+Copy
+4
+1 1 1 1
+output
+Copy
+7
+Note
+In the first test case, two good subsequences —
+[
+a
+1
+,
+a
+2
+,
+a
+3
+]
+and
+[
+a
+2
+,
+a
+3
+]
+.
+In the second test case, seven good subsequences —
+[
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+],[
+a
+1
+,
+a
+2
+],[
+a
+1
+,
+a
+3
+],[
+a
+1
+,
+a
+4
+],[
+a
+2
+,
+a
+3
+],[
+a
+2
+,
+a
+4
+]
+and
+[
+a
+3
+,
+a
+4
+]
+.

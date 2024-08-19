@@ -1,0 +1,144 @@
+D. Not Adding
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+consisting of
+n
+distinct integers. You are allowed to perform the following operation on it:
+Choose two elements from the array
+a
+i
+and
+a
+j
+(
+i≠j
+) such that
+gcd(
+a
+i
+,
+a
+j
+)
+is not present in the array, and add
+gcd(
+a
+i
+,
+a
+j
+)
+to the end of the array. Here
+gcd(x,y)
+denotes greatest common divisor (GCD) of integers
+x
+and
+y
+.
+Note that the array changes after each operation, and the subsequent operations are performed on the new array.
+What is the maximum number of times you can perform the operation on the array?
+Input
+The first line consists of a single integer
+n
+(
+2≤n≤
+10
+6
+).
+The second line consists of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+). All
+a
+i
+are distinct.
+Output
+Output a single line containing one integer — the maximum number of times the operation can be performed on the given array.
+Examples
+input
+Copy
+5
+4 20 1 25 30
+output
+Copy
+3
+input
+Copy
+3
+6 10 15
+output
+Copy
+4
+Note
+In the first example, one of the ways to perform maximum number of operations on the array is:
+Pick
+i=1,j=5
+and add
+gcd(
+a
+1
+,
+a
+5
+)=gcd(4,30)=2
+to the array.
+Pick
+i=2,j=4
+and add
+gcd(
+a
+2
+,
+a
+4
+)=gcd(20,25)=5
+to the array.
+Pick
+i=2,j=5
+and add
+gcd(
+a
+2
+,
+a
+5
+)=gcd(20,30)=10
+to the array.
+It can be proved that there is no way to perform more than
+3
+operations on the original array.
+In the second example one can add
+3
+, then
+1
+, then
+5
+, and
+2
+.

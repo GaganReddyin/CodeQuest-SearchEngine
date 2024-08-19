@@ -1,0 +1,104 @@
+B. Coloring
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Cirno_9baka has a paper tape with
+n
+cells in a row on it. As he thinks that the blank paper tape is too dull, he wants to paint these cells with
+m
+kinds of colors. For some aesthetic reasons, he thinks that the
+i
+-th color must be used exactly
+a
+i
+times, and for every
+k
+consecutive cells, their colors have to be distinct.
+Help Cirno_9baka to figure out if there is such a way to paint the cells.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤10000
+)  — the number of test cases. The description of test cases follows.
+The first line of each test case contains three integers
+n
+,
+m
+,
+k
+(
+1≤k≤n≤
+10
+9
+,
+1≤m≤
+10
+5
+,
+m≤n
+). Here
+n
+denotes the number of cells,
+m
+denotes the number of colors, and
+k
+means that for every
+k
+consecutive cells, their colors have to be distinct.
+The second line of each test case contains
+m
+integers
+a
+1
+,
+a
+2
+,⋯,
+a
+m
+(
+1≤
+a
+i
+≤n
+)  — the numbers of times that colors have to be used. It's guaranteed that
+a
+1
++
+a
+2
++…+
+a
+m
+=n
+.
+It is guaranteed that the sum of
+m
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, output "YES" if there is at least one possible coloring scheme; otherwise, output "NO".
+You may print each letter in any case (for example, "YES", "Yes", "yes", and "yEs" will all be recognized as positive answers).
+Example
+input
+Copy
+2
+12 6 2
+1 1 1 1 1 7
+12 6 2
+2 2 2 2 2 2
+output
+Copy
+NO
+YES
+Note
+In the first test case, there is no way to color the cells satisfying all the conditions.
+In the second test case, we can color the cells as follows:
+(1,2,1,2,3,4,3,4,5,6,5,6)
+. For any
+2
+consecutive cells, their colors are distinct.

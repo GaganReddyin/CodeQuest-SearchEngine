@@ -1,0 +1,225 @@
+E. Middle Duplication
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A binary tree of
+n
+nodes is given. Nodes of the tree are numbered from
+1
+to
+n
+and the root is the node
+1
+. Each node can have no child, only one left child, only one right child, or both children. For convenience, let's denote
+l
+u
+and
+r
+u
+as the left and the right child of the node
+u
+respectively,
+l
+u
+=0
+if
+u
+does not have the left child, and
+r
+u
+=0
+if the node
+u
+does not have the right child.
+Each node has a string label, initially is a single character
+c
+u
+. Let's define the string representation of the binary tree as the concatenation of the labels of the nodes in the in-order. Formally, let
+f(u)
+be the string representation of the tree rooted at the node
+u
+.
+f(u)
+is defined as follows:
+f(u)={
+<empty string>,
+f(
+l
+u
+)+
+c
+u
++f(
+r
+u
+)
+if u=0;
+otherwise,
+where
++
+denotes the string concatenation operation.
+This way, the string representation of the tree is
+f(1)
+.
+For each node, we can duplicate its label at most once, that is, assign
+c
+u
+with
+c
+u
++
+c
+u
+, but only if
+u
+is the root of the tree, or if its parent also has its label duplicated.
+You are given the tree and an integer
+k
+. What is the lexicographically smallest string representation of the tree, if we can duplicate labels of at most
+k
+nodes?
+A string
+a
+is lexicographically smaller than a string
+b
+if and only if one of the following holds:
+a
+is a prefix of
+b
+, but
+a≠b
+;
+in the first position where
+a
+and
+b
+differ, the string
+a
+has a letter that appears earlier in the alphabet than the corresponding letter in
+b
+.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤k≤n≤2⋅
+10
+5
+).
+The second line contains a string
+c
+of
+n
+lower-case English letters, where
+c
+i
+is the initial label of the node
+i
+for
+1≤i≤n
+. Note that the given string
+c
+is not the initial string representation of the tree.
+The
+i
+-th of the next
+n
+lines contains two integers
+l
+i
+and
+r
+i
+(
+0≤
+l
+i
+,
+r
+i
+≤n
+). If the node
+i
+does not have the left child,
+l
+i
+=0
+, and if the node
+i
+does not have the right child,
+r
+i
+=0
+.
+It is guaranteed that the given input forms a binary tree, rooted at
+1
+.
+Output
+Print a single line, containing the lexicographically smallest string representation of the tree if at most
+k
+nodes have their labels duplicated.
+Examples
+input
+Copy
+4 3
+abab
+2 3
+0 0
+0 4
+0 0
+output
+Copy
+baaaab
+input
+Copy
+8 2
+kadracyn
+2 5
+3 4
+0 0
+0 0
+6 8
+0 7
+0 0
+0 0
+output
+Copy
+daarkkcyan
+input
+Copy
+8 3
+kdaracyn
+2 5
+0 3
+0 4
+0 0
+6 8
+0 7
+0 0
+0 0
+output
+Copy
+darkcyan
+Note
+The images below present the tree for the examples. The number in each node is the node number, while the subscripted letter is its label. To the right is the string representation of the tree, with each letter having the same color as the corresponding node.
+Here is the tree for the first example. Here we duplicated the labels of nodes
+1
+and
+3
+. We should not duplicate the label of node
+2
+because it would give us the string "bbaaab", which is lexicographically greater than "baaaab".
+In the second example, we can duplicate the labels of nodes
+1
+and
+2
+. Note that only duplicating the label of the root will produce a worse result than the initial string.
+In the third example, we should not duplicate any character at all. Even though we would want to duplicate the label of the node
+3
+, by duplicating it we must also duplicate the label of the node
+2
+, which produces a worse result.
+There is no way to produce string "darkkcyan" from a tree with the initial string representation "darkcyan" :(.

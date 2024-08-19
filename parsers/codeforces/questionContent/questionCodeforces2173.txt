@@ -1,0 +1,147 @@
+G. Death DBMS
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+For the simplicity, let's say that the "Death Note" is a notebook that kills a person when their name is written in it.
+It's easy to kill with it, but it's pretty hard to keep track of people you haven't killed and still plan to. You decided to make a "Death Database Management System" — a computer program that provides the easy access to the database of possible victims. Let me describe its specifications to you.
+Let's define a victim entity: a victim has a name (not necessarily unique) that consists only of lowercase Latin letters and an integer suspicion value.
+At the start of the program the user enters a list of
+n
+victim names into a database, each suspicion value is set to
+0
+.
+Then the user makes queries of two types:
+1 i x
+ — set the suspicion value of the
+i
+-th victim to
+x
+;
+2 q
+ — given a string
+q
+find the maximum suspicion value of a victim whose name is a contiguous substring of
+q
+.
+Just to remind you, this program doesn't kill people, it only helps to search for the names to write down in an actual notebook. Thus, the list of the victims in the database doesn't change throughout the queries.
+What are you waiting for? Write that program now!
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤3⋅
+10
+5
+) — the number of victims and the number of queries, respectively.
+Each of the next
+n
+lines contains a single string
+s
+i
+ — the name of the
+i
+-th victim. Each name consists only of lowercase Latin letters.
+Each of the next
+m
+lines contains a query of one of two types:
+1 i x
+(
+1≤i≤n
+,
+0≤x≤
+10
+9
+) — change the suspicion value of the
+i
+-th victim to
+x
+;
+2 q
+ — given a string
+q
+consisting only of lowercase Latin letters find the maximum suspicion value of a victim whose name is a contiguous substring of
+q
+.
+There is at least one query of the second type. The total length of the strings
+s
+i
+doesn't exceed
+3⋅
+10
+5
+. The total length of the strings
+q
+doesn't exceed
+3⋅
+10
+5
+.
+Output
+For each query of the second type print an integer value. If there is no victim name that is a contiguous substring of
+q
+, then print
+−1
+. Otherwise, print the maximum suspicion value of a victim whose name is a contiguous substring of
+q
+.
+Examples
+input
+Copy
+5 8
+kurou
+takuo
+takeshi
+naomi
+shingo
+2 nakiraomi
+2 abanaomicaba
+1 3 943
+2 takuotakeshishingo
+1 5 135832
+2 shingotakeshi
+1 5 0
+2 shingotakeshi
+output
+Copy
+-1
+0
+943
+135832
+943
+input
+Copy
+6 15
+a
+ab
+ba
+b
+a
+ba
+2 aa
+1 4 4
+2 bbb
+1 2 1
+1 2 18
+2 b
+2 c
+1 6 10
+2 aba
+2 abbbba
+1 2 12
+2 bbaaab
+1 1 11
+1 5 5
+2 baa
+output
+Copy
+0
+4
+4
+-1
+18
+18
+12
+11

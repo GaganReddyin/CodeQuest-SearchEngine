@@ -1,0 +1,27 @@
+A. Local Extrema
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array a. Some element of this array ai is a local minimum iff it is strictly less than both of its neighbours (that is, ai < ai - 1 and ai < ai + 1). Also the element can be called local maximum iff it is strictly greater than its neighbours (that is, ai > ai - 1 and ai > ai + 1). Since a1 and an have only one neighbour each, they are neither local minima nor local maxima.
+An element is called a local extremum iff it is either local maximum or local minimum. Your task is to calculate the number of local extrema in the given array.
+Input
+The first line contains one integer n (1 ≤ n ≤ 1000) — the number of elements in array a.
+The second line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 1000) — the elements of array a.
+Output
+Print the number of local extrema in the given array.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+0
+input
+Copy
+4
+1 5 2 5
+output
+Copy
+2

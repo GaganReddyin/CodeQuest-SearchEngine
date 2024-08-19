@@ -1,0 +1,91 @@
+Make the Sum Even
+Problem
+Read problem statements in Russian
+Chef has a sequence
+A
+1
+,A
+2
+,…,A
+N
+. In one operation, Chef can choose one index
+i (
+1≤i≤N) and change
+A
+i
+to
+A
+i
+p
+, where
+p=max(0,⌈
+2
+A
+i
+⌉−1).
+Help Chef find the smallest number of operations needed to make the sum of the sequence even or determine that it is impossible.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the minimum number of operations needed to make the sum of the sequence even, or
+−1 if it is impossible.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (30 points):
+N≤100
+1≤A
+i
+≤10 for each valid
+i
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+4
+4
+7 3 5 1
+5
+4 2 7 8 10
+2
+9 9
+3
+1 1 1
+0
+1
+0
+-1
+Explanation:
+Example case 1: The sum of the sequence is
+16, which is already even.
+Example case 2: We can change
+A
+2
+to
+1, so that the sequence becomes
+[4,1,7,8,10]. The sum of this sequence is
+30, which is even.
+Example case 3: The sum of the sequence is
+18, which is already even.
+Example case 4: It is impossible to make the sum of the sequence even.

@@ -1,0 +1,112 @@
+E. Sum of Matchings
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Let's denote the size of the maximum matching in a graph
+G
+as
+MM(G)
+.
+You are given a bipartite graph. The vertices of the first part are numbered from
+1
+to
+n
+, the vertices of the second part are numbered from
+n+1
+to
+2n
+. Each vertex's degree is
+2
+.
+For a tuple of four integers
+(l,r,L,R)
+, where
+1≤l≤r≤n
+and
+n+1≤L≤R≤2n
+, let's define
+G
+′
+(l,r,L,R)
+as the graph which consists of all vertices of the given graph that are included in the segment
+[l,r]
+or in the segment
+[L,R]
+, and all edges of the given graph such that each of their endpoints belongs to one of these segments. In other words, to obtain
+G
+′
+(l,r,L,R)
+from the original graph, you have to remove all vertices
+i
+such that
+i∉[l,r]
+and
+i∉[L,R]
+, and all edges incident to these vertices.
+Calculate the sum of
+MM(G(l,r,L,R))
+over all tuples of integers
+(l,r,L,R)
+having
+1≤l≤r≤n
+and
+n+1≤L≤R≤2n
+.
+Input
+The first line contains one integer
+n
+(
+2≤n≤1500
+) — the number of vertices in each part.
+Then
+2n
+lines follow, each denoting an edge of the graph. The
+i
+-th line contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+≤n
+;
+n+1≤
+y
+i
+≤2n
+) — the endpoints of the
+i
+-th edge.
+There are no multiple edges in the given graph, and each vertex has exactly two incident edges.
+Output
+Print one integer — the sum of
+MM(G(l,r,L,R))
+over all tuples of integers
+(l,r,L,R)
+having
+1≤l≤r≤n
+and
+n+1≤L≤R≤2n
+.
+Example
+input
+Copy
+5
+4 6
+4 9
+2 6
+3 9
+1 8
+5 10
+2 7
+3 7
+1 10
+5 8
+output
+Copy
+314

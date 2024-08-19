@@ -1,0 +1,69 @@
+Ice Cream Queue
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N people standing in a queue for Chef's ice cream. They are numbered
+1 through
+N from the front to the back of the queue.
+Chef's customers do not like to wait too long. For each valid
+i, we know that the ice cream ordered by the
+i-th person will take
+P
+i
+seconds to prepare and cost
+V
+i
+units of money, but if this person has to wait strictly more than
+W
+i
+seconds in the queue (until Chef starts preparing their order), they will leave. At any time, it is only allowed to prepare the ice cream of the person standing at the front of the queue.
+Chef wants to maximise his profit (the sum of prices of sold ice creams). In order to do that, he may choose to kick some of the customers (possibly nobody) out of the queue. Find the maximum profit Chef can make.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each
+i (
+1≤i≤N), each of these lines contains three space-separated integers
+W
+i
+,
+P
+i
+and
+V
+i
+.
+Output
+For each test case, print a single line containing one integer — the maximum possible profit.
+Constraints
+1≤T≤10
+1≤N≤40
+1≤P
+i
+,W
+i
+,V
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (50 points):
+1≤N≤20
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+2
+3 7 4
+7 10 5
+2
+3 7 4
+6 10 5
+9
+5

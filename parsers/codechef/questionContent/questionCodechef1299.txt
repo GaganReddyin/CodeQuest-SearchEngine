@@ -1,0 +1,91 @@
+Array sorting
+Problem
+You are given an unsorted permutation
+P of size
+N. An operation is defined as:
+Swap
+P
+i
+and
+P
+i+K
+for any
+i in the range
+[1,N−K].
+Find the maximum value of
+K, such that, the permutation
+P can be sorted by applying any finite number of operations.
+Note that, a permutation of size
+N contains all integers from
+1 to
+N exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains an integer
+N, the size of permutation.
+The next line contains
+N integers describing the permutation
+P.
+It is guaranteed that the given permutation is not sorted.
+Output Format
+For each test case, output on a new line the maximum possible value of
+K.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+4 2 3 1
+5
+1 4 3 2 5
+2
+2 1
+3
+2
+1
+Explanation:
+Test Case
+1: Permutation can be sorted by swapping
+P
+1
+and
+P
+4
+. So, the maximum possible value of
+K is
+3. It can be shown that we cannot sort the permutation for any
+K>3.
+Test Case
+2: Swapping
+P
+2
+and
+P
+4
+will sort the permutation. So, the maximum possible value of
+K is
+2. It can be shown that we cannot sort the permutation for any
+K>2.
+Test Case
+3: Swapping
+P
+1
+and
+P
+2
+will sort the permutation. So, the maximum possible value of
+K is
+1. It can be shown that we cannot sort the permutation for any
+K>1.

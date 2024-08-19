@@ -1,0 +1,335 @@
+F. Jumping Through the Array
+time limit per test8 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array of integers
+a
+of size
+n
+and a permutation
+p
+of size
+n
+. There are
+q
+queries of three types coming to you:
+For given numbers
+l
+and
+r
+, calculate the sum in array
+a
+on the segment from
+l
+to
+r
+:
+∑
+i=l
+r
+a
+i
+.
+You are given two numbers
+v
+and
+x
+. Let's build a directed graph from the permutation
+p
+: it has
+n
+vertices and
+n
+edges
+i→
+p
+i
+. Let
+C
+be the set of vertices that are reachable from
+v
+in this graph. You should add
+x
+to all
+a
+u
+such that
+u
+is in
+C
+.
+You are given indices
+i
+and
+j
+. You should swap
+p
+i
+and
+p
+j
+.
+The graph corresponding to the permutation
+[2,3,1,5,4]
+.
+Please, process all queries and print answers to queries of type
+1
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the size of the array and permutation.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+8
+≤
+a
+i
+≤
+10
+8
+).
+The third line contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+).
+The fourth line contains a single integer
+q
+ — the number of queries (
+1≤q≤2⋅
+10
+5
+).
+Next
+q
+lines contain description of queries. The
+i
+-th of them starts with an integer
+t
+i
+(
+1≤
+t
+i
+≤3
+) — the query type.
+If
+t
+i
+=1
+, then the
+i
+-th line also contains two integers
+l
+,
+r
+(
+1≤l≤r≤n
+).
+If
+t
+i
+=2
+, then the
+i
+-th line also contains two integers
+v
+,
+x
+(
+1≤v≤n
+,
+−
+10
+8
+≤x≤
+10
+8
+).
+If
+t
+i
+=3
+, then the
+i
+-th line also contains also two integers
+i
+,
+j
+(
+1≤i,j≤n
+).
+Output
+For every first type query, print a single integer — the answer to this query.
+Examples
+input
+Copy
+5
+6 9 -5 3 0
+2 3 1 5 4
+6
+1 1 5
+2 1 1
+1 1 5
+3 1 5
+2 1 -1
+1 1 5
+output
+Copy
+13
+16
+11
+input
+Copy
+8
+-15 52 -4 3 5 9 0 5
+2 4 6 8 1 3 5 7
+10
+2 2 2
+2 5 -1
+1 1 8
+1 1 5
+1 5 8
+3 1 6
+2 1 50
+1 1 8
+2 6 -20
+1 1 8
+output
+Copy
+61
+45
+22
+461
+301
+input
+Copy
+1
+1
+1
+1
+1 1 1
+output
+Copy
+1
+Note
+In the first example:
+The graph corresponding to the initial permutation.
+There are
+6
+queries.
+The sum on the segment from
+1
+to
+5
+is
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
++
+a
+5
+=6+9+(−5)+3+0=13
+.
+If we start from
+1
+, we can reach
+{1,2,3}
+. After this query
+a
+is:
+[7,10,−4,3,0]
+.
+The sum on the segment from
+1
+to
+5
+is
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
++
+a
+5
+=6+9+(−5)+3+0=16
+.
+After this query
+p=[4,3,1,5,2]
+.
+The graph corresponding to the new permutation.
+If we start from
+2
+, we can reach
+{1,2,3,4,5}
+. After this query
+a
+is:
+[6,9,−5,2,−1]
+.
+The sum on the segment from
+1
+to
+5
+is
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
++
+a
+5
+=6+9+(−5)+2+(−1)=11
+.

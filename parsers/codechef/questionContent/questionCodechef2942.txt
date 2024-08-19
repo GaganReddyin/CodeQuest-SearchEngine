@@ -1,0 +1,25 @@
+Solve the Assignment
+Problem
+You have been given an assignment by your computer teacher. You need to study interactions among large numbers of very small charged particles. There are N charged particles at regular spacing along a straight line. They can be modelled as the integer points {1,2,....N} on the real line. At every point j, there is a particle with charge Qj (this could be positive or negative).
+The total net force on particle j, by Coulomb's Law, is equal to
+You need to compute total force on each particle. For sake of convenience you can take C=50.
+Input
+The first line of the input contains an integer N denoting the number of charged particles.
+The ith of the next N lines each contain one real number denoting the charge of the ith particle, ie . Qj
+Output
+Print N real numbers (force on each charge), one in each line. The ith line should contain Fj.
+The absolute error should be less than 10-2.
+Constraints
+1 ≤ N ≤ 100000
+10 ≤ |Qi| ≤ 1001
+Input charges will be given in standard decimal notation. There will be exactly 4 digits after the decimal point in the input charges.
+Example
+Input:
+2
+10.0121
+-81.0100
+Output:
+40554.011050
+-40554.011050
+Explanation
+We are given two opposite charged particles. The particle at 1 has charge 10.0121 and the particle at 2 has charge -81.0100. Applying the formula, we get the answer. Note that in this case, the output is equal and opposite in nature.

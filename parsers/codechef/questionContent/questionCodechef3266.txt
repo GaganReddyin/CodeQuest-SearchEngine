@@ -1,0 +1,99 @@
+Unbalanced Reversals
+Problem
+Chef has two binary strings
+A and
+B, each of length
+N. He can perform the following operation on
+A any number of times:
+Choose
+L and
+R
+(1≤L≤R≤N), such that, in the substring
+A[L,R], the number of
+1s is not equal to the number of
+0s and reverse the substring
+A[L,R].
+Find whether Chef can convert the string
+A into the string
+B by performing the above operation any (possibly zero) number of times on
+A.
+Input Format
+The first line of the input contains a single integer
+T, the number of test cases. The descriptions of the test cases follow.
+The first line of each test case contains one integer
+N, the length of the binary strings.
+The second line of each test case contains the string
+A.
+The third line of each test case contains the string
+B.
+Output Format
+For each test case, print
+YES if it is possible to convert the string
+A into the string
+B by performing any (possibly zero) number of given operations on
+A. Otherwise, print
+NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings
+YeS,
+yEs,
+yes and
+YES will all be treated as identical).
+Constraints
+1≤T≤10
+3
+1≤N≤10
+5
+∣A∣=∣B∣=N
+The sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+11
+00
+5
+10110
+11001
+2
+10
+01
+NO
+YES
+NO
+Explanation:
+Test Case
+1: It is impossible to convert
+11 to
+00 by performing any number of operations.
+Test Case
+2: We can convert the string
+A into string
+B as:
+Operation
+1: Choose
+L=2 and
+R=4. Hence, the chosen substring is
+1
+011
+0. On reversing this substring, we get
+11100.
+Operation
+2: Choose
+L=3 and
+R=5. Hence, the chosen substring is
+11
+100
+. On reversing it, we get
+11001.
+Note that the number of
+1s is not equal to the number of
+0s in the chosen substrings.
+Test Case
+3: It is impossible to convert
+10 to
+01 by performing any number of operations.

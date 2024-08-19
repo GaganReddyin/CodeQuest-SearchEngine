@@ -1,0 +1,139 @@
+B. Prove Him Wrong
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Recently, your friend discovered one special operation on an integer array
+a
+:
+Choose two indices
+i
+and
+j
+(
+i≠j
+);
+Set
+a
+i
+=
+a
+j
+=|
+a
+i
+−
+a
+j
+|
+.
+After playing with this operation for a while, he came to the next conclusion:
+For every array
+a
+of
+n
+integers, where
+1≤
+a
+i
+≤
+10
+9
+, you can find a pair of indices
+(i,j)
+such that the total sum of
+a
+will decrease after performing the operation.
+This statement sounds fishy to you, so you want to find a counterexample for a given integer
+n
+. Can you find such counterexample and prove him wrong?
+In other words, find an array
+a
+consisting of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) such that for all pairs of indices
+(i,j)
+performing the operation won't decrease the total sum (it will increase or not change the sum).
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. Then
+t
+test cases follow.
+The first and only line of each test case contains a single integer
+n
+(
+2≤n≤1000
+) — the length of array
+a
+.
+Output
+For each test case, if there is no counterexample array
+a
+of size
+n
+, print NO.
+Otherwise, print YES followed by the array
+a
+itself (
+1≤
+a
+i
+≤
+10
+9
+). If there are multiple counterexamples, print any.
+Example
+input
+Copy
+3
+2
+512
+3
+output
+Copy
+YES
+1 337
+NO
+YES
+31 4 159
+Note
+In the first test case, the only possible pairs of indices are
+(1,2)
+and
+(2,1)
+.
+If you perform the operation on indices
+(1,2)
+(or
+(2,1)
+), you'll get
+a
+1
+=
+a
+2
+=|1−337|=336
+, or array
+[336,336]
+. In both cases, the total sum increases, so this array
+a
+is a counterexample.

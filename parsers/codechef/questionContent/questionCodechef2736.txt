@@ -1,0 +1,116 @@
+Bacterial Reproduction
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef has a rooted tree with
+N vertices (numbered
+1 through
+N); vertex
+1 is the root of the tree. Initially, there are some bacteria in its vertices. Let's denote the number of sons of vertex
+v by
+s
+v
+; a leaf is a vertex without sons. During each second, the following events happen:
+For each non-leaf vertex
+v, if there are
+x bacteria in this vertex at the start of this second, they divide into
+s
+v
+⋅x bacteria. At the end of this second,
+x of these bacteria instantly move to each of its sons (none of them stay in vertex
+v). The original
+x bacteria do not exist any more.
+Zero or more bacteria appear in one vertex. These bacteria do not divide or move at this second.
+Initially, we are at the start of second
+0. You should process
+Q queries ― one query during each of the seconds
+0 through
+Q−1. There are two types of queries:
++ v k: During this second,
+k bacteria appear in vertex
+v.
+? v: Find the number of bacteria in vertex
+v at the end of this second ― after the divided bacteria have moved.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+Each of the next
+N−1 lines contains two space-separated integers
+x and
+y denoting that vertices
+x and
+y are connected by an edge.
+The next line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+denoting the initial numbers of bacteria in vertices
+1 through
+N.
+Q lines follow. Each of these lines describes a query in the format + v k or ? v.
+Output
+For each query of the second type, print a single line containing one integer ― the number of bacteria in the given vertex.
+Constraints
+1≤N,Q≤5⋅10
+5
+1≤a
+i
+≤10
+9
+for each valid
+i
+1≤x,y≤N
+the graph described on the input is a tree
+1≤v≤N
+1≤k≤10
+9
+Subtasks
+Subtask #1 (20 points):
+1≤N,Q≤5,000
+Subtask #2 (30 points):
+1≤N,Q≤10
+5
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+5 8
+4 3
+3 1
+5 2
+1 2
+1 10 4 9 4
++ 1 6
+? 3
++ 3 5
+? 3
++ 2 2
++ 5 10
+? 5
+? 4
+6
+0
+33
+25
+Explanation:
+The numbers of bacteria in all vertices at the end of each second are:
+0-th second:
+6,1,1,13,14
+1-st second:
+0,6,6,14,15
+2-nd second:
+0,0,5,20,21
+3-rd second:
+0,0,0,25,21
+4-th second:
+0,2,0,25,21
+5-th second:
+0,0,0,25,33
+6-th second:
+0,0,0,25,33
+7-th second:
+0,0,0,25,33

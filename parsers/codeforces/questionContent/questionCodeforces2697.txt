@@ -1,0 +1,216 @@
+D. Nastya and Time Machine
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Denis came to Nastya and discovered that she was not happy to see him... There is only one chance that she can become happy. Denis wants to buy all things that Nastya likes so she will certainly agree to talk to him.
+The map of the city where they live has a lot of squares, some of which are connected by roads. There is exactly one way between each pair of squares which does not visit any vertex twice. It turns out that the graph of the city is a tree.
+Denis is located at vertex
+1
+at the time
+0
+. He wants to visit every vertex at least once and get back as soon as possible.
+Denis can walk one road in
+1
+time. Unfortunately, the city is so large that it will take a very long time to visit all squares. Therefore, Denis took a desperate step. He pulled out his pocket time machine, which he constructed in his basement. With its help, Denis can change the time to any non-negative time, which is less than the current time.
+But the time machine has one feature. If the hero finds himself in the same place and at the same time twice, there will be an explosion of universal proportions and Nastya will stay unhappy. Therefore, Denis asks you to find him a route using a time machine that he will get around all squares and will return to the first and at the same time the maximum time in which he visited any square will be minimal.
+Formally, Denis's route can be represented as a sequence of pairs:
+{
+v
+1
+,
+t
+1
+},{
+v
+2
+,
+t
+2
+},{
+v
+3
+,
+t
+3
+},…,{
+v
+k
+,
+t
+k
+}
+, where
+v
+i
+is number of square, and
+t
+i
+is time in which the boy is now.
+The following conditions must be met:
+The route starts on square
+1
+at time
+0
+, i.e.
+v
+1
+=1,
+t
+1
+=0
+and ends on the square
+1
+, i.e.
+v
+k
+=1
+.
+All transitions are divided into two types:
+Being in the square change the time:
+{
+v
+i
+,
+t
+i
+}→{
+v
+i+1
+,
+t
+i+1
+}:
+v
+i+1
+=
+v
+i
+,0≤
+t
+i+1
+<
+t
+i
+.
+Walk along one of the roads:
+{
+v
+i
+,
+t
+i
+}→{
+v
+i+1
+,
+t
+i+1
+}
+. Herewith,
+v
+i
+and
+v
+i+1
+are connected by road, and
+t
+i+1
+=
+t
+i
++1
+All pairs
+{
+v
+i
+,
+t
+i
+}
+must be different.
+All squares are among
+v
+1
+,
+v
+2
+,…,
+v
+k
+.
+You need to find a route such that the maximum time in any square will be minimal, that is, the route for which
+max(
+t
+1
+,
+t
+2
+,…,
+t
+k
+)
+will be the minimum possible.
+Input
+The first line contains a single integer
+n
+(1≤n≤
+10
+5
+)
+ — the number of squares in the city.
+The next
+n−1
+lines contain two integers
+u
+and
+v
+(1≤v,u≤n,u≠v)
+- the numbers of the squares connected by the road.
+It is guaranteed that the given graph is a tree.
+Output
+In the first line output the integer
+k
+(1≤k≤
+10
+6
+)
+ — the length of the path of Denis.
+In the next
+k
+lines output pairs
+v
+i
+,
+t
+i
+ — pairs that describe Denis's route (as in the statement).
+All route requirements described in the statements must be met.
+It is guaranteed that under given restrictions there is at least one route and an answer whose length does not exceed
+10
+6
+. If there are several possible answers, print any.
+Example
+input
+Copy
+5
+1 2
+2 3
+2 4
+4 5
+output
+Copy
+13
+1 0
+2 1
+3 2
+3 1
+2 2
+4 3
+4 1
+5 2
+5 1
+4 2
+2 3
+2 0
+1 1

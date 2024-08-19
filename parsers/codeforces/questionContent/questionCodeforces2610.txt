@@ -1,0 +1,36 @@
+D2. Quantum Classification - 2
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem statement is exactly the same as in the problem "Quantum Classification - 1"; the only difference is the training dataset used (and the model you need to train on it).
+You are given a training dataset, in which each entry is a features vector (an array of 2 real numbers) and a label 0 or 1 indicating the class to which this vector belongs.
+Your goal is to use this dataset to train a quantum classification model that will accurately classify a validation dataset - a different dataset generated using the same data distribution as the training one. The error rate of classifying the validation dataset using your model (the percentage of incorrectly classified samples) should be less than 5
+The quantum classification library that will use your model to classify the data is documented here.
+This tutorial has an end-to-end example of training a model using this library as a Python notebook.
+You can find examples of training a model and using it for classification here.
+Input
+Your code will not be given any inputs. Instead, you should use the provided dataset file to train your model.
+The training dataset is represented as a JSON file and consists of two arrays, "Features" and "Labels". Each array has exactly 200 elements. Each element of the "Features" array is an array with 2 elements, each of them a floating-point number between -1 and 1. Each element of the "Labels" array is the label of the class to which the corresponding element of the "Features" array belongs, 0 or 1.
+Output
+Your code should return the description of the model you'd like to use in the following format:
+The model is described using a tuple (ControlledRotation[], (Double[], Double)).
+The first element of the tuple describes circuit geometry of the model as an array of controlled rotation gates.
+The second element of the tuple describes numeric parameters of the model and is a tuple of an array of rotation angles used by the gates and the bias used to decide the class of the model.
+Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.MachineLearning;
+
+    operation Solve () : (ControlledRotation[], (Double[], Double)) {
+        // your code here
+    }
+}
+Please refer to the documentation and examples for details on each parameter.
+Note
+Note that majority of the data analysis is going to happen "offline" before you submit the solution. The solution has to contain only the description of the trained model, not the training code itself - if you attempt to train the model "online" in your submitted code during the evaluation process, it will very likely time out.
+Training your model offline is likely to involve:
+Defining the circuit structure that your model will use.
+Generating several parameter seed vectors - the values from which training the model will start.
+Selecting appropriate hyperparameters of the training process (learning rate, batch size, tolerance, maximal number of iterations etc.)
+Training a number of classification models (one per each seed vector and hyperparameter combination)
+Selecting the best trained model and submitting it.

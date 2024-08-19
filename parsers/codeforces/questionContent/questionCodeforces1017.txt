@@ -1,0 +1,111 @@
+B. Getting Zero
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Suppose you have an integer
+v
+. In one operation, you can:
+either set
+v=(v+1)mod32768
+or set
+v=(2⋅v)mod32768
+.
+You are given
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. What is the minimum number of operations you need to make each
+a
+i
+equal to
+0
+?
+Input
+The first line contains the single integer
+n
+(
+1≤n≤32768
+) — the number of integers.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+<32768
+).
+Output
+Print
+n
+integers. The
+i
+-th integer should be equal to the minimum number of operations required to make
+a
+i
+equal to
+0
+.
+Example
+input
+Copy
+4
+19 32764 10240 49
+output
+Copy
+14 4 4 15 
+Note
+Let's consider each
+a
+i
+:
+a
+1
+=19
+. You can, firstly, increase it by one to get
+20
+and then multiply it by two
+13
+times. You'll get
+0
+in
+1+13=14
+steps.
+a
+2
+=32764
+. You can increase it by one
+4
+times:
+32764→32765→32766→32767→0
+.
+a
+3
+=10240
+. You can multiply it by two
+4
+times:
+10240→20480→8192→16384→0
+.
+a
+4
+=49
+. You can multiply it by two
+15
+times.

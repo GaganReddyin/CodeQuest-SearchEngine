@@ -1,0 +1,90 @@
+Largest Increasing Subsequence
+Problem
+Petya is preparing a problem for a local contest in his school. The problem is to find a longest increasing subsequence in a given permutation. A permutation of size
+n is a sequence of
+n numbers
+a
+1
+,…,a
+n
+such that every number from
+1 to
+n occurs in the sequence exactly once. An increasing subsequence of length
+k of the sequence
+a
+1
+,…,a
+n
+is a sequence of indices
+i
+1
+,…,i
+k
+such that
+1≤i
+1
+<…<i
+k
+≤n and
+a
+i
+1
+<…<a
+i
+k
+. A longest increasing subsequence is an increasing subsequences with the largest length. Note that in general there may be several longest increasing subsequences.
+Petya had some tests prepared, but then lost the input part for some of them. He now has a test for a certain value of
+n, and a sequence
+i
+1
+,…,i
+k
+that is supposed to be a longest increasing subsequence. Petya now has to reconstruct a permutation of size
+n with this sequence being an answer. Petya doesn't want to take any risks, so he additionally wants this sequence to be the only longest increasing subsequence, that is, all other increasing subsequences have to have strictly smaller length. Help Petya determine if this is possible, and if so, construct any such permutation.
+###Input:
+The first line contains an integer
+T, denoting number of test cases.
+The first line of every test case contains two integers
+n and
+k− the size of the permutation and the length of the longest increasing subsequence (
+1≤k≤n≤10
+5
+).
+The second line contains
+k integers
+i
+1
+,…,i
+k
+− the longest increasing subsequence (
+1≤i
+1
+<…<i
+k
+≤n).
+###Output: If there is no permutation with the sequence
+i
+1
+,…,i
+k
+being the only longest increasing subsequence, print NO . Otherwise, print YES on the first line, followed by
+n numbers describing any suitable permutation on the second line.
+###Constraints
+1≤T≤10
+1≤k≤n≤10
+5
+1≤i
+1
+<…<i
+k
+≤n
+###Sample Input:
+2
+3 2
+1 2
+2 1
+1
+###Sample Output:
+YES
+2 3 1
+NO

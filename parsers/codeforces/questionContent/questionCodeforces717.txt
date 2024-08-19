@@ -1,0 +1,149 @@
+E. Two Arrays
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two arrays of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+and
+b
+1
+,
+b
+2
+,…,
+b
+m
+.
+Alice and Bob are going to play a game. Alice moves first and they take turns making a move.
+They play on a grid of size
+n×m
+(a grid with
+n
+rows and
+m
+columns). Initially, there is a rook positioned on the first row and first column of the grid.
+During her/his move, a player can do one of the following two operations:
+Move the rook to a different cell on the same row or the same column of the current cell. A player cannot move the rook to a cell that has been visited
+1000
+times before (i.e., the rook can stay in a certain cell at most
+1000
+times during the entire game). Note that the starting cell is considered to be visited once at the beginning of the game.
+End the game immediately with a score of
+a
+r
++
+b
+c
+, where
+(r,c)
+is the current cell (i.e., the rook is on the
+r
+-th row and
+c
+-th column).
+Bob wants to maximize the score while Alice wants to minimize it. If they both play this game optimally, what is the final score of the game?
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+) — the length of the arrays
+a
+and
+b
+(which coincide with the number of rows and columns of the grid).
+The second line contains the
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤5⋅
+10
+8
+).
+The third line contains the
+m
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤5⋅
+10
+8
+).
+Output
+Print a single line containing the final score of the game.
+Examples
+input
+Copy
+2 1
+3 2
+2
+output
+Copy
+4
+input
+Copy
+4 5
+235499701 451218171 355604420 132973458
+365049318 264083156 491406845 62875547 175951751
+output
+Copy
+531556171
+Note
+In the first test case, Alice moves the rook to
+(2,1)
+and Bob moves the rook to
+(1,1)
+. This process will repeat for
+999
+times until finally, after Alice moves the rook, Bob cannot move it back to
+(1,1)
+because it has been visited
+1000
+times before. So the final score of the game is
+a
+2
++
+b
+1
+=4
+.
+In the second test case, the final score of the game is
+a
+3
++
+b
+5
+.

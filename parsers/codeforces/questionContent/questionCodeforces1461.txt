@@ -1,0 +1,97 @@
+G. GCD Festival
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Mr. Chanek has an array
+a
+of
+n
+integers. The prettiness value of
+a
+is denoted as:
+∑
+i=1
+n
+∑
+j=1
+n
+gcd(
+a
+i
+,
+a
+j
+)⋅gcd(i,j)
+n
+n
+where
+gcd(x,y)
+denotes the greatest common divisor (GCD) of integers
+x
+and
+y
+.
+In other words, the prettiness value of an array
+a
+is the total sum of
+gcd(
+a
+i
+,
+a
+j
+)⋅gcd(i,j)
+for all pairs
+(i,j)
+.
+Help Mr. Chanek find the prettiness value of
+a
+, and output the result modulo
+10
+9
++7
+!
+Input
+The first line contains an integer
+n
+(
+2≤n≤
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+5
+).
+Output
+Output an integer denoting the prettiness value of
+a
+modulo
+10
+9
++7
+.
+Example
+input
+Copy
+5
+3 6 2 1 4
+output
+Copy
+77

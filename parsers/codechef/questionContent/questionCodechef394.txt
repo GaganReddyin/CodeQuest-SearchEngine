@@ -1,0 +1,106 @@
+Vishesh and his Popcorn Combo
+Problem
+Vishesh has gone to watch the new Spider-Man movie, but he is having troubles choosing which Popcorn-and-Coke combo to buy.
+There are three combos
+A,
+B, and
+C available at the counter. You are given the time (in minute) for which each Popcorn bucket and Coke cup lasts. Given that Vishesh's satisfaction from a combo is defined as the total lasting time (in minute) of the Popcorn bucket and the Coke cup, find the maximum satisfaction he can get by buying a single combo.
+Input Format
+The first line of each input contains
+T - the number of test cases. The test cases then follow.
+The first line of each test case contains two space-separated integers
+A
+1
+and
+A
+2
+, meaning that for combo
+A, the Popcorn bucket lasts
+A
+1
+minutes and the Coke cup lasts
+A
+2
+minutes.
+The second line of each test case contains two space-separated integers
+B
+1
+and
+B
+2
+, meaning that for combo
+B, the Popcorn bucket lasts
+B
+1
+minutes and the Coke cup lasts
+B
+2
+minutes.
+The third line of each test case contains two space-separated integers
+C
+1
+and
+C
+2
+, meaning that for combo
+C, the Popcorn bucket lasts
+C
+1
+minutes and the Coke cup lasts
+C
+2
+minutes.
+Output Format
+For each test case, output on a single line the maximum satisfaction Vishesh can get.
+Constraints
+1≤T≤1000
+1≤A
+1
+,A
+2
+,B
+1
+,B
+2
+,C
+1
+,C
+2
+≤10
+9
+Sample 1:
+Input
+Output
+3
+3 6
+5 10
+8 7
+99 1
+55 55
+33 51
+54 146
+5436 627
+1527 5421
+15
+110
+6948
+Explanation:
+Test case
+1:
+For combo
+A, the Popcorn bucket lasts
+3 minutes, and the Coke cup lasts
+6 minutes, so Vishesh gets a satisfaction of
+3+6=9 if he buys this combo.
+For combo
+B, the Popcorn bucket lasts
+5 minutes, and the Coke cup lasts
+10 minutes, so Vishesh gets a satisfaction of
+5+10=15 if he buys this combo.
+For combo
+C, the Popcorn bucket lasts
+8 minutes, and the Coke cup lasts
+7 minutes, so Vishesh gets a satisfaction of
+8+7=15 if he buys this combo.
+Therefore Vishesh's maximum satisfaction is
+15.

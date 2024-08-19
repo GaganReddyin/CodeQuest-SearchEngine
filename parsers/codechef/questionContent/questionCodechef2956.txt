@@ -1,0 +1,175 @@
+A drawing game
+Problem
+For a non-empty array
+C containing positive integers, let
+B be a subsequence of array
+C of size
+M
+(1≤M≤∣C∣). We are going to play a drawing game based on the sequence
+B:
+Select
+M points with positive integer coordinates on the
+XY
+− plane such that the points
+(B
+i
+,0),
+(0,B
+i
+) and the
+i
+th
+selected point are collinear. Please note that multiple selected points can have the same coordinates.
+Next, draw
+M line segments. The
+i
+th
+line segment should connect the origin
+(0,0) with the
+i
+th
+selected point.
+The beauty of a line segment is equal to the number of points on the line segment that have integer coordinates. We want to maximize the sum of beauty over all line segments.
+Let
+W(B) denote the number of ways to select
+M points based on the sequence
+B such that the sum of beauty over all line segments is maximized. Let
+S be the sum of
+W(B) over all non-empty subsequences
+B of the array
+C.
+You are given an array
+A of size
+N and
+Q queries. In each query:
+L
+R : Given two integers
+L and
+R
+(1≤L≤R≤N), define the array
+C by keeping some elements in the range
+A
+L…R
+and deleting the rest of the elements from
+A without changing the order. Find out the number of distinct values of
+S you can obtain over all the arrays
+C.
+Note that the array
+C cannot be empty. In other words, you must keep at least one element from the range
+A
+L…R
+.
+Since this number can be quite large, output your answer modulo
+10
+9
++7.
+Input Format
+The first line contains two space-separated integers
+N and
+Q.
+The second line contains
+N positive integers
+A
+1
+,…,A
+N
+where
+A
+i
+is the
+i
+th
+integer of the array
+A.
+Each of the next
+Q lines contains two integers
+L
+j
+and
+R
+j
+denoting the
+j
+th
+query.
+Output Format
+For each query, print the number of distinct values of
+S you can obtain, if you can keep some elements in the range
+A
+L…R
+and then delete the rest from
+A without changing the order modulo
+(10
+9
++7).
+Constraints
+1≤N,Q≤10
+5
+2≤A
+i
+≤10
+12
+0≤max(A
+1
+,…,A
+n
+)−min(A
+1
+,…,A
+n
+)<10
+7
+. In other words, the absolute difference between any two elements of
+A is strictly less than
+10
+7
+1≤L
+j
+≤R
+j
+≤N
+Sample 1:
+Input
+Output
+4 3
+2 3 4 4
+1 3
+1 4
+3 4
+5
+7
+2
+Explanation:
+Query
+1: Given
+L=1 and
+R=3, the possible arrays
+C made using the subarray
+A[1,3] are:
+C=[2]: The only possible subsequence
+B=[2]. The only point collinear with
+(2,0) and
+(0,2) that has positive integer coordinates is
+(1,1).
+The line segment connecting origin with the selected point
+(1,1) can be denoted by the line
+y=−x+2.
+The number of points lying on this line segment that have integer coordinates are
+(0,0) and
+(1,1). Thus, the beauty is
+2.
+There is only one way to maximize the beauty, thus the value of
+W(B)=1.
+Since there is only one possible subsequence, the value of
+S is also
+1.
+C=[3]:S=2
+C=[4]:S=1
+C=[2,3]:S=5
+C=[2,4]:S=3
+C=[3,4]:S=5
+C=[2,3,4]:S=11
+There are
+5 distinct values of
+S, which are
+{1,2,3,5,11}.

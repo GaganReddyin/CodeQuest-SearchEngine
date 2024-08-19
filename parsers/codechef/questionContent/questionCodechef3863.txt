@@ -1,0 +1,84 @@
+Graph Count
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+You are given an undirected graph with
+N nodes and
+M edges. There are exactly
+K=
+2
+N(N−1)
+−M unordered pairs
+(i,j) such that the edge
+(i,j) is not present in the graph. For each of these pairs, you can choose whether to add the edge
+(i,j) to the graph. Out of all
+2
+K
+ways, find the number of ways in which each vertex has degree
+2 in the final graph.
+Since the answer can be large, print it modulo
+998 244 353.
+Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N,
+M, the number of nodes and the number of edges in the graph.
+Each of the next
+M lines contains two space-separated integers
+u,
+v, denoting an edge between nodes
+u and
+v in the graph.
+Output:
+For each testcase, output in a single line, the number of ways in which all nodes of the final graph have degree
+2, modulo
+998 244 353.
+Constraints
+1≤T≤1000
+0≤M≤N≤3⋅10
+5
+1≤N
+1≤u,v≤N,
+u
+
+=v
+There is at most one edge between the same pair of nodes.
+The sum of
+N over all test cases does not exceed
+3⋅10
+5
+Subtasks
+Subtask 1 (10 points):
+T≤10,
+N≤11
+Subtask 2 (15 points):
+T≤10,
+N≤40
+Subtask 3 (20 points):
+T≤10,
+N≤350
+Subtask 4 (30 points): The sum of
+N over all test cases does not exceed
+5000
+Subtask 5 (25 points): Original constraints
+Sample Input
+3
+4 3
+1 4
+3 2
+2 4
+4 4
+1 2
+2 3
+1 3
+1 4
+6 0
+Sample Output
+1
+0
+70
+Explanation
+In the first test case, there is only one valid way: adding an edge between
+1 and
+3.
+In the second test case, there is no valid way.

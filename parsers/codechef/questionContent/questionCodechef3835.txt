@@ -1,0 +1,113 @@
+Cherry and Squares
+Problem
+Cherry has a matrix
+A consisting of
+N rows and
+M columns, filled with lowercase English letters.
+You are asked
+Q queries. Each query is provided by four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+which define the rectangle, where (
+x
+1
+,
+y
+1
+) stands for the coordinates of the top left cell of the rectangle, while (
+x
+2
+,
+y
+2
+) stands for the coordinates of the bottom right cell. The answer to the query is the size of the maximum square, that is located fully inside the query rectangle such that :
+The characters of each row should be in non-decreasing order.
+The characters of each column should be in non-decreasing order.
+Note:
+x
+1
+represents the row number while
+y
+1
+represents the column number.
+###Input:
+The first line of the input contains two integers
+N and
+M — the number of rows and the number of columns in the matrix.
+Each of the next
+N lines contains a string of
+M lowercase English letters denoting one row of the matrix.
+Next line contains an integer
+Q — the number of queries.
+Then follow
+Q lines with queries descriptions. Each of them contains four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+— coordinates of the up left and bottom right cells of the query rectangle.
+###Output:
+Print
+Q lines. The
+i-th of them should contain the maximum size of the square for the
+i-th query.
+###Constraints
+1≤N,M≤500
+1≤Q≤10
+5
+1≤x
+1
+≤x
+2
+≤N
+1≤y
+1
+≤y
+2
+≤M
+###Sample Input:
+4 4
+aaaa
+bbaa
+cdef
+wxyz
+3
+1 1 4 4
+1 2 2 3
+3 1 4 4
+###Sample Output:
+2
+1
+2
+###Explanation:
+Example Case 1:
+Query 1: The maximum size square that lies inside the query rectangle is 2. One of the such squares is:
+[
+aa
+bb
+]
+Query 2: The maximum size square that lies inside the query rectangle is 1. One of the such square is:
+[
+a
+]
+Query 3: The maximum size square that lies inside the query rectangle is 2. One of the such square is:
+[
+de
+xy
+]

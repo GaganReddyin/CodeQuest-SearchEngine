@@ -1,0 +1,31 @@
+Sereja and Pairs
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+Sereja had an non-negative integer A in the range [0, 10100].
+One day, he wrote N pairs of the form (X[i], floor(A / X[i]) ) on a piece of paper. Let us denote floor(A / X[i]) by D[i].
+Sereja's little brother Sergey is very naughty, he changed the D values for some of the pairs. When confronted for his mischief by Sereja, he said that he did not touch more than K such pairs.
+Now, given the modified values of N pairs of the form (X[i], D[i]), Sereja is wondering about number of possible original values of integer A. Please help Sereja so that little Sergey could avoid the upcoming beating by Sereja. As the answer could be large, please report it modulo 1000000007 (109+7).
+Input
+First line of input contain an integer T — the number of test cases.T test cases follow.
+First line of each test case contains integers N and K. Each of the next N lines contains a pair that Sereja wrote on the paper — X[i] and D[i] — as two space-separated integers.
+Output
+For each test case, output a single line containing the answer - number of possible numbers A modulo (109+7).
+Constraints
+1 ≤ T ≤ 5
+0 ≤ K ≤ N ≤ 105
+1 ≤ X[i] ≤ 109
+0 ≤ D[i] ≤ 109
+Sample 1:
+Input
+Output
+2
+3 0
+50 2
+40 2
+30 3
+3 1
+30 3
+40 2
+50 2
+20
+30

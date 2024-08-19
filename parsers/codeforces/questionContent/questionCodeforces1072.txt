@@ -1,0 +1,207 @@
+C. Weight of the System of Nested Segments
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+On the number line there are
+m
+points,
+i
+-th of which has integer coordinate
+x
+i
+and integer weight
+w
+i
+. The coordinates of all points are different, and the points are numbered from
+1
+to
+m
+.
+A sequence of
+n
+segments
+[
+l
+1
+,
+r
+1
+],[
+l
+2
+,
+r
+2
+],…,[
+l
+n
+,
+r
+n
+]
+is called system of nested segments if for each pair
+i,j
+(
+1≤i<j≤n
+) the condition
+l
+i
+<
+l
+j
+<
+r
+j
+<
+r
+i
+is satisfied. In other words, the second segment is strictly inside the first one, the third segment is strictly inside the second one, and so on.
+For a given number
+n
+, find a system of nested segments such that:
+both ends of each segment are one of
+m
+given points;
+the sum of the weights
+2⋅n
+of the points used as ends of the segments is minimal.
+For example, let
+m=8
+. The given points are marked in the picture, their weights are marked in red, their coordinates are marked in blue. Make a system of three nested segments:
+weight of the first segment:
+1+1=2
+weight of the second segment:
+10+(−1)=9
+weight of the third segment:
+3+(−2)=1
+sum of the weights of all the segments in the system:
+2+9+1=12
+System of three nested segments
+Input
+The first line of input data contains an integer
+t
+(
+1≤t≤
+10
+4
+) —the number of input test cases.
+An empty line is written before each test case.
+The first line of each test case contains two positive integers
+n
+(
+1≤n≤
+10
+5
+) and
+m
+(
+2⋅n≤m≤2⋅
+10
+5
+).
+The next
+m
+lines contain pairs of integers
+x
+i
+(
+−
+10
+9
+≤
+x
+i
+≤
+10
+9
+) and
+w
+i
+(
+−
+10
+4
+≤
+w
+i
+≤
+10
+4
+) — coordinate and weight of point number
+i
+(
+1≤i≤m
+) respectively. All
+x
+i
+are different.
+It is guaranteed that the sum of
+m
+values over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output
+n+1
+lines: in the first of them, output the weight of the composed system, and in the next
+n
+lines output exactly two numbers  — the indices of the points which are the endpoints of the
+i
+-th segment (
+1≤i≤n
+). The order in which you output the endpoints of a segment is not important — you can output the index of the left endpoint first and then the number of the right endpoint, or the other way around.
+If there are several ways to make a system of nested segments with minimal weight, output any of them.
+Example
+input
+Copy
+3
+
+3 8
+0 10
+-2 1
+4 10
+11 20
+7 -1
+9 1
+2 3
+5 -2
+
+3 6
+-1 2
+1 3
+3 -1
+2 4
+4 0
+8 2
+
+2 5
+5 -1
+3 -2
+1 0
+-2 0
+-5 -3
+output
+Copy
+12
+2 6
+5 1
+7 8
+
+10
+1 6
+5 2
+3 4
+
+-6
+5 1
+4 2
+Note
+The first test case coincides with the example from the condition. It can be shown that the weight of the composed system is minimal.
+The second test case has only
+6
+points, so you need to use each of them to compose
+3
+segments.

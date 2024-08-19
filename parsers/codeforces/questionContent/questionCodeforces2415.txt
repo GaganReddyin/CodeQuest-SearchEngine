@@ -1,0 +1,111 @@
+A. Suborrays
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A permutation of length
+n
+is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array) and
+[1,3,4]
+is also not a permutation (
+n=3
+but there is
+4
+in the array).
+For a positive integer
+n
+, we call a permutation
+p
+of length
+n
+good if the following condition holds for every pair
+i
+and
+j
+(
+1≤i≤j≤n
+) —
+(
+p
+i
+ OR 
+p
+i+1
+ OR … OR 
+p
+j−1
+ OR 
+p
+j
+)≥j−i+1
+, where
+OR
+denotes the bitwise OR operation.
+In other words, a permutation
+p
+is good if for every subarray of
+p
+, the
+OR
+of all elements in it is not less than the number of elements in that subarray.
+Given a positive integer
+n
+, output any good permutation of length
+n
+. We can show that for the given constraints such a permutation always exists.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100
+). Description of the test cases follows.
+The first and only line of every test case contains a single integer
+n
+(
+1≤n≤100
+).
+Output
+For every test, output any good permutation of length
+n
+on a separate line.
+Example
+input
+Copy
+3
+1
+3
+7
+output
+Copy
+1
+3 1 2
+4 3 5 2 7 1 6
+Note
+For
+n=3
+,
+[3,1,2]
+is a good permutation. Some of the subarrays are listed below.
+3 OR 1=3≥2
+(i=1,j=2)
+3 OR 1 OR 2=3≥3
+(i=1,j=3)
+1 OR 2=3≥2
+(i=2,j=3)
+1≥1
+(i=2,j=2)
+Similarly, you can verify that
+[4,3,5,2,7,1,6]
+is also good.

@@ -1,0 +1,141 @@
+E. Infinite Game
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Alice and Bob are playing an infinite game consisting of sets. Each set consists of rounds. In each round, one of the players wins. The first player to win two rounds in a set wins this set. Thus, a set always ends with the score of
+2:0
+or
+2:1
+in favor of one of the players.
+Let's call a game scenario a finite string
+s
+consisting of characters 'a' and 'b'. Consider an infinite string formed with repetitions of string
+s
+:
+sss…
+Suppose that Alice and Bob play rounds according to this infinite string, left to right. If a character of the string
+sss…
+is 'a', then Alice wins the round; if it's 'b', Bob wins the round. As soon as one of the players wins two rounds, the set ends in their favor, and a new set starts from the next round.
+Let's define
+a
+i
+as the number of sets won by Alice among the first
+i
+sets while playing according to the given scenario. Let's also define
+r
+as the limit of ratio
+a
+i
+i
+as
+i→∞
+. If
+r>
+1
+2
+, we'll say that scenario
+s
+is winning for Alice. If
+r=
+1
+2
+, we'll say that scenario
+s
+is tied. If
+r<
+1
+2
+, we'll say that scenario
+s
+is winning for Bob.
+You are given a string
+s
+consisting of characters 'a', 'b', and '?'. Consider all possible ways of replacing every '?' with 'a' or 'b' to obtain a string consisting only of characters 'a' and 'b'. Count how many of them result in a scenario winning for Alice, how many result in a tied scenario, and how many result in a scenario winning for Bob. Print these three numbers modulo
+998244353
+.
+Input
+The only line contains a single string
+s
+ (
+1≤|s|≤200
+), consisting of characters 'a', 'b', and '?'.
+Output
+Print three integers: how many ways result in a scenario winning for Alice, how many result in a tied scenario, and how many result in a scenario winning for Bob, modulo
+998244353
+.
+Examples
+input
+Copy
+??
+output
+Copy
+1
+2
+1
+input
+Copy
+?aa?b
+output
+Copy
+1
+3
+0
+input
+Copy
+a???ba
+output
+Copy
+4
+3
+1
+input
+Copy
+????????
+output
+Copy
+121
+14
+121
+input
+Copy
+ba????a?a???abbb?
+output
+Copy
+216
+57
+239
+input
+Copy
+a????a??????b??abbababbbb?a?aaa????bb
+output
+Copy
+97833
+28387
+135924
+input
+Copy
+??????????????a????????????????b?????
+output
+Copy
+484121060
+448940322
+484613337
+Note
+In the first example, there are four ways to replace the question marks:
+s=aa
+: Alice wins every set
+2:0
+ — the scenario is winning for Alice;
+s=ab
+: Alice and Bob win sets in turns, with the score of
+2:1
+each — the scenario is tied;
+s=ba
+: Bob and Alice win sets in turns, with the score of
+2:1
+each — the scenario is tied;
+s=bb
+: Bob wins every set
+2:0
+ — the scenario is winning for Bob.

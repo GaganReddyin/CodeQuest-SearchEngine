@@ -1,0 +1,136 @@
+G. A New Beginning
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Annie has gotten bored of winning every coding contest and farming unlimited rating. Today, she is going to farm potatoes instead.
+Annie's garden is an infinite 2D plane. She has
+n
+potatoes to plant, and the
+i
+-th potato must be planted at
+(
+x
+i
+,
+y
+i
+)
+. Starting at the point
+(0,0)
+, Annie begins walking, in one step she can travel one unit right or up (increasing her
+x
+or
+y
+coordinate by
+1
+respectively). At any point
+(X,Y)
+during her walk she can plant some potatoes at arbitrary points using her potato gun, consuming
+max(|X−x|,|Y−y|)
+units of energy in order to plant a potato at
+(x,y)
+. Find the minimum total energy required to plant every potato.
+Note that Annie may plant any number of potatoes from any point.
+Input
+The first line contains the integer
+n
+(
+1≤n≤800000
+).
+The next
+n
+lines contain two integers
+x
+i
+and
+y
+i
+(
+0≤
+x
+i
+,
+y
+i
+≤
+10
+9
+), representing the location of the
+i
+-th potato. It is possible that some potatoes should be planted in the same location.
+Output
+Print the minimum total energy to plant all potatoes.
+Examples
+input
+Copy
+2
+1 1
+2 2
+output
+Copy
+0
+input
+Copy
+2
+1 1
+2 0
+output
+Copy
+1
+input
+Copy
+3
+5 5
+7 7
+4 9
+output
+Copy
+2
+input
+Copy
+10
+5 1
+4 0
+9 6
+0 2
+10 1
+9 10
+3 10
+0 10
+8 9
+1 5
+output
+Copy
+19
+input
+Copy
+10
+1 1
+2 2
+2 0
+4 2
+4 0
+2 0
+0 2
+4 0
+4 2
+5 1
+output
+Copy
+6
+Note
+In example
+1
+, Annie can travel to each spot directly and plant a potato with no energy required.
+In example
+2
+, moving to
+(1,0)
+, Annie plants the second potato using
+1
+energy. Next, she travels to
+(1,1)
+and plants the first potato with
+0
+energy.

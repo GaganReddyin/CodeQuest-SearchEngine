@@ -1,0 +1,23 @@
+D. Two Arithmetic Progressions
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two arithmetic progressions: a1k + b1 and a2l + b2. Find the number of integers x such that L ≤ x ≤ R and x = a1k' + b1 = a2l' + b2, for some integers k', l' ≥ 0.
+Input
+The only line contains six integers a1, b1, a2, b2, L, R (0 < a1, a2 ≤ 2·109,  - 2·109 ≤ b1, b2, L, R ≤ 2·109, L ≤ R).
+Output
+Print the desired number of integers x.
+Examples
+input
+Copy
+2 0 3 3 5 21
+output
+Copy
+3
+input
+Copy
+2 4 3 0 6 17
+output
+Copy
+2

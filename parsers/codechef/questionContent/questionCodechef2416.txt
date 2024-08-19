@@ -1,0 +1,125 @@
+Planetary Path
+Problem
+In order to expand its reach to the outer universe and ensure universal peace, the MIB has decided to expand its offices. Namely, it has established its office on
+N most important planets in the universe, with the base station on the planet
+S. Each office has an intergalactic teleporter that connects it to other planet offices. But the teleporters are bound to a planet's policy, so you cannot teleport to any planet you wish.
+Due to intergalactic feuds, the planets are divided into
+K different alliances, numbered
+1 through
+K. You know for each planet
+i, the alliance that it belongs to. In other words, you're given a sequence
+A
+1
+,A
+2
+,…,A
+n
+, which says that planet
+i belongs to alliance
+A
+i
+.
+Each planet
+i has a policy of teleportation to the planets of other alliances:
+Cost to travel from one planet to another is determined by the alliance of the destination planet. More formally, the cost to reach a planet which belongs to alliance
+j from planet
+i is represented as
+C
+i,j
+.
+Intra-alliance travel is free, i.e., if
+A
+i
+=j, then
+C
+i,j
+=0.
+For a planet
+i, there are some forbidden alliances as well. For these alliances,
+C
+i,j
+=−1, given that alliance
+j is forbidden to travel from planet
+i.
+As MIB is bound to follow the intergalactic rules and since they have limited funds (yes, the government is cheap everywhere), they have decided to find the most optimal way to travel to each of the planets from the base station at planet
+S. With all other agents busy with their missions, you are assigned the task to find these minimum-cost paths. This is your first task in MIB, so don't let them down!
+Input Format
+The first line will consist of three space-separated integers
+N,
+K, and
+S (number of planets, number of alliances, and base planet).
+Second-line will consist of
+N space-separated integers representing
+A
+i
+, the alliance corresponding to the
+i
+th
+planet.
+Each of the next
+N lines will consist of
+K space-separated integers, where the
+j
+th
+integer of the
+i
+th
+line represents
+C
+i,j
+, the cost to travel from planet
+i to alliance
+j.
+Output Format
+Print
+N space separated integers, the
+i
+th
+integer representing the minimal cost to reach the
+i
+th
+planet from the base station. For unreachable planets print
+−1.
+Constraints
+1≤N≤2∗10
+4
+1≤K≤min(N,1000)
+N∗K≤2∗10
+6
+1≤A
+i
+≤K
+−1≤C
+i,j
+≤10
+9
+Sample 1:
+Input
+Output
+5 3 4
+1 3 1 2 2 
+0 5 -1 
+-1 4 0 
+0 3 -1 
+4 0 -1 
+4 0 3
+4 3 4 0 0
+Explanation:
+As
+4 and
+5 belong to the same component, the cost of traveling in-between is
+0.
+There are multiple shortest paths from
+4 to
+1. They are:
+4→3→1,4→5→3→1,
+4→1, etc. All of these have equal costs, that is
+4.
+Only path from
+4 to
+2 is
+4→5→2, which costs
+3 units.
+Similarly for node
+3, the cost is
+4 units.

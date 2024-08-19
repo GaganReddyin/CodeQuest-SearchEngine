@@ -1,0 +1,190 @@
+Boolean Game
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider
+N binary variables
+x
+1
+,x
+2
+,…,x
+N
+. For each valid
+i, the
+i-th of these variables can be
+x
+i
+=0 or
+x
+i
+=1; therefore, there are
+2
+N
+possible assignments of values to the variables. For each valid
+i, setting
+x
+i
+=1 gives you score
+g
+i
+.
+In addition, there are
+M special intervals (numbered
+1 through
+M). For each valid
+i, the
+i-th interval is
+[u
+i
+,v
+i
+] and if
+x
+u
+i
+=x
+u
+i
++1
+=…=x
+v
+i
+=1, then your score increases by
+d
+i
+.
+Note that both
+g
+i
+and
+d
+i
+can be negative (setting more variables to
+1 can decrease your score), and your score can also be negative. Formally, the score of an assignment of values to the binary variables is
+∑
+i=1
+N
+g
+i
+⋅x
+i
++∑
+i=1
+M
+d
+i
+⋅∏
+j=u
+i
+v
+i
+x
+j
+.
+Find the
+K highest scores among all assignments on these variables. Formally, if we computed the scores of all
+2
+N
+assignments and sorted them in non-increasing order, you should find the first
+K of these values.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+K.
+The second line contains
+N space-separated integers
+g
+1
+,g
+2
+,…,g
+N
+.
+M lines follow. For each valid
+i, the
+i-th of these lines contains three space-separated integers
+u
+i
+,
+v
+i
+and
+d
+i
+.
+Output
+For each test case, print a single line containing
+K space-separated integers ― the
+K highest scores of assignments on the binary variables, in decreasing order.
+Constraints
+1≤T≤10
+1≤N≤60
+1≤M≤min(N⋅(N−1)/2,1,000)
+1≤K≤min(2
+N
+,200)
+∣g
+i
+∣≤10
+9
+for each valid
+i
+1≤u
+i
+<v
+i
+≤N for each valid
+i
+for each valid
+i and
+j (
+i
+
+=j),
+u
+i
+
+=u
+j
+or
+v
+i
+
+=v
+j
+∣d
+i
+∣≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+60
+Subtasks
+Subtask #1 (5 points): the sum of
+N over all test cases does not exceed
+18
+Subtask #2 (20 points):
+K=1
+Subtask #3 (75 points): original constraints
+Sample 1:
+Input
+Output
+1
+4 2 3
+-4 -2 5 2
+1 3 0
+1 4 -3
+7 5 5
+Explanation:
+Example case 1: The best assignment is
+x=(0,0,1,1), with score
+7. The second and third best assignments are
+(0,0,1,0) and
+(0,1,1,1), each with score
+5.

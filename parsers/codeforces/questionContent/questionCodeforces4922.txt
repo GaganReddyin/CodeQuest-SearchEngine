@@ -1,0 +1,28 @@
+F. Paths
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a positive integer n. Let's build a graph on vertices 1, 2, ..., n in such a way that there is an edge between vertices u and v if and only if . Let d(u, v) be the shortest distance between u and v, or 0 if there is no path between them. Compute the sum of values d(u, v) over all 1 ≤ u < v ≤ n.
+The gcd (greatest common divisor) of two positive integers is the maximum positive integer that divides both of the integers.
+Input
+Single integer n (1 ≤ n ≤ 107).
+Output
+Print the sum of d(u, v) over all 1 ≤ u < v ≤ n.
+Examples
+input
+Copy
+6
+output
+Copy
+8
+input
+Copy
+10
+output
+Copy
+44
+Note
+All shortest paths in the first example:
+There are no paths between other pairs of vertices.
+The total distance is 2 + 1 + 1 + 2 + 1 + 1 = 8.

@@ -1,0 +1,122 @@
+F. Nezzar and Chocolate Bars
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Nezzar buys his favorite snack —
+n
+chocolate bars with lengths
+l
+1
+,
+l
+2
+,…,
+l
+n
+. However, chocolate bars might be too long to store them properly!
+In order to solve this problem, Nezzar designs an interesting process to divide them into small pieces. Firstly, Nezzar puts all his chocolate bars into a black box. Then, he will perform the following operation repeatedly until the maximum length over all chocolate bars does not exceed
+k
+.
+Nezzar picks a chocolate bar from the box with probability proportional to its length
+x
+.
+After step
+1
+, Nezzar uniformly picks a real number
+r∈(0,x)
+and divides the chosen chocolate bar into two chocolate bars with lengths
+r
+and
+x−r
+.
+Lastly, he puts those two new chocolate bars into the black box.
+Nezzar now wonders, what is the expected number of operations he will perform to divide his chocolate bars into small pieces.
+It can be shown that the answer can be represented as
+P
+Q
+, where
+P
+and
+Q
+are coprime integers and
+Q≢0
+(
+mod998244353
+). Print the value of
+P⋅
+Q
+−1
+mod998244353
+.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤50,1≤k≤2000
+).
+The second line contains
+n
+integers
+l
+1
+,
+l
+2
+,…,
+l
+n
+(
+1≤
+l
+i
+,
+∑
+n
+i=1
+l
+i
+≤2000
+).
+Output
+Print a single integer — the expected number of operations Nezzar will perform to divide his chocolate bars into small pieces modulo
+998244353
+.
+Examples
+input
+Copy
+1 1
+2
+output
+Copy
+4
+input
+Copy
+1 1
+1
+output
+Copy
+0
+input
+Copy
+1 5
+1234
+output
+Copy
+15630811
+input
+Copy
+2 1
+2 3
+output
+Copy
+476014684
+input
+Copy
+10 33
+10 20 30 40 50 60 70 80 90 100
+output
+Copy
+675105648

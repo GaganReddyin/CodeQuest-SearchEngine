@@ -1,0 +1,115 @@
+Chef and Trip
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef and his friend Chefu decided to go on a trip. The trip takes place over the next
+N days (numbered 1 through
+N). There are
+K different places Chef and Chefu could visit (numbered 1 through
+K). They have written a sequence
+A
+1
+,A
+2
+,…,A
+N
+which denotes the plan of the trip during these
+N days; however, the plan is not completed yet. For each valid
+i, they want to visit the place
+A
+i
+on the
+i-th day, but if
+A
+i
+=−1, then they haven't decided which place to visit on that day.
+Chef and his friend do not want to visit the same place two days in a row, but they can visit a place more than once in total. It is not necessary to visit all the places during the trip. Determine whether it is possible to complete the plan in such a way that this condition is satisfied. If it is possible, find one way of completing the plan.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a line containing the string "YES" if it's possible the complete the plan or "NO" otherwise.
+If it's possible to complete the plan, print a second line containing
+N space-separated integers denoting the sequence
+A
+1
+,A
+2
+,…,A
+N
+after completing the plan. If there is more than one solution, you may print any one.
+Constraints
+1≤T≤1,000
+1≤N≤10
+5
+2≤K≤10
+5
+1≤A
+i
+≤K or
+A
+i
+=−1 for each valid
+i
+if
+A
+i
+
+=−1 and
+A
+i+1
+
+=−1, then
+A
+i
+
+=A
+i+1
+, for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (30 points):
+N≤1,000
+K=2
+the sum of
+N over all test cases does not exceed
+10,000
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+5
+5 3
+-1 -1 -1 -1 -1
+4 5
+1 2 3 5
+3 2
+1 -1 2
+4 2
+1 -1 -1 1
+6 4
+-1 -1 4 -1 2 -1
+YES
+1 2 1 2 1
+YES
+1 2 3 5
+NO
+NO
+YES
+1 2 4 1 2 1

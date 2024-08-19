@@ -1,0 +1,24 @@
+D. Optimal Number Permutation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have array a that contains all integers from 1 to n twice. You can arbitrary permute any numbers in a.
+Let number i be in positions xi, yi (xi < yi) in the permuted array a. Let's define the value di = yi - xi — the distance between the positions of the number i. Permute the numbers in array a to minimize the value of the sum .
+Input
+The only line contains integer n (1 ≤ n ≤ 5·105).
+Output
+Print 2n integers — the permuted array a that minimizes the value of the sum s.
+Examples
+input
+Copy
+2
+output
+Copy
+1 1 2 2
+input
+Copy
+1
+output
+Copy
+1 1

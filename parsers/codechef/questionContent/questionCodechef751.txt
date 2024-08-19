@@ -1,0 +1,121 @@
+Permutation Clear
+Problem
+Alice has an array
+A of length
+N which is initially a permutation. She dislikes
+K numbers which are
+B
+1
+,B
+2
+,…,B
+K
+all of which are distinct. Therefore, she removes all the occurrences of these numbers from
+A. The order of the remaining elements of the
+A does not change.
+Can you find out the resulting array
+A?
+Note: A permutation of length
+N is an array where every integer from
+1 to
+N occurs exactly once.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the array
+A.
+The second line of each test case contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+The third line of each test case contains an integer
+K — the size of the array
+B.
+The fourth line of each test case contains
+K integers
+B
+1
+,B
+2
+,…,B
+K
+denoting the numbers which Alice dislikes.
+Output Format
+For each test case, output the resulting array
+A after the removal of all occurrences of
+B
+1
+,B
+2
+,…B
+K
+.
+It is guaranteed that there will be at least one element in the resulting array.
+Constraints
+1≤T≤1000
+1≤K<N≤10
+5
+1≤A
+i
+,B
+i
+≤N
+A is initially a permutation.
+B
+i
+
+=B
+j
+when
+(i
+
+=j)
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+4 1 3 2
+2
+3 1
+9
+5 2 9 1 8 6 4 3 7
+3
+5 8 9
+5
+3 4 5 1 2
+2
+2 3
+4 2
+2 1 6 4 3 7
+4 5 1
+Explanation:
+Test Case 1: Here
+A=[4,1,3,2] and
+B=[3,1]. The resulting array
+A after removing all the numbers which Alice dislikes is
+[4,2].
+Note that here
+[2,4] is an incorrect answer since the order of elements should be the same as in the original array.
+Test Case 2: Here
+A=[5,2,9,1,8,6,4,3,7] and
+B=[5,8,9]. The resulting array
+A after removing all the numbers which Alice dislikes is
+[2,1,6,4,3,7].
+Test Case 3: Here
+A=[3,4,5,1,2] and
+B=[2,3]. The resulting array
+A after removing all the numbers which Alice dislikes is
+[4,5,1].

@@ -1,0 +1,206 @@
+I. Illusions of the Desert
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Chanek Jones is back, helping his long-lost relative Indiana Jones, to find a secret treasure in a maze buried below a desert full of illusions.
+The map of the labyrinth forms a tree with
+n
+rooms numbered from
+1
+to
+n
+and
+n−1
+tunnels connecting them such that it is possible to travel between each pair of rooms through several tunnels.
+The
+i
+-th room (
+1≤i≤n
+) has
+a
+i
+illusion rate. To go from the
+x
+-th room to the
+y
+-th room, there must exist a tunnel between
+x
+and
+y
+, and it takes
+max(|
+a
+x
++
+a
+y
+|,|
+a
+x
+−
+a
+y
+|)
+energy.
+|z|
+denotes the absolute value of
+z
+.
+To prevent grave robbers, the maze can change the illusion rate of any room in it. Chanek and Indiana would ask
+q
+queries.
+There are two types of queries to be done:
+1 u c
+— The illusion rate of the
+x
+-th room is changed to
+c
+(
+1≤u≤n
+,
+0≤|c|≤
+10
+9
+).
+2 u v
+— Chanek and Indiana ask you the minimum sum of energy needed to take the secret treasure at room
+v
+if they are initially at room
+u
+(
+1≤u,v≤n
+).
+Help them, so you can get a portion of the treasure!
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n≤
+10
+5
+,
+1≤q≤
+10
+5
+) — the number of rooms in the maze and the number of queries.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤|
+a
+i
+|≤
+10
+9
+) — inital illusion rate of each room.
+The
+i
+-th of the next
+n−1
+lines contains two integers
+s
+i
+and
+t
+i
+(
+1≤
+s
+i
+,
+t
+i
+≤n
+), meaning there is a tunnel connecting
+s
+i
+-th room and
+t
+i
+-th room. The given edges form a tree.
+The next
+q
+lines contain the query as described. The given queries are valid.
+Output
+For each type
+2
+query, output a line containing an integer — the minimum sum of energy needed for Chanek and Indiana to take the secret treasure.
+Example
+input
+Copy
+6 4
+10 -9 2 -1 4 -6
+1 5
+5 4
+5 6
+6 2
+6 3
+2 1 2
+1 1 -3
+2 1 2
+2 3 3
+output
+Copy
+39
+32
+0
+Note
+In the first query, their movement from the
+1
+-st to the
+2
+-nd room is as follows.
+1→5
+— takes
+max(|10+4|,|10−4|)=14
+energy.
+5→6
+— takes
+max(|4+(−6)|,|4−(−6)|)=10
+energy.
+6→2
+— takes
+max(|−6+(−9)|,|−6−(−9)|)=15
+energy.
+In total, it takes
+39
+energy.
+In the second query, the illusion rate of the
+1
+-st room changes from
+10
+to
+−3
+.
+In the third query, their movement from the
+1
+-st to the
+2
+-nd room is as follows.
+1→5
+— takes
+max(|−3+4|,|−3−4|)=7
+energy.
+5→6
+— takes
+max(|4+(−6)|,|4−(−6)|)=10
+energy.
+6→2
+— takes
+max(|−6+(−9)|,|−6−(−9)|)=15
+energy.
+Now, it takes
+32
+energy.

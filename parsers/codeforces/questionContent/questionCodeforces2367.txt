@@ -1,0 +1,196 @@
+F. Yet Another Segments Subset
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+segments on a coordinate axis
+OX
+. The
+i
+-th segment has borders
+[
+l
+i
+;
+r
+i
+]
+. All points
+x
+, for which
+l
+i
+≤x≤
+r
+i
+holds, belong to the
+i
+-th segment.
+Your task is to choose the maximum by size (the number of segments) subset of the given set of segments such that each pair of segments in this subset either non-intersecting or one of them lies inside the other one.
+Two segments
+[
+l
+i
+;
+r
+i
+]
+and
+[
+l
+j
+;
+r
+j
+]
+are non-intersecting if they have no common points. For example, segments
+[1;2]
+and
+[3;4]
+,
+[1;3]
+and
+[5;5]
+are non-intersecting, while segments
+[1;2]
+and
+[2;3]
+,
+[1;2]
+and
+[2;2]
+are intersecting.
+The segment
+[
+l
+i
+;
+r
+i
+]
+lies inside the segment
+[
+l
+j
+;
+r
+j
+]
+if
+l
+j
+≤
+l
+i
+and
+r
+i
+≤
+r
+j
+. For example, segments
+[2;2]
+,
+[2,3]
+,
+[3;4]
+and
+[2;4]
+lie inside the segment
+[2;4]
+, while
+[2;5]
+and
+[1;4]
+are not.
+You have to answer
+t
+independent test cases.
+Input
+The first line of the input contains one integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Then
+t
+test cases follow.
+The first line of the test case contains one integer
+n
+(
+1≤n≤3000
+) — the number of segments. The next
+n
+lines describe segments. The
+i
+-th segment is given as two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤2⋅
+10
+5
+), where
+l
+i
+is the left border of the
+i
+-th segment and
+r
+i
+is the right border of the
+i
+-th segment.
+Additional constraint on the input: there are no duplicates in the list of segments.
+It is guaranteed that the sum of
+n
+does not exceed
+3000
+(
+∑n≤3000
+).
+Output
+For each test case, print the answer: the maximum possible size of the subset of the given set of segments such that each pair of segments in this subset either non-intersecting or one of them lies inside the other one.
+Example
+input
+Copy
+4
+4
+1 5
+2 4
+2 3
+3 4
+5
+1 5
+2 3
+2 5
+3 5
+2 2
+3
+1 3
+2 4
+2 3
+7
+1 10
+2 8
+2 5
+3 4
+4 4
+6 8
+7 7
+output
+Copy
+3
+4
+2
+7

@@ -1,0 +1,129 @@
+Split AND Sum
+Problem
+You are given an array
+[A
+1
+,…,A
+N
+]. You want to split it into several
+(≥2) subarrays so that the following condition holds:
+Calculate the sum of elements in each subarray. Then, the AND of all these sums is nonzero, where AND denotes the bitwise AND operation.
+Determine if it's possible. If it's possible, find one such split. You don't have to minimize the number of subarrays.
+Input Format
+The first line of the input contains a single integer
+T
+− the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+N
+− the length of the array.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, if it's not possible to split the array so that the condition from the statement holds, output NO.
+Otherwise, output YES. In the next line, output
+K (
+2≤K≤N)
+− the number of subarrays you are splitting into.
+In the
+i-th of the next
+K lines, output two integers
+L
+i
+,R
+i
+(
+1≤L
+i
+≤R
+i
+≤N), where
+[L
+i
+,R
+i
+] denotes the
+i-th subarray.
+Each number from
+1 to
+N has to appear in exactly one of the segments
+[L
+i
+,R
+i
+].
+You can output each letter in either uppercase or lowercase. You can output any solution. You don't have to minimize
+K.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+0≤A
+i
+<2
+30
+Sum of
+N over all test cases doesn't exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+5
+4
+1 9 8 4
+3
+0 0 0
+2
+16 15
+5
+1 2 6 24 120
+7
+8 6 0 16 24 0 8
+YES
+2
+2 4
+1 1
+NO
+NO
+YES
+2
+1 2
+3 5
+YES
+3
+1 1
+6 7
+2 5
+Explanation:
+Test case
+1: You can split the array into two subarrays
+[2,4] and
+[1,1]. They have sums
+21 and
+1 correspondingly, whose AND is
+1.
+Test case
+4: You can split the array into two subarrays
+[1,2] and
+[3,5]. They have sums
+3 and
+150 correspondingly, whose AND is
+2.
+Test case
+5: You can split the array into three subarrays
+[1,1],
+[6,7],
+[2,5]. They have sums
+8,
+8,
+46, whose AND is
+8.
+It's possible to show that it's impossible to split in the desired way in the second and the third test cases.

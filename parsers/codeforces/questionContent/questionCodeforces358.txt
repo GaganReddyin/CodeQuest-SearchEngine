@@ -1,0 +1,184 @@
+G. Gaining Rating
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Monocarp is playing chess on one popular website. He has
+n
+opponents he can play with. The
+i
+-th opponent has rating equal to
+a
+i
+. Monocarp's initial rating is
+x
+. Monocarp wants to raise his rating to the value
+y
+(
+y>x
+).
+When Monocarp is playing against one of the opponents, he will win if his current rating is bigger or equal to the opponent's rating. If Monocarp wins, his rating is increased by
+1
+, otherwise it is decreased by
+1
+. The rating of his opponent does not change.
+Monocarp wants to gain rating
+y
+playing as few games as possible. But he can't just grind it, playing against weak opponents. The website has a rule that you should play against all opponents as evenly as possible. Speaking formally, if Monocarp wants to play against an opponent
+i
+, there should be no other opponent
+j
+such that Monocarp has played more games against
+i
+than against
+j
+.
+Calculate the minimum possible number of games Monocarp needs to gain rating
+y
+or say it's impossible. Note that ratings of Monocarp's opponents don't change, while Monocarp's rating does change.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains three integers
+n
+,
+x
+and
+y
+(
+1≤n≤2⋅
+10
+5
+;
+1≤x<y≤
+10
+12
+) — the number of Monocarp's opponents, his initial and desired ratings.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+12
+) — ratings of Monocarp's opponents.
+Additional constraint on the input: the total sum of
+n
+over all
+t
+test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a single integer — the minimum number of games Monocarp needs to play to gain rating
+y
+, or
+−1
+if it's impossible.
+Example
+input
+Copy
+3
+7 2 10
+3 1 9 2 5 20 8
+7 1 10
+3 1 9 2 5 20 8
+5 10 12
+100 1 200 11 300
+output
+Copy
+20
+-1
+2
+Note
+In the first test case, Monocarp can use the following strategy:
+Monocarp plays against the
+2
+-nd opponent to increase rating (
+2→3
+);
+Monocarp plays against the
+1
+-st opponent to increase rating (
+3→4
+);
+Monocarp plays against the
+4
+-th opponent to increase rating (
+4→5
+);
+Monocarp plays against the
+5
+-th opponent to increase rating (
+5→6
+);
+Now Monocarp have to play with remaining three opponents. So, he will lose
+3
+times and get rating
+3
+(
+6→5→4→3
+);
+After that, Monocarp will repeat steps 1-5 again. After
+14
+games, he has played twice with each opponent and get final rating
+4
+.
+Monocarp plays against the
+1
+-st opponent to increase rating (
+4→5
+);
+Monocarp plays against the
+2
+-nd opponent to increase rating (
+5→6
+);
+Monocarp plays against the
+4
+-th opponent to increase rating (
+6→7
+);
+Monocarp plays against the
+5
+-th opponent to increase rating (
+7→8
+);
+Monocarp plays against the
+7
+-th opponent to increase rating (
+8→9
+);
+Monocarp plays against the
+3
+-rd opponent to increase rating (
+9→10
+);
+In total, Monocarp, played twice against the
+6
+-th opponent and three times against other opponents and got rating
+10
+in
+14+6=20
+games.
+In the second test case, it can be proven that whichever games Monocarp plays, he can't get his rating higher than
+4
+.

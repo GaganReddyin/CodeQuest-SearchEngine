@@ -1,0 +1,186 @@
+C. Big Secret
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vitya has learned that the answer for The Ultimate Question of Life, the Universe, and Everything is not the integer 54 42, but an increasing integer sequence
+a
+1
+,…,
+a
+n
+. In order to not reveal the secret earlier than needed, Vitya encrypted the answer and obtained the sequence
+b
+1
+,…,
+b
+n
+using the following rules:
+b
+1
+=
+a
+1
+;
+b
+i
+=
+a
+i
+⊕
+a
+i−1
+for all
+i
+from 2 to
+n
+, where
+x⊕y
+is the bitwise XOR of
+x
+and
+y
+.
+It is easy to see that the original sequence can be obtained using the rule
+a
+i
+=
+b
+1
+⊕…⊕
+b
+i
+.
+However, some time later Vitya discovered that the integers
+b
+i
+in the cypher got shuffled, and it can happen that when decrypted using the rule mentioned above, it can produce a sequence that is not increasing. In order to save his reputation in the scientific community, Vasya decided to find some permutation of integers
+b
+i
+so that the sequence
+a
+i
+=
+b
+1
+⊕…⊕
+b
+i
+is strictly increasing. Help him find such a permutation or determine that it is impossible.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+The second line contains
+n
+integers
+b
+1
+,…,
+b
+n
+(
+1≤
+b
+i
+<
+2
+60
+).
+Output
+If there are no valid permutations, print a single line containing "No".
+Otherwise in the first line print the word "Yes", and in the second line print integers
+b
+′
+1
+,…,
+b
+′
+n
+ — a valid permutation of integers
+b
+i
+. The unordered multisets
+{
+b
+1
+,…,
+b
+n
+}
+and
+{
+b
+′
+1
+,…,
+b
+′
+n
+}
+should be equal, i. e. for each integer
+x
+the number of occurrences of
+x
+in the first multiset should be equal to the number of occurrences of
+x
+in the second multiset. Apart from this, the sequence
+a
+i
+=
+b
+′
+1
+⊕…⊕
+b
+′
+i
+should be strictly increasing.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+No
+input
+Copy
+6
+4 7 7 12 31 61
+output
+Copy
+Yes
+4 12 7 31 7 61 
+Note
+In the first example no permutation is valid.
+In the second example the given answer lead to the sequence
+a
+1
+=4
+,
+a
+2
+=8
+,
+a
+3
+=15
+,
+a
+4
+=16
+,
+a
+5
+=23
+,
+a
+6
+=42
+.

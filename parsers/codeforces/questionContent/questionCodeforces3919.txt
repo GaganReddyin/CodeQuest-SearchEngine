@@ -1,0 +1,72 @@
+E. Almost Regular Bracket Sequence
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a bracket sequence
+s
+consisting of
+n
+opening '(' and closing ')' brackets.
+A regular bracket sequence is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters '1' and '+' between the original characters of the sequence. For example, bracket sequences "()()", "(())" are regular (the resulting expressions are: "(1)+(1)", "((1+1)+1)"), and ")(" and "(" are not.
+You can change the type of some bracket
+s
+i
+. It means that if
+s
+i
+=
+')' then you can change it to '(' and vice versa.
+Your task is to calculate the number of positions
+i
+such that if you change the type of the
+i
+-th bracket, then the resulting bracket sequence becomes regular.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤
+10
+6
+) — the length of the bracket sequence.
+The second line of the input contains the string
+s
+consisting of
+n
+opening '(' and closing ')' brackets.
+Output
+Print one integer — the number of positions
+i
+such that if you change the type of the
+i
+-th bracket, then the resulting bracket sequence becomes regular.
+Examples
+input
+Copy
+6
+(((())
+output
+Copy
+3
+input
+Copy
+6
+()()()
+output
+Copy
+0
+input
+Copy
+1
+)
+output
+Copy
+0
+input
+Copy
+8
+)))(((((
+output
+Copy
+0

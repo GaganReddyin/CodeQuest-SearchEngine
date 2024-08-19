@@ -1,0 +1,100 @@
+B. Nice Matrix
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A matrix of size
+n×m
+is called nice, if all rows and columns of the matrix are palindromes. A sequence of integers
+(
+a
+1
+,
+a
+2
+,…,
+a
+k
+)
+is a palindrome, if for any integer
+i
+(
+1≤i≤k
+) the equality
+a
+i
+=
+a
+k−i+1
+holds.
+Sasha owns a matrix
+a
+of size
+n×m
+. In one operation he can increase or decrease any number in the matrix by one. Sasha wants to make the matrix nice. He is interested what is the minimum number of operations he needs.
+Help him!
+Input
+The first line contains a single integer
+t
+ — the number of test cases (
+1≤t≤10
+). The
+t
+tests follow.
+The first line of each test contains two integers
+n
+and
+m
+(
+1≤n,m≤100
+) — the size of the matrix.
+Each of the next
+n
+lines contains
+m
+integers
+a
+i,j
+(
+0≤
+a
+i,j
+≤
+10
+9
+) — the elements of the matrix.
+Output
+For each test output the smallest number of operations required to make the matrix nice.
+Example
+input
+Copy
+2
+4 2
+4 2
+2 4
+4 2
+2 4
+3 4
+1 2 3 4
+5 6 7 8
+9 10 11 18
+output
+Copy
+8
+42
+Note
+In the first test case we can, for example, obtain the following nice matrix in
+8
+operations:
+
+2 2
+4 4
+4 4
+2 2
+In the second test case we can, for example, obtain the following nice matrix in
+42
+operations:
+
+5 6 6 5
+6 6 6 6
+5 6 6 5

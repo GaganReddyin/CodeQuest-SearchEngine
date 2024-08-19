@@ -1,0 +1,122 @@
+Broken Dreams
+Problem
+You are given a string
+S of length
+N, containing lowercase Latin letters. You are also given an integer
+K.
+You would like to create a new string
+S
+′
+by following the following process:
+First, partition
+S into exactly
+K non-empty subsequences
+S
+1
+,S
+2
+,…,S
+K
+. Note that every character of
+S must be present in exactly one of the
+S
+i
+.
+Then, create
+S
+′
+as the concatenation of these subsequences, i.e,
+S
+′
+=S
+1
++S
+2
++…+S
+K
+, where
++ denotes string concatenation.
+Determine the lexicographically smallest
+S
+′
+that can be created.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers,
+N and
+K.
+The second line of each test case contains the string
+S.
+Output Format
+For each test case, output on a new line the lexicographically smallest string
+S
+′
+that can be created.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤K≤N
+S contains only lowercase Latin letters.
+Sum of
+N over all cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+6 1
+whizzy
+14 2
+aaacdecdebacde
+4 3
+dbca
+whizzy
+aaaaccdecdebde
+abcd
+Explanation:
+Test Case
+1:
+K=1, so our only option is to set
+S
+′
+=S
+1
+=whizzy.
+Test Case
+2: Partition
+S=aaacdecdebacde into
+S
+1
+=aaaac and
+S
+2
+=cdecdebde, to form
+S
+′
+=aaaaccdecdebde.
+Test Case
+3: Partition
+S=dbca into
+S
+1
+=a,
+S
+2
+=bc, and
+S
+3
+=d to form
+S
+′
+=abcd.
+In both test cases
+2 and
+3, it can be shown that no other partition gives a lexicographically smaller
+S
+′
+.

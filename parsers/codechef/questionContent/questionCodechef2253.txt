@@ -1,0 +1,108 @@
+The Alternating Sum
+Problem
+The alternating sum of an array
+A=[A
+1
+,A
+2
+,…,A
+N
+] is defined to be
+A
+1
+−A
+2
++A
+3
+−…+(−1)
+N−1
+A
+N
+You are allowed to perform the following operation at most once on
+A:
+Choose a subarray of
+A of odd length, remove this subarray from the original array, and concatenate it at the end of the remaining array. In other words, pick
+1≤L≤R≤N such that
+R−L+1 is odd, and transform
+A into the array
+[A
+1
+,A
+2
+,…,A
+L−1
+,A
+R+1
+,…,A
+N
+,A
+L
+,A
+L+1
+,…,A
+R
+].
+For example, if the original array is
+[1,2,3,4,5], two possible moves are:
+Choose the subarray
+[1] and move it to the end to obtain
+[2,3,4,5,1]
+Choose the subarray
+[2,3,4] and move it to the end to obtain
+[1,5,2,3,4]
+Given that you can perform this operation at most once, what is the maximum possible alternating sum the resulting array can achieve?
+Input Format
+The first line contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N, denoting the number of elements in
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, the elements of
+A.
+Output Format
+For each test case, print a single line containing one integer — the maximum possible alternating sum obtainable after performing the given operation at most once.
+Constraints
+1≤T≤10
+5
+3≤N≤10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+2
+3
+1 5 2
+5
+1 10 1 5 2
+4
+13
+Explanation:
+Test Case
+1: Move subarray
+[5] to the end to obtain the array
+[1,2,5]. The alternating sum of this array is
+1−2+5=4, and no larger is possible.
+Test Case
+2: Move subarray
+[1] starting at index
+1 to the end to obtain the array
+[10,1,5,2,1]. The alternating sum of this array is
+10−1+5−2+1=13, and no larger is possible.

@@ -1,0 +1,80 @@
+D. Fun with Integers
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a positive integer
+n
+greater or equal to
+2
+. For every pair of integers
+a
+and
+b
+(
+2≤|a|,|b|≤n
+), you can transform
+a
+into
+b
+if and only if there exists an integer
+x
+such that
+1<|x|
+and (
+a⋅x=b
+or
+b⋅x=a
+), where
+|x|
+denotes the absolute value of
+x
+.
+After such a transformation, your score increases by
+|x|
+points and you are not allowed to transform
+a
+into
+b
+nor
+b
+into
+a
+anymore.
+Initially, you have a score of
+0
+. You can start at any integer and transform it as many times as you like. What is the maximum score you can achieve?
+Input
+A single line contains a single integer
+n
+(
+2≤n≤100000
+) — the given integer described above.
+Output
+Print an only integer — the maximum score that can be achieved with the transformations. If it is not possible to perform even a single transformation for all possible starting integers, print
+0
+.
+Examples
+input
+Copy
+4
+output
+Copy
+8
+input
+Copy
+6
+output
+Copy
+28
+input
+Copy
+2
+output
+Copy
+0
+Note
+In the first example, the transformations are
+2→4→(−2)→(−4)→2
+.
+In the third example, it is impossible to perform even a single transformation.

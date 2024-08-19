@@ -1,0 +1,101 @@
+C. Hossam and Trainees
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Hossam has
+n
+trainees. He assigned a number
+a
+i
+for the
+i
+-th trainee.
+A pair of the
+i
+-th and
+j
+-th (
+i≠j
+) trainees is called successful if there is an integer
+x
+(
+x≥2
+), such that
+x
+divides
+a
+i
+, and
+x
+divides
+a
+j
+.
+Hossam wants to know if there is a successful pair of trainees.
+Hossam is very tired now, so he asks you for your help!
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+), the number of test cases. A description of the test cases follows.
+The first line of each test case contains an integer number
+n
+(
+2≤n≤
+10
+5
+).
+The second line of each test case contains
+n
+integers, the number of each trainee
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+Print the answer — "YES" (without quotes) if there is a successful pair of trainees and "NO" otherwise. You can print each letter in any case.
+Example
+input
+Copy
+2
+3
+32 48 7
+3
+14 5 9
+output
+Copy
+YES
+NO
+Note
+In the first example, the first trainee and the second trainee make up a successful pair:
+a
+1
+=32,
+a
+2
+=48
+, you can choose
+x=4
+.

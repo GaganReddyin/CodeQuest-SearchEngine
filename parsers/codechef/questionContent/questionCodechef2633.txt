@@ -1,0 +1,203 @@
+Tug of War
+Problem
+"Stick with the strongest team, that's the only way."
+Gi-Hun and his mates have survived the deadly night, but now it’s time for the tug of war. The game proceeds as follows:
+Two teams have to face off against each other in a tug of war match. The match proceeds in a series of rounds as follows:
+Initially, one player from each team will come forward to play.
+The one who wins the round will stay in, while the loser is eliminated. If the round is a draw, both players are eliminated.
+When a member of a team is eliminated, that team then sends another person to play in the next round.
+This process continues as long as both teams have at least one player left.
+Note that if a player wins their round, they must stay in for the next round — they cannot be replaced by another player.
+A team is said to win the match if it has at least
+1 player remaining, while all players of the opponent's team are eliminated. If both teams have no players left, the match is said to be a draw.
+Gi-Hun has to come up with a strategy for his team to win the game. He saw the opponent queue of
+N players, where their
+i
+th
+player has strength
+A
+i
+. He also knows that the opponent will send the players in the same order as they appear in
+A. Formally for any two players
+i and
+j where
+i<j, player
+i will always play before player
+j. He also knows the strength of his
+M players — the
+i
+th
+player of his team has strength
+B
+i
+.
+Further, Gi-Hun knows that when two players play against each other, the player with higher strength always wins. If both players have equal strength, the round is a draw.
+Now, he wants to know whether they can win a match or not, and if they can, what is the ordering of his team players that will let them win. In case multiple orderings are possible, he would like to know the lexicographically smallest ordering.
+An array
+X is lexicographically smaller than an array
+Y if there exists an index
+i such that
+X
+i
+<
+Y
+i
+, and
+X
+j
+=Y
+j
+for all
+1≤j<i. Less formally, at the first index
+i in which they differ,
+X
+i
+<
+Y
+i
+.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M — the sizes of the opponent team and Gi-Hun's team, respectively.
+The second line of each test case contains
+N space-separated integers,
+A
+1
+,A
+2
+,…,A
+N
+— the strengths of the opponents, in order.
+The third line of each test case contains
+M space-separated integers,
+B
+1
+,B
+2
+,…,B
+M
+— the strengths of Gi-Hun's team.
+Output Format
+The first line of each test case should contain a single string, either “YES” or “NO”, denoting whether it is possible for Gi-Hun's team to win or not.
+If the first line contains "YES", print a second line containing
+M space-separated integers — the lexicographically smallest ordering which will allow Gi-Hun's team to win.
+Constraints
+1≤T≤10
+4
+1≤N,M≤10
+6
+1≤A
+i
+,B
+j
+≤10
+9
+(
+1≤i≤N,
+1≤j≤M)
+Sum of
+N and
+M across all test cases will not exceed
+10
+6
+Sample 1:
+Input
+Output
+5
+3 1
+4 3 5
+6
+3 3
+2 4 7
+2 3 7
+3 3
+2 7 4
+2 7 3
+4 4
+2 6 5 1
+4 6 5 2
+2 2
+7 4
+7 4
+YES
+6
+YES
+2 7 3
+NO
+YES
+2 6 5 4
+NO
+Explanation:
+Test Case 1: There is only one possible ordering, that being
+[6]. The match will proceed as follows:
+Round 1:
+B
+1
+=6 will defeat
+A
+1
+=4,
+A
+1
+is eliminated.
+Round 2:
+B
+1
+=6 will defeat
+A
+2
+=3,
+A
+2
+is eliminated.
+Round 3:
+B
+1
+=6 will defeat
+A
+3
+=5,
+A
+3
+is eliminated.
+B
+1
+still remains and all opponents have been defeated, making this a victory for Gi-Hun's team.
+Test Case 2: The ordering which result in victory are
+[2,7,3],[3,7,2],[7,2,3], and
+[7,3,2]. Of these, the lexicographically smallest is
+[2,7,3].
+Let
+Q=[2,7,3]. The match proceeds as follows:
+Round 1:
+Q
+1
+=2 will draw with
+A
+1
+=2, eliminating both.
+Round 2:
+Q
+2
+=7 will defeat
+A
+2
+=4, eliminating
+A
+2
+.
+Round 3:
+Q
+2
+=7 will draw with
+A
+3
+=7, eliminating both.
+Q
+3
+=3 still remains, so Gi-Hun's team wins.
+Test Case 3: It is not possible to win the match.

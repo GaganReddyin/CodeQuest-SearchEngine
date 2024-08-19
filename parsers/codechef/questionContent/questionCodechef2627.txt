@@ -1,0 +1,63 @@
+What Is This, a Crossover Episode
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given an integer
+D. You have to find a string
+S such that the following conditions are satisfied:
+S is non-empty and its length does not exceed
+7⋅D.
+S contains only lowercase English letters.
+The number of distinct substrings in
+S minus the number of palindromic substrings in
+S equals
+D. Here, when counting palindromic substrings, a substring that occurs multiple times should be counted multiple times.
+It can be proved that a solution always exists under the given constraints.
+Notes:
+A string
+B is a substring of a string
+A if
+B can be obtained from
+A by deleting several (possibly none or all) characters from the beginning and several (possibly none or all) characters from the end.
+A palindrome is a string that does not change when it is reversed. E.g. strings "z", "aba" and "dammitimmad" are palindromes, but strings "ab" and "bojack" are not.
+A palindromic substring is a substring which is also a palindrome.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+D.
+Output
+For each test case, print two lines. The first of these lines should contain a single integer ― the length of your string
+S. The second line should contain this string
+S.
+If there are multiple solutions, you may find any one of them.
+Constraints
+1≤T≤100
+1≤D≤10
+4
+the sum of
+D over all test cases does not exceed
+10
+5
+Example Input
+4
+4
+10
+15
+60
+Example Output
+4
+todd
+5
+diane
+6
+bojack
+12
+peanutbutter
+Exaplanation
+Example case
+1: There are
+9 distinct substrings in
+S: "t", "o", "d", "to", "od", "dd", "tod", "odd", "todd". Five of them are palindromic: "t", "o", "d", "d", "dd". Therefore,
+D=9−5=4.
+Notice that while counting palindromic substrings (but not while counting distinct substrings), we are including both occurrences of the substring "d".

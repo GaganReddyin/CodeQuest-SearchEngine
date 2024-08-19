@@ -1,0 +1,33 @@
+B. Segments
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer N. Consider all possible segments on the coordinate axis with endpoints at integer points with coordinates between 0 and N, inclusive; there will be of them.
+You want to draw these segments in several layers so that in each layer the segments don't overlap (they might touch at the endpoints though). You can not move the segments to a different location on the coordinate axis.
+Find the minimal number of layers you have to use for the given N.
+Input
+The only input line contains a single integer N (1 ≤ N ≤ 100).
+Output
+Output a single integer - the minimal number of layers required to draw the segments for the given N.
+Examples
+input
+Copy
+2
+output
+Copy
+2
+input
+Copy
+3
+output
+Copy
+4
+input
+Copy
+4
+output
+Copy
+6
+Note
+As an example, here are the segments and their optimal arrangement into layers for N = 4.

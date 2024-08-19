@@ -1,0 +1,150 @@
+Area Sums in Convex Polygons
+Problem
+You are given a convex polygon
+P with
+N vertices. The vertices (in clockwise order) are
+v
+1
+,v
+2
+,…v
+N
+. The coordinates of
+v
+i
+are
+(x
+i
+,y
+i
+). All vertices have integer coordinates.
+A diagonal of
+P is a line segment
+l joining two distinct vertices
+v
+i
+and
+v
+j
+of
+P, such that
+l is not already an edge of
+P. Every diagonal of
+P splits it into two smaller convex polygons, both having positive areas.
+The evenness of a diagonal of
+P is the minimum of the areas of the two parts obtained when the polygon
+P is cut along this diagonal.
+Let
+S be the sum of the evenness of all diagonals of
+P.
+Find the value of
+2S(mod998244353).
+It can be shown that for all polygons
+P with integer coordinates, the value
+2S is an integer.
+Input Format
+The first line of input contains an integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N, the number of vertices of the convex polygon
+P. This is followed by
+N lines describing the points of the convex polygon, in clockwise order.
+The
+i
+th
+subsequent line contains two space-separated integers,
+x
+i
+,y
+i
+— the coordinates of
+v
+i
+.
+Output Format
+For each test case, print a new line with a single integer, the answer as per the problem statement.
+Constraints
+1≤T≤10
+5
+3≤N≤10
+5
+The sum of
+N over all test cases does not exceed
+10
+6
+The given polygon
+P is convex
+Every coordinate is an integer whose absolute value does not exceed
+10
+8
+Subtasks
+Subtask #1 ( 5 points): Sum of
+N over all test cases does not exceed
+500
+Subtask #2 (15 points): Sum of
+N over all test cases does not exceed
+2000
+Subtask #3 (80 points): Original constraints
+Sample 1:
+Input
+Output
+4
+4
+-1 0
+0 1
+1 0
+0 -1
+4
+-100000 0
+0 100000
+100000 0
+0 -100000
+3
+0 0
+0 1
+1 0
+5
+-87260 82619
+-59348 68595
+86583 -16668
+85637 -45559
+-49307 -31316
+4
+70225880
+0
+667956140
+Explanation:
+Test case
+1: The given polygon is a square with side length
+2
+. There are only two diagonals, both are identical and split the polygon equally into two halves each with area
+2
+(
+2
+)
+2
+=1. Thus
+S=min(1,1)+min(1,1)=2. The value of
+2S(mod998244353) is thus
+4.
+Test case
+2: The given polygon is identical to the previous case, except that all coordinates are multiplied by
+10
+5
+. Therefore the given sum gets multiplied by
+(10
+5
+)
+2
+. Make sure you output the sum modulo
+998244353. Here
+2S=4⋅10
+10
+and
+4⋅10
+10
+(mod998244353)=70225880.
+Test case
+3: There are no diagonals in this polygon, and so the answer is
+0.

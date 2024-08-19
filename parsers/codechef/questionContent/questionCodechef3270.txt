@@ -1,0 +1,82 @@
+Good Arrays
+Problem
+Chef considers an array good if it has no subarray of size less than
+N such that the GCD of all the elements of the subarray is equal to
+1.
+Chef has an array
+A of size
+N with him. He wants to convert it into a good array by applying a specific operation.
+In one operation, Chef can choose any subarray and reverse it.
+Find the minimum number of operations required to convert the array into a good array and the operations themselves. If there are multiple ways to achieve the result, print any.
+If it is not possible to convert the array into a good array, print
+−1 instead.
+Note: A subarray of an array is formed by deletion of several (possibly zero) elements from the beginning and several (possibly zero) elements from the end of the array.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+The first line of each test case contains of single integer
+N denoting the length of the array.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+representing the initial array.
+Output Format
+If there is a way to convert the given array into a good array, then:
+In a single line, output
+X denoting the minimum number of operations required.
+In the following
+X lines, output
+2 integers -
+L and
+R denoting the left and right index of the subarray you want to reverse. Note that,
+(1≤L≤R≤N).
+If there is no way to convert, print
+−1 in a single line.
+Constraints
+1≤T≤4000
+2≤N≤10
+5
+1≤A
+i
+≤10
+18
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+3 2 6
+4
+3 2 4 8
+4
+6 15 9 18
+1
+2 3
+-1
+0
+Explanation:
+Test case
+1: We need only one operation to convert the array into a good array. Choose
+L=2,R=3 and reverse the subarray
+[2,6] to
+[6,2]. Thus, the final array is
+[3,6,2]. Note that in the final array, no subarray of length less than
+N has gcd equal to
+1.
+Test case
+2: It is not possible to convert the given array to a good array using any number of operations.
+Test case
+3: The given array is already good. That is, no subarray of length less than
+N has gcd equal to
+1. Thus, we need
+0 operations.

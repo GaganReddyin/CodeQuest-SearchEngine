@@ -1,0 +1,94 @@
+A. Yet Another Promotion
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The famous store "Second Food" sells groceries only two days a month. And the prices in each of days differ. You wanted to buy
+n
+kilos of potatoes for a month. You know that on the first day of the month
+1
+kilo of potatoes costs
+a
+coins, and on the second day
+b
+coins. In "Second Food" you can buy any integer kilograms of potatoes.
+Fortunately, "Second Food" has announced a promotion for potatoes, which is valid only on the first day of the month — for each
+m
+kilos of potatoes you buy, you get
+1
+kilo as a gift! In other words, you can get
+m+1
+kilograms by paying for
+m
+kilograms.
+Find the minimum number of coins that you have to spend to buy at least
+n
+kilos of potatoes.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤10000
+). Description of the test cases follows.
+The first line of each test case contains two integers
+a
+and
+b
+(1≤a,b≤
+10
+9
+)
+— the prices of
+1
+kilo of potatoes on the first and second days, respectively.
+The second line contains two integers
+n
+and
+m
+(1≤n,m≤
+10
+9
+)
+— the required amount of potatoes to buy and the amount of potatoes to use the promotion.
+Output
+For each test case print one integer — the minimum number of coins that you have to pay to buy at least
+n
+kilos of potatoes.
+Example
+input
+Copy
+5
+5 4
+3 1
+5 4
+3 2
+3 4
+3 5
+20 15
+10 2
+1000000000 900000000
+1000000000 8
+output
+Copy
+9
+10
+9
+135
+888888888900000000
+Note
+In the first test case, on the first day you buy
+1
+kilo and get
+1
+more for a promotion. On the second day, you can buy
+1
+kilo of potatoes. Thus, you will spend
+5+4=9
+coins in total.
+In the second test case, on the first day you buy
+2
+kilo and get another
+1
+more for a promotion. This way you will spend
+2⋅5=10
+coins.

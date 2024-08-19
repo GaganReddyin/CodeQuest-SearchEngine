@@ -1,0 +1,84 @@
+D. Tree Construction
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+During the programming classes Vasya was assigned a difficult problem. However, he doesn't know how to code and was unable to find the solution in the Internet, so he asks you to help.
+You are given a sequence
+a
+, consisting of
+n
+distinct integers, that is used to construct the binary search tree. Below is the formal description of the construction process.
+First element
+a
+1
+becomes the root of the tree.
+Elements
+a
+2
+,
+a
+3
+,…,
+a
+n
+are added one by one. To add element
+a
+i
+one needs to traverse the tree starting from the root and using the following rules:
+The pointer to the current node is set to the root.
+If
+a
+i
+is greater than the value in the current node, then its right child becomes the current node. Otherwise, the left child of the current node becomes the new current node.
+If at some point there is no required child, the new node is created, it is assigned value
+a
+i
+and becomes the corresponding child of the current node.
+Input
+The first line of the input contains a single integer
+n
+(
+2≤n≤100000
+) — the length of the sequence
+a
+.
+The second line contains
+n
+distinct integers
+a
+i
+(
+1≤
+a
+i
+≤
+10
+9
+) — the sequence
+a
+itself.
+Output
+Output
+n−1
+integers. For all
+i>1
+print the value written in the node that is the parent of the node with value
+a
+i
+in it.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+1 2
+input
+Copy
+5
+4 2 3 1 6
+output
+Copy
+4 2 2 4

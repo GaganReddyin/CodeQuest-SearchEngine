@@ -1,0 +1,23 @@
+D. Maximal Difference
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+You are given an array of integers ai. Find the largest absolute value of difference between adjacent elements of the array max(abs(ai - ai + 1)).
+Input
+The only line of the input contains a list of space-separated integers ai (1 ≤ ai ≤ 100) — elements of the array. The size of the array is between 2 and 10, inclusive. Note that the size of the array is not given explicitly!
+Output
+Output a single integer — the largest absolute value of difference between adjacent elements of the array.
+Examples
+input
+Copy
+2 10 4 8 6 12
+output
+Copy
+8
+input
+Copy
+3 3
+output
+Copy
+0

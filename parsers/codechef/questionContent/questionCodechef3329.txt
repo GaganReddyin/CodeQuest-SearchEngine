@@ -1,0 +1,115 @@
+Closest Power
+Problem
+Read problem statements in Russian, Mandarin Chinese, Bengali, and Vietnamese as well.
+An integer
+x is said to be a Perfect Power if there exists positive integers
+a and
+b (i.e
+a, and
+b should be
+≥1) such that
+x=a
+b+1
+.
+Given an integer
+n, find the closest Perfect Power to
+n. If there are multiple Perfect Powers equidistant from
+n and as close as possible to
+n, find the smallest one.
+More formally, find the smallest integer
+x such that
+x is a Perfect Power and
+∣n−x∣≤∣n−y∣ over all Perfect Powers
+y.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+n.
+Output Format
+For each test case, print in a separate line, the smallest
+x such that
+x is a perfect power and
+∣n−x∣ is minimum.
+Constraints
+1≤T≤10
+5
+1≤n≤10
+18
+Sample 1:
+Input
+Output
+7
+7
+10
+26
+242
+129
+394857629456789876
+353872815358409997
+8
+9
+25
+243
+128
+394857628993920400
+353872815358410000
+Explanation:
+Test case
+1:
+n=7,
+8=2
+3
+is a perfect power, but
+6 is not, so the minimum difference obtainable is
+1 when
+x=8.
+Test case
+2:
+n=10,
+9=3
+2
+is a perfect power, but
+11 is not, so the minimum difference obtainable is
+1 when
+x=9.
+Test case
+3:
+n=26,
+25=5
+2
+is a perfect power,
+27=3
+3
+is also a perfect power. Both
+x=25 and
+x=27 give the minimum difference obtainable which is
+1. The smallest of them is
+25.
+Test case
+4:
+n=242,
+243=3
+5
+is a perfect power but
+241 is not, so the answer is
+243.
+Test case
+5:
+128=2
+7
+is closest to
+129.
+Test case
+6:
+394857628993920400=628376980
+2
+is the closest to
+394857629456789876.
+Test case
+7:
+353872815358410000=24390
+4
+is the closest to
+353872815358409997.

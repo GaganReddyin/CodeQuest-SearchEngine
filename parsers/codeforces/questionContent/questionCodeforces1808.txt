@@ -1,0 +1,144 @@
+G. Chips on a Board
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Alice and Bob have a rectangular board consisting of
+n
+rows and
+m
+columns. Each row contains exactly one chip.
+Alice and Bob play the following game. They choose two integers
+l
+and
+r
+such that
+1≤l≤r≤m
+and cut the board in such a way that only the part of it between column
+l
+and column
+r
+(inclusive) remains. So, all columns to the left of column
+l
+and all columns to the right of column
+r
+no longer belong to the board.
+After cutting the board, they move chips on the remaining part of the board (the part from column
+l
+to column
+r
+). They make alternating moves, and the player which cannot make a move loses the game. The first move is made by Alice, the second — by Bob, the third — by Alice, and so on. During their move, the player must choose one of the chips from the board and move it any positive number of cells to the left (so, if the chip was in column
+i
+, it can move to any column
+j<i
+, and the chips in the leftmost column cannot be chosen).
+Alice and Bob have
+q
+pairs of numbers
+L
+i
+and
+R
+i
+. For each such pair, they want to determine who will be the winner of the game if
+l=
+L
+i
+and
+r=
+R
+i
+. Note that these games should be considered independently (they don't affect the state of the board for the next games), and both Alice and Bob play optimally.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+) — the number of rows and columns on the board, respectively.
+The second line contains
+n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+(
+1≤
+c
+i
+≤m
+), where
+c
+i
+is the index of the column where the chip in the
+i
+-th row is located (so, the chip in the
+i
+-th row is in the
+c
+i
+-th column).
+The third line contains one integer
+q
+(
+1≤q≤2⋅
+10
+5
+).
+Then
+q
+lines follow, the
+i
+-th of them contains two integers
+L
+i
+and
+R
+i
+(
+1≤
+L
+i
+≤
+R
+i
+≤m
+).
+Output
+Print a string of
+q
+characters. The
+i
+-th character should be A if Alice wins the game with
+l=
+L
+i
+and
+r=
+R
+i
+, or B if Bob wins it.
+Example
+input
+Copy
+8 10
+1 3 3 7 4 2 6 9
+7
+2 3
+1 3
+1 4
+1 10
+5 10
+8 10
+9 10
+output
+Copy
+BAAAAAB

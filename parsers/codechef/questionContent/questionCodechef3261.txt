@@ -1,0 +1,181 @@
+Bash Matrix
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+A Bash matrix is a matrix with
+N rows (numbered
+1 through
+N) and
+N columns (numbered
+1 through
+N), where for each row
+r and column
+c, the cell in row
+r and column
+c (denoted by
+(r,c)) contains one of the characters 'U', 'D', 'L' or 'R'.
+We can move in the matrix while treating the characters as instructions:
+If the character in the cell
+(r,c) is 'R', move to the right cell
+(r,c+1).
+If the character in the cell
+(r,c) is 'L', move to the left cell
+(r,c−1).
+If the character in the cell
+(r,c) is 'U', move to the top cell
+(r−1,c).
+If the character in the cell
+(r,c) is 'D', move to the bottom cell
+(r+1,c).
+In addition, it must be impossible to leave the matrix by following these instructions regardless of the cell we start in.
+Once in his childhood, Chef had chosen a Bash matrix and for each cell
+(r,c) of this matrix, he did the following:
+Mark all cells as not visited.
+Start in the cell
+(r,c).
+While he has not previously visited the cell he is currently in, move in the matrix following the instructions. In other words, he stops moving as soon as he finds out that he is in a cell which he has visited before (possibly the starting cell).
+Note the cell
+(x
+r,c
+,y
+r,c
+) where he stops, i.e. the first cell he visits twice during this process.
+For example, consider the following Bash matrix:
+RLD
+DLL
+RRU
+The corresponding notes for this matrix would be
+⎣
+⎡
+(1,1)
+(2,1)
+(3,1)
+(1,2)
+(2,2)
+(3,2)
+(2,3)
+(2,3)
+(3,3)
+⎦
+⎤
+Consider the starting cell
+(1,1). He moves along the path
+(1,1)→(1,2)→(1,1). At that point, since he has already visited
+(1,1), he stops in this cell.
+Next, consider the starting cell
+(1,3). He moves along the path
+(1,3)→(2,3)→(2,2)→(2,1)→(3,1)→(3,2)→(3,3)→(2,3). He had already visited
+(2,3), so he stops moving in this cell.
+Years later, he found his notes, but he couldn't remember the Bash matrix for which he made the notes. Therefore, he is asking you to construct a Bash matrix that satifies his notes or determine that no such matrix exists.
+Additionally, putting characters 'U', 'L', 'D' or 'R' in a Bash matrix costs
+P
+U
+,
+P
+L
+,
+P
+D
+or
+P
+R
+per character respectively. If there are multiple solutions, you should find one with the smallest possible cost. If there are multiple solutions with this cost, you may find any one of them.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains four space-separated integers
+P
+U
+,
+P
+L
+,
+P
+D
+and
+P
+R
+.
+N lines follow. For each valid
+i, the
+i-th of these lines contains
+2N space-separated integers
+x
+i,1
+,y
+i,1
+,x
+i,2
+,…,x
+i,N
+,y
+i,N
+.
+Output
+If there is no Bash matrix that satisfies Chef's notes, print a single line containing the integer
+−1.
+Otherwise, print
+N+1 lines. The first line should contain a single integer — the minimum cost of a Bash matrix that satisfies Chef's notes. For each valid
+i, the
+i+1-th line should contain a single string with length
+N describing the
+i-th row of your matrix.
+Constraints
+1≤N≤50
+1≤P
+U
+,P
+L
+,P
+D
+,P
+R
+≤10
+5
+1≤x
+i,j
+,y
+i,j
+≤N for each valid
+i,j
+Subtasks
+Subtask #1 (30 points):
+P
+U
+=P
+L
+=P
+D
+=P
+R
+Subtask #2 (70 points): original constraints
+Example Input
+4
+5 6 7 6
+1 1 1 2 1 3 1 4
+2 1 2 1 2 4 2 4
+3 1 3 4 3 4 3 4
+4 1 4 2 4 3 4 4
+Example Output
+96
+DLLL
+DLRU
+DRRU
+RRRU
+Explanation
+Consider any of the boundary cells as the starting cell. Chef is bound to follow the cyclic path along the boundary (either clockwise or counterclockwise). For the remaining starting cells:
+Starting in the cell
+(2,2), Chef moves to
+(2,1) and then follows the cyclic path, stopping at
+(2,1) again.
+Starting in the cell
+(2,3), Chef moves to
+(2,4) and then follows the cyclic path, stopping at
+(2,4) again.
+Starting in the cell
+(3,2), Chef moves to
+(3,3)→(3,4) and then follows the cyclic path, stopping at
+(3,4).
+Starting in the cell
+(3,3), Chef moves to
+(3,4) and then follows the cyclic path, stopping at
+(3,4) again.

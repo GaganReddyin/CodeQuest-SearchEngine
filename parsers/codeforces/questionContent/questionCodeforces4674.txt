@@ -1,0 +1,248 @@
+F. Parametric Circulation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vova has recently learned what a circulaton in a graph is. Recall the definition: let
+G=(V,E)
+be a directed graph. A circulation
+f
+is such a collection of non-negative real numbers
+f
+e
+(
+e∈E
+), that for each vertex
+v∈V
+the following conservation condition holds:
+∑
+e∈
+δ
+−
+(v)
+f
+e
+=
+∑
+e∈
+δ
++
+(v)
+f
+e
+∑
+f
+∑
+f
+where
+δ
++
+(v)
+is the set of edges that end in the vertex
+v
+, and
+δ
+−
+(v)
+is the set of edges that start in the vertex
+v
+. In other words, for each vertex the total incoming flow should be equal to the total outcoming flow.
+Let a
+lr
+-circulation be such a circulation
+f
+that for each edge the condition
+l
+e
+≤
+f
+e
+≤
+r
+e
+holds, where
+l
+e
+and
+r
+e
+for each edge
+e∈E
+are two non-negative real numbers denoting the lower and upper bounds on the value of the circulation on this edge
+e
+.
+Vova can't stop thinking about applications of a new topic. Right now he thinks about the following natural question: let the graph be fixed, and each value
+l
+e
+and
+r
+e
+be a linear function of a real variable
+t
+:
+l
+e
+(t)=
+a
+e
+t+
+b
+e
+l
+(
+)
+b
+r
+e
+(t)=
+c
+e
+t+
+d
+e
+(
+)
+d
+Note that
+t
+is the same for all edges.
+Let
+t
+be chosen at random from uniform distribution on a segment
+[0,1]
+. What is the probability of existence of
+lr
+-circulation in the graph?
+Input
+The first line contains two integers
+n
+,
+m
+(
+1≤n≤1000
+,
+1≤m≤2000
+).
+Each of the next
+m
+lines describes edges of the graph in the format
+u
+e
+,
+v
+e
+,
+a
+e
+,
+b
+e
+,
+c
+e
+,
+d
+e
+(
+1≤
+u
+e
+,
+v
+e
+≤n
+,
+−
+10
+4
+≤
+a
+e
+,
+c
+e
+≤
+10
+4
+,
+0≤
+b
+e
+,
+d
+e
+≤
+10
+4
+), where
+u
+e
+and
+v
+e
+are the startpoint and the endpoint of the edge
+e
+, and the remaining 4 integers describe the linear functions for the upper and lower bound of circulation.
+It is guaranteed that for any
+t∈[0,1]
+and for any edge
+e∈E
+the following condition holds
+0≤
+l
+e
+(t)≤
+r
+e
+(t)≤
+10
+4
+.
+Output
+Print a single real integer — the probability of existence of
+lr
+-circulation in the graph, given that
+t
+is chosen uniformly at random from the segment
+[0,1]
+. Your answer is considered correct if its absolute difference from jury's answer is not greater than
+10
+−6
+.
+Example
+input
+Copy
+3 3
+1 2 0 3 -4 7
+2 3 -2 5 1 6
+3 1 0 4 0 4
+output
+Copy
+0.25
+Note
+In the first example the conservation condition allows only circulations with equal values
+f
+e
+for all three edges. The value of circulation on the last edge should be
+4
+whatever
+t
+is chosen, so the probability is
+P(4∈[3,−4t+7]  &  4∈[−2t+5,t+6])=0.25
+P
+(
+4
+[
+3
+4
+7
+]
+&
+4
+[
+2
+5
+6
+]
+)
+0.25

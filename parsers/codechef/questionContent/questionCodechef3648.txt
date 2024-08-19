@@ -1,0 +1,80 @@
+Linear Combination
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given an integer sequence
+A
+1
+,A
+2
+,…,A
+N
+. Find the number of integer sequences
+X
+1
+,X
+2
+,…,X
+N
+such that
+0≤X
+i
+<239 for each valid
+i
+X
+i
+
+=X
+j
+for each valid
+i
+
+=j
+(X
+1
+⋅A
+1
+)+(X
+2
+⋅A
+2
+)+…+(X
+N
+⋅A
+N
+) is divisible by
+239
+Since the answer may be large, compute it modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing one integer ― the number of sequences satisfying all conditions modulo
+998,244,353.
+Constraints
+1≤N≤20
+0≤A
+i
+<239 for each valid
+i
+Subtasks
+Subtask #1 (10 points):
+N≤10
+Subtask #2 (10 points):
+N≤15
+Subtask #3 (80 points): original constraints
+Sample 1:
+Input
+Output
+3
+1 1 1
+56406

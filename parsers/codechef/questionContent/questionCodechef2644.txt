@@ -1,0 +1,39 @@
+Another Deli-ceilous problem!
+Problem
+Chef Avi is stuck on a not-so-trivial problem. His teacher gave him an array
+A of size
+N and
+Q queries,each query containing 3 integers
+X,L,R.
+For each query help him find the value of
+∑
+i=L
+R
+ceil(X/A
+i
+), where
+ceil(x) is the smallest integer greater than or equal to
+x. Note that it is a 1-indexed array.
+###Input:
+First line will contain two integers
+N and
+Q.
+The next line contains
+N integers representing the array
+A.
+Then
+Q lines follow.
+Each query consists of a single line with three integers:
+X,L,R.
+###Output: For each query, print the output in a new line.
+###Constraints
+1≤N≤5,00,000
+1≤A
+i
+≤1,00,000
+1≤Q≤1,000
+1≤X≤1,00,000
+1≤L≤R≤N
+###Sample Input: 5 2 7 4 2 9 3 7 2 4 8 1 5
+###Sample Output: 7 12 ###Explanation: For the first query: ceil(7/4)+ceil(7/2)+ceil(7/9) = ceil(1.75)+ceil(3.5)+ceil(0.77) = 2 + 4 + 1 = 7.
+For the second query: ceil(8/7) + ceil(8/4)+ceil(8/2)+ceil(8/9) + ceil(8/3) = 2 + 2 + 4 + 1 + 3 = 12.

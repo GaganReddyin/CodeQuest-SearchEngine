@@ -1,0 +1,135 @@
+C. Three displays
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It is the middle of 2018 and Maria Stepanovna, who lives outside Krasnokamensk (a town in Zabaikalsky region), wants to rent three displays to highlight an important problem.
+There are
+n
+displays placed along a road, and the
+i
+-th of them can display a text with font size
+s
+i
+only. Maria Stepanovna wants to rent such three displays with indices
+i<j<k
+that the font size increases if you move along the road in a particular direction. Namely, the condition
+s
+i
+<
+s
+j
+<
+s
+k
+should be held.
+The rent cost is for the
+i
+-th display is
+c
+i
+. Please determine the smallest cost Maria Stepanovna should pay.
+Input
+The first line contains a single integer
+n
+(
+3≤n≤3000
+) — the number of displays.
+The second line contains
+n
+integers
+s
+1
+,
+s
+2
+,…,
+s
+n
+(
+1≤
+s
+i
+≤
+10
+9
+) — the font sizes on the displays in the order they stand along the road.
+The third line contains
+n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+(
+1≤
+c
+i
+≤
+10
+8
+) — the rent costs for each display.
+Output
+If there are no three displays that satisfy the criteria, print -1. Otherwise print a single integer — the minimum total rent cost of three displays with indices
+i<j<k
+such that
+s
+i
+<
+s
+j
+<
+s
+k
+.
+Examples
+input
+Copy
+5
+2 4 5 4 10
+40 30 20 10 40
+output
+Copy
+90
+input
+Copy
+3
+100 101 100
+2 4 5
+output
+Copy
+-1
+input
+Copy
+10
+1 2 3 4 5 6 7 8 9 10
+10 13 11 14 15 12 13 13 18 13
+output
+Copy
+33
+Note
+In the first example you can, for example, choose displays
+1
+,
+4
+and
+5
+, because
+s
+1
+<
+s
+4
+<
+s
+5
+(
+2<4<10
+), and the rent cost is
+40+10+40=90
+.
+In the second example you can't select a valid triple of indices, so the answer is -1.

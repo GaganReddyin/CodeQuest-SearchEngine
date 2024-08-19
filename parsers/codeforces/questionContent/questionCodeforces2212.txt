@@ -1,0 +1,125 @@
+G2. Lucky Numbers (Hard Version)
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the hard version of the problem. The only difference is in the constraint on
+q
+. You can make hacks only if all versions of the problem are solved.
+Zookeeper has been teaching his
+q
+sheep how to write and how to add. The
+i
+-th sheep has to write exactly
+k
+non-negative integers with the sum
+n
+i
+.
+Strangely, sheep have superstitions about digits and believe that the digits
+3
+,
+6
+, and
+9
+are lucky. To them, the fortune of a number depends on the decimal representation of the number; the fortune of a number is equal to the sum of fortunes of its digits, and the fortune of a digit depends on its value and position and can be described by the following table. For example, the number
+319
+has fortune
+F
+2
++3
+F
+0
+.
+Each sheep wants to maximize the sum of fortune among all its
+k
+written integers. Can you help them?
+Input
+The first line contains a single integer
+k
+(
+1≤k≤999999
+): the number of numbers each sheep has to write.
+The next line contains six integers
+F
+0
+,
+F
+1
+,
+F
+2
+,
+F
+3
+,
+F
+4
+,
+F
+5
+(
+1≤
+F
+i
+≤
+10
+9
+): the fortune assigned to each digit.
+The next line contains a single integer
+q
+(
+1≤q≤100000
+): the number of sheep.
+Each of the next
+q
+lines contains a single integer
+n
+i
+(
+1≤
+n
+i
+≤999999
+): the sum of numbers that
+i
+-th sheep has to write.
+Output
+Print
+q
+lines, where the
+i
+-th line contains the maximum sum of fortune of all numbers of the
+i
+-th sheep.
+Example
+input
+Copy
+3
+1 2 3 4 5 6
+2
+57
+63
+output
+Copy
+11
+8
+Note
+In the first test case,
+57=9+9+39
+. The three
+9
+'s contribute
+1⋅3
+and
+3
+at the tens position contributes
+2⋅1
+. Hence the sum of fortune is
+11
+.
+In the second test case,
+63=35+19+9
+. The sum of fortune is
+8
+.

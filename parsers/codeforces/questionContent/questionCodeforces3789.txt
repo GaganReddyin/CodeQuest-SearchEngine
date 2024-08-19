@@ -1,0 +1,169 @@
+G. Recursive Queries
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+. You should answer
+q
+queries. Each query is a pair
+(
+l
+i
+,
+r
+i
+)
+, and you should calculate
+f(
+l
+i
+,
+r
+i
+)
+.
+Let's denote
+m
+l,r
+as the position of the maximum in subsegment
+p
+l
+,
+p
+l+1
+,…,
+p
+r
+.
+Then
+f(l,r)=(r−l+1)+f(l,
+m
+l,r
+−1)+f(
+m
+l,r
++1,r)
+if
+l≤r
+or
+0
+otherwise.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤
+10
+6
+,
+1≤q≤
+10
+6
+) — the size of the permutation
+p
+and the number of queries.
+The second line contains
+n
+pairwise distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+,
+p
+i
+≠
+p
+j
+for
+i≠j
+) — permutation
+p
+.
+The third line contains
+q
+integers
+l
+1
+,
+l
+2
+,…,
+l
+q
+— the first parts of the queries.
+The fourth line contains
+q
+integers
+r
+1
+,
+r
+2
+,…,
+r
+q
+— the second parts of the queries.
+It's guaranteed that
+1≤
+l
+i
+≤
+r
+i
+≤n
+for all queries.
+Output
+Print
+q
+integers — the values
+f(
+l
+i
+,
+r
+i
+)
+for the corresponding queries.
+Example
+input
+Copy
+4 5
+3 1 4 2
+2 1 1 2 1
+2 3 4 4 1
+output
+Copy
+1 6 8 5 1 
+Note
+Description of the queries:
+f(2,2)=(2−2+1)+f(2,1)+f(3,2)=1+0+0=1
+;
+f(1,3)=(3−1+1)+f(1,2)+f(4,3)=3+(2−1+1)+f(1,0)+f(2,2)=3+2+(2−2+1)=6
+;
+f(1,4)=(4−1+1)+f(1,2)+f(4,4)=4+3+1=8
+;
+f(2,4)=(4−2+1)+f(2,2)+f(4,4)=3+1+1=5
+;
+f(1,1)=(1−1+1)+0+0=1
+.

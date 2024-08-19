@@ -1,0 +1,180 @@
+Four Arrays
+Problem
+You have been given an integer
+K and four arrays
+A,
+B,
+C, and
+D with sizes
+S
+A
+,
+S
+B
+,
+S
+C
+and
+S
+D
+respectively.
+Follow the given steps:
+Pick four indices
+x,
+y,
+z, and
+w from arrays
+A,
+B,
+C, and
+D respectively. Note that
+(1≤x≤S
+A
+),
+(1≤y≤S
+B
+),
+(1≤z≤S
+C
+) and
+(1≤w≤S
+D
+).
+There are in total
+S
+A
+×S
+B
+×S
+C
+×S
+D
+ways to do the above step. For each way, write down the value of
+(A
+x
++B
+y
+)×(C
+z
++D
+w
+) on a board.
+Sort all the numbers written on the board in non-decreasing order.
+Find the
+K
+th
+element written on the board.
+Input Format
+First line contains five integers
+S
+A
+,
+S
+B
+,
+S
+C
+,
+S
+D
+and
+K.
+The second line contains
+S
+A
+space-separated integers
+A
+1
+,A
+2
+,...,A
+S
+A
+denoting the array
+A.
+The third line contains
+S
+B
+space-separated integers
+B
+1
+,B
+2
+,...,B
+S
+B
+denoting the array
+B.
+The fourth line contains
+S
+C
+space-separated integers
+C
+1
+,C
+2
+,...,C
+S
+C
+denoting the array
+C.
+The fifth line contains
+S
+D
+space-separated integers
+D
+1
+,D
+2
+,...,D
+S
+D
+denoting the array
+D.
+Output Format
+For each test case, output the required number in a single line .
+Constraints
+1≤S
+A
+,S
+B
+,S
+C
+,S
+D
+≤3⋅10
+4
+1≤K≤S
+A
+×S
+B
+×S
+C
+×S
+D
+0≤A
+i
+,B
+i
+,C
+i
+,D
+i
+≤10
+5
+Sample 1:
+Input
+Output
+2 1 3 2 10
+2 3
+2
+1 1 2
+3 1
+20
+Explanation:
+After sorting the numbers on the board are in the following order
+{8,8,10,10,12,15,16,16,20,20,20,25}. So, the
+10
+th
+number is
+20.

@@ -1,0 +1,115 @@
+F. Forced Online Queries Problem
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an undirected graph with
+n
+vertices numbered from
+1
+to
+n
+. Initially there are no edges.
+You are asked to perform some queries on the graph. Let
+last
+be the answer to the latest query of the second type, it is set to
+0
+before the first such query. Then the queries are the following:
+1 x y
+(
+1≤x,y≤n
+,
+x≠y
+) — add an undirected edge between the vertices
+(x+last−1) mod n+1
+and
+(y+last−1) mod n+1
+if it doesn't exist yet, otherwise remove it;
+2 x y
+(
+1≤x,y≤n
+,
+x≠y
+) — check if there exists a path between the vertices
+(x+last−1) mod n+1
+and
+(y+last−1) mod n+1
+, which goes only through currently existing edges, and set
+last
+to
+1
+if so and
+0
+otherwise.
+Good luck!
+Input
+The first line contains two integer numbers
+n
+and
+m
+(
+2≤n,m≤2⋅
+10
+5
+) — the number of vertices and the number of queries, respectively.
+Each of the following
+m
+lines contains a query of one of two aforementioned types. It is guaranteed that there is at least one query of the second type.
+Output
+Print a string, consisting of characters '0' and '1'. The
+i
+-th character should be the answer to the
+i
+-th query of the second type. Therefore the length of the string should be equal to the number of queries of the second type.
+Examples
+input
+Copy
+5 9
+1 1 2
+1 1 3
+2 3 2
+1 2 4
+2 3 4
+1 2 4
+2 3 4
+1 1 3
+2 4 3
+output
+Copy
+1010
+input
+Copy
+3 9
+1 1 2
+1 2 3
+1 3 1
+2 1 3
+1 3 2
+2 2 3
+1 1 2
+2 1 2
+2 1 2
+output
+Copy
+1101
+Note
+The converted queries in the first example are:
+1 1 2
+1 1 3
+2 3 2
+1 3 5
+2 4 5
+1 2 4
+2 3 4
+1 2 4
+2 5 4
+The converted queries in the second example are:
+1 1 2
+1 2 3
+1 3 1
+2 1 3
+1 1 3
+2 3 1
+1 2 3
+2 2 3
+2 1 2

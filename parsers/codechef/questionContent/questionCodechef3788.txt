@@ -1,0 +1,104 @@
+Bank of Wasseypur
+Problem
+After Danish's death, Faizal wants to take revenge against Ramadhir. However, he has run out of funds to buy new weapons and must somehow procure a large amount money to fund his revenge and buy guns.
+He decides to rob the Bank of Wasseypur to get the funds. He has a friend who works as a security guard at the bank, from whom he learned the secret of the bank's safe.
+The manager of the bank is a big fan of puzzles and is currently fascinated with bits. The manager takes a number and writes it out in binary format with
+K bits. He then rearranges the bits of the number however he likes. Recently, he has also started experimenting with the [bitwise XOR] (https://en.wikipedia.org/wiki/Exclusive_or) operation. This led him to come up with the following way of setting the code of the bank's safe:
+Each day he takes two numbers
+L and
+R. He then considers all the numbers between
+L and
+R, both endpoints included. The safe's code is set as the number of ways he can rearrange the bits in these numbers such that the bitwise XOR of all the resulting numbers is maximum. Since the safe code can only have upto
+10 digits, he divides the this number by
+10
+9
++7 and uses the remainder as the code.
+After some bribery, the guard has also given Faizal a list of
+L,
+R and
+K, that the manager could have used to make the secret code. Can you help Faizal get the secret code for all of them?
+Input Format
+The first line contains a single integer
+T, denoting the size of the list the guard gave Faizal.
+Each of the next
+T lines contains three space-separated integers
+L,R, and
+K.
+Output Format
+For each testcase, output in a single line the bank safe code modulo
+10
+9
++7.
+Constraints
+1≤T≤5
+2≤K≤30
+2≤L<R<2
+K
+Sample 1:
+Input
+Output
+3
+2 3 3
+3 5 3
+5 7 3
+3
+6
+3
+Explanation:
+Test Case 1
+L=2,
+R=3,
+K=3.
+Numbers between
+L and
+R are
+{2,3}.
+In binary, numbers are
+{010,011}
+Maximum possible
+XOR is
+111
+We can rearrange the bits in these numbers to achieve maximum
+XOR as
+{100,011}
+{010,101}
+{001,110}
+  Test Case 2
+L=3,
+R=5,
+K=3.
+Numbers between
+L and
+R are
+{3,4,5}.
+In binary, numbers are
+{011,100,101}
+Maximum possible
+XOR is
+111
+We can rearrange the bits in these numbers to achieve maximum
+XOR as
+{011,001,101}
+{011,010,110}
+{101,001,011}
+{101,100,110}
+{110,010,011}
+{110,100,101}
+  Test Case 3
+L=5,
+R=7,
+K=3.
+Numbers between
+L and
+R are
+{5,6,7}.
+In binary, numbers are
+{101,110,111}
+Maximum possible
+XOR is
+111
+We can rearrange the bits in these numbers to achieve maximum
+XOR as
+{110,110,111}
+{101,101,111}
+{011,011,111}

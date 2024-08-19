@@ -1,0 +1,126 @@
+Split The String
+Problem
+For a binary string
+A, let
+f(A) denote its badness, defined to be the difference between the number of zeros and number of ones present in it. That is, if the string has
+c
+0
+zeros and
+c
+1
+ones, its badness is
+∣c
+0
+−c
+1
+∣. For example, the badness of "
+01" is
+∣1−1∣=0, the badness of "
+100" is
+∣2−1∣=1, the badness of "
+1101" is
+∣1−3∣=2, and the badness of the empty string is
+∣0−0∣=0.
+You are given an integer
+N and a binary string
+S.
+You would like to partition
+S into
+K disjoint subsequences (some of which may be empty), such that the maximum badness among all these
+K subsequences is minimized. Find this value.
+Formally,
+Let
+S
+1
+,S
+2
+,…,S
+K
+be a partition of
+S into disjoint subsequences. Every character of
+S must appear in one of the
+S
+i
+. Some of the
+S
+i
+may be empty.
+Then, find the minimum value of
+max(f(S
+1
+),f(S
+2
+),…,f(S
+K
+)) across all possible choices of
+S
+1
+,S
+2
+,…,S
+K
+satisfying the first condition.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The description of each test case is as follows:
+The first line contains two space-separated integers 
+N and
+K.
+The second line contains the binary string
+S of length
+N.
+Output Format
+For each test case, print the minimum possible value of the maximum badness when
+S is partitioned into
+K subsequences.
+Constraints
+1≤T≤1000
+1≤N≤2⋅10
+5
+1≤K≤10
+9
+S is a binary string, i.e, contains only the characters
+0 and
+1
+The sum of
+N across all test cases doesn't exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+7 5
+1010100
+4 1
+1100
+6 2
+101111
+1
+0
+2
+Explanation:
+Test case
+1: Let's take a couple of examples.
+Suppose the partition is
+{"10","10","0","10"," "}, obtained as
+1010100 (elements of one color form a subsequence). The respective badness values are
+{0,0,1,0,0}, the maximum of which is
+1.
+Suppose the partition is
+{"101","00"," ","10"," "}, obtained as
+1010100. The respective badness values are
+{1,2,0,0,0}, the maximum of which is
+2.
+The first partition, with a maximum badness of
+1, is one of the optimal partitions.
+Test case
+2: The only possible partition is
+{"1100"}, which has a badness of
+0.
+Test case
+3: The partitions
+{"1011","11"} and
+{"0111","11"} both lead to a badness of
+max(2,0)=2, which is the minimum possible.

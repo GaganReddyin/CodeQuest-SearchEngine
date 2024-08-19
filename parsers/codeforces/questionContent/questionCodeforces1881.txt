@@ -1,0 +1,100 @@
+C1. k-LCM (easy version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It is the easy version of the problem. The only difference is that in this version
+k=3
+.
+You are given a positive integer
+n
+. Find
+k
+positive integers
+a
+1
+,
+a
+2
+,…,
+a
+k
+, such that:
+a
+1
++
+a
+2
++…+
+a
+k
+=n
+LCM(
+a
+1
+,
+a
+2
+,…,
+a
+k
+)≤
+n
+2
+Here
+LCM
+is the least common multiple of numbers
+a
+1
+,
+a
+2
+,…,
+a
+k
+.
+We can show that for given constraints the answer always exists.
+Input
+The first line contains a single integer
+t
+(1≤t≤
+10
+4
+)
+ — the number of test cases.
+The only line of each test case contains two integers
+n
+,
+k
+(
+3≤n≤
+10
+9
+,
+k=3
+).
+Output
+For each test case print
+k
+positive integers
+a
+1
+,
+a
+2
+,…,
+a
+k
+, for which all conditions are satisfied.
+Example
+input
+Copy
+3
+3 3
+8 3
+14 3
+output
+Copy
+1 1 1
+4 2 2
+2 6 6

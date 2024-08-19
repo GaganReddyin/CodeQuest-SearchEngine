@@ -1,0 +1,175 @@
+D. Swap Pass
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Based on a peculiar incident at basketball practice, Akari came up with the following competitive programming problem!
+You are given
+n
+points on the plane, no three of which are collinear. The
+i
+-th point initially has a label
+a
+i
+, in such a way that the labels
+a
+1
+,
+a
+2
+,…,
+a
+n
+form a permutation of
+1,2,…,n
+.
+You are allowed to modify the labels through the following operation:
+Choose two distinct integers
+i
+and
+j
+between
+1
+and
+n
+.
+Swap the labels of points
+i
+and
+j
+, and finally
+Draw the segment between points
+i
+and
+j
+.
+A sequence of operations is valid if after applying all of the operations in the sequence in order, the
+k
+-th point ends up having the label
+k
+for all
+k
+between
+1
+and
+n
+inclusive, and the drawn segments don't intersect each other internally. Formally, if two of the segments intersect, then they must do so at a common endpoint of both segments.
+In particular, all drawn segments must be distinct.
+Find any valid sequence of operations, or say that none exist.
+Input
+The first line contains an integer
+n
+(
+3≤n≤2000
+)  — the number of points.
+The
+i
+-th of the following
+n
+lines contains three integers
+x
+i
+,
+y
+i
+,
+a
+i
+(
+−
+10
+6
+≤
+x
+i
+,
+y
+i
+≤
+10
+6
+,
+1≤
+a
+i
+≤n
+), representing that the
+i
+-th point has coordinates
+(
+x
+i
+,
+y
+i
+)
+and initially has label
+a
+i
+.
+It is guaranteed that all points are distinct, no three points are collinear, and the labels
+a
+1
+,
+a
+2
+,…,
+a
+n
+form a permutation of
+1,2,…,n
+.
+Output
+If it is impossible to perform a valid sequence of operations, print
+−1
+.
+Otherwise, print an integer
+k
+(
+0≤k≤
+n(n−1)
+2
+)  — the number of operations to perform, followed by
+k
+lines, each containing two integers
+i
+and
+j
+(
+1≤i,j≤n
+,
+i≠j
+)  — the indices of the points chosen for the operation.
+Note that you are not required to minimize or maximize the value of
+k
+.
+If there are multiple possible answers, you may print any of them.
+Examples
+input
+Copy
+5
+-1 -2 2
+3 0 5
+1 3 4
+4 -3 3
+5 2 1
+output
+Copy
+5
+1 2
+5 3
+4 5
+1 5
+1 3
+input
+Copy
+3
+5 4 1
+0 0 2
+-3 -2 3
+output
+Copy
+0
+Note
+The following animation showcases the first sample test case. The black numbers represent the indices of the points, while the boxed orange numbers represent their labels.
+In the second test case, all labels are already in their correct positions, so no operations are necessary.

@@ -1,0 +1,71 @@
+F. New Year and Handle Change
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+New Year is getting near. So it's time to change handles on codeforces. Mishka wants to change his handle but in such a way that people would not forget who he is.
+To make it work, he only allowed to change letters case. More formally, during one handle change he can choose any segment of his handle
+[i;i+l−1]
+and apply tolower or toupper to all letters of his handle on this segment (more fomally, replace all uppercase letters with corresponding lowercase or vice versa). The length
+l
+is fixed for all changes.
+Because it is not allowed to change codeforces handle too often, Mishka can perform at most
+k
+such operations. What is the minimum value of
+min(lower,upper)
+(where
+lower
+is the number of lowercase letters, and
+upper
+is the number of uppercase letters) can be obtained after optimal sequence of changes?
+Input
+The first line of the input contains three integers
+n,k
+and
+l
+(
+1≤n,k,l≤
+10
+6
+,l≤n)
+— the length of Mishka's handle, the number of changes and the length of the segment.
+The second line of the input contains one string
+s
+, consisting of
+n
+lowercase and uppercase Latin letters — Mishka's handle.
+Output
+Print one integer — the minimum value of
+min(lower,upper)
+after that Mishka change his handle at most
+k
+times in a way described in the problem statement.
+Examples
+input
+Copy
+7 1 4
+PikMike
+output
+Copy
+0
+input
+Copy
+15 2 2
+AaAaAAaaAAAAaaA
+output
+Copy
+2
+input
+Copy
+14 2 6
+aBcdEFGHIJklMn
+output
+Copy
+0
+input
+Copy
+9 2 2
+aAaAAAaaA
+output
+Copy
+1

@@ -1,0 +1,26 @@
+The Birthday Tears
+Problem
+On his birthday Chef got a string S consisting of only lowercase letters as a goodie from the Techkriti Team. Chef likes strings which have only one kind of character in them. For example, he likes the string "wwww", but does not like the string "aab".
+He is wondering whether he can create such a string from the given string. Unfortunately, he has no scissors, and so he can only tear the string in the middle such that he gets two strings of equal length. ie. if he has a string "abcd", he can tear it and get the srings "ab" and "cd".
+Note that this means that he cannot tear a string of odd length. Since he is lazy he wants to minimize the number of tears needed to get a string which he likes. Help him find the minimum number.
+Input Format
+The first line of the input contains an integer T denoting the number of test cases.
+Following this, there are T lines, each consisting of a string S.
+Output Format
+For each test case, output a single line containing a single integer, the minimum number of tears he must make to get a string which he likes.
+If he cannot do so, output -1.
+Constraints
+|S| ≤ 1,00,000
+S contains only lowercase letters
+the sum of |S| over all the test cases is less than or equal to 5,00,000
+Sample 1:
+Input
+Output
+2
+aacabbaa
+aab
+2
+-1
+Explanation:
+Testcase 1: Chef first tears the string at the middle (aaca|bbaa). Now he picks the first substring (ie. "aaca") and cuts this at the middle(aa|ca). He now has the substring "aa" which only contains 'a'. 2 tears were needed and this is the minimum possible.
+Testcase 2: The chef cannot tear the string as it has length 3. So he cannot make string that he likes.

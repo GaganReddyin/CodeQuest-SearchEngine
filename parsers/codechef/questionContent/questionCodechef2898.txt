@@ -1,0 +1,117 @@
+Rotate to Minimum
+Problem
+There is a slot machine with
+N reels. Each reel has characters
+a to
+z in order.
+The initial configuration of the machine is given by a string
+S of length
+N, i.e., initially, the
+i
+th
+reel from the left reads the character
+S
+i
+.
+You can perform the following types of operations on the slot machine:
+Type
+1: Pick a reel
+i and rotate it upwards. For example, if
+S
+i
+reads
+a, it becomes
+b,
+b becomes
+c and so on (
+z becomes
+a).
+Type
+2: Pick a reel
+i and rotate it downwards. For example, if
+S
+i
+reads
+b, it becomes
+a,
+c becomes
+b and so on (
+a becomes
+z).
+You are allowed to perform the type
+1 operation at most
+P times and the type
+2 operation at most
+Q times.
+Find the lexicographically minimum possible configuration of the slot machine that can be obtained by performing the above operations optimally.
+Note that string
+X is lexicographically smaller than string
+Y, if
+X
+i
+<Y
+i
+, where
+i is the first index where
+X and
+Y differ.
+Input Format
+The first line of the input contains
+T, the number of test cases. The description of each test case follows.
+The first line of each test case contains three integers
+N,
+P, and
+Q, the number of reels in the slot machine, the maximum number of type
+1 operations allowed and the maximum number of type
+2 operations allowed.
+The second line of each test case contains
+S, the initial configuration of the slot machine.
+Output Format
+For each test case, print the lexicographically minimum possible configuration of the slot machine that can be obtained by performing the above operations.
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+0≤P,Q≤26⋅N
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+7 1 2
+bazooka
+10 5 2
+sdlftcaasd
+10 2 4
+adivjnaefv
+10 7 1
+lakjsdcedg
+aaanoka
+qdlftcaasd
+aahvjnaefv
+kakjsdcedg
+Explanation:
+Test case
+1: We can perform type
+1 operation on
+S
+3
+=z and type
+2 operations on
+S
+1
+=b and
+S
+4
+=o.
+The result is
+a
+a
+an
+oka.
+It can be proved that no other sequence of operations generates a configuration that is lexicographically smaller.

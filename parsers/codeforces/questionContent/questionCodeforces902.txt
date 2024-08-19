@@ -1,0 +1,200 @@
+F. Tokitsukaze and Gems
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Tokitsukaze has a sequence with length of
+n
+. She likes gems very much. There are
+n
+kinds of gems. The gems of the
+i
+-th kind are on the
+i
+-th position, and there are
+a
+i
+gems of the same kind on that position. Define
+G(l,r)
+as the multiset containing all gems on the segment
+[l,r]
+(inclusive).
+A multiset of gems can be represented as
+S=[
+s
+1
+,
+s
+2
+,…,
+s
+n
+]
+, which is a non-negative integer sequence of length
+n
+and means that
+S
+contains
+s
+i
+gems of the
+i
+-th kind in the multiset. A multiset
+T=[
+t
+1
+,
+t
+2
+,…,
+t
+n
+]
+is a multisubset of
+S=[
+s
+1
+,
+s
+2
+,…,
+s
+n
+]
+if and only if
+t
+i
+≤
+s
+i
+for any
+i
+satisfying
+1≤i≤n
+.
+Now, given two positive integers
+k
+and
+p
+, you need to calculate the result of
+∑
+l=1
+n
+∑
+r=l
+n
+∑
+[
+t
+1
+,
+t
+2
+,⋯,
+t
+n
+]⊆G(l,r)
+((
+∑
+i=1
+n
+p
+t
+i
+t
+k
+i
+)(
+∑
+i=1
+n
+[
+t
+i
+>0])),
+n
+n
+n
+n
+where
+[
+t
+i
+>0]=1
+if
+t
+i
+>0
+and
+[
+t
+i
+>0]=0
+if
+t
+i
+=0
+.
+Since the answer can be quite large, print it modulo
+998244353
+.
+Input
+The first line contains three integers
+n
+,
+k
+and
+p
+(
+1≤n≤
+10
+5
+;
+1≤k≤
+10
+5
+;
+2≤p≤998244351
+) — the length of the sequence, the numbers
+k
+and
+p
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤998244351
+) — the number of gems on the
+i
+-th position.
+Output
+Print a single integers — the result modulo
+998244353
+.
+Examples
+input
+Copy
+5 2 2
+1 1 1 2 2
+output
+Copy
+6428
+input
+Copy
+6 2 2
+2 2 2 2 2 3
+output
+Copy
+338940

@@ -1,0 +1,28 @@
+F. Polycarp's problems
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Polycarp is an experienced participant in Codehorses programming contests. Now he wants to become a problemsetter.
+He sent to the coordinator a set of n problems. Each problem has it's quality, the quality of the i-th problem is ai (ai can be positive, negative or equal to zero). The problems are ordered by expected difficulty, but the difficulty is not related to the quality in any way. The easiest problem has index 1, the hardest problem has index n.
+The coordinator's mood is equal to q now. After reading a problem, the mood changes by it's quality. It means that after the coordinator reads a problem with quality b, the value b is added to his mood. The coordinator always reads problems one by one from the easiest to the hardest, it's impossible to change the order of the problems.
+If after reading some problem the coordinator's mood becomes negative, he immediately stops reading and rejects the problemset.
+Polycarp wants to remove the minimum number of problems from his problemset to make the coordinator's mood non-negative at any moment of time. Polycarp is not sure about the current coordinator's mood, but he has m guesses "the current coordinator's mood q = bi".
+For each of m guesses, find the minimum number of problems Polycarp needs to remove so that the coordinator's mood will always be greater or equal to 0 while he reads problems from the easiest of the remaining problems to the hardest.
+Input
+The first line of input contains two integers n and m (1 ≤ n ≤ 750, 1 ≤ m ≤ 200 000) — the number of problems in the problemset and the number of guesses about the current coordinator's mood.
+The second line of input contains n integers a1, a2, ..., an ( - 109 ≤ ai ≤ 109) — the qualities of the problems in order of increasing difficulty.
+The third line of input contains m integers b1, b2, ..., bm (0 ≤ bi ≤ 1015) — the guesses of the current coordinator's mood q.
+Output
+Print m lines, in i-th line print single integer — the answer to the problem with q = bi.
+Example
+input
+Copy
+6 3
+8 -5 -4 1 -7 4
+0 7 3
+output
+Copy
+2
+0
+1

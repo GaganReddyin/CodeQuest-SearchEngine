@@ -1,0 +1,214 @@
+E. Counting Rectangles
+time limit per test6 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have
+n
+rectangles, the
+i
+-th rectangle has height
+h
+i
+and width
+w
+i
+.
+You are asked
+q
+queries of the form
+h
+s
+ w
+s
+ h
+b
+ w
+b
+.
+For each query output, the total area of rectangles you own that can fit a rectangle of height
+h
+s
+and width
+w
+s
+while also fitting in a rectangle of height
+h
+b
+and width
+w
+b
+. In other words, print
+∑
+h
+i
+⋅
+w
+i
+for
+i
+such that
+h
+s
+<
+h
+i
+<
+h
+b
+and
+w
+s
+<
+w
+i
+<
+w
+b
+.
+Please note, that if two rectangles have the same height or the same width, then they cannot fit inside each other. Also note that you cannot rotate rectangles.
+Please note that the answer for some test cases won't fit into 32-bit integer type, so you should use at least 64-bit integer type in your programming language (like long long for C++).
+Input
+The first line of the input contains an integer
+t
+(
+1≤t≤100
+) — the number of test cases.
+The first line of each test case two integers
+n,q
+(
+1≤n≤
+10
+5
+;
+1≤q≤
+10
+5
+) — the number of rectangles you own and the number of queries.
+Then
+n
+lines follow, each containing two integers
+h
+i
+,
+w
+i
+(
+1≤
+h
+i
+,
+w
+i
+≤1000
+) — the height and width of the
+i
+-th rectangle.
+Then
+q
+lines follow, each containing four integers
+h
+s
+,
+w
+s
+,
+h
+b
+,
+w
+b
+(
+1≤
+h
+s
+<
+h
+b
+, 
+w
+s
+<
+w
+b
+≤1000
+) — the description of each query.
+The sum of
+q
+over all test cases does not exceed
+10
+5
+, and the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, output
+q
+lines, the
+i
+-th line containing the answer to the
+i
+-th query.
+Example
+input
+Copy
+3
+2 1
+2 3
+3 2
+1 1 3 4
+5 5
+1 1
+2 2
+3 3
+4 4
+5 5
+3 3 6 6
+2 1 4 5
+1 1 2 10
+1 1 100 100
+1 1 3 3
+3 1
+999 999
+999 999
+999 998
+1 1 1000 1000
+output
+Copy
+6
+41
+9
+0
+54
+4
+2993004
+Note
+In the first test case, there is only one query. We need to find the sum of areas of all rectangles that can fit a
+1×1
+rectangle inside of it and fit into a
+3×4
+rectangle.
+Only the
+2×3
+rectangle works, because
+1<2
+(comparing heights) and
+1<3
+(comparing widths), so the
+1×1
+rectangle fits inside, and
+2<3
+(comparing heights) and
+3<4
+(comparing widths), so it fits inside the
+3×4
+rectangle. The
+3×2
+rectangle is too tall to fit in a
+3×4
+rectangle. The total area is
+2⋅3=6
+.

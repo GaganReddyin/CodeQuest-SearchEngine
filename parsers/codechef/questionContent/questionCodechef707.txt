@@ -1,0 +1,49 @@
+Array Equality
+Problem
+Chef has an array of
+N integers. Chef can rearrange this array in any manner.
+Chef doesn’t like the array if any two adjacent elements are equal. Determine whether there exists a rearrangement of the array that Chef likes.
+Input Format
+The first line will contain
+T - the number of test cases. Then the test cases follow.
+First line of each test case contains a single integer
+N - size of the array
+A.
+Second line of each test case contains
+N space-separated integers - denoting the elements of array
+A.
+Output Format
+For each test case, if Chef can like any rearrangement of the array print YES, otherwise print NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings yes, yEs, YeS, and YES will all be treated as identical).
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+−10
+9
+≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+1 1 1 1 1
+3
+3 3 4
+No
+Yes
+Explanation:
+Test case
+1: There exists no rearrangement of the array which Chef will like.
+Test case
+2: A rearrangement of the array that Chef likes is
+[3,4,3]. Note that in this rearrangement, no two adjacent elements are equal.

@@ -1,0 +1,210 @@
+G. Greedy Subsequences
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For some array
+c
+, let's denote a greedy subsequence as a sequence of indices
+p
+1
+,
+p
+2
+, ...,
+p
+l
+such that
+1≤
+p
+1
+<
+p
+2
+<⋯<
+p
+l
+≤|c|
+, and for each
+i∈[1,l−1]
+,
+p
+i+1
+is the minimum number such that
+p
+i+1
+>
+p
+i
+and
+c[
+p
+i+1
+]>c[
+p
+i
+]
+.
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+. For each its subsegment of length
+k
+, calculate the length of its longest greedy subsequence.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤k≤n≤
+10
+6
+) — the length of array
+a
+and the length of subsegments.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — array
+a
+.
+Output
+Print
+n−k+1
+integers — the maximum lengths of greedy subsequences of each subsegment having length
+k
+. The first number should correspond to subsegment
+a[1..k]
+, the second — to subsegment
+a[2..k+1]
+, and so on.
+Examples
+input
+Copy
+6 4
+1 5 2 5 3 6
+output
+Copy
+2 2 3 
+input
+Copy
+7 6
+4 5 2 5 3 6 6
+output
+Copy
+3 3 
+Note
+In the first example:
+[1,5,2,5]
+— the longest greedy subsequences are
+1,2
+(
+[
+c
+1
+,
+c
+2
+]=[1,5]
+) or
+3,4
+(
+[
+c
+3
+,
+c
+4
+]=[2,5]
+).
+[5,2,5,3]
+— the sequence is
+2,3
+(
+[
+c
+2
+,
+c
+3
+]=[2,5]
+).
+[2,5,3,6]
+— the sequence is
+1,2,4
+(
+[
+c
+1
+,
+c
+2
+,
+c
+4
+]=[2,5,6]
+).
+In the second example:
+[4,5,2,5,3,6]
+— the longest greedy subsequences are
+1,2,6
+(
+[
+c
+1
+,
+c
+2
+,
+c
+6
+]=[4,5,6]
+) or
+3,4,6
+(
+[
+c
+3
+,
+c
+4
+,
+c
+6
+]=[2,5,6]
+).
+[5,2,5,3,6,6]
+— the subsequence is
+2,3,5
+(
+[
+c
+2
+,
+c
+3
+,
+c
+5
+]=[2,5,6]
+).

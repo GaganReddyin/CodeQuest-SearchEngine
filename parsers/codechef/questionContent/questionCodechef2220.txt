@@ -1,0 +1,122 @@
+Too Mean
+Problem
+You are given an array
+A of length
+N.
+You have to partition the elements of the array into some subsequences such that:
+Each element
+A
+i
+(1≤i≤N) belongs to exactly one subsequence.
+The mean of the mean of subsequences is maximised.
+Formally, let
+S
+1
+,S
+2
+,…,S
+K
+denote
+K subsequences of array
+A such that each element
+A
+i
+(1≤i≤N) belongs to exactly one subsequence
+S
+j
+(1≤j≤K).
+Let
+X
+j
+(1≤j≤K) denote the mean of the elements of subsequence
+S
+j
+. You need to maximise the value
+K
+∑
+j=1
+K
+X
+j
+.
+Print the maximum value. The answer is considered correct if the relative error is less than
+10
+−6
+.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+First line of each test case consists of a single integer
+N - denoting the length of array
+A.
+Second line of each test case consists of
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+- denoting the array
+A.
+Output Format
+For each test case, output in a single line, the maximum possible mean of mean of subsequences. The answer is considered correct if the relative error is less than
+10
+−6
+.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+1≤A
+i
+≤10
+6
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+10 20
+3
+1 2 3
+5
+50 50 50 50 50
+15
+2.25
+50
+Explanation:
+Test Case
+1: We can partition the array in
+2 ways -
+({10},{20}) or
+({10,20}). In both cases, mean of mean of subsequences comes out to be
+15.
+Test Case
+2: The optimal partition is
+({1,2},{3}).
+Mean of first subsequence
+=
+2
+1+2
+=1.5.
+Mean of second subsequence
+=
+1
+3
+=3.
+Thus, mean of mean of subsequences is
+2
+1.5+3
+=
+2
+4.5
+=2.25.
+Test Case
+3: Any partition will yield the mean of mean of subsequences as
+50.

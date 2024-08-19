@@ -1,0 +1,201 @@
+B. Prefix Sum Addicts
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Suppose
+a
+1
+,
+a
+2
+,…,
+a
+n
+is a sorted integer sequence of length
+n
+such that
+a
+1
+≤
+a
+2
+≤⋯≤
+a
+n
+.
+For every
+1≤i≤n
+, the prefix sum
+s
+i
+of the first
+i
+terms
+a
+1
+,
+a
+2
+,…,
+a
+i
+is defined by
+s
+i
+=
+∑
+k=1
+i
+a
+k
+=
+a
+1
++
+a
+2
++⋯+
+a
+i
+.
+i
+Now you are given the last
+k
+terms of the prefix sums, which are
+s
+n−k+1
+,…,
+s
+n−1
+,
+s
+n
+. Your task is to determine whether this is possible.
+Formally, given
+k
+integers
+s
+n−k+1
+,…,
+s
+n−1
+,
+s
+n
+, the task is to check whether there is a sequence
+a
+1
+,
+a
+2
+,…,
+a
+n
+such that
+a
+1
+≤
+a
+2
+≤⋯≤
+a
+n
+, and
+s
+i
+=
+a
+1
++
+a
+2
++⋯+
+a
+i
+for all
+n−k+1≤i≤n
+.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The following lines contain the description of each test case.
+The first line of each test case contains two integers
+n
+(
+1≤n≤
+10
+5
+) and
+k
+(
+1≤k≤n
+), indicating the length of the sequence
+a
+and the number of terms of prefix sums, respectively.
+The second line of each test case contains
+k
+integers
+s
+n−k+1
+,…,
+s
+n−1
+,
+s
+n
+(
+−
+10
+9
+≤
+s
+i
+≤
+10
+9
+for every
+n−k+1≤i≤n
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, output "YES" (without quotes) if it is possible and "NO" (without quotes) otherwise.
+You can output "YES" and "NO" in any case (for example, strings "yEs", "yes" and "Yes" will be recognized as a positive response).
+Example
+input
+Copy
+4
+5 5
+1 2 3 4 5
+7 4
+-6 -5 -3 0
+3 3
+2 3 4
+3 2
+3 4
+output
+Copy
+Yes
+Yes
+No
+No
+Note
+In the first test case, we have the only sequence
+a=[1,1,1,1,1]
+.
+In the second test case, we can choose, for example,
+a=[−3,−2,−1,0,1,2,3]
+.
+In the third test case, the prefix sums define the only sequence
+a=[2,1,1]
+, but it is not sorted.
+In the fourth test case, it can be shown that there is no sequence with the given prefix sums.

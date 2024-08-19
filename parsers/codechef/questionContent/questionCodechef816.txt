@@ -1,0 +1,62 @@
+Crazy Bishops on Chessboard
+Problem
+Chef has a matrix of size
+N×N.
+There are
+N bishops placed on the matrix, in a zig-zag fashion, at the cells
+(1,1),(2,2),(1,3),(2,4),(1,5),…, and so on.
+For example, for
+N=4, the matrix looks like:
+Your task is to determine the minimum number of moves required to reach a position where each cell
+(i,i) contains exactly one bishop for all
+1≤i≤N.
+For the above mentioned case of
+N=4, the final position should be:
+Note:
+Bishops can only move diagonally. In one move, you can place exactly one bishop from its initial cell to any other cell lying on either of its diagonals.
+Bishops cannot move outside the matrix.
+No cell can contain more than one bishop at a time.
+A bishop cannot jump over another bishop.
+Input Format
+The first line of input will contain a single integer
+T - the number of test cases.
+Each test case consists of a single integer
+N - the size of the matrix.
+Output Format
+For each test case, output a single integer, the minimum number of moves required to reach a position where each cell
+(i,i) contains exactly one bishop for all
+1≤i≤N.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+9
+Sample 1:
+Input
+Output
+4
+1
+4
+2
+6
+0
+3
+0
+6
+Explanation:
+Test case
+1: The bishop is already in its final position. Thus, no moves are required.
+Test case
+2: We require a minimum of
+3 moves to reach the final position:
+Move bishop from
+(2,2) to
+(4,4).
+Move bishop from
+(1,3) to
+(2,2).
+Move bishop from
+(2,4) to
+(3,3).
+Test case
+3: The bishops are already in their final position. Thus, no moves are required.

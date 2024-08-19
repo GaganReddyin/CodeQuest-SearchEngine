@@ -1,0 +1,85 @@
+B. Minimum Ternary String
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a ternary string (it is a string which consists only of characters '0', '1' and '2').
+You can swap any two adjacent (consecutive) characters '0' and '1' (i.e. replace "01" with "10" or vice versa) or any two adjacent (consecutive) characters '1' and '2' (i.e. replace "12" with "21" or vice versa).
+For example, for string "010210" we can perform the following moves:
+"010210"
+→
+"100210";
+"010210"
+→
+"001210";
+"010210"
+→
+"010120";
+"010210"
+→
+"010201".
+Note than you cannot swap "02"
+→
+"20" and vice versa. You cannot perform any other operations with the given string excluding described above.
+You task is to obtain the minimum possible (lexicographically) string by using these swaps arbitrary number of times (possibly, zero).
+String
+a
+is lexicographically less than string
+b
+(if strings
+a
+and
+b
+have the same length) if there exists some position
+i
+(
+1≤i≤|a|
+, where
+|s|
+is the length of the string
+s
+) such that for every
+j<i
+holds
+a
+j
+=
+b
+j
+, and
+a
+i
+<
+b
+i
+.
+Input
+The first line of the input contains the string
+s
+consisting only of characters '0', '1' and '2', its length is between
+1
+and
+10
+5
+(inclusive).
+Output
+Print a single string — the minimum possible (lexicographically) string you can obtain by using the swaps described above arbitrary number of times (possibly, zero).
+Examples
+input
+Copy
+100210
+output
+Copy
+001120
+input
+Copy
+11222121
+output
+Copy
+11112222
+input
+Copy
+20
+output
+Copy
+20

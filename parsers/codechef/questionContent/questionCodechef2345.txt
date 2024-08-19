@@ -1,0 +1,131 @@
+Throw and Take
+Problem
+There is a line consisting of
+N piles of coins on the table. For each
+i (
+1≤i≤N), the
+i-th pile contains
+C
+i
+coins, each with value
+V
+i
+. There is also a bin under the table.
+Alice and Bob play a game, moving alternately. A move consists of two steps:
+Throw a prefix of the piles in the bin (the prefix can be empty). Then, if there are no coins left on the table, the game ends. Note that in this step, it is not allowed to throw away only some coins in a pile — the entire pile must be thrown into the bin.
+Take exactly one coin from the first (remaining) pile. Then, if there are no coins left on the table, the game ends.
+Let
+A and
+B be the sum of the values of the coins taken by Alice and Bob, respectively.
+The score of the game is
+A−B. Alice wants to maximize the score; Bob wants to minimize it.
+Alice moves first. What's the score of the game if Alice and Bob play optimally?
+Please look at the sample cases below for an example of how the game is played.
+Input Format
+The first line of input contains a single integer
+T, the number of test cases. The description of the test cases follows.
+Each test cases consists of three lines of input.
+The first line of each test case contains a single integer
+N, the number of piles of coins.
+The second line of each test case contains
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+:
+C
+i
+is the number of coins in the
+i-th pile.
+The third line of each test case contains
+N space-separated integers
+V
+1
+,V
+2
+,…,V
+N
+:
+V
+i
+is the value of each coin in the
+i-th pile.
+Output Format
+For each test case, print on a new line a single integer: the final value of
+A−B, if Alice and Bob play optimally.
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+1≤C
+i
+≤10
+9
+1≤V
+i
+≤10
+9
+It is guaranteed that the sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+6
+1 2 5 1 1 3
+38 46 66 64 59 69
+6
+2 5 4 1 1 2
+49 24 17 54 23 50
+2
+4 2
+32 78
+69
+31
+0
+Explanation:
+Test case
+1: An optimal strategy for Alice and Bob is the following:
+Initially, the piles, denoted by
+(C
+i
+,V
+i
+), are
+((1,38),(2,46),(5,66),(1,64),(1,59),(3,69)).
+Alice throws the first
+5 piles in the bin. The piles are now
+((3,69)). Then, she takes a coin from the first pile. The piles are now
+((2,69)).
+Bob doesn't throw any pile in the bin. Then, he takes a coin from the first pile. The piles are now
+((1,69)).
+Alice doesn't throw any pile in the bin. Then, she takes a coin from the first pile. There are no piles left and the game ends.
+A=69+69=138,
+B=69,
+A−B=69.
+Test case
+2: An optimal strategy for Alice and Bob is the following:
+Initially, the piles, denoted by
+(C
+i
+,V
+i
+), are
+((2,49),(5,24),(4,17),(1,54),(1,23),(2,50)).
+Alice throws the first
+3 piles in the bin. The piles are now
+((1,54),(1,23),(2,50)). Then, she takes a coin from the first pile. The piles are now
+((1,23),(2,50)).
+Bob doesn't throw any pile in the bin. Then, he takes a coin from the first pile. The piles are now
+((2,50)).
+Alice throws the first pile in the bin. There are no piles left and the game ends.
+A=54,
+B=23,
+A−B=31.

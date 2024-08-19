@@ -1,0 +1,146 @@
+Wanderer
+Problem
+###Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+Nadaca is a country with
+N cities. These cities are numbered
+1 through
+N and connected by
+M bidirectional roads. Each city can be reached from every other city using these roads.
+Initially, Ryan is in city
+1. At each of the following
+K seconds, he may move from his current city to an adjacent city (a city connected by a road to his current city) or stay at his current city. Ryan also has
+Q conditions
+(a
+1
+,b
+1
+),(a
+2
+,b
+2
+),…,(a
+Q
+,b
+Q
+) meaning that during this
+K-second trip, for each valid
+i, he wants to be in city
+a
+i
+after exactly
+b
+i
+seconds.
+Since you are very good with directions, Ryan asked you to tell him how many different trips he could make while satisfying all conditions. Compute this number modulo
+10
+9
++7. A trip is a sequence of Ryan's current cities after
+1,2,…,K seconds.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+K.
+Each of the next
+M lines contains two space-separated integers
+u and
+v denoting a road between cities
+u and
+v.
+The next line contains a single integer
+Q.
+Q lines follow. For each
+i (
+1≤i≤Q), the
+i-th of these lines contains two space-separated integers
+a
+i
+and
+b
+i
+.
+Output
+For each test case, print a single line containing one integer — the number of trips Ryan can make, modulo
+10
+9
++7.
+Constraints
+1≤T≤50
+1≤N,M,K,Q≤9,000
+1≤u
+i
+,v
+i
+≤N for each valid
+i
+u
+i
+
+=v
+i
+for each valid
+i
+there is at most one road between each pair of cities
+each city is reachable from every other city
+1≤a
+i
+≤N for each valid
+i
+0≤b
+i
+≤K for each valid
+i
+the sum of
+N over all test cases does not exceed
+9,000
+the sum of
+K over all test cases does not exceed
+9,000
+the sum of
+M over all test cases does not exceed
+9,000
+the sum of
+Q over all test cases does not exceed
+9,000
+Subtasks
+Subtask #1 (20 points):
+the sum of
+N over all test cases does not exceed
+400
+the sum of
+K over all test cases does not exceed
+400
+the sum of
+M over all test cases does not exceed
+400
+the sum of
+Q over all test cases does not exceed
+400
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+3
+4 3 3
+1 2
+1 3
+1 4
+0
+4 3 3
+1 2
+1 3
+1 4
+1
+2 2
+4 3 3
+1 2
+1 3
+1 4
+1
+2 1
+28
+4
+6

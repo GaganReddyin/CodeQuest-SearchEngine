@@ -1,0 +1,189 @@
+D. Insert a Progression
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a sequence of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. You are also given
+x
+integers
+1,2,…,x
+.
+You are asked to insert each of the extra integers into the sequence
+a
+. Each integer can be inserted at the beginning of the sequence, at the end of the sequence, or between any elements of the sequence.
+The score of the resulting sequence
+a
+′
+is the sum of absolute differences of adjacent elements in it
+(
+∑
+i=1
+n+x−1
+|
+a
+′
+i
+−
+a
+′
+i+1
+|)
+.
+What is the smallest possible score of the resulting sequence
+a
+′
+?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains two integers
+n
+and
+x
+(
+1≤n,x≤2⋅
+10
+5
+) — the length of the sequence and the number of extra integers.
+The second line of each testcase contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+).
+The sum of
+n
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the smallest sum of absolute differences of adjacent elements of the sequence after you insert the extra integers into it.
+Example
+input
+Copy
+4
+1 5
+10
+3 8
+7 2 10
+10 2
+6 1 5 7 3 3 9 10 10 1
+4 10
+1 3 1 2
+output
+Copy
+9
+15
+31
+13
+Note
+Here are the sequences with the smallest scores for the example. The underlined elements are the extra integers. Note that there exist other sequences with this smallest score.
+1
+–
+,
+2
+–
+,
+3
+–
+,
+4
+–
+,
+5
+–
+,10
+7
+–
+,7,
+6
+–
+,
+4
+–
+,2,
+2
+–
+,
+1
+–
+,
+3
+–
+,
+5
+–
+,
+8
+–
+,10
+6,
+1
+–
+,1,
+2
+–
+,5,7,3,3,9,10,10,1
+1,3,
+1
+–
+,1,2,
+2
+–
+,
+3
+–
+,
+4
+–
+,
+5
+–
+,
+6
+–
+,
+7
+–
+,
+8
+–
+,
+9
+–
+,
+10
+–
+–
+–

@@ -1,0 +1,123 @@
+Non Coprime Neighbours
+Problem
+An array
+B of length
+N
+(N≥2) is said to be good if the following conditions hold:
+For all
+1≤i≤N,
+2≤B
+i
+≤10
+6
+gcd(B
+i−1
+,B
+i
+)
+
+=1 for all
+i
+(2≤i≤N).
+You have an array
+A of length
+N (
+2≤A
+i
+≤10
+5
+). You want to make the array
+A good.
+To do so, you can change atmost
+⌈
+3
+2⋅N
+⌉ elements of
+A.
+Print the final array after changing
+A to a good array. If there are multiple possible final arrays, print any of them.
+It is guaranteed that
+A can be made good after changing atmost
+⌈
+3
+2⋅N
+⌉ elements of
+A.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follow.
+The first line of each test case contains an integer
+N - the length of the array.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,...,A
+N
+representing the initial array
+A.
+Output Format
+For each test case, output a single line containing
+N space-separated integers, denoting the elements of the final array after converting
+A to a good array. The
+i-th of these
+N integers is
+i-th element in the final array.
+If multiple arrays exist which satisfy the conditions, print any of them.
+Note: Final array should differ from original array at atmost
+⌈
+3
+2⋅N
+⌉indices.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+2≤A
+i
+≤10
+5
+Sum of
+N does not exceed
+2⋅10
+5
+over all testcases
+Sample 1:
+Input
+Output
+2
+3
+6 12 5
+3
+5 5 5
+6 12 8
+5 5 5
+Explanation:
+Test Case 1: We can change
+A
+3
+to
+8. Now,
+A is good since
+gcd(A
+1
+,A
+2
+)=6 and
+gcd(A
+2
+,A
+3
+)=4. Hence, we made
+A good after making only
+1 change which is
+≤⌈
+3
+2⋅N
+⌉.
+Test Case 2: Array
+A is already good.

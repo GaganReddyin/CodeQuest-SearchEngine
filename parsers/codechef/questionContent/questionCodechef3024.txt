@@ -1,0 +1,157 @@
+Split Powers Of 2
+Problem
+Suppose that you have several powers of two, specifically, you have
+A
+i
+numbers equal to
+2
+i
+for each
+1≤i≤N. You want to divide all of these numbers into two groups with equal sum. However, it's not always possible.
+To make it possible, in one operation you are allowed to choose any
+1≤i≤N and receive an extra number
+2
+i
+(in other words, you can increase any
+A
+i
+by
+1). Let's define
+f(A
+1
+,A
+2
+,…,A
+N
+) as the smallest number of operations that you need to make to be able to split the numbers into two groups with equal sums.
+You are given
+N integers
+B
+1
+,B
+2
+,…,B
+N
+. Find the sum of
+f(A
+1
+,A
+2
+,…,A
+N
+) over all tuples
+(A
+1
+,A
+2
+,…,A
+N
+) with
+0≤A
+i
+≤B
+i
+(there are
+(B
+1
++1)(B
+2
++1)…(B
+N
++1) of them). As this number may be very large, output it modulo
+998244353.
+Input Format
+The first line of the input contains a single integer
+T, the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+N
+− the number of integers.
+The second line of each test case contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Output Format
+For each test case, output the answer modulo
+998244353 on a new line.
+Constraints
+1≤T≤1000
+1≤N≤5000
+0≤B
+i
+≤5000
+The sum of
+N over all test cases doesn't exceed
+5000.
+Sample 1:
+Input
+Output
+4
+3
+0 1 0
+3
+2 0 1
+2
+2 2
+6
+5000 5000 5000 5000 5000 5000
+1
+5
+4
+810915502
+Explanation:
+Test case
+1: There are
+2 tuples:
+(0,0,0) and
+(0,1,0). We have
+f(0,0,0)=0 (there are no numbers, so divide them into two empty sets), and
+f(0,1,0)=1 (we have one number, namely
+2
+1
+=2. Use one operation to receive a second copy of
+2
+1
+and then place these copies in different sets). The answer is thus
+0+1=1
+Test case
+2: There are
+6 tuples, with their function values as follows:
+f(0,0,0)=0
+f(0,0,1)=1 (receive
+2
+2
+)
+f(1,0,0)=1 (receive
+2
+0
+)
+f(1,0,1)=2 (receive
+2
+0
+and
+2
+1
+, then split as
+{2
+0
+,2
+0
+,2
+1
+} and
+{2
+2
+}, both with sum
+4)
+f(2,0,0)=0
+f(2,0,1)=1 (receive
+2
+2
+)
+Add all these up to get
+5, which is the output.

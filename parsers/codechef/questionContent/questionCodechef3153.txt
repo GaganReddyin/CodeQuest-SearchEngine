@@ -1,0 +1,83 @@
+Good Subsequences
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a permutation
+p
+1
+,p
+2
+,…,p
+N
+. Let's denote a contiguous subsequence
+p
+l
+,p
+l+1
+,…,p
+r
+in it by
+[l,r] and call it interesting if
+max(p
+l
+,p
+l+1
+,…,p
+r
+)−min(p
+l
+,p
+l+1
+,…,p
+r
+)=r−l.
+Next, let's say that two interesting subsequences
+[a,b] and
+[c,d] are nested if
+a≤c≤d≤b or
+c≤a≤b≤d, and they are interleaved if
+max(a,c)≤min(b,d), but they are not nested. The intersection of two such interleaved subsequences is the subsequence
+[max(a,c),min(b,d)].
+You need to find the number of ordered pairs of interesting contiguous subsequences such that they are interleaved and their intersection contains at least
+X elements. Since this number may be very large, compute it modulo
+998,244,353.
+Input
+The first line of the input contains two space-separated integers
+N and
+X.
+The second line contains
+N space-separated integers
+p
+1
+,p
+2
+,…,p
+N
+.
+Output
+Print a single line containing one integer ― the number of valid pairs of interesting subsequences modulo
+998,244,353.
+Constraints
+1≤X≤N≤300000
+1≤p
+i
+≤N for each valid
+i
+p
+1
+,p
+2
+,…,p
+N
+are pairwise distinct.
+Subtasks
+Subtask #1 (10 points):
+N≤150
+Subtask #2 (20 points):
+N≤5,000
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+6 2
+1 4 2 5 3 6
+2

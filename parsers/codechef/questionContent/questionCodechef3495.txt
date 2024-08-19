@@ -1,0 +1,67 @@
+Magical Coins
+Problem
+You are shopping in a store that has
+n magical stones. For each stone, there is a probability
+g that you will put it in your bag. The value
+g is the same for all stones, all stones are independent, and you are given the value of
+g modulo
+998 244 353.
+Suppose when you checkout, you have
+r stones in your bag. Then you will be charged a price of
+(ar+b)
+k
+magical coins, where
+a,b,k are constants. What is the expected value of the price you will pay, for all
+1≤k≤k
+max
+? Find the expected values modulo
+998 244 353.
+###Input
+The first line contains five integers
+n,
+k
+max
+,
+a,
+b,
+g
+###Output
+For all
+1≤k≤k
+max
+, print the expected value of the price modulo
+998 244 353.
+###Constraints
+1≤n≤10
+9
+1≤k
+max
+≤5⋅10
+5
+1≤a≤998 244 352
+0≤b≤998 244 352
+1≤g≤998 244 352
+###Subtasks Subtask #1 (5 points):
+1≤n≤1000
+1≤k
+max
+≤1000
+Subtask #2 (20 points):
+1≤n≤10
+9
+1≤k
+max
+≤100
+Subtask #3 (50 points):
+1≤n≤10
+9
+1≤k
+max
+≤5⋅10
+4
+Subtask #4 (25 points): original constraints
+Sample 1:
+Input
+Output
+11 3 1 0 499122177
+499122182 33 249561300

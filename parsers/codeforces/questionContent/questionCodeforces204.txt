@@ -1,0 +1,105 @@
+B. Asterisk-Minor Template
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two strings
+a
+and
+b
+, consisting of lowercase Latin letters.
+A template
+t
+is string, consisting of lowercase Latin letters and asterisks (character '*'). A template is called asterisk-minor if the number of asterisks in it is less than or equal to the number of letters in it.
+A string
+s
+is said to be matching a template
+t
+if you can replace each asterisk in
+t
+with a string of lowercase Latin letters (possibly, an empty string) so that it becomes equal to
+s
+.
+Find an asterisk-minor template such that both
+a
+and
+b
+match it, or report that such a template doesn't exist. If there are multiple answers, print any of them.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains a string
+a
+(
+1≤|a|≤50
+, where
+|a|
+is the length of
+a
+), consisting of lowercase Latin letters.
+The second line contains a string
+b
+(
+1≤|b|≤50
+), consisting of lowercase Latin letters.
+Output
+For each testcase, output "NO", if there doesn't exist an asterisk-minor template that both
+a
+and
+b
+match. Otherwise, print "YES" in the first line and the template in the second line. If there are multiple answers, print any of them.
+A template should consist only of lowercase Latin letters and asterisks (character '*'). The number of asterisks should be less than or equal to the number of letters.
+Example
+input
+Copy
+6
+aaab
+zzzb
+codeforces
+atcoder
+codeforces
+tokitlx
+aaaa
+aaaaaa
+abcd
+abcd
+c
+f
+output
+Copy
+YES
+*b
+YES
+*co*
+NO
+YES
+a*a*a*a
+YES
+abcd
+NO
+Note
+In the first testcase, for a template "*b", you can replace the only asterisk with "aaa" to get "aaab" (which is equal to
+a
+) or with "zzz" to get "zzzb" (which is equal to
+b
+).
+In the third testcase, a template "*o*" is not asterisk-minor, as it contains more asterisks than letters. There are no asterisk-minor templates that both
+a
+and
+b
+match.
+In the fourth testcase, for a template "a*a*a*a", you can replace all asterisks with empty strings to get "aaaa" (which is equal to
+a
+) or two of them with "a" and two of them with an empty string to get "aaaaaa" (which is equal to
+b
+).
+In the fifth testcase, there are no asterisks in a template "abcd", so only "abcd" can match it (which is coincidentally both
+a
+and
+b
+).

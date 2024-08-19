@@ -1,0 +1,152 @@
+Make It One
+Problem
+Chef is given a positive integer
+N and we have to convert it to
+1 using some operations.
+In one operation, Chef can do the following:
+Choose a prime number
+p such that
+p
+∣
+N
+(p divides
+N).
+Replace
+N with
+p
+N
+.
+However, Chef is also given some triggers of the form
+(a,b) (
+a is prime). Thus, if we divide by
+p in some operation, we also have to multiply by
+x for all triggers of the form
+(p,x).
+For example: Consider
+N=18, and the triggers
+(3,4) and
+(3,2) exist. In one operation, if we choose to divide by
+3, we have to multiply the result with
+4 and
+2. In other words,
+(18↦
+3
+18
+⋅4⋅2)=48. Thus,
+18 is converted to
+48.
+Given a number
+N and
+M triggers of the form
+(a,b) (where
+a is always prime), find the minimum number of operations required to convert
+N to
+1 modulo
+998244353. Print
+−1 if it is not possible to do so.
+Input Format
+The first line of each input contains two integers
+N and
+M - the initial integer and the number of triggers given to the Chef.
+The next
+M lines describe the triggers. The
+i
+th
+of these
+M lines contains two space-separated integers
+a and
+b, denoting that Chef has to multiply by
+b if he choses to divide by
+a in some operation.
+It is guaranteed that
+(a
+i
+,b
+i
+)
+
+=(a
+j
+,b
+j
+) for
+i
+
+=j.
+Output Format
+Output on a new line, the minimum number of operations required to convert
+N to
+1, or print
+−1 if it is not possible to do so. In case it is possible to convert
+N to
+1, the minimum number of operations can be large, so output it modulo
+998244353.
+Constraints
+1≤N≤10
+6
+0≤M≤10
+5
+1≤a≤10
+6
+1≤b≤10
+6
+a is a prime number.
+Sample 1:
+Input
+Output
+6 1
+2 3
+3
+Explanation:
+We can convert
+6 to
+1 using
+3 operations in the following way:
+Divide
+6 by
+3. Since no trigger of the form
+(3,x) exists,
+6 converts to
+3
+6
+=2.
+Divide
+2 by
+2. Since
+(2,3) exists,
+2 is converted to
+2↦
+2
+2
+⋅3=3. - Divide
+3 by
+3. Since no trigger of the form
+(3,x) exists,
+3 converts to
+3
+3
+=1.
+It can be proven that we cannot convert
+6 to
+1 in less than
+3 operations.
+Sample 2:
+Input
+Output
+4 3
+2 5
+2 3
+3 7
+8
+Sample 3:
+Input
+Output
+2 3
+2 3
+3 5
+5 3
+-1
+Explanation:
+We can not convert
+2 to
+1 using any finite number of operations.

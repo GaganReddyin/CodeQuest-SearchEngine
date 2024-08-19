@@ -1,0 +1,240 @@
+D. Deducing Sortability
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Let's say Pak Chanek has an array
+A
+consisting of
+N
+positive integers. Pak Chanek will do a number of operations. In each operation, Pak Chanek will do the following:
+Choose an index
+p
+(
+1≤p≤N
+).
+Let
+c
+be the number of operations that have been done on index
+p
+before this operation.
+Decrease the value of
+A
+p
+by
+2
+c
+.
+Multiply the value of
+A
+p
+by
+2
+.
+After each operation, all elements of
+A
+must be positive integers.
+An array
+A
+is said to be sortable if and only if Pak Chanek can do zero or more operations so that
+A
+1
+<
+A
+2
+<
+A
+3
+<
+A
+4
+<…<
+A
+N
+.
+Pak Chanek must find an array
+A
+that is sortable with length
+N
+such that
+A
+1
++
+A
+2
++
+A
+3
++
+A
+4
++…+
+A
+N
+is the minimum possible. If there are more than one possibilities, Pak Chanek must choose the array that is lexicographically minimum among them.
+Pak Chanek must solve the following things:
+Pak Chanek must print the value of
+A
+1
++
+A
+2
++
+A
+3
++
+A
+4
++…+
+A
+N
+for that array.
+Q
+questions will be given. For the
+i
+-th question, an integer
+P
+i
+is given. Pak Chanek must print the value of
+A
+P
+i
+.
+Help Pak Chanek solve the problem.
+Note: an array
+B
+of size
+N
+is said to be lexicographically smaller than an array
+C
+that is also of size
+N
+if and only if there exists an index
+i
+such that
+B
+i
+<
+C
+i
+and for each
+j<i
+,
+B
+j
+=
+C
+j
+.
+Input
+The first line contains two integers
+N
+and
+Q
+(
+1≤N≤
+10
+9
+,
+0≤Q≤min(N,
+10
+5
+)
+) — the required length of array
+A
+and the number of questions.
+The
+i
+-th of the next
+Q
+lines contains a single integer
+P
+i
+(
+1≤
+P
+1
+<
+P
+2
+<…<
+P
+Q
+≤N
+) — the index asked in the
+i
+-th question.
+Output
+Print
+Q+1
+lines. The
+1
+-st line contains an integer representing
+A
+1
++
+A
+2
++
+A
+3
++
+A
+4
++…+
+A
+N
+. For each
+1≤i≤Q
+, the
+(i+1)
+-th line contains an integer representing
+A
+P
+i
+.
+Examples
+input
+Copy
+6 3
+1
+4
+5
+output
+Copy
+17
+1
+3
+4
+input
+Copy
+1 0
+output
+Copy
+1
+Note
+In the first example, the array
+A
+obtained is
+[1,2,3,3,4,4]
+. We can see that the array is sortable by doing the following operations:
+Choose index
+5
+, then
+A=[1,2,3,3,6,4]
+.
+Choose index
+6
+, then
+A=[1,2,3,3,6,6]
+.
+Choose index
+4
+, then
+A=[1,2,3,4,6,6]
+.
+Choose index
+6
+, then
+A=[1,2,3,4,6,8]
+.

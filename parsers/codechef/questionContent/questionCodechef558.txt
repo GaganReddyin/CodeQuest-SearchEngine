@@ -1,0 +1,91 @@
+Hostel Room
+Problem
+There are initially
+X people in a room.
+You are given an array
+A of length
+N which describes the following events:
+If
+A
+i
+≥0, then
+A
+i
+people enter the room at
+i-th minute. For e.g. if
+A
+2
+=3, then
+3 people enter the room at the
+2-nd minute.
+If
+A
+i
+<0, then
+∣A
+i
+∣ people leave the room at
+i-th minute. Here
+∣A
+i
+∣ denotes the absolute value of
+A
+i
+. For e.g. if
+A
+4
+=−2, then
+2 people leave the room at the
+4-th minute.
+Determine the maximum number of people in the room at any moment of time.
+It is guaranteed in the input that at any moment of time, the number of people in the room does not become negative.
+Input Format
+The first line will contain
+T - the number of test cases. Then the test cases follow.
+The first line of each test case consists of two integers
+N and
+X - the length of the array
+A and the number of people in the room initially.
+The second line of each test case contains
+N integers
+A
+1
+,A
+2
+,A
+3
+,…A
+N
+.
+Output Format
+For each testcase, output the maximum number of people in the room at any point of time.
+Constraints
+1≤T≤100
+1≤N≤100
+0≤X≤100
+−100≤A
+i
+≤100
+Sample 1:
+Input
+Output
+3
+5 8
+0 3 3 -13 5
+4 5
+0 -2 2 3
+3 5
+-2 5 -2
+14
+8
+8
+Explanation:
+Test case-1: In the
+3-rd minute, the room contains
+8+0+3+3=14 people which is the maximum number of people in the room at any point of time.
+Test case-2: In the
+4-th minute, the room contains
+5+0−2+2+3=8 people which is the maximum number of people in the room at any point of time.
+Test case-3: In the
+2-nd minute, the room contains
+5−2+5=8 people which is the maximum number of people in the room at any point of time.

@@ -1,0 +1,40 @@
+G. Functions On The Segments
+time limit per test5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You have an array f of n functions.The function fi(x) (1 ≤ i ≤ n) is characterized by parameters: x1, x2, y1, a, b, y2 and take values:
+y1, if x ≤ x1.
+a·x + b, if x1 < x ≤ x2.
+y2, if x > x2.
+There are m queries. Each query is determined by numbers l, r and x. For a query with number i (1 ≤ i ≤ m), you need to calculate the sum of all fj(xi) where l ≤ j ≤ r. The value of xi is calculated as follows: xi = (x + last) mod 109, where last is the answer to the query with number i - 1. The value of last equals 0 if i = 1.
+Input
+First line contains one integer number n (1 ≤ n ≤ 75000).
+Each of the next n lines contains six integer numbers: x1, x2, y1, a, b, y2 (0 ≤ x1 < x2 ≤ 2·105, 0 ≤ y1, y2 ≤ 109, 0 ≤ a, b ≤ 104).
+Next line contains one integer number m (1 ≤ m ≤ 500000).
+Each of the next m lines contains three integer numbers: l, r and x (1 ≤ l ≤ r ≤ n, 0 ≤ x ≤ 109).
+Examples
+input
+Copy
+1
+1 2 1 4 5 10
+1
+1 1 2
+output
+Copy
+13
+input
+Copy
+3
+2 5 1 1 1 4
+3 6 8 2 5 7
+1 3 5 1 4 10
+3
+1 3 3
+2 3 2
+1 2 5
+output
+Copy
+19
+17
+11

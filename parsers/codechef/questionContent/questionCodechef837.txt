@@ -1,0 +1,38 @@
+Cards Game
+Problem
+Let us play a game of cards. As you all know there are 52 cards in a regular deck, but our deck is somewhat different. Our deck consists of N cards. Each card simply contains a unique number from 1 to N. Initially all the cards are kept on the table, facing up. Rob, the notorious kid, flipped some of the cards, i.e. made them face down. Now, your task is to print any valid sequence of magic operations (as defined below) such that after a maximum of K magic operations, all the cards are facing upwards only.
+A magic operation on card at position i consists of flipping its direction from up to down and vice versa. Also, if there exists a card on its right side, i.e. at position (i+1), that is also flipped.
+Print the index of the cards that you are going to perform the magic operation on.
+Input
+Input consists of 2 lines. The first line contains 2 integers N and K, denoting the number of cards in our deck and the maximum possible number of moves allowed.
+The second line contains N integers, whose absolute value lies from 1 to N. If a number is less than 0, it is initially facing down, else it is facing upwards.
+It is guaranteed that all the absolute values on the cards are unique.
+Output
+Output on the first line an integer X, denoting the number of operations you intend to make for making all the cards face upwards. This integer should be less than or equal to K.
+On the next line of the output, print X space separated integers, denoting the order in which you want to carry on the magic operations on any of the N cards.
+Note: You have to print the index of the cards that you are going to perform the magic operation on.
+If there exist multiple solutions, output any of them
+Constraints
+1 ≤ N ≤ 1000
+N ≤ K ≤ max(5000, N * N)
+Sample 1:
+Input
+Output
+3 4
+1 2 3
+0
+Explanation:
+All the cards are already facing up.
+Sample 2:
+Input
+Output
+5 12
+4 -2 3 -1 5
+2
+2 3
+Explanation:
+Below sequence shows the cards after every magic operation:
+t = 0,    4 -2  3 -1 5
+t = 1,    4  2 -3 -1 5
+t = 2,    4  2  3  1 5
+Finally all the cards are now facing upwards and the number of steps are also less than k i.e. 12.

@@ -1,0 +1,90 @@
+In-tree-active Node Coloring
+Problem
+This is an interactive problem.
+You are given a tree having
+N nodes. Each node of this tree is colored either Black or White but you don't know the initial color of any node.
+You can ask up to
+Q queries. In each query, you will give a node to the grader. The grader will flip the color of this node and then return the number of edges in the tree connecting nodes of different colors. Note that the flipping of color is permanent, meaning that the color of the node remains flipped after the query.
+Your task is to make the color of all nodes the same.
+Interaction
+First, read a line containing a single integer
+T denoting the number of test cases.
+For each test case, first read a line containing two integers
+N and
+Q denoting the number of nodes and the maximum number of queries allowed.
+Then read
+N−1 lines each containing two integers
+U and
+V denoting that there is an edge between nodes
+U and
+V.
+Then you may ask up to
+Q queries. For each query, print a line containing a single integer
+X (
+1≤X≤N). Then read a line containing a single integer
+Y. If you ask an invalid query or exceed
+Q queries then
+Y=−1, otherwise
+Y will be the answer to the query. If you receive
+Y=−1, terminate the program immediately to get the Wrong Answer verdict, otherwise you may get any verdict.
+Once you are done asking all queries, print a line containing the integer
+0 and then read a line containing a single integer denoting the verdict for the test case. If all nodes have the same color, the grader will return
+1, else
+−1. If you get
+−1, terminate the program immediately. Note that printing this line does not count as a query.
+Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤10
+4
+2≤N≤10
+5
+1≤U,V≤N
+The given edges form a tree
+The sum of
+Q over all test cases does not exceed
+1.5⋅10
+5
+Subtasks
+Subtask
+1 (12 points) :
+N≤250,
+Q=N
+2
+Subtask
+2 (20 points) :
+Q=3N
+Subtask
+3 (20 points) :
+Q=2N
+Subtask
+4 (48 points) :
+Q=⌊
+2
+3N
+⌋
+Explanation:
+Test case
+1:
+Test case
+2: the initial color of nodes is shown below
+Before the first query, the colors of the nodes are
+{B,W,B,B,W}.
+After the first query, the colors of the nodes will be
+{B,W,B,B,B} and there will be 3 edges connecting nodes of different colors
+−
+(1,2),
+(2,4) and
+(2,5).
+After the second query, the colors of the nodes will be
+{W,W,B,B,B} and there will be 3 edges connecting nodes of different colors
+−
+(1,3),
+(2,4) and
+(2,5).
+After the third query, the colors of the nodes will be
+{W,B,B,B,B} and there will be 2 edges connecting nodes of different colors
+−
+(1,3) and
+(1,2).
+After the fourth query, the colors of the nodes will be
+{B,B,B,B,B}.

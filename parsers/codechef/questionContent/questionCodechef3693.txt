@@ -1,0 +1,154 @@
+Magical Subsequence
+Problem
+You are given an array
+A=[A
+1
+,A
+2
+,…,A
+N
+] containing
+N elements. You are also given
+Q ordered pairs of integers, where the
+i-th pair is denoted
+(x
+i
+,y
+i
+).
+A subsequence of
+A, say
+[A
+i
+1
+,A
+i
+2
+,…,A
+i
+k
+], is said to be magical if the following condition is satisfied:
+For each
+1≤j<k,
+(A
+i
+j
+,A
+i
+j+1
+) must be among the given
+Q pairs. That is, each consecutive pair of elements in this subsequence must be among the given
+Q pairs.
+Find the length of the longest magical subsequence of
+A, and print the indices of one such longest subsequence.
+If there are multiple longest magical subsequences, you may print the indices of any of them.
+Note: Array contains at least one valid subsequence of length greater than or equal to
+2.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases.
+The first line of each test case contains an integer 
+N, denoting the length of the array.
+The second line of each test case contains
+N space-separated integers representing the elements of the array.
+The third line of each test case contains an integer 
+Q, denoting the number of pairs.
+The
+i-th of the next
+Q lines contains two space-separated integers
+x
+i
+and
+y
+i
+— the
+i-th ordered pair.
+Output Format
+For each test case, print two lines.
+The first line should contain a single integer
+K — the length of the longest magical subsequence of
+A.
+The second line should contain
+K space-separated integers in ascending order, denoting the indices of the magical subsequence you found.
+In case there are multiple answers, print any of them.
+Constraints
+1≤T≤50
+1≤N≤10
+5
+1≤A
+i
+≤10
+6
+1≤Q≤10
+5
+1≤x
+i
+,y
+i
+≤10
+6
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+The sum of
+Q over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+7
+1 3 2 8 3 7 6
+5
+3 7
+3 3
+3 8
+8 7
+8 6
+5
+1 2 1 2 1
+5
+2 1
+3 1
+1 1
+3 2
+1 2
+4
+1 2 1 4
+5
+1 3
+1 1
+1 4
+2 4
+4 4
+3
+2 4 7 
+5
+1 2 3 4 5 
+3
+1 3 4
+Explanation:
+Test case
+1: The length of the longest magical subsequence is
+3. One such subsequence is
+[3,8,6], given by indices
+[2,4,7]. The adjacent pairs are
+(3,8) and
+(8,6), both of which are among the given pairs.
+Test case
+2: The length of the longest magical subsequence is
+5 — take the entire array. Adjacent elements are
+(1,2) and
+(2,1), both of which are in the given pairs.
+Test case
+3: The length of the longest magical subsequence is
+3. One such subsequence of length
+3 is
+[1,1,4], with indices
+[1,3,4]. Adjacent elements are
+(1,1) and
+(1,4), which are among the given pairs.

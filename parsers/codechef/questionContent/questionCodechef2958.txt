@@ -1,0 +1,122 @@
+Sleep Technique 
+Problem
+Egor came to the Olympiad in Informatics. But the tasks turned out to be too difficult, so Egor chose to sleep instead of solving problems. But as we all know, everyone is very happy when someone is the first who solved the problem.
+There are
+N problems in the contest. The
+i-th of them was solved at minute
+L
+i
+for the first time. This task will stop increasing the joy of everyone around at the minute
+R
+i
++1 (that is,
+R
+i
+is the last minute when the task increases the joy). In other words, the
+i-th task increases the joyfulness for everyone by
+1 unit from the minute
+L
+i
+to the minute
+R
+i
+.
+In the anime that Egor watched recently, there are various techniques that can make a person fall asleep. Egor knows techniques that will allow him to sleep for any minutes between
+A and
+B minutes, i.e. Egor can sleep for
+A minutes,
+A+1 minutes, ...,
+B minutes. Egor can also combine techniques, i.e. he can choose techniques with different duration and then sleep the total time of all techniques.
+Egor wants to combine techniques to wake up in the most joyful moment possible. Your task is to find the maximum joy in which Egor can wake up.
+Input Format
+The first line of the input contains the number
+T - the number of test cases. The test cases then follow.
+The first line of each test case contains integers
+N,
+A, and
+B - the number of tasks and
+A,B values described in the statement.
+The next
+N lines give you a description of the problems. Each line contains two numbers
+L
+i
+,R
+i
+- a segment of joy for every task.
+Output Format
+For each test case, print the maximum level of joy at which Egor can wake up.
+Constraints
+1≤T≤3⋅10
+5
+1≤N≤3⋅10
+5
+1≤A≤B≤10
+9
+1≤L
+i
+≤R
+i
+≤10
+18
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+Subtasks
+Subtask
+1 (30 points):
+1≤L
+i
+≤R
+i
+≤10
+9
+Subtask
+2 (10 points):
+A=1
+Subtask
+3 (60 points): Original constraints
+Sample 1:
+Input
+Output
+3
+3 1 5
+1 5
+3 9
+6 9
+3 7 54
+54 228
+228 1337
+69 213
+3 1 9
+100 100
+99 99
+98 98
+2
+2
+0
+Explanation:
+Test case
+1: We can use techniques
+1 and
+2 to wake up at minute
+1+2=3. At that time, there are
+2 tasks that give Egor joy: task
+1 (which gives joy during the range
+[1,5]), and task
+2 (which gives joy during the range
+[3,9]). It can be proven that Egor cannot acquire joy from all
+3 tasks at the same time, so
+2 is the maximum joyfulness Egor can wake up to.
+Test case
+2: We can use techniques
+15,
+22, and
+32 to wake up at minute
+15+22+32=69. At that time. there are
+2 tasks that give Egor joy: task
+1 and task
+3.
+Test case
+3: The maximum minute we can wake up to is
+1+2+⋯+9=45, which means we cannot acquire joy from any task.

@@ -1,0 +1,80 @@
+XOR Equal
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given an array
+A consisting of
+N integers and an integer
+X. Your goal is to have as many equal integers as possible in the array. To achieve this goal, you can do the following operation:
+Choose an index
+i
+(1≤i≤N) and set
+A
+i
+=A
+i
+⊕X, where
+⊕ denotes the bitwise xor operation.
+Find the maximum number of equal integers you can have in the final array and the minimum number of operations to obtain these many equal integers.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+Each test case contains two lines of input.
+The first line of each test case contains two space-separated integers
+N,X.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing two space-separated integers - first, the maximum number of equal integers in the final array and second, the minimum number of operations to achieve these many equal integers.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+0≤X≤10
+9
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+5⋅10
+5
+.
+Subtasks
+Subtask #1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+3
+3 2
+1 2 3
+5 100
+1 2 3 4 5
+4 1
+2 2 6 6
+2 1
+1 0
+2 0
+Explanation:
+Test case
+1: One way to obtain
+2 equal integers is to set
+A
+1
+=A
+1
+⊕2
+=1⊕2=3. So the array becomes
+[3,2,3]. There is no way to obtain
+3 equal integers in the final array.
+Test case
+2: There is no way to obtain more than one equal integer.

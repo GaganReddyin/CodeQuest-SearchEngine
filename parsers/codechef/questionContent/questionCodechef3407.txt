@@ -1,0 +1,106 @@
+Random OR
+Problem
+Chef is playing a game, which he starts with a score of
+S=0. He also has an integer
+N.
+In one move, Chef does the following:
+Uniformly randomly pick an integer
+X between
+0 and
+2
+N
+−1 (inclusive of both ends)
+Update his score as
+S→S∣X, where
+∣ denotes the bitwise OR operation
+For example, if Chef's current score is
+S=6 and he picks
+X=10, his new score is
+6∣10=14.
+Chef stops when his score
+S becomes equal to
+2
+N
+−1. What is the expected number of moves Chef performs?
+Output the answer modulo
+10
+9
++7. That is, the answer can be expressed as a fraction
+P/Q, where
+gcd(Q,10
+9
++7)=1. Print
+P⋅Q
+−1
+(mod 10
+9
++7), where
+Q
+−1
+denotes the modular multiplicative inverse of
+Q with respect to
+10
+9
++7.
+Input Format
+The first line of input contains an integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case contains a single integer
+N.
+Output Format
+For each test case, output on a new line the expected number of moves Chef performs, modulo
+10
+9
++7.
+Constraints
+1≤T≤100
+1≤N≤3⋅10
+5
+Sum of
+N over all test cases do not exceed
+3⋅10
+5
+Subtasks
+Subtask 1 (30 points):
+1≤N≤10
+3
+Sum of
+N over all test cases doesn't exceed
+10
+3
+Subtask 2 (70 points):
+Original constraints
+Sample 1:
+Input
+Output
+3
+1
+2
+100
+2
+666666674
+328238032
+Explanation:
+Test case
+1: In each move, Chef chooses either
+0 or
+1, each with a probability of
+1/2. The game ends as soon as Chef chooses
+1. Thus, the probability that the game takes exactly
+k moves is
+2
+−k
+.
+The required expected value is then
+k=1
+∑
+∞
+k⋅2
+−k
+, which equals
+2.
+Test case
+2: In each move, Chef chooses an integer in
+[0,3]. The answer is
+8/3.

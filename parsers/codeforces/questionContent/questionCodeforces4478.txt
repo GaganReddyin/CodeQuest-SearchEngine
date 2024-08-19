@@ -1,0 +1,127 @@
+E. Kuro and Topological Parity
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Kuro has recently won the "Most intelligent cat ever" contest. The three friends then decided to go to Katie's home to celebrate Kuro's winning. After a big meal, they took a small break then started playing games.
+Kuro challenged Katie to create a game with only a white paper, a pencil, a pair of scissors and a lot of arrows (you can assume that the number of arrows is infinite). Immediately, Katie came up with the game called Topological Parity.
+The paper is divided into
+n
+pieces enumerated from
+1
+to
+n
+. Shiro has painted some pieces with some color. Specifically, the
+i
+-th piece has color
+c
+i
+where
+c
+i
+=0
+defines black color,
+c
+i
+=1
+defines white color and
+c
+i
+=−1
+means that the piece hasn't been colored yet.
+The rules of the game is simple. Players must put some arrows between some pairs of different pieces in such a way that for each arrow, the number in the piece it starts from is less than the number of the piece it ends at. Also, two different pieces can only be connected by at most one arrow. After that the players must choose the color (
+0
+or
+1
+) for each of the unpainted pieces. The score of a valid way of putting the arrows and coloring pieces is defined as the number of paths of pieces of alternating colors. For example,
+[1→0→1→0]
+,
+[0→1→0→1]
+,
+[1]
+,
+[0]
+are valid paths and will be counted. You can only travel from piece
+x
+to piece
+y
+if and only if there is an arrow from
+x
+to
+y
+.
+But Kuro is not fun yet. He loves parity. Let's call his favorite parity
+p
+where
+p=0
+stands for "even" and
+p=1
+stands for "odd". He wants to put the arrows and choose colors in such a way that the score has the parity of
+p
+.
+It seems like there will be so many ways which satisfy Kuro. He wants to count the number of them but this could be a very large number. Let's help him with his problem, but print it modulo
+10
+9
++7
+.
+Input
+The first line contains two integers
+n
+and
+p
+(
+1≤n≤50
+,
+0≤p≤1
+) — the number of pieces and Kuro's wanted parity.
+The second line contains
+n
+integers
+c
+1
+,
+c
+2
+,...,
+c
+n
+(
+−1≤
+c
+i
+≤1
+) — the colors of the pieces.
+Output
+Print a single integer — the number of ways to put the arrows and choose colors so the number of valid paths of alternating colors has the parity of
+p
+.
+Examples
+input
+Copy
+3 1
+-1 0 1
+output
+Copy
+6
+input
+Copy
+2 1
+1 0
+output
+Copy
+1
+input
+Copy
+1 1
+-1
+output
+Copy
+2
+Note
+In the first example, there are
+6
+ways to color the pieces and add the arrows, as are shown in the figure below. The scores are
+3,3,5
+for the first row and
+5,3,3
+for the second row, both from left to right.

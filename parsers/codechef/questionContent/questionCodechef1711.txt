@@ -1,0 +1,39 @@
+Binary String on Steroids
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+A circular binary string is called good if it contains at least one character '1' and there is an integer
+d such that for each character '1', the distance to the nearest character '1' clockwise is
+d.
+You are given a circular binary string
+S with length
+N. You may choose some characters in this string and flip them (i.e. change '1' to '0' or vice versa). Convert the given string into a good string by flipping the smallest possible number of characters.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains a single string
+S with length
+N.
+Output
+Print a single line containing one integer ― the minimum number of flips required to transform the initial string into a good string.
+Constraints
+1≤T≤100
+1≤N≤5⋅10
+5
+S contains only characters '0' and '1'
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Sample 1:
+Input
+Output
+2
+6
+110011
+4
+0001
+2
+0

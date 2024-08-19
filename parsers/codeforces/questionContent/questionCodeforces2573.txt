@@ -1,0 +1,134 @@
+G. A/B Matrix
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given four positive integers
+n
+,
+m
+,
+a
+,
+b
+(
+1≤b≤n≤50
+;
+1≤a≤m≤50
+). Find any such rectangular matrix of size
+n×m
+that satisfies all of the following conditions:
+each row of the matrix contains exactly
+a
+ones;
+each column of the matrix contains exactly
+b
+ones;
+all other elements are zeros.
+If the desired matrix does not exist, indicate this.
+For example, for
+n=3
+,
+m=6
+,
+a=2
+,
+b=1
+, there exists a matrix satisfying the conditions above:
+∣
+∣
+∣
+∣
+0
+1
+0
+1
+0
+0
+0
+0
+1
+0
+1
+0
+0
+0
+1
+1
+0
+0
+∣
+∣
+∣
+∣
+Input
+The first line contains an integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Then
+t
+test cases follow.
+Each test case is described by four positive integers
+n
+,
+m
+,
+a
+,
+b
+(
+1≤b≤n≤50
+;
+1≤a≤m≤50
+), where
+n
+and
+m
+are the sizes of the matrix, and
+a
+and
+b
+are the number of ones for rows and columns, respectively.
+Output
+For each test case print:
+"YES" (without quotes) and the required matrix (if there are several answers, print any) if it exists, or
+"NO" (without quotes) if it does not exist.
+To print the matrix
+n×m
+, print
+n
+rows, each of which consists of
+m
+numbers
+0
+or
+1
+describing a row of the matrix. Numbers must be printed without spaces.
+Example
+input
+Copy
+5
+3 6 2 1
+2 2 2 1
+2 2 2 2
+4 4 2 2
+2 1 1 2
+output
+Copy
+YES
+010001
+100100
+001010
+NO
+YES
+11
+11
+YES
+1100
+1100
+0011
+0011
+YES
+1
+1

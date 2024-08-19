@@ -1,0 +1,75 @@
+Unique Mode
+Problem
+You are given an array
+A of length
+N such that the maximum frequency of any element in the array is at most
+100.
+Count the number of subarrays with unique mode.
+Note:
+Mode of an array is the element with maximum frequency.
+A subarray is said to have a unique mode if there exists only one element with maximum frequency.
+Please use fast I/O for input and pypy for python submissions.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first line of each test case contains an integer
+N - the length of array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line, the count of subarrays with unique mode.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+5
+−10
+9
+≤A
+i
+≤10
+9
+Maximum frequency of any element in
+A is at most
+100.
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+2 1 2
+3
+1 2 2
+12
+6 6 3 5 3 5 3 5 3 5 6 6
+4
+5
+40
+Explanation:
+Test case
+1: There are
+4 subarrays with unique mode. These are
+[2],[1],[2], and
+[2,1,2]. The subarrays
+[2,1] and
+[1,2] have multiple modes, that are,
+1 and
+2.
+Test case
+2: There are
+5 subarrays with unique mode. These are
+[1],[2],[2],[2,2], and
+[1,2,2].

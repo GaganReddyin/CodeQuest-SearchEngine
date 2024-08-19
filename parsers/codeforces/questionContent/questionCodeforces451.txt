@@ -1,0 +1,170 @@
+F. Quests
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+quests. If you complete the
+i
+-th quest, you will gain
+a
+i
+coins. You can only complete at most one quest per day. However, once you complete a quest, you cannot do the same quest again for
+k
+days. (For example, if
+k=2
+and you do quest
+1
+on day
+1
+, then you cannot do it on day
+2
+or
+3
+, but you can do it again on day
+4
+.)
+You are given two integers
+c
+and
+d
+. Find the maximum value of
+k
+such that you can gain at least
+c
+coins over
+d
+days. If no such
+k
+exists, output Impossible. If
+k
+can be arbitrarily large, output Infinity.
+Input
+The input consists of multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains three integers
+n,c,d
+(
+2≤n≤2⋅
+10
+5
+;
+1≤c≤
+10
+16
+;
+1≤d≤2⋅
+10
+5
+) — the number of quests, the number of coins you need, and the number of days.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — the rewards for the quests.
+The sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+, and the sum of
+d
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output one of the following.
+If no such
+k
+exists, output Impossible.
+If
+k
+can be arbitrarily large, output Infinity.
+Otherwise, output a single integer — the maximum value of
+k
+such that you can gain at least
+c
+coins over
+d
+days.
+Please note, the checker is case-sensitive, and you should output strings exactly as they are given.
+Example
+input
+Copy
+6
+2 5 4
+1 2
+2 20 10
+100 10
+3 100 3
+7 2 6
+4 20 3
+4 5 6 7
+4 100000000000 2022
+8217734 927368 26389746 627896974
+2 20 4
+5 1
+output
+Copy
+2
+Infinity
+Impossible
+1
+12
+0
+Note
+In the first test case, one way to earn
+5
+coins over
+4
+days with
+k=2
+is as follows:
+Day 1: do quest 2, and earn
+2
+coins.
+Day 2: do quest 1, and earn
+1
+coin.
+Day 3: do nothing.
+Day 4: do quest 2, and earn
+2
+coins.
+In total, we earned
+2+1+2=5
+coins.
+In the second test case, we can make over
+20
+coins on the first day itself by doing the first quest to earn
+100
+coins, so the value of
+k
+can be arbitrarily large, since we never need to do another quest.
+In the third test case, no matter what we do, we can't earn
+100
+coins over
+3
+days.

@@ -1,0 +1,139 @@
+Restoration
+Problem
+Chef has a hidden permutation
+P of
+N integers and challenges you to find
+P using at most
+N−1 queries of the following kind:
+Query: A permutation
+Q of length
+N.
+Response: Chef generates a permutation
+P
+ˉ
+defined as
+P
+i
+ˉ
+=P
+Q
+i
+,1≤i≤N.
+Chef responds with all such indices where
+P
+i
+is the maximum element of the prefix of length
+i, i.e.,
+Chef will respond with all
+1≤i≤N that satisfy
+P
+i
+ˉ
+=max
+{
+P
+1
+ˉ
+,
+P
+2
+ˉ
+,…,
+P
+ˉ
+i
+}.
+Note that a permutation of length
+N consists of all integers from
+1 to
+N exactly once.
+Interaction
+First, you should read a line containing a single integer
+T, denoting the number of test cases.
+For each test case, you should start by reading a line containing a single integer
+N, denoting the length of Chef's hidden permutation.
+To make a query, print a line starting with
+? followed by
+N space separated integers
+Q
+1
+,Q
+2
+,…,Q
+N
+denoting the permutation
+Q.
+Note that
+1≤Q
+i
+≤N and
+Q
+i
+are distinct.
+To read Chef's response, input a single line which can be of two types:
+Starting with an integer
+K denoting the number of indices in the response followed by
+K space separated integers
+i
+1
+,i
+2
+,…,i
+k
+, the indices satisfying the condition.
+A single integer
+−1 denoting that you made either an ill-formed query or too many of them (exceeded
+N−1).
+To guess the permutation
+P, print a line starting with
+! followed by
+N space separated integers
+P
+1
+,P
+2
+,…,P
+N
+denoting the permutation. Then, read a line containing a single integer which is
+1 if your guess was correct and
+−1 otherwise or if it was ill-formed.
+Don't forget to read the result of your guess after every test case which is a
+1 or a
+−1.
+Note that when you receive an answer
+−1, you should immediately terminate your program to receive a Wrong Answer verdict; otherwise, you may receive any verdict.
+Don't forget to flush the output after printing each line.
+Constraints
+1≤T≤100
+1≤N≤500
+The sum of
+N over all test cases won't exceed
+500.
+Sample Interaction
+1
+4
+                ? 3 2 4 1
+2 1 2
+                ? 2 1 3 4
+1 1
+                ? 4 1 3 2
+4 1 2 3 4
+                ! 2 4 3 1
+1
+The hidden permutation is
+P={2,4,3,1}.
+In the first query,
+P
+ˉ
+={3,4,1,2}. Thus, Chef replies with indices
+{1,2}.
+In the second query,
+P
+ˉ
+={4,2,3,1}. Thus, Chef replies with the only index
+{1}.
+In the third query,
+P
+ˉ
+={1,2,3,4}. Thus, Chef replies with
+{1,2,3,4}.

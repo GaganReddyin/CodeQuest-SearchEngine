@@ -1,0 +1,118 @@
+Chef and Elephant Tree
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Let's define an elephant tree with size
+N as a rooted tree with
+N vertices (numbered
+1 through
+N) such that:
+vertex
+1 is the root
+for any three vertices
+u,
+v and
+w such that
+u<v<w, if
+w is a (direct or indirect) descendant of
+u, then
+v is also a descendant of
+u
+Little Chef has an elephant tree with size
+N. Today, he wants to use the leaves of this tree to decorate
+Q dishes (a leaf is a vertex with no children). For each dish, he picks some range
+[L,R] and he wants to uniformly randomly choose a pair of distinct leaves with labels between
+L and
+R inclusive. These leaves are removed and used to decorate the dish; since the tree is magical, the removed leaves grow back immediately.
+You should answer
+Q queries. In each query, Chef is decorating one dish and wants to know the expected value of the distance between the chosen leaves. It can be proved that if at least one pair of leaves can be chosen, this expected value can be expressed as a fraction
+P/D, where
+P and
+D are coprime positive integers and
+D is coprime to
+998,244,353.
+The answer to a query is
+0 if there is at most one leaf in the given range (no pair of leaves can be chosen) or
+P⋅D
+−1
+modulo
+998,244,353 otherwise, where
+D
+−1
+denotes the multiplicative inverse of
+D modulo
+998,244,353.
+Little Chef is very unpredictable, so you have to answer each query immediately after he gives it to you.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N−1 space-separated integers
+f
+2
+,f
+3
+,…,f
+N
+. For each valid
+i,
+f
+i
+denotes the parent of vertex
+i.
+The following
+Q lines describe queries. Each of these lines contains two space-separated integers
+x and
+y. Let's denote the answer to the previous query by
+ans (if this is the first query,
+ans=0). Then, the parameters
+L and
+R can be computed as
+L=x⊕ans and
+R=y⊕ans.
+Output
+For each query, print a single line containing one integer ― the answer to the query.
+Constraints
+2≤N,Q≤300,000
+i>f
+i
+for each valid
+i
+1≤L≤R≤N
+Subtasks
+Subtask #1 (10 points):
+2≤N,Q≤300
+Subtask #2 (10 points):
+2≤N,Q≤3,000
+Subtask #3 (30 points): the tree is a binary tree
+Subtask #4 (50 points): original constraints
+Sample 1:
+Input
+Output
+10 3
+1 2 2 4 5 5 1 8 1 
+2 10
+598946617 598946610
+598946618 598946609
+598946616
+598946616
+332748122
+Explanation:
+The leaves are vertices
+3,
+6,
+7,
+9 and
+10.
+In the first query,
+L=2,
+R=10 and the expected value is
+21/5.
+In the second query,
+L=1,
+R=10 and the expected value is
+21/5 again.
+In the third query,
+L=2,
+R=9 and the expected value is
+13/3.

@@ -1,0 +1,70 @@
+Chef And Partytions
+Problem
+Chef is hosting a party. There are
+2N people in this party (excluding Chef). Each person has a unique ID
+i which ranges from
+1 to
+2N.
+Chef wants to make
+N pairs of the
+2N people (that is, each pair should contain
+2 people). A pair of people
+(i,j) will be sad if
+gcd(i,j)=1. Chef wants to minimize the number of sad pairs. Can you help him find the minimum number of sad pairs and a pairing which has that minimum number of sad pairs?
+If there are multiple pairings possible which give the same minimum number of sad pairs, you can output any. You can output the pairings in any order. Look at the sample output for more information.
+Note: The greatest common divisor of two numbers, denoted as
+gcd(X,Y), refers to the largest positive integer that divides both
+X and
+Y.
+Input Format
+The first line of the input contains an integer
+T denoting the number of test cases. The description of
+T test cases follows.
+For each test case, the first and only line contains an integer
+N, the numbers of pairs to be formed.
+Output Format
+For each test case, output
+N+1 lines.
+The first line should contain the minimum number of sad pairs possible.
+The
+i
+th
+of the next
+N lines should contain two integers, which represents a pair.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+1
+2
+1
+1 2
+1
+1 3
+4 2
+Explanation:
+Testcase 2: For
+N=2, there are
+4 people in the party with IDs
+{1,2,3,4}. The possible pairs are
+{(1,2),(3,4)} with
+2 sad pairs,
+{(1,3),(2,4)} with
+1 sad pair, or
+{(1,4),(2,3)} with
+2 sad pairs.
+So, the minimum number of sad pairs is
+1.
+Notice that
+(4,2) and
+(2,4) denote the same pair.

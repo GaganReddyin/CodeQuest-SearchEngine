@@ -1,0 +1,213 @@
+G. Distinctification
+time limit per test6 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Suppose you are given a sequence
+S
+of
+k
+pairs of integers
+(
+a
+1
+,
+b
+1
+),(
+a
+2
+,
+b
+2
+),…,(
+a
+k
+,
+b
+k
+)
+.
+You can perform the following operations on it:
+Choose some position
+i
+and increase
+a
+i
+by
+1
+. That can be performed only if there exists at least one such position
+j
+that
+i≠j
+and
+a
+i
+=
+a
+j
+. The cost of this operation is
+b
+i
+;
+Choose some position
+i
+and decrease
+a
+i
+by
+1
+. That can be performed only if there exists at least one such position
+j
+that
+a
+i
+=
+a
+j
++1
+. The cost of this operation is
+−
+b
+i
+.
+Each operation can be performed arbitrary number of times (possibly zero).
+Let
+f(S)
+be minimum possible
+x
+such that there exists a sequence of operations with total cost
+x
+, after which all
+a
+i
+from
+S
+are pairwise distinct.
+Now for the task itself ...
+You are given a sequence
+P
+consisting of
+n
+pairs of integers
+(
+a
+1
+,
+b
+1
+),(
+a
+2
+,
+b
+2
+),…,(
+a
+n
+,
+b
+n
+)
+. All
+b
+i
+are pairwise distinct. Let
+P
+i
+be the sequence consisting of the first
+i
+pairs of
+P
+. Your task is to calculate the values of
+f(
+P
+1
+),f(
+P
+2
+),…,f(
+P
+n
+)
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of pairs in sequence
+P
+.
+Next
+n
+lines contain the elements of
+P
+:
+i
+-th of the next
+n
+lines contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+,
+1≤
+b
+i
+≤n
+). It is guaranteed that all values of
+b
+i
+are pairwise distinct.
+Output
+Print
+n
+integers — the
+i
+-th number should be equal to
+f(
+P
+i
+)
+.
+Examples
+input
+Copy
+5
+1 1
+3 3
+5 5
+4 2
+2 4
+output
+Copy
+0
+0
+0
+-5
+-16
+input
+Copy
+4
+2 4
+2 3
+2 2
+1 1
+output
+Copy
+0
+3
+7
+1

@@ -1,0 +1,154 @@
+Maximum Sum
+Problem
+You are given an array 
+A of size
+N.
+In one operation, you can do the following:
+Choose any two adjacent elements
+A
+i
+and
+A
+i+1
+(1≤i<N).
+Let
+X=gcd(A
+i
+,A
+i+1
+) and
+Y=lcm(A
+i
+,A
+i+1
+). Here
+gcd denotes the greatest common divisor and
+lcm denotes the least common multiple respectively.
+Replace
+A
+i
+with
+X and
+A
+i+1
+with
+Y.
+Find the maximum value of
+Σ
+i=1
+N
+A
+i
+you can achieve, after performing the above operation any (possibly zero) number of times.
+Since the result may be very large, you need to output the result modulo
+10
+9
++7.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the size of
+A.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, the elements of the array.
+Output Format
+For each test case, output the maximum value of
+Σ
+i=1
+N
+A
+i
+you can achieve, after performing the above operation any (possibly zero) number of times, modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤A
+i
+≤10
+6
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+4 4 6 1
+3
+108 24 18
+10
+93179 93187 93199 93229 93239 93241 93251 93253 93257 93263
+19
+258
+392286903
+Explanation:
+Test case
+1: Initially,
+A=[4,4,6,1].
+Operation
+1: Choose
+A
+2
+,A
+3
+. Thus,
+X=gcd(4,6)=2 and
+Y=lcm(4,6)=12. Thus
+A becomes
+[4,2,12,1].
+The sum of the array is
+4+2+12+1=19. It can be shown that this is the maximum sum of array we can achieve after applying any number of operations.
+Test case
+2: Initially,
+A=[108,24,18].
+Operation
+1: Choose
+A
+1
+,A
+2
+. Thus,
+X=gcd(108,24)=12 and
+Y=lcm(108,24)=216. Thus
+A becomes
+[12,216,18].
+Operation
+2: Choose
+A
+2
+,A
+3
+. Thus,
+X=gcd(216,18)=18 and
+Y=lcm(216,18)=216. Thus
+A becomes
+[12,18,216].
+Operation
+3: Choose
+A
+1
+,A
+2
+. Thus,
+X=gcd(12,18)=6 and
+Y=lcm(12,18)=36. Thus
+A becomes
+[6,36,216].
+The sum of the array is
+6+36+216=258. It can be shown that this is the maximum sum of array we can achieve after applying any number of operations.

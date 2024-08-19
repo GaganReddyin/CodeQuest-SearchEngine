@@ -1,0 +1,83 @@
+Cool Subsets
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+An integer
+X is cool if it has a primitive root modulo
+X.
+The coolness of a non-empty set of
+N distinct integers
+S={x
+1
+,x
+2
+,…,x
+N
+} is the number of cool divisors of
+∏
+i=1
+N
+x
+i
+.
+You are given four integers
+L,
+R,
+A and
+B. Let
+S be the set containing all integers between
+L and
+R (inclusive). Consider all non-empty subsets of
+S with size between
+A and
+B (inclusive). Find the sum of values of coolness of all these subsets. Since this sum can be huge, compute it modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains four space-separated integers
+L,
+R,
+A and
+B.
+Output
+For each test case, print a single line containing one integer ― the total coolness modulo
+998,244,353.
+Constraints
+1≤T≤100,000
+1≤L≤R≤100,000
+1≤A≤B≤100,000
+Subtasks
+Subtask #1 (10 points):
+R≤16
+B≤16
+Subtask #2 (35 points):
+A=B
+Subtask #3 (55 points): original constraints
+Sample 1:
+Input
+Output
+3
+3 4 1 2
+1 10 15 20
+1 8 1 8
+10
+0
+1703
+Explanation:
+Example case 1: We have S =
+{3,4}, which has the following
+3 non-empty subsets with sizes in the range
+[1,2]:
+{3}: coolness
+2, the cool divisors are
+{1,3}
+{4}: coolness
+3, the cool divisors are
+{1,2,4}
+{3,4}: coolness
+5, the cool divisors are
+{1,2,3,4,6}
+Example case 2: There are no subsets with size in the range
+[15,20], so the sum is
+0.

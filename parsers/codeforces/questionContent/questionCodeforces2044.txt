@@ -1,0 +1,108 @@
+C. Berpizza
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Monocarp and Polycarp are working as waiters in Berpizza, a pizzeria located near the center of Bertown. Since they are waiters, their job is to serve the customers, but they choose whom they serve first differently.
+At the start of the working day, there are no customers at the Berpizza. They come there one by one. When a customer comes into the pizzeria, she sits and waits for Monocarp or Polycarp to serve her. Monocarp has been working in Berpizza for just two weeks, so whenever he serves a customer, he simply chooses the one who came to Berpizza first, and serves that customer.
+On the other hand, Polycarp is an experienced waiter at Berpizza, and he knows which customers are going to spend a lot of money at the pizzeria (and which aren't) as soon as he sees them. For each customer, Polycarp estimates the amount of money this customer can spend, and when he serves a customer, he chooses the one that is expected to leave the most money at Berpizza (in case there are several such customers, he chooses the one who came first among them).
+Obviously, no customer can be served twice, so Monocarp and Polycarp choose which customer to serve only among those who haven't been served yet.
+When the number of customers gets really high, it becomes difficult for both Monocarp and Polycarp to choose the customer they are going to serve. Your task is to write a program that makes these choices for them. Formally, your program should be able to process three types of queries:
+1
+m
+— a customer comes to Berpizza, and Polycarp estimates the amount of money that they will spend as
+m
+;
+2
+— Monocarp serves a customer which came to the pizzeria first;
+3
+— Polycarp serves a customer which is expected to spend the largest amount of money at the pizzeria (if there are several such customers, the one that came to the pizzeria first is chosen).
+For each query of types
+2
+and
+3
+, report the number of the customer who was served (the customers are numbered in the order they come to the pizzeria, starting from
+1
+).
+Input
+The first line contains one integer
+q
+(
+2≤q≤5⋅
+10
+5
+) — the number of queries.
+Then
+q
+lines follow, each describing a query in one of the following formats:
+1
+m
+(
+1≤m≤5⋅
+10
+5
+) — a customer comes to Berpizza, and Polycarp estimates the amount of money that they will spend as
+m
+;
+2
+— Monocarp serves a customer which came to the pizzeria first;
+3
+— Polycarp serves a customer which is expected to spend the largest amount of money at the pizzeria (if there are multiple such customers, the one that came to the pizzeria first is chosen).
+Queries of type
+2
+and
+3
+are asked only when there exists at least one customer that hasn't been served yet. There is at least one query of type
+2
+or
+3
+in the input.
+Output
+For each query of type
+2
+or
+3
+, print one integer — the number of the customer that has been served in that event. The customers are numbered in the order in which they come to the pizzeria, starting from
+1
+.
+Examples
+input
+Copy
+8
+1 8
+1 10
+1 6
+3
+2
+1 9
+2
+3
+output
+Copy
+2 1 3 4 
+input
+Copy
+6
+1 8
+1 10
+1 8
+3
+3
+3
+output
+Copy
+2 1 3 
+input
+Copy
+8
+1 103913
+3
+1 103913
+1 103913
+3
+1 103913
+1 103913
+2
+output
+Copy
+1 2 3 

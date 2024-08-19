@@ -1,0 +1,190 @@
+Chef and Pairwise Distances
+Problem
+Read problems statements in Russian and Bengali.
+Chef has an array
+A with
+N elements. He wants to find
+N points
+P
+1
+,…,P
+N
+with integer coordinates on the 2D coordinate plane such that, for all pairs of indices
+i and
+j (
+1≤i<j≤N), the Manhattan distance from
+P
+i
+to
+P
+j
+is
+A
+i
++A
+j
+. Help him find any
+N points satisfying the condition, or state that no such points exist.
+As a reminder, the Manhattan distance between the points
+(x
+1
+,y
+1
+) and
+(x
+2
+,y
+2
+) is defined as
+∣x
+1
+−x
+2
+∣+∣y
+1
+−y
+2
+∣.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains a single integer
+N.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, if there is no set of points satisfying the stated condition, output NO.
+Otherwise, output YES on one line, then output
+N lines. Each line should contain two integers
+X
+i
+and
+Y
+i
+(
+−10
+18
+≤X
+i
+,Y
+i
+≤10
+18
+) denoting the
+x and
+y coordinates of the point
+P
+i
+respectively.
+It can be proven that if a solution exists, then a solution exists under the constraints above.
+Output is case insensitive.
+Constraints
+1≤T≤10
+4
+1≤N≤2⋅10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+2
+5 13
+3
+8 4 20
+5
+2 9 12 3 8
+YES
+3 9
+13 17
+YES
+18 5
+10 1
+1 16
+NO
+Explanation:
+For the first test case, we can choose
+P
+1
+=(3,9) and
+P
+2
+=(13,17). The Manhattan distance between
+P
+1
+and
+P
+2
+is
+∣3−13∣+∣9−17∣=18, and
+A
+1
++A
+2
+=5+13=18.
+For the second test case, we can choose
+P
+1
+=(18,5),
+P
+2
+=(10,1), and
+P
+3
+=(1,16).
+The Manhattan distance between
+P
+1
+and
+P
+2
+is
+∣18−10∣+∣5−1∣=12, and
+A
+1
++A
+2
+=8+4=12.
+The Manhattan distance between
+P
+1
+and
+P
+3
+is
+∣18−1∣+∣5−16∣=28, and
+A
+1
++A
+3
+=8+20=28.
+The Manhattan distance between
+P
+2
+and
+P
+3
+is
+∣10−1∣+∣1−16∣=24, and
+A
+2
++A
+3
+=4+20=24.
+For the third test case, it can be proven that there does not exist
+5 points satisfying these constraints.

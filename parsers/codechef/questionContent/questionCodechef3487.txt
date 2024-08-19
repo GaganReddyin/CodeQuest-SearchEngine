@@ -1,0 +1,126 @@
+Interactive Tree 2
+Problem
+This problem is similar to the problem "INTREECTIVE". The only difference between them is the number of queries allowed — in this problem, up to 11 queries can be made. In Div. 1 and Div. 2 this problem is worth 60 points and "INTREECTIVE" is worth 40. In Div. 3 this problem is non-scorable.
+This is an interactive task
+You are given a tree consisting of
+N nodes, numbered from
+1 to
+N. Chef selected an arbitrary node and marked it.
+Chef gave you a judge to play with, using which you can ask queries about the given tree.
+In each query, you give the judge a non-empty set
+S of nodes. The judge returns
+1 if there exists
+u and
+v(not necessarily distinct) such that
+u,v∈S and the marked node lies on the shortest path from
+u to
+v, or
+0 otherwise.
+You have to find the marked node.
+For each test case, you can use at most 11 queries.
+Interaction
+Begin the interaction by reading a single integer
+T denoting the number of test cases. The description of interaction for
+T test cases follows.
+For each test case, first read a single integer
+N, denoting the number of nodes in the tree.
+N−1 lines follow. The
+i
+th
+of these lines contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between the nodes
+u
+i
+and
+v
+i
+.
+It is guaranteed that the given graph is a tree.
+Now you may begin asking queries. To ask a query about a set
+S of
+k nodes
+v
+1
+,v
+2
+,…,v
+k
+(
+1≤k≤N,1≤v
+i
+≤N, all
+v
+i
+are distinct), output:
+?
+k
+v
+1
+v
+2
+…
+v
+k
+You will then receive an integer
+x.
+x is
+1 if there exists
+u and
+v(not necessarily distinct) such that
+u,v∈S and the marked node lies on the path from
+u to
+v, or
+0 otherwise.
+When you have found the marked node(say
+v), print the answer in the following format:
+!
+v
+Outputting the answer doesn't count towards the limit of
+11 queries.
+If at any time you make an invalid query or exceed the query limit, the interaction is terminated and you will receive a Wrong Answer verdict.
+If you receive a Judge Error verdict, that means your program actually has one of many possible errors: an Idleness Limit Exceeded error (it is waiting for input that does not exist), a Runtime error, you asked an invalid query, or possibly some other error.
+Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤1000
+1≤N≤1000
+The input graph is a tree
+Sum of
+N does not exceed
+5⋅10
+4
+over all test cases
+At most
+11 queries can be made.
+Sample Interaction
+Grader                You
+2
+2
+1 2
+                      ? 1 1
+0
+                      ! 2
+4
+1 2
+1 4
+1 3
+                      ? 3 1 2 3
+1
+                      ? 1 3
+1
+                      ! 3
+Explanation
+Test case
+1: After the
+1
+st
+query, we know that node
+1 hasn't been marked. So, we are left with only one possibility — node
+2.
+Test case
+2: Chef marked the node 3.
+Note: The above queries are just to demonstrate the interaction. They may or may not be sufficient to deduce the final answer.

@@ -1,0 +1,29 @@
+E2. Root of quantum Fourier transform
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Implement an operation that is equivalent to the operation QFT
+1/P
+1
+, where QFT is the quantum Fourier transform. In other words, your operation, applied
+P
+times, should have the same effect as applying QFT. You can implement the required transformation up to a global phase.
+Your operation should take the following inputs:
+an integer
+P
+(
+2≤P≤8
+).
+a register of type LittleEndian - a wrapper type for an array of qubits that encodes an unsigned integer in little-endian format, with the least significant bit written first (corresponding to the array element with index 0). (If you need to, you can convert it to an array type using unwrap operator: let qubitArray = inputRegister!;.) The register will contain at most 7 qubits.
+The "output" of your solution is the state in which it left the input qubits.
+Your code should have the following signature (note that your operation should have Adjoint and Controlled variants defined for it; is Adj+Ctl in the operation signature will generate them automatically based on your code):
+namespace Solution {
+    open Microsoft.Quantum.Arithmetic;
+    open Microsoft.Quantum.Intrinsic;
+
+    operation Solve (p : Int, inputRegister : LittleEndian) : Unit is Adj+Ctl {
+        // your code here
+    }
+}
+You can learn more about QFT in this kata. You are allowed to take advantage of library operations, including QFTLE.

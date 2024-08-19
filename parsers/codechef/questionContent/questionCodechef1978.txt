@@ -1,0 +1,73 @@
+Equivalent Numbers
+Problem
+Chef calls a pair of integers
+(A,B) equivalent if there exist some positive integers
+X and
+Y such that
+A
+X
+=B
+Y
+.
+Given
+A and
+B, determine whether the pair is equivalent or not.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers
+A and
+B, as mentioned in statement.
+Output Format
+For each test case, output YES if
+(A,B) is an equivalent pair, NO otherwise.
+The output is case-insensitive. Thus, the strings Yes, YES, yes, and yeS are all considered identical.
+Constraints
+1≤T≤10
+5
+2≤A,B≤10
+6
+Sample 1:
+Input
+Output
+3
+2 3
+8 4
+12 24
+NO
+YES
+NO
+Explanation:
+Test case
+1: There are no positive integers
+X and
+Y which satisfy
+A
+X
+=B
+Y
+.
+Test case
+2: Let
+X=2 and
+Y=3. Thus,
+A
+X
+=8
+2
+=64 and
+B
+Y
+=4
+3
+=64. Thus, the pair
+(8,4) is equivalent.
+Test case
+3: There are no positive integers
+X and
+Y which satisfy
+A
+X
+=B
+Y
+.

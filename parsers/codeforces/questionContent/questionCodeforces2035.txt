@@ -1,0 +1,151 @@
+L. Prime Divisors Selection
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Suppose you have a sequence of
+k
+integers
+A=[
+a
+1
+,
+a
+2
+,…,
+a
+k
+]
+where each
+a
+i
+≥2
+. A sequence of prime integers
+P=[
+p
+1
+,
+p
+2
+,…,
+p
+k
+]
+is called suitable for the sequence
+A
+if
+a
+1
+is divisible by
+p
+1
+,
+a
+2
+is divisible by
+p
+2
+and so on.
+A sequence of prime integers
+P
+is called friendly if there are no unique integers in this sequence.
+A sequence
+A
+is called ideal, if each sequence
+P
+that is suitable for
+A
+is friendly as well (i. e. there is no sequence
+P
+that is suitable for
+A
+, but not friendly). For example, the sequence
+[2,4,16]
+is ideal, while the sequence
+[2,4,6]
+is not ideal (there exists a sequence
+P=[2,2,3]
+which is suitable for
+A
+, but not friendly).
+You are given
+n
+different integers
+x
+1
+,
+x
+2
+, ...,
+x
+n
+. You have to choose exactly
+k
+of them in such a way that they form an ideal sequence, or report that it is impossible. Note that no integer can be chosen more than once.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤k≤n≤1000
+).
+The second line contains
+n
+pairwise distinct integers
+x
+1
+,
+x
+2
+, ...,
+x
+n
+(
+2≤
+x
+i
+≤
+10
+18
+).
+Output
+If it is impossible to choose exactly
+k
+integers from
+x
+1
+,
+x
+2
+, ...,
+x
+n
+in such a way that the chosen integers form an ideal sequence, print
+0
+.
+Otherwise, print
+k
+pairwise distinct integers — the elements of the chosen ideal sequence. If there are multiple answers, print any of them.
+Examples
+input
+Copy
+3 3
+2 4 6
+output
+Copy
+0
+input
+Copy
+3 3
+2 4 16
+output
+Copy
+2 4 16 
+input
+Copy
+4 3
+2 4 6 16
+output
+Copy
+2 4 16 

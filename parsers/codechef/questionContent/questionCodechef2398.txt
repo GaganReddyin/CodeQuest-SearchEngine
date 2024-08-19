@@ -1,0 +1,187 @@
+Destroy the EMP Chip
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is an interactive problem.
+A mysterious organisation has stolen an EMP chip prototype from a high-tech US facility. IGI knows the consequences of the chip falling into the wrong hands. Since it is just a prototype, they wish to destroy it completely instead of attempting to retrieve it. The best opportunity to do so is when the chip is being transferred from one base to another in a secured truck.
+The truck can move on an infinite two-dimensional plane. Initially, it is located at some point with integer coordinates
+(H,K). Unfortunately, this point and the route the truck is going to follow are unknown.
+To accomplish his task, David Jones can use two kinds of weapons with the following feedback systems:
+Hellfire ― Launched towards a single point
+(X,Y). Anything lying at this point is instantly destroyed. Let's denote the location of the truck at this point in time by
+(A,B). Then, the feedback is one of the following strings:
+"O" if
+X=A and
+Y=B
+"PY" if
+X>A and
+Y=B
+"NY" if
+X<A and
+Y=B
+"XP" if
+X=A and
+Y>B
+"XN" if
+X=A and
+Y<B
+"PP" if
+X>A and
+Y>B
+"PN" if
+X>A and
+Y<B
+"NP" if
+X<A and
+Y>B
+"NN" if
+X<A and
+Y<B
+Ring of Fire ― Applied on a rectangular region with a bottom left corner
+(X
+1
+,Y
+1
+) and a top right corner
+(X
+2
+,Y
+2
+). Anything lying on the perimeter of the rectangle gets instantly destroyed. Let's denote the location of the truck at this point in time by
+(A,B). Then, the feedback is one of the following strings:
+"O" if
+(A,B) lies on the perimeter of the rectangle
+"IN" if
+(A,B) lies strictly inside the rectangle
+"OUT" if
+(A,B) lies outside the rectangle
+In addition, if an attack is unsuccessful, the truck moves exactly
+D units in one of the four possible axis-parallel directions, i.e. it moves from its current position
+(A,B) to
+(A+D,B) or
+(A,B+D) or
+(A−D,B) or
+(A,B−D) (not necessarily the same direction for all unsuccessful attacks). The value of
+D is fixed and known to be either
+0 (the truck does not move) or
+1.
+Each weapon may be used multiple times and they may be used in any order. However, since using the weapons is costly, you may only make up to
+Q attacks (with both types of weapons in total). Obviously, your task is to destroy the truck, i.e. to receive "O" as the feedback.
+Interaction
+First, you should read a line containing three space-separated integers
+T,
+Q and
+D. You should solve
+T test cases, each with the same parameters
+Q and
+D. The description of interaction for
+T test cases follows.
+For each test case, you may make up to
+Q queries. For each query:
+If you want to use a Hellfire attack, print a single line containing three space-separated integers
+1,
+X and
+Y (
+−2⋅10
+18
+≤X,Y≤2⋅10
+18
+).
+If you want to use a Ring of Fire attack, print a single line containing five space-separated integers
+2,
+X
+1
+,
+Y
+1
+,
+X
+2
+and
+Y
+2
+(
+−2⋅10
+18
+≤X
+1
+≤X
+2
+≤2⋅10
+18
+and
+−2⋅10
+18
+≤Y
+1
+≤Y
+2
+≤2⋅10
+18
+).
+Then, you should read a single line containing one string. If you ask an invalid query or exceed the query limit, this string is "FAILED" and you should immediately terminate your program to receive the Wrong Answer verdict. Otherwise, this string is the feedback for your attack.
+As soon as you receive feedback "O", you should stop making queries and continue solving the remaining test cases.
+Note: Some of the test files use a non-adaptive grader, while some use an adaptive grader, where the initial point and the route are not fixed at the start, but the answers to your queries are chosen in such a way that there is always at least one initial point
+(H,K) and sequence of moves which are consistent with all answers.
+Don't forget to flush the output after printing each line!
+Constraints
+T=2048
+∣H∣,∣K∣≤10
+18
+D∈{0,1}
+Subtasks
+Subtask 1 (12 points):
+Q=72,
+D=0
+Subtask 2 (20 points):
+Q=66,
+D=1
+Subtask 3 (32 points):
+Q=65,
+D=1
+Subtask 4 (36 points):
+Q=64,
+D=1
+Example
+You         Grader
+            1 64 1
+1 0 0
+            NN
+1 2 3
+            XP
+2 1 0 3 3
+            IN
+1 4 0
+            PN
+1 -1 1
+            NY
+2 -2 1 2 2
+            O
+Explanation
+Example case 1: The truck follows the route
+(1,2)→(2,2)→(2,1)→(3,1)→(2,1)→(1,1). During the interaction:
+The truck is initially located at
+(1,2).
+The first attack is Hellfire at the point
+(0,0). The attack is unsuccessful and the feedback is "NN".
+The truck moves to the point
+(2,2).
+The second attack is Hellfire at the point
+(2,3). The attack is unsuccessful and the feedback is "XP".
+The truck moves to the point
+(2,1).
+The third attack is Ring of Fire at the perimeter of the rectangle with the bottom left corner
+(1,0) and the top right corner
+(3,3). Since the truck lies inside this rectangle, the attack is unsuccessful and the feedback is "IN".
+The truck moves to the point
+(3,1).
+The fourth attack is Hellfire at the point
+(4,0). The attack is unsuccessful and the feedback is "PN".
+The truck moves to the point
+(2,1).
+The fifth attack is Hellfire at the point
+(−1,1). The attack is unsuccessful and the feedback is "NY".
+The truck moves to the point
+(1,1).
+The sixth attack is Ring of Fire at the perimeter of the rectangle with the bottom left corner
+(−2,1) and the top right corner
+(2,2). Since the truck lies on this perimeter, the attack is successful and the feedback is "O", since the truck with the EMP chip is destroyed.

@@ -1,0 +1,149 @@
+D. Flexible String Revisit
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two binary strings
+a
+and
+b
+of length
+n
+. In each move, the string
+a
+is modified in the following way.
+An index
+i
+(
+1≤i≤n
+) is chosen uniformly at random. The character
+a
+i
+will be flipped. That is, if
+a
+i
+is
+0
+, it becomes
+1
+, and if
+a
+i
+is
+1
+, it becomes
+0
+.
+What is the expected number of moves required to make both strings equal for the first time?
+A binary string is a string, in which the character is either
+0
+or
+1
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+6
+) — the length of the strings.
+The second line of each test case contains the binary string
+a
+of length
+n
+.
+The third line of each test case contains the binary string
+b
+of length
+n
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+6
+.
+Output
+For each test case, output a single line containing the expected number of moves modulo
+998244353
+.
+Formally, let
+M=998244353
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Example
+input
+Copy
+4
+1
+0
+1
+2
+00
+00
+4
+1000
+1110
+5
+01001
+10111
+output
+Copy
+1
+0
+665496254
+665496277
+Note
+In the first test case, index
+1
+is chosen randomly and
+a
+1
+is flipped. After the move, the strings
+a
+and
+b
+are equal. The expected number of moves is
+1
+.
+The strings
+a
+and
+b
+are already equal in the second test case. So, the expected number of moves is
+0
+.
+The expected number of moves for the third and fourth test cases are
+56
+3
+and
+125
+3
+respectively.

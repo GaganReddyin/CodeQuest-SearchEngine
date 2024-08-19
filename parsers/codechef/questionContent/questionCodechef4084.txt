@@ -1,0 +1,149 @@
+Matrix Permutations
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+There is a grid with
+N rows and
+M columns. There are
+K cannons (numbered
+1 through
+K) placed in
+K cells of this grid. Each cannon can fire a ball to any cell whose Manhattan distance from the cannon does not exceed the strength of the cannon (including the cell with the cannon). Initially (at the
+0-th second), the strengths of all the cannons are
+0 and they increase by
+1 every second. Starting at the
+0-th second, cannons start throwing balls according to the following rules:
+At each second, exactly one cannon fires one ball to a cell which does not contain any balls yet. (Note that at least one such cell exists for each cannon unless the grid is full.)
+The same cannon may fire during multiple seconds.
+When a ball is fired by a cannon at the
+i-th second, the number
+i gets printed on the cell the ball lands in.
+At the end of the
+N⋅M−1 th second, the grid will be representing a permutation of the integers
+0 through
+N⋅M−1. (Two permutations
+P
+1
+and
+P
+2
+are different if at least one cell has different numbers printed on it in
+P
+1
+and
+P
+2
+.)
+A permutation is considered to be good if it can be formed at the end of the
+N⋅M−1 th second in the given process.
+Your task is to find the fraction of permutations that are good, i.e. the number of good permutations divided by the number of all permutations of
+0 through
+N⋅M−1. Let's denote this fraction by
+P/Q, where
+P and
+Q are positive integers and
+Q is coprime with
+2,500,000,001. You should compute
+P⋅Q
+−1
+modulo
+2,500,000,001, where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+2,500,000,001.
+Note: The Manhattan distance between a cell in row
+r
+1
+and column
+c
+1
+and a cell in row
+r
+2
+and column
+c
+2
+is
+∣r
+1
+−r
+2
+∣+∣c
+1
+−c
+2
+∣.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+K.
+K lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+R
+i
+and
+C
+i
+— the row and column where the
+i-th cannon is located.
+Output Format
+For each test case, print a single line containing one integer
+P⋅Q
+−1
+modulo
+2,500,000,001.
+Constraints
+1≤T≤1,000
+1≤N,M≤50,000
+1≤K≤min(N⋅M,1,000)
+1≤R
+i
+≤N for each valid
+i
+1≤C
+i
+≤M for each valid
+i
+the sum of
+K over all test cases does not exceed
+1,000
+the sum of
+N over all test cases does not exceed
+10
+7
+the sum of
+M over all test cases does not exceed
+10
+7
+Subtasks
+Subtask #1 (30 points):
+1≤N⋅M≤10
+6
+The sum of
+N⋅M over all test cases does not exceed
+10
+6
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+3
+2 2 2
+1 1
+2 2
+2 2 4
+1 1
+1 2
+2 1
+2 2
+1 2 1
+1 1
+1250000001
+1
+1250000001

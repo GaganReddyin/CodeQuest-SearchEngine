@@ -1,0 +1,161 @@
+Random Walk Queries
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef visited his native country Chefland for vacation. Chefland has
+N towns (numbered
+1 through
+N) and
+N−1 bidirectional roads connecting the towns in such a way that it is possible to travel from each town to any other town.
+Chef had a series of
+Q tasks he wanted to perform in Chefland. There are two types of tasks:
+1 u d: Chef should make a random walk with a maximum length
+d, starting from town
+u.
+2 u: Write down the number of times Chef has visited town
+u so far.
+A random walk with the above parameters
+(u,d) is made in the following way:
+First, Chef visits town
+u.
+Then, he uniformly randomly chooses a neighbouring town of the town he is currently in (a town directly connected to it by a road), which has not been visited so far, and moves to it (visits it).
+If there is no such town or he has already travelled a distance
+d (visited
+d+1 towns), the walk ends.
+Otherwise, Chef continues from step 2 again.
+However, there is an issue ― Chef quickly forgets the exact paths he has travelled. Hence, he cannot write down exact numbers in tasks of the second type. He would like you to at least tell him, for each task of the second type, the expected value of the number he would write down in this task.
+Help Chef and find these expected values. Note that Chef's sequence of tasks is encoded so that they have to be processed online. It can be proved that at any point, the expected number of times a city is visited can be expressed as a fraction
+Q
+P
+, where
+P and
+Q are non-negative integers and
+Q is coprime with
+10
+9
++7. You should compute
+P⋅Q
+−1
+modulo
+10
+9
++7, where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+10
+9
++7.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+Each of the next
+N−1 lines contains two space-separated integers
+u and
+v denoting that towns
+u and
+v are connected by a road.
+Each of the next
+Q lines describes a task as follows:
+Let
+last denote the answer for the last task of the second type so far, or
+last=0 if there are no such tasks yet.
+For a task of the first type, this line contains three space-separated integers
+1,
+a and
+b. The starting town is decoded as
+u=(last+a)%N+1 and the maximum length is decoded as
+d=(last+b)%N+1.
+For a task of the second type, this line contains two space-separated integers
+2 and
+a. The town
+u=(last+a)%N+1.
+Output
+For each task of the second type, print a single line containing one integer
+P⋅Q
+−1
+modulo
+10
+9
++7.
+Constraints
+1≤N≤2⋅10
+5
+2≤Q≤10
+5
+1≤u,v≤N
+1≤a,b≤N
+Subtasks
+Subtask #1 (10 points, time limit 1 second):
+N,Q≤10
+3
+Subtask #2 (25 points, time limit 2 seconds):
+N,Q≤5⋅10
+4
+Subtask #3 (25 points, time limit 4 seconds): all towns in Chefland lie on a single straight path
+Subtask #4 (40 points, time limit 4 seconds): original constraints
+Sample 1:
+Input
+Output
+6 4
+6 2
+3 2
+4 1
+1 2
+5 4
+1 6 2
+2 4
+1 2 3
+2 4
+500000004
+1
+Explanation:
+For task
+1, all the towns can possibly be visited in the random walk. The probabilities of visiting them are
+(1,
+2
+1
+,
+4
+1
+,
+2
+1
+,
+2
+1
+,
+4
+1
+).
+For task
+2, the expected number of times town
+5 would have been visited so far is
+2
+1
+.
+For task
+3, the probabilities of visiting the towns during this random walk are
+(
+2
+1
+,1,1,
+2
+1
+,
+2
+1
+,
+2
+1
+).
+For task
+4, the expected number of times town
+5 would have been visited is
+2
+1
++
+2
+1
+=1.

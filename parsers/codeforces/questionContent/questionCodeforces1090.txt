@@ -1,0 +1,120 @@
+E. Power Board
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a rectangular board of size
+n×m
+(
+n
+rows,
+m
+columns). The
+n
+rows are numbered from
+1
+to
+n
+from top to bottom, and the
+m
+columns are numbered from
+1
+to
+m
+from left to right.
+The cell at the intersection of row
+i
+and column
+j
+contains the number
+i
+j
+(
+i
+raised to the power of
+j
+). For example, if
+n=3
+and
+m=3
+the board is as follows:
+Find the number of distinct integers written on the board.
+Input
+The only line contains two integers
+n
+and
+m
+(
+1≤n,m≤
+10
+6
+) — the number of rows and columns of the board.
+Output
+Print one integer, the number of distinct integers on the board.
+Examples
+input
+Copy
+3 3
+output
+Copy
+7
+input
+Copy
+2 4
+output
+Copy
+5
+input
+Copy
+4 2
+output
+Copy
+6
+Note
+The statement shows the board for the first test case. In this case there are
+7
+distinct integers:
+1
+,
+2
+,
+3
+,
+4
+,
+8
+,
+9
+, and
+27
+.
+In the second test case, the board is as follows:
+There are
+5
+distinct numbers:
+1
+,
+2
+,
+4
+,
+8
+and
+16
+.
+In the third test case, the board is as follows:
+There are
+6
+distinct numbers:
+1
+,
+2
+,
+3
+,
+4
+,
+9
+and
+16
+.

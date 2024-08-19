@@ -1,0 +1,95 @@
+Make them equal
+Problem
+Chef has an array
+A having
+N elements. Chef wants to make all the elements of the array equal by repeating the following move.
+Choose any integer
+K between
+1 and
+N (inclusive). Then choose
+K distinct indices
+i
+1
+,i
+2
+,…,i
+K
+, and increase the values of
+A
+i
+1
+,A
+i
+2
+,…,A
+i
+K
+by
+1.
+Find the minimum number of moves required to make all the elements of the array equal.
+Input Format
+The first line contains
+T denoting the number of test cases. Then the test cases follow.
+The first line of each test case contains a single integer
+N denoting the number of elements in
+A.
+The second line of each test case contains
+N space separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer denoting the minimum number of moves required to make all the elements of the array equal.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤A
+i
+≤10
+5
+The sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+2
+3
+1 3 1
+3
+2 2 2
+2
+0
+Explanation:
+Test Case
+1: In the first move, Chef can choose
+K=2, and choose the indices
+{1,3}. After increasing
+A
+1
+and
+A
+3
+by
+1, the array will become
+[2,3,2]. In the second move, Chef can choose
+K=2, and choose the indices
+{1,3}. After increasing
+A
+1
+and
+A
+3
+by
+1, the array will become
+[3,3,3], and hence all the elements become equal.
+Test Case
+2: All the elements of the array are equal, hence no move is required.

@@ -1,0 +1,79 @@
+Erase All But One
+Problem
+You are given a permutation
+P of length
+N. You can perform the following operation on
+P:
+Choose any
+i and
+j such that
+i<j and
+P
+i
+<P
+j
+, and remove exactly one of them from the array. After removing, the remaining parts of the array are concatenated.
+Find out if it is possible to apply the given operation any number of times such that only one element remains in the array.
+Note: A permutation of length
+N is an array where every element from
+1 to
+N occurs exactly once.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains
+N - the length of the permutation
+P.
+The second line of each test case contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+- elements of the permutation.
+Output Format
+For each test case, output YES if it is possible to reduce the array to a single element using the given operation. Otherwise, output NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings yEs, yes, Yes and YES will all be treated as identical).
+Constraints
+1≤T≤3⋅10
+5
+1≤N≤3⋅10
+5
+1≤P
+i
+≤N
+P
+1
+,P
+2
+,…,P
+N
+form a permutation of length
+N
+∑N over all test cases is at most
+3⋅10
+5
+Sample 1:
+Input
+Output
+3
+4
+3 1 2 4
+3
+2 3 1
+6
+5 2 3 6 1 4
+YES
+NO
+YES
+Explanation:
+Test case
+1: We can apply operations as follows (the bolded elements are the pair chosen for that operation):
+[3,1,2,4]→[1,2,4]→[2,4]→[4]
+Test case
+2: It can be shown that it is not possible to remove all elements except one element from the array.
+Test case
+3: We can apply operations as follows:
+[5,2,3,6,1,4]→[2,3,6,1,4]→[2,3,1,4]→[3,1,4]→[1,4]→[4]

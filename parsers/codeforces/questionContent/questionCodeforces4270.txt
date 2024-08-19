@@ -1,0 +1,147 @@
+G. The Tree
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Abendsen assigned a mission to Juliana. In this mission, Juliana has a rooted tree with
+n
+vertices. Vertex number
+1
+is the root of this tree. Each vertex can be either black or white. At first, all vertices are white. Juliana is asked to process
+q
+queries. Each query is one of three types:
+If vertex
+v
+is white, mark it as black; otherwise, perform this operation on all direct sons of
+v
+instead.
+Mark all vertices in the subtree of
+v
+(including
+v
+) as white.
+Find the color of the
+i
+-th vertex.
+An example of operation "1 1" (corresponds to the first example test). The vertices
+1
+and
+2
+are already black, so the operation goes to their sons instead.
+Can you help Juliana to process all these queries?
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n≤
+10
+5
+,
+1≤q≤
+10
+5
+) — the number of vertices and the number of queries.
+The second line contains
+n−1
+integers
+p
+2
+,
+p
+3
+,…,
+p
+n
+(
+1≤
+p
+i
+<i
+), where
+p
+i
+means that there is an edge between vertices
+i
+and
+p
+i
+.
+Each of the next
+q
+lines contains two integers
+t
+i
+and
+v
+i
+(
+1≤
+t
+i
+≤3
+,
+1≤
+v
+i
+≤n
+) — the type of the
+i
+-th query and the vertex of the
+i
+-th query.
+It is guaranteed that the given graph is a tree.
+Output
+For each query of type
+3
+, print "black" if the vertex is black; otherwise, print "white".
+Examples
+input
+Copy
+8 10
+1 2 1 2 5 4 5
+1 2
+3 2
+3 1
+1 1
+1 1
+3 5
+3 7
+3 4
+2 2
+3 5
+output
+Copy
+black
+white
+black
+white
+black
+white
+input
+Copy
+8 11
+1 1 2 3 3 6 6
+1 1
+1 1
+1 3
+3 2
+3 4
+3 6
+3 7
+2 3
+1 6
+3 7
+3 6
+output
+Copy
+black
+white
+black
+white
+white
+black
+Note
+The first example is shown on the picture below.
+The second example is shown on the picture below.

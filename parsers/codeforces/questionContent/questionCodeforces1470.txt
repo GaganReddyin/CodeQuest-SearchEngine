@@ -1,0 +1,191 @@
+D. The Strongest Build
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Ivan is playing yet another roguelike computer game. He controls a single hero in the game. The hero has
+n
+equipment slots. There is a list of
+c
+i
+items for the
+i
+-th slot, the
+j
+-th of them increases the hero strength by
+a
+i,j
+. The items for each slot are pairwise distinct and are listed in the increasing order of their strength increase. So,
+a
+i,1
+<
+a
+i,2
+<⋯<
+a
+i,
+c
+i
+.
+For each slot Ivan chooses exactly one item. Let the chosen item for the
+i
+-th slot be the
+b
+i
+-th item in the corresponding list. The sequence of choices
+[
+b
+1
+,
+b
+2
+,…,
+b
+n
+]
+is called a build.
+The strength of a build is the sum of the strength increases of the items in it. Some builds are banned from the game. There is a list of
+m
+pairwise distinct banned builds. It's guaranteed that there's at least one build that's not banned.
+What is the build with the maximum strength that is not banned from the game? If there are multiple builds with maximum strength, print any of them.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤10
+) — the number of equipment slots.
+The
+i
+-th of the next
+n
+lines contains the description of the items for the
+i
+-th slot. First, one integer
+c
+i
+(
+1≤
+c
+i
+≤2⋅
+10
+5
+) — the number of items for the
+i
+-th slot. Then
+c
+i
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,
+c
+i
+(
+1≤
+a
+i,1
+<
+a
+i,2
+<⋯<
+a
+i,
+c
+i
+≤
+10
+8
+).
+The sum of
+c
+i
+doesn't exceed
+2⋅
+10
+5
+.
+The next line contains a single integer
+m
+(
+0≤m≤
+10
+5
+) — the number of banned builds.
+Each of the next
+m
+lines contains a description of a banned build — a sequence of
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+c
+i
+).
+The builds are pairwise distinct, and there's at least one build that's not banned.
+Output
+Print the build with the maximum strength that is not banned from the game. If there are multiple builds with maximum strength, print any of them.
+Examples
+input
+Copy
+3
+3 1 2 3
+2 1 5
+3 2 4 6
+2
+3 2 3
+3 2 2
+output
+Copy
+2 2 3 
+input
+Copy
+3
+3 1 2 3
+2 1 5
+3 2 4 6
+2
+3 2 3
+2 2 3
+output
+Copy
+1 2 3
+input
+Copy
+3
+3 1 2 3
+2 1 5
+3 2 4 6
+2
+3 2 3
+2 2 3
+output
+Copy
+3 2 2
+input
+Copy
+4
+1 10
+1 4
+1 7
+1 3
+0
+output
+Copy
+1 1 1 1 

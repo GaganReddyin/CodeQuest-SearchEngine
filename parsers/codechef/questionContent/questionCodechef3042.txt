@@ -1,0 +1,107 @@
+Adjacent Pairs
+Problem
+Let's call an array
+B
+1
+,B
+2
+,…,B
+M
+good, if
+B
+i
+
+=B
+i+1
+for any
+i with
+1≤i≤M−1.
+You are given a good array of
+N positive integers
+A
+1
+,A
+2
+,A
+3
+,…,A
+N
+.
+You can perform the following operations on this array:
+Choose any index
+i
+(1≤i≤N) and a number
+X
+(1≤X≤10
+9
+). Then, set
+A
+i
+to
+X. After this operation, the array has to remain good.
+You want to perform several operations so that the resulting array will contain exactly two distinct values. Determine the smallest number of operations needed to achieve this goal.
+Input Format
+The first line of input contains the integer
+T, the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+N
+− the length of the array.
+The second line of each test case contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+− elements of the array.
+Output Format
+For each test case, output a single integer
+− the smallest number of operations needed to achieve an array in which there are exactly two distinct values.
+Constraints
+1≤T≤10
+5
+2≤N≤2⋅10
+5
+1≤A
+i
+≤N
+It's guaranteed that
+A
+i
+
+=A
+i+1
+for
+1≤i≤N−1 (that is, the array is good).
+The sum of
+n over all test cases does not exceed
+2⋅10
+5
+.
+Subtasks
+Subtask 1 (20 points): The sum of
+N over all test cases does not exceed
+100
+Subtask 2 (10 points): The sum of
+N over all test cases does not exceed
+500
+Subtask 3 (25 points): The sum of
+N over all test cases does not exceed
+4000
+Subtask 4 (45 points): No additional constraints
+Sample 1:
+Input
+Output
+2
+5
+4 5 2 4 5
+2
+1 2
+3
+0
+Explanation:
+In the first test case, one of the optimal sequences of operations is:
+(4,5,2,4,5)→(2,5,2,4,5)→(2,5,2,4,2)→(2,5,2,5,2).
+In the second test case, the array already contains only two distinct values, so the answer is
+0.

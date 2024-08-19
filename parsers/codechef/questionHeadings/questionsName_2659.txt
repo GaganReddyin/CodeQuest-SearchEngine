@@ -1,0 +1,1 @@
+XOR Times 2 Is Sum

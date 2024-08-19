@@ -1,0 +1,181 @@
+E2. Cats on the Upgrade (hard version)
+time limit per test6 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the hard version of the problem. The only difference between the easy and the hard versions are removal queries, they are present only in the hard version.
+"Interplanetary Software, Inc." together with "Robots of Cydonia, Ltd." has developed and released robot cats. These electronic pets can meow, catch mice and entertain the owner in various ways.
+The developers from "Interplanetary Software, Inc." have recently decided to release a software update for these robots. After the update, the cats must solve the problems about bracket sequences. One of the problems is described below.
+First, we need to learn a bit of bracket sequence theory. Consider the strings that contain characters "(", ")" and ".". Call a string regular bracket sequence (RBS), if it can be transformed to an empty string by one or more operations of removing either single "." characters, or a continuous substring "()". For instance, the string "(()(.))" is an RBS, as it can be transformed to an empty string with the following sequence of removals:
+"(()(.))"
+→
+"(()())"
+→
+"(())"
+→
+"()"
+→
+"".
+We got an empty string, so the initial string was an RBS. At the same time, the string ")(" is not an RBS, as it is not possible to apply such removal operations to it.
+An RBS is simple if this RBS is not empty, doesn't start with ".", and doesn't end with ".".
+Denote the substring of the string
+s
+as its sequential subsegment. In particular,
+s[l…r]=
+s
+l
+s
+l+1
+…
+s
+r
+, where
+s
+i
+is the
+i
+-th character of the string
+s
+.
+Now, move on to the problem statement itself. You are given a string
+s
+, initially consisting of characters "(" and ")". You need to answer the following queries:
+Given two indices,
+l
+and
+r
+(
+1≤l<r≤n
+). It's guaranteed that the
+l
+-th character is equal to "(", the
+r
+-th character is equal to ")", and the characters between them are equal to ".". Then the
+l
+-th and the
+r
+-th characters must be set to ".".
+Given two indices,
+l
+and
+r
+(
+1≤l<r≤n
+), and it's guaranteed that the substring
+s[l…r]
+is a simple RBS. You need to find the number of substrings in
+s[l…r]
+such that they are simple RBS. In other words, find the number of index pairs
+i
+,
+j
+such that
+l≤i<j≤r
+and
+s[i…j]
+is a simple RBS.
+You are an employee in "Interplanetary Software, Inc." and you were given the task to teach the cats to solve the problem above, after the update.
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n≤3⋅
+10
+5
+,
+1≤q≤3⋅
+10
+5
+), the length of the string, and the number of queries.
+The second line contains the string
+s
+, consisting of
+n
+characters "(" and ")".
+Each of the following
+q
+lines contains three integers
+t
+,
+l
+and
+r
+(
+t∈{1,2}
+,
+1≤l<r≤n
+), the queries you need to answer. It is guaranteed that all the queries are valid and correspond to the problem statements.
+Output
+For each query, print a single integer in a separate line, the number of substrings that are simple RBS. The answers must be printed in the same order as the queries are specified in the input.
+Example
+input
+Copy
+9 8
+)(()())()
+2 3 6
+2 2 7
+1 3 4
+2 2 7
+2 2 9
+1 5 6
+1 2 7
+2 8 9
+output
+Copy
+3
+4
+2
+4
+1
+Note
+Consider the example test case.
+The answer to the first query is
+3
+, as there are three suitable substrings:
+s[3…6]
+,
+s[3…4]
+and
+s[5…6]
+.
+The answer to the second query is
+4
+. The substrings are
+s[3…6]
+,
+s[3…4]
+,
+s[5…6]
+and
+s[2…7]
+.
+After the third query, the string becomes ")(..())()".
+The answer to the fourth query is
+2
+. The substrings are
+s[5…6]
+and
+s[2…7]
+. Note that
+s[3…6]
+is not a simple RBS anymore, as it starts with ".".
+The answer to the fifth query is
+4
+. The substrings are
+s[5…6]
+,
+s[2…7]
+,
+s[8…9]
+and
+s[2…9]
+.
+After the sixth query, the string becomes ")(....)()".
+After the seventh query, the string becomes ")......()".
+The answer to the eighth query is
+1
+. The substring is
+s[8…9]
+.

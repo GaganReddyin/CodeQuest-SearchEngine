@@ -1,0 +1,91 @@
+Chef and Queries
+Problem
+Read problem statements in Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Chef wants you to handle
+Q queries. There are two types of queries:
+1 L R X: for each
+i (
+L≤i≤R), add
+(X+i−L)
+2
+to
+A
+i
+2 Y: find the current value of
+A
+Y
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Q lines follow. Each of these lines describes a query in the format described above.
+Output
+For each query of the second type, print a single line containing one integer
+A
+Y
+.
+Constraints
+1≤N,Q≤10
+5
+0≤∣A
+i
+∣≤10
+6
+for each valid
+i
+1≤L≤R≤N
+0≤∣X∣≤10
+6
+1≤Y≤N
+Sample 1:
+Input
+Output
+5 4
+1 10 3 6 5
+1 1 3 5
+2 3
+1 4 5 7
+2 5
+52
+69
+Explanation:
+the sequence after the first query is
+[1+5
+2
+,10+(5+2−1)
+2
+,3+(5+3−1)
+2
+,6,5]=[26,46,52,6,5]
+the second query asks for
+A
+3
+, which is
+52
+the sequence after the third query is
+[26,46,52,6+7
+2
+,5+(7+1)
+2
+]=[26,46,52,55,69]
+the fourth query asks for
+A
+5
+, which is
+69

@@ -1,0 +1,124 @@
+S-T Mincut
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+In an undirected weighted graph, we define an
+s−t mincut cost as the minimum sum of weights of edges which have to be removed from the graph so that there would be no path between vertices
+s and
+t.
+You are given a two-dimensional array
+A with size
+N×N. You are allowed to increase the value of each element of this array by any non-negative integer (these integers may be different for different elements). Afterwards, the array
+A should satisfy the following condition: there is a graph
+G with
+N vertices (numbered
+1 through
+N) such that for each
+i and
+j (
+1≤i,j≤N), the
+i−j mincut cost in
+G is equal to
+A
+ij
+.
+Let's define the cost of the above operation as the sum of all integers added to elements of the initial array
+A. Compute the minimum possible cost.
+Note that: We consider only non-negative weight graphs.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains
+N space-separated integers
+A
+i1
+,A
+i2
+,…,A
+iN
+.
+Output
+For each test case, print a single line containing one integer — the minimum cost.
+Constraints
+1≤T≤100
+1≤N≤1,000
+0≤A
+ij
+≤10
+9
+for each valid
+i,j
+A
+ii
+=0 for each valid
+i
+the sum of
+N over all test cases does not exceed
+2,000
+Subtasks
+Subtask #1 (10 points):
+A
+ij
+≤1 for each valid
+i,j
+Subtask #2 (40 points):
+N≤100
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+2
+0 0
+1 0
+3
+0 0 3
+1 0 1
+2 0 0
+4
+0 0 2 2
+1 0 2 0
+0 3 0 3
+2 4 0 0
+1
+3
+13
+Explanation:
+Example case 1: Of course, we must increase
+A
+12
+by
+1, since
+A
+21
+=1. This is sufficient; one possible graph
+G is shown in the picture below. (Disconnecting vertices
+1 and
+2 costs
+1.)
+Example case 2: Similarly, we must increase
+A
+12
+by
+1,
+A
+31
+by
+1 and
+A
+32
+also by
+1. This is again sufficient and a possible graph
+G is shown in the picture below. (Disconnecting vertices
+1 and
+2 costs
+1, disconnecting vertices
+1,3 costs
+3 and disconnecting
+2,3 costs
+1.)

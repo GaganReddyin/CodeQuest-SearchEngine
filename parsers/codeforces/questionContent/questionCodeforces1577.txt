@@ -1,0 +1,391 @@
+G. A Serious Referee
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Andrea has come up with what he believes to be a novel sorting algorithm for arrays of length
+n
+. The algorithm works as follows.
+Initially there is an array of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Then,
+k
+steps are executed.
+For each
+1≤i≤k
+, during the
+i
+-th step the subsequence of the array
+a
+with indexes
+j
+i,1
+<
+j
+i,2
+<⋯<
+j
+i,
+q
+i
+is sorted, without changing the values with the remaining indexes. So, the subsequence
+a
+j
+i,1
+,
+a
+j
+i,2
+,…,
+a
+j
+i,
+q
+i
+is sorted and all other elements of
+a
+are left untouched.
+Andrea, being eager to share his discovery with the academic community, sent a short paper describing his algorithm to the journal "Annals of Sorting Algorithms" and you are the referee of the paper (that is, the person who must judge the correctness of the paper). You must decide whether Andrea's algorithm is correct, that is, if it sorts any array
+a
+of
+n
+integers.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤40
+,
+0≤k≤10
+) — the length of the arrays handled by Andrea's algorithm and the number of steps of Andrea's algorithm.
+Then
+k
+lines follow, each describing the subsequence considered in a step of Andrea's algorithm.
+The
+i
+-th of these lines contains the integer
+q
+i
+(
+1≤
+q
+i
+≤n
+) followed by
+q
+i
+integers
+j
+i,1
+,
+j
+i,2
+,…,
+j
+i,
+q
+i
+(
+1≤
+j
+i,1
+<
+j
+i,2
+<⋯<
+j
+i,
+q
+i
+≤n
+) — the length of the subsequence considered in the
+i
+-th step and the indexes of the subsequence.
+Output
+If Andrea's algorithm is correct print ACCEPTED, otherwise print REJECTED.
+Examples
+input
+Copy
+4 3
+3 1 2 3
+3 2 3 4
+2 1 2
+output
+Copy
+ACCEPTED
+input
+Copy
+4 3
+3 1 2 3
+3 2 3 4
+3 1 3 4
+output
+Copy
+REJECTED
+input
+Copy
+3 4
+1 1
+1 2
+1 3
+2 1 3
+output
+Copy
+REJECTED
+input
+Copy
+5 2
+3 2 3 4
+5 1 2 3 4 5
+output
+Copy
+ACCEPTED
+Note
+Explanation of the first sample: The algorithm consists of
+3
+steps. The first one sorts the subsequence
+[
+a
+1
+,
+a
+2
+,
+a
+3
+]
+, the second one sorts the subsequence
+[
+a
+2
+,
+a
+3
+,
+a
+4
+]
+, the third one sorts the subsequence
+[
+a
+1
+,
+a
+2
+]
+. For example, if initially
+a=[6,5,6,3]
+, the algorithm transforms the array as follows (the subsequence that gets sorted is highlighted in red)
+[6,5,6,3]→[5,6,6,3]→[5,3,6,6]→[3,5,6,6].
+[
+6
+5
+6
+3
+]
+[
+5
+6
+6
+3
+]
+[
+5
+3
+6
+6
+]
+[
+3
+5
+6
+6
+]
+One can prove that, for any initial array
+a
+, at the end of the algorithm the array
+a
+will be sorted.
+Explanation of the second sample: The algorithm consists of
+3
+steps. The first one sorts the subsequence
+[
+a
+1
+,
+a
+2
+,
+a
+3
+]
+, the second one sorts the subsequence
+[
+a
+2
+,
+a
+3
+,
+a
+4
+]
+, the third one sorts the subsequence
+[
+a
+1
+,
+a
+3
+,
+a
+4
+]
+. For example, if initially
+a=[6,5,6,3]
+, the algorithm transforms the array as follows (the subsequence that gets sorted is highlighted in red)
+[6,5,6,3]→[5,6,6,3]→[5,3,6,6]→[5,3,6,6].
+[
+6
+5
+6
+3
+]
+[
+5
+6
+6
+3
+]
+[
+5
+3
+6
+6
+]
+[
+5
+3
+6
+6
+]
+Notice that
+a=[6,5,6,3]
+is an example of an array that is not sorted by the algorithm.
+Explanation of the third sample: The algorithm consists of
+4
+steps. The first
+3
+steps do nothing because they sort subsequences of length
+1
+, whereas the fourth step sorts the subsequence
+[
+a
+1
+,
+a
+3
+]
+. For example, if initially
+a=[5,6,4]
+, the algorithm transforms the array as follows (the subsequence that gets sorted is highlighted in red)
+[5,6,4]→[5,6,4]→[5,6,4]→[5,6,4]→[4,6,5].
+[
+5
+6
+4
+]
+[
+5
+6
+4
+]
+[
+5
+6
+4
+]
+[
+5
+6
+4
+]
+[
+4
+6
+5
+]
+Notice that
+a=[5,6,4]
+is an example of an array that is not sorted by the algorithm.
+Explanation of the fourth sample: The algorithm consists of
+2
+steps. The first step sorts the subsequences
+[
+a
+2
+,
+a
+3
+,
+a
+4
+]
+, the second step sorts the whole array
+[
+a
+1
+,
+a
+2
+,
+a
+3
+,
+a
+4
+,
+a
+5
+]
+. For example, if initially
+a=[9,8,1,1,1]
+, the algorithm transforms the array as follows (the subsequence that gets sorted is highlighted in red)
+[9,8,1,1,1]→[9,1,1,8,1]→[1,1,1,8,9].
+[
+9
+8
+1
+1
+1
+]
+[
+9
+1
+1
+8
+1
+]
+[
+1
+1
+1
+8
+9
+]
+Since in the last step the whole array is sorted, it is clear that, for any initial array
+a
+, at the end of the algorithm the array
+a
+will be sorted.

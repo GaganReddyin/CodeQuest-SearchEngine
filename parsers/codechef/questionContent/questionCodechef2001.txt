@@ -1,0 +1,143 @@
+Offer for Chef
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is very happy today because he got an offer from Gordon Ramsay himself to work for him in London. Chef wants to prepare a delicious cake for Gordon to impress him, but he does not know that Gordon Ramsay is not easy to impress.
+Gordon cut Chef's cake into
+N small slices (numbered
+1 through
+N), placed in a row in such a way that for each valid
+i, slices
+i and
+i+1 are adjacent. Note that slices
+N and
+1 are not adjacent. For each valid
+i, the
+i-th slice has taste
+A
+i
+. Gordon wants to put special toppings on some slices and then ask Chef to group all slices into
+K clusters in such a way that the slices in each cluster form a contiguous sequence and the sweetness of the cake is maximum possible.
+For each valid
+i, let's denote the topping on the
+i-th slice by
+t
+i
+(
+t
+i
+=0 if there is no topping on this slice); the sweetness of this slice is
+t
+i
+⋅A
+i
+, so the sweetness of a slice without any special topping is
+0.
+The sweetness of a cluster is the total (summed up) sweetness of all slices in this cluster. Let's denote the sweetnesses of all clusters by
+S
+1
+,S
+2
+,…,S
+K
+. The sweetness of the whole cake is computed as
+S
+1
+∗S
+2
+∗…∗S
+K
+, where the operation
+∗ is defined in the following way: for any non-negative integers
+x and
+y such that
+x≥y,
+x∗y=y∗x=∑
+n=0
+⌊log
+2
+(x)⌋
+2
+n
+(⌊
+2
+n
+x
+⌋mod2)(⌊
+2
+n
+y
+⌋mod2). It can be proven that this operation is associative, i.e.
+(x∗y)∗z=x∗(y∗z).
+You should answer
+Q queries. In each query, you are given the toppings on all slices and the number of clusters
+K. Tell Chef the maximum possible sweetness of the cake!
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The next line contains a single integer
+Q.
+For each query, two lines follow. The first of these lines contains a single integer
+K. The second line contains
+N space-separated integers
+t
+1
+,t
+2
+,…,t
+N
+.
+Output
+Print a single line containing one integer — the maximum sweetness.
+Constraints
+1≤Q≤10
+1≤N≤10
+5
+1≤K≤10
+5
+1≤A
+i
+≤10
+15
+for each valid
+i
+0≤t
+i
+≤10 for each valid
+i
+in each query, the number of slices with toppings does not exceed
+50
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+10
+15 5 26 4 3 13 5 5 27 11
+2
+3
+2 3 1 4 7 1 5 1 1 1
+1
+0 0 0 0 0 0 0 1 0 0
+33
+5
+Explanation:
+For the first query, Chef can choose clusters in the following way: cluster
+1 contains slices
+1 and
+2, cluster
+2 contains slices
+3 through
+7 and cluster
+3 contains slices
+8 through
+10. The sweetness of the cake is
+(15⋅2+5⋅3)∗(26⋅1+4⋅4+3⋅7+13⋅1+5⋅5)∗(5⋅1+27⋅1+11⋅1)=33.

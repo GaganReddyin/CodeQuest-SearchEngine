@@ -1,0 +1,170 @@
+AP On Trees
+Problem
+You are given a tree with
+N nodes, where the
+i
+th
+node has a value
+A
+i
+associated to it.
+You need to answer
+Q queries. Each query is of the form:
+X
+Y : Given two nodes
+X and
+Y
+(1≤X,Y≤N), find the length of the longest arithmetic progression formed using the values of nodes on the shortest path between
+X and
+Y.
+More formally, let there be
+M nodes on the shortest path between nodes
+X and
+Y, and
+G denote the shortest path from node
+X to node
+Y, where
+G
+1
+=X,
+G
+M
+=Y, and there exists an edge between nodes
+G
+i
+and
+G
+i+1
+for all
+(1≤i<M).
+Let
+B denote the array
+[A
+G
+1
+,A
+G
+2
+,…,A
+G
+M
+]. Find the length of the longest subarray of
+B which is an arithmetic progression.
+Input Format
+The first line of input will contain a single integer
+N, denoting the number of nodes in the tree.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, the values assigned to each node.
+Next
+N−1 lines contains
+2 space-separated integers
+u and
+v denoting edge between nodes
+u and
+v.
+Next line contains
+Q, the number of queries.
+Next
+Q lines contain
+2 space-separated integers
+X and
+Y.
+Output Format
+For each query, print the length of the longest arithmetic progression formed using the values of nodes on the shortest path between
+X and
+Y.
+Constraints
+1≤N,Q≤2⋅10
+5
+1≤A
+i
+≤10
+9
+1≤u
+i
+,v
+i
+≤N
+Sample 1:
+Input
+Output
+10
+1 3 6 3 5 4 5 4 6 4
+1 2
+2 3
+1 4
+4 5
+6 3
+7 3
+8 5
+9 5
+10 7
+5
+9 10
+6 5
+8 4
+7 2
+6 8
+3
+3
+2
+2
+3
+Explanation:
+The tree looks like:
+Query
+1: The shortest path between nodes
+9 and
+10 is
+[9,5,4,1,2,3,7,10]. The corresponding array
+B=[A
+9
+,A
+5
+,A
+4
+,A
+1
+,A
+2
+,A
+3
+,A
+7
+,A
+10
+]=[6,5,3,1,3,6,5,4].
+The longest subarray of
+B which is also an arithmetic progression are
+[5,3,1] and
+[6,5,4]. Thus, the length of the longest subarray is
+3.
+Query
+2: The shortest path between nodes
+6 and
+5 is
+[6,3,2,1,4,5]. The corresponding array
+B=[A
+6
+,A
+3
+,A
+2
+,A
+1
+,A
+4
+,A
+5
+]=[4,6,3,1,3,5].
+The longest subarray of
+B which is also an arithmetic progression is
+[1,3,5]. Thus, the length of the longest subarray is
+3.

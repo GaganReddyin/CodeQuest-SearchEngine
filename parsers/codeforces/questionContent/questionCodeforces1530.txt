@@ -1,0 +1,220 @@
+E. Mocha and Stars
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mocha wants to be an astrologer. There are
+n
+stars which can be seen in Zhijiang, and the brightness of the
+i
+-th star is
+a
+i
+.
+Mocha considers that these
+n
+stars form a constellation, and she uses
+(
+a
+1
+,
+a
+2
+,…,
+a
+n
+)
+to show its state. A state is called mathematical if all of the following three conditions are satisfied:
+For all
+i
+(
+1≤i≤n
+),
+a
+i
+is an integer in the range
+[
+l
+i
+,
+r
+i
+]
+.
+∑
+i=1
+n
+a
+i
+≤m
+.
+gcd(
+a
+1
+,
+a
+2
+,…,
+a
+n
+)=1
+.
+Here,
+gcd(
+a
+1
+,
+a
+2
+,…,
+a
+n
+)
+denotes the greatest common divisor (GCD) of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+Mocha is wondering how many different mathematical states of this constellation exist. Because the answer may be large, you must find it modulo
+998244353
+.
+Two states
+(
+a
+1
+,
+a
+2
+,…,
+a
+n
+)
+and
+(
+b
+1
+,
+b
+2
+,…,
+b
+n
+)
+are considered different if there exists
+i
+(
+1≤i≤n
+) such that
+a
+i
+≠
+b
+i
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤50
+,
+1≤m≤
+10
+5
+) — the number of stars and the upper bound of the sum of the brightness of stars.
+Each of the next
+n
+lines contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤m
+) — the range of the brightness of the
+i
+-th star.
+Output
+Print a single integer — the number of different mathematical states of this constellation, modulo
+998244353
+.
+Examples
+input
+Copy
+2 4
+1 3
+1 2
+output
+Copy
+4
+input
+Copy
+5 10
+1 10
+1 10
+1 10
+1 10
+1 10
+output
+Copy
+251
+input
+Copy
+5 100
+1 94
+1 96
+1 91
+4 96
+6 97
+output
+Copy
+47464146
+Note
+In the first example, there are
+4
+different mathematical states of this constellation:
+a
+1
+=1
+,
+a
+2
+=1
+.
+a
+1
+=1
+,
+a
+2
+=2
+.
+a
+1
+=2
+,
+a
+2
+=1
+.
+a
+1
+=3
+,
+a
+2
+=1
+.

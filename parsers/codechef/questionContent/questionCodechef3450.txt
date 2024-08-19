@@ -1,0 +1,124 @@
+Escape Plan
+Problem
+“Animal instinct. When faced with danger, seek refuge in the herd.”
+Jun-Ho has come to know about the escape passage route that VIPs use in case of emergency. Jun-Ho is in the leader's office and he is planning his escape from the building.
+The building has a tree-like structure, with the leader's office as the root. Jun-Ho has obtained information on this structure, in the form of a tree on
+N nodes rooted at
+1. The building has some security, which can be calculated as follows:
+Each node of the tree has a value assigned to it — say,
+A
+i
+for node
+i.
+Let
+u be a leaf node of the tree. The security of
+u is defined to be the bitwise OR of all values on the (unique) path from the root to
+u. Let this value be denoted
+L
+u
+.
+The security of the tree is then defined to be the sum of the security of all its leaf nodes, i.e, the sum of
+L
+u
+across all leaf nodes
+u of the tree.
+The tree is considered to be secure when
+L
+u
+>0 for every leaf node
+u of the tree; otherwise it is said to be insecure.
+Jun-Ho would like the security of the tree to be as low as possible when making his escape. To this end, he can perform the following operation zero or more times:
+Pick a node
+1≤u≤N of the tree, and set
+A
+u
+=0.
+However, if the tree ever becomes insecure as a result of an operation, the leader is immediately alerted and will foil Jun-Ho's plan. Thus, Jun-Ho cannot perform an operation that would make the tree insecure.
+Help Jun-Ho find the minimum possible security the tree can have, such that the tree remains secure after every operation.
+Note:
+A leaf is a node of the tree without any child nodes.
+For
+N=1, the root is also considered to be a leaf.
+Given input tree will be secured tree.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N, denoting the number of nodes of the tree.
+The next
+N−1 lines each contain two space-separated integers
+u and
+v, denoting an edge between nodes
+u and
+v in the tree.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the values of the nodes.
+Output Format
+For each test case, output a single integer denoting the minimum security of the tree.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+6
+0≤A
+i
+≤10
+9
+1≤u,v≤N
+The graph given in the input will always be a secured tree
+Sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+3
+1
+5
+5
+1 2
+1 3
+3 4
+3 5
+5 2 3 1 4
+4
+1 2
+1 3
+1 4
+2 2 2 2
+5
+7
+6
+Explanation:
+Test Case 1: No operation can be done, and the minimum security of the tree is thus
+5.
+Test Case 2: Set
+A
+1
+and
+A
+3
+to
+0. It can be seen that
+L
+2
+=2,
+L
+4
+=1 and
+L
+5
+=4; so every leaf has positive security. The security of the tree is
+2+1+4=7, and this is the minimum attainable.
+Test Case 3: The given tree already has minimum security, that being
+6.

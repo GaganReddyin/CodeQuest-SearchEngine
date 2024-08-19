@@ -1,0 +1,25 @@
+Strange Swaps
+Problem
+Chef has an array of N numbers and a magic function which can swap two array values if their distance is strictly greater than K units. Since his friend Pishty is obsessed with sorted array, Chef wants to make the lexicographically minimum array possible by using this magic function. He can use this magic function any number of times. Help him find the solution.
+
+Distance: absolute difference of indices
+Lexicographically minimum: Given two arrays P1,P2….Pr and Q1,Q2….Qr of same length the first one is smaller than the second one for the lexicographical order, if Pi < Qi for the first i where Pi and Qi differ.
+Input
+First line of input contains two space separated integers N and K
+Next line contains N space separated integers A1, A2, ..., AN denoting chef's array.
+Output
+The only line of output contains N space separated integers denoting the lexicographically minimum array possible after all such possible swap operations.
+Constraints
+1 ≤ N,K ≤ 105
+1 ≤ Ai ≤ 109
+  Sample 1:
+Input
+Output
+6 2
+4 6 3 2 5 1
+1 2 3 4 5 6
+Explanation:
+In the first operation, Chef can use his magic function to swap 2 and 4 since their distance = 3 (greater than 2). New array formed: 2 6 3 4 5 1
+Similarly, he can now swap 2 and 1 to obtain: 1 6 3 4 5 2
+Finally he can swap 2 and 6 to obain: 1 2 3 4 5 6.
+This is the lexicographically minimum array possible.

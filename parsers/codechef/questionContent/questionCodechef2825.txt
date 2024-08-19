@@ -1,0 +1,77 @@
+Substring Probability
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given two strings
+P and
+Q. Consider some uniformly randomly and independently chosen non-empty prefix
+X and non-empty suffix
+Y of
+P. A string
+Z is formed by concatenating
+X and
+Y in this order. Find the probability that
+Z is a substring of
+Q.
+It can be shown that the answer can be represented as a fraction
+U/V, where
+U and
+V are non-negative integers and
+V is coprime with
+998,244,353. You should compute
+U⋅V
+−1
+modulo
+998,244,353, where
+V
+−1
+denotes the multiplicative inverse of
+V modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single string
+P.
+The second line contains a single string
+Q.
+Output
+For each test case, print a single line containing one integer
+U⋅V
+−1
+modulo
+998,244,353.
+Constraints
+1≤T≤10
+1≤∣P∣,∣Q∣≤100,000
+P and
+Q contain only lowercase English letters
+Subtasks
+Subtask #1 (25 points):
+∣P∣,∣Q∣≤2,000
+Subtask #2 (75 points): original constraints
+Sample 1:
+Input
+Output
+1
+abac
+aacabc
+811073537
+Explanation:
+Example case 1: There are
+4 possible prefixes
+X and
+4 suffixes
+Y. The only combinations that result in a string
+Z that is a substring of
+Q are:
+X = "a",
+Y = "ac"
+X = "a",
+Y = "c"
+X = "ab",
+Y = "c"
+The probability that
+Z is a substring of
+Q is
+3/16.

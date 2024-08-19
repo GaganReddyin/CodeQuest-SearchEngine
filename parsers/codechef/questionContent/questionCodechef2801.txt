@@ -1,0 +1,101 @@
+Chef and Same Old Recurrence 2
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef has started learning to solve dynamic programming problems recently. He has practiced on a lot of problems already, so he wants to try his hands on the hardest problems in this domain.
+Chef only likes the interesting part of solving dynamic programming problems — specifically, he just likes to divide a problem into beautiful subproblems which consist of solving recurrences; he finds actually solving these recurrences quite boring. Since you are Chef's assistant, your job is solving this boring part for Chef.
+Let's define a recurrent sequence
+{dp(k)}
+k=1
+∞
+with parametres
+A,
+B and
+K as follows:
+dp(1)=K
+for
+n>1,
+dp(n)=A⋅dp(n−1)+B⋅
+i=1
+∑
+n−1
+dp(i)⋅dp(n−i)
+Chef would like you to find the sum
+i=L
+∑
+R
+dp(i)
+2
+. Since this number can be very large, compute it modulo
+10
+9
++7. He wants to do this for
+Q pairs of
+L and
+R.
+Input
+The first line of the input contains four space-separated integers
+N,
+K,
+A and
+B.
+The second line of the input contains
+Q.
+The next
+Q lines contains two space-separated integers
+L and
+R.
+Output
+For every query print a single line containing one integer — the sum
+i=L
+∑
+R
+dp(i)
+2
+modulo
+10
+9
++7.
+Constraints
+1≤N≤10
+7
+1≤Q≤5⋅10
+4
+1≤L≤R≤N
+1≤B,K≤10
+9
++7
+0≤A≤10
+9
++7
+Subtasks
+Subtask #1 (5 points):
+N≤5,000
+Subtask #2 (10 points):
+N≤10
+5
+Subtask #3 (10 points):
+N≤10
+6
+A=0
+Subtask #4 (25 points): original constraints
+Example Input
+4 1 2 1
+2
+4 4
+1 4
+Example Output
+3249
+3403
+Explanation
+The first four terms of this sequence are:
+dp(1)=1
+dp(2)=2⋅dp(1)+dp(1)⋅dp(1)=3
+dp(3)=2⋅dp(2)+dp(1)⋅dp(2)+dp(2)⋅dp(1)=12
+dp(4)=2⋅dp(3)+dp(1)⋅dp(3)+dp(2)⋅dp(2)+dp(3)⋅dp(1)=57
+The answers for first and second query are:
+(dp(4)⋅dp(4))%(10
+9
++7)=3249
+(dp(1)⋅dp(1)+dp(2)⋅dp(2)+dp(3)⋅dp(3)+dp(4)⋅dp(4))%(10
+9
++7)=3403

@@ -1,0 +1,103 @@
+B. Multiplication Table
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Sasha grew up and went to first grade. To celebrate this event her mother bought her a multiplication table
+M
+with
+n
+rows and
+n
+columns such that
+M
+ij
+=
+a
+i
+⋅
+a
+j
+where
+a
+1
+,…,
+a
+n
+is some sequence of positive integers.
+Of course, the girl decided to take it to school with her. But while she was having lunch, hooligan Grisha erased numbers on the main diagonal and threw away the array
+a
+1
+,…,
+a
+n
+. Help Sasha restore the array!
+Input
+The first line contains a single integer
+n
+(
+3⩽n⩽
+10
+3
+), the size of the table.
+The next
+n
+lines contain
+n
+integers each. The
+j
+-th number of the
+i
+-th line contains the number
+M
+ij
+(
+1≤
+M
+ij
+≤
+10
+9
+). The table has zeroes on the main diagonal, that is,
+M
+ii
+=0
+.
+Output
+In a single line print
+n
+integers, the original array
+a
+1
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+). It is guaranteed that an answer exists. If there are multiple answers, print any.
+Examples
+input
+Copy
+5
+0 4 6 2 4
+4 0 6 2 4
+6 6 0 3 6
+2 2 3 0 2
+4 4 6 2 0
+output
+Copy
+2 2 3 1 2 
+input
+Copy
+3
+0 99990000 99970002
+99990000 0 99980000
+99970002 99980000 0
+output
+Copy
+9999 10000 9998 

@@ -1,0 +1,233 @@
+C. Flexible String
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a string
+a
+and a string
+b
+. Both of the strings have length
+n
+. There are at most
+10
+different characters in the string
+a
+. You also have a set
+Q
+. Initially, the set
+Q
+is empty. You can apply the following operation on the string
+a
+any number of times:
+Choose an index
+i
+(
+1≤i≤n
+) and a lowercase English letter
+c
+. Add
+a
+i
+to the set
+Q
+and then replace
+a
+i
+with
+c
+.
+For example, Let the string
+a
+be "
+abecca
+". We can do the following operations:
+In the first operation, if you choose
+i=3
+and
+c=x
+, the character
+a
+3
+=e
+will be added to the set
+Q
+. So, the set
+Q
+will be
+{e}
+, and the string
+a
+will be "
+ab
+x
+–
+–
+cca
+".
+In the second operation, if you choose
+i=6
+and
+c=s
+, the character
+a
+6
+=a
+will be added to the set
+Q
+. So, the set
+Q
+will be
+{e,a}
+, and the string
+a
+will be "
+abxcc
+s
+–
+–
+".
+You can apply any number of operations on
+a
+, but in the end, the set
+Q
+should contain at most
+k
+different characters. Under this constraint, you have to maximize the number of integer pairs
+(l,r)
+(
+1≤l≤r≤n
+) such that
+a[l,r]=b[l,r]
+. Here,
+s[l,r]
+means the substring of string
+s
+starting at index
+l
+(inclusively) and ending at index
+r
+(inclusively).
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤
+10
+5
+,
+0≤k≤10
+) — the length of the two strings and the limit on different characters in the set
+Q
+.
+The second line contains the string
+a
+of length
+n
+. There is at most
+10
+different characters in the string
+a
+.
+The last line contains the string
+b
+of length
+n
+.
+Both of the strings
+a
+and
+b
+contain only lowercase English letters. The sum of
+n
+over all test cases doesn't exceed
+10
+5
+.
+Output
+For each test case, print a single integer in a line, the maximum number of pairs
+(l,r)
+satisfying the constraints.
+Example
+input
+Copy
+6
+3 1
+abc
+abd
+3 0
+abc
+abd
+3 1
+xbb
+xcd
+4 1
+abcd
+axcb
+3 10
+abc
+abd
+10 3
+lkwhbahuqa
+qoiujoncjb
+output
+Copy
+6
+3
+6
+6
+6
+11
+Note
+In the first case, we can select index
+i=3
+and replace it with character
+c=d
+. All possible pairs
+(l,r)
+will be valid.
+In the second case, we can't perform any operation. The
+3
+valid pairs
+(l,r)
+are:
+a[1,1]=b[1,1]=
+"
+a
+",
+a[1,2]=b[1,2]=
+"
+ab
+",
+a[2,2]=b[2,2]=
+"
+b
+".
+In the third case, we can choose index
+2
+and index
+3
+and replace them with the characters
+c
+and
+d
+respectively. The final set
+Q
+will be
+{b}
+having size
+1
+that satisfies the value of
+k
+. All possible pairs
+(l,r)
+will be valid.

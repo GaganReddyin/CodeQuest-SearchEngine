@@ -1,0 +1,132 @@
+H2. Window Signals (hard version)
+time limit per test7 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This is the hard version of the problem. In this version, the constraints on
+h
+and
+w
+are higher.
+A house at the sea has
+h
+floors, all of the same height. The side of the house facing the sea has
+w
+windows at equal distances from each other on every floor. Thus, the windows are positioned in cells of a rectangular grid of size
+h×w
+.
+In every window, the light can be turned either on or off, except for the given
+k
+(at most
+2
+) windows. In these
+k
+windows the light can not be turned on, because it is broken.
+In the dark, we can send a signal to a ship at sea using a configuration of lights turned on and off. However, the ship can not see the position of the lights with respect to the house. Thus, if one configuration of windows with lights on can be transformed into another using parallel translation, these configurations are considered equal. Note that only parallel translation is allowed, but neither rotations nor flips are. Moreover, a configuration without any light at all is not considered valid.
+Find how many different signals the ship can receive and print this number modulo
+998244353
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100
+). The description of the test cases follows.
+The first line of each test case contains three integers
+h
+,
+w
+, and
+k
+ (
+1≤h,w≤200
+;
+0≤k≤min(h⋅w,2)
+) — the height of the house, the number of windows on each floor, and the number of windows with broken lights.
+If
+k>0
+, each of the next
+k
+lines contains two integers
+r
+i
+and
+c
+i
+ (
+1≤
+r
+i
+≤h
+;
+1≤
+c
+i
+≤w
+) — the floor number and the window number with the broken light. The floors are numbered
+1
+to
+h
+from bottom to top, and the windows are numbered
+1
+to
+w
+from left to right. If
+k=2
+, then either
+r
+1
+≠
+r
+2
+or
+c
+1
+≠
+c
+2
+.
+It is guaranteed that the sum of
+h⋅w
+over all test cases does not exceed
+40000
+.
+Output
+For each test case, print a single integer — the number of signals the ship can receive, modulo
+998244353
+.
+Example
+input
+Copy
+10
+1 3 0
+2 2 0
+3 2 0
+4 5 0
+12 7 0
+1 1 1
+1 1
+1 3 1
+1 2
+3 4 1
+3 4
+2 3 2
+1 1
+2 1
+4 5 2
+2 3
+4 2
+output
+Copy
+4
+10
+44
+954368
+34903934
+0
+2
+1696
+10
+253144
+Note
+In the first test case, the ship can receive four different signals: all lights on; lights on in two neighboring windows; lights on in the leftmost and the rightmost windows; or light on in any single window.

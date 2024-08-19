@@ -1,0 +1,194 @@
+D. XOR Counting
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given two positive integers
+n
+and
+m
+. Find the sum of all possible values of
+a
+1
+⨁
+a
+2
+⨁…⨁
+a
+m
+, where
+a
+1
+,
+a
+2
+,…,
+a
+m
+are non-negative integers such that
+a
+1
++
+a
+2
++…+
+a
+m
+=n
+.
+Note that all possible values
+a
+1
+⨁
+a
+2
+⨁…⨁
+a
+m
+should be counted in the sum exactly once.
+As the answer may be too large, output your answer modulo
+998244353
+.
+Here,
+⨁
+denotes the bitwise XOR operation.
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first and only line of each test case contains two integers
+n
+and
+m
+(
+0≤n≤
+10
+18
+,1≤m≤
+10
+5
+) — the sum and the number of integers in the set, respectively.
+Output
+For each test case, output the sum of all possible values of
+a
+1
+⨁
+a
+2
+⨁…⨁
+a
+m
+among all non-negative integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+with
+a
+1
++
+a
+2
++…+
+a
+m
+=n
+. As the answer may be too large, output your answer modulo
+998244353
+.
+Example
+input
+Copy
+7
+69 1
+5 2
+0 10
+420 69
+12 26
+73 34
+1000000000000000000 10
+output
+Copy
+69
+6
+0
+44310
+42
+1369
+216734648
+Note
+For the first test case, we must have
+a
+1
+=69
+, so it's the only possible value of
+a
+1
+, therefore our answer is
+69
+.
+For the second test case,
+(
+a
+1
+,
+a
+2
+)
+can be
+(0,5),(1,4),(2,3),(3,2),(4,1)
+or
+(5,0)
+, in which
+a
+1
+⨁
+a
+2
+are
+5,5,1,1,5,5
+respectively. So
+a
+1
+⨁
+a
+2
+can be
+1
+or
+5
+, therefore our answer is
+1+5=6
+.
+For the third test case,
+a
+1
+,
+a
+2
+,…,
+a
+10
+must be all
+0
+, so
+a
+1
+⨁
+a
+2
+⨁…⨁
+a
+10
+=0
+. Therefore our answer is
+0
+.

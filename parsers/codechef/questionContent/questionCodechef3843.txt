@@ -1,0 +1,106 @@
+Perry learns Binary
+Problem
+Phineas and Ferb have made the treehouse. They have now decided to spend time with Perry who is spending his off day (remember, Chef is dealing with Dr. Doofenshmirtz today). They have taught Perry about the binary number system. Now, to check whether Perry has understood properly, Phineas will ask some queries which Perry needs to answer correctly.
+The tree contains
+N nodes and every node
+i
+(1≤i≤N) has a value
+A
+i
+associated with it. All the edges are bidirectional. The tree is rooted at node
+1. Phineas will ask
+Q queries in total. Each query can be of 2 types:
+1
+u
+v
+x - For every node
+r on the simple path between nodes
+u and
+v, apply bitwise OR operation on the associated value with the value
+x, i.e., replace
+A
+r
+by
+A
+r
+∨x, where
+∨ denotes the bitwise OR operation.
+2
+k
+y - Calculate the maximum value of
+A
+r
+⊕y over all nodes
+r in the subtree of node
+k, where
+⊕ denotes the bitwise XOR operation. The associated values of all the nodes will remain unchanged after this operation.
+Help Perry answer the queries. Afterall, Perry is just a platypus. He doesn't do much.
+###Input
+The first line contains a single integer
+T denoting the number of testcases.
+The first line of each test case contains
+2 space separated integers
+N and
+Q.
+The next line contains
+N space separated integers denoting
+A
+i
+.
+The next
+N−1 lines contain two space separated integers
+a and
+b, each denoting a bidirectional edge between the nodes
+a and
+b in the tree.
+The next
+Q lines describe each query in the format given above.
+###Output
+For each query of type
+2, print the maximum possible XOR value in a new line.
+###Constraints
+1≤T≤10
+3
+1≤N≤3×10
+4
+1≤Q≤5×10
+5
+1≤a,b,u,v,k≤N
+0≤A
+i
+,x,y<2
+17
+Sum of
+N and
+Q over all test cases for a particular test file does not exceed
+3×10
+4
+and
+5×10
+5
+respectively.
+###Sample Input 1 4 3 1 2 2 3 1 2 2 3 1 4 2 1 7 1 1 3 4 2 1 7
+###Sample Output 6 4
+###Explanation The sample tree can be represented as follows:
+For the first query, the nodes in the subtree of node
+1 are nodes
+1,
+2,
+3 and
+4. Consider the bitwise XOR values with the corresponding node values.
+7⊕1=6
+7⊕2=5
+7⊕2=5
+7⊕3=4
+The maximum of these values is
+6. Therefore, the answer to this query is
+6.
+After the update operation, the tree looks like the following representation:
+For the last query, the bitwise XOR values are:
+7⊕5=2
+7⊕6=1
+7⊕6=1
+7⊕3=4
+The maximum of these values is
+4. Therefore, the answer to this query is
+4.

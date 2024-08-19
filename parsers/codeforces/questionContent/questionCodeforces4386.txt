@@ -1,0 +1,209 @@
+D. Cycles in product
+time limit per test7 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider a tree (that is, an undirected connected graph without loops)
+T
+1
+and a tree
+T
+2
+. Let's define their cartesian product
+T
+1
+×
+T
+2
+in a following way.
+Let
+V
+be the set of vertices in
+T
+1
+and
+U
+be the set of vertices in
+T
+2
+.
+Then the set of vertices of graph
+T
+1
+×
+T
+2
+is
+V×U
+, that is, a set of ordered pairs of vertices, where the first vertex in pair is from
+V
+and the second — from
+U
+.
+Let's draw the following edges:
+Between
+(v,
+u
+1
+)
+and
+(v,
+u
+2
+)
+there is an undirected edge, if
+u
+1
+and
+u
+2
+are adjacent in
+U
+.
+Similarly, between
+(
+v
+1
+,u)
+and
+(
+v
+2
+,u)
+there is an undirected edge, if
+v
+1
+and
+v
+2
+are adjacent in
+V
+.
+Please see the notes section for the pictures of products of trees in the sample tests.
+Let's examine the graph
+T
+1
+×
+T
+2
+. How much cycles (not necessarily simple) of length
+k
+it contains? Since this number can be very large, print it modulo
+998244353
+.
+The sequence of vertices
+w
+1
+,
+w
+2
+, ...,
+w
+k
+, where
+w
+i
+∈V×U
+called cycle, if any neighboring vertices are adjacent and
+w
+1
+is adjacent to
+w
+k
+. Cycles that differ only by the cyclic shift or direction of traversal are still considered different.
+Input
+First line of input contains three integers —
+n
+1
+,
+n
+2
+and
+k
+(
+2≤
+n
+1
+,
+n
+2
+≤4000
+,
+2≤k≤75
+) — number of vertices in the first tree, number of vertices in the second tree and the cycle length respectively.
+Then follow
+n
+1
+−1
+lines describing the first tree. Each of this lines contains two integers —
+v
+i
+,
+u
+i
+(
+1≤
+v
+i
+,
+u
+i
+≤
+n
+1
+), which define edges of the first tree.
+Then follow
+n
+2
+−1
+lines, which describe the second tree in the same format.
+It is guaranteed, that given graphs are trees.
+Output
+Print one integer — number of cycles modulo
+998244353
+.
+Examples
+input
+Copy
+2 2 2
+1 2
+1 2
+output
+Copy
+8
+input
+Copy
+2 2 4
+1 2
+1 2
+output
+Copy
+32
+input
+Copy
+2 3 4
+1 2
+1 2
+1 3
+output
+Copy
+70
+input
+Copy
+4 2 2
+1 2
+1 3
+1 4
+1 2
+output
+Copy
+20
+Note
+The following three pictures illustrate graph, which are products of the trees from sample tests.
+In the first example, the list of cycles of length
+2
+is as follows:
+«AB», «BA»
+«BC», «CB»
+«AD», «DA»
+«CD», «DC»

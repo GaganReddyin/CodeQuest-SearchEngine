@@ -1,0 +1,40 @@
+F. Escape Through Leaf
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a tree with n nodes (numbered from 1 to n) rooted at node 1. Also, each node has two values associated with it. The values for i-th node are ai and bi.
+You can jump from a node to any node in its subtree. The cost of one jump from node x to node y is the product of ax and by. The total cost of a path formed by one or more jumps is sum of costs of individual jumps. For every node, calculate the minimum total cost to reach any leaf from that node. Pay attention, that root can never be leaf, even if it has degree 1.
+Note that you cannot jump from a node to itself.
+Input
+The first line of input contains an integer n (2 ≤ n ≤ 105) — the number of nodes in the tree.
+The second line contains n space-separated integers a1,  a2,  ...,  an( - 105  ≤  ai  ≤  105).
+The third line contains n space-separated integers b1,  b2,  ...,  bn( - 105  ≤  bi  ≤  105).
+Next n  -  1 lines contains two space-separated integers ui and vi (1 ≤ ui,  vi ≤  n) describing edge between nodes ui and vi in the tree.
+Output
+Output n space-separated integers, i-th of which denotes the minimum cost of a path from node i to reach any leaf.
+Examples
+input
+Copy
+3
+2 10 -1
+7 -7 5
+2 3
+2 1
+output
+Copy
+10 50 0 
+input
+Copy
+4
+5 -10 5 7
+-8 -80 -3 -10
+2 1
+2 4
+1 3
+output
+Copy
+-300 100 0 0 
+Note
+In the first example, node 3 is already a leaf, so the cost is 0. For node 2, jump to node 3 with cost a2 × b3 = 50. For node 1, jump directly to node 3 with cost a1 × b3 = 10.
+In the second example, node 3 and node 4 are leaves, so the cost is 0. For node 2, jump to node 4 with cost a2 × b4 = 100. For node 1, jump to node 2 with cost a1 × b2 =  - 400 followed by a jump from 2 to 4 with cost a2 × b4 = 100.

@@ -1,0 +1,153 @@
+Binary OP
+Problem
+Chef has a binary string
+S of length
+N.
+He can perform the following operation on string
+S:
+Select a substring of size
+M and flip all the characters of the selected substring, i.e., change
+0 to
+1 and
+1 to
+0.
+There are
+Q queries of the following
+2 types:
+0: Append
+0 to the front of string
+S.
+1: Append
+1 to the front of string
+S.
+After each query, find the minimum number of operations required to make lexicographically smallest possible string from
+S. Note that queries are dependent. Thus, after each query, the string
+S gets updated.
+Note: The input of this problem is large, so use fast input/output methods.
+Input Format
+The first line will contain
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains three integers
+N,
+M, and
+Q.
+The second line of each test case contains the string
+S.
+After that,
+Q lines follow. The
+i
+th
+line contains an integer
+X
+(0≤X≤1) - the
+i
+th
+query. For each query, you need to append
+X to the front of string
+S.
+Output Format
+For each test case, print
+Q lines. The
+i
+th
+line should contain the answer to the
+i
+th
+query.
+Constraints
+1≤T≤10
+5
+2≤M≤N≤10
+5
+1≤Q≤10
+5
+Sum of
+N over all test cases does not exceed
+10
+6
+.
+Sum of
+Q over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+1
+5 2 3
+10011
+1
+0
+1
+2
+2
+5
+Explanation:
+Test Case
+1: Initially,
+S=10011.
+After the first query,
+S becomes
+110011. The lexicographically minimum string into which
+S can be converted is
+000000. The string
+110011 can be converted to
+000000 using
+2 operations:
+Operation
+1: Select the subarray
+[1,2] and flip it. Now,
+S becomes
+000011.
+Operation
+2: Select the subarray
+[5,6] and flip it. Now,
+S becomes
+000000.
+It can be proven that
+110011 cannot be converted into
+000000 in less than
+2 operations.
+After the second query,
+S becomes
+0110011. The lexicographically minimum string into which
+S can be converted is
+0000000. The string
+0110011 can be converted to
+0000000 using
+2 operations:
+Operation
+1: Select the subarray
+[2,3] and flip it. Now,
+S becomes
+0000011.
+Operation
+2: Select the subarray
+[6,7] and flip it. Now,
+S becomes
+0000000.
+It can be proven that
+0110011 cannot be converted into
+0000000 in less than
+2 operations.
+After the third query,
+S becomes
+10110011. The lexicographically minimum string into which
+S can be converted is
+00000001. The string
+10110011 can be converted to
+00000001 using
+5 operations: These operations are
+[1,2],
+[2,3],
+[4,5],
+[5,6], and
+[6,7] in the given order.
+It can be proven that
+S cannot be converted into a lexicographically smaller string than
+00000001 using any number of operations.
+Also, it can be proven that
+10110011 cannot be converted into
+00000001 in less than
+5 operations.

@@ -1,0 +1,82 @@
+Sorting the Binary String
+Problem
+A binary string
+A is called good if it can be sorted (in non-decreasing order) using the following operation:
+Select an
+i
+(1≤i≤∣A∣−1) and swap
+A
+i
+with
+A
+i+1
+.
+This operation can be performed on any
+i at most once.
+For example,
+A=10110 is good because we can perform the following operations:
+10110
+i=1
+01110
+i=4
+01101
+i=3
+01011
+i=2
+00111. On the other hand,
+A=11110000 is not good.
+JJ has a binary string
+S of length
+N and wants to find the number of good substrings of
+S out of all its
+2
+N⋅(N+1)
+non-empty substrings. Can you help him?
+Note: A string
+X is a substring of a string
+Y if
+X can be obtained from
+Y by the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the length of the binary string
+S.
+The second line of each test case contains a binary string
+S of length
+N containing
+0s and
+1s only.
+Output Format
+For each test case, output the number of good substrings of
+S.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+4
+0011
+6
+111000
+10
+17
+Explanation:
+Test Case 1:
+S is already sorted. So all its substrings are good.
+Test Case 2: Some of the substrings of
+S which are good are:
+000,
+1110,
+100,
+111.

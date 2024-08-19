@@ -1,0 +1,141 @@
+J. Flower Shop
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Your friend is running a flower shop. In order to be prepared for the next holidays (when, as usual, sales skyrocket) she asked you to write her a special program that will help to analyze the stocks she has.
+There are
+n
+different types of flowers she can order and each flower of the type
+i
+costs
+w
+i
+. The last holidays were a great success, she sold all flowers she had, so right now all her stocks are empty.
+From this point, she starts routine operations of ordering and selling flowers, while trying to analyze what she has at hand. All of this can be represented as
+m
+queries of three types:
+"
+1
+i
+c
+" — she bought
+c
+flowers of type
+i
+;
+"
+2
+i
+c
+" — she disposed of
+c
+flowers of type
+i
+;
+"
+3
+l
+r
+k
+" — how many variants of bouquets she can make using only flowers of types
+l,l+1,…,r
+with the total cost no more than
+k
+. For simplicity, you can think that a bouquet is a multiset of flowers, and two bouquets are different if they are different as multisets. The cost of a bouquet is the sum of all flowers it has.
+Help your friend and write the program that can process all these queries.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤1000
+;
+1≤m≤1000
+) — the number of flower types and the number of queries.
+The second line contains
+n
+integers
+w
+1
+,
+w
+2
+,…,
+w
+n
+(
+1≤
+w
+i
+≤1000
+) — the cost of one flower of each type.
+The next
+m
+lines contains queries — one per line. Each query has one of three types:
+1
+i
+c
+(
+1≤i≤n
+;
+1≤c≤5000
+);
+2
+i
+c
+(
+1≤i≤n
+;
+1≤c≤5000
+). It's guaranteed that there are at least
+c
+flowers of type
+i
+at this moment;
+3
+l
+r
+k
+(
+1≤l≤r≤n
+;
+1≤k≤5000
+)
+It's guaranteed that the total cost of all flowers in stock after each query doesn't exceed
+5000
+.
+Output
+For each query of the third type, print how many variants of bouquets she can make using only flowers of types
+l,l+1,…,r
+with the total cost no more than
+k
+. Since the answer may be too large, print it modulo
+998244353
+.
+Example
+input
+Copy
+5 12
+1 2 3 2 1
+1 1 5
+1 2 3
+1 3 1
+3 1 5 10
+3 4 5 100
+1 4 4
+1 5 1
+3 2 5 7
+3 1 1 3
+3 1 5 100
+2 1 5
+3 1 5 100
+output
+Copy
+40
+0
+28
+3
+479
+79

@@ -1,0 +1,53 @@
+Is it Sorted or Not, That is the Question
+Problem
+Gru has come to Minionland to recruit some minions for his next robbery. There are
+N minions available for recruitment and each minion has a skill value associated with it. These skill values are given in the array
+A. Gru needs to recruit exactly
+K minions for his next assignment.
+Now, Gru will pick the minions one by one in some random order. An already picked minion cannot be picked again. At every step, Gru picks one minion uniformly at random from the minions which haven't been picked yet. These minions have a very special demand for working in complete harmony. While picking the minions, if at any moment, the skill value of the newly recruited minion is less than the skill value of any of the already recruited minions, then the minions won't be working in harmony.
+Formally, suppose we have picked
+j minions so far. Then, if the skill value of the
+j
+th
+picked minion is less than the skill value of the
+i
+th
+picked minion for any
+i<j, then the minions won't work in harmony.
+Find the probability that the minions will work in harmony. It can be proved that this probability can be represented as an irreducible fraction
+Q
+P
+. You have to print
+P∗Q
+−1
+mod
+10
+9
++7, where
+Q
+−1
+is the inverse element of
+Q modulo
+10
+9
++7.
+###Input:
+The first line will contain two integers
+N,K, which denote the total number of minions and the number of minions to be recruited.
+The second line will contain
+N integers denoting the skill value of the minions. That is, the array
+A.
+###Output: Print the probability in the form of
+P∗Q
+−1
+mod
+10
+9
++7,
+###Constraints
+1≤K≤N≤10
+3
+1≤A[i]≤10
+6
+###Sample Input: 3 2 2 1 2 ###Sample Output: 666666672
+###Explanation: The probability in fractional form is 2/3 as picking the following pair of indices (order matters) will lead to harmonious minions: (1,3) (2,1) (2,3) (3,1). The total possible way of picking indices is 6, and so P/Q=4/6 or 2/3.

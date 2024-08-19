@@ -1,0 +1,96 @@
+Distinct Numbers
+Problem
+You are given two positive integers
+N and
+K. You have to perform the following operation exactly
+K times:
+For the current value of
+N, choose any positive integer
+D such that
+D is a divisor of
+N and multiply
+D with
+N.
+Formally,
+N:=(N∗D) such that
+D is a divisor of current value of
+N.
+Print the sum of all distinct values of the final
+N you can receive after performing the above operation exactly
+K times. Since the answer can be large, print it modulo
+10
+9
++7.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case contains two space-separated integers
+N and
+K respectively, the initial number and the number of operations.
+Output Format
+For each test case, output on a new line the sum of all distinct values of the final
+N you can receive after performing the given operation exactly
+K times. Since the answer can be large, print it modulo
+10
+9
++7.
+Constraints
+1≤T≤1000
+1≤N≤10
+7
+1≤K≤10
+5
+Sample 1:
+Input
+Output
+3
+1 5
+2 2
+10 1
+1
+30
+180
+Explanation:
+Test case
+1:
+1 is the only divisor of
+1. So, the value remains unchanged after the operations. Thus, there is only one distinct value after
+5 operations, which is
+1.
+Test case
+2:
+Operation
+1: Initially,
+N=2 has divisors
+1 and
+2. Thus, after
+1 operation,
+N can be either
+2⋅1=2 or
+2⋅2=4.
+Operation
+2: If
+N=2, the divisors are
+1 and
+2 which can lead to the final values as
+2⋅1=2 and
+2⋅2=4. If
+N=4, the divisors are
+1,2, and
+4. Thus, the final values can be
+4⋅1=4,4⋅2=8, and
+4⋅4=16 .
+The distinct values that can be obtained after applying the operation
+2 times on
+N=2 are
+{2,4,8,16}, and
+2+4+8+16=30.
+Test case
+3: The numbers
+10=10⋅1,
+20=10⋅2,
+50=10⋅5 and
+100=10⋅10 can be obtained after applying the operation
+1 time on
+N=10, and
+10+20+50+100=180.

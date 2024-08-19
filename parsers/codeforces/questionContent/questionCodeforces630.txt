@@ -1,0 +1,130 @@
+E. Almost Perfect
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A permutation
+p
+of length
+n
+is called almost perfect if for all integer
+1≤i≤n
+, it holds that
+|
+p
+i
+−
+p
+−1
+i
+|≤1
+, where
+p
+−1
+is the inverse permutation of
+p
+(i.e.
+p
+−1
+k
+1
+=
+k
+2
+if and only if
+p
+k
+2
+=
+k
+1
+).
+Count the number of almost perfect permutations of length
+n
+modulo
+998244353
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases. The description of each test case follows.
+The first and only line of each test case contains a single integer
+n
+(
+1≤n≤3⋅
+10
+5
+) — the length of the permutation.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+3⋅
+10
+5
+.
+Output
+For each test case, output a single integer — the number of almost perfect permutations of length
+n
+modulo
+998244353
+.
+Example
+input
+Copy
+3
+2
+3
+50
+output
+Copy
+2
+4
+830690567
+Note
+For
+n=2
+, both permutations
+[1,2]
+, and
+[2,1]
+are almost perfect.
+For
+n=3
+, there are only
+6
+permutations. Having a look at all of them gives us:
+[1,2,3]
+is an almost perfect permutation.
+[1,3,2]
+is an almost perfect permutation.
+[2,1,3]
+is an almost perfect permutation.
+[2,3,1]
+is NOT an almost perfect permutation (
+|
+p
+2
+−
+p
+−1
+2
+|=|3−1|=2
+).
+[3,1,2]
+is NOT an almost perfect permutation (
+|
+p
+2
+−
+p
+−1
+2
+|=|1−3|=2
+).
+[3,2,1]
+is an almost perfect permutation.
+So we get
+4
+almost perfect permutations.

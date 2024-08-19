@@ -1,0 +1,187 @@
+String Break
+Problem
+Given two strings
+A and
+B, each of length
+N, where string
+B is a permutation of string
+A.
+You can perform the following operation on string
+A:
+Break string
+A into
+3 substrings (may be empty)
+S
+1
+,
+S
+2
+, and
+S
+3
+such that
+S
+1
++S
+2
++S
+3
+=A, where
+∣S
+1
+∣,∣S
+2
+∣,∣S
+3
+∣≥0;
+Replace
+A with
+S
+3
++S
+2
++S
+1
+.
+Note that,
++ denotes the concatenation of two strings and
+∣S∣ denotes the length of the string
+S.
+You have to convert string
+A to string
+B by performing no more than
+N operations.
+Input Format
+The first line of input contains a single integer
+T - the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N - the length of strings
+A and
+B.
+The second line of each test case contains a string
+A of length
+N.
+The third line of each test case contains a string
+B of length
+N.
+Output Format
+For the first line of each test case output an integer
+M - the number of operations you performed. Note that
+M must be less than equal to
+N.
+Print
+M lines. In each line, output
+3 space-separated integers denoting the length of substrings
+S
+1
+,
+S
+2
+and
+S
+3
+. Note that for all operations
+∣S
+1
+∣+∣S
+2
+∣+∣S
+3
+∣=N.
+Constraints
+1≤T≤3000
+1≤N≤3000
+Strings
+A and
+B contains lowercase latin letters only.
+String
+A and
+B are permutaions of each other.
+Sum of
+N does not exceed
+3000 over all test cases.
+Sample 1:
+Input
+Output
+2
+4
+dcba
+bdac
+3
+abc
+cba
+2
+1 2 1
+0 2 2
+1
+1 1 1
+Explanation:
+Test Case
+1: String
+A can be converted to string
+B by performing operations in following manner -
+Operation
+1 -
+S
+1
+= "d",
+S
+2
+= "cb", and
+S
+3
+= "a", replace
+A with
+S
+3
++S
+2
++S
+1
+.
+A becomes "acbd".
+Operation
+2 -
+S
+1
+= "",
+S
+2
+= "ac", and
+S
+3
+= "bd", replace
+A with
+S
+3
++S
+2
++S
+1
+.
+A becomes "bdac".
+Test Case
+2: String
+A can be converted to string
+B by performing operations in following manner -
+Operation
+1 -
+S
+1
+= "a",
+S
+2
+= "b", and
+S
+3
+= "c", replace
+A with
+S
+3
++S
+2
++S
+1
+.
+A becomes "cba".

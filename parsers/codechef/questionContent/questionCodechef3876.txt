@@ -1,0 +1,233 @@
+A Special Tree 2
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+You are given a tree with
+N nodes (numbered
+1 through
+N).
+The distance
+d(p,q) between two nodes
+p and
+q of the tree is the number of edges on the unique path between them.
+There will be
+Q events each of which can be of the following three types:
+'1 u': A certain node
+u becomes a special node. It is guaranteed that
+u was not special before this event.
+'2 u': A certain node
+u becomes no longer special. It is guaranteed that
+u was special before this event.
+'3 K': You are given a non-negative integer
+K. For a node
+x, define
+f(x)=max{d(x,y):y is special}. You must answer if there exists a node
+x such that
+f(x)=K. In other words, you are asked whether there exists a node
+x whose distance to the farthest special node is
+K. Note that
+x doesn't have to be special. It is guaranteed that there is at least one special node in the tree at the time of this event.
+In the beginning, there are no special nodes.
+Input Format
+The first line of the input contains a single integer
+T - the number of test cases. The description of
+T test cases follow.
+The first line of each test case contains a single integer
+N.
+N−1 lines follow. The
+i-th of these lines contains two integers
+u
+i
+and
+v
+i
+denoting an edge of the tree.
+The next line contains a single integer
+Q - the number of events.
+Q lines follow. The
+i-th of these lines contains two integers
+t
+i
+(the type of the
+i-th query) and
+q
+i
+. If
+t
+i
+=1 or
+t
+i
+=2,
+q
+i
+is the vertex whose status is being changed. If
+t
+i
+=3,
+q
+i
+is the parameter describing a query of the third type.
+Output Format
+For each test case, print a single line.
+In that line, print
+l characters with no spaces between them, where
+l is the number of queries of third type in this test case.
+For each valid
+i, the
+i-th character in the line should be
+1 if there exists a node satisfying the conditions of the
+i-th query of third type in that test case and
+0 otherwise.
+Constraints
+1≤T≤200
+1≤N,Q≤2⋅10
+5
+1≤u
+i
+,v
+i
+≤N
+1≤t
+i
+≤3
+1≤q
+i
+≤N for each
+i such that
+t
+i
+=1 or
+t
+i
+=2
+0≤q
+i
+≤N−1 for each
+i such that
+t
+i
+=3
+The graph described on the input is a tree
+In each test case, there is at least one query of type
+3
+The sum of
+N over all test cases does not exceed
+4⋅10
+5
+The sum of
+Q over all test cases does not exceed
+4⋅10
+5
+Sample 1:
+Input
+Output
+2
+5
+1 2
+1 3
+2 4
+2 5
+7
+1 2
+3 2
+3 3
+1 4
+3 3
+2 2
+3 1
+8
+1 2
+2 3
+2 4
+2 5
+4 6
+5 7
+5 8
+9
+1 1
+1 7
+1 8
+3 2
+3 1
+3 4
+2 1
+3 1
+3 5
+1011
+10110
+Explanation:
+Test case 1: The following picture shows the tree in the first test case:
+In the first query of the third type we have
+K=2 and the node
+2 is the only special node. The special node with the maximum distance from node
+3 is the node
+2 and
+d(3,2)=2=K, so the node
+3 satisfies the requirement. Therefore, the answer to this query is
+1.
+In the second query of the third type we have
+K=3 and the node
+2 is the only special node. There do not exist any nodes at distance
+K=3 from the node
+2. Therefore, the answer to this query is
+0.
+In the third query of the third type we have
+K=3 and the special nodes are
+2 and
+4. The special node with the maximum distance from node
+3 is the node
+4 and
+d(3,4)=3=K, so the node
+3 satisfies the requirement. Therefore, the answer to this query is
+1.
+In the fourth query of the third type we have
+K=1 and the node
+4 is the only special node. The special node with the maximum distance from node
+2 is the node
+4 and
+d(2,4)=1=K, so the node
+2 satisfies the requirement. Therefore, the answer to this query is
+1.
+Test case 2: The following picture shows the tree in the second test case:
+In the first query of the third type we have
+K=2 and the special nodes are
+1,
+7 and
+8. The special node with the maximum distance from node
+2 is the node
+7 and
+d(2,7)=2=K, so the node
+2 satisfies the requirement. Therefore, the answer to this query is
+1.
+In the second query of the third type we have
+K=1 and the special nodes are
+1,
+7 and
+8. There do not exist any nodes at distance
+K=1 from their farthest special node. Therefore, the answer to this query is
+0.
+In the third query of the third type we have
+K=4 and the special nodes are
+1,
+7 and
+8. The special node with the maximum distance from node
+6 is the node
+7 and
+d(6,7)=4=K, so the node
+6 satisfies the requirement. Therefore, the answer to this query is
+1.
+In the fourth query of the third type we have
+K=1 and the special nodes are
+7 and
+8. The special node with the maximum distance from node
+5 is the node
+7 and
+d(5,7)=1=K, so the node
+5 satisfies the requirement. Therefore, the answer to this query is
+1.
+In the fifth query of the third type we have
+K=5 and the special nodes are
+7 and
+8. There do not exist any nodes at distance
+K=5 from their farthest special node. Therefore, the answer to this query is
+0.

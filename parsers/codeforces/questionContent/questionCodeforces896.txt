@@ -1,0 +1,181 @@
+C. Rooks Defenders
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a square chessboard of size
+n×n
+. Rows are numbered from top to bottom with numbers from
+1
+to
+n
+, and columns — from left to right with numbers from
+1
+to
+n
+. So, each cell is denoted with pair of integers
+(x,y)
+(
+1≤x,y≤n
+), where
+x
+is a row number and
+y
+is a column number.
+You have to perform
+q
+queries of three types:
+Put a new rook in cell
+(x,y)
+.
+Remove a rook from cell
+(x,y)
+. It's guaranteed that the rook was put in this cell before.
+Check if each cell of subrectangle
+(
+x
+1
+,
+y
+1
+)−(
+x
+2
+,
+y
+2
+)
+of the board is attacked by at least one rook.
+Subrectangle is a set of cells
+(x,y)
+such that for each cell two conditions are satisfied:
+x
+1
+≤x≤
+x
+2
+and
+y
+1
+≤y≤
+y
+2
+.
+Recall that cell
+(a,b)
+is attacked by a rook placed in cell
+(c,d)
+if either
+a=c
+or
+b=d
+. In particular, the cell containing a rook is attacked by this rook.
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤
+10
+5
+,
+1≤q≤2⋅
+10
+5
+) — the size of the chessboard and the number of queries, respectively.
+Each of the following
+q
+lines contains description of a query. Description begins with integer
+t
+(
+t∈{1,2,3}
+) which denotes type of a query:
+If
+t=1
+, two integers
+x
+and
+y
+follows (
+1≤x,y≤n
+) — coordinated of the cell where the new rook should be put in. It's guaranteed that there is no rook in the cell
+(x,y)
+at the moment of the given query.
+If
+t=2
+, two integers
+x
+and
+y
+follows (
+1≤x,y≤n
+) — coordinates of the cell to remove a rook from. It's guaranteed that there is a rook in the cell
+(x,y)
+at the moment of the given query.
+If
+t=3
+, four integers
+x
+1
+,
+y
+1
+,
+x
+2
+and
+y
+2
+follows (
+1≤
+x
+1
+≤
+x
+2
+≤n
+,
+1≤
+y
+1
+≤
+y
+2
+≤n
+) — subrectangle to check if each cell of it is attacked by at least one rook.
+It's guaranteed that among
+q
+queries there is at least one query of the third type.
+Output
+Print the answer for each query of the third type in a separate line. Print "Yes" (without quotes) if each cell of the subrectangle is attacked by at least one rook.
+Otherwise print "No" (without quotes).
+Example
+input
+Copy
+8 10
+1 2 4
+3 6 2 7 2
+1 3 2
+3 6 2 7 2
+1 4 3
+3 2 6 4 8
+2 4 3
+3 2 6 4 8
+1 4 8
+3 2 6 4 8
+output
+Copy
+No
+Yes
+Yes
+No
+Yes
+Note
+Consider example. After the first two queries the board will look like the following picture (the letter
+R
+denotes cells in which rooks are located, the subrectangle of the query of the third type is highlighted in green):
+Chessboard after performing the third and the fourth queries:
+Chessboard after performing the fifth and the sixth queries:
+Chessboard after performing the seventh and the eighth queries:
+Chessboard after performing the last two queries:

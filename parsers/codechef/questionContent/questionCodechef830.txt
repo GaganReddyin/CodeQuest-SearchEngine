@@ -1,0 +1,69 @@
+Not Divisible
+Problem
+You are given a positive integer
+N.
+Construct an array
+A of length
+N such that:
+−300≤A
+i
+≤300
+∣A
+i
++A
+i+1
++A
+i+2
++…+A
+j
+∣ is not divisible by
+(j−i+1) for all pairs
+(i,j)
+(1≤i<j≤N).
+Note that
+∣X∣ denotes the absolute value of
+X. For example
+∣−2∣=2 and
+∣5∣=5.
+If multiple such arrays exist, print any.
+It is guaranteed that there exists at least one valid array satisfying the given constraints.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of single line of input.
+The only line of each test case contains a positive integer
+N — the length of array
+A.
+Output Format
+For each test case, output on a new line,
+N space-separated integers, denoting array
+A.
+If multiple such arrays exist, print any.
+Constraints
+1≤T≤100
+2≤N≤500
+Sample 1:
+Input
+Output
+2
+2
+3
+10 3
+20 31 14
+Explanation:
+Test case
+1:
+∣10+3∣=13 which is not divisible by
+2−1+1=2. Thus, the array satisfies the conditions.
+Test case
+2: The subarrays are:
+i=1,j=2:
+∣20+31∣=51 which is not divisible by
+2.
+i=2,j=3:
+∣31+14∣=45 which is not divisible by
+2.
+i=1,j=3:
+∣20+31+14∣=65 which is not divisible by
+3.
+Thus, the array satisfies the conditions.

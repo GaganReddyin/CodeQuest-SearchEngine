@@ -1,0 +1,49 @@
+Gru and his Robbery of Mars
+Problem
+Gru has decided to steal Mars - the biggest heist in the universe ever! For this, he requires a shrink gun which is available only in Dr. Zola's lab. So first he decides to steal it by infiltrating his lab. To do this he needs to hack into his system, but Dr. Zola is quite smart and infiltrating his lab won't be so easy. Gru is at the last step of hacking into his system and suddenly a question occurs, answering which can get him access to the lab. The question is:
+You have been initially given an empty String
+S.
+Q updates will be applied on
+S and after every update, you need to tell some information about the new string
+S. Each update consists of a single string
+P, and in each update, you need to append this string
+P in front of
+S. So after each update,
+S is changed by the equation
+S=P+S (where
++ denotes string concatenation). After each update, once
+S has been updated, you need to tell the number of
+distinct
+substrings in
+S. See the sample input/output for more explanation.
+Help Gru in conducting the biggest robbery of the universe!
+###Input:
+The first line contains
+Q (number of updates).
+Next i-th of the next
+Q lines contain a string
+P
+i
+which needs to appended in front of
+S.
+###Output: For each update, print the number of distinct substrings of
+S, in a new line.
+###Constraints
+1≤Q≤10
+5
+1≤∣P
+i
+∣≤10
+5
+∑
+i=1
+Q
+∣P
+i
+∣≤5∗10
+5
+P contains only uppercase characters. That is from
+A to
+Z. ###Sample Input: 2 AB A ###Sample Output: 3 5 ###EXPLANATION: After the first query,
+S=AB, so the distinct substrings are A, B and AB. After the 2nd query,
+S=AAB, and 2 more new distinct substrings are created: AAB, AA. therefore answer is 5 for the second query.

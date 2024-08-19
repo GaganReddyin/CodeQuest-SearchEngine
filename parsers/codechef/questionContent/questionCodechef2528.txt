@@ -1,0 +1,93 @@
+Expectations on a Permutation
+Problem
+A permutation of length
+N is an array of
+N integers
+A=[A
+1
+,A
+2
+,…,A
+N
+] such that every integer from
+1 to
+N appears in it exactly once.
+We define a function over a permutation as follows:
+F(A)=(A
+1
+∗A
+2
+)+(A
+2
+∗A
+3
+)+⋯+(A
+N−2
+∗A
+N−1
+)+(A
+N−1
+∗A
+N
+)
+You are given an integer
+N. What is the expected value of the function
+F over all possible permutations of length
+N?
+The expected value of the function can be represented as a fraction of the form
+Q
+P
+. You are required to print
+P⋅Q
+−1
+(mod1000000007).
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output Format
+For each test case, output on a single line the expected value of the function modulo
+1000000007.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+9
+Sample 1:
+Input
+Output
+2
+2
+3
+2
+333333343
+Explanation:
+Test Case
+1: There are
+2 possible permutations:
+A={1,2} with
+F(A)=2 and
+A={2,1} with
+F(A)=2. Hence the expected value of the function is
+F(A)=
+2
+1
+∗2+
+2
+1
+∗2=2.
+Test Case
+2: There are
+6 possible permutations, with the value of function as
+{5,5,8,8,9,9}. Hence the expected value of the function is
+F(A)=
+6
+5+5+8+8+9+9
+=
+3
+22
+. The required output will be
+333333343, since
+333333343⋅3≡22(mod1000000007).

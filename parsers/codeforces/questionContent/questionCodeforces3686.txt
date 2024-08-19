@@ -1,0 +1,99 @@
+F. Graph Without Long Directed Paths
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a connected undirected graph consisting of
+n
+vertices and
+m
+edges. There are no self-loops or multiple edges in the given graph.
+You have to direct its edges in such a way that the obtained directed graph does not contain any paths of length two or greater (where the length of path is denoted as the number of traversed edges).
+Input
+The first line contains two integer numbers
+n
+and
+m
+(
+2≤n≤2⋅
+10
+5
+,
+n−1≤m≤2⋅
+10
+5
+) — the number of vertices and edges, respectively.
+The following
+m
+lines contain edges: edge
+i
+is given as a pair of vertices
+u
+i
+,
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+). There are no multiple edges in the given graph, i. e. for each pair (
+u
+i
+,
+v
+i
+) there are no other pairs (
+u
+i
+,
+v
+i
+) and (
+v
+i
+,
+u
+i
+) in the list of edges. It is also guaranteed that the given graph is connected (there is a path between any pair of vertex in the given graph).
+Output
+If it is impossible to direct edges of the given graph in such a way that the obtained directed graph does not contain paths of length at least two, print "NO" in the first line.
+Otherwise print "YES" in the first line, and then print any suitable orientation of edges: a binary string (the string consisting only of '0' and '1') of length
+m
+. The
+i
+-th element of this string should be '0' if the
+i
+-th edge of the graph should be directed from
+u
+i
+to
+v
+i
+, and '1' otherwise. Edges are numbered in the order they are given in the input.
+Example
+input
+Copy
+6 5
+1 5
+2 1
+1 4
+3 1
+6 1
+output
+Copy
+YES
+10100
+Note
+The picture corresponding to the first example:
+And one of possible answers:

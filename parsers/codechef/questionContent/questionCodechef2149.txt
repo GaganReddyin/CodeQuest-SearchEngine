@@ -1,0 +1,72 @@
+Permutation AND
+Problem
+Chef's last task in his internship requires him to construct
+2 permutations, each having length
+N, such that the bitwise AND of each pair of elements at every index is the same.
+Formally, if the permutations are
+A and
+B, then, the value
+A
+i
+&B
+i
+must be constant over all
+1≤i≤N.
+Help Chef by providing him
+2 such permutations. If it is not possible to construct such permutations, print
+−1 instead.
+A permutation is a sequence of integers from
+1 to
+N of length
+N containing each number exactly once.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, a single integer
+N denoting the size of the required permutations.
+Output Format
+If there are valid permutations that satisfy the required condition, then:
+In the first line, output
+N space-separated integers denoting the permutation
+A.
+In the second line, output
+N space-separated integers denoting the permutation
+B.
+If there is no valid pair of permutations, print -1 in a single line.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+1
+1
+1 2
+2 1
+-1
+Explanation:
+Test case
+1: There is only one element in each array and the resultant bitwise AND is
+1. Thus,
+A=[1] and
+B=[1].
+Test case
+2: Let
+A=[1,2] and
+B=[2,1]. The resultant bitwise AND of each pair at any index is equal to
+0. So, this is a valid pair of permutations.
+Test case
+3: There are
+6 permutations of length
+3. It can be seen that any pair of the
+6 permutations does not satisfy the stated condition.

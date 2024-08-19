@@ -1,0 +1,107 @@
+C. Paint
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a
+1
+by
+n
+pixel image. The
+i
+-th pixel of the image has color
+a
+i
+. For each color, the number of pixels of that color is at most
+20
+.
+You can perform the following operation, which works like the bucket tool in paint programs, on this image:
+pick a color — an integer from
+1
+to
+n
+;
+choose a pixel in the image;
+for all pixels connected to the selected pixel, change their colors to the selected color (two pixels of the same color are considered connected if all the pixels between them have the same color as those two pixels).
+Compute the minimum number of operations needed to make all the pixels in the image have the same color.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+3
+).
+The first line of each test case contains a single integer
+n
+(
+1≤n≤3⋅
+10
+3
+) — the number of pixels in the image.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — the colors of the pixels in the image.
+Note: for each color, the number of pixels of that color is at most
+20
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+3⋅
+10
+3
+.
+Output
+For each test case, print one integer: the minimum number of operations needed to make all the pixels in the image have the same color.
+Example
+input
+Copy
+3
+5
+1 2 3 2 1
+4
+1 1 2 2
+5
+1 2 1 4 2
+output
+Copy
+2
+1
+3
+Note
+In the first example, the optimal solution is to apply the operation on the third pixel changing its color to
+2
+and then to apply the operation on any pixel that has color
+2
+changing its color and the color of all pixels connected to it to
+1
+. The sequence of operations is then:
+[1,2,3,2,1]→[1,2,2,2,1]→[1,1,1,1,1]
+.
+In the second example, we can either change the
+1
+s to
+2
+s in one operation or change the
+2
+s to
+1
+s also in one operation.
+In the third example, one possible way to make all the pixels have the same color is to apply the operation on the first, third and the fourth pixel each time changing its color to
+2
+.

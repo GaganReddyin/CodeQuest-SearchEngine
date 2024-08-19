@@ -1,0 +1,157 @@
+D. Social Network
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+William arrived at a conference dedicated to cryptocurrencies. Networking, meeting new people, and using friends' connections are essential to stay up to date with the latest news from the world of cryptocurrencies.
+The conference has
+n
+participants, who are initially unfamiliar with each other. William can introduce any two people,
+a
+and
+b
+, who were not familiar before, to each other.
+William has
+d
+conditions,
+i
+'th of which requires person
+x
+i
+to have a connection to person
+y
+i
+. Formally, two people
+x
+and
+y
+have a connection if there is such a chain
+p
+1
+=x,
+p
+2
+,
+p
+3
+,…,
+p
+k
+=y
+for which for all
+i
+from
+1
+to
+k−1
+it's true that two people with numbers
+p
+i
+and
+p
+i+1
+know each other.
+For every
+i
+(
+1≤i≤d
+) William wants you to calculate the maximal number of acquaintances one person can have, assuming that William satisfied all conditions from
+1
+and up to and including
+i
+and performed exactly
+i
+introductions. The conditions are being checked after William performed
+i
+introductions. The answer for each
+i
+must be calculated independently. It means that when you compute an answer for
+i
+, you should assume that no two people have been introduced to each other yet.
+Input
+The first line contains two integers
+n
+and
+d
+(
+2≤n≤
+10
+3
+,1≤d≤n−1
+), the number of people, and number of conditions, respectively.
+Each of the next
+d
+lines each contain two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n,
+x
+i
+≠
+y
+i
+), the numbers of people which must have a connection according to condition
+i
+.
+Output
+Output
+d
+integers.
+i
+th number must equal the number of acquaintances the person with the maximal possible acquaintances will have, if William performed
+i
+introductions and satisfied the first
+i
+conditions.
+Examples
+input
+Copy
+7 6
+1 2
+3 4
+2 4
+7 6
+6 5
+1 7
+output
+Copy
+1
+1
+3
+3
+3
+6
+input
+Copy
+10 8
+1 2
+2 3
+3 4
+1 4
+6 7
+8 9
+8 10
+1 4
+output
+Copy
+1
+2
+3
+4
+5
+5
+6
+8
+Note
+The explanation for the first test case:
+In this explanation, the circles and the numbers in them denote a person with the corresponding number. The line denotes that William introduced two connected people. The person marked with red has the most acquaintances. These are not the only correct ways to introduce people.

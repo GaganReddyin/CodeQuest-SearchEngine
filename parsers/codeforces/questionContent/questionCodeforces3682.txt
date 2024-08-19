@@ -1,0 +1,20 @@
+C. Mystery Circuit
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Input
+The input contains a single integer
+a
+(
+0≤a≤15
+).
+Output
+Output a single integer.
+Example
+input
+Copy
+3
+output
+Copy
+13

@@ -1,0 +1,184 @@
+C. Water Balance
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+water tanks in a row,
+i
+-th of them contains
+a
+i
+liters of water. The tanks are numbered from
+1
+to
+n
+from left to right.
+You can perform the following operation: choose some subsegment
+[l,r]
+(
+1≤l≤r≤n
+), and redistribute water in tanks
+l,l+1,…,r
+evenly. In other words, replace each of
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+by
+a
+l
++
+a
+l+1
++⋯+
+a
+r
+r−l+1
+. For example, if for volumes
+[1,3,6,7]
+you choose
+l=2,r=3
+, new volumes of water will be
+[1,4.5,4.5,7]
+. You can perform this operation any number of times.
+What is the lexicographically smallest sequence of volumes of water that you can achieve?
+As a reminder:
+A sequence
+a
+is lexicographically smaller than a sequence
+b
+of the same length if and only if the following holds: in the first (leftmost) position where
+a
+and
+b
+differ, the sequence
+a
+has a smaller element than the corresponding element in
+b
+.
+Input
+The first line contains an integer
+n
+(
+1≤n≤
+10
+6
+) — the number of water tanks.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+) — initial volumes of water in the water tanks, in liters.
+Because of large input, reading input as doubles is not recommended.
+Output
+Print the lexicographically smallest sequence you can get. In the
+i
+-th line print the final volume of water in the
+i
+-th tank.
+Your answer is considered correct if the absolute or relative error of each
+a
+i
+does not exceed
+10
+−9
+.
+Formally, let your answer be
+a
+1
+,
+a
+2
+,…,
+a
+n
+, and the jury's answer be
+b
+1
+,
+b
+2
+,…,
+b
+n
+. Your answer is accepted if and only if
+|
+a
+i
+−
+b
+i
+|
+max(1,|
+b
+i
+|)
+≤
+10
+−9
+for each
+i
+.
+Examples
+input
+Copy
+4
+7 5 5 7
+output
+Copy
+5.666666667
+5.666666667
+5.666666667
+7.000000000
+input
+Copy
+5
+7 8 8 10 12
+output
+Copy
+7.000000000
+8.000000000
+8.000000000
+10.000000000
+12.000000000
+input
+Copy
+10
+3 9 5 5 1 7 5 3 8 7
+output
+Copy
+3.000000000
+5.000000000
+5.000000000
+5.000000000
+5.000000000
+5.000000000
+5.000000000
+5.000000000
+7.500000000
+7.500000000
+Note
+In the first sample, you can get the sequence by applying the operation for subsegment
+[1,3]
+.
+In the second sample, you can't get any lexicographically smaller sequence.

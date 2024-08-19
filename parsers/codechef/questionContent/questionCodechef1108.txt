@@ -1,0 +1,121 @@
+XOR N-bonacci Sequence
+Problem
+###Read problems statements in Hindi, Mandarin Chinese, Vietnamese and Bengali as well.
+An
+N-bonacci sequence is an infinite sequence
+F
+1
+,F
+2
+,… such that for each integer
+i>N,
+F
+i
+is calculated as
+f(F
+i−1
+,F
+i−2
+,…,F
+i−N
+), where
+f is some function. A XOR
+N-bonacci sequence is an
+N-bonacci sequence for which
+f(F
+i−1
+,F
+i−2
+,…,F
+i−N
+)=F
+i−1
+⊕F
+i−2
+⊕…⊕F
+i−N
+, where
+⊕ denotes the bitwise XOR operation.
+Recently, Chef has found an interesting sequence
+S
+1
+,S
+2
+,…, which is obtained from prefix XORs of a XOR
+N-bonacci sequence
+F
+1
+,F
+2
+,…. Formally, for each positive integer
+i,
+S
+i
+=F
+1
+⊕F
+2
+⊕…⊕F
+i
+. You are given the first
+N elements of the sequence
+F, which uniquely determine the entire sequence
+S.
+You should answer
+Q queries. In each query, you are given an index
+k and you should calculate
+S
+k
+. It is guaranteed that in each query,
+S
+k
+does not exceed
+10
+50
+.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+F
+1
+,F
+2
+,…,F
+N
+.
+The following
+Q lines describe queries. Each of these lines contains a single integer
+k.
+Output
+For each query, print a single line containing one integer
+S
+k
+.
+Constraints
+1≤N,Q≤10
+5
+0≤F
+i
+≤10
+9
+for each
+i such that
+1≤i≤N
+1≤k≤10
+9
+Sample 1:
+Input
+Output
+3 4
+0 1 2
+7
+2
+5
+1000000000
+3
+1
+0
+0

@@ -1,0 +1,163 @@
+Restore Communication
+Problem
+There are
+N people lost in a forest, and each person has a radio. The
+i-th person's radio can transmit
+K
+i
+frequencies. Let the list of frequencies that the
+i-th person can transmit be
+F
+i
+=[f
+(i,1)
+,f
+(i,2)
+,…,f
+(i,K
+i
+)
+].
+The
+i-th person and
+j-th person can communicate with each other if at least one of the following holds true:
+They can both transmit a common frequency i.e. (
+f
+(i,a)
+=f
+(j,b)
+for some
+a,b).
+There exists a person
+k who can communicate with both
+i-th person and
+j-th person.
+You want to ensure that every pair of people can communicate with each other. To do so, you can perform the following operation:
+You can transfer a frequency from one person's radio to another, i.e. select
+i and
+j
+(1≤i,j≤N), delete a frequency
+x (present in
+F
+i
+) from
+F
+i
+, and append it to
+F
+j
+.
+Determine the minimum number of operations to ensure that every pair of people can communicate with each other. If it is not possible, print
+−1.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N — the number of people
+The next
+N lines describe the list of frequencies for each person.
+The
+i-th of these
+N lines contains an integer
+K
+i
+, the number of frequencies the radio of the
+i-th person can transmit. This is followed by
+K
+i
+unique integers:
+f
+(i,1)
+,f
+(i,2)
+,…,f
+(i,K
+i
+)
+, describing the list of frequencies for the
+i-th person.
+Output Format
+For each test case, output on a new line the minimum number of operations to ensure that every pair of people can communicate with each other.
+Constraints
+1≤T≤10
+4
+1≤N≤3⋅10
+5
+0≤K
+i
+≤3⋅10
+5
+1≤f
+(i,j)
+≤10
+9
+Sum of
+N over all testcases does not exceed
+3⋅10
+5
+Sum of
+∑
+i=1
+N
+K
+i
+over all testcases does not exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+5
+3
+2 3 4
+2 5 6
+2 5 6
+7
+2 3 4
+2 5 6
+2 5 6
+2 7 8
+2 7 8
+2 13 14
+2 14 13
+8
+1 7
+1 8
+1 11
+1 12
+2 9 10
+2 9 10
+2 9 10
+2 9 10
+1
+1 1000000000
+1
+1 11221
+1
+3
+-1
+0
+0
+Explanation:
+Test Case 1: We can transfer frequency
+5 from person
+3 to person
+1. We need only
+1 operation in this case.
+Test Case 2: We need a minimum of
+3 operations. One possible sequence of operations is:
+Transfer frequency
+5 from person
+2 to person
+1
+Transfer frequency
+7 from person
+4 to person
+3
+Transfer frequency
+13 from person
+6 to person
+5
+Test Case 3: It can be shown that it's impossible to ensure that every pair of people can communicate with each other, using any number of operations. So the answer for this case is
+−1.

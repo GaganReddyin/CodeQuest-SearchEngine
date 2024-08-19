@@ -1,0 +1,96 @@
+Expected Value
+Problem
+Stack has a positive integer
+P(P>1).
+He starts a game where his initial score is
+0.
+In the
+i
+th
+turn, with a probability of
+2
+1
+, Stack adds
+P
+i−1
+1
+to his score.
+Stack stops after
+N turns.
+Let
+S
+i
+be his score after
+i turns and
+F(i) denote the expected value of
+S
+i
+2
+.
+For each integer
+i(1≤i≤N), find the value of
+F(i) modulo
+998244353.
+Input Format
+The only line of input contains two space-separated positive integers
+N and
+P, as mentioned in the statement.
+Output Format
+Print
+N space-separated integers. For each integer
+i(1≤i≤N), output the value of
+F(i) modulo
+998244353.
+Formally, let
+M=998244353. It can be shown that the answer can be expressed as an irreducible fraction
+y
+x
+, where
+x and
+y are integers and
+y
+
+≡0(modM).
+Output the integer equal to
+x⋅y
+−1
+modM.
+In other words, output such an integer
+z that
+0≤z<M and
+z⋅y≡x(modM). .
+Constraints
+1≤N≤3⋅10
+5
+2≤P≤10
+5
+Sample 1:
+Input
+Output
+2 2
+499122177 124780545
+Explanation:
+S
+1
+can be
+0 or
+1 with equal probability. Thus
+F(1)=
+2
+0⋅0
++
+2
+1⋅1
+=
+2
+1
+.
+F(2)=
+8
+7
+.
+Sample 2:
+Input
+Output
+10 343
+499122177 379526990 822885144 761122022 256959043 151932103 340445396 758502677 478338987 125853909

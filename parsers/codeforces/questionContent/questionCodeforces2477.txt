@@ -1,0 +1,150 @@
+E. Inversion SwapSort
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Madeline has an array
+a
+of
+n
+integers. A pair
+(u,v)
+of integers forms an inversion in
+a
+if:
+1≤u<v≤n
+.
+a
+u
+>
+a
+v
+.
+Madeline recently found a magical paper, which allows her to write two indices
+u
+and
+v
+and swap the values
+a
+u
+and
+a
+v
+. Being bored, she decided to write a list of pairs
+(
+u
+i
+,
+v
+i
+)
+with the following conditions:
+all the pairs in the list are distinct and form an inversion in
+a
+.
+all the pairs that form an inversion in
+a
+are in the list.
+Starting from the given array, if you swap the values at indices
+u
+1
+and
+v
+1
+, then the values at indices
+u
+2
+and
+v
+2
+and so on, then after all pairs are processed, the array
+a
+will be sorted in non-decreasing order.
+Construct such a list or determine that no such list exists. If there are multiple possible answers, you may find any of them.
+Input
+The first line of the input contains a single integer
+n
+(
+1≤n≤1000
+) — the length of the array.
+Next line contains
+n
+integers
+a
+1
+,
+a
+2
+,...,
+a
+n
+(1≤
+a
+i
+≤
+10
+9
+)
+ — elements of the array.
+Output
+Print -1 if no such list exists. Otherwise in the first line you should print a single integer
+m
+(
+0≤m≤
+n(n−1)
+2
+) — number of pairs in the list.
+The
+i
+-th of the following
+m
+lines should contain two integers
+u
+i
+,
+v
+i
+(
+1≤
+u
+i
+<
+v
+i
+≤n
+).
+If there are multiple possible answers, you may find any of them.
+Examples
+input
+Copy
+3
+3 1 2
+output
+Copy
+2
+1 3
+1 2
+input
+Copy
+4
+1 8 1 6
+output
+Copy
+2
+2 4
+2 3
+input
+Copy
+5
+1 1 1 2 2
+output
+Copy
+0
+Note
+In the first sample test case the array will change in this order
+[3,1,2]→[2,1,3]→[1,2,3]
+.
+In the second sample test case it will be
+[1,8,1,6]→[1,6,1,8]→[1,1,6,8]
+.
+In the third sample test case the array is already sorted.

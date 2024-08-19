@@ -1,0 +1,117 @@
+A. Neko Finds Grapes
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+On a random day, Neko found
+n
+treasure chests and
+m
+keys. The
+i
+-th chest has an integer
+a
+i
+written on it and the
+j
+-th key has an integer
+b
+j
+on it. Neko knows those chests contain the powerful mysterious green Grapes, thus Neko wants to open as many treasure chests as possible.
+The
+j
+-th key can be used to unlock the
+i
+-th chest if and only if the sum of the key number and the chest number is an odd number. Formally,
+a
+i
++
+b
+j
+≡1(mod2)
+. One key can be used to open at most one chest, and one chest can be opened at most once.
+Find the maximum number of chests Neko can open.
+Input
+The first line contains integers
+n
+and
+m
+(
+1≤n,m≤
+10
+5
+) — the number of chests and the number of keys.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — the numbers written on the treasure chests.
+The third line contains
+m
+integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+(
+1≤
+b
+i
+≤
+10
+9
+) — the numbers written on the keys.
+Output
+Print the maximum number of chests you can open.
+Examples
+input
+Copy
+5 4
+9 14 6 2 11
+8 4 7 20
+output
+Copy
+3
+input
+Copy
+5 1
+2 4 6 8 10
+5
+output
+Copy
+1
+input
+Copy
+1 4
+10
+20 30 40 50
+output
+Copy
+0
+Note
+In the first example, one possible way to unlock
+3
+chests is as follows:
+Use first key to unlock the fifth chest,
+Use third key to unlock the second chest,
+Use fourth key to unlock the first chest.
+In the second example, you can use the only key to unlock any single chest (note that one key can't be used twice).
+In the third example, no key can unlock the given chest.

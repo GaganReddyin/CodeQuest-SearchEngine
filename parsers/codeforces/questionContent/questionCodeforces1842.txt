@@ -1,0 +1,21 @@
+F. Math
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+*The two images are equivalent, feel free to use either one.
+Input
+The input contains a single integer
+a
+(
+−100≤a≤100
+).
+Output
+Output the result – an integer number.
+Example
+input
+Copy
+1
+output
+Copy
+1

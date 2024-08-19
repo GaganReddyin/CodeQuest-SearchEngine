@@ -1,0 +1,231 @@
+From Zero to Infinity
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Alice and Bob created
+N and
+M recipes, respectively (
+N,M≥1), and submitted them to Chef for evaluation. Each recipe is represented by a string containing only lowercase English letters. Let's denote Alice's recipes by
+A
+1
+,A
+2
+,…,A
+N
+and Bob's recipes by
+B
+1
+,B
+2
+,…,B
+M
+.
+Accidentally, Chef mixed up those recipes ― now, he has
+L=N+M recipes in a sequence
+S
+1
+,S
+2
+,…,S
+L
+. Thankfully, the recipes created by Alice and Bob are distinguishable from each other. It is well-known that for each recipe
+s created by Alice, the following property holds, and for each recipe created by Bob, it does not hold: For each
+1≤l<r≤∣s∣, the substring
+s
+l
+,s
+l+1
+,…,s
+r
+contains at least as many vowels as consonants. The letters 'a', 'e', 'i', 'o', 'u' are vowels, while the other letters are consonants.
+The score of a candidate who made
+K recipes is calculated as the product of
+fx
+c
+K
+x
+c
+for all letters
+c that occur in at least one of these recipes; here,
+x
+c
+is the number of recipes which contain the letter
+c and
+fx
+c
+is the total number of occurrences of this letter in all
+K recipes.
+Let's denote the scores of Alice and Bob by
+sc
+A
+and
+sc
+B
+respectively. Chef wants to know their ratio
+sc
+A
+/sc
+B
+. We know that Chef is a legendary cook, but he is not very good at calculating, so he is asking you to find that number.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+L.
+L lines follow. For each valid
+i, the
+i-th of these lines contains a single string
+S
+i
+.
+Output
+For each test case, if the ratio of scores exceeds
+10
+7
+, print a single line containing the string "Infinity" (without quotes); otherwise, print a single line containing one real number
+sc
+A
+/sc
+B
+.
+Your answer will be considered correct if its absolute or relative error does not exceed
+10
+−6
+. It is guaranteed that
+sc
+A
+/sc
+B
+does not lie in the range
+10
+7
+±10.
+Constraints
+1≤T≤10
+5
+2≤L≤10
+5
+2≤∣S
+i
+∣≤10
+5
+for each valid
+i
+for each valid
+i,
+S
+i
+contains only lowercase English letters
+the sum of
+∣S
+1
+∣+∣S
+2
+∣+…+∣S
+L
+∣ over all test cases does not exceed
+10
+7
+Subtasks
+Subtask #1 (25 points):
+L≤10
+∣S
+i
+∣≤10 for each valid
+i
+Subtask #2 (75 points): original constraints
+Sample 1:
+Input
+Output
+2
+4
+aba
+abc
+bab
+aac
+3
+aba
+baab
+abc
+1.1250000
+0.0277778
+Explanation:
+Example case 1: The recipes "aba" and "aac" are created by Alice, while the recipes "abc" and "bab" are created by Bob. The scores are:
+sc
+A
+=
+fx
+a
+N
+x
+a
+⋅
+fx
+b
+N
+x
+b
+⋅
+fx
+c
+N
+x
+c
+=
+4
+2
+2
+⋅
+1
+2
+1
+⋅
+1
+2
+1
+=
+8
+1
+sc
+B
+=
+fx
+a
+M
+x
+a
+⋅
+fx
+b
+M
+x
+b
+⋅
+fx
+c
+M
+x
+c
+=
+2
+2
+2
+⋅
+3
+2
+2
+⋅
+1
+2
+1
+=
+9
+1
+sc
+B
+sc
+A
+=
+1/9
+1/8
+=1.125

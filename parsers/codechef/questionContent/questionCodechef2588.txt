@@ -1,0 +1,94 @@
+Masha and Minions
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Masha has
+N minions. Each minion has two characteristics: power
+a and endurance
+b. Masha thinks that a non-empty set of minions
+{m
+1
+,m
+2
+,…,m
+k
+} with characteristics
+(a
+m
+1
+,b
+m
+1
+),(a
+m
+2
+,b
+m
+2
+),…,(a
+m
+k
+,b
+m
+k
+) is good if the mean endurance of this set doesn't exceed the minimum power in it, i.e. if
+min(a
+m
+1
+,a
+m
+2
+,…,a
+m
+k
+)≥(b
+m
+1
++b
+m
+2
++⋯+b
+m
+k
+)/k.
+Masha would like to choose a good subset of her minions and give these minions to Mark. Your task is to calculate the maximum number of minions Masha can give to Mark.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The following
+N lines describe minions. Each of these lines contains two space-separated integers
+a and
+b denoting the power and endurance of one minion.
+Output
+For each test case, print a single line containing one number — the size of the largest good set of minions, or
+0 if no such set exists.
+Constraints
+1≤T≤1,000
+1≤N≤4⋅10
+5
+1≤a,b≤10
+9
+the sum of
+N for all test cases does not exceed
+4⋅10
+5
+Sample 1:
+Input
+Output
+2
+3
+1 4
+3 3
+2 1
+2
+3 5
+1 4
+2
+0
+Explanation:
+Example case 1: The set of minions
+{2,3} is good, since
+min(3,2)≥(3+1)/2.
+Example case 2: There is no non-empty good subset of minions.

@@ -1,0 +1,228 @@
+F. Hossam and Range Minimum Query
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Hossam gives you a sequence of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+of length
+n
+. Moreover, he will give you
+q
+queries of type
+(l,r)
+. For each query, consider the elements
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+. Hossam wants to know the smallest number in this sequence, such that it occurs in this sequence an odd number of times.
+You need to compute the answer for each query before process the next query.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+), the length of the sequence.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+).
+The third line contains one integer
+q
+(
+1≤q≤2⋅
+10
+5
+), the number of queries.
+Each of the next
+q
+lines contains two integers
+a
+and
+b
+(
+0≤a,b≤2⋅
+10
+9
+), the numbers used to encode the queries.
+Let
+ans
+i
+be the answer on the
+i
+-th query, and
+ans
+0
+be zero. Then
+l
+i
+=
+a
+i
+⊕
+ans
+i−1
+,
+l
+⊕
+r
+i
+=
+b
+i
+⊕
+ans
+i−1
+,
+b
+⊕
+where
+l
+i
+,
+r
+i
+are parameters of the
+i
+-th query and
+⊕
+means the bitwise exclusive or operation. It is guaranteed that
+1≤l≤r≤n
+.
+Output
+For each query, print the smallest number that occurs an odd number of times on the given segment of the sequence.
+If there is no such number, print
+0
+.
+Examples
+input
+Copy
+5
+1 2 1 2 2
+6
+1 2
+0 2
+0 6
+0 5
+2 2
+3 7
+output
+Copy
+1
+2
+1
+0
+2
+2
+input
+Copy
+10
+51 43 69 48 23 52 48 76 19 55
+10
+1 1
+57 57
+54 62
+20 27
+56 56
+79 69
+16 21
+18 30
+25 25
+62 61
+output
+Copy
+51
+55
+19
+48
+76
+19
+23
+19
+55
+19
+Note
+In the example,
+l
+1
+=1,
+r
+1
+=2,
+l
+1
+2
+l
+2
+=1,
+r
+2
+=3,
+l
+1
+3
+l
+3
+=2,
+r
+3
+=4,
+l
+2
+4
+l
+4
+=1,
+r
+4
+=4,
+l
+1
+4
+l
+5
+=2,
+r
+5
+=2,
+l
+2
+2
+l
+6
+=1,
+r
+6
+=5.
+l
+1
+5.

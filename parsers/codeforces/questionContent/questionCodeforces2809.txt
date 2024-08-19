@@ -1,0 +1,242 @@
+F. Battalion Strength
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+officers in the Army of Byteland. Each officer has some power associated with him. The power of the
+i
+-th officer is denoted by
+p
+i
+. As the war is fast approaching, the General would like to know the strength of the army.
+The strength of an army is calculated in a strange way in Byteland. The General selects a random subset of officers from these
+n
+officers and calls this subset a battalion.(All
+2
+n
+subsets of the
+n
+officers can be chosen equally likely, including empty subset and the subset of all officers).
+The strength of a battalion is calculated in the following way:
+Let the powers of the chosen officers be
+a
+1
+,
+a
+2
+,…,
+a
+k
+, where
+a
+1
+≤
+a
+2
+≤⋯≤
+a
+k
+. The strength of this battalion is equal to
+a
+1
+a
+2
++
+a
+2
+a
+3
++⋯+
+a
+k−1
+a
+k
+. (If the size of Battalion is
+≤1
+, then the strength of this battalion is
+0
+).
+The strength of the army is equal to the expected value of the strength of the battalion.
+As the war is really long, the powers of officers may change. Precisely, there will be
+q
+changes. Each one of the form
+i
+x
+indicating that
+p
+i
+is changed to
+x
+.
+You need to find the strength of the army initially and after each of these
+q
+updates.
+Note that the changes are permanent.
+The strength should be found by modulo
+10
+9
++7
+. Formally, let
+M=
+10
+9
++7
+. It can be shown that the answer can be expressed as an irreducible fraction
+p/q
+, where
+p
+and
+q
+are integers and
+q≢0modM
+). Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡pmodM
+).
+Input
+The first line of the input contains a single integer
+n
+(
+1≤n≤3⋅
+10
+5
+)  — the number of officers in Byteland's Army.
+The second line contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤
+10
+9
+).
+The third line contains a single integer
+q
+(
+1≤q≤3⋅
+10
+5
+)  — the number of updates.
+Each of the next
+q
+lines contains two integers
+i
+and
+x
+(
+1≤i≤n
+,
+1≤x≤
+10
+9
+), indicating that
+p
+i
+is updated to
+x
+.
+Output
+In the first line output the initial strength of the army.
+In
+i
+-th of the next
+q
+lines, output the strength of the army after
+i
+-th update.
+Examples
+input
+Copy
+2
+1 2
+2
+1 2
+2 1
+output
+Copy
+500000004
+1
+500000004
+input
+Copy
+4
+1 2 3 4
+4
+1 5
+2 5
+3 5
+4 5
+output
+Copy
+625000011
+13
+62500020
+375000027
+62500027
+Note
+In first testcase, initially, there are four possible battalions
+{} Strength =
+0
+{
+1
+} Strength =
+0
+{
+2
+} Strength =
+0
+{
+1,2
+} Strength =
+2
+So strength of army is
+0+0+0+2
+4
+=
+1
+2
+After changing
+p
+1
+to
+2
+, strength of battallion {
+1,2
+} changes to
+4
+, so strength of army becomes
+1
+.
+After changing
+p
+2
+to
+1
+, strength of battalion {
+1,2
+} again becomes
+2
+, so strength of army becomes
+1
+2
+.

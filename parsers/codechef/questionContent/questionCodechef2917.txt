@@ -1,0 +1,143 @@
+Subarray Weight
+Problem
+You are given a permutation
+P of
+N integers from
+1 to
+N.
+The weight of a subarray
+[L,R]
+(1≤L≤R≤N) is defined as
+∣i−j∣ where
+i denotes the index of the maximum element and
+j denotes the index of the minimum element in the subarray
+[L,R].
+Find the sum of the weights of all subarrays of the given permutation.
+Note that,
+∣X∣ denotes the absolute value of a number
+X. For example,
+∣−4∣=4 and
+∣7∣=7.
+Input Format
+The first line contains an integer
+T, denoting the number of test cases. The
+T test cases then follow:
+The first line of each test case contains an integer
+N, denoting the length of the permutation.
+The second line of each test case contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+, denoting the elements of the permutation.
+Output Format
+For each test case, output the sum of the weights of all subarrays of the given permutation.
+Constraints
+1≤T≤10
+5
+1≤N≤5⋅10
+5
+1≤P
+i
+≤N and
+P
+i
+
+=P
+j
+for
+i
+
+=j
+Sum of
+N over all test cases does not exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+3 2 1
+4
+1 4 3 2
+7
+1 7 4 5 3 2 6
+4
+7
+31
+Explanation:
+Test case
+1:
+The weights of the subarrays
+[1,1],[2,2],[3,3] are
+0 as
+i=j in all these subarrays.
+Subarray
+[L,R]=[1,2] has weight
+1 as
+i=1 and
+j=2:
+∣1−2∣=1.
+Subarray
+[L,R]=[2,3] has weight
+1 as
+i=2 and
+j=3:
+∣2−3∣=1.
+Subarray
+[L,R]=[1,3] has weight
+2 as
+i=1 and
+j=3:
+∣1−3∣=2.
+Sum of weights is
+1+1+2=4.
+Test case
+2:
+The weights of the subarrays
+[1,1],[2,2],[3,3],[4,4] are
+0 as
+i=j in all these subarrays.
+Subarray
+[L,R]=[1,2] has weight
+1 as
+i=2 and
+j=1:
+∣2−1∣=1.
+Subarray
+[L,R]=[2,3] has weight
+1 as
+i=2 and
+j=3:
+∣2−3∣=1.
+Subarray
+[L,R]=[3,4] has weight
+1 as
+i=3 and
+j=4:
+∣3−4∣=1.
+Subarray
+[L,R]=[1,3] has weight
+1 as
+i=2 and
+j=1:
+∣2−1∣=1.
+Subarray
+[L,R]=[2,4] has weight
+2 as
+i=2 and
+j=4:
+∣2−4∣=2.
+Subarray
+[L,R]=[1,4] has weight
+1 as
+i=2 and
+j=1:
+∣2−1∣=1.
+Sum of weights is
+1+1+1+1+2+1=7.

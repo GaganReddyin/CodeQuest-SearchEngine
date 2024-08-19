@@ -1,0 +1,43 @@
+Chef and Replication
+Problem
+Chef Avi likes the number
+K. Given a list of
+N integers, help him find the sum of all distinct numbers repeating exactly
+K times. Each of those numbers should be considered only once in the sum, not
+K times.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains two lines:
+The first line contains two space-separated integers
+N,K.
+The second line contains
+N space-separated integers.
+Output Format
+For each testcase, print the sum of all numbers occurring exactly
+K times. If there is no such number, print -1 instead.
+Constraints
+1≤T≤10
+1≤N≤10,000
+1≤K≤N
+0≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+3
+4 1
+2 3 4 4
+5 3
+9 9 1 1 9
+2 1
+2 2
+5
+9
+-1
+Explanation:
+Test Case 1: The numbers 2 and 3 occur exactly once. So the answer is 2 + 3 = 5.
+Test Case 2: The number 9 occurs exactly three times. So the answer is 9.
+Test Case 3: There is no number which occurs exactly once. Hence the answer is -1.

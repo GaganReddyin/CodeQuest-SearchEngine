@@ -1,0 +1,188 @@
+J. Two Railroads
+time limit per test5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cities in Berland, and they are connected by two railroads — the Main railroad and the Auxiliary railroad. Each city has two railway stations, one connected to the Main railroad (called the Main station), and the other connected to the Auxiliary railroad.
+The railroads are identical in their structure. The Main railroad consists of
+n−1
+railroad segments; the
+i
+-th railroad segment connects the Main station of the city
+i
+with the Main station of the city
+i+1
+. Similarly, the Auxiliary railroad consists of
+n−1
+railroad segments; the
+i
+-th railroad segment connects the Auxiliary station of the city
+i
+with the Auxiliary station of the city
+i+1
+.
+These railroads are used to transfer different goods and resources from one city to another. In particular, the Ministry of Energetics is interested in using these railroads to transfer coal.
+The Ministry has estimated the following capabilities of the railroads:
+for every
+i∈[1,n−1]
+, at most
+a
+i
+tons of coal per day can be transferred from the Main station
+i
+to the Main station
+i+1
+(only in this direction);
+for every
+i∈[1,n−1]
+, at most
+b
+i
+tons of coal per day can be transferred from the Auxiliary station
+i
+to the Auxiliary station
+i+1
+(only in this direction);
+for every
+i∈[1,n]
+, at most
+c
+i
+tons of coal per day can be transferred from the Main station
+i
+to the Auxiliary station
+i
+, or in the opposite direction.
+To analyze the capacity of the whole railroad network, the Ministry requires a software that would process and answer queries of the following format:
+calculate the maximum number of tons of coal that can be transferred per day from the Main station
+l
+i
+to the Main station
+r
+i
+.
+Your task is to implement this software.
+Input
+The first line contains one integer
+n
+(
+2≤n≤3⋅
+10
+5
+) — the number of cities.
+The second line contains
+n−1
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n−1
+(
+1≤
+a
+i
+≤
+10
+9
+).
+The third line contains
+n−1
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n−1
+(
+1≤
+b
+i
+≤
+10
+9
+).
+The fourth line contains
+n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+(
+1≤
+c
+i
+≤
+10
+9
+).
+The fifth line contains one integer
+q
+(
+1≤q≤3⋅
+10
+5
+) — the number of queries.
+Then
+q
+lines follow, the
+i
+-th line contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+<
+r
+i
+≤n
+) — the parameters of the
+i
+-th query.
+Output
+Print
+q
+integers, where the
+i
+-th integer should be the answer to the
+i
+-th query, i. e. the maximum number of tons of coal that can be transferred per day from the Main station
+l
+i
+to the Main station
+r
+i
+.
+Example
+input
+Copy
+5
+3 4 7 4
+8 5 3 5
+10 5 3 4 10
+4
+1 4
+1 2
+3 4
+2 4
+output
+Copy
+9 8 10 9 

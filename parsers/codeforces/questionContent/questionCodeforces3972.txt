@@ -1,0 +1,105 @@
+B. Kvass and the Fair Nut
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The Fair Nut likes kvass very much. On his birthday parents presented him
+n
+kegs of kvass. There are
+v
+i
+liters of kvass in the
+i
+-th keg. Each keg has a lever. You can pour your glass by exactly
+1
+liter pulling this lever. The Fair Nut likes this drink very much, so he wants to pour his glass by
+s
+liters of kvass. But he wants to do it, so kvass level in the least keg is as much as possible.
+Help him find out how much kvass can be in the least keg or define it's not possible to pour his glass by
+s
+liters of kvass.
+Input
+The first line contains two integers
+n
+and
+s
+(
+1≤n≤
+10
+3
+,
+1≤s≤
+10
+12
+) — the number of kegs and glass volume.
+The second line contains
+n
+integers
+v
+1
+,
+v
+2
+,…,
+v
+n
+(
+1≤
+v
+i
+≤
+10
+9
+) — the volume of
+i
+-th keg.
+Output
+If the Fair Nut cannot pour his glass by
+s
+liters of kvass, print
+−1
+. Otherwise, print a single integer — how much kvass in the least keg can be.
+Examples
+input
+Copy
+3 3
+4 3 5
+output
+Copy
+3
+input
+Copy
+3 4
+5 3 4
+output
+Copy
+2
+input
+Copy
+3 7
+1 2 3
+output
+Copy
+-1
+Note
+In the first example, the answer is
+3
+, the Fair Nut can take
+1
+liter from the first keg and
+2
+liters from the third keg. There are
+3
+liters of kvass in each keg.
+In the second example, the answer is
+2
+, the Fair Nut can take
+3
+liters from the first keg and
+1
+liter from the second keg.
+In the third example, the Fair Nut can't pour his cup by
+7
+liters, so the answer is
+−1
+.

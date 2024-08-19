@@ -1,0 +1,32 @@
+A. Lucky Year
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Apart from having lots of holidays throughout the year, residents of Berland also have whole lucky years. Year is considered lucky if it has no more than 1 non-zero digit in its number. So years 100, 40000, 5 are lucky and 12, 3001 and 12345 are not.
+You are given current year in Berland. Your task is to find how long will residents of Berland wait till the next lucky year.
+Input
+The first line contains integer number n (1 ≤ n ≤ 109) — current year in Berland.
+Output
+Output amount of years from the current year to the next lucky one.
+Examples
+input
+Copy
+4
+output
+Copy
+1
+input
+Copy
+201
+output
+Copy
+99
+input
+Copy
+4000
+output
+Copy
+1000
+Note
+In the first example next lucky year is 5. In the second one — 300. In the third — 5000.

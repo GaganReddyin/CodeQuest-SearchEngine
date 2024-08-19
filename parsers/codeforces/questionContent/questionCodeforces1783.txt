@@ -1,0 +1,203 @@
+G. Phoenix and Odometers
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In Fire City, there are
+n
+intersections and
+m
+one-way roads. The
+i
+-th road goes from intersection
+a
+i
+to
+b
+i
+and has length
+l
+i
+miles.
+There are
+q
+cars that may only drive along those roads. The
+i
+-th car starts at intersection
+v
+i
+and has an odometer that begins at
+s
+i
+, increments for each mile driven, and resets to
+0
+whenever it reaches
+t
+i
+. Phoenix has been tasked to drive cars along some roads (possibly none) and return them to their initial intersection with the odometer showing
+0
+.
+For each car, please find if this is possible.
+A car may visit the same road or intersection an arbitrary number of times. The odometers don't stop counting the distance after resetting, so odometers may also be reset an arbitrary number of times.
+Input
+The first line of the input contains two integers
+n
+and
+m
+(
+2≤n≤2⋅
+10
+5
+;
+1≤m≤2⋅
+10
+5
+) — the number of intersections and the number of roads, respectively.
+Each of the next
+m
+lines contain three integers
+a
+i
+,
+b
+i
+, and
+l
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+;
+a
+i
+≠
+b
+i
+;
+1≤
+l
+i
+≤
+10
+9
+) — the information about the
+i
+-th road. The graph is not necessarily connected. It is guaranteed that between any two intersections, there is at most one road for each direction.
+The next line contains an integer
+q
+(
+1≤q≤2⋅
+10
+5
+) — the number of cars.
+Each of the next
+q
+lines contains three integers
+v
+i
+,
+s
+i
+, and
+t
+i
+(
+1≤
+v
+i
+≤n
+;
+0≤
+s
+i
+<
+t
+i
+≤
+10
+9
+) — the initial intersection of the
+i
+-th car, the initial number on the
+i
+-th odometer, and the number at which the
+i
+-th odometer resets, respectively.
+Output
+Print
+q
+answers. If the
+i
+-th car's odometer may be reset to
+0
+by driving through some roads (possibly none) and returning to its starting intersection
+v
+i
+, print YES. Otherwise, print NO.
+Examples
+input
+Copy
+4 4
+1 2 1
+2 3 1
+3 1 2
+1 4 3
+3
+1 1 3
+1 2 4
+4 0 1
+output
+Copy
+YES
+NO
+YES
+input
+Copy
+4 5
+1 2 1
+2 3 1
+3 1 2
+1 4 1
+4 3 2
+2
+1 2 4
+4 3 5
+output
+Copy
+YES
+YES
+Note
+The illustration for the first example is below:
+In the first query, Phoenix can drive through the following cities:
+1
+→
+2
+→
+3
+→
+1
+→
+2
+→
+3
+→
+1
+. The odometer will have reset
+3
+times, but it displays
+0
+at the end.
+In the second query, we can show that there is no way to reset the odometer to
+0
+and return to intersection
+1
+.
+In the third query, the odometer already displays
+0
+, so there is no need to drive through any roads.
+Below is the illustration for the second example:

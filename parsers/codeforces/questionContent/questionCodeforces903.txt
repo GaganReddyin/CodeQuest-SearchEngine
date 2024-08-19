@@ -1,0 +1,173 @@
+E. Tokitsukaze and Beautiful Subsegments
+time limit per test4 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Tokitsukaze has a permutation
+p
+of length
+n
+.
+Let's call a segment
+[l,r]
+beautiful if there exist
+i
+and
+j
+satisfying
+p
+i
+⋅
+p
+j
+=max{
+p
+l
+,
+p
+l+1
+,…,
+p
+r
+}
+, where
+l≤i<j≤r
+.
+Now Tokitsukaze has
+q
+queries, in the
+i
+-th query she wants to know how many beautiful subsegments
+[x,y]
+there are in the segment
+[
+l
+i
+,
+r
+i
+]
+(i. e.
+l
+i
+≤x≤y≤
+r
+i
+).
+Input
+The first line contains two integers
+n
+and
+q
+(
+1≤n≤2⋅
+10
+5
+;
+1≤q≤
+10
+6
+) — the length of permutation
+p
+and the number of queries.
+The second line contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the permutation
+p
+.
+Each of the next
+q
+lines contains two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+) — the segment
+[
+l
+i
+,
+r
+i
+]
+of this query.
+Output
+For each query, print one integer — the numbers of beautiful subsegments in the segment
+[
+l
+i
+,
+r
+i
+]
+.
+Examples
+input
+Copy
+8 3
+1 3 5 2 4 7 6 8
+1 3
+1 1
+1 8
+output
+Copy
+2
+0
+10
+input
+Copy
+10 10
+6 1 3 2 5 8 4 10 7 9
+1 8
+1 10
+1 2
+1 4
+2 4
+5 8
+4 10
+4 7
+8 10
+5 9
+output
+Copy
+17
+25
+1
+5
+2
+0
+4
+1
+0
+0
+Note
+In the first example, for the first query, there are
+2
+beautiful subsegments —
+[1,2]
+and
+[1,3]
+.

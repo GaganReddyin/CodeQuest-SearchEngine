@@ -1,0 +1,61 @@
+Chef and Cycled Cycles
+Problem
+Read problems statements in mandarin chinese, russian and vietnamese as well.
+Chef recently learned about finding shortest paths in a bidirectional graph. He has following types of graphs with him and would like to find shortest paths between some given pair of vertices.
+There are N cycles in the graph. Let us enumerate them cycle number 1 to N. The i-th cycle contains Ai nodes enumerated from 1 to Ai.
+The nodes of a single cycle are connected to each other in cyclic fashion, i.e. the 1st node is connected to 2nd, 2nd to 3rd, and so on till the last node is connected to the 1st node. All of these edges are weighed.
+The cycles are also connected to each other via an edge in a similar cyclic order. The i-th cycle is connected to i % N + 1-th cycle via an edge. This edge is between some vertex v1 of i-th cycle and vertex v2 of i % N + 1-th cycle and is a weighted edge.
+You are given Q queries, each containing four integers v1, c1, v2, c2. You have to find the weight of shortest path between the v1-th vertex of c1-th cycle, and v2-th vertex of c2-th cycle.
+Input
+The first line of the input contains an integer T denoting the number of test cases.
+First line of each test case contains two space separated integers N, Q denoting the number of cycles in the graph and the number of queries.
+Next N lines contain the description of the cycles.
+The i-th line describes i-th cycle. First it contains an integer Ai denoting the number nodes in the i-th cycle followed by Ai integers denoting the weight of edges of the cycle. First integer denotes the weight of edge from node 1 to node 2, from 2 to 3 and so on. Last integer denotes the weight of the edge from node Ai to node 1.
+Next N lines describe connections between adjacent cycles. The i-th line contains three space separated integers v1, v2, w denoting that there is an edge of weight w between the v1-th node of i-th cycle and v2-th node of the i % N + 1-th cycle.
+Next Q lines describe the queries. Each query is given by four space separated integers v1, c1, v2, c2
+Output
+For each query, output a single integer corresponding to the total weight of the shortest path.
+Constraints
+1 ≤ T ≤ 5
+1 ≤ N, Q ≤ 105
+1 ≤ Ai ≤ 105
+1 ≤ A1 + A2 + ... + AN ≤ 105
+1 ≤ weight of edges ≤ 103
+For each query, c1 != c2
+Subtasks
+Subtask #1 (10 points): 1 ≤ A1 + A2 + ... + AN ≤ 103, 1 ≤ Q ≤ 103.
+Subtask #2 (15 points): All the edges are of weight = 1.
+Subtask #3 (20 points): c1 = 1 for all the queries.
+Subtask #4 (55 points): Original constraints
+Sample 1:
+Input
+Output
+1
+3 3
+3 1 2 2
+2 1 2
+3 1 4 1
+2 1 2
+2 1 5
+3 1 3
+2 1 1 2
+1 1 1 2
+3 1 3 3
+2
+3
+5
+Explanation:
+Example case 1.
+Here is the description of the graph.
+There are 3 cycles.
+Cycle 1: 3 nodes. Edges: (1, 2) = 1, (2, 3) = 2, (3, 1) = 2.
+Cycle 2: 2 nodes. Edges: (1, 2) = 1, (2, 1) = 2.
+Cycle 3: 3 nodes. Edges: (1, 2) = 1, (2, 3) = 4, (3, 1) = 1.
+Connections between adjacent cycles:
+Cycle 1 node 2 is connected to Cycle 2 node 1 with edge of weight 2. 
+Cycle 2 node 2 is connected to Cycle 3 node 1 with edge of weight 5.
+Cycle 3 node 3 is connected to Cycle 1 node 1 with edge of weight 3.
+Queries
+Best path from node 2 cycle 1 to node 1 cycle 2 is of the cost 2.
+Best path from node 1 cycle 1 to node 1 cycle 2 is: edge (1, 2) of cycle 1 + edge (2, 1) between cycles 1 and 2.
+Best path from node 3 cycle 1 to node 3 cycle 3 is: edge (3,1) of cycle 1 + edge (3, 1) between cycles 3 and 1.

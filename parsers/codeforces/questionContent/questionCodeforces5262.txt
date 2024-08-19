@@ -1,0 +1,56 @@
+D. Labelling Cities
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Oleg the bank client lives in Bankopolia. There are n cities in Bankopolia and some pair of cities are connected directly by bi-directional roads. The cities are numbered from 1 to n. There are a total of m roads in Bankopolia, the i-th road connects cities ui and vi. It is guaranteed that from each city it is possible to travel to any other city using some of the roads.
+Oleg wants to give a label to each city. Suppose the label of city i is equal to xi. Then, it must hold that for all pairs of cities (u, v) the condition |xu - xv| ≤ 1 holds if and only if there is a road connecting u and v.
+Oleg wonders if such a labeling is possible. Find an example of such labeling if the task is possible and state that it is impossible otherwise.
+Input
+The first line of input contains two space-separated integers n and m (2 ≤ n ≤ 3·105, 1 ≤ m ≤ 3·105) — the number of cities and the number of roads.
+Next, m lines follow. The i-th line contains two space-separated integers ui and vi (1 ≤ ui, vi ≤ n, ui ≠ vi) — the cities connected by the i-th road. It is guaranteed that there is at most one road between each pair of cities and it is possible to travel from any city to any other city using some roads.
+Output
+If the required labeling is not possible, output a single line containing the string "NO" (without quotes).
+Otherwise, output the string "YES" (without quotes) on the first line. On the next line, output n space-separated integers, x1, x2, ..., xn. The condition 1 ≤ xi ≤ 109 must hold for all i, and for all pairs of cities (u, v) the condition |xu - xv| ≤ 1 must hold if and only if there is a road connecting u and v.
+Examples
+input
+Copy
+4 4
+1 2
+1 3
+1 4
+3 4
+output
+Copy
+YES
+2 3 1 1 
+input
+Copy
+5 10
+1 2
+1 3
+1 4
+1 5
+2 3
+2 4
+2 5
+3 4
+3 5
+5 4
+output
+Copy
+YES
+1 1 1 1 1 
+input
+Copy
+4 3
+1 2
+1 3
+1 4
+output
+Copy
+NO
+Note
+For the first sample, x1 = 2, x2 = 3, x3 = x4 = 1 is a valid labeling. Indeed, (3, 4), (1, 2), (1, 3), (1, 4) are the only pairs of cities with difference of labels not greater than 1, and these are precisely the roads of Bankopolia.
+For the second sample, all pairs of cities have difference of labels not greater than 1 and all pairs of cities have a road connecting them.
+For the last sample, it is impossible to construct a labeling satisfying the given constraints.

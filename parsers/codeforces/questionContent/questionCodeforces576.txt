@@ -1,0 +1,162 @@
+F. Pebbles and Beads
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are two currencies: pebbles and beads. Initially you have
+a
+pebbles,
+b
+beads.
+There are
+n
+days, each day you can exchange one currency for another at some exchange rate.
+On day
+i
+, you can exchange
+−
+p
+i
+≤x≤
+p
+i
+pebbles for
+−
+q
+i
+≤y≤
+q
+i
+beads or vice versa. It's allowed not to perform an exchange at all. Meanwhile, if you perform an exchange, the proportion
+x⋅
+q
+i
+=−y⋅
+p
+i
+must be fulfilled. Fractional exchanges are allowed.
+You can perform no more than one such exchange in one day. The numbers of pebbles and beads you have must always remain non-negative.
+Please solve the following
+n
+problems independently: for each day
+i
+, output the maximum number of pebbles that you can have at the end of day
+i
+if you perform exchanges optimally.
+Input
+The first line of the input contains a single integer
+t
+(
+1≤t≤
+10
+3
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains three integers
+n
+,
+a
+and
+b
+(
+1≤n≤300000
+,
+0≤a,b≤
+10
+9
+) — the number of days and the initial number of pebbles and beads respectively.
+The second line of each test case contains
+n
+integers:
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤
+10
+9
+).
+The third line of each test case contains
+n
+integers:
+q
+1
+,
+q
+2
+,…,
+q
+n
+(
+1≤
+q
+i
+≤
+10
+9
+).
+It is guaranteed that the sum of
+n
+over all test cases doesn't exceed
+300000
+.
+Output
+Output
+n
+numbers — the maximum number of pebbles at the end of each day.
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is accepted if and only if
+|a−b|
+max(1,|b|)
+≤
+10
+−6
+.
+Example
+input
+Copy
+3
+2 6 0
+2 3
+4 2
+3 0 6
+4 2 10
+2 3 10
+1 10 10
+33
+1000
+output
+Copy
+6
+8
+4
+6
+9.000000
+10.33
+Note
+In the image below you can see the solutions for the first two test cases. In each line there is an optimal sequence of actions for each day.
+In the first test case, the optimal strategy for the first day is to do no action at all, as we can only decrease the number of pebbles. The optimal strategy for the second day is at first to exchange
+1
+pebble for
+2
+beads, which is a correct exchange, since
+1⋅4=2⋅2
+, and then to exchange
+2
+beads for
+3
+pebbles.

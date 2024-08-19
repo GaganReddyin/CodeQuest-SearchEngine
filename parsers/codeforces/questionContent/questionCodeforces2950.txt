@@ -1,0 +1,117 @@
+D. LCC
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+An infinitely long Line Chillland Collider (LCC) was built in Chillland. There are
+n
+pipes with coordinates
+x
+i
+that are connected to LCC. When the experiment starts at time 0,
+i
+-th proton flies from the
+i
+-th pipe with speed
+v
+i
+. It flies to the right with probability
+p
+i
+and flies to the left with probability
+(1−
+p
+i
+)
+. The duration of the experiment is determined as the time of the first collision of any two protons. In case there is no collision, the duration of the experiment is considered to be zero.
+Find the expected value of the duration of the experiment.
+Illustration for the first example
+Input
+The first line of input contains one integer
+n
+ — the number of pipes (
+1≤n≤
+10
+5
+). Each of the following
+n
+lines contains three integers
+x
+i
+,
+v
+i
+,
+p
+i
+ — the coordinate of the
+i
+-th pipe, the speed of the
+i
+-th proton and the probability that the
+i
+-th proton flies to the right in percentage points (
+−
+10
+9
+≤
+x
+i
+≤
+10
+9
+,1≤v≤
+10
+6
+,0≤
+p
+i
+≤100
+). It is guaranteed that all
+x
+i
+are distinct and sorted in increasing order.
+Output
+It's possible to prove that the answer can always be represented as a fraction
+P/Q
+, where
+P
+is an integer and
+Q
+is a natural number not divisible by
+998244353
+. In this case, print
+P⋅
+Q
+−1
+modulo
+998244353
+.
+Examples
+input
+Copy
+2
+1 1 100
+3 1 0
+output
+Copy
+1
+input
+Copy
+3
+7 10 0
+9 4 86
+14 5 100
+output
+Copy
+0
+input
+Copy
+4
+6 4 50
+11 25 50
+13 16 50
+15 8 50
+output
+Copy
+150902884

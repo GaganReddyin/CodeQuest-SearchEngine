@@ -1,0 +1,1 @@
+D2. Remove the Substring (hard version)

@@ -1,0 +1,102 @@
+G. A Game on Strings
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice and Bob are playing a game on strings.
+Initially, they have some string
+t
+. In one move the first player selects the character
+c
+present in
+t
+and erases all it's occurrences in
+t
+, thus splitting
+t
+into many smaller strings. The game then goes independently with each of the strings — to make the move player selects one of the strings and one of the characters there, deletes all occurrences and adds the remaining string back to the game.
+Alice always starts the game, and then Alice and Bob take turns making moves. The player who is unable to make a move (because there is no string left) loses.
+Alice and Bob used to always start with a string
+s
+, but recently they found out that this became too boring. Now before each game they choose two integers
+l
+and
+r
+such that
+1≤l≤r≤|s|
+and play the game with the string
+s
+l
+s
+l+1
+s
+l+2
+…
+s
+r
+instead.
+Given the string
+s
+and integers
+l
+,
+r
+for each game. Find who is going to win each game assuming they are smart and are playing optimally.
+Input
+The first line contains the string
+s
+(
+1≤|s|≤
+10
+5
+) consisting of lowercase English letters. This is the string Alice and Bob used to start with.
+The second line contains a single integer
+m
+(
+1≤m≤
+10
+5
+) — the number of games to analyze.
+Each of the next
+m
+lines contains two integers
+l
+and
+r
+(
+1≤l≤r≤|s|
+) — the bounds of the starting substring in the string
+s
+.
+Output
+For each game output a single line containing the name of the winner — "Alice" or "Bob" respectively.
+Examples
+input
+Copy
+aaab
+2
+1 2
+1 4
+output
+Copy
+Alice
+Bob
+input
+Copy
+aaccbdb
+2
+5 7
+1 7
+output
+Copy
+Alice
+Alice
+Note
+In the first example,
+In the first game the string "aa" is selected. Alice deletes character 'a' and Bob is unable to move.
+In the second game the string "aaab" is selected. No matter what character Alice will delete, Bob deletes the other one and Alice is unable to move.
+In the second example Alice wins both game "bdb" and "aaccbdb".
+To win game "bdb" Alice can erase symbol 'd', the game then goes independently on strings "b" and "b". Bob deletes one of this strings and the Alice deletes the other one and Bob is unable to move.
+To win game "aaccbdb" Alice can erase symbol 'd', the game then goes independently on strings "aaccb" and "b". It is possible to show, that no matter what are the moves, the remaining game can only finish in exactly
+4
+moves, so the Bob will be unable to move after that.

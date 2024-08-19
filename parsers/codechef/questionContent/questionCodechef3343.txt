@@ -1,0 +1,90 @@
+Escape
+Problem
+While Kim notes down the different base plans possible, Soum pulls a lever from the control room, and Kim falls into a trapped cell! Has the JSA won the battle?
+Unfortunately for the JSA, Kim is a genius, so he has obviously easily escaped from his cell. However, he found that his cell is only one in a large underground network of cells. Now he needs to find a way to escape!
+Of course, since it is a prison, some of the cells are locked at all times. However, some prison guards are lazy and left the keys for a cell in another cell. Each key can only unlock one cell and each cell can only be unlocked by one key. If any cell does not have a corresponding key, it is unlocked.
+The prison consists of
+N cells labelled 1 to
+N with cell 1 being Kim's starting position and cell
+N being the exit of the underground prison network. Furthermore, there are
+E bidirectional connections between cells. The
+i-th connection takes Kim
+C
+i
+seconds to pass through, and connects cells
+A
+i
+and
+B
+i
+. Kim takes no time to pick up a key when he reaches a cell containing a key, and takes no time to unlock a door with a key. Cells 1 and
+N never have any keys in them. Additionally, no two keys will ever be found in the same cell.
+Can you help Kim find the minimum time it would take him to go from cell 1 to cell
+N?
+###Input:
+The first line of input contains 3 integers
+N,
+E and
+K denoting the number of cells, number of connections and the number of keys.
+The following
+E lines contain 3 integers,
+A
+i
+,
+B
+i
+and
+C
+i
+showing that a connection exists between cell
+A
+i
+and
+B
+i
+taking
+C
+i
+time to traverse.
+The following
+K lines contain 2 integers,
+L and
+U denoting that the key for cell
+U is located at cell
+L.
+###Output:
+Print one number
+S which is the time from cell 1 to cell
+N. If this is not possible print -1.
+The answer is guaranteed to fit into a 64 bit integer.
+###Subtasks For all subtasks,
+5≤N≤100000,
+4≤E≤200000,
+0≤K≤12. For all edges,
+1≤A,B≤N,
+1≤C≤10
+9
+. All key nodes and lock nodes are distinct. No cell contains both a key and a lock, and no cell contains more than one key or more than one lock. In addition, cells
+1 and
+N will never have a key or lock. Connections may connect a node to itself, and multiple connections may exist between two nodes.
+Subtask 1 [30 points]:
+N≤20000,
+E≤100000,
+K=0
+Subtask 2 [30 points]:
+N≤10000,
+E≤20000,
+K≤6
+Subtask 3 [40 points]:
+N≤100000,
+E≤200000,
+K≤12
+###Sample Input:
+5 4 1
+1 2 5
+2 3 7
+3 4 8
+4 5 2
+2 3
+###Sample Output:
+22

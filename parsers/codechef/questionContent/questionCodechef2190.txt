@@ -1,0 +1,73 @@
+Pishty and tree
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+There is a castle which can be described as an undirected tree with
+N vertices and
+N−1 edges. Each edge has a magic number
+C.
+When a group of tourists visit the castle, they are interested in a path between vertices
+U and
+V. They think that an edge is interesting if its magic number is
+≤K. The total attractiveness of the path is the xor of all interesting edges on it.
+Given
+M groups of tourists, find the total attractiveness of the path for each group.
+Input
+The first line contains a single integer
+T, denoting the number of test cases. Then T test case descriptions follow.
+The first line of each test case contains a single integer
+N, denoting the number of vertices.
+The next
+N−1 lines each contain three integers
+U,
+V and
+C, which denote an edge between vertices
+U and
+V with magical number
+C.
+The next line contains a single integer
+M, which denotes the number of requests.
+The next
+M lines contain information about the requests. Each line contains three integers
+U,
+V and
+K.
+Output
+For each request output a single integer in a separate line - the total attractiveness of the path.
+Constraints
+1≤T≤5
+1≤N,M≤10
+5
+1≤U,V≤N
+1≤C,K≤10
+9
+Subtasks :
+Subtask 1: (10 points)
+1≤N,M≤10
+Subtask 2: (20 points)
+1≤N,M≤10
+3
+Subtask 3: (70 points)
+1≤N,M≤10
+5
+Sample 1:
+Input
+Output
+1
+5
+1 2 1
+2 3 2 
+2 4 5
+3 5 10
+6
+5 4 5
+5 4 10
+5 4 1
+1 2 1
+4 1 10
+1 5 8
+7
+13
+0
+1
+4
+3

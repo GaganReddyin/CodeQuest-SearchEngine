@@ -1,0 +1,30 @@
+F. Heroes of Making Magic III
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+I’m strolling on sunshine, yeah-ah! And doesn’t it feel good! Well, it certainly feels good for our Heroes of Making Magic, who are casually walking on a one-directional road, fighting imps. Imps are weak and feeble creatures and they are not good at much. However, Heroes enjoy fighting them. For fun, if nothing else.
+Our Hero, Ignatius, simply adores imps. He is observing a line of imps, represented as a zero-indexed array of integers a of length n, where ai denotes the number of imps at the i-th position. Sometimes, imps can appear out of nowhere. When heroes fight imps, they select a segment of the line, start at one end of the segment, and finish on the other end, without ever exiting the segment. They can move exactly one cell left or right from their current position and when they do so, they defeat one imp on the cell that they moved to, so, the number of imps on that cell decreases by one. This also applies when heroes appear at one end of the segment, at the beginning of their walk.
+Their goal is to defeat all imps on the segment, without ever moving to an empty cell in it (without imps), since they would get bored. Since Ignatius loves imps, he doesn’t really want to fight them, so no imps are harmed during the events of this task. However, he would like you to tell him whether it would be possible for him to clear a certain segment of imps in the above mentioned way if he wanted to.
+You are given q queries, which have two types:
+1 a b k — denotes that k imps appear at each cell from the interval [a, b]
+2 a b - asks whether Ignatius could defeat all imps on the interval [a, b] in the way described above
+Input
+The first line contains a single integer n (1 ≤ n ≤ 200 000), the length of the array a. The following line contains n integers a1, a2, ..., an (0 ≤ ai ≤ 5 000), the initial number of imps in each cell. The third line contains a single integer q (1 ≤ q ≤ 300 000), the number of queries. The remaining q lines contain one query each. Each query is provided by integers a, b and, possibly, k (0 ≤ a ≤ b < n, 0 ≤ k ≤ 5 000).
+Output
+For each second type of query output 1 if it is possible to clear the segment, and 0 if it is not.
+Example
+input
+Copy
+3
+2 2 2
+3
+2 0 2
+1 1 1 1
+2 0 2
+output
+Copy
+0
+1
+Note
+For the first query, one can easily check that it is indeed impossible to get from the first to the last cell while clearing everything. After we add 1 to the second position, we can clear the segment, for example by moving in the following way: .

@@ -1,0 +1,71 @@
+F. Asterisk Substrings
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Consider a string
+s
+of
+n
+lowercase English letters. Let
+t
+i
+be the string obtained by replacing the
+i
+-th character of
+s
+with an asterisk character *. For example, when
+s=abc
+, we have
+t
+1
+=∗bc
+,
+t
+2
+=a∗c
+, and
+t
+3
+=ab∗
+.
+Given a string
+s
+, count the number of distinct strings of lowercase English letters and asterisks that occur as a substring of at least one string in the set
+{s,
+t
+1
+,…,
+t
+n
+}
+. The empty string should be counted.
+Note that *'s are just characters and do not play any special role as in, for example, regex matching.
+Input
+The only line contains a string
+s
+of
+n
+lowercase English letters (
+1≤n≤
+10
+5
+).
+Output
+Print a single integer — the number of distinct strings of
+s,
+t
+1
+,…,
+t
+n
+.
+Example
+input
+Copy
+abc
+output
+Copy
+15
+Note
+For the sample case, the distinct substrings are (empty string), a, b, c, *, ab, a*, bc, b*, *b, *c, abc, ab*, a*c, *bc.

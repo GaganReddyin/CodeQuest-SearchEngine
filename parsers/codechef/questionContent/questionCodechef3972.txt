@@ -1,0 +1,66 @@
+One Pile 
+Problem
+Read problems statements in Russian.
+Utkarsh is forced to play another game with Ashish.
+In this game there are
+N piles,
+i
+th
+pile contains
+A
+i
+stones. Utkarsh moves first.
+In his turn a player can choose any pile with non-zero stones and remove exactly one stone from that pile. The game ends when there is exactly one pile containing non-zero stones and the player who made the last move wins the game.
+Now you are given an array
+B of length
+N. Utkarsh wants to know for how many arrays A such that
+1≤A
+i
+≤B
+i
+for every
+i, he will win the game assuming that both players play optimally.
+Since the answer can be large output it modulo
+998244353.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+First line of each test case consists of an integer
+N.
+Second line consists of
+N space separated integers denoting the array
+B.
+Output Format
+For each testcase, output the number of games Utkarsh wins modulo
+998244353.
+Constraints
+1≤T≤100
+2≤N≤500
+1≤B
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+500
+Sample 1:
+Input
+Output
+2
+2
+3 3
+3
+2 3 4
+7
+17
+Explanation:
+For the first test case, Utkarsh wins the game for following arrays:
+[1,1],
+[1,2],
+[1,3],
+[2,1],
+[3,1],
+[2,3],
+[3,2].
+So there are total
+7 possibilities.

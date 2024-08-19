@@ -1,0 +1,162 @@
+C. Digital Logarithm
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's define
+f(x)
+for a positive integer
+x
+as the length of the base-10 representation of
+x
+without leading zeros. I like to call it a digital logarithm. Similar to a digital root, if you are familiar with that.
+You are given two arrays
+a
+and
+b
+, each containing
+n
+positive integers. In one operation, you do the following:
+pick some integer
+i
+from
+1
+to
+n
+;
+assign either
+f(
+a
+i
+)
+to
+a
+i
+or
+f(
+b
+i
+)
+to
+b
+i
+.
+Two arrays are considered similar to each other if you can rearrange the elements in both of them, so that they are equal (e. g.
+a
+i
+=
+b
+i
+for all
+i
+from
+1
+to
+n
+).
+What's the smallest number of operations required to make
+a
+and
+b
+similar to each other?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of the testcase contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of elements in each of the arrays.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+<
+10
+9
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+j
+<
+10
+9
+).
+The sum of
+n
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print the smallest number of operations required to make
+a
+and
+b
+similar to each other.
+Example
+input
+Copy
+4
+1
+1
+1000
+4
+1 2 3 4
+3 1 4 2
+3
+2 9 3
+1 100 9
+10
+75019 709259 5 611271314 9024533 81871864 9 3 6 4865
+9503 2 371245467 6 7 37376159 8 364036498 52295554 169
+output
+Copy
+2
+0
+2
+18
+Note
+In the first testcase, you can apply the digital logarithm to
+b
+1
+twice.
+In the second testcase, the arrays are already similar to each other.
+In the third testcase, you can first apply the digital logarithm to
+a
+1
+, then to
+b
+2
+.

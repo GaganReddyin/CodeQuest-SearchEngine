@@ -1,0 +1,23 @@
+Help your friends
+Problem
+Three software engineers are sitting in CCD , tackling a problem. These engineers have been hired by a bank and they need to solve this problem which is crucial for the efficient functioning of the banking processes. The problem is stated below:
+You have to answer K queries. Each query is described by 4 integers: a, b, l, r
+You have to find max( gcd(p,q) , such that a ≤ p ≤ b and l ≤ q ≤ r ). p and q are integers.
+Input
+The first line contains one integer: the number of queries, K.
+The second line contains 4 integers: a,b,c,d respectively.
+Output
+The output should contain K integers , one for each query.
+Constraints
+1 ≤ K ≤ 6 x 105
+1 ≤ a ≤ b ≤ 106
+1 ≤ l ≤ r ≤ 106
+min(r-l, b-a) ≤ 103
+Example
+Input:
+1
+40 43 11 13
+Output:
+6
+Explanation
+Taking p = 42 and q = 12 gives us gcd(42,12) = 6. This is the maximum possible, and hence is the answer.

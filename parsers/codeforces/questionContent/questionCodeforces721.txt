@@ -1,0 +1,184 @@
+A. Color the Picture
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A picture can be represented as an
+n×m
+grid (
+n
+rows and
+m
+columns) so that each of the
+n⋅m
+cells is colored with one color. You have
+k
+pigments of different colors. You have a limited amount of each pigment, more precisely you can color at most
+a
+i
+cells with the
+i
+-th pigment.
+A picture is considered beautiful if each cell has at least
+3
+toroidal neighbors with the same color as itself.
+Two cells are considered toroidal neighbors if they toroidally share an edge. In other words, for some integers
+1≤
+x
+1
+,
+x
+2
+≤n
+and
+1≤
+y
+1
+,
+y
+2
+≤m
+, the cell in the
+x
+1
+-th row and
+y
+1
+-th column is a toroidal neighbor of the cell in the
+x
+2
+-th row and
+y
+2
+-th column if one of following two conditions holds:
+x
+1
+−
+x
+2
+≡±1(modn)
+and
+y
+1
+=
+y
+2
+, or
+y
+1
+−
+y
+2
+≡±1(modm)
+and
+x
+1
+=
+x
+2
+.
+Notice that each cell has exactly
+4
+toroidal neighbors. For example, if
+n=3
+and
+m=4
+, the toroidal neighbors of the cell
+(1,2)
+(the cell on the first row and second column) are:
+(3,2)
+,
+(2,2)
+,
+(1,3)
+,
+(1,1)
+. They are shown in gray on the image below:
+The gray cells show toroidal neighbors of
+(1,2)
+.
+Is it possible to color all cells with the pigments provided and create a beautiful picture?
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains three integers
+n
+,
+m
+, and
+k
+(
+3≤n,m≤
+10
+9
+,
+1≤k≤
+10
+5
+) — the number of rows and columns of the picture and the number of pigments.
+The next line contains
+k
+integers
+a
+1
+,
+a
+2
+,…,
+a
+k
+(
+1≤
+a
+i
+≤
+10
+9
+) —
+a
+i
+is the maximum number of cells that can be colored with the
+i
+-th pigment.
+It is guaranteed that the sum of
+k
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, print "Yes" (without quotes) if it is possible to color a beautiful picture. Otherwise, print "No" (without quotes).
+Example
+input
+Copy
+6
+4 6 3
+12 9 8
+3 3 2
+8 8
+3 3 2
+9 5
+4 5 2
+10 11
+5 4 2
+9 11
+10 10 3
+11 45 14
+output
+Copy
+Yes
+No
+Yes
+Yes
+No
+No
+Note
+In the first test case, one possible solution is as follows:
+In the third test case, we can color all cells with pigment
+1
+.

@@ -1,0 +1,189 @@
+C. Remove the Bracket
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+RSJ has a sequence
+a
+of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+and an integer
+s
+. For each of
+a
+2
+,
+a
+3
+,…,
+a
+n−1
+, he chose a pair of non-negative integers
+x
+i
+and
+y
+i
+such that
+x
+i
++
+y
+i
+=
+a
+i
+and
+(
+x
+i
+−s)⋅(
+y
+i
+−s)≥0
+.
+Now he is interested in the value
+F=
+a
+1
+⋅
+x
+2
++
+y
+2
+⋅
+x
+3
++
+y
+3
+⋅
+x
+4
++…+
+y
+n−2
+⋅
+x
+n−1
++
+y
+n−1
+⋅
+a
+n
+.
+F
+Please help him find the minimum possible value
+F
+he can get by choosing
+x
+i
+and
+y
+i
+optimally. It can be shown that there is always at least one valid way to choose them.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+,
+s
+(
+3≤n≤2⋅
+10
+5
+;
+0≤s≤2⋅
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤2⋅
+10
+5
+).
+It is guaranteed that the sum of
+n
+does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print the minimum possible value of
+F
+.
+Example
+input
+Copy
+10
+5 0
+2 0 1 3 4
+5 1
+5 3 4 3 5
+7 2
+7 6 5 4 3 2 1
+5 1
+1 2 3 4 5
+5 2
+1 2 3 4 5
+4 0
+0 1 1 1
+5 5
+4 3 5 6 4
+4 1
+0 2 1 0
+3 99999
+200000 200000 200000
+6 8139
+7976 129785 12984 78561 173685 15480
+output
+Copy
+0
+18
+32
+11
+14
+0
+16
+0
+40000000000
+2700826806
+Note
+In the first test case,
+2⋅0+0⋅1+0⋅3+0⋅4=0
+.
+In the second test case,
+5⋅1+2⋅2+2⋅2+1⋅5=18
+.

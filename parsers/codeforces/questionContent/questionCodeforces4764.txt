@@ -1,0 +1,26 @@
+G. Mass Change Queries
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array a consisting of n integers. You have to process q queries to this array; each query is given as four numbers l, r, x and y, denoting that for every i such that l ≤ i ≤ r and ai = x you have to set ai equal to y.
+Print the array after all queries are processed.
+Input
+The first line contains one integer n (1 ≤ n ≤ 200000) — the size of array a.
+The second line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 100) — the elements of array a.
+The third line contains one integer q (1 ≤ q ≤ 200000) — the number of queries you have to process.
+Then q lines follow. i-th line contains four integers l, r, x and y denoting i-th query (1 ≤ l ≤ r ≤ n, 1 ≤ x, y ≤ 100).
+Output
+Print n integers — elements of array a after all changes are made.
+Example
+input
+Copy
+5
+1 2 3 4 5
+3
+3 5 3 5
+1 5 5 1
+1 5 1 5
+output
+Copy
+5 2 5 4 5 

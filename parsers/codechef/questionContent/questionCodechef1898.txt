@@ -1,0 +1,107 @@
+Partition the Graph
+Problem
+###Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree
+G with
+N vertices numbered
+1 through
+N. It is guaranteed that
+N is even.
+For a positive integer
+k, let's define a graph
+H
+k
+as follows:
+H
+k
+has
+N vertices numbered
+1 through
+N.
+For each edge
+(u,v) in
+G, there is an edge
+(u,v) in
+H
+k
+too.
+For each pair of vertices
+(u,v) in
+G such that their distance is at most
+k, there is an edge
+(u,v) in
+H
+k
+.
+We call a graph good if its vertices can be split into two sets
+U and
+V satisfying the following:
+Each vertex appears in exactly one set;
+∣U∣=∣V∣=N/2.
+Let
+E be the set of edges
+(u,v) such that
+u∈U and
+v∈V. It is possible to reach any vertex from any other vertex using only the edges in
+E.
+Your task is to find the minimum value of
+k such that
+H
+k
+is a good graph, and one possible way to partition vertices of this graph
+H
+k
+into the sets
+U and
+V defined above. If there are multiple solutions, you may find any one.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+Each of the next
+N−1 lines contains two space-separated integers
+u and
+v denoting an edge between vertices
+u and
+v in
+G.
+Output
+For each test case, print three lines.
+The first line should contain a single integer — the minimum value of
+k.
+The second line should contain
+N/2 space-separated integers — the numbers of vertices in your set
+U.
+The third line should also contain
+N/2 space-separated integers — the numbers of vertices in your set
+V.
+Constraints
+1≤T≤100
+2≤N≤10,000
+N is even
+1≤u,v≤N
+the graph on the input is a tree
+Subtasks
+25 points:
+1≤N≤200
+75 points: no extra constraints
+Sample 1:
+Input
+Output
+2
+2
+1 2
+6
+1 2
+1 3
+3 4
+3 5
+3 6
+1
+1
+2
+2
+1 3 5
+2 4 6

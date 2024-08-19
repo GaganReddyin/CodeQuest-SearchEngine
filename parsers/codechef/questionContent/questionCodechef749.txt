@@ -1,0 +1,105 @@
+Construct String
+Problem
+Consider a string
+S consisting of lowercase Latin alphabets.
+In one operation, you can pick an index from string
+S and replace the character at that index with
+3 occurrences of the same character.
+For example, if
+S=dabc, in one operation, we can choose the index
+2 and replace
+S
+2
+with
+3 occurrences of
+S
+2
+. Thus, the string becomes
+S=d
+aaa
+bc.
+Chefina has a string
+U of length
+N.
+Help Chef design a string
+S of minimum length such that Chef can convert it to
+U using any (possibly zero) number of operations.
+It is guaranteed that exactly one such
+S exists.
+Input Format
+The first line of input contains a single integer
+T, the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case consists of an integer
+N — the length of the string
+U.
+The next line consists of string
+U.
+Output Format
+For each test case, output on a new line, the string
+S of minimum length, such that Chef can convert it to
+U using any (possibly zero) number of operations.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+6
+U consists of lowercase Latin alphabets only.
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+3
+6
+aaabbb
+7
+abbbbbc
+4
+abcd
+ab
+abc
+abcd
+Explanation:
+Test case
+1: With
+S as
+ab, we can first replace
+a
+b with
+aaa
+b, and then
+aaa
+b
+with
+aaa
+bbb
+.
+We cannot construct
+U from a string having length less than
+2.
+Test case
+2: With
+S as
+abc, we can first replace
+a
+b
+c with
+a
+bbb
+c, and then
+ab
+b
+bc with
+ab
+bbb
+bc.
+Test case
+3: Here
+S=abcd, and no operations need to be applied.
+We cannot construct
+U from a string having length less than
+4.

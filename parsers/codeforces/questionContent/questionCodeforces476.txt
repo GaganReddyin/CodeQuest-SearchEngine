@@ -1,0 +1,135 @@
+B. Factorial Divisibility
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer
+x
+and an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. You have to determine if the number
+a
+1
+!+
+a
+2
+!+…+
+a
+n
+!
+is divisible by
+x!
+.
+Here
+k!
+is a factorial of
+k
+ — the product of all positive integers less than or equal to
+k
+. For example,
+3!=1⋅2⋅3=6
+, and
+5!=1⋅2⋅3⋅4⋅5=120
+.
+Input
+The first line contains two integers
+n
+and
+x
+(
+1≤n≤500000
+,
+1≤x≤500000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤x
+) — elements of given array.
+Output
+In the only line print "Yes" (without quotes) if
+a
+1
+!+
+a
+2
+!+…+
+a
+n
+!
+is divisible by
+x!
+, and "No" (without quotes) otherwise.
+Examples
+input
+Copy
+6 4
+3 2 2 2 3 3
+output
+Copy
+Yes
+input
+Copy
+8 3
+3 2 2 2 2 2 1 1
+output
+Copy
+Yes
+input
+Copy
+7 8
+7 7 7 7 7 7 7
+output
+Copy
+No
+input
+Copy
+10 5
+4 3 2 1 4 3 2 4 3 4
+output
+Copy
+No
+input
+Copy
+2 500000
+499999 499999
+output
+Copy
+No
+Note
+In the first example
+3!+2!+2!+2!+3!+3!=6+2+2+2+6+6=24
+. Number
+24
+is divisible by
+4!=24
+.
+In the second example
+3!+2!+2!+2!+2!+2!+1!+1!=18
+, is divisible by
+3!=6
+.
+In the third example
+7!+7!+7!+7!+7!+7!+7!=7⋅7!
+. It is easy to prove that this number is not divisible by
+8!
+.

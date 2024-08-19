@@ -1,0 +1,31 @@
+A. Duff and Weight Lifting
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Recently, Duff has been practicing weight lifting. As a hard practice, Malek gave her a task. He gave her a sequence of weights. Weight of i-th of them is 2wi pounds. In each step, Duff can lift some of the remaining weights and throw them away. She does this until there's no more weight left. Malek asked her to minimize the number of steps.
+Duff is a competitive programming fan. That's why in each step, she can only lift and throw away a sequence of weights 2a1, ..., 2ak if and only if there exists a non-negative integer x such that 2a1 + 2a2 + ... + 2ak = 2x, i. e. the sum of those numbers is a power of two.
+Duff is a competitive programming fan, but not a programmer. That's why she asked for your help. Help her minimize the number of steps.
+Input
+The first line of input contains integer n (1 ≤ n ≤ 106), the number of weights.
+The second line contains n integers w1, ..., wn separated by spaces (0 ≤ wi ≤ 106 for each 1 ≤ i ≤ n), the powers of two forming the weights values.
+Output
+Print the minimum number of steps in a single line.
+Examples
+input
+Copy
+5
+1 1 2 3 3
+output
+Copy
+2
+input
+Copy
+4
+0 1 2 3
+output
+Copy
+4
+Note
+In the first sample case: One optimal way would be to throw away the first three in the first step and the rest in the second step. Also, it's not possible to do it in one step because their sum is not a power of two.
+In the second sample case: The only optimal way is to throw away one weight in each step. It's not possible to do it in less than 4 steps because there's no subset of weights with more than one weight and sum equal to a power of two.

@@ -1,0 +1,89 @@
+Different Medians
+Problem
+Chef is given an integer
+N. Chef wants to construct a permutation
+A=[A
+1
+,A
+2
+,…,A
+N
+] of
+{1,2,3,…,N} that satisfies the following condition:
+Let
+P
+i
+denote the prefix of
+A of length
+i, i.e,
+P
+i
+=[A
+1
+,A
+2
+,…,A
+i
+]. Then, for every
+1≤i<N, it must hold that
+median(P
+i
+)
+
+=median(P
+i+1
+)
+Help Chef find such a permutation
+A. If multiple answers exist, you may print any of them.
+Note: The median of an array is defined as follows:
+Let
+A be an (
+1-indexed) array of length
+N. Let
+B be the array obtained by sorting
+A. Then
+median(A) is defined to be
+B
+⌈
+2
+N
+⌉
+. For example,
+median({3,1,2})=2, and
+median({3,4,1,2})=2
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first and only line of each test case contains a single integer
+N.
+Output Format
+For each test case, output the required permutation. If multiple answers are possible, you may print any of them.
+Constraints
+1≤T≤30
+2≤N≤1000
+The sum of
+N over all test cases won't exceed
+1000.
+Sample 1:
+Input
+Output
+2
+2
+3
+2 1
+2 1 3
+Explanation:
+Test case
+1: The prefixes of the given permutation are
+[2] and
+[2,1], with medians
+2 and
+1 respectively.
+Test case
+2: The prefixes of the given permutation are
+[2] (with median
+2),
+[2,1] (with median
+1), and
+[2,1,3] (with median
+2). No two adjacent medians are equal.

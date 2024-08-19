@@ -1,0 +1,171 @@
+F. Football
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+football teams in the world.
+The Main Football Organization (MFO) wants to host at most
+m
+games. MFO wants the
+i
+-th game to be played between the teams
+a
+i
+and
+b
+i
+in one of the
+k
+stadiums.
+Let
+s
+ij
+be the numbers of games the
+i
+-th team played in the
+j
+-th stadium. MFO does not want a team to have much more games in one stadium than in the others. Therefore, for each team
+i
+, the absolute difference between the maximum and minimum among
+s
+i1
+,
+s
+i2
+,…,
+s
+ik
+should not exceed
+2
+.
+Each team has
+w
+i
+ — the amount of money MFO will earn for each game of the
+i
+-th team. If the
+i
+-th team plays
+l
+games, MFO will earn
+w
+i
+⋅l
+.
+MFO needs to find what games in what stadiums they need to host in order to earn as much money as possible, not violating the rule they set.
+However, this problem is too complicated for MFO. Therefore, they are asking you to help them.
+Input
+The first line contains three integers
+n
+,
+m
+,
+k
+(
+3≤n≤100
+,
+0≤m≤1000
+,
+1≤k≤1000
+) — the number of teams, the number of games, and the number of stadiums.
+The second line contains
+n
+integers
+w
+1
+,
+w
+2
+,…,
+w
+n
+(
+1≤
+w
+i
+≤1000
+) — the amount of money MFO will earn for each game of the
+i
+-th game.
+Each of the following
+m
+lines contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+,
+a
+i
+≠
+b
+i
+) — the teams that can play the
+i
+-th game. It is guaranteed that each pair of teams can play at most one game.
+Output
+For each game in the same order, print
+t
+i
+(
+1≤
+t
+i
+≤k
+) — the number of the stadium, in which
+a
+i
+and
+b
+i
+will play the game. If the
+i
+-th game should not be played,
+t
+i
+should be equal to
+0
+.
+If there are multiple answers, print any.
+Example
+input
+Copy
+7 11 3
+4 7 8 10 10 9 3
+6 2
+6 1
+7 6
+4 3
+4 6
+3 1
+5 3
+7 5
+7 3
+4 2
+1 4
+output
+Copy
+3
+2
+1
+1
+3
+1
+2
+1
+2
+3
+2
+Note
+One of possible solutions to the example is shown below:

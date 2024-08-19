@@ -1,0 +1,303 @@
+F. Equal Reversal
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is an array
+a
+of length
+n
+. You may perform the following operation on it:
+Choose two indices
+l
+and
+r
+where
+1≤l≤r≤n
+and
+a
+l
+=
+a
+r
+. Then, reverse the subsegment from the
+l
+-th to the
+r
+-th element, i. e. set
+[
+a
+l
+,
+a
+l+1
+,…,
+a
+r−1
+,
+a
+r
+]
+to
+[
+a
+r
+,
+a
+r−1
+,…,
+a
+l+1
+,
+a
+l
+]
+.
+You are also given another array
+b
+of length
+n
+which is a permutation of
+a
+. Find a sequence of at most
+n
+2
+operations that transforms array
+a
+into
+b
+, or report that no such sequence exists.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤500
+) — the length of array
+a
+and
+b
+.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — elements of the array
+a
+.
+The third line of each test case contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤n
+) — elements of the array
+b
+.
+It is guaranteed that
+b
+is a permutation of
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+500
+.
+Output
+For each test case, output "NO" (without quotes) if it is impossible to turn
+a
+into
+b
+using at most
+n
+2
+operations.
+Otherwise, output "YES" (without quotes). Then output an integer
+k
+(
+0≤k≤
+n
+2
+) denoting the number of operations you will perform. Note that you don't have to minimize the number of operations.
+Afterwards, output
+k
+lines. The
+i
+-th line should contain two integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+) — the left and right indices for the
+i
+-th operation.
+You can output "YES" and "NO" in any case (for example, strings "yEs", "yes" and "Yes" will be recognized as a positive response).
+If there are multiple possible sequences of operations, you may output any of them.
+Example
+input
+Copy
+5
+8
+1 2 4 3 1 2 1 1
+1 1 3 4 2 1 2 1
+7
+1 2 3 1 3 2 3
+1 3 2 3 1 2 3
+3
+1 1 2
+1 2 1
+2
+1 2
+2 1
+1
+1
+1
+output
+Copy
+YES
+2
+5 8
+1 6
+YES
+2
+1 4
+3 6
+NO
+NO
+YES
+0
+Note
+In the first test case, we can perform the following operations:
+[1,2,4,3,1,2,1,1]
+−
+→
+−
+−
+−
+−
+l=5,r=8
+[1,2,4,3,1,1,2,1]
+−
+→
+−
+−
+−
+−
+l=1,r=6
+[1,1,3,4,2,1,2,1].
+[
+1
+2
+4
+3
+1
+2
+1
+1
+]
+[
+1
+2
+4
+3
+1
+1
+2
+1
+]
+[
+1
+1
+3
+4
+2
+1
+2
+1
+]
+In the second test case, we can perform the following operations:
+[1,2,3,1,3,2,3]
+−
+→
+−
+−
+−
+−
+l=1,r=4
+[1,3,2,1,3,2,3]
+−
+→
+−
+−
+−
+−
+l=3,r=6
+[1,3,2,3,1,2,3].
+[
+1
+2
+3
+1
+3
+2
+3
+]
+[
+1
+3
+2
+1
+3
+2
+3
+]
+[
+1
+3
+2
+3
+1
+2
+3
+]
+It can be proven that it is impossible to turn
+a
+into
+b
+in the third and fourth test cases.

@@ -1,0 +1,136 @@
+Increase to Zero
+Problem
+Given an array of
+N non-negative integers
+A
+1
+,A
+2
+,…,A
+N
+. In one operation, you can increase any one of the elements by
+1.
+Find the minimum number of operations needed to make the XOR of all elements (
+A
+1
+⊕A
+2
+⊕…⊕A
+N
+) equal to
+0. Here
+⊕ denotes the bitwise XOR operation.
+Input Format
+The first line of input contains one integer
+T - the number of test cases. Descriptions of
+T test cases follow.
+The first line of each test case contains one integer
+N - the size of the array. The second line of each test case contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+- the elements of the array.
+Output Format
+For each test case, print one number - the minimum number of operations required to make the array XOR equal to
+0. It can be shown that it is always possible.
+Constraints
+1≤T≤100
+2≤N≤10
+6
+∑N≤10
+6
+0≤A
+i
+<2
+60
+Subtasks
+Subtask 1 (10 points):
+2≤N≤5,
+A
+i
+<2
+4
+Subtask 2 (20 points):
+2≤N≤100,
+∑N≤1000,
+A
+i
+<2
+7
+Subtask 3 (10 points):
+2≤N≤7,
+∑N≤100,
+A
+i
+<2
+60
+Subtask 4 (10 points):
+2≤N≤13,
+∑N≤100,
+A
+i
+<2
+60
+Subtask 5 (25 points):
+2≤N≤1000,
+∑N≤10000,
+A
+i
+<2
+30
+Subtask 6 (15 points):
+2≤N≤10
+6
+,
+∑N≤10
+6
+,
+A
+i
+<2
+30
+Subtask 7 (10 points): Original constraints
+Sample 1:
+Input
+Output
+4
+3
+3 4 5
+4
+5 3 0 7
+3
+2 3 1
+5
+7 7 7 7 7
+2
+1
+0
+9
+Explanation:
+Test case
+1: Increase
+A
+3
+twice by using two operations. Thus, the array becomes
+[3,4,7]. The XOR of all elements of the array is
+3⊕4⊕7=0. It can be shown that the XOR of all elements cannot be made equal to
+0 using less than
+2 operations.
+Test case
+2: Use one operation to increase
+A
+3
+by
+1. Thus, the array becomes
+[5,3,1,7]. The XOR of all elements of the array is
+5⊕3⊕1⊕7=0. It can be shown that the XOR of all elements cannot be made equal to
+0 using less than
+1 operation.
+Test case
+3: The XOR of all elements is already
+0. Thus, we require
+0 operations.

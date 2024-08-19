@@ -1,0 +1,113 @@
+B. Odd Swap Sort
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+. You can perform operations on the array. In each operation you can choose an integer
+i
+(
+1≤i<n
+), and swap elements
+a
+i
+and
+a
+i+1
+of the array, if
+a
+i
++
+a
+i+1
+is odd.
+Determine whether it can be sorted in non-decreasing order using this operation any number of times.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the array.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — the elements of the array.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print "Yes" or "No" depending on whether you can or can not sort the given array.
+You may print each letter in any case (for example, "YES", "Yes", "yes", "yEs" will all be recognized as positive answer).
+Example
+input
+Copy
+4
+4
+1 6 31 14
+2
+4 2
+5
+2 9 6 7 10
+3
+6 6 6
+output
+Copy
+Yes
+No
+No
+Yes
+Note
+In the first test case, we can simply swap
+31
+and
+14
+(
+31+14=45
+which is odd) and obtain the non-decreasing array
+[1,6,14,31]
+.
+In the second test case, the only way we could sort the array is by swapping
+4
+and
+2
+, but this is impossible, since their sum
+4+2=6
+is even.
+In the third test case, there is no way to make the array non-decreasing.
+In the fourth test case, the array is already non-decreasing.

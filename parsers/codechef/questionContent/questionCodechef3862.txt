@@ -1,0 +1,68 @@
+Smallest Element In Progression
+Problem
+You are given a prime number
+P and two integers
+A,B. Your task is to find the minimum value of
+(A
+T
+⋅B)modP over all nonnegative integers
+T.
+Input Format
+The only line of input contains three space-separated integers
+P,A,B.
+It's guaranteed that
+P is prime.
+Output Format
+Output the minimum value of
+(A
+T
+⋅B)modP over all nonnegative integers
+T.
+Constraints
+3≤P≤10
+13
+1≤A,B<P
+P is a prime number.
+Subtasks
+Subtask 1 (5 points):
+P≤10
+7
+Subtask 2 (20 points):
+P≤10
+9
+Subtask 3 (25 points):
+P≤10
+11
+Subtask 4 (20 points):
+P≤10
+12
+Subtask 5 (30 points):
+Original constraints.
+Sample 1:
+Input
+Output
+7 2 3
+3
+Sample 2:
+Input
+Output
+11 10 8
+3
+Sample 3:
+Input
+Output
+101 42 37
+1
+Explanation:
+Test case
+1: Choose
+T=0 to get
+(2
+0
+⋅3)mod7=3, which is the minimum possible value.
+Test case
+2: Choose
+T=1 to get
+(10
+1
+⋅8)mod11=80mod11=3, which is the minimum possible value.

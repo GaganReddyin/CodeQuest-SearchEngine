@@ -1,0 +1,112 @@
+E. Beautiful Mirrors
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Creatnx has
+n
+mirrors, numbered from
+1
+to
+n
+. Every day, Creatnx asks exactly one mirror "Am I beautiful?". The
+i
+-th mirror will tell Creatnx that he is beautiful with probability
+p
+i
+100
+for all
+1≤i≤n
+.
+Creatnx asks the mirrors one by one, starting from the
+1
+-st mirror. Every day, if he asks
+i
+-th mirror, there are two possibilities:
+The
+i
+-th mirror tells Creatnx that he is beautiful. In this case, if
+i=n
+Creatnx will stop and become happy, otherwise he will continue asking the
+i+1
+-th mirror next day;
+In the other case, Creatnx will feel upset. The next day, Creatnx will start asking from the
+1
+-st mirror again.
+You need to calculate the expected number of days until Creatnx becomes happy.
+This number should be found by modulo
+998244353
+. Formally, let
+M=998244353
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of mirrors.
+The second line contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤100
+).
+Output
+Print the answer modulo
+998244353
+in a single line.
+Examples
+input
+Copy
+1
+50
+output
+Copy
+2
+input
+Copy
+3
+10 20 50
+output
+Copy
+112
+Note
+In the first test, there is only one mirror and it tells, that Creatnx is beautiful with probability
+1
+2
+. So, the expected number of days until Creatnx becomes happy is
+2
+.

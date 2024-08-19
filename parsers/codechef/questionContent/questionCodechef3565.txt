@@ -1,0 +1,92 @@
+Binary Game
+Problem
+Read problem statements in Russian
+You are given a sequence of
+16N positive integers
+a
+1
+,a
+2
+,…,a
+16N
+. You may shuffle this sequence in any way you choose, i.e. change it to any one of its permutations. Then, let
+x=(a
+1
+⊕a
+2
+)⊗(a
+3
+⊕a
+4
+)⊗…⊗(a
+8N−1
+⊕a
+8N
+),
+y=(a
+8N+1
+⊕a
+8N+2
+)⊗(a
+8N+3
+⊕a
+8N+4
+)⊗…⊗(a
+16N−1
+⊕a
+16N
+),
+where
+⊗ and
+⊕ denote bitwise AND and XOR respectively.
+Find the maximum possible value of
+x−y.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+16N space-separated integers
+a
+1
+,a
+2
+,…,a
+16N
+.
+Output
+Print a single line containing one integer — the maximum value of
+x−y.
+Constraints
+1≤N≤10
+4
+1≤a
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+1
+1 1 1 2 1 1 1 2 1 1 1 2 1 1 1 2
+3
+Explanation:
+Since
+1⊕1=2⊕2=0 and
+1⊕2=3, it is easy to see that we should let
+a
+1
+=a
+3
+=a
+5
+=a
+7
+=2 and all the remaining elements
+a
+i
+should be
+1.

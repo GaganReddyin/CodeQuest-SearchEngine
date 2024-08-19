@@ -1,0 +1,105 @@
+C2. Madhouse (Hard version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem is different with easy version only by constraints on total answers length
+It is an interactive problem
+Venya joined a tour to the madhouse, in which orderlies play with patients the following game. Orderlies pick a string
+s
+of length
+n
+, consisting only of lowercase English letters. The player can ask two types of queries:
+? l r – ask to list all substrings of
+s[l..r]
+. Substrings will be returned in random order, and in every substring, all characters will be randomly shuffled.
+! s – guess the string picked by the orderlies. This query can be asked exactly once, after that the game will finish. If the string is guessed correctly, the player wins, otherwise he loses.
+The player can ask no more than
+3
+queries of the first type.
+To make it easier for the orderlies, there is an additional limitation: the total number of returned substrings in all queries of the first type must not exceed
+⌈0.777(n+1
+)
+2
+⌉
+(
+⌈x⌉
+is
+x
+rounded up).
+Venya asked you to write a program, which will guess the string by interacting with the orderlies' program and acting by the game's rules.
+Your program should immediately terminate after guessing the string using a query of the second type. In case your program guessed the string incorrectly, or it violated the game rules, it will receive verdict Wrong answer.
+Note that in every test case the string is fixed beforehand and will not change during the game, which means that the interactor is not adaptive.
+Input
+First line contains number
+n
+(
+1≤n≤100
+) — the length of the picked string.
+Interaction
+You start the interaction by reading the number
+n
+.
+To ask a query about a substring from
+l
+to
+r
+inclusively (
+1≤l≤r≤n
+), you should output
+? l r
+on a separate line. After this, all substrings of
+s[l..r]
+will be returned in random order, each substring exactly once. In every returned substring all characters will be randomly shuffled.
+In the case, if you ask an incorrect query, ask more than
+3
+queries of the first type or there will be more than
+⌈0.777(n+1
+)
+2
+⌉
+substrings returned in total, you will receive verdict Wrong answer.
+To guess the string
+s
+, you should output
+! s
+on a separate line.
+After printing each query, do not forget to flush the output. Otherwise, you will get Idleness limit exceeded. To flush the output, you can use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see documentation for other languages.
+If you received - (dash) as an answer to any query, you need to terminate your program with exit code 0 (for example, by calling exit(0)). This means that there was an error in the interaction protocol. If you don't terminate with exit code 0, you can receive any unsuccessful verdict.
+Hack format
+To hack a solution, use the following format:
+The first line should contain one integer
+n
+(
+1≤n≤100
+) — the length of the string, and the following line should contain the string
+s
+.
+Example
+input
+Copy
+4
+
+a
+aa
+a
+
+cb
+b
+c
+
+c
+output
+Copy
+? 1 2
+
+? 3 4
+
+? 4 4
+
+! aabc

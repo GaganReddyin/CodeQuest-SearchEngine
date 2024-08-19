@@ -1,0 +1,97 @@
+Squares Counting
+Problem
+You are given a binary square matrix
+A of size
+N×N. Let the value at cell
+(i,j) be denoted by
+A(i,j).
+Your task is to count the number of square frames present in the grid. A square frame is defined to be a square submatrix of
+A whose border elements are all '1'.
+Formally,
+A square submatrix of
+A of size
+k with top-left corner
+(i,j) is defined to be the set of cells
+{(i+x,j+y)∣0≤x,y<k}. Note that this requires
+i+k−1≤N and
+j+k−1≤N.
+A square frame of size
+k with top-left corner
+(i,j) is defined to be a square submatrix of size
+k such that
+A(i+x,j+y)= 1 whenever
+x=0 or
+y=0 or
+x=k−1 or
+y=k−1. There is no constraint on the values of elements strictly inside the frame.
+Refer to the sample explanation for more details.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N denoting the size of the grid.
+Each of the next
+N lines contains a string consisting of
+N characters. The
+i-th such string represents the
+i-th row of
+A. Each character of each string is either 0 or 1.
+Output Format
+For each test case, output a single integer denoting the count of square frames in the grid.
+Constraints
+1≤T≤10
+5
+1≤N≤500
+The grid is binary, i.e,
+A(i,j)= 0 or 1 for every
+1≤i,j≤N.
+Sum of
+N
+2
+over all test cases does not exceed
+10
+6
+.
+Subtasks
+Subtask 1(100 points): Original constraints
+Sample 1:
+Input
+Output
+2
+2
+10
+00
+4
+1111
+1101
+1011
+1111
+1
+17
+Explanation:
+Test Case
+1: There is
+1 square frame, the submatrix containing index
+(1,1).
+Test Case
+2: There are
+14 square frames of size
+1,
+2 of size
+2, and
+1 of size
+4.
+Some of the square frames are :
+The frame of size
+1 containing point
+(3,3).
+The frame of size
+2 with corner points
+(1,1),(1,2),(2,2),(2,1).
+The frame of size
+2 with corner points
+(3,3),(4,3),(4,4),(3,4).
+The frame of size
+4 with corner points
+(1,1),(1,4),(4,4),(4,1).

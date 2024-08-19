@@ -1,0 +1,229 @@
+A1. Binary Table (Easy Version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The difference between the versions is in the number of possible operations that can be made. You can make hacks if and only if you solved both versions of the problem.
+You are given a binary table of size
+n×m
+. This table consists of symbols
+0
+and
+1
+.
+You can make such operation: select
+3
+different cells that belong to one
+2×2
+square and change the symbols in these cells (change
+0
+to
+1
+and
+1
+to
+0
+).
+Your task is to make all symbols in the table equal to
+0
+. You are allowed to make at most
+3nm
+operations. You don't need to minimize the number of operations.
+It can be proved that it is always possible.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤5000
+) — the number of test cases. The next lines contain descriptions of test cases.
+The first line of the description of each test case contains two integers
+n
+,
+m
+(
+2≤n,m≤100
+).
+Each of the next
+n
+lines contains a binary string of length
+m
+, describing the symbols of the next row of the table.
+It is guaranteed that the sum of
+nm
+for all test cases does not exceed
+20000
+.
+Output
+For each test case print the integer
+k
+(
+0≤k≤3nm
+) — the number of operations.
+In the each of the next
+k
+lines print
+6
+integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+,
+x
+3
+,
+y
+3
+(
+1≤
+x
+1
+,
+x
+2
+,
+x
+3
+≤n,1≤
+y
+1
+,
+y
+2
+,
+y
+3
+≤m
+) describing the next operation. This operation will be made with three cells
+(
+x
+1
+,
+y
+1
+)
+,
+(
+x
+2
+,
+y
+2
+)
+,
+(
+x
+3
+,
+y
+3
+)
+. These three cells should be different. These three cells should belong into some
+2×2
+square.
+Example
+input
+Copy
+5
+2 2
+10
+11
+3 3
+011
+101
+110
+4 4
+1111
+0110
+0110
+1111
+5 5
+01011
+11001
+00010
+11011
+10000
+2 3
+011
+101
+output
+Copy
+1
+1 1 2 1 2 2
+2 
+2 1 3 1 3 2
+1 2 1 3 2 3
+4
+1 1 1 2 2 2 
+1 3 1 4 2 3
+3 2 4 1 4 2
+3 3 4 3 4 4
+4
+1 2 2 1 2 2 
+1 4 1 5 2 5 
+4 1 4 2 5 1
+4 4 4 5 3 4
+2
+1 3 2 2 2 3
+1 2 2 1 2 2
+Note
+In the first test case, it is possible to make only one operation with cells
+(1,1)
+,
+(2,1)
+,
+(2,2)
+. After that, all symbols will be equal to
+0
+.
+In the second test case:
+operation with cells
+(2,1)
+,
+(3,1)
+,
+(3,2)
+. After it the table will be:
+
+011
+001
+000
+operation with cells
+(1,2)
+,
+(1,3)
+,
+(2,3)
+. After it the table will be:
+
+000
+000
+000
+In the fifth test case:
+operation with cells
+(1,3)
+,
+(2,2)
+,
+(2,3)
+. After it the table will be:
+
+010
+110
+operation with cells
+(1,2)
+,
+(2,1)
+,
+(2,2)
+. After it the table will be:
+
+000
+000

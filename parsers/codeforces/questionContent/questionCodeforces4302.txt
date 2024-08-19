@@ -1,0 +1,394 @@
+E. Store
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Natasha was already going to fly back to Earth when she remembered that she needs to go to the Martian store to buy Martian souvenirs for her friends.
+It is known, that the Martian year lasts
+x
+max
+months, month lasts
+y
+max
+days, day lasts
+z
+max
+seconds. Natasha also knows that this store works according to the following schedule: 2 months in a year were selected:
+x
+l
+and
+x
+r
+(
+1≤
+x
+l
+≤
+x
+r
+≤
+x
+max
+), 2 days in a month:
+y
+l
+and
+y
+r
+(
+1≤
+y
+l
+≤
+y
+r
+≤
+y
+max
+) and 2 seconds in a day:
+z
+l
+and
+z
+r
+(
+1≤
+z
+l
+≤
+z
+r
+≤
+z
+max
+). The store works at all such moments (month
+x
+, day
+y
+, second
+z
+), when simultaneously
+x
+l
+≤x≤
+x
+r
+,
+y
+l
+≤y≤
+y
+r
+and
+z
+l
+≤z≤
+z
+r
+.
+Unfortunately, Natasha does not know the numbers
+x
+l
+,
+x
+r
+,
+y
+l
+,
+y
+r
+,
+z
+l
+,
+z
+r
+.
+One Martian told Natasha: "I went to this store
+(n+m)
+times.
+n
+times of them it was opened, and
+m
+times — closed." He also described his every trip to the store: the month, day, second of the trip and whether the store was open or closed at that moment.
+Natasha can go to the store
+k
+times. For each of them, determine whether the store at the time of the trip is open, closed, or this information is unknown.
+Input
+The first line contains
+6
+integers
+x
+max
+,
+y
+max
+,
+z
+max
+,
+n
+,
+m
+,
+k
+(
+1≤
+x
+max
+,
+y
+max
+,
+z
+max
+≤
+10
+5
+,
+1≤n≤
+10
+5
+,
+0≤m≤
+10
+5
+,
+1≤k≤
+10
+5
+) — number of months in a year, days in a month, seconds in a day, times when the store (according to a Martian) was opened, when it was closed and Natasha's queries.
+The
+i
+-th of the next
+n
+lines contains
+3
+integers
+x
+i
+,
+y
+i
+,
+z
+i
+(
+1≤
+x
+i
+≤
+x
+max
+,
+1≤
+y
+i
+≤
+y
+max
+,
+1≤
+z
+i
+≤
+z
+max
+) — month, day and second of
+i
+-th time, when the store, according to the Martian, was opened.
+The
+i
+-th of the next
+m
+lines contains
+3
+integers
+x
+i
+,
+y
+i
+,
+z
+i
+(
+1≤
+x
+i
+≤
+x
+max
+,
+1≤
+y
+i
+≤
+y
+max
+,
+1≤
+z
+i
+≤
+z
+max
+) — month, day and second of
+i
+-th time, when the store, according to the Martian, was closed.
+The
+i
+-th of the next
+k
+lines contains
+3
+integers
+x
+i
+,
+y
+i
+,
+z
+i
+(
+1≤
+x
+i
+≤
+x
+max
+,
+1≤
+y
+i
+≤
+y
+max
+,
+1≤
+z
+i
+≤
+z
+max
+) — month, day and second of
+i
+-th Natasha's query.
+Output
+If the Martian was mistaken and his information about when the store is open and when it is closed is inconsistent, print a single line "INCORRECT" (without quotes).
+Otherwise, print the first line "CORRECT" (without quotes). Next output
+k
+lines: in
+i
+-th of them, output an answer to
+i
+-th Natasha's query: "OPEN" (without quotes), if the store was opened at the moment of this query, "CLOSED" (without quotes), if it was closed, or "UNKNOWN" (without quotes), if this information can not be determined on the basis of available data.
+Examples
+input
+Copy
+10 10 10 3 1 3
+2 6 2
+4 2 4
+6 4 6
+9 9 9
+3 3 3
+10 10 10
+8 8 8
+output
+Copy
+CORRECT
+OPEN
+CLOSED
+UNKNOWN
+input
+Copy
+10 10 10 1 1 1
+2 5 7
+2 5 7
+8 9 10
+output
+Copy
+INCORRECT
+Note
+Consider the first test case.
+There are
+10
+months in a year,
+10
+days in a month, and
+10
+seconds in a day.
+The store was opened in
+3
+moments:
+month
+2
+, day
+6
+, second
+2
+;
+month
+4
+, day
+2
+, second
+4
+;
+month
+6
+, day
+4
+, second
+6
+.
+The store was closed at the time: month
+9
+, day
+9
+, second
+9
+.
+Queries:
+month
+3
+, day
+3
+, second
+3
+ — open ("OPEN") (since the store opens no later than month
+2
+, day
+2
+, second
+2
+and closes no earlier than in month
+6
+, day
+6
+, second
+6
+);
+month
+10
+, day
+10
+, second
+10
+ — closed ("CLOSED") (since it is closed even in the month
+9
+, day
+9
+, second
+9
+);
+month
+8
+, day
+8
+, second
+8
+ — unknown ("UNKNOWN") (because the schedule in which the store is open at this moment exists, and the schedule in which the store is closed at this moment exists as well).
+In the second test case, the store was closed and opened at the same time — contradiction ("INCORRECT").

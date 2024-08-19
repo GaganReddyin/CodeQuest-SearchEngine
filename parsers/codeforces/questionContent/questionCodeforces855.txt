@@ -1,0 +1,114 @@
+D. Cute number
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Ran is especially skilled in computation and mathematics. It is said that she can do unimaginable calculation work in an instant.
+—Perfect Memento in Strict Sense
+Ran Yakumo is a cute girl who loves creating cute Maths problems.
+Let
+f(x)
+be the minimal square number strictly greater than
+x
+, and
+g(x)
+be the maximal square number less than or equal to
+x
+. For example,
+f(1)=f(2)=g(4)=g(8)=4
+.
+A positive integer
+x
+is cute if
+x−g(x)<f(x)−x
+. For example,
+1,5,11
+are cute integers, while
+3,8,15
+are not.
+Ran gives you an array
+a
+of length
+n
+. She wants you to find the smallest non-negative integer
+k
+such that
+a
+i
++k
+is a cute number for any element of
+a
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤
+10
+6
+) — the length of
+a
+.
+The second line contains
+n
+intergers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+1
+≤
+a
+2
+≤…≤
+a
+n
+≤2⋅
+10
+6
+) — the array
+a
+.
+Output
+Print a single interger
+k
+— the answer.
+Examples
+input
+Copy
+4
+1 3 8 10
+output
+Copy
+1
+input
+Copy
+5
+2 3 8 9 11
+output
+Copy
+8
+input
+Copy
+8
+1 2 3 4 5 6 7 8
+output
+Copy
+48
+Note
+Test case 1:
+3
+is not cute integer, so
+k≠0
+.
+2,4,9,11
+are cute integers, so
+k=1
+.

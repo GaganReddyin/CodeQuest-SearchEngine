@@ -1,0 +1,70 @@
+Aujasvit and the Circle Game
+Problem
+Aujasvit just came up with a new game to play with his friends.
+N people stand in a circle, each assigned an index from
+1 to
+N in clockwise order. Then the following operation is done
+N−1 times.
+The person with the lowest index holds a coin.
+Then, the coin then moves to the next person clockwise
+M−1 times.
+Then, the person who is holding the coin is removed from the circle.
+The last person remaining after
+N−1 operations is the winner.
+Aujasvit has already decided on the integer
+M to be used in the game. Before inviting people to play his game, Aujasvit wants to know the winner if the game has
+1 player,
+2 players,
+3 players, ...,
+X players. That is, you need to output the winner when
+N=1,N=2,...,N=X.
+Input Format
+The first line of each input contains
+T - the number of test cases. The test cases then follow.
+The only line of each test case contains two space-separated integers
+M and
+X.
+Output Format
+For each testcase, output
+X integers
+A
+1
+,A
+2
+,…,A
+X
+, where
+A
+i
+is the index of the winner if
+i people are playing this game.
+Constraints
+1≤T≤1000
+1≤M≤10
+9
+1≤X≤10000
+Sum of
+X over all testcases is not more than
+5⋅10
+5
+Sample 1:
+Input
+Output
+1
+2 3
+1 1 1
+Explanation:
+Test case
+1:
+When there is only
+1 player, they are the winner. Therefore player
+1 wins.
+When there are
+2 players, player
+2 is removed in the first round. Therefore player
+1 wins.
+When there are
+3 players, player
+2 is removed in the first round, and player
+3 is removed in the second round. Therefore player
+1 wins.

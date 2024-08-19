@@ -1,0 +1,28 @@
+Counting Matrices
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+  Lira loves Linear Algebra and she is especially keen about matrix :).
+Today, she learnt some properties about matrices, namely, she learnt about what the trace of a matrix is, as her teacher gave her many exercises for her to practice.
+As we know she is pretty clever, she rapidly came up with some definitions of her own and devised a somewhat harder version of the problem initially proposed by her teacher.
+Namely, she defines a Positive Invertible Integer Matrix as being an invertible 2x2 matrix composed only of positive (i.e. greater than 0) integer elements and whose determinant is greater than 0.
+Now, she is interested in counting how many such matrices are there, such that their trace is equal to N .
+It's your turn to solve Lira's problem :D
+Input
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+Each test case consist of single integer N, the trace of the matrix.
+Output
+For each test case, output a single line containing the number of Positive Invertible Integer Matrices such that their trace is equal to N and determinant is positive.
+Read here for additional info:
+http://en.wikipedia.org/wiki/Trace_(linear_algebra)
+http://en.wikipedia.org/wiki/Determinant
+Constraints:
+1 ≤ T ≤ 50
+3 ≤ N ≤ 2500
+  Sample 1:
+Input
+Output
+1
+3
+2
+Explanation:
+The only two matrices that exist with trace equal to 3 and that satisfy all the given conditions are:

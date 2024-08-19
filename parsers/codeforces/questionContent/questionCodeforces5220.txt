@@ -1,0 +1,47 @@
+M. April Fools' Problem (easy)
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The marmots have prepared a very easy problem for this year's HC2 – this one. It involves numbers n, k and a sequence of n positive integers a1, a2, ..., an. They also came up with a beautiful and riveting story for the problem statement. It explains what the input means, what the program should output, and it also reads like a good criminal.
+However I, Heidi, will have none of that. As my joke for today, I am removing the story from the statement and replacing it with these two unhelpful paragraphs. Now solve the problem, fools!
+Input
+The first line of the input contains two space-separated integers n and k (1 ≤ k ≤ n ≤ 2200). The second line contains n space-separated integers a1, ..., an (1 ≤ ai ≤ 104).
+Output
+Output one number.
+Examples
+input
+Copy
+8 5
+1 1 1 1 1 1 1 1
+output
+Copy
+5
+input
+Copy
+10 3
+16 8 2 4 512 256 32 128 64 1
+output
+Copy
+7
+input
+Copy
+5 1
+20 10 50 30 46
+output
+Copy
+10
+input
+Copy
+6 6
+6 6 6 6 6 6
+output
+Copy
+36
+input
+Copy
+1 1
+100
+output
+Copy
+100

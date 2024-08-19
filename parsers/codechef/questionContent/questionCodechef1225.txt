@@ -1,0 +1,285 @@
+Decomposition Reaction
+Problem
+A thermal decomposition reaction is breakdown of a compound into one or more compounds when heated.
+For example,
+P→a⋅Q+b⋅R is a decomposition reaction. Here,
+1 unit of
+P is converted into
+a unit of
+Q and
+b unit of
+R after completion of the reaction.
+You are given
+N compounds numbered from
+1 to
+N. The initial amount of the
+i
+th
+compound is
+Q
+i
+.
+You are also given
+M equations. Every equation is of the form:
+C
+0
+→W
+1
+⋅C
+1
++W
+2
+⋅C
+2
++…+W
+X
+⋅C
+X
+.
+Here:
+C
+0
+represents the compound which will decompose into
+X compounds on heating.
+C
+i
+(1≤i≤X) represents the compounds into which
+C
+0
+is decomposed.
+W
+i
+(1≤i≤X) represents the number of units of
+C
+i
+produced due to the decomposition of
+C
+0
+.
+C
+i
+>C
+i−1
+for all
+(1≤i≤X).
+Note that a compound can decompose in at most one way only.
+Find the final amount of each compound after prolonged heating. Since the number can be huge, print the answer modulo
+10
+9
++7.
+Input Format
+First line will contain two space separated integers
+N and
+M - the number of compounds and the number of equations.
+Second line will contain
+N space separated integers
+Q
+1
+,Q
+2
+,...,Q
+N
+- the initial amounts of each compound.
+The next
+2⋅M lines contain the details of the
+M equations. Each equation is represented using
+2 lines.
+First line of the
+i
+th
+equation contains two space separated integers
+C
+i,0
+,
+X
+i
+- the decomposing compound and the number of compounds in which it decomposes.
+Second line of the
+i
+th
+equation contains
+2⋅X
+i
+space separated integers
+W
+i,1
+,C
+i,1
+,W
+i,2
+,C
+i,2
+,…,W
+i,X
+i
+,C
+i,X
+i
+- the number of units and the types of compounds into which
+C
+i,0
+decomposes.
+Output Format
+Print
+N lines. The
+i
+th
+line contains a single integer denoting the final amount of the
+i
+th
+compound after prolonged heating modulo
+10
+9
++7.
+Constraints
+0≤M<N≤10
+5
+0≤Q
+i
+<(10
+9
++7)
+1≤C
+i,0
+<N
+1≤X
+i
+≤(N−C
+i,0
+)
+1≤W
+i,j
+<(10
+9
++7),
+∀
+(1≤j≤X
+i
+) and
+(1≤i≤M).
+C_{i, j} &lt; C_{i,j+1},
+∀
+(0≤j<X
+i
+) and
+(1≤i≤M).
+C
+i,0
+<C
+i+1,0
+,
+∀
+(1≤i<M)
+Sum of
+X
+i
+over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4 2
+5 10 12 2
+1 2
+3 2 4 3
+3 1
+2 4
+0
+25
+0
+66
+Explanation:
+Test Cse
+1: We have
+4 compounds initially. For better explanation, we refer the compounds
+1,2,3, and
+4 as
+A
+1
+,A
+2
+,A
+3
+, and
+A
+4
+respectively. Initially, the amount of
+A
+1
+,A
+2
+,A
+3
+, and
+A
+4
+present is
+5,10,12, and
+2 respectively.
+The two equations are:
+A
+1
+→3⋅A
+2
++4⋅A
+3
+A
+3
+→2⋅A
+4
+We know that
+1 unit of
+A
+1
+produces
+3 units of
+A
+2
+and
+4 units of
+A
+3
+. Thus, the initial
+5 units of
+A
+1
+decompose to
+5⋅3=15 units of
+A
+2
+and
+5⋅4=20 units of
+A
+3
+. Note that now there are
+0 units of
+A
+1
+left.
+Considering only this reaction, the updated amounts of chemicals would be
+[0,10+15,12+20,2]=[0,25,32,2].
+We also know that
+1 unit of
+A
+3
+decomposes to
+2 units of
+A
+4
+. The total amount of
+A
+3
+available for decomposition would be
+32 units
+(12 units were available initially and
+20 units were formed due to decomposition
+). Thus these
+32 units would produce
+32⋅2=64 units of
+A
+4
+.
+Thus, after prolonged heating, the amounts of compounds are
+[0,25,0,64+2]=[0,25,0,66].

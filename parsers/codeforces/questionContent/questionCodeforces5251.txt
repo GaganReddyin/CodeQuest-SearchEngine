@@ -1,0 +1,30 @@
+B. Odd sum
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given sequence a1, a2, ..., an of integer numbers of length n. Your task is to find such subsequence that its sum is odd and maximum among all such subsequences. It's guaranteed that given sequence contains subsequence with odd sum.
+Subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements.
+You should write a program which finds sum of the best subsequence.
+Input
+The first line contains integer number n (1 ≤ n ≤ 105).
+The second line contains n integer numbers a1, a2, ..., an ( - 104 ≤ ai ≤ 104). The sequence contains at least one subsequence with odd sum.
+Output
+Print sum of resulting subseqeuence.
+Examples
+input
+Copy
+4
+-2 2 -3 1
+output
+Copy
+3
+input
+Copy
+3
+2 -5 -3
+output
+Copy
+-1
+Note
+In the first example sum of the second and the fourth elements is 3.

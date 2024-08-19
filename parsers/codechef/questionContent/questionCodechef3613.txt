@@ -1,0 +1,200 @@
+Squeeze OR
+Problem
+Chef has an array
+A of
+N integers. He asks you
+Q queries. For each query, you are given the following:
+An integer
+X
+(0≤X<2
+20
+).
+An array
+B of size
+M such that
+1≤B
+j
+≤N.
+You need to erase minimum number of elements from
+A such that the bitwise-OR of the remaining elements is at most
+X and no element having index
+B
+j
+is erased.
+For each query, find the maximum number of remaining elements such that the bitwise OR of the remaining elements is at most
+X and no element with index
+B
+j
+is erased. If it is impossible to get an OR of at most
+X, print
+−1.
+Note: The bitwise OR of an empty array is considered
+0.
+Input Format
+The first line of the input consists of integers
+N and
+Q, the number of elements in the array and the number of queries.
+The next line contains
+N space separated integers, the elements of the array
+A. The descriptions of the
+Q queries follow.
+The first line of each query consists of integers
+X and
+M, the integer
+X and the number of indices that cannot be erased.
+The last line of each query consists of
+M space separated integers
+B
+j
+denoting that the elements
+A
+B
+j
+cannot be erased. Note that, this line is omitted if
+M=0.
+Output Format
+Print
+Q lines, the answers to each of the queries.
+For each query, print -1 if it is impossible to get an OR of at most
+X. Otherwise, print the maximum number of remaining elements.
+Constraints
+1≤N≤2⋅10
+5
+0≤M≤N
+1≤Q≤2⋅10
+5
+0≤A
+i
+,X<2
+20
+1≤B
+j
+<B
+j+1
+≤N,
+∀j such that
+1≤j<M
+Sum of
+M over all queries does not exceed
+2⋅10
+5
+.
+Subtasks
+Subtask 1 (40 points):
+Q=1,M=0.
+Subtask 2 (60 points): No additional constraints.
+Sample 1:
+Input
+Output
+3 1
+4 3 5
+6 0
+2
+Explanation:
+The given array
+A=[4,3,5]. In binary representation,
+A=[100
+2
+,011
+2
+,101
+2
+]. We are given that the size of array
+B is
+0. Thus, we can delete any element of the array
+A.
+Erase
+0 elements: The remaining array
+A=[100
+2
+,011
+2
+,101
+2
+]. Bitwise OR of the remaining elements is
+100
+2
+∣
+011
+2
+∣
+101
+2
+=111
+2
+=7. Since
+X<7, we have to erase some elements of the array.
+Erase
+1 element: If we erase the element at index
+2, the remaining array
+A=[100
+2
+,101
+2
+]. Bitwise OR of the remaining elements is:
+100
+2
+∣
+101
+2
+=101
+2
+=5. Since
+X≥5, all the required conditions are satisfied.
+Thus, the maximum number of remaining elements is
+2.
+Sample 2:
+Input
+Output
+5 2
+14 8 11 6 3
+14 1
+4
+3 2
+2 4
+3
+-1
+Explanation:
+The given array
+A=[14,8,11,6,3]. In binary representation,
+A=[1110
+2
+,1000
+2
+,1011
+2
+,0110
+2
+,0011
+2
+].
+Query
+1: We are given that the element at index
+4 cannot be erased.
+A possible way to satisfy the given conditions is to erase the elements at indices
+3 and
+5. Thus, the remaining array would be
+A=[1110
+2
+,1000
+2
+,0110
+2
+]. The bitwise OR of remaining elements would be
+14 which is less than equal to
+X.
+It can be proven that the maximum number of remaining elements cannot exceed
+3.
+Query
+2: We are given that the elements at indices
+2 and
+4 cannot be erased. In the worst case that we erase all other elements, we are left with
+[1000
+2
+,0110
+2
+]. The bitwise OR of these elements is
+1110
+2
+=14>3. Thus, it is impossible to erase some elements leaving an OR of at most
+3.

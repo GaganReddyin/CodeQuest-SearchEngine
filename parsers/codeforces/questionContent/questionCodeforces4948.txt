@@ -1,0 +1,43 @@
+F. Cities Excursions
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are n cities in Berland. Some pairs of them are connected with m directed roads. One can use only these roads to move from one city to another. There are no roads that connect a city to itself. For each pair of cities (x, y) there is at most one road from x to y.
+A path from city s to city t is a sequence of cities p1, p2, ... , pk, where p1 = s, pk = t, and there is a road from city pi to city pi + 1 for each i from 1 to k - 1. The path can pass multiple times through each city except t. It can't pass through t more than once.
+A path p from s to t is ideal if it is the lexicographically minimal such path. In other words, p is ideal path from s to t if for any other path q from s to t pi < qi, where i is the minimum integer such that pi ≠ qi.
+There is a tourist agency in the country that offers q unusual excursions: the j-th excursion starts at city sj and ends in city tj.
+For each pair sj, tj help the agency to study the ideal path from sj to tj. Note that it is possible that there is no ideal path from sj to tj. This is possible due to two reasons:
+there is no path from sj to tj;
+there are paths from sj to tj, but for every such path p there is another path q from sj to tj, such that pi > qi, where i is the minimum integer for which pi ≠ qi.
+The agency would like to know for the ideal path from sj to tj the kj-th city in that path (on the way from sj to tj).
+For each triple sj, tj, kj (1 ≤ j ≤ q) find if there is an ideal path from sj to tj and print the kj-th city in that path, if there is any.
+Input
+The first line contains three integers n, m and q (2 ≤ n ≤ 3000,0 ≤ m ≤ 3000, 1 ≤ q ≤ 4·105) — the number of cities, the number of roads and the number of excursions.
+Each of the next m lines contains two integers xi and yi (1 ≤ xi, yi ≤ n, xi ≠ yi), denoting that the i-th road goes from city xi to city yi. All roads are one-directional. There can't be more than one road in each direction between two cities.
+Each of the next q lines contains three integers sj, tj and kj (1 ≤ sj, tj ≤ n, sj ≠ tj, 1 ≤ kj ≤ 3000).
+Output
+In the j-th line print the city that is the kj-th in the ideal path from sj to tj. If there is no ideal path from sj to tj, or the integer kj is greater than the length of this path, print the string '-1' (without quotes) in the j-th line.
+Example
+input
+Copy
+7 7 5
+1 2
+2 3
+1 3
+3 4
+4 5
+5 3
+4 6
+1 4 2
+2 6 1
+1 7 3
+1 3 2
+1 3 5
+output
+Copy
+2
+-1
+-1
+2
+-1

@@ -1,0 +1,196 @@
+E. Special Elements
+time limit per test1 second
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Pay attention to the non-standard memory limit in this problem.
+In order to cut off efficient solutions from inefficient ones in this problem, the time limit is rather strict. Prefer to use compiled statically typed languages (e.g. C++). If you use Python, then submit solutions on PyPy. Try to write an efficient solution.
+The array
+a=[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+(
+1≤
+a
+i
+≤n
+) is given. Its element
+a
+i
+is called special if there exists a pair of indices
+l
+and
+r
+(
+1≤l<r≤n
+) such that
+a
+i
+=
+a
+l
++
+a
+l+1
++…+
+a
+r
+. In other words, an element is called special if it can be represented as the sum of two or more consecutive elements of an array (no matter if they are special or not).
+Print the number of special elements of the given array
+a
+.
+For example, if
+n=9
+and
+a=[3,1,4,1,5,9,2,6,5]
+, then the answer is
+5
+:
+a
+3
+=4
+is a special element, since
+a
+3
+=4=
+a
+1
++
+a
+2
+=3+1
+;
+a
+5
+=5
+is a special element, since
+a
+5
+=5=
+a
+2
++
+a
+3
+=1+4
+;
+a
+6
+=9
+is a special element, since
+a
+6
+=9=
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
+=3+1+4+1
+;
+a
+8
+=6
+is a special element, since
+a
+8
+=6=
+a
+2
++
+a
+3
++
+a
+4
+=1+4+1
+;
+a
+9
+=5
+is a special element, since
+a
+9
+=5=
+a
+2
++
+a
+3
+=1+4
+.
+Please note that some of the elements of the array
+a
+may be equal — if several elements are equal and special, then all of them should be counted in the answer.
+Input
+The first line contains an integer
+t
+(
+1≤t≤1000
+) — the number of test cases in the input. Then
+t
+test cases follow.
+Each test case is given in two lines. The first line contains an integer
+n
+(
+1≤n≤8000
+) — the length of the array
+a
+. The second line contains integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+).
+It is guaranteed that the sum of the values of
+n
+for all test cases in the input does not exceed
+8000
+.
+Output
+Print
+t
+numbers — the number of special elements for each of the given arrays.
+Example
+input
+Copy
+5
+9
+3 1 4 1 5 9 2 6 5
+3
+1 1 2
+5
+1 1 1 1 1
+8
+8 7 6 5 4 3 2 1
+1
+1
+output
+Copy
+5
+1
+0
+4
+0

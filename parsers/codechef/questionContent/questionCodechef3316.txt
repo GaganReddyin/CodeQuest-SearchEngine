@@ -1,0 +1,64 @@
+Darts
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Alice and Bob are playing a game.
+First, Alice throws
+N darts at a board with dimensions
+10
+9
+×10
+9
+at random. Each dart hits the board at a point (some of these points may coincide). Then, Bob should answer Alice's
+Q questions. In each question, Alice chooses two integers
+l and
+r; Bob should only consider all points hit in throws
+l through
+r (inclusive) and compute the distance between the farthest pair of these points.
+Help Bob find the answers to all queries.
+Input
+The first line of the input contains a single integer
+N denoting the number of points.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+x
+i
+and
+y
+i
+denoting the coordinates of the point hit with the
+i-th dart.
+The next line contains a single integer
+Q denoting the number of queries.
+Each of the following
+Q lines contains two space-separated integers
+l and
+r describing one query.
+Output
+For each query, print a single line containing one integer — the square of the maximum distance. (It is guaranteed that this number is an integer.)
+Constraints
+1≤N,Q≤50,000
+1≤x
+i
+,y
+i
+≤10
+9
+for each
+i
+1≤l≤r≤N
+Subtasks
+Subtask #1 (20 points):
+1≤N,Q≤200
+Subtask #2 (30 points):
+1≤N,Q≤2000
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+1 1
+2 2
+1
+1 2
+2

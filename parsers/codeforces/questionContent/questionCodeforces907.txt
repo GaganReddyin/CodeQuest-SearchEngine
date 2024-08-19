@@ -1,0 +1,203 @@
+A. Tokitsukaze and Strange Inequality
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Tokitsukaze has a permutation
+p
+of length
+n
+. Recall that a permutation
+p
+of length
+n
+is a sequence
+p
+1
+,
+p
+2
+,…,
+p
+n
+consisting of
+n
+distinct integers, each of which from
+1
+to
+n
+(
+1≤
+p
+i
+≤n
+).
+She wants to know how many different indices tuples
+[a,b,c,d]
+(
+1≤a<b<c<d≤n
+) in this permutation satisfy the following two inequalities:
+p
+a
+<
+p
+c
+and
+p
+b
+>
+p
+d
+.
+Note that two tuples
+[
+a
+1
+,
+b
+1
+,
+c
+1
+,
+d
+1
+]
+and
+[
+a
+2
+,
+b
+2
+,
+c
+2
+,
+d
+2
+]
+are considered to be different if
+a
+1
+≠
+a
+2
+or
+b
+1
+≠
+b
+2
+or
+c
+1
+≠
+c
+2
+or
+d
+1
+≠
+d
+2
+.
+Input
+The first line contains one integer
+t
+(
+1≤t≤1000
+) — the number of test cases. Each test case consists of two lines.
+The first line contains a single integer
+n
+(
+4≤n≤5000
+) — the length of permutation
+p
+.
+The second line contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the permutation
+p
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+5000
+.
+Output
+For each test case, print a single integer — the number of different
+[a,b,c,d]
+tuples.
+Example
+input
+Copy
+3
+6
+5 3 6 1 4 2
+4
+1 2 3 4
+10
+5 1 6 2 8 3 4 10 9 7
+output
+Copy
+3
+0
+28
+Note
+In the first test case, there are
+3
+different
+[a,b,c,d]
+tuples.
+p
+1
+=5
+,
+p
+2
+=3
+,
+p
+3
+=6
+,
+p
+4
+=1
+, where
+p
+1
+<
+p
+3
+and
+p
+2
+>
+p
+4
+satisfies the inequality, so one of
+[a,b,c,d]
+tuples is
+[1,2,3,4]
+.
+Similarly, other two tuples are
+[1,2,3,6]
+,
+[2,3,5,6]
+.

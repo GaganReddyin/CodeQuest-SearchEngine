@@ -1,0 +1,32 @@
+F. Anton and School
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Anton goes to school, his favorite lessons are arraystudying. He usually solves all the tasks pretty fast, but this time the teacher gave him a complicated one: given two arrays b and c of length n, find array a, such that:
+where a and b means bitwise AND, while a or b means bitwise OR.
+Usually Anton is good in arraystudying, but this problem is too hard, so Anton asks you to help.
+Input
+The first line of the input contains a single integers n (1 ≤ n ≤ 200 000) — the size of arrays b and c.
+The second line contains n integers bi (0 ≤ bi ≤ 109) — elements of the array b.
+Third line contains n integers ci (0 ≤ ci ≤ 109) — elements of the array c.
+Output
+If there is no solution, print  - 1.
+Otherwise, the only line of the output should contain n non-negative integers ai — elements of the array a. If there are multiple possible solutions, you may print any of them.
+Examples
+input
+Copy
+4
+6 8 4 4
+16 22 10 10
+output
+Copy
+3 5 1 1 
+input
+Copy
+5
+8 25 14 7 16
+19 6 9 4 25
+output
+Copy
+-1

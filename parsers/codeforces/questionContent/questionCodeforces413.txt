@@ -1,0 +1,211 @@
+F. Chemistry Lab
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Monocarp is planning on opening a chemistry lab. During the first month, he's going to distribute solutions of a certain acid.
+First, he will sign some contracts with a local chemistry factory. Each contract provides Monocarp with an unlimited supply of some solution of the same acid. The factory provides
+n
+contract options, numbered from
+1
+to
+n
+. The
+i
+-th solution has a concentration of
+x
+i
+%
+, the contract costs
+w
+i
+burles, and Monocarp will be able to sell it for
+c
+i
+burles per liter.
+Monocarp is expecting
+k
+customers during the first month. Each customer will buy a liter of a
+y%
+-solution, where
+y
+is a real number chosen uniformly at random from
+0
+to
+100
+independently for each customer. More formally, the probability of number
+y
+being less than or equal to some
+t
+is
+P(y≤t)=
+t
+100
+.
+Monocarp can mix the solution that he signed the contracts with the factory for, at any ratio. More formally, if he has contracts for
+m
+solutions with concentrations
+x
+1
+,
+x
+2
+,…,
+x
+m
+, then, for these solutions, he picks their volumes
+a
+1
+,
+a
+2
+,…,
+a
+m
+so that
+∑
+i=1
+m
+a
+i
+=1
+(exactly
+1
+since each customer wants exactly one liter of a certain solution).
+The concentration of the resulting solution is
+∑
+i=1
+m
+x
+i
+⋅
+a
+i
+. The price of the resulting solution is
+∑
+i=1
+m
+c
+i
+⋅
+a
+i
+.
+If Monocarp can obtain a solution of concentration
+y%
+, then he will do it while maximizing its price (the cost for the customer). Otherwise, the customer leaves without buying anything, and the price is considered equal to
+0
+.
+Monocarp wants to sign some contracts with a factory (possibly, none or all of them) so that the expected profit is maximized — the expected total price of the sold solutions for all
+k
+customers minus the total cost of signing the contracts from the factory.
+Print the maximum expected profit Monocarp can achieve.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤5000
+;
+1≤k≤
+10
+5
+) — the number of contracts the factory provides and the number of customers.
+The
+i
+-th of the next
+n
+lines contains three integers
+x
+i
+,
+w
+i
+and
+c
+i
+(
+0≤
+x
+i
+≤100
+;
+1≤
+w
+i
+≤
+10
+9
+;
+1≤
+c
+i
+≤
+10
+5
+) — the concentration of the solution, the cost of the contract and the cost per liter for the customer, for the
+i
+-th contract.
+Output
+Print a single real number — the maximum expected profit Monocarp can achieve.
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is accepted if and only if
+|a−b|
+max(1,|b|)
+≤
+10
+−6
+.
+Examples
+input
+Copy
+2 10
+0 10 20
+100 15 20
+output
+Copy
+175.000000000000000
+input
+Copy
+2 10
+0 100 20
+100 150 20
+output
+Copy
+0.000000000000000
+input
+Copy
+6 15
+79 5 35
+30 13 132
+37 3 52
+24 2 60
+76 18 14
+71 17 7
+output
+Copy
+680.125000000000000
+input
+Copy
+10 15
+46 11 11
+4 12 170
+69 2 130
+2 8 72
+82 7 117
+100 5 154
+38 9 146
+97 1 132
+0 12 82
+53 1 144
+output
+Copy
+2379.400000000000000

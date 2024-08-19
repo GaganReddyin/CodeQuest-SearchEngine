@@ -1,0 +1,60 @@
+AB plus C
+Problem
+Chef has an integer
+X and wants to find out any triplet
+(A,B,C) such that:
+1≤A,B,C≤10
+6
+;
+A⋅B+C=X
+If no such triplet exists, print
+−1 instead.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single integer
+X, as mentioned in the statement.
+Output Format
+For each test case, output the values of
+A,B,C such that
+1≤A,B,C≤10
+6
+and
+A⋅B+C=X.
+If multiple such triplets exist, you may print any.
+If no such triplet exists, print
+−1 instead.
+Constraints
+1≤T≤10
+5
+1≤X≤10
+12
+Sample 1:
+Input
+Output
+4
+1
+15
+2
+100
+-1
+2 7 1
+1 1 1
+9 9 19
+Explanation:
+Test case
+1: It can be proven that no such triplet exists.
+Test case
+2: Consider
+A=2,B=7, and
+C=1, where:
+1≤A,B,C≤10
+6
+A⋅B+C=2⋅7+1=15=X
+Test case
+3: Consider
+A=1,B=1, and
+C=1, where:
+1≤A,B,C≤10
+6
+A⋅B+C=1⋅1+1=2=X

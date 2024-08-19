@@ -1,0 +1,326 @@
+C. Candy Store
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The store sells
+n
+types of candies with numbers from
+1
+to
+n
+. One candy of type
+i
+costs
+b
+i
+coins. In total, there are
+a
+i
+candies of type
+i
+in the store.
+You need to pack all available candies in packs, each pack should contain only one type of candies. Formally, for each type of candy
+i
+you need to choose the integer
+d
+i
+, denoting the number of type
+i
+candies in one pack, so that
+a
+i
+is divided without remainder by
+d
+i
+.
+Then the cost of one pack of candies of type
+i
+will be equal to
+b
+i
+⋅
+d
+i
+. Let's denote this cost by
+c
+i
+, that is,
+c
+i
+=
+b
+i
+⋅
+d
+i
+.
+After packaging, packs will be placed on the shelf. Consider the cost of the packs placed on the shelf, in order
+c
+1
+,
+c
+2
+,…,
+c
+n
+. Price tags will be used to describe costs of the packs. One price tag can describe the cost of all packs from
+l
+to
+r
+inclusive if
+c
+l
+=
+c
+l+1
+=…=
+c
+r
+. Each of the packs from
+1
+to
+n
+must be described by at least one price tag. For example, if
+c
+1
+,…,
+c
+n
+=[4,4,2,4,4]
+, to describe all the packs, a
+3
+price tags will be enough, the first price tag describes the packs
+1,2
+, the second:
+3
+, the third:
+4,5
+.
+You are given the integers
+a
+1
+,
+b
+1
+,
+a
+2
+,
+b
+2
+,…,
+a
+n
+,
+b
+n
+. Your task is to choose integers
+d
+i
+so that
+a
+i
+is divisible by
+d
+i
+for all
+i
+, and the required number of price tags to describe the values of
+c
+1
+,
+c
+2
+,…,
+c
+n
+is the minimum possible.
+For a better understanding of the statement, look at the illustration of the first test case of the first test:
+Let's repeat the meaning of the notation used in the problem:
+a
+i
+ — the number of candies of type
+i
+available in the store.
+b
+i
+ — the cost of one candy of type
+i
+.
+d
+i
+ — the number of candies of type
+i
+in one pack.
+c
+i
+ — the cost of one pack of candies of type
+i
+is expressed by the formula
+c
+i
+=
+b
+i
+⋅
+d
+i
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100000
+). Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+2≤n≤200000
+) — the number of types of candies.
+Each of the next
+n
+lines of each test case contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+≤
+10
+9
+,
+1≤
+b
+i
+≤10000
+) — the number of candies and the cost of one candy of type
+i
+, respectively.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+200000
+.
+Output
+For each test case, output the minimum number of price tags required to describe the costs of all packs of candies in the store.
+Example
+input
+Copy
+5
+4
+20 3
+6 2
+14 5
+20 7
+3
+444 5
+2002 10
+2020 2
+5
+7 7
+6 5
+15 2
+10 3
+7 7
+5
+10 1
+11 5
+5 1
+2 2
+8 2
+6
+7 12
+12 3
+5 3
+9 12
+9 3
+1000000000 10000
+output
+Copy
+2
+1
+3
+2
+5
+Note
+In the first test case, you can choose
+d
+1
+=4
+,
+d
+2
+=6
+,
+d
+3
+=7
+,
+d
+4
+=5
+. Then the cost of packs will be equal to
+[12,12,35,35]
+.
+2
+price tags are enough to describe them, the first price tag for
+c
+1
+,
+c
+2
+and the second price tag for
+c
+3
+,
+c
+4
+. It can be shown that with any correct choice of
+d
+i
+, at least
+2
+of the price tag will be needed to describe all the packs. Also note that this example is illustrated by a picture in the statement.
+In the second test case, with
+d
+1
+=4
+,
+d
+2
+=2
+,
+d
+3
+=10
+, the costs of all packs will be equal to
+20
+. Thus,
+1
+price tag is enough to describe all the packs. Note that
+a
+i
+is divisible by
+d
+i
+for all
+i
+, which is necessary condition.
+In the third test case, it is not difficult to understand that one price tag can be used to describe
+2
+nd,
+3
+rd and
+4
+th packs. And additionally a price tag for pack
+1
+and pack
+5
+. Total:
+3
+price tags.

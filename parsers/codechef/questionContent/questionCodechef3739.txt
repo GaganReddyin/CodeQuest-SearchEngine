@@ -1,0 +1,132 @@
+Coloured Pairings
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given two sequences
+A
+1
+,A
+2
+,…,A
+N
+and
+C
+1
+,C
+2
+,…,C
+N
+. For each valid
+i,
+C
+i
+is the colour of
+A
+i
+.
+You should answer
+Q queries. In each query:
+You are given two colours
+x and
+y.
+Consider the subsequence of
+A which contains only elements
+A
+i
+such that
+C
+i
+=x or
+C
+i
+=y (in the original order). Let's denote it by
+B.
+For each contiguous subsequence of
+B (including empty subsequence), consider the sum of all its elements. Find the maximum of these sums.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+N space-separated integers
+C
+1
+,C
+2
+,…,C
+N
+.
+Q lines follow. Each of these lines contains two space-separated integers
+x and
+y describing a query.
+Output
+For each query, print a single line containing one integer — the maximum sum of a contiguous subsequence of
+B.
+Constraints
+1≤T≤10
+2
+1≤N,Q≤3∗10
+5
+∣A
+i
+∣≤10
+9
+for each valid
+i
+1≤C
+i
+≤N for each valid
+i
+1≤x
+
+=y≤N
+the sum of
+N over all test cases does not exceed
+3∗10
+5
+the sum of
+Q over all test cases does not exceed
+3∗10
+5
+Subtasks
+Subtask #1 (50 points): Every color except the color
+1 occurs in at most
+1 query.
+Subtask #2 (50 points): Original constraints
+Sample 1:
+Input
+Output
+2
+6 4
+4 -2 5 3 -6 7
+1 2 2 3 1 3
+1 2
+2 3
+1 3
+5 6
+4 4
+-1 -1 5 -3
+1 1 1 2
+1 2
+1 3
+1 4
+2 4
+7
+15
+8
+0
+5
+5
+5
+0

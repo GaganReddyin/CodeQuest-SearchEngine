@@ -1,0 +1,97 @@
+Count of Array
+Problem
+You love array, don't you?
+You are given two integer
+N and
+M, along with an array
+B of length
+N containing pairwise distinct integers. You have to find the number of array
+A of length
+N satisfying the follow conditions:
+1≤A
+i
+≤M.
+A
+i
+
+=A
+j
+for all
+1≤i<j≤N.
+A
+i
+
+=B
+i
+for all
+1≤i≤N.
+Since the answer can be very large, output it under modulo
+10
+9
++7.
+Input Format
+The first line of the input contains two space-separated integers
+N and
+M.
+The second line of the input contains
+N separated integers
+B
+1
+,B
+2
+,…,B
+N
+- the array
+B.
+Output Format
+Output on a single line the number of satisfactory array modulo
+10
+9
++7.
+Constraints
+1≤N≤2⋅10
+5
+1≤M≤3⋅10
+5
+1≤B
+i
+≤10
+9
+B
+i
+
+=B
+j
+for all
+1≤i<j≤N.
+Sample 1:
+Input
+Output
+3 4
+5 1 2
+14
+Explanation:
+All satisfactory arrays are:
+[1,2,3]
+[2,3,1]
+[3,2,1]
+[1,2,4]
+[2,4,1]
+[4,2,1]
+[1,3,4]
+[1,4,3]
+[3,4,1]
+[4,3,1]
+[2,3,4]
+[2,4,3]
+[3,2,4]
+[4,2,3]
+Sample 2:
+Input
+Output
+2 2
+1 3
+1
+Explanation:
+The only satisfactory array is:
+[2,1]

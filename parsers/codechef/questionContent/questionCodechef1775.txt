@@ -1,0 +1,106 @@
+Non Zero Xor
+Problem
+An array
+A of size
+N is called good if the following conditions hold:
+For every pair
+(l,r)
+(1≤l≤r≤N),
+A
+l
+⊕A
+l+1
+⊕...⊕A
+r
+
+=0. (where
+⊕ denotes the bitwise XOR operation.)
+JJ has an array
+A of size
+N. He wants to convert the array to a good array. To do so he can perform the following operation multiple times:
+Pick an index
+i such that
+(1≤i≤N) and set
+A
+i
+:=X where
+0≤X<10
+10
+10
+.
+Find the minimum number of operations required to convert
+A into a good array.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - the size of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the minimum number of operations required to convert the array
+A into a good array.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+0≤A
+i
+<2
+30
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+5
+1 2 3 4 4
+3
+0 0 0
+6
+2 3 5 7 11 13
+2
+3
+0
+Explanation:
+Test Case 1: We can set
+A
+2
+=4 and
+A
+4
+=5. Thereby
+A will become
+[1,4,3,5,4] which is good. We can prove that we can not make
+A good in
+<2 operations.
+Test Case 2: We can set
+A
+1
+=1,
+A
+2
+=10 and
+A
+3
+=100. Thereby
+A will become
+[1,10,100] which is good. We can prove that we can not make
+A good in
+<3 operations.
+Test Case 3: The given array
+A is already good.

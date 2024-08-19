@@ -1,0 +1,150 @@
+Help Chef
+Problem
+Chef is the king of the kingdom named Chefland. Chefland consists of
+N cities numbered from
+1 to
+N and
+(N−1) roads in such a way that there exists a path between any pair of cities. In other words, Chefland has a tree like structure.
+Out of the
+N cities in Chefland,
+K
+(1≤K≤N) are considered tourist attractions.
+Chef decided to visit exactly
+(K−1) out of
+K tourist attractions. He wishes to stay in the city
+i
+(1≤i≤N) such that the sum of distances of the nearest
+(K−1) tourist attractions from city
+i is as minimum as possible.
+More formally, if Chef stays at city
+i and visits
+(K−1) tourist attractions denoted by set
+S, then, the value
+∑
+j∈S
+D(i,j) should be minimum.
+Here,
+D(i,j) denotes the distance between cities
+i and
+j which is given by the number of roads between cities
+i and
+j.
+Find the city in which Chef should stay. If there are multiple such cities, print the one with the largest number.
+Input Format
+First line will contain integer
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+K denoting the number of total cities and the number of tourist attractions in Chefland.
+The second line of each test case contains
+K integers denoting the numbers of cities which are tourist attractions in Chefland.
+The next
+N−1 lines contain two integers each,
+u
+i
+and
+v
+i
+denoting that a road exists between cities
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, output in a single integer the number of the city in which Chef should stay so that sum of distances to nearest
+(K−1) tourist attractions is as minimum as possible.
+If there are multiple such cities, output the city with the maximum number.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤K≤N
+1≤u
+i
+,v
+i
+≤N
+Sample 1:
+Input
+Output
+2
+5 3
+2 4 5
+1 2
+1 3
+3 4
+3 5
+5 2
+2 5
+1 2
+1 3
+3 4
+3 5
+5
+5
+Explanation:
+Test case
+1: Chef needs to visit
+3−1=2 tourist attractions. The total distance to visit
+2 tourist attractions from each of the cities is:
+From city
+1: Nearest tourist attractions are cities
+2 and
+4 or
+5. The sum of distances for these cities is
+1+2=3.
+From city
+2: Nearest tourist attractions are cities
+2 and
+4 or
+5. The sum of distances for these cities is
+0+3=3.
+From city
+3: Nearest tourist attractions are cities
+4 and
+5. The sum of distances for these cities is
+1+1=2.
+From city
+4: Nearest tourist attractions are cities
+4 and
+5. The sum of distances for these cities is
+0+2=2.
+From city
+5: Nearest tourist attractions are cities
+5 and
+4. The sum of distances for these cities is
+2+0=2.
+The cities from which the distance is minimum are
+3,4, and
+5. Out of these,
+5 is the highest.
+Test case
+2: Chef needs to visit
+2−1=1 tourist attractions. The total distance to visit
+1 tourist attractions from each of the cities is:
+From city
+1: Nearest tourist attraction is city
+2. The sum of distances is
+1.
+From city
+2: Nearest tourist attraction is city
+2. The sum of distances is
+0.
+From city
+3: Nearest tourist attraction is city
+5. The sum of distances is
+1.
+From city
+4: Nearest tourist attraction is city
+5. The sum of distances is
+2.
+From city
+5: Nearest tourist attraction is city
+5. The sum of distances is
+0.
+The cities from which the distance is minimum are
+2 and
+5. Out of these,
+5 is the highest.

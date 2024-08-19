@@ -1,0 +1,88 @@
+Magical Modulo
+Problem
+You are given an array
+A of
+N integers . You want to convert the array
+A into a permutation of
+N integers. To do this, you can apply the following operation on array
+A exactly once .
+Pick an integer
+X, where
+1≤X≤2⋅10
+7
+. For each
+i ,
+1≤i≤N , replace
+A
+i
+by
+A
+i
+%X.
+Find out whether it is possible to convert
+A into a permutation of
+N integers. If it is possible, print YES (all uppercase alphabets) and any possible value of
+X for which it is possible. Otherwise, print NO (all uppercase alphabets).
+Note - An array of
+N integers is called a permutation if it contains all integers from
+1 to
+N exactly once.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains an integer
+N.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each testcase, output the required answer in a single line. If an answer exists, print YES and an integer
+X
+(1≤X≤2⋅10
+7
+) separated by a single space. Otherwise, print NO.
+Note that the strings are case-sensitive and must be in uppercase alphabets.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+1≤A
+i
+≤10
+7
+Sum of
+N over all cases won't exceed
+10
+5
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+3
+2 7 1
+2
+2 2
+YES 4
+NO
+Explanation:
+In the first case, choosing
+X=4 yields
+A as
+[2%4,7%4,1%4]=[2,3,1] which is a permutation of
+N=3.
+In the second case, we can't make
+A
+i
+=
+1 for any
+i and for any value of
+X.

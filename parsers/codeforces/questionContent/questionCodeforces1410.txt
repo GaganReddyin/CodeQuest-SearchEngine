@@ -1,0 +1,275 @@
+G. Omkar and Time Travel
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+El Psy Kongroo.
+Omkar is watching Steins;Gate.
+In Steins;Gate, Okabe Rintarou needs to complete
+n
+tasks (
+1≤n≤2⋅
+10
+5
+). Unfortunately, he doesn't know when he needs to complete the tasks.
+Initially, the time is
+0
+. Time travel will now happen according to the following rules:
+For each
+k=1,2,…,n
+, Okabe will realize at time
+b
+k
+that he was supposed to complete the
+k
+-th task at time
+a
+k
+(
+a
+k
+<
+b
+k
+).
+When he realizes this, if
+k
+-th task was already completed at time
+a
+k
+, Okabe keeps the usual flow of time. Otherwise, he time travels to time
+a
+k
+then immediately completes the task.
+If Okabe time travels to time
+a
+k
+, all tasks completed after this time will become incomplete again. That is, for every
+j
+, if
+a
+j
+>
+a
+k
+, the
+j
+-th task will become incomplete, if it was complete (if it was incomplete, nothing will change).
+Okabe has bad memory, so he can time travel to time
+a
+k
+only immediately after getting to time
+b
+k
+and learning that he was supposed to complete the
+k
+-th task at time
+a
+k
+. That is, even if Okabe already had to perform
+k
+-th task before, he wouldn't remember it before stumbling on the info about this task at time
+b
+k
+again.
+Please refer to the notes for an example of time travelling.
+There is a certain set
+s
+of tasks such that the first moment that all of the tasks in
+s
+are simultaneously completed (regardless of whether any other tasks are currently completed), a funny scene will take place. Omkar loves this scene and wants to know how many times Okabe will time travel before this scene takes place. Find this number modulo
+10
+9
++7
+. It can be proven that eventually all
+n
+tasks will be completed and so the answer always exists.
+Input
+The first line contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+)  — the number of tasks that Okabe needs to complete.
+n
+lines follow. The
+k
+-th of these lines contain two integers
+a
+k
+and
+b
+k
+(
+1≤
+a
+k
+<
+b
+k
+≤2n
+)  — the time at which Okabe needs to complete the
+k
+-th task and the time that he realizes this respectively. All
+2n
+of these times are distinct (so every time from
+1
+to
+2n
+inclusive appears exactly once in the input).
+The next line contains a single integer
+t
+(
+1≤t≤n
+)  — the size of the set
+s
+of tasks that lead to the funny scene.
+The last line contains
+t
+integers
+s
+1
+,
+s
+2
+,…,
+s
+t
+ — (
+1≤
+s
+k
+≤n
+, the numbers
+s
+1
+,
+s
+2
+,…,
+s
+t
+are distinct)  — the set
+s
+of tasks.
+Output
+Output a single integer  — the number of times that Okabe time travels until all tasks in the set
+s
+are simultaneously completed, modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+2
+1 4
+2 3
+2
+1 2
+output
+Copy
+3
+input
+Copy
+2
+1 4
+2 3
+1
+1
+output
+Copy
+2
+input
+Copy
+1
+1 2
+1
+1
+output
+Copy
+1
+input
+Copy
+6
+10 12
+3 7
+4 6
+2 9
+5 8
+1 11
+3
+2 4 6
+output
+Copy
+17
+input
+Copy
+16
+31 32
+3 26
+17 19
+4 24
+1 28
+15 21
+12 16
+18 29
+20 23
+7 8
+11 14
+9 22
+6 30
+5 10
+25 27
+2 13
+6
+3 8 2 5 12 11
+output
+Copy
+138
+Note
+For the first sample, all tasks need to be completed in order for the funny scene to occur.
+Initially, the time is
+0
+. Nothing happens until time
+3
+, when Okabe realizes that he should have done the
+2
+-nd task at time
+2
+. He then time travels to time
+2
+and completes the task.
+As the task is done now, he does not time travel again when the time is again
+3
+. However, at time
+4
+, he travels to time
+1
+to complete the
+1
+-st task.
+This undoes the
+2
+-nd task. This means that the
+2
+-nd task is not currently completed, meaning that the funny scene will not occur at this point even though the
+1
+-st task is currently completed and Okabe had previously completed the
+2
+-nd task.
+Once it is again time
+3
+he travels back to time
+2
+once more and does the
+2
+-nd task again.
+Now all tasks are complete, with Okabe having time travelled
+3
+times.
+The second sample has the same tasks for Okabe to complete. However, this time the funny scene only needs the first task to be completed in order to occur. From reading the above sample you can see that this occurs once Okabe has time travelled
+2
+times.

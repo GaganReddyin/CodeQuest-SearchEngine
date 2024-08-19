@@ -1,0 +1,53 @@
+Tree Coloring
+Problem
+Given a tree containing
+N nodes.
+Each node can be coloured using exactly one of the
+C colours. Find the number of colourings of the tree such that:
+All nodes in a path of length at most two have distinct colours.
+As the answer can be huge, print it modulo
+(10
+9
++7).
+Note:
+Two colourings of a tree are different if there exists at least one node having different colours in both the colourings.
+A path in a tree is a sequence of (zero or more) connected nodes.
+The path length between two nodes is defined as the total number of edges in the shortest path from one node to other.
+Input Format
+The first line of the input will contain two integers
+N and
+C, the number of nodes in the tree and the number of colours available respectively.
+The next
+(N−1) lines will describe the given tree. Each line contains two integers
+U and
+V meaning that there is an edge between node
+U and node
+V.
+Output Format
+Output the number of ways to colour the tree satisfying the given condition, modulo
+10
+9
++7.
+Constraints
+1≤N≤10
+6
+1≤C≤10
+6
+1≤U,V≤N
+Sample 1:
+Input
+Output
+3 3
+1 2
+1 3
+6
+Explanation:
+The valid colourings of nodes
+1,2, and
+3 are:
+{1,2,3},{1,3,2},{2,1,3},{2,3,1},{3,1,2}, and
+{3,2,1}.
+Paths having length at most
+2 are:
+1−2,1−3, and
+2−1−3. Note that for any valid colouring, all the nodes in each of these paths have distinct colours.

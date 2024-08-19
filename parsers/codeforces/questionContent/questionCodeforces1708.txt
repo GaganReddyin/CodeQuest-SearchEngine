@@ -1,0 +1,136 @@
+F. Bingo
+time limit per test7 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Getting ready for VK Fest 2021, you prepared a table with
+n
+rows and
+n
+columns, and filled each cell of this table with some event related with the festival that could either happen or not: for example, whether you will win a prize on the festival, or whether it will rain.
+Forecasting algorithms used in VK have already estimated the probability for each event to happen. Event in row
+i
+and column
+j
+will happen with probability
+a
+i,j
+⋅
+10
+−4
+. All of the events are mutually independent.
+Let's call the table winning if there exists a line such that all
+n
+events on it happen. The line could be any horizontal line (cells
+(i,1),(i,2),…,(i,n)
+for some
+i
+), any vertical line (cells
+(1,j),(2,j),…,(n,j)
+for some
+j
+), the main diagonal (cells
+(1,1),(2,2),…,(n,n)
+), or the antidiagonal (cells
+(1,n),(2,n−1),…,(n,1)
+).
+Find the probability of your table to be winning, and output it modulo
+31607
+(see Output section).
+Input
+The first line contains a single integer
+n
+ (
+2≤n≤21
+) — the dimensions of the table.
+The
+i
+-th of the next
+n
+lines contains
+n
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,n
+(
+0<
+a
+i,j
+<
+10
+4
+). The probability of event in cell
+(i,j)
+to happen is
+a
+i,j
+⋅
+10
+−4
+.
+Output
+Print the probability that your table will be winning, modulo
+31607
+.
+Formally, let
+M=31607
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Examples
+input
+Copy
+2
+5000 5000
+5000 5000
+output
+Copy
+5927
+input
+Copy
+2
+2500 6000
+3000 4000
+output
+Copy
+24812
+input
+Copy
+3
+1000 2000 3000
+4000 5000 6000
+7000 8000 9000
+output
+Copy
+25267
+Note
+In the first example, any two events form a line, and the table will be winning if any two events happen. The probability of this is
+11
+16
+, and
+5927⋅16≡11(mod31607)
+.

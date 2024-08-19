@@ -1,0 +1,93 @@
+Chef and Circles
+Problem
+###Read problems statements Hindi ,Bengali , Mandarin chinese , Russian and Vietnamese as well.
+There are
+N circles in a plane. Circle
+i and circle
+j form a good pair if it is possible to choose a point
+P
+1
+on the perimeter of circle
+i and a point
+P
+2
+on the perimeter of circle
+j such that the Euclidean distance between
+P
+1
+and
+P
+2
+is exactly
+K. (Note that
+P
+1
+and
+P
+2
+do not need to have integer coordinates.)
+You should answer
+Q queries. In each query, you are given the required distance
+K. Chef is interested in finding the number of good pairs of distinct circles for each query. Please help him.
+Note: Circle
+i and circle
+j are distinct when
+i
+
+=j. There may be any number of circles that coincide (have identical centers and radii).
+Input
+The first line of the input contains two space-separated integers
+N and
+Q denoting the number of circles and the number of queries respectively.
+Each of the following
+N lines contains three space-separated integers
+X,
+Y and
+R describing a circle with radius
+R and center
+(X,Y).
+Each of the next
+Q lines contains one integer
+K describing a query.
+Output
+For each query, print a single line containing one integer — the number of good pairs of circles.
+Constraints
+2≤N≤10
+3
+1≤Q≤5⋅10
+5
+X,Y≤∣2⋅10
+5
+∣
+1≤R≤2⋅10
+5
+0≤K≤10
+6
+Subtasks
+Subtask #1 (30 points):
+2≤N≤10
+2
+1≤Q≤5⋅10
+2
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+2 3
+0 0 5
+8 3 2
+0
+10
+20
+0
+1
+0
+Explanation:
+The distance between the point
+(0.00,−5.00) on circle
+1 and the point
+(8.00,1.00) on circle
+2 is
+10. There is no pair of points on these two circles with distance
+0 or
+20.

@@ -1,0 +1,66 @@
+Sad Splits
+Problem
+You are given a positive integer
+N. You have to split each digit of
+N into either of two non-empty subsequences
+A or
+B.
+For example, if
+N=104, some possible values of
+(A,B) can be
+(10,4),(14,0) and
+(1,4). Note that, after separating the digits into
+A and
+B, these subsequences are considered as positive integers and thus leading zeros can be omitted.
+Let us define a function
+F(X,Y)=(X+Y)%2. Find out whether it is possible to find two non-empty subsequences
+A and
+B formed out of
+N such that
+F(A,B)=0.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, one integer
+N.
+Output Format
+For each test case, print
+YES if it is possible to find two non-empty subsequences
+A and
+B formed out of
+N such that
+F(A,B)=0. Otherwise, print
+NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings
+YeS,
+yEs,
+yes and
+YES will all be treated as identical).
+Constraints
+1≤T≤1000
+10≤N≤10
+9
+Subtasks
+Subtask 1 (100 points): Original constraints.
+Sample 1:
+Input
+Output
+2
+10
+73452
+NO
+YES
+Explanation:
+Test Case
+1: The only two possibilities are:
+A=0,B=1: Here
+F(A,B)=(A+B)%2=(0+1)%2=1%2=1.
+A=1,B=0: Here
+F(A,B)=(A+B)%2=(1+0)%2=1%2=1. Hence it's not possible to achieve
+F(A,B)=0.
+Test Case
+2: One of the possible ways to split the digits of
+N such that
+F(A,B)=0 is:
+A=74,B=352: Here
+F(A,B)=(A+B)%2=(74+352)%2=426%2=0.

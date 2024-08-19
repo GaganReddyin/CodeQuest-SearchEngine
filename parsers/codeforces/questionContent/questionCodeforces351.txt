@@ -1,0 +1,53 @@
+H. Hot and Cold
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem.
+After emigrating to another country, little Hanna came across the fact that playing "Hot and cold" became more difficult: she does not understand the hint phrases! You are to write a helping program for her.
+The playground where the game happens is a rectangle, and the treasure is hidden in some point with integer coordinates between 0 and 
+10
+6
+, inclusive. Hanna visits several points with valid coordinates. If the visited point contains the hidden treasure, she receives the phrase "Found!" in the local language. Fortunately, the intonations allow her to recognize this phrase — in this problem it will be denoted by an exclamation mark.
+Otherwise, for each visited point except for the first one, Hanna receives a phrase in the local language stating whether she is now "Closer", "Further", or "At the same distance" from the treasure, compared to the previous point. The distances are measured in Euclidean metric. After the first visited point, in case of no treasure there, Hanna receives the phrase "Not found" in the local language.
+Your program must help Hanna find the treasure by visiting at most 64 points.
+Interaction
+Your program should print each visited point in a line with two coordinates between 0 and 
+10
+6
+, inclusive, and flush the output after each one.
+For each visited point, the testing system writes one of the phrases: "Found!", "Closer", "Further", "At the same distance", or "Not found" in some language, consistent throughout the game. The first phrase ends with an exclamation mark, all other phrases do not contain exclamation marks. All phrases contain only Latin letters, spaces and exclamation marks, have lengths between 2 and 30, inclusive, don't start or end with a space, and are pairwise distinct. The phrases are not necessarily coming from any real human language.
+After receiving a phrase with an exclamation mark, your program must halt without printing anything else. Visiting points more than once is allowed, and each such visit counts towards the limit of 64 queries.
+Examples
+input
+Copy
+Tabilmadi
+
+Daha yakin
+
+Daha yakin
+
+Sama distanco
+
+Dalej
+
+Znaydeno!
+output
+Copy
+500 200
+
+560 230
+
+566 240
+
+566 238
+
+30 239
+
+566 239
+input
+Copy
+You are lucky today!
+output
+Copy
+777777 777777

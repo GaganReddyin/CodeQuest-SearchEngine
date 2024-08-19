@@ -1,0 +1,105 @@
+A. Row GCD
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given two positive integer sequences
+a
+1
+,…,
+a
+n
+and
+b
+1
+,…,
+b
+m
+. For each
+j=1,…,m
+find the greatest common divisor of
+a
+1
++
+b
+j
+,…,
+a
+n
++
+b
+j
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+18
+)
+.
+The third line contains
+m
+integers
+b
+1
+,…,
+b
+m
+(
+1≤
+b
+j
+≤
+10
+18
+)
+.
+Output
+Print
+m
+integers. The
+j
+-th of them should be equal to GCD
+(
+a
+1
++
+b
+j
+,…,
+a
+n
++
+b
+j
+)
+.
+Example
+input
+Copy
+4 4
+1 25 121 169
+1 2 7 23
+output
+Copy
+2 3 8 24

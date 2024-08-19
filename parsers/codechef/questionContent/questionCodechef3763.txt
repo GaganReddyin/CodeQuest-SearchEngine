@@ -1,0 +1,196 @@
+Good ranking
+Problem
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+The tennis tournament you organized has just finished and now you have to decide the ranking of the
+N players (indexed by
+1,2,…,N) who participated. Each pair of players played exactly one game and for each game you know who won (there are no draws in tennis).
+A ranking is a permutation
+P
+1
+,P
+2
+,…,P
+N
+of
+1,2,…,N; where
+P
+1
+represents the winner of the tournament,
+P
+2
+is the second in the ranking, etc.
+A ranking is good if for any
+1≤i<j≤min(i+⌈
+2
+N
+⌉,N) the player
+P
+i
+won against
+P
+j
+. In other words, a ranking is good if, for any two players whose ranking positions differ by at most
+⌈
+2
+N
+⌉, the result of their game is consistent with their order in the ranking.
+Find, if it exists, a good ranking.
+Input Format
+The first line contains a single integer
+T, the number of test cases. Then
+T test cases follow.
+The first line of each test case contains one integer
+N, the number of participants.
+Then
+N lines follow. The
+i-th of them contains a string
+S
+i
+of length
+n whose characters are either 0 or 1. For any
+1≤j≤N with
+j
+
+=i, the
+j-th character of
+S
+i
+is 0 if
+i lost against
+j and 1 otherwise. It is guaranteed that for any
+i
+
+=j the
+j-th character of
+S
+i
+is different from the
+i-th character of
+S
+j
+(so that they are consistent). For any
+1≤i≤N, the
+i-th character of
+S
+i
+is 0 (notice that this character does not correspond to any game in the tournament).
+Output Format
+For each test case, print
+−1 if a good ranking does not exist.
+If a good ranking exists, print on a single line the
+n integers
+P
+1
+,P
+2
+,…,P
+N
+corresponding to a good ranking (
+P
+1
+is the winning player,
+P
+2
+is the runner-up,
+P
+3
+is the third in the ranking, etc.).
+If there is more than one good ranking, print any of them.
+Constraints
+1≤T≤1000
+1≤N≤1000
+The sum of
+N over all test cases does not exceed
+1000.
+Sample 1:
+Input
+Output
+5
+1
+0
+2
+00
+10
+3
+010
+001
+100
+6
+001001
+101000
+000000
+111011
+111001
+011000
+7
+0101011
+0001100
+1100011
+0010100
+1010011
+0101000
+0101010
+1 
+2 1 
+-1
+-1
+5 3 1 7 6 2 4
+Explanation:
+Explanation of the first testcase: There is only one participant and the only possible ranking is good.
+Explanation of the second testcase: There are two participants and the participant
+2 won against the participant
+1. Thus the ranking
+2,1 (that is, player
+2 wins the tournament) is good.
+Explanation of the third testcase: One may check that there is not a good ranking. Let us explain why some possible rankings are not good:
+The ranking
+P
+1
+=1,P
+2
+=2,P
+3
+=3 is not good because for
+i=1,
+j=3 (notice that
+1≤i<j≤min(N,i+⌈
+2
+N
+⌉) since
+⌈
+2
+N
+⌉=2) the result of the game between
+P
+i
+=1 and
+P
+j
+=3 is not consistent with their ranking positions (player
+1 lost against player
+3 but
+1 has a better ranking position).
+The ranking
+P
+1
+=3,P
+2
+=2,P
+3
+=1 is not good because for
+i=1,
+j=2 (notice that
+1≤i<j≤min(N,i+⌈
+2
+N
+⌉) since
+⌈
+2
+N
+⌉=2) the result of the game between
+P
+i
+=3 and
+P
+j
+=2 is not consistent with their ranking positions.

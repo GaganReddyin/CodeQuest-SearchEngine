@@ -1,0 +1,137 @@
+A. Sum in the tree
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mitya has a rooted tree with
+n
+vertices indexed from
+1
+to
+n
+, where the root has index
+1
+. Each vertex
+v
+initially had an integer number
+a
+v
+≥0
+written on it. For every vertex
+v
+Mitya has computed
+s
+v
+: the sum of all values written on the vertices on the path from vertex
+v
+to the root, as well as
+h
+v
+ — the depth of vertex
+v
+, which denotes the number of vertices on the path from vertex
+v
+to the root. Clearly,
+s
+1
+=
+a
+1
+and
+h
+1
+=1
+.
+Then Mitya erased all numbers
+a
+v
+, and by accident he also erased all values
+s
+v
+for vertices with even depth (vertices with even
+h
+v
+). Your task is to restore the values
+a
+v
+for every vertex, or determine that Mitya made a mistake. In case there are multiple ways to restore the values, you're required to find one which minimizes the total sum of values
+a
+v
+for all vertices in the tree.
+Input
+The first line contains one integer
+n
+ — the number of vertices in the tree (
+2≤n≤
+10
+5
+). The following line contains integers
+p
+2
+,
+p
+3
+, ...
+p
+n
+, where
+p
+i
+stands for the parent of vertex with index
+i
+in the tree (
+1≤
+p
+i
+<i
+). The last line contains integer values
+s
+1
+,
+s
+2
+, ...,
+s
+n
+(
+−1≤
+s
+v
+≤
+10
+9
+), where erased values are replaced by
+−1
+.
+Output
+Output one integer — the minimum total sum of all values
+a
+v
+in the original tree, or
+−1
+if such tree does not exist.
+Examples
+input
+Copy
+5
+1 1 1 1
+1 -1 -1 -1 -1
+output
+Copy
+1
+input
+Copy
+5
+1 2 3 1
+1 -1 2 -1 -1
+output
+Copy
+2
+input
+Copy
+3
+1 2
+2 -1 1
+output
+Copy
+-1

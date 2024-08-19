@@ -1,0 +1,71 @@
+F. Interesting Sections
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+William has an array of non-negative numbers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. He wants you to find out how many segments
+l≤r
+pass the check. The check is performed in the following manner:
+The minimum and maximum numbers are found on the segment of the array starting at
+l
+and ending at
+r
+.
+The check is considered to be passed if the binary representation of the minimum and maximum numbers have the same number of bits equal to 1.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+6
+), the size of array
+a
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+18
+), the contents of array
+a
+.
+Output
+Output a single number  — the total number of segments that passed the check.
+Examples
+input
+Copy
+5
+1 2 3 4 5
+output
+Copy
+9
+input
+Copy
+10
+0 5 7 3 9 10 1 6 13 7
+output
+Copy
+18

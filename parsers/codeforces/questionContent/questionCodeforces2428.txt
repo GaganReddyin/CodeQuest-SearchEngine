@@ -1,0 +1,349 @@
+C. Viruses
+time limit per test0.75 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The Committee for Research on Binary Viruses discovered a method of replication for a large family of viruses whose genetic codes are sequences of zeros and ones. Each virus originates from a single gene; for simplicity genes are denoted by integers from
+0
+to
+G−1
+. At each moment in time a virus is a sequence of genes. When mutation occurs, one of the genes from the sequence is replaced by a certain sequence of genes, according to the mutation table. The virus stops mutating when it consists only of genes
+0
+and
+1
+.
+For instance, for the following mutation table:
+2→⟨0 1⟩
+3→⟨2 0 0⟩
+3→⟨1 3⟩
+4→⟨0 3 1 2⟩
+5→⟨2 1⟩
+5→⟨5⟩
+2
+⟨
+0
+1
+⟩
+3
+⟨
+2
+0
+0
+⟩
+3
+⟨
+1
+3
+⟩
+4
+⟨
+0
+3
+1
+2
+⟩
+5
+⟨
+2
+1
+⟩
+5
+⟨
+5
+⟩
+a virus that initially consisted of a single gene
+4
+, could have mutated as follows:
+⟨4⟩→⟨
+0 3 1 2
+–
+–
+–
+–
+–
+–
+–
+⟩→⟨0 
+2 0 0
+–
+–
+–
+–
+–
+ 1 2⟩→⟨0 
+0 1
+–
+–
+–
+ 0 0 1 2⟩→⟨0 0 1 0 0 1 
+0 1
+–
+–
+–
+⟩
+⟨
+4
+⟩
+⟨
+0
+3
+1
+2
+⟩
+⟨
+0
+2
+0
+0
+1
+2
+⟩
+⟨
+0
+0
+1
+0
+0
+1
+2
+⟩
+⟨
+0
+0
+1
+0
+0
+1
+0
+1
+⟩
+or in another way:
+⟨4⟩→⟨
+0 3 1 2
+–
+–
+–
+–
+–
+–
+–
+⟩→⟨0 
+1 3
+–
+–
+–
+ 1 2⟩→⟨0 1 3 1 
+0 1
+–
+–
+–
+⟩→⟨0 1 
+2 0 0
+–
+–
+–
+–
+–
+ 1 0 1⟩→⟨0 1 
+0 1
+–
+–
+–
+ 0 0 1 0 1⟩
+⟨
+4
+⟩
+⟨
+0
+3
+1
+2
+⟩
+⟨
+0
+1
+3
+1
+2
+⟩
+⟨
+0
+1
+3
+1
+0
+1
+⟩
+⟨
+0
+1
+2
+0
+0
+1
+0
+1
+⟩
+⟨
+0
+1
+0
+1
+0
+0
+1
+0
+1
+⟩
+Viruses are detected by antibodies that identify the presence of specific continuous fragments of zeros and ones in the viruses' codes. For example, an antibody reacting to a fragment
+⟨0 0 1 0 0⟩
+will detect a virus
+⟨0 0 1 0 0 1 0 1⟩
+, but it will not detect a virus
+⟨0 1 0 1 0 0 1 0 1⟩
+.
+For each gene from
+2
+to
+G−1
+, the scientists are wondering whether a given set of antibodies is enough to detect all viruses that can emerge through mutations from this gene. If not, they want to know the length of the shortest virus that cannot be detected.
+It may happen that sometimes scientists don't have any antibodies. Then of course no virus can be detected, so the scientists are only interested in the length of the shortest possible virus that can emerge from the gene mutations.
+Input
+The first line of the input will contain three integers
+G
+,
+N
+and
+M
+(
+G>2
+,
+N≥G−2
+,
+M≥0
+) specifying the number of genes, the number of rows in the mutation table, and the number of antibodies.
+The following
+N
+lines contain descriptions of rows of the mutation table; each line begins with two integers
+a
+and
+k
+(
+2≤a<G
+,
+k≥1
+), followed by a sequence of
+k
+integers
+b
+1
+,
+b
+2
+,…,
+b
+k
+(
+0≤
+b
+i
+<G
+), that encode the row
+a→⟨
+b
+1
+ b
+2
+ … 
+b
+k
+⟩
+⟨
+b
+b
+b
+⟩
+The sum of all values
+k
+does not exceed
+100
+. Every integer from
+2
+to
+G−1
+appears in the table as
+a
+at least once.
+The next
+M
+lines contain descriptions of the antibodies; each such line begins with an integer
+ℓ
+(
+ℓ≥1
+), followed by a sequence of
+ℓ
+integers
+c
+1
+,
+c
+2
+,…,
+c
+ℓ
+(
+0≤
+c
+i
+≤1
+), describing the antibody. The sum of all values
+ℓ
+does not exceed
+50
+.
+Output
+Your program needs to output exactly
+G−2
+lines, containing the answers for the subsequent genes from
+2
+to
+G−1
+.
+If all viruses that can mutate from this single gene can be detected by the given set of antibodies, you need to print the word "YES". You also need to print this if there are no viruses that could originate from this gene (it can happen when the sequences never stop mutating).
+Otherwise you need to print the word "NO", followed by an integer denoting the minimal length of the undetectable virus. You can assume that for all the prepared input data this value will be smaller than
+2
+63
+.
+Scoring
+Subtasks:
+(11 points) No antibodies (
+M=0
+)
+(14 points)
+N=G−2
+(25 points) One antibody (
+M=1
+)
+(32 points) The sum of all values
+ℓ
+does not exceed
+10
+(18 points) No further constraints
+Example
+input
+Copy
+6 6 2
+2 2 0 1
+3 3 2 0 0
+3 2 1 3
+4 4 0 3 1 2
+5 2 2 1
+5 1 5
+2 1 1
+5 0 0 1 0 0
+output
+Copy
+NO 2
+NO 4
+NO 9
+YES

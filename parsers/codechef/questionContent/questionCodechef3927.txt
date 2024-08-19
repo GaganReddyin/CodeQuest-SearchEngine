@@ -1,0 +1,28 @@
+Mega mu - 1
+Problem
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+A positive integer
+N≥1 is given. An
+N-uple
+(x
+1
+,x
+2
+,…,x
+N
+) of nonnegative integers is special if, after we remove all entries which are zero, its entries are nondecreasing. For example
+(0,2,0,0,4,0,4,5,0,0) is special, but
+(3,2,0) and
+(0,1,3,0,0,1,0) are not.
+One can show that there is a unique function
+μ defined on the
+N-uples of nonnegative integers such that, for any
+N-uple
+x=(x
+1
+,x
+2
+,…,x
+N
+)
+\begin{cases} 1 &\text{if $x$ is special} \\ 0 &\text{otherwise} \end{cases},$$ where the sum ranges over all $N$-uples $y=(y_1, y_2,\dots, y_N)$ of nonnegative integers such that $y_i\le x_i$ for all $1\le i\le N$. You are given $x=(x_1,x_2,\dots, x_N)$, determine whether $\mu(x)$ is $0$ or not. ### Input Format - The first line will contain $T$, the number of test cases. Then the test cases follow. - The first line of each test case contains one integer $N$, the size of the tuple considered. - The second line of each test case contains $N$ integers $x_1, x_2, \dots, x_N$, the entries of the given $N$-uple. ### Output Format For each test case, print the string <tt>yes</tt> if $\mu(x)=0$ and the string <tt>no</tt> otherwise. You can print each letter in any case (upper or lower). ### Constraints <div class="_html_code__block_15v7d_178"> - $1 \leq T \leq 20\,000$ - $1 \le N \le 100\,000$ - $0\le x_i\le 10^9$ - Sum of $N$ over all test cases won't exceed $100\,000$ </div> ### Sample 1: <div data-reactroot="" class="_input_output__table_15v7d_184"><div class="_text_copy__container_15v7d_188"><div class="_text_copy_15v7d_188 _input_top__box_15v7d_201"><span>Input</span><copytoclipboard cliptext="12%0A1%0A0%0A1%0A1%0A1%0A10%0A2%0A0%201%0A2%0A1%200%0A2%0A3%202%0A2%0A3%203%0A2%0A3%204%0A2%0A10%2043%0A5%0A2%201%201%204%203%0A5%0A1%202%202%202%202%0A5%0A8%206%205%201%208"></copytoclipboard></div><div class="_text_copy_15v7d_188 _ouput_top__box_15v7d_204"><span>Output</span><copytoclipboard cliptext="no%0Ayes%0Ayes%0Ayes%0Ayes%0Ano%0Ano%0Ayes%0Ayes%0Ano%0Ayes%0Ayes"></copytoclipboard></div></div><div class="_values__container_15v7d_207"><div class="_values_15v7d_207"><pre>12 1 0 1 1 1 10 2 0 1 2 1 0 2 3 2 2 3 3 2 3 4 2 10 43 5 2 1 1 4 3 5 1 2 2 2 2 5 8 6 5 1 8</pre></div><div class="_values_15v7d_207"><pre>no yes yes yes yes no no yes yes no yes yes</pre></div></div></div> ### Explanation: <p> <b>Explanation of the test cases 1, 2, 3:</b> For $N=1$, one can prove that $\mu((0)) = 1$ and $\mu((k))=0$ for all $k\ge 1$. </p> <ul> <li> It holds $\mu((0)) = 1\not=0$, so the answer to testcase 1 is <tt>no</tt>. </li> <li> It holds $\mu((1)) = 0$, so the answer to testcase 2 is <tt>yes</tt>. </li> <li> It holds $\mu((10)) = 0$, so the answer to testcase 3 is <tt>yes</tt>. </li> </ul> <p> <b>Explanation of testcases 4, 5, 6, 7, 8, 9:</b> For $N=2$, one can prove that $\mu((0,0))=1$, $\mu((k, k)) = 1$ and $\mu((k, k-1))=-1$ for all $k\ge 2$, and all other values of $\mu$ are $0$. Let us check that the defining property of $\mu$ holds for $x=(2, 2)$ (notice that $x$ is special in this case): $$ 1 = \sum_{y\le x} \mu(y) = \mu(0, 0) + \mu(0, 1) + \mu(0, 2) + \mu(1, 0) + \mu(1, 1) + \mu(1, 2) + \mu(2, 0) + \mu(2, 1) + \mu(2, 2) $$ $$ = 1 + 0 + 0 + 0 + 0 + 0 + 0 - 1 + 1 = 1 .\hspace{13em}$$ </p> <ul> <li> It holds $\mu((0, 1)) = 0$, so the answer to testcase 4 is <tt>yes</tt>. </li> <li> It holds $\mu((1, 0)) = 0$, so the answer to testcase 5 is <tt>yes</tt>. </li> <li> It holds $\mu((3, 2)) = -1$, so the answer to testcase 6 is <tt>no</tt>. </li> <li> It holds $\mu((3, 3)) = 1$, so the answer to testcase 7 is <tt>no</tt>. </li> <li> It holds $\mu((3, 4)) = 0$, so the answer to testcase 8 is <tt>yes</tt>. </li> <li> It holds $\mu((10, 43)) = 0$, so the answer to testcase 9 is <tt>yes</tt>. </li> </ul>

@@ -1,0 +1,72 @@
+F. Simple Cycles Edges
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an undirected graph, consisting of
+n
+vertices and
+m
+edges. The graph does not necessarily connected. Guaranteed, that the graph does not contain multiple edges (more than one edges between a pair of vertices) or loops (edges from a vertex to itself).
+A cycle in a graph is called a simple, if it contains each own vertex exactly once. So simple cycle doesn't allow to visit a vertex more than once in a cycle.
+Determine the edges, which belong to exactly on one simple cycle.
+Input
+The first line contain two integers
+n
+and
+m
+(1≤n≤100000
+,
+0≤m≤min(n⋅(n−1)/2,100000))
+— the number of vertices and the number of edges.
+Each of the following
+m
+lines contain two integers
+u
+and
+v
+(
+1≤u,v≤n
+,
+u≠v
+) — the description of the edges.
+Output
+In the first line print the number of edges, which belong to exactly one simple cycle.
+In the second line print the indices of edges, which belong to exactly one simple cycle, in increasing order. The edges are numbered from one in the same order as they are given in the input.
+Examples
+input
+Copy
+3 3
+1 2
+2 3
+3 1
+output
+Copy
+3
+1 2 3 
+input
+Copy
+6 7
+2 3
+3 4
+4 2
+1 2
+1 5
+5 6
+6 1
+output
+Copy
+6
+1 2 3 5 6 7 
+input
+Copy
+5 6
+1 2
+2 3
+2 4
+4 3
+2 5
+5 3
+output
+Copy
+0

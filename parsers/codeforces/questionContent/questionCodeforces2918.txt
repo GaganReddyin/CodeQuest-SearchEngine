@@ -1,0 +1,177 @@
+E. Obtain a Permutation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a rectangular matrix of size
+n×m
+consisting of integers from
+1
+to
+2⋅
+10
+5
+.
+In one move, you can:
+choose any element of the matrix and change its value to any integer between
+1
+and
+n⋅m
+, inclusive;
+take any column and shift it one cell up cyclically (see the example of such cyclic shift below).
+A cyclic shift is an operation such that you choose some
+j
+(
+1≤j≤m
+) and set
+a
+1,j
+:=
+a
+2,j
+,
+a
+2,j
+:=
+a
+3,j
+,…,
+a
+n,j
+:=
+a
+1,j
+simultaneously.
+Example of cyclic shift of the first column
+You want to perform the minimum number of moves to make this matrix look like this:
+In other words, the goal is to obtain the matrix, where
+a
+1,1
+=1,
+a
+1,2
+=2,…,
+a
+1,m
+=m,
+a
+2,1
+=m+1,
+a
+2,2
+=m+2,…,
+a
+n,m
+=n⋅m
+(i.e.
+a
+i,j
+=(i−1)⋅m+j
+) with the minimum number of moves performed.
+Input
+The first line of the input contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+,n⋅m≤2⋅
+10
+5
+) — the size of the matrix.
+The next
+n
+lines contain
+m
+integers each. The number at the line
+i
+and position
+j
+is
+a
+i,j
+(
+1≤
+a
+i,j
+≤2⋅
+10
+5
+).
+Output
+Print one integer — the minimum number of moves required to obtain the matrix, where
+a
+1,1
+=1,
+a
+1,2
+=2,…,
+a
+1,m
+=m,
+a
+2,1
+=m+1,
+a
+2,2
+=m+2,…,
+a
+n,m
+=n⋅m
+(
+a
+i,j
+=(i−1)m+j
+).
+Examples
+input
+Copy
+3 3
+3 2 1
+1 2 3
+4 5 6
+output
+Copy
+6
+input
+Copy
+4 3
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+output
+Copy
+0
+input
+Copy
+3 4
+1 6 3 4
+5 10 7 8
+9 2 11 12
+output
+Copy
+2
+Note
+In the first example, you can set
+a
+1,1
+:=7,
+a
+1,2
+:=8
+and
+a
+1,3
+:=9
+then shift the first, the second and the third columns cyclically, so the answer is
+6
+. It can be shown that you cannot achieve a better answer.
+In the second example, the matrix is already good so the answer is
+0
+.
+In the third example, it is enough to shift the second column cyclically twice to obtain a good matrix, so the answer is
+2
+.

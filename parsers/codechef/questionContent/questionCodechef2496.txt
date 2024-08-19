@@ -1,0 +1,41 @@
+Chef and Girls
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Chef has a problem - he likes a girl but she has 32 secrets and N friends (also girls).
+Chef has enumerated each girl from 1 to N, Chef's crush has the number 1.
+Now he consider all girls as nodes of a directed graph. If one girl has an edge directed towards another girl, the former tells all the secrets she knows to the latter. Edges are oriented, so if one girl is sharing secrets with another, it doesn't imply the same relation in the reverse direction. Also, there are no cycles in the graph.
+Each girl (except Chef's crush) has only one edge emanating from her, or doesn't have any edges emanating from her at all. Each girl listens to at most one girl. In other words, for each girl, there is only one girl who reveals secrets to her, or there are no such girls at all. Each edge has two integers assigned to it, specifying the range of interest. If girl A knows secrets in the range [10-20] and an edge directed towards girl B with a range of interest [2-15] then girl B will know secrets in the range [10-15], which is, evidently, an intersection of the range of secrets and the interest range.
+Chef's crush has all the [1-32] secrets, other girls just listen to her and then gossip around (share those secrets). If a girl doesn't have an edge emanating from her, she tells all the secrets she knows to Chef.
+Chef can perform operations of the following kind: take some edge, and extend its range of interest by one (to the left or the right). He wants to know the minimal number of operations he needs to perform in order to collect all the secrets.
+Input
+The first line contains two integers N and M denoting the number of girls and ribs appropriately.
+Each of next M lines describe an edge, and contains four integers — i, j, l, r — meaning that there is an oriented edge from i to j with a range of interest [l-r].
+Output
+In a single line, output a single integer: the answer.
+Constraints
+1 ≤ N, M ≤ 10^5
+1 ≤ i < j ≤ N
+1 ≤ l ≤ r ≤ 32
+Subtasks
+Subtask N, M ≤ 10. Points: 10
+Subtask N, M ≤ 10^3. Points: 20
+Subtask Original constraints. Points: 70
+Sample 1:
+Input
+Output
+5 4
+1 2 10 15
+1 3 10 16
+2 4 1 1
+3 5 10 15
+50
+Explanation:
+Example case 1.
+Without any changes made by Chef, we will have the following knowledge propagation: Girl 1 knows [1-32]. Girl 2 knows [10-15] (intersection of [1-32] and [10-15]). Girl 3 knows [10-16] (intersection of [1-32] and [10-16]). Girl 4 knows [] (intersection of [10-15] and [1-1]). Girl 5 knows [10-15] (intersection of [10-16] and [10-15]).
+So Chef can collect secrets [10-15] only.
+Here is the solution:
+Change 1 2 10 15 to 1 2 1 15 (by applying the operation 9 times).
+Change 2 4 1 1 to 2 4 1 9 (by applying the operation 8 times).
+Change 1 3 10 16 to 1 3 10 32 (by applying the operation 16 times).
+Change 3 5 10 15 to 1 3 10 32 (by applying the operation 17 times).
+Now, all secrets in the range [1-9] will go through 1-2-4 and all secrets in the range [10-32] will go through 1-3-5, finally reaching Chef. And the total cost is 50.

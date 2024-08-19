@@ -1,0 +1,87 @@
+Safe Partition
+Problem
+Read problems statements in Hindi, Mandarin chinese , Russian and Vietnamese as well.
+It's summer — the time for holidays! Chef finally finished all university exams. Now he can rest and play with sequences.
+Today, Chef took a sequence
+A with
+N elements. He wants to partition this sequence into an arbitrary number of non-empty contiguous subsequences (i.e. each of the subsequences has to consist of one or more consecutive elements of the original sequence). Each element of the original sequence must belong to exactly one subsequence.
+This would be easy for Chef, so he is only interested in safe partitions of
+A. A safe partition is a partition into subsequences
+S
+1
+,S
+2
+,…,S
+K
+such that for each valid
+i,
+min(S
+i
+)≤∣S
+i
+∣≤max(S
+i
+) — that is, for each subsequence in this partition, its length is greater or equal to its smallest element and smaller or equal to its largest element.
+Finding one safe partition would still be easy for Chef, so he wants to find the number of safe partitions of
+A. Since this number could be very big, please compute it modulo
+1000000007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing one integer — the number of safe partitions of
+A modulo
+10
+9
++7.
+Constraints
+1≤N≤5⋅10
+5
+1≤A
+i
+≤N for each valid
+i
+Subtasks
+Subtask #1 (10 points):
+1≤N≤1,000
+Subtask #2 (10 points):
+1≤N≤10
+5
+1≤A
+i
+≤500 for each valid
+i
+Subtask #3 (15 points): there are exactly two different values of elements of
+A
+Subtask #4 (25 points):
+A
+2i
+=N for each valid
+i
+Subtask #5 (40 points): original constraints
+Sample 1:
+Input
+Output
+7
+1 6 2 3 4 3 4
+6
+Explanation:
+The six safe partitions are:
+[1],[6,2,3,4,3,4]
+[1,6,2],[3,4,3,4]
+[1,6,2,3],[4,3,4]
+[1],[6,2],[3,4,3,4]
+[1],[6,2,3],[4,3,4]
+[1,6],[2,3],[4,3,4]

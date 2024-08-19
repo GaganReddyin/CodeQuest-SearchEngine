@@ -1,0 +1,134 @@
+F. Serval and Brain Power
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Serval loves Brain Power and his brain power problem.
+Serval defines that a string
+T
+is powerful iff
+T
+can be obtained by concatenating some string
+T
+′
+multiple times. Formally speaking,
+T
+is powerful iff there exist a string
+T
+′
+and an integer
+k≥2
+such that
+T=
+T
+′
++
+T
+′
++⋯+
+T
+′
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+k times
+′
+′
+′
+For example, gogogo is powerful because it can be obtained by concatenating go three times, but power is not powerful.
+Serval has a string
+S
+consists of lowercase English letters. He is curious about the longest powerful subsequence of
+S
+, and he only needs you to find out the length of it. If all the non-empty subsequences of
+S
+is not powerful, the answer is considered to be
+0
+.
+A string
+a
+is a subsequence of a string
+b
+if
+a
+can be obtained from
+b
+by the deletion of several (possibly, zero or all) characters.
+Input
+The first line contains a single string
+S
+(
+|S|≤80
+) consisting of lowercase English letters.
+Output
+Print a single integer — the length of the longest powerful subsequence of
+S
+. If all the non-empty subsequences of
+S
+is not powerful, print
+0
+.
+Examples
+input
+Copy
+buaa
+output
+Copy
+2
+input
+Copy
+codeforcesround
+output
+Copy
+6
+input
+Copy
+oooooooooooaaaaeaaiaujooooooooooooo
+output
+Copy
+24
+input
+Copy
+zero
+output
+Copy
+0
+Note
+For the first sample, all of the non-empty subsequences of buaa are listed below:
+b
+u
+a (occurred twice, buaa and buaa)
+bu
+ba (occurred twice, buaa and buaa)
+ua (occurred twice, buaa and buaa)
+aa
+bua (occurred twice, buaa and buaa )
+baa
+uaa
+buaa
+Since
+aa=a+a
+, aa is a powerful subsequence. It can be shown that aa is the only powerful subsequence among them. So the answer is
+2
+.
+For the second sample, the longest powerful subsequence is codcod from codeforcesround. So the answer is
+6
+.

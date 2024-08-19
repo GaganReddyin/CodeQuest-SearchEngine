@@ -1,0 +1,231 @@
+C. Candies Distribution
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+children numbered from
+1
+to
+n
+in a kindergarten. Kindergarten teacher gave
+a
+i
+(
+1≤
+a
+i
+≤n
+) candies to the
+i
+-th child. Children were seated in a row in order from
+1
+to
+n
+from left to right and started eating candies.
+While the
+i
+-th child was eating candies, he calculated two numbers
+l
+i
+and
+r
+i
+ — the number of children seating to the left of him that got more candies than he and the number of children seating to the right of him that got more candies than he, respectively.
+Formally,
+l
+i
+is the number of indices
+j
+(
+1≤j<i
+), such that
+a
+i
+<
+a
+j
+and
+r
+i
+is the number of indices
+j
+(
+i<j≤n
+), such that
+a
+i
+<
+a
+j
+.
+Each child told to the kindergarten teacher the numbers
+l
+i
+and
+r
+i
+that he calculated. Unfortunately, she forgot how many candies she has given to each child. So, she asks you for help: given the arrays
+l
+and
+r
+determine whether she could have given the candies to the children such that all children correctly calculated their values
+l
+i
+and
+r
+i
+, or some of them have definitely made a mistake. If it was possible, find any way how she could have done it.
+Input
+On the first line there is a single integer
+n
+(
+1≤n≤1000
+) — the number of children in the kindergarten.
+On the next line there are
+n
+integers
+l
+1
+,
+l
+2
+,…,
+l
+n
+(
+0≤
+l
+i
+≤n
+), separated by spaces.
+On the next line, there are
+n
+integer numbers
+r
+1
+,
+r
+2
+,…,
+r
+n
+(
+0≤
+r
+i
+≤n
+), separated by spaces.
+Output
+If there is no way to distribute the candies to the children so that all of them calculated their numbers correctly, print «NO» (without quotes).
+Otherwise, print «YES» (without quotes) on the first line. On the next line, print
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+, separated by spaces — the numbers of candies the children
+1,2,…,n
+received, respectively. Note that some of these numbers can be equal, but all numbers should satisfy the condition
+1≤
+a
+i
+≤n
+. The number of children seating to the left of the
+i
+-th child that got more candies than he should be equal to
+l
+i
+and the number of children seating to the right of the
+i
+-th child that got more candies than he should be equal to
+r
+i
+. If there is more than one solution, find any of them.
+Examples
+input
+Copy
+5
+0 0 1 1 2
+2 0 1 0 0
+output
+Copy
+YES
+1 3 1 2 1
+input
+Copy
+4
+0 0 2 0
+1 1 1 1
+output
+Copy
+NO
+input
+Copy
+3
+0 0 0
+0 0 0
+output
+Copy
+YES
+1 1 1
+Note
+In the first example, if the teacher distributed
+1
+,
+3
+,
+1
+,
+2
+,
+1
+candies to
+1
+-st,
+2
+-nd,
+3
+-rd,
+4
+-th,
+5
+-th child, respectively, then all the values calculated by the children are correct. For example, the
+5
+-th child was given
+1
+candy, to the left of him
+2
+children were given
+1
+candy,
+1
+child was given
+2
+candies and
+1
+child —
+3
+candies, so there are
+2
+children to the left of him that were given more candies than him.
+In the second example it is impossible to distribute the candies, because the
+4
+-th child made a mistake in calculating the value of
+r
+4
+, because there are no children to the right of him, so
+r
+4
+should be equal to
+0
+.
+In the last example all children may have got the same number of candies, that's why all the numbers are
+0
+. Note that each child should receive at least one candy.

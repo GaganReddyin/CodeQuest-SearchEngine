@@ -1,0 +1,76 @@
+Guess the Prime!
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is an interactive problem.
+Shef chose some prime number
+P between
+2 and
+10
+9
+inclusive. You want to guess it.
+Before that, you may ask Shef at most
+M questions, since he is quite busy. In each question, you tell Shef an integer
+x (
+1≤x≤10
+9
+) and Shef tells you
+x
+2
+modulo
+P. At the end, you guess Shef's prime
+P and he tells you if your guess was correct.
+However, Shef will sometimes cheat: he can change his prime any number of times during the game (even after you tell him your guess), but only in such a way that all his answers to your previous questions remain correct.
+Show Shef that you can always guess the correct prime, even if he tries to cheat!
+Interaction
+First, you should read a line containing a single integer
+T denoting the number of test cases. The description of interaction for
+T test cases follows.
+For each test case, you should start by asking questions (possibly none).
+To ask a question, print a line containing two space-separated integers
+1 and
+x.
+Then, you must read a line containing a single integer.
+If this integer is
+−1, your query was invalid or you asked too many queries, and you should immediately terminate your program to receive the Wrong Answer verdict. Otherwise, you may receive any verdict.
+Otherwise, this integer denotes Shef's answer to your query.
+When you think you know Shef's prime
+P, print a line containing two space-separated integers
+2 and
+P.
+Then, you must read a line containing a single string "Yes" or "No". If this string is "Yes", you should continue solving the remaining test cases. Otherwise, your answer was incorrect and you should immediately terminate your program to receive the Wrong Answer verdict.
+Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤1,000
+1≤x≤10
+9
+Subtasks
+Subtask #1 (10 points):
+M=10
+Shef chooses
+P in advance and does not cheat
+Subtask #2 (20 points):
+M=5
+Shef chooses
+P in advance and does not cheat
+Subtask #3 (70 points):
+M=2
+Example
+You           Grader
+              2
+1 3
+              0
+2 3
+              Yes
+1 10
+              2
+1 3
+              2
+2 7
+              Yes
+Explanation
+Example case 2: Shef's first answer is
+2 because
+10
+2
+=100≡2 modulo
+7.

@@ -1,0 +1,42 @@
+Chef and Guard Towers
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Chef holds all his secret recipes inside his house. For this reason, Chef wants to make his house secure. To do so, Chef wants to install guard towers in his house.
+Unfortunately, due to high costs, Chef can only activate 3 guard towers each night. Chef considers his house safe if the triangle formed by these 3 guard towers as vertices strictly contains his house. Chef's house is located at (0, 0).
+On the ith day, Chef plans to install a guard tower at location (xi, yi). Chef wants to know how effective each installation is. Specifically, after every installation, Chef wants to know the number of subsets of 3 guard towers he can activate so that his house becomes safe. Please help him answer this question!
+This is an online problem, so you won't get the next point unless you answer the question first. Don't forget to flush the output after every print statement. Please see the note section for details about how to flush the standard output.!
+Input
+The first line of input contains a single integer N. The next N lines describe the points.
+The ith line contains two integers xi and yi denoting the location of Chef's ith guard tower, (xi, yi).
+Output
+Output N lines. The ith line must contain a single integer, the answer to Chef's question after the ith installation.
+Constraints
+|xi|, |yi| ≤ 106
+The points are distinct.
+(xi, yi) ≠ (0, 0)
+Subtasks
+Subtask #1: (11 points) 3 ≤ N ≤ 1000
+Subtask #2: (24 points) 3 ≤ N ≤ 12000
+Subtask #3: (65 points) 3 ≤ N ≤ 400000
+Example
+Input:
+6
+2 3
+3 2
+-1 -1
+3 3
+4 1
+5 5
+Output:
+0
+0
+1
+1
+2
+2
+Explanation
+After the first and second installations, there aren't enough guard towers for Chef to choose from.
+After the third and fourth installations, there is one set of guard towers that make Chef's house safe: {(2, 3), (3, 2), (-1, -1)}.
+After the fifth and sixth installations, there are two sets of guard towers that make Chef's house safe: {(2, 3), (3, 2), (-1, -1)} and {(2, 3), (4, 1), (-1, -1)}.
+Note
+You can flush the standard output in C++ by writing fflush(stdout). In Java, you can do that by System.out.flush(). Please read the documentations of a particular language for more details.

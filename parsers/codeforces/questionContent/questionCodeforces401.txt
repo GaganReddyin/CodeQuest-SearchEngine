@@ -1,0 +1,123 @@
+D. Lucky Chains
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Let's name a pair of positive integers
+(x,y)
+lucky if the greatest common divisor of them is equal to
+1
+(
+gcd(x,y)=1
+).
+Let's define a chain induced by
+(x,y)
+as a sequence of pairs
+(x,y)
+,
+(x+1,y+1)
+,
+(x+2,y+2)
+,
+…
+,
+(x+k,y+k)
+for some integer
+k≥0
+. The length of the chain is the number of pairs it consists of, or
+(k+1)
+.
+Let's name such chain lucky if all pairs in the chain are lucky.
+You are given
+n
+pairs
+(
+x
+i
+,
+y
+i
+)
+. Calculate for each pair the length of the longest lucky chain induced by this pair. Note that if
+(
+x
+i
+,
+y
+i
+)
+is not lucky itself, the chain will have the length
+0
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+6
+) — the number of pairs.
+Next
+n
+lines contains
+n
+pairs — one per line. The
+i
+-th line contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+<
+y
+i
+≤
+10
+7
+) — the corresponding pair.
+Output
+Print
+n
+integers, where the
+i
+-th integer is the length of the longest lucky chain induced by
+(
+x
+i
+,
+y
+i
+)
+or
+−1
+if the chain can be infinitely long.
+Example
+input
+Copy
+4
+5 15
+13 37
+8 9
+10009 20000
+output
+Copy
+0
+1
+-1
+79
+Note
+In the first test case,
+gcd(5,15)=5>1
+, so it's already not lucky, so the length of the lucky chain is
+0
+.
+In the second test case,
+gcd(13+1,37+1)=gcd(14,38)=2
+. So, the lucky chain consists of the single pair
+(13,37)
+.

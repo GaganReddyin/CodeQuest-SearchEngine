@@ -1,0 +1,31 @@
+E. Geometric Progressions
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Geometric progression with the first element a and common ratio b is a sequence of numbers a, ab, ab2, ab3, ....
+You are given n integer geometric progressions. Your task is to find the smallest integer x, that is the element of all the given progressions, or else state that such integer does not exist.
+Input
+The first line contains integer (1 ≤ n ≤ 100) — the number of geometric progressions.
+Next n lines contain pairs of integers a, b (1 ≤ a, b ≤ 109), that are the first element and the common ratio of the corresponding geometric progression.
+Output
+If the intersection of all progressions is empty, then print  - 1, otherwise print the remainder of the minimal positive integer number belonging to all progressions modulo 1000000007 (109 + 7).
+Examples
+input
+Copy
+2
+2 2
+4 1
+output
+Copy
+4
+input
+Copy
+2
+2 2
+3 3
+output
+Copy
+-1
+Note
+In the second sample test one of the progressions contains only powers of two, the other one contains only powers of three.

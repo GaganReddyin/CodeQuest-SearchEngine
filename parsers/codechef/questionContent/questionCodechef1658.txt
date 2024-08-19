@@ -1,0 +1,55 @@
+Worst Case Analysis
+Problem
+All of you must have heard of merge sort while learning sorting algorithms. So, now is time to explore it more. Let us consider the following merge function in the merge sort algorithm: (Assume 1-base indexing)
+void merge(int a[], int b[], int n1, int n2, int c[])
+/* Function to merge the 2 arrays
+a[1..n1] and b[1..n2] into array c[1..n1+n2] */
+{
+    int i = 1, j = 1, k = 1;
+    while (i <= n1 && j <= n2) {
+        if (a[i] <= b[j]) {  /* This is considered as 1 comparison */
+            c[k] = a[i];
+            i++;
+        }
+        else {
+            c[k] = b[j];
+            j++;
+        }
+        k++;
+    }
+    while (i <= n1) {
+        c[k] = a[i];
+        i++;
+        k++;
+    }
+    while (j <= n2) {
+        c[k] = b[j];
+        j++;
+        k++;
+    }
+}
+Now, in the function above, let us denote the maximum number of comparisons needed in the worst case while merging 2 arrays of sizes n1 and n2 as X. We are given M sorted arrays of size n1, n2, n3, ..., nM. To make a larger array of size n1 + n2 + n3 + ... + nM, you perform the following operation:
+If only 1 array is left then stop.
+Else Pick any 2 sorted arrays and merge them using the above operation.
+Assume, that while merging any 2 arrays, it always takes worst case in the number of comparisons. You are required to minimise the number of comparison operations.
+Input
+The first line in the input consists of the number of test cases, T. Each input consists of 2 lines. The first line contain an integer M, denoting the number of arrays. The second line consists of the sizes of arrays, n1, n2, n3, ... nM
+NOTE: The input dataset is large. Please prefer using scanf/printf in C/C++ and buffered I/O in Java.
+Output
+Output for each test case, the minimum number of comparisions while merging the M arrays into the final array.
+Constraints
+1 ≤ T ≤ 20, 2 ≤ M ≤ 105
+2 ≤ ni ≤ 109
+Sample 1:
+Input
+Output
+2
+2
+3 4
+3
+4 3 4
+6
+16
+Explanation:
+In the first test case, the number of comparisons in worst case are 6. Consider for example, arrays a = {1, 6, 9} and b = {2, 5, 7, 8}. The comparisons are between the pair of elements (1, 2), (2, 6), (5, 6), (6, 7), (7, 9), (8, 9).
+In the second test case, the best order to perform the merge operations is as follows. Merge the arrays with sizes 3 and 4 to obtain array of size 7. The number of comparisons in worst case is 6. Merge the arrays with sizes 4 and 7 to obtain array of size 11. The number of comparisons in worst case is 10. The total number of comparisons is 6 + 10 = 16

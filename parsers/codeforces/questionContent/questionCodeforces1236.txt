@@ -1,0 +1,128 @@
+F. Reverse
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two positive integers
+x
+and
+y
+. You can perform the following operation with
+x
+: write it in its binary form without leading zeros, add
+0
+or
+1
+to the right of it, reverse the binary form and turn it into a decimal number which is assigned as the new value of
+x
+.
+For example:
+34
+can be turned into
+81
+via one operation: the binary form of
+34
+is
+100010
+, if you add
+1
+, reverse it and remove leading zeros, you will get
+1010001
+, which is the binary form of
+81
+.
+34
+can be turned into
+17
+via one operation: the binary form of
+34
+is
+100010
+, if you add
+0
+, reverse it and remove leading zeros, you will get
+10001
+, which is the binary form of
+17
+.
+81
+can be turned into
+69
+via one operation: the binary form of
+81
+is
+1010001
+, if you add
+0
+, reverse it and remove leading zeros, you will get
+1000101
+, which is the binary form of
+69
+.
+34
+can be turned into
+69
+via two operations: first you turn
+34
+into
+81
+and then
+81
+into
+69
+.
+Your task is to find out whether
+x
+can be turned into
+y
+after a certain number of operations (possibly zero).
+Input
+The only line of the input contains two integers
+x
+and
+y
+(
+1≤x,y≤
+10
+18
+).
+Output
+Print YES if you can make
+x
+equal to
+y
+and NO if you can't.
+Examples
+input
+Copy
+3 3
+output
+Copy
+YES
+input
+Copy
+7 4
+output
+Copy
+NO
+input
+Copy
+2 8
+output
+Copy
+NO
+input
+Copy
+34 69
+output
+Copy
+YES
+input
+Copy
+8935891487501725 71487131900013807
+output
+Copy
+YES
+Note
+In the first example, you don't even need to do anything.
+The fourth example is described in the statement.

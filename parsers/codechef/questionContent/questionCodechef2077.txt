@@ -1,0 +1,85 @@
+Chefina and Ranges
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chefina is playing with ranges. There are
+N ranges
+[l
+1
+,r
+1
+],[l
+2
+,r
+2
+],…,[l
+N
+,r
+N
+]. Chefina wants to divide the ranges into two non-empty subsets in such a way that each range is in exactly one subset and whenever two ranges have a common point, they are in the same subset.
+Since this could be difficult to achieve, Chefina can delete any number of ranges (possibly zero) and then divide the remaining ranges into such non-empty subsets. She wants to know whether it is possible to achieve her task after deleting some ranges and if it is possible, she also wants to know the minimum number of ranges she needs to delete to achieve it.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains two space-separated integers
+l
+i
+and
+r
+i
+.
+Output
+For each test case, print a single line containing one integer ― the minimum number of ranges to delete, or
+−1 if it is impossible to delete some ranges and divide the remaining ranges into two non-empty subsets.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤l
+i
+≤r
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (10 points):
+N=16
+Subtask #2 (15 points):
+N=1,000
+Subtask #3 (15 points):
+r
+i
+≤10
+6
+for each valid
+i
+Subtask #4 (60 points): original constraints
+Sample 1:
+Input
+Output
+3
+3
+1 4
+2 6
+5 7
+2
+1 4
+4 6
+2
+3 7
+8 9
+1
+-1
+0
+Explanation:
+Example case 1: It is enough to delete the range
+[2,6].
+Example case 2: There is no way to divide these two ranges into two suitable non-empty subsets and deleting any range obviously makes it impossible too.
+Example case 3: There is no need to delete any ranges, we can just put one range into one subset and the other range into the other subset.

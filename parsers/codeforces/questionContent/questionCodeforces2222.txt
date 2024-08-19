@@ -1,0 +1,149 @@
+F. Boring Card Game
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+When they are bored, Federico and Giada often play the following card game with a deck containing
+6n
+cards.
+Each card contains one number between
+1
+and
+6n
+and each number appears on exactly one card. Initially the deck is sorted, so the first card contains the number
+1
+, the second card contains the number
+2
+,
+…
+, and the last one contains the number
+6n
+.
+Federico and Giada take turns, alternating; Federico starts.
+In his turn, the player takes
+3
+contiguous cards from the deck and puts them in his pocket. The order of the cards remaining in the deck is not changed. They play until the deck is empty (after exactly
+2n
+turns). At the end of the game both Federico and Giada have
+3n
+cards in their pockets.
+You are given the cards in Federico's pocket at the end of the game. Describe a sequence of moves that produces that set of cards in Federico's pocket.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤200
+).
+The second line of the input contains
+3n
+numbers
+x
+1
+,
+x
+2
+,…,
+x
+3n
+(
+1≤
+x
+1
+<
+x
+2
+<…<
+x
+3n
+≤6n
+) – the cards in Federico's pocket at the end of the game.
+It is guaranteed that for each test there is at least one sequence of moves that produces such set of cards in Federico's pocket.
+Output
+Print
+2n
+lines, each containing
+3
+integers.
+The
+i
+-th line should contain, in increasing order, the integers
+a
+i
+<
+b
+i
+<
+c
+i
+written on the three cards taken by the player during the
+i
+-th turn (so taken by Federico if
+i
+is odd and by Giada if
+i
+is even).
+If there is more than one possible sequence of moves, you can print any.
+Examples
+input
+Copy
+2
+2 3 4 9 10 11
+output
+Copy
+9 10 11
+6 7 8
+2 3 4
+1 5 12
+input
+Copy
+5
+1 2 3 4 5 9 11 12 13 18 19 20 21 22 23
+output
+Copy
+19 20 21
+24 25 26
+11 12 13
+27 28 29
+1 2 3
+14 15 16
+18 22 23
+6 7 8
+4 5 9
+10 17 30
+Note
+Explanation of the first testcase: Initially the deck has
+12=2⋅6
+sorted cards, so the deck is
+[1 2 3 4 5 6 7 8 9 10 11 12]
+.
+During turn
+1
+, Federico takes the three cards
+[9 10 11]
+. After his move, the deck is
+[1 2 3 4 5 6 7 8 12]
+.
+During turn
+2
+, Giada takes the three cards
+[6 7 8]
+. After her move, the deck is
+[1 2 3 4 5 12]
+.
+During turn
+3
+, Federico takes the three cards
+[2 3 4]
+. After his move, the deck is
+[1 5 12]
+.
+During turn
+4
+, Giada takes the three cards
+[1 5 12]
+. After her move, the deck is empty.
+At the end of the game, the cards in Federico's pocket are
+[2 3 4 9 10 11]
+and the cards in Giada's pocket are
+[1 5 6 7 8 12]
+.

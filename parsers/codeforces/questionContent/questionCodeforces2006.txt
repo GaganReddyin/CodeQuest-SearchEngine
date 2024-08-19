@@ -1,0 +1,133 @@
+F. Strange Set
+time limit per test4 seconds
+memory limit per test32 megabytes
+inputstandard input
+outputstandard output
+Note that the memory limit is unusual.
+You are given an integer
+n
+and two sequences
+a
+1
+,
+a
+2
+,…,
+a
+n
+and
+b
+1
+,
+b
+2
+,…,
+b
+n
+.
+Let's call a set of integers
+S
+such that
+S⊆{1,2,3,…,n}
+strange, if, for every element
+i
+of
+S
+, the following condition is met: for every
+j∈[1,i−1]
+, if
+a
+j
+divides
+a
+i
+, then
+j
+is also included in
+S
+. An empty set is always strange.
+The cost of the set
+S
+is
+∑
+i∈S
+b
+i
+. You have to calculate the maximum possible cost of a strange set.
+Input
+The first line contains one integer
+n
+(
+1≤n≤3000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤100
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−
+10
+5
+≤
+b
+i
+≤
+10
+5
+).
+Output
+Print one integer — the maximum cost of a strange set.
+Examples
+input
+Copy
+9
+4 7 3 4 5 6 7 8 13
+-2 3 -19 5 -6 7 -8 9 1
+output
+Copy
+16
+input
+Copy
+2
+42 42
+-37 13
+output
+Copy
+0
+input
+Copy
+2
+42 42
+13 -37
+output
+Copy
+13
+Note
+The strange set with the maximum cost in the first example is
+{1,2,4,8,9}
+.
+The strange set with the maximum cost in the second example is empty.

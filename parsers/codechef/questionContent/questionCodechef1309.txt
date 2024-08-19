@@ -1,0 +1,119 @@
+Minimize the Maximum
+Problem
+Chef has an array
+A of
+N positive integers. Chef can perform the following operation any (possibly zero) number of times on the array.
+Choose any index
+i such that
+(1<i≤N);
+Choose an integer
+X such that
+(1≤X≤A
+i
+);
+Set
+A
+(i−1)
+:=A
+(i−1)
++X;
+Set
+A
+i
+:=A
+i
+−X.
+Help Chef to minimize the maximum value of array
+A using the above operations .
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N, the size of array
+A.
+The second line of each test case contains
+N space-seperated integers, the elements of array
+A.
+Output Format
+For each test case, output on a new line, the minimized maximum value possible of array
+A.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+1 5 7 6
+3
+5 15 19
+4
+10 3 5 7
+5
+13
+10
+Explanation:
+Test case
+1: Consider the following
+3 operations on the array.
+Choose
+i=3 and
+X=4. Here
+X≤A
+3
+. After operation, the array becomes
+[1,9,3,6].
+Choose
+i=2 and
+X=4. Here
+X≤A
+2
+. After operation, the array becomes
+[5,5,3,6].
+Choose
+i=4 and
+X=1. Here
+X≤A
+4
+. After operation, the array becomes
+[5,5,4,5].
+So the minimum value of maximum element of array is
+5.
+Test case
+2: Consider the following
+2 operations on the array.
+Choose
+i=2 and
+X=8. Here
+X≤A
+2
+. After operation, the array becomes
+[13,7,19].
+Choose
+i=3 and
+X=6. Here
+X≤A
+3
+. After operation, the array becomes
+[13,13,13].
+So the minimum value of maximum element of array is
+5.
+Test case
+3: We cannot make
+A
+1
+less than
+10 using any number of operations. Thus, the minimum value of maximum element is
+10.

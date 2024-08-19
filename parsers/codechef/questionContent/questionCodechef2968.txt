@@ -1,0 +1,139 @@
+Mathology
+Problem
+After solving some Number Theory related problems KBG challenged VD to solve following problem.
+You are given an array
+A consisting of
+N positive integers and
+Q queries. Each query is of the form:
+L
+R: Given two integers
+L and
+R
+(1≤L<R≤N), let
+B denote the subarray
+A[L,R]. Find the maximum possible GCD of any subsequence of
+B which has length greater than
+1.
+For each query, find the maximum possible
+GCD of any subsequence in the given range having length greater than
+1.
+Input Format
+First line contains
+T, number of test cases. Description of the test cases follows.
+The first line of each test case contains a two space-separated integer
+N and
+Q - length of the array and number of queries respectively.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,...,A
+N
+.
+Next
+Q lines of each test case contains two space-separated integers
+L and
+R.
+Output Format
+For each test case, print
+Q lines. The
+i
+th
+line contains one integer - the answer for the
+i
+th
+query.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+1≤Q≤10
+5
+1≤A
+i
+≤10
+5
+1≤L<R≤N
+Sum of
+N over all test cases does not exceed
+10
+5
+.
+Sum of
+Q over all test cases does not exceed
+10
+5
+.
+Subtasks
+Subtask 1 (5 points):
+2≤N≤10 ,
+1≤Q≤10 ,
+1≤T≤100
+Subtask 2 (10 points):
+2≤N≤10
+3
+,
+1≤Q≤10
+3
+. Sum of
+N and
+Q over all test cases does not exceed
+10
+3
+.
+Subtask 3 (25 points):
+2≤N≤10
+3
+,
+1≤Q≤10
+5
+. Sum of
+N and
+Q over all test cases does not exceed
+10
+3
+and
+10
+5
+respectively.
+Subtask 4 (60 points): Original Constraints.
+Sample 1:
+Input
+Output
+1
+6 2
+5 4 15 6 10 8
+1 5
+4 6
+5
+2
+Explanation:
+Test Case
+1: Given
+A=[5,4,15,6,10,8] and
+2 queries.
+In the first query,
+L=1 and
+R=5. Thus, the subarray
+B=[5,4,15,6,10]. One of the subsequences of
+B having maximum GCD and length greater than
+1 is
+[5,15,10]. The GCD of this subsequence is
+GCD(5,15,10)=5. It can be proven that no other subsequence of
+B having length greater than
+1 has a GCD greater than
+5.
+In the second query,
+L=4 and
+R=6. Thus, the subarray
+B=[6,10,8]. One of the subsequences of
+B having maximum GCD and length greater than
+1 is
+[6,10,8]. The GCD of this subsequence is
+GCD(6,10,8)=2. It can be proven that no other subsequence of
+B having length greater than
+1 has a GCD greater than
+2.

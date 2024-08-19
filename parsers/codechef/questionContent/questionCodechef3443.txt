@@ -1,0 +1,132 @@
+Make the Matrix Beautiful
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+You are given an
+N×M matrix where each element of the matrix consists of an integer color. Let
+A[i][j] be the color on the matrix in the
+i-th row from the top and
+j-th column from the left. You need to make the matrix beautiful.
+By definition, a matrix is beautiful if all the elements of the
+i-th row have color
+i. That is, all the elements of the first row have color
+1, all elements of the second row have color
+2, so on.
+In an operation, you can do the following:
+Choose four integers
+x
+1
+,y
+1
+,x
+2
+,y
+2
+(
+1≤x
+1
+,x
+2
+≤N,
+1≤y
+1
+,y
+2
+≤M,
+x
+1
+
+=x
+2
+,y
+1
+
+=y
+2
+)
+Swap the values
+A[x
+1
+][y
+1
+] and
+A[x
+2
+][y
+1
+].
+Swap the values
+A[x
+1
+][y
+2
+] and
+A[x
+2
+][y
+2
+].
+If you can make the matrix beautiful, then give a sequence of at most
+(N+3)⋅(M+3) operations to do so. Otherwise, print
+−1.
+We have a proof that if it is possible to make the matrix beautiful in a finite number of operations, then it can be done in at most
+(N+3)⋅(M+3) operations.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+M.
+The next
+N lines have
+M integers each. The
+j-th integer in the
+i-th line denotes
+A[i][j]
+Output Format
+For each test case:
+If it is possible to make the matrix beautiful:
+Print the number of operations you perform in a new line. This number has to be less than or equal to
+(N+3)⋅(M+3).
+For each operation print four integers:
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+in a new line.
+If it is not possible to make the matrix beautiful:
+Print
+−1 in a new line.
+If there are multiple ways to make the matrix beautiful with at most
+(N+3)⋅(M+3) operations, you may print any of them.
+Constraints
+1≤T≤100
+1≤N,M≤50
+Each column contains a permutation of the integers
+1,…,N.
+Sample 1:
+Input
+Output
+2
+3 3
+1 1 1
+2 3 3
+3 2 2
+3 3
+1 1 1
+2 3 2
+3 2 3
+1
+2 2 3 3
+-1
+Explanation:
+For the first test case, we can swap
+A[2][2],A[3][2] and swap
+A[2][3],A[3][3] to make the matrix beautiful.
+For the second test case it is not possible to make the matrix beautiful.

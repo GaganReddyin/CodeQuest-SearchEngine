@@ -1,0 +1,131 @@
+Passing Through!
+Problem
+You are given a tree with
+N vertices, where the
+i
+th
+vertex has color
+A
+i
+.
+We say that an edge of this tree separates color
+C if, upon deleting this edge from the tree, both obtained components contain at least one vertex having color
+C.
+The value of an edge is defined as the sum of all the colors it separates. For example, if an edge separates colors
+{1,4,7,13}, then, its value is
+1+4+7+13=25.
+Find the value of every edge of the tree.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N, the number of vertices of the tree.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the colors of the vertices.
+The next
+N−1 lines describe the edges of the tree. The
+i
+th
+of these lines contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, output
+N−1 space-separated integers. The
+i
+th
+of these integers should be the value of the
+i
+th
+input edge.
+Constraints
+1≤T≤10
+4
+2≤N≤5⋅10
+5
+1≤u
+i
+,v
+i
+≤N
+The input edges describe a tree.
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+10 11 12
+1 2
+1 3
+5
+1 1 9 4 4
+1 2
+2 3
+3 4
+3 5
+7
+3 8 7 8 3 7 7
+3 6
+3 7
+2 5
+1 6
+5 6
+4 1
+0 0 
+1 0 4 4 
+7 7 8 11 11 8
+Explanation:
+Test case
+1: No edge separates any color. Thus, every edge has value
+0.
+Test case
+2: The first input edge separates color
+1, while the third and fourth input edges separate color
+4.
+Test case
+3: The colors separated by each input edge are as follows:
+Edge
+1:
+{7}
+Edge
+2:
+{7}
+Edge
+3:
+{8}
+Edge
+4:
+{3,8}
+Edge
+5:
+{3,8}
+Edge
+6:
+{8}

@@ -1,0 +1,147 @@
+Rotate the Polyline
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef John is given
+N points
+P
+1
+,P
+2
+,…,P
+N
+in a plane. For each valid
+i, the coordinates of the point
+P
+i
+are
+(x
+i
+,y
+i
+). Help him find a vector
+→
+v
+=(x
+v
+,y
+v
+) such that the following holds:
+For each
+i (
+1≤i≤N), let
+S
+i
+=
+v
+⋅
+P
+i
+P
+i+1
+. Here, we define
+P
+N+1
+=P
+1
+.
+The coordinates
+x
+v
+and
+y
+v
+are integers and
+∣x
+v
+∣,∣y
+v
+∣≤2⋅10
+9
+.
+It is possible to find three integers
+w,
+l and
+r (
+1≤l≤r≤N) such that:
+For each
+i (
+l≤i≤r),
+S
+i
+w>0.
+For each other valid
+i,
+S
+i
+w<0.
+If there are multiple solutions, you may find any one. If there are no solutions, let's define
+x
+v
+=y
+v
+=0. (Note that the vector
+→
+v
+=(0,0) cannot be a valid solution.)
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+x
+i
+and
+y
+i
+.
+Output
+For each test case, print a single line containing two space-separated integers
+x
+v
+and
+y
+v
+.
+Constraints
+1≤T≤5
+3≤N≤10
+5
+∣x
+i
+∣,∣y
+i
+∣≤5⋅10
+8
+for each valid
+i
+P
+1
+,P
+2
+,…,P
+N
+are pairwise distinct
+Subtasks
+Subtask #1 (50 points, time limit 3 seconds):
+N≤1,000
+Subtask #2 (50 points, time limit 5 seconds): original constraints
+Example Input
+2
+5
+0 0
+1 -1
+2 3
+4 0
+3 7
+4
+0 0
+0 1
+1 1
+1 0
+Example Output
+-5 1
+2 -1

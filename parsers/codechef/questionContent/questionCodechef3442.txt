@@ -1,0 +1,186 @@
+ATM Queue
+Problem
+There are
+N people waiting in a queue at ATM. The
+i
+th
+person in the queue has a power level equal to
+A
+i
+(
+1≤A
+i
+≤N). The following process happens every second till the queue is not empty.
+The person in front of the queue uses the ATM and then leaves the queue.
+After the first step, if the queue is empty, the process stops. Otherwise, for each person from left to right (except for the first person in the queue), if the person has a
+strictly greater power level than the person in front of him, he will overtake the person in front, i.e. their positions get swapped. Note that the overtaking happens one after the other from left to right, i.e. state of the queue changes after every overtake.
+For each person, find the time at which they will use the ATM.
+Note: Please refer to the explanation section for a simulation of one such scenario.
+Input Format
+First line of input contains
+T, the number of test cases. Then
+T test cases follow.
+Each test case consists of two lines of input.
+First line of each test case contains
+N, the number of people in the queue.
+Second line of each test case contains
+N positive integers
+A
+i
+, the power level of
+i
+th
+person.
+Output Format
+For each test case, print a line containing
+N numbers where
+i
+th
+number is equal to the time at which
+i
+th
+person uses the ATM.
+Constraints
+1≤T≤2⋅10
+4
+1≤N≤2⋅10
+5
+1≤A
+i
+≤N
+Sum of
+N over all test cases doesn't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+5
+2 3 4 1 5
+4
+1 2 4 2
+10
+5 1 3 7 6 9 8 9 2 10
+1 4 2 5 3
+1 3 2 4
+1 10 2 3 8 4 7 5 9 6
+Explanation:
+Test Case
+1: Initially, let the order of people in the queue is
+[1,2,3,4,5], and their power levels are
+2,3,4,1 and
+5 respectively.
+During the
+1
+st
+second,
+1 uses the ATM and leaves. The order of the people in the queue will be
+[2,3,4,5] after
+1 leaves. Now people start overtaking (
+2
+nd
+step of the process). Since
+3 is the
+2
+nd
+person in the queue and
+2 is in front of him and
+A
+2
+<
+A
+3
+,
+3 will overtake
+2. The order of the people in the queue will become
+[3,2,4,5]. Now
+4 is the
+3
+rd
+person in the queue and
+2 is in front of him. But
+A
+2
+>
+A
+4
+, so there will be no overtaking here. Finally,
+5 is the
+4
+th
+person and
+4 is in front of him. And since
+A
+4
+<
+A
+5
+,
+5 will overtake
+4 and The order of the people in the queue will be
+[3,2,5,4] after the
+1st second.
+During the
+2
+nd
+second,
+3 is in front of the queue. He will use the ATM and leave. The order of the people in the queue will become
+[2,5,4]. Since
+5 is the
+2
+nd
+person in the queue with
+2 in front of him and
+A
+2
+<
+A
+5
+,
+5 will overtake
+2 and the order of the people in the queue becomes
+[5,2,4]. Now
+4 is the
+3
+rd
+person in the queue. But
+A
+2
+>
+A
+4
+, so
+4 can't overtake
+2. By the end of
+2
+nd
+second, the order of people in the queue is
+[5,2,4].
+During the
+3
+rd
+second,
+5 is in front of the queue. He will use the ATM and leave. After this, the queue will be
+2,4. And since
+A
+2
+>
+A
+4
+, there will be no overtaking.
+During the
+4
+th
+second,
+2 uses the ATM and leaves.
+During the
+5
+th
+second,
+4 uses the ATM and leaves.
+Hence,
+1,2,3,4 and
+5 use the ATM at
+1,4,2,5,3 second, respectively.

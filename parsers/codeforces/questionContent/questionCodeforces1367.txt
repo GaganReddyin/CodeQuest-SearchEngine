@@ -1,0 +1,120 @@
+D. Training Session
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Monocarp is the coach of the Berland State University programming teams. He decided to compose a problemset for a training session for his teams.
+Monocarp has
+n
+problems that none of his students have seen yet. The
+i
+-th problem has a topic
+a
+i
+(an integer from
+1
+to
+n
+) and a difficulty
+b
+i
+(an integer from
+1
+to
+n
+). All problems are different, that is, there are no two tasks that have the same topic and difficulty at the same time.
+Monocarp decided to select exactly
+3
+problems from
+n
+problems for the problemset. The problems should satisfy at least one of two conditions (possibly, both):
+the topics of all three selected problems are different;
+the difficulties of all three selected problems are different.
+Your task is to determine the number of ways to select three problems for the problemset.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤50000
+) — the number of testcases.
+The first line of each testcase contains an integer
+n
+(
+3≤n≤2⋅
+10
+5
+) — the number of problems that Monocarp have.
+In the
+i
+-th of the following
+n
+lines, there are two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+) — the topic and the difficulty of the
+i
+-th problem.
+It is guaranteed that there are no two problems that have the same topic and difficulty at the same time.
+The sum of
+n
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+Print the number of ways to select three training problems that meet either of the requirements described in the statement.
+Example
+input
+Copy
+2
+4
+2 4
+3 4
+2 1
+1 3
+5
+1 5
+2 4
+3 3
+4 2
+5 1
+output
+Copy
+3
+10
+Note
+In the first example, you can take the following sets of three problems:
+problems
+1
+,
+2
+,
+4
+;
+problems
+1
+,
+3
+,
+4
+;
+problems
+2
+,
+3
+,
+4
+.
+Thus, the number of ways is equal to three.

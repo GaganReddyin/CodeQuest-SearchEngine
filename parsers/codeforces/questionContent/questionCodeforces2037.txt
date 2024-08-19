@@ -1,0 +1,202 @@
+J. Road Reform
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cities and
+m
+bidirectional roads in Berland. The
+i
+-th road connects the cities
+x
+i
+and
+y
+i
+, and has the speed limit
+s
+i
+. The road network allows everyone to get from any city to any other city.
+The Berland Transport Ministry is planning a road reform.
+First of all, maintaining all
+m
+roads is too costly, so
+m−(n−1)
+roads will be demolished in such a way that the remaining
+(n−1)
+roads still allow to get to any city from any other city. Formally, the remaining roads should represent an undirected tree.
+Secondly, the speed limits on the remaining roads might be changed. The changes will be done sequentially, each change is either increasing the speed limit on some road by
+1
+, or decreasing it by
+1
+. Since changing the speed limit requires a lot of work, the Ministry wants to minimize the number of changes.
+The goal of the Ministry is to have a road network of
+(n−1)
+roads with the maximum speed limit over all roads equal to exactly
+k
+. They assigned you the task of calculating the minimum number of speed limit changes they have to perform so the road network meets their requirements.
+For example, suppose the initial map of Berland looks like that, and
+k=7
+:
+Then one of the optimal courses of action is to demolish the roads
+1
+–
+4
+and
+3
+–
+4
+, and then decrease the speed limit on the road
+2
+–
+3
+by
+1
+, so the resulting road network looks like that:
+Input
+The first line contains one integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains three integers
+n
+,
+m
+and
+k
+(
+2≤n≤2⋅
+10
+5
+;
+n−1≤m≤min(2⋅
+10
+5
+,
+n(n−1)
+2
+)
+;
+1≤k≤
+10
+9
+) — the number of cities, the number of roads and the required maximum speed limit, respectively.
+Then
+m
+lines follow. The
+i
+-th line contains three integers
+x
+i
+,
+y
+i
+and
+s
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n
+;
+x
+i
+≠
+y
+i
+;
+1≤
+s
+i
+≤
+10
+9
+) — the cities connected by the
+i
+-th road and the speed limit on it, respectively. All roads are bidirectional.
+The road network in each test case is connected (that is, it is possible to reach any city from any other city by traveling along the road), and each pair of cities is connected by at most one road.
+The sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+. Similarly, the sum of
+m
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer — the minimum number of changes the Ministry has to perform so that the maximum speed limit among the remaining
+(n−1)
+roads is exactly
+k
+.
+Example
+input
+Copy
+4
+4 5 7
+4 1 3
+1 2 5
+2 3 8
+2 4 1
+3 4 4
+4 6 5
+1 2 1
+1 3 1
+1 4 2
+2 4 1
+4 3 1
+3 2 1
+3 2 10
+1 2 8
+1 3 10
+5 5 15
+1 2 17
+3 1 15
+2 3 10
+1 4 14
+2 5 8
+output
+Copy
+1
+3
+0
+0
+Note
+The explanation for the example test:
+The first test case is described in the problem statement.
+In the second test case, the road network initially looks like that:
+The Ministry can demolish the roads
+1
+–
+2
+,
+3
+–
+2
+and
+3
+–
+4
+, and then increase the speed limit on the road
+1
+–
+4
+three times.
+In the third test case, the road network already meets all the requirements.
+In the fourth test case, it is enough to demolish the road
+1
+–
+2
+so the resulting road network meets the requirements.

@@ -1,0 +1,1 @@
+C2. "Is the bit string periodic?" oracle

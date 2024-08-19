@@ -1,0 +1,122 @@
+Differentiation
+Problem
+There are
+N events (numbered from
+1 to
+N) and
+M contestants (numbered from
+1 to
+M). For each event
+i, contestant
+j receives a predetermined number of points
+A
+i,j
+.
+A subset of these events will be selected, and the final score of contestant
+j, denoted
+s
+j
+, will be the sum of their points for each event selected.
+Formally, if
+S denotes the set of events chosen, then
+s
+j
+=
+x∈S
+∑
+A
+x,j
+for each
+1≤j≤M. If
+S is empty, we define
+s
+j
+=0 for each
+j.
+The differentiation of the final scoreboard is equal to
+i=1
+max
+M
+(
+j=1
+∑
+M
+∣s
+j
+−s
+i
+∣)
+Find the maximum possible differentiation over all subsets of events.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of several lines.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of events and contestants, respectively.
+The next
+N lines describe the events. The
+i-th of these
+N lines contains
+M space-separated integers
+A
+i,1
+,A
+i,2
+,…,A
+i,M
+— the
+j-th of which describes the number of points the
+j-th contestant earns for event
+i.
+Output Format
+For each test case, output on a new line the maximum differentiation over all subsets of events.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+1≤M≤10
+5
+0≤A
+i,j
+≤10
+5
+The sum of
+N⋅M over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+1 1
+1
+3 3
+1 0 1
+1 2 1
+1 2 1
+4 2
+1 3
+5 1
+6 8
+2 1
+0
+4
+5
+Explanation:
+Test case
+1: There are two possible subsets of events — either take the only event, or don't. In either case, the differentiation will be
+0.
+Test case
+2: Take events
+2 and
+3 for a final scoreboard of
+(2,4,2). The differentiation of this scoreboard is
+4, and it can be proven that this is the maximum.
+Test case
+3: Take events
+3 and
+5, for a final scoreboard of
+(7,2), which has a differentiation of
+5.

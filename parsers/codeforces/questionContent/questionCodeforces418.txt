@@ -1,0 +1,176 @@
+A. Access Levels
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+BerSoft is the biggest IT corporation in Berland, and Monocarp is the head of its security department. This time, he faced the most difficult task ever.
+Basically, there are
+n
+developers working at BerSoft, numbered from
+1
+to
+n
+. There are
+m
+documents shared on the internal network, numbered from
+1
+to
+m
+. There is a table of access requirements
+a
+such that
+a
+i,j
+(the
+j
+-th element of the
+i
+-th row) is
+1
+if the
+i
+-th developer should have access to the
+j
+-th document, and
+0
+if they should have no access to it.
+In order to restrict the access, Monocarp is going to perform the following actions:
+choose the number of access groups
+k≥1
+;
+assign each document an access group (an integer from
+1
+to
+k
+) and the required access level (an integer from
+1
+to
+10
+9
+);
+assign each developer
+k
+integer values (from
+1
+to
+10
+9
+) — their access levels for each of the access groups.
+The developer
+i
+has access to the document
+j
+if their access level for the access group of the document is greater than or equal to the required access level of the document.
+What's the smallest number of access groups Monocarp can choose so that it's possible to assign access groups and access levels in order to satisfy the table of access requirements?
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤500
+) — the number of developers and the number of documents.
+Each of the next
+n
+lines contains a binary string of length
+m
+ — the table of access requirements. The
+j
+-th element of the
+i
+-th row is
+1
+if the
+i
+-th developer should have access to the
+j
+-th document, and
+0
+if they should have no access to it.
+Output
+The first line should contain a single integer
+k
+ — the smallest number of access groups Monocarp can choose so that it's possible to assign access groups and access levels in order to satisfy the table of access requirements.
+The second line should contain
+m
+integers from
+1
+to
+k
+ — the access groups of the documents.
+The third line should contain
+m
+integers from
+1
+to
+10
+9
+ — the required access levels of the documents.
+The
+i
+-th of the next
+n
+lines should contain
+k
+integers from
+1
+to
+10
+9
+ — the access level of the
+i
+-th developer on each of the access groups.
+If there are multiple solutions, print any of them.
+Examples
+input
+Copy
+3 2
+01
+11
+10
+output
+Copy
+2
+1 2 
+2 2 
+1 2 
+2 2 
+2 1 
+input
+Copy
+2 3
+101
+100
+output
+Copy
+1
+1 1 1
+1 10 5
+8
+3
+Note
+In the first example, we assign the documents to different access groups. Both documents have level
+2
+in their access group. This way, we can assign the developers, who need the access, level
+2
+, and the developers, who have to have no access, level
+1
+.
+If they had the same access group, it would be impossible to assign access levels to developers
+1
+and
+3
+. Developer
+1
+should've had a lower level than developer
+3
+in this group to not be able to access document
+1
+. At the same time, developer
+3
+should've had a lower level than developer
+1
+in this group to not be able to access document
+2
+. Since they can't both have lower level than each other, it's impossible to have only one access group.
+In the second example, it's possible to assign all documents to the same access group.

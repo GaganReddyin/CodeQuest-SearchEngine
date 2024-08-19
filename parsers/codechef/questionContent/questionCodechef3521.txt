@@ -1,0 +1,112 @@
+Maximizing Minimum Segment Sum
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+You are given a positive integer
+k and an array
+a consisting of
+n integers. You will partition the array into
+k non-empty segments such that each number belongs to exactly one segment.
+Let's denote
+s
+i
+as the sum of all numbers belonging to
+i-th segment after partitioning. Your goal is to maximize the value of
+min(s
+1
+,…,s
+k
+). Calculate and print this value.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+Each test case contains two lines of input.
+The first line of each test case contains two space-separated integers
+n and
+k.
+The second line of each test case contains
+n space-separated integers
+a
+1
+,…,a
+n
+.
+Output Format
+For each test case, print a single line containing a single integer --- the largest value of
+min(s
+1
+,…,s
+k
+) you can obtain.
+Constraints
+1≤T≤5⋅10
+4
+2≤n≤10
+5
+1≤k≤n
+−10
+9
+≤a
+i
+≤10
+9
+The sum of
+n over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (10 points):
+n≤400
+The sum of
+n over all test cases does not exceed
+400.
+−10
+5
+≤a
+i
+≤10
+5
+Subtask #2 (20 points):
+n≤2000
+The sum of
+n over all test cases does not exceed
+4000.
+−10
+5
+≤a
+i
+≤10
+5
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+3
+5 2
+1 2 3 3 3
+8 5
+7 -6 1 -9 -4 -7 -6 7
+6 3
+-2 6 -2 -3 2 -3
+6
+-7
+-2
+Explanation:
+Test case
+1: You can partition the array as
+[1,2,3][3,3] and obtain
+min(s
+1
+,s
+2
+)=min(6,6)=6.
+Test case
+3: You can partition the array as
+[−2][6,−2,−3][2,−3] and obtain
+min(s
+1
+,s
+2
+,s
+3
+)=min(−2,1,−1)=−2.

@@ -1,0 +1,266 @@
+D. Odd Mineral Resource
+time limit per test5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+In Homer's country, there are
+n
+cities numbered
+1
+to
+n
+and they form a tree. That is, there are
+(n−1)
+undirected roads between these
+n
+cities and every two cities can reach each other through these roads.
+Homer's country is an industrial country, and each of the
+n
+cities in it contains some mineral resource. The mineral resource of city
+i
+is labeled
+a
+i
+.
+Homer is given the plans of the country in the following
+q
+years. The plan of the
+i
+-th year is described by four parameters
+u
+i
+,
+v
+i
+,
+l
+i
+and
+r
+i
+, and he is asked to find any mineral resource
+c
+i
+such that the following two conditions hold:
+mineral resource
+c
+i
+appears an odd number of times between city
+u
+i
+and city
+v
+i
+; and
+l
+i
+≤
+c
+i
+≤
+r
+i
+.
+As the best friend of Homer, he asks you for help. For every plan, find any such mineral resource
+c
+i
+, or tell him that there doesn't exist one.
+Input
+The first line contains two integers
+n
+(
+1≤n≤3⋅
+10
+5
+) and
+q
+(
+1≤q≤3⋅
+10
+5
+), indicating the number of cities and the number of plans.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+).
+Then the
+i
+-th line of the following
+(n−1)
+lines contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n
+) with
+x
+i
+≠
+y
+i
+, indicating that there is a bidirectional road between city
+x
+i
+and city
+y
+i
+. It is guaranteed that the given roads form a tree.
+Then the
+i
+-th line of the following
+q
+lines contains four integers
+u
+i
+,
+v
+i
+,
+l
+i
+,
+r
+i
+(
+1≤
+u
+i
+≤n
+,
+1≤
+v
+i
+≤n
+,
+1≤
+l
+i
+≤
+r
+i
+≤n
+), indicating the plan of the
+i
+-th year.
+Output
+Print
+q
+lines, the
+i
+-th of which contains an integer
+c
+i
+such that
+c
+i
+=−1
+if there is no such mineral resource that meets the required condition; or
+c
+i
+is the label of the chosen mineral resource of the
+i
+-th year. The chosen mineral resource
+c
+i
+should meet those conditions in the
+i
+-th year described above in the problem statement. If there are multiple choices of
+c
+i
+, you can print any of them.
+Example
+input
+Copy
+6 8
+3 2 1 3 1 3
+1 2
+1 3
+2 4
+2 5
+4 6
+3 5 1 1
+3 5 1 3
+3 5 1 3
+1 1 2 2
+1 1 3 3
+1 4 1 5
+1 6 1 3
+1 6 1 3
+output
+Copy
+-1
+2
+3
+-1
+3
+2
+2
+3
+Note
+In the first three queries, there are four cities between city
+3
+and city
+5
+, which are city
+1
+, city
+2
+, city
+3
+and city
+5
+. The mineral resources appear in them are mineral resources
+1
+(appears in city
+3
+and city
+5
+),
+2
+(appears in city
+2
+) and
+3
+(appears in city
+1
+). It is noted that
+The first query is only to check whether mineral source
+1
+appears an odd number of times between city
+3
+and city
+5
+. The answer is no, because mineral source
+1
+appears twice (an even number of times) between city
+3
+and city
+5
+.
+The second and the third queries are the same but they can choose different mineral resources. Both mineral resources
+2
+and
+3
+are available.

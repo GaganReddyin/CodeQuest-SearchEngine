@@ -1,0 +1,205 @@
+A. Stairs and Elevators
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In the year of
+30XX
+participants of some world programming championship live in a single large hotel. The hotel has
+n
+floors. Each floor has
+m
+sections with a single corridor connecting all of them. The sections are enumerated from
+1
+to
+m
+along the corridor, and all sections with equal numbers on different floors are located exactly one above the other. Thus, the hotel can be represented as a rectangle of height
+n
+and width
+m
+. We can denote sections with pairs of integers
+(i,j)
+, where
+i
+is the floor, and
+j
+is the section number on the floor.
+The guests can walk along the corridor on each floor, use stairs and elevators. Each stairs or elevator occupies all sections
+(1,x)
+,
+(2,x)
+,
+…
+,
+(n,x)
+for some
+x
+between
+1
+and
+m
+. All sections not occupied with stairs or elevators contain guest rooms. It takes one time unit to move between neighboring sections on the same floor or to move one floor up or down using stairs. It takes one time unit to move up to
+v
+floors in any direction using an elevator. You can assume you don't have to wait for an elevator, and the time needed to enter or exit an elevator is negligible.
+You are to process
+q
+queries. Each query is a question "what is the minimum time needed to go from a room in section
+(
+x
+1
+,
+y
+1
+)
+to a room in section
+(
+x
+2
+,
+y
+2
+)
+?"
+Input
+The first line contains five integers
+n,m,
+c
+l
+,
+c
+e
+,v
+(
+2≤n,m≤
+10
+8
+,
+0≤
+c
+l
+,
+c
+e
+≤
+10
+5
+,
+1≤
+c
+l
++
+c
+e
+≤m−1
+,
+1≤v≤n−1
+) — the number of floors and section on each floor, the number of stairs, the number of elevators and the maximum speed of an elevator, respectively.
+The second line contains
+c
+l
+integers
+l
+1
+,…,
+l
+c
+l
+in increasing order (
+1≤
+l
+i
+≤m
+), denoting the positions of the stairs. If
+c
+l
+=0
+, the second line is empty.
+The third line contains
+c
+e
+integers
+e
+1
+,…,
+e
+c
+e
+in increasing order, denoting the elevators positions in the same format. It is guaranteed that all integers
+l
+i
+and
+e
+i
+are distinct.
+The fourth line contains a single integer
+q
+(
+1≤q≤
+10
+5
+) — the number of queries.
+The next
+q
+lines describe queries. Each of these lines contains four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+(
+1≤
+x
+1
+,
+x
+2
+≤n
+,
+1≤
+y
+1
+,
+y
+2
+≤m
+) — the coordinates of starting and finishing sections for the query. It is guaranteed that the starting and finishing sections are distinct. It is also guaranteed that these sections contain guest rooms, i. e.
+y
+1
+and
+y
+2
+are not among
+l
+i
+and
+e
+i
+.
+Output
+Print
+q
+integers, one per line — the answers for the queries.
+Example
+input
+Copy
+5 6 1 1 3
+2
+5
+3
+1 1 5 6
+1 3 5 4
+3 3 5 3
+output
+Copy
+7
+5
+4
+Note
+In the first query the optimal way is to go to the elevator in the 5-th section in four time units, use it to go to the fifth floor in two time units and go to the destination in one more time unit.
+In the second query it is still optimal to use the elevator, but in the third query it is better to use the stairs in the section 2.

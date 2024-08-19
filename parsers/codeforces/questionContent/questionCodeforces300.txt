@@ -1,0 +1,183 @@
+F. Xorcerer's Stones
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Misha had been banned from playing chess for good since he was accused of cheating with an engine. Therefore, he retired and decided to become a xorcerer.
+One day, while taking a walk in a park, Misha came across a rooted tree with nodes numbered from
+1
+to
+n
+. The root of the tree is node
+1
+.
+For each
+1≤i≤n
+, node
+i
+contains
+a
+i
+stones in it. Misha has recently learned a new spell in his xorcery class and wants to test it out. A spell consists of:
+Choose some node
+i
+(
+1≤i≤n
+).
+Calculate the bitwise XOR
+x
+of all
+a
+j
+such that node
+j
+is in the subtree of
+i
+(
+i
+belongs to its own subtree).
+Set
+a
+j
+equal to
+x
+for all nodes
+j
+in the subtree of
+i
+.
+Misha can perform at most
+2n
+spells and he wants to remove all stones from the tree. More formally, he wants
+a
+i
+=0
+to hold for each
+1≤i≤n
+. Can you help him perform the spells?
+A tree with
+n
+nodes is a connected acyclic graph which contains
+n−1
+edges. The subtree of node
+i
+is the set of all nodes
+j
+such that
+i
+lies on the simple path from
+1
+(the root) to
+j
+. We consider
+i
+to be contained in its own subtree.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the size of the tree
+The second line contains an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤31
+), describing the number of stones in each node initially.
+The third line contains an array of integers
+p
+2
+,
+p
+3
+,…,
+p
+n
+(
+1≤
+p
+i
+≤i−1
+), where
+p
+i
+means that there is an edge connecting
+p
+i
+and
+i
+.
+Output
+If there is not a valid sequence of spells, output
+−1
+.
+Otherwise, output a single integer
+q
+(
+0≤q≤2n
+) in the first line — the number of performed spells.
+In the second line output a sequence of integers
+v
+1
+,
+v
+2
+,…,
+v
+q
+(
+1≤
+v
+i
+≤n
+) — the
+i
+-th spell will be performed on the subtree of node
+v
+i
+. Please note that order matters.
+If multiple solutions exist, output any. You don't have to minimize the number of operations.
+Examples
+input
+Copy
+2
+13 13
+1
+output
+Copy
+1
+1
+input
+Copy
+7
+5 2 8 3 4 1 31
+1 1 2 2 3 3
+output
+Copy
+-1
+input
+Copy
+9
+3 31 1 2 7 30 7 3 1
+1 1 1 2 5 5 3 4
+output
+Copy
+6
+3 2 3 1 2 2
+Note
+Please refer to the following pictures for an explanation of the third test. Only the first
+4
+spells are shown since the last
+2
+do nothing. The first picture represents the tree initially with the number of stones for each node written above it in green. Changes applied by the current spell are highlighted in red.

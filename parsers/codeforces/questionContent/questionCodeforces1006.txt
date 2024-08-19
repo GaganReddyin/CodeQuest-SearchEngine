@@ -1,0 +1,134 @@
+G. Gastronomic Event
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+SWERC organizers want to hold a gastronomic event.
+The location of the event is a building with
+n
+rooms connected by
+n−1
+corridors (each corridor connects two rooms) so that it is possible to go from any room to any other room.
+In each room you have to set up the tasting of a typical Italian dish. You can choose from
+n
+typical Italian dishes rated from
+1
+to
+n
+depending on how good they are (
+n
+is the best possible rating). The
+n
+dishes have distinct ratings.
+You want to assign the
+n
+dishes to the
+n
+rooms so that the number of pleasing tours is maximal. A pleasing tour is a nonempty sequence of rooms so that:
+Each room in the sequence is connected to the next one in the sequence by a corridor.
+The ratings of the dishes in the rooms (in the order given by the sequence) are increasing.
+If you assign the
+n
+dishes optimally, what is the maximum number of pleasing tours?
+Input
+The first line contains an integer
+n
+(
+2≤n≤1000000
+) — the number of rooms.
+The second line contains
+n−1
+integers
+p
+2
+,
+p
+3
+,⋯,
+p
+n
+(
+1≤
+p
+i
+<i
+). Each
+p
+i
+indicates that there is a corridor between room
+i
+and room
+p
+i
+. It is guaranteed that the building has the property that it is possible to go from any room to any other room.
+Output
+Print the maximum number of pleasing tours.
+Examples
+input
+Copy
+5
+1 2 2 2
+output
+Copy
+13
+input
+Copy
+10
+1 2 3 4 3 2 7 8 7
+output
+Copy
+47
+Note
+In the first sample, it is optimal to place the dish with rating
+1
+in room
+1
+, the dish with rating
+2
+in room
+3
+, the dish with rating
+3
+in room
+2
+, the dish with rating
+4
+in room
+5
+and the dish with rating
+5
+in room
+4
+.
+All the
+13
+possible pleasing tours are:
+(1)
+,
+(2)
+,
+(3)
+,
+(4)
+,
+(5)
+,
+(1,2)
+,
+(3,2)
+,
+(2,4)
+,
+(2,5)
+,
+(1,2,4)
+,
+(1,2,5)
+,
+(3,2,4)
+,
+(3,2,5)
+.
+There are also other ways to assign the dishes to the rooms so that there are
+13
+pleasing tours.

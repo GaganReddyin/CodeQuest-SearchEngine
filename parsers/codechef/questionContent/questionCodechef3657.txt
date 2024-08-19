@@ -1,0 +1,132 @@
+Crazy Row
+Problem
+There are strings of infinite length
+S
+0
+,S
+1
+,S
+2
+,… consisting of zeros and ones.
+The first string has the following form:
+S
+0
+= ...00000001111111... (the leftmost one is located at position
+1, and the rightmost zero is located at position
+0).
+For
+i≥1, the string
+S
+i
+is defined as follows:
+S
+i,j
+=S
+i−1,j−1
+⊕S
+i−1,j
+⊕S
+i−1,j+1
+
+where
+⊕ denotes the bitwise XOR operation.
+The first five strings are shown below:
+S
+0
+= ...00000001111111...
+S
+1
+= ...00000010111111...
+S
+2
+= ...00000110011111...
+S
+3
+= ...00001001101111...
+S
+4
+= ...00011110000111...
+You are given
+N queries of the form
+L,R,K. For each query, find the value of
+i=L
+∑
+R
+S
+K,i
+.
+In other words, find the number of ones in the substring
+[L,R] of string
+S
+K
+.
+Input Format
+The first line contains a single integer
+N — the number of queries.
+Each of the next
+N lines contain three space-separated integers
+L,
+R, and
+K — the parameters of the query.
+Output Format
+For each query, print in a separate line, one integer — the desired value.
+Constraints
+1≤N≤10
+5
+,
+−10
+18
+≤L≤R≤10
+18
+,
+0≤K≤10
+18
+,
+The sum of the values
+(R−L+1) for all queries does not exceed
+10
+7
+.
+Sample 1:
+Input
+Output
+2
+0 2 0
+0 2 2
+2
+1
+Explanation:
+Query
+1:
+S
+0
+= ...00000001111111.... Thus the substring
+[0,2] in
+S
+0
+is
+011.
+The number of ones in the substring is
+2.
+Query
+2:
+S
+2
+= ...00000110011111.... Thus the substring
+[0,2] in
+S
+2
+is
+100.
+The number of ones in the substring is
+1.
+Sample 2:
+Input
+Output
+3
+-2 1 3
+-5 6 3
+-5 6 4
+2
+6
+6

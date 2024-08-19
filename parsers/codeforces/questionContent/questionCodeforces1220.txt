@@ -1,0 +1,202 @@
+G. Subsequences Galore
+time limit per test10 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+For a sequence of strings
+[
+t
+1
+,
+t
+2
+,…,
+t
+m
+]
+, let's define the function
+f([
+t
+1
+,
+t
+2
+,…,
+t
+m
+])
+as the number of different strings (including the empty string) that are subsequences of at least one string
+t
+i
+.
+f([])=0
+(i. e. the number of such strings for an empty sequence is
+0
+).
+You are given a sequence of strings
+[
+s
+1
+,
+s
+2
+,…,
+s
+n
+]
+. Every string in this sequence consists of lowercase Latin letters and is sorted (i. e., each string begins with several (maybe zero) characters a, then several (maybe zero) characters b, ..., ends with several (maybe zero) characters z).
+For each of
+2
+n
+subsequences of
+[
+s
+1
+,
+s
+2
+,…,
+s
+n
+]
+, calculate the value of the function
+f
+modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤23
+) — the number of strings.
+Then
+n
+lines follow. The
+i
+-th line contains the string
+s
+i
+(
+1≤|
+s
+i
+|≤2⋅
+10
+4
+), consisting of lowercase Latin letters. Each string
+s
+i
+is sorted.
+Output
+Since printing up to
+2
+23
+integers would be really slow, you should do the following:
+For each of the
+2
+n
+subsequences (which we denote as
+[
+s
+i
+1
+,
+s
+i
+2
+,…,
+s
+i
+k
+]
+), calculate
+f([
+s
+i
+1
+,
+s
+i
+2
+,…,
+s
+i
+k
+])
+, take it modulo
+998244353
+, then multiply it by
+k⋅(
+i
+1
++
+i
+2
++⋯+
+i
+k
+)
+. Print the XOR of all
+2
+n
+integers you get.
+The indices
+i
+1
+,
+i
+2
+,…,
+i
+k
+in the description of each subsequences are
+1
+-indexed (i. e. are from
+1
+to
+n
+).
+Examples
+input
+Copy
+3
+a
+b
+c
+output
+Copy
+92
+input
+Copy
+2
+aa
+a
+output
+Copy
+21
+input
+Copy
+2
+a
+a
+output
+Copy
+10
+input
+Copy
+2
+abcd
+aabb
+output
+Copy
+124
+input
+Copy
+3
+ddd
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaabbbbbbbbbbbcccccccccccciiiiiiiiiiiiiiiiiiiiiiooooooooooqqqqqqqqqqqqqqqqqqvvvvvzzzzzzzzzzzz
+output
+Copy
+15706243380

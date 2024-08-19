@@ -1,0 +1,111 @@
+Tree Sequences
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree with
+N vertices numbered
+1 through
+N. For each valid
+i, initially, vertex
+i has value
+W
+i
+. The value of each vertex can be either
+−1 or a non-negative integer.
+At any time, let's denote the sequence of values of vertices on the path from vertex
+u to vertex
+v by
+S(u,v). We are interested in replacing each element
+−1 in such a sequence by a non-negative integer (not necessarily the same for each
+−1).
+You should process
+Q queries of five types:
+UPDATE U X: Change the value of vertex
+U to
+X.
+INCREASING U V A B: Find the number of ways to replace each
+−1 in the sequence
+S(U,V) by an integer such that the resulting sequence is strictly increasing and contains only integers between
+A and
+B (inclusive).
+DECREASING U V A B: Find the number of ways to replace each
+−1 in the sequence
+S(U,V)by an integer such that the resulting sequence is strictly decreasing and contains only integers between
+A and
+B (inclusive).
+NON-DECREASING U V A B: Find the number of ways to replace each
+−1 in the sequence
+S(U,V) by an integer such that the resulting sequence is non-decreasing and contains only integers between
+A and
+B (inclusive).
+NON-INCREASING U V A B: Find the number of ways to replace each
+−1 in the sequence
+S(U,V) by an integer such that the resulting sequence is non-increasing and contains only integers between
+A and
+B (inclusive).
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+W
+1
+,W
+2
+,…,W
+N
+.
+Each of the next
+N−1 lines contains two space-separated integers
+U and
+V denoting that vertices
+U and
+V are connected by an edge.
+Q lines follow. Each of these lines describes one query in the format given above.
+Output
+For each query except the UPDATE queries, print a single line containing one integer ― the number of ways to replace each
+−1, modulo
+10
+9
++7.
+Constraints
+1≤N,Q≤10
+5
+1≤U,V≤N
+−1≤W
+i
+≤10
+6
+for each valid
+i
+0≤A≤B≤10
+6
+−1≤X≤10
+6
+Subtasks
+Subtask #1 (10 points):
+1≤N,Q≤1,000
+Subtask #2 (10 points):
+W
+i
+=−1 for each valid
+i
+X=−1
+Subtask #3 (80 points): original constraints
+Sample 1:
+Input
+Output
+8 3
+1 2 3 -1 -1 -1 -1 -1
+1 2
+2 3
+2 5
+2 6
+4 5
+5 7
+5 8
+INCREASING 1 5 1 10
+UPDATE 1 -1
+NON-DECREASING 1 5 0 10
+8
+27

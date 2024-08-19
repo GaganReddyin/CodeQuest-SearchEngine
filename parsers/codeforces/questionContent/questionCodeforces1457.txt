@@ -1,0 +1,254 @@
+K. Knitting Batik
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Mr. Chanek wants to knit a batik, a traditional cloth from Indonesia. The cloth forms a grid
+a
+with size
+n×m
+. There are
+k
+colors, and each cell in the grid can be one of the
+k
+colors.
+Define a sub-rectangle as an ordered pair of two cells
+((
+x
+1
+,
+y
+1
+),(
+x
+2
+,
+y
+2
+))
+, denoting the top-left cell and bottom-right cell (inclusively) of a sub-rectangle in
+a
+. Two sub-rectangles
+((
+x
+1
+,
+y
+1
+),(
+x
+2
+,
+y
+2
+))
+and
+((
+x
+3
+,
+y
+3
+),(
+x
+4
+,
+y
+4
+))
+have the same pattern if and only if the following holds:
+they have the same width (
+x
+2
+−
+x
+1
+=
+x
+4
+−
+x
+3
+);
+they have the same height (
+y
+2
+−
+y
+1
+=
+y
+4
+−
+y
+3
+);
+for every pair
+(i,j)
+where
+0≤i≤
+x
+2
+−
+x
+1
+and
+0≤j≤
+y
+2
+−
+y
+1
+, the color of cells
+(
+x
+1
++i,
+y
+1
++j)
+and
+(
+x
+3
++i,
+y
+3
++j)
+are equal.
+Count the number of possible batik color combinations, such that the subrectangles
+((
+a
+x
+,
+a
+y
+),(
+a
+x
++r−1,
+a
+y
++c−1))
+and
+((
+b
+x
+,
+b
+y
+),(
+b
+x
++r−1,
+b
+y
++c−1))
+have the same pattern.
+Output the answer modulo
+10
+9
++7
+.
+Input
+The first line contains five integers
+n
+,
+m
+,
+k
+,
+r
+, and
+c
+(
+1≤n,m≤
+10
+9
+,
+1≤k≤
+10
+9
+,
+1≤r≤min(
+10
+6
+,n)
+,
+1≤c≤min(
+10
+6
+,m)
+) — the size of the batik, the number of colors, and size of the sub-rectangle.
+The second line contains four integers
+a
+x
+,
+a
+y
+,
+b
+x
+, and
+b
+y
+(
+1≤
+a
+x
+,
+b
+x
+≤n
+,
+1≤
+a
+y
+,
+b
+y
+≤m
+) — the top-left corners of the first and second sub-rectangle. Both of the sub-rectangles given are inside the grid (
+1≤
+a
+x
++r−1
+,
+b
+x
++r−1≤n
+,
+1≤
+a
+y
++c−1
+,
+b
+y
++c−1≤m
+).
+Output
+Output an integer denoting the number of possible batik color combinations modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+3 3 2 2 2
+1 1 2 2
+output
+Copy
+32
+input
+Copy
+4 5 170845 2 2
+1 4 3 1
+output
+Copy
+756680455
+Note
+The following are all
+32
+possible color combinations in the first example.

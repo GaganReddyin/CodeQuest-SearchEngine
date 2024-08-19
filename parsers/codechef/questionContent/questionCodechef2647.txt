@@ -1,0 +1,66 @@
+Destructive Nim
+Problem
+Utkarsh is forced to play yet another game with Ashish.
+In this game there are
+N piles,
+i
+th
+pile contains
+A
+i
+stones. Utkarsh moves first.
+In Utkarsh's turn, Ashish chooses a pile (which contains at least
+1 stone), then Utkarsh removes any non-zero number of stones from that pile. Similarly, in Ashish's turn, Utkarsh chooses a pile with at least
+1 stone, then Ashish removes any non-zero number of stones from that pile. The player who makes the last move wins.
+Determine the winner of the game if both players play optimally.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - the number of piles.
+The second line of each test case contains
+N space separated integers
+A
+1
+,A
+2
+,…,A
+N
+, where
+A
+i
+denotes the number of stones in the
+i
+th
+pile.
+Output Format
+For each test case, output on one line Utkarsh if Utkarsh wins the game, else output Ashish.
+You may print each character of the string in uppercase or lowercase (for example, the strings Utkarsh, utkarsh, UTKARSH and uTkArSh will all be treated as identical).
+Constraints
+1≤T≤200
+1≤N≤10
+3
+1≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+3
+1
+10
+4
+1 1 1 1
+3
+3 3 1
+Utkarsh
+Ashish
+Ashish
+Explanation:
+Test case
+1: Since there is only
+1 pile, Ashish can choose only that pile for Utkarsh and he will remove all the stones from that pile and thus win the game.
+Test case
+2: No matter which player choose which pile, the game will run for exactly
+4 turns and thus Ashish will win the game.

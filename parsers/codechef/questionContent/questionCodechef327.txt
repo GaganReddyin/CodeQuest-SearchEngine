@@ -1,0 +1,24 @@
+Chef and SnackDown
+Problem
+###Read problems statements in Russian, Vietnamese, Hindi, Mandarin chinese and Bengali as well.
+Chef is interested in the history of SnackDown contests. He needs a program to verify if SnackDown was hosted in a given year.
+SnackDown was hosted by CodeChef in the following years: 2010, 2015, 2016, 2017 and 2019.
+Input Format
+The first line contain the number of test-cases
+T.
+The first line of each test-case contains a single integer
+N.
+Output Format
+For each test case print a single line containing the string "HOSTED" if SnackDown was hosted in year
+N or "NOT HOSTED" otherwise (without quotes).
+Constraints
+1≤T≤10
+2010≤N≤2019
+Sample 1:
+Input
+Output
+2
+2019
+2018
+HOSTED
+NOT HOSTED

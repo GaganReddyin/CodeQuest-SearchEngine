@@ -1,0 +1,32 @@
+B. Heidi and Library (medium)
+time limit per test10 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Whereas humans nowadays read fewer and fewer books on paper, book readership among marmots has surged. Heidi has expanded the library and is now serving longer request sequences.
+Input
+Same as the easy version, but the limits have changed: 1 ≤ n, k ≤ 400 000.
+Output
+Same as the easy version.
+Examples
+input
+Copy
+4 100
+1 2 2 1
+output
+Copy
+2
+input
+Copy
+4 1
+1 2 2 1
+output
+Copy
+3
+input
+Copy
+4 2
+1 2 3 1
+output
+Copy
+3

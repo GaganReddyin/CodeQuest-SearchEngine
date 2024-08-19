@@ -1,0 +1,23 @@
+C. Without Text
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+You can preview the image in better quality by the link: http://assets.codeforces.com/files/656/without-text.png
+Input
+The only line of the input is a string (between 1 and 50 characters long, inclusive). Each character will be an alphanumeric character or a full stop ".".
+Output
+Output the required answer.
+Examples
+input
+Copy
+Codeforces
+output
+Copy
+-87
+input
+Copy
+APRIL.1st
+output
+Copy
+17

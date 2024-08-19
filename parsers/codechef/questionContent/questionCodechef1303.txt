@@ -1,0 +1,62 @@
+Chef and Water Car
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+Chef is a great mechanic. As the cost of petrol is increasing day by day he decided to build a water car to take his girlfriend Natasha on a date. Water car has great build quality but is able to travel only
+1 Km on every
+1 liter of water. To show off his water car to Natasha he took her to the formula racing track which is an (
+N−1) km long road with checkpoints numbered
+1 to
+N from left to right. The distance between two adjacent checkpoints is
+1 Km.
+Initially, Chef is at checkpoint number
+1 and the tank of the water car is empty. At every checkpoint, there is a water station, but the cost of filling
+1 liter of water at a checkpoint is equal to the checkpoint number. Chef can not store more than
+V liters of water in the tank of a car. Chef is interested in both minimum as well as the maximum cost of filling that can happen to reach the checkpoint number
+N.
+You shouldn't have any water left after reaching
+N
+th
+checkpoint. Also, you are not allowed to pour out water.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N,V.
+Output Format
+For each test case, output two integers separated by space representing the maximum and minimum cost of filling respectively.
+Constraints
+1≤T≤10
+3
+1≤N,V≤10
+9
+Subtasks
+Subtask 1 (20 points):
+V=1
+Subtask 2 (80 points): Original constraints
+Sample 1:
+Input
+Output
+3
+3 1
+4 2
+4 3
+3 3
+6 4
+6 3
+Explanation:
+Test case
+1: Given
+N=3 and
+V=1, Chef will start at checkpoint
+1, fill
+1 liter of water at a cost of
+1 and move
+1 Km right to reach checkpoint
+2. At checkpoint
+2, Chef will fill
+1 liter of water again at a cost of
+2 and move
+1 Km right to reach the destination i.e checkpoint
+3. Hence total cost incurred is
+3. There is no other way to reach the destination with a different expense.

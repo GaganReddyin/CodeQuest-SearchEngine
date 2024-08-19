@@ -1,0 +1,97 @@
+Two Circles
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+There are two circles in a plane. The radius of the first circle is
+R
+1
+, while the radius of the second circle is
+R
+2
+. The coordinates of the centre of the first circle are
+(X
+1
+,Y
+1
+), while the coordinates the centre of the second circle are
+(X
+2
+,Y
+2
+).
+Consider all points
+P with the following properties:
+P lies strictly inside the first circle or on its perimeter.
+P lies strictly outside the second circle.
+Determine whether at least one point with these properties exists. If it exists, find one such point.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains six space-separated integers
+X
+1
+,
+Y
+1
+,
+R
+1
+,
+X
+2
+,
+Y
+2
+and
+R
+2
+.
+Output
+For each test case, print a line containing the string "YES" if there is a point
+P=(X,Y) with the given properties or "NO" otherwise. If there is such a point, print a second line containing two space-separated real numbers
+X and
+Y.
+The coordinates
+X and
+Y will be considered correct if the distance of the point
+(X,Y) from the centre of the first circle is at most
+R
+1
++10
+−6
+and its distance from the centre of the second circle is at least
+R
+2
+−10
+−6
+. Note that these conditions are not used to check the existence of the answer, their only purpose is to check the correctness of the coordinates
+X and
+Y with floating point precision.
+Constraints
+1≤T≤100,000
+∣X
+1
+∣,∣Y
+1
+∣,∣X
+2
+∣,∣Y
+2
+∣≤10
+6
+1≤R
+1
+,R
+2
+≤10
+6
+Example Input
+3
+0 0 2 0 0 3
+5 5 1 0 0 1
+0 1 1 0 2 2
+Example Output
+NO
+YES
+5.0000000 5.0000000
+NO

@@ -1,0 +1,77 @@
+Substring Minimum Function
+Problem
+It's your birthday today! So, you ask your dad to buy a brand new bicycle. But your dad knows you are weak in math. Hence he gives you the following task. If you solve it, he will purchase the bicycle you want! The task is:
+You are given a binary string.
+N denotes the length of a binary string and
+M denotes the number of occurrences of the character
+1 in the string
+S.
+Let
+F(S) be a function that gives the number of different substrings of string
+S, made up of the character
+0 only. Let
+Sub
+l,r
+denote the substring of
+S starting from
+l
+th
+index and terminating at
+r
+th
+index. Two substrings
+Sub
+p,q
+and
+Sub
+r,s
+are considered same if
+p=r and
+q=s otherwise the two substrings are considered different.
+Among all possible strings
+S of length
+N having exactly
+M occurrences of the character
+1, print the minimum possible value of
+F(S).
+Input Format
+First line of input contains a single integer
+T, denoting the number of test cases. Then the description of the
+T test case follows.
+Each test case contains one line of input.
+The first line contains two integers
+N and
+M.
+Output Format
+For each test case, output a single line answer containing an integer.
+Constraints
+1≤T≤2⋅10
+5
+1≤N≤10
+6
+0≤M≤N
+Sample 1:
+Input
+Output
+2
+3 1
+7 2
+2
+7
+Explanation:
+In the first test case, there exists only 3 binary strings of length
+N, having exactly
+M occurrences of the character
+1.
+For
+S=100 value of
+F(S)=3
+For
+S=001 value of
+F(S)=3
+For
+S=010 value of
+F(S)=2
+So for string
+S=010 we get a minimum value of
+F(S)=2.

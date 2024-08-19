@@ -1,0 +1,31 @@
+F. Souvenirs
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Artsem is on vacation and wants to buy souvenirs for his two teammates. There are n souvenir shops along the street. In i-th shop Artsem can buy one souvenir for ai dollars, and he cannot buy more than one souvenir in one shop. He doesn't want to introduce envy in his team, so he wants to buy two souvenirs with least possible difference in price.
+Artsem has visited the shopping street m times. For some strange reason on the i-th day only shops with numbers from li to ri were operating (weird? yes it is, but have you ever tried to come up with a reasonable legend for a range query problem?). For each visit, Artsem wants to know the minimum possible difference in prices of two different souvenirs he can buy in the opened shops.
+In other words, for each Artsem's visit you should find the minimum possible value of |as - at| where li ≤ s, t ≤ ri, s ≠ t.
+Input
+The first line contains an integer n (2 ≤ n ≤ 105).
+The second line contains n space-separated integers a1, ..., an (0 ≤ ai ≤ 109).
+The third line contains the number of queries m (1 ≤ m ≤ 3·105).
+Next m lines describe the queries. i-th of these lines contains two space-separated integers li and ri denoting the range of shops working on i-th day (1 ≤ li < ri ≤ n).
+Output
+Print the answer to each query in a separate line.
+Example
+input
+Copy
+8
+3 1 4 1 5 9 2 6
+4
+1 8
+1 3
+4 8
+5 7
+output
+Copy
+0
+1
+1
+3

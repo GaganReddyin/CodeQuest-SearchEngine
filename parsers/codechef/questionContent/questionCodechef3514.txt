@@ -1,0 +1,73 @@
+Interesting Pairs
+Problem
+Given an array
+A having
+N elements, Chef wonders how many pairs
+(i,j) exists such that
+1≤i<j≤N, and
+A
+i
+⋅A
+j
+is divisible by
+i⋅j.
+Can you help Chef in finding the number of such pairs?
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of the
+T testcases follows.
+The first line of each test case contains a single integer
+N denoting the number of elements in
+A.
+The second line of each test case contains
+N space separated integers
+A
+1
+,A
+2
+,...,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer denoting the number of pairs that satisfies the above condition.
+Constraints
+1≤T≤10
+4
+2≤N≤10
+5
+1≤A
+i
+≤10
+5
+The sum of
+N over all test cases does not exceed
+10
+5
+Sample 1:
+Input
+Output
+3
+3
+1 2 3
+4
+2 3 5 6
+5
+3 9 14 6 10
+3
+2
+6
+Explanation:
+Test Case
+1: For all possible pairs of
+{i,j},
+A
+i
+⋅A
+j
+is divisible by
+i⋅j.
+Test Case
+2: The condition holds for the following two pairs of
+{i,j}:
+{1,2},
+{1,4}.

@@ -1,0 +1,160 @@
+F. Two Sorts
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Integers from
+1
+to
+n
+(inclusive) were sorted lexicographically (considering integers as strings). As a result, array
+a
+1
+,
+a
+2
+,…,
+a
+n
+was obtained.
+Calculate value of
+(
+∑
+n
+i=1
+((i−
+a
+i
+)mod998244353))mod
+10
+9
++7
+.
+xmody
+here means the remainder after division
+x
+by
+y
+. This remainder is always non-negative and doesn't exceed
+y−1
+. For example,
+5mod3=2
+,
+(−1)mod6=5
+.
+Input
+The first line contains the single integer
+n
+(
+1≤n≤
+10
+12
+).
+Output
+Print one integer — the required sum.
+Examples
+input
+Copy
+3
+output
+Copy
+0
+input
+Copy
+12
+output
+Copy
+994733045
+input
+Copy
+21
+output
+Copy
+978932159
+input
+Copy
+1000000000000
+output
+Copy
+289817887
+Note
+A string
+a
+is lexicographically smaller than a string
+b
+if and only if one of the following holds:
+a
+is a prefix of
+b
+, but
+a≠b
+;
+in the first position where
+a
+and
+b
+differ, the string
+a
+has a letter that appears earlier in the alphabet than the corresponding letter in
+b
+.
+For example,
+42
+is lexicographically smaller than
+6
+, because they differ in the first digit, and
+4<6
+;
+42<420
+, because
+42
+is a prefix of
+420
+.
+Let's denote
+998244353
+as
+M
+.
+In the first example, array
+a
+is equal to
+[1,2,3]
+.
+(1−1)modM=0modM=0
+(2−2)modM=0modM=0
+(3−3)modM=0modM=0
+As a result,
+(0+0+0)mod
+10
+9
++7=0
+In the second example, array
+a
+is equal to
+[1,10,11,12,2,3,4,5,6,7,8,9]
+.
+(1−1)modM=0modM=0
+(2−10)modM=(−8)modM=998244345
+(3−11)modM=(−8)modM=998244345
+(4−12)modM=(−8)modM=998244345
+(5−2)modM=3modM=3
+(6−3)modM=3modM=3
+(7−4)modM=3modM=3
+(8−5)modM=3modM=3
+(9−6)modM=3modM=3
+(10−7)modM=3modM=3
+(11−8)modM=3modM=3
+(12−9)modM=3modM=3
+As a result,
+(0+998244345+998244345+998244345+3+3+3+3+3+3+3+3)mod
+10
+9
++7
+=
+2994733059mod
+10
+9
++7
+=
+994733045

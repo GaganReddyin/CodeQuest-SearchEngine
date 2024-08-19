@@ -1,0 +1,152 @@
+Min-Max Path
+Problem
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+There are
+N stones numbered
+1 through
+N. Each stone has a value written on it; for each valid
+i, the value on stone
+i is
+V
+i
+.
+You are initially on the first stone and your goal is to jump to stone
+N by perfoming a valid sequence of jumps. Formally, let's denote a sequence of visited stones during these jumps by
+S
+1
+,S
+2
+,…,S
+M
+, where
+M−1 is the number of jumps. Then, the following conditions must be satisfied:
+1=S
+1
+<S
+2
+<…<S
+M
+=N
+for each
+i (
+1≤i<M),
+min(V
+S
+1
+,V
+S
+2
+,…,V
+S
+i
+)+max(V
+S
+i+1
+,…,V
+S
+M
+)=S
+i+1
+−S
+i
+, which is the length of the
+i-th jump
+Find the minimum number of jumps needed to reach stone
+N, or report that it is impossible to reach stone
+N using valid jumps.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+V
+1
+,V
+2
+,…,V
+N
+.
+Output Format
+For each test case, print a single line containing one integer --- the minimum number of jumps, or
+−1 if it is impossible to reach stone
+N.
+Constraints
+1≤T≤50
+2≤N≤500
+1≤V
+i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+500
+Subtasks
+Subtask #1 (15 points):
+V
+i
+≤2 for each valid
+i
+Subtask #2 (35 points): the sum of
+N over all test cases does not exceed
+100
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+3
+1 2 1
+5
+1 3 4 1 2
+11
+1 4 5 3 2 8 3 4 3 7 1
+1
+-1
+3
+Explanation:
+Example case 1: You can jump from stone
+1 to stone
+N directly because
+min(V
+1
+)+max(V
+N
+)=2 and the length of the jump is exactly
+2.
+Example case 2: It is impossible to reach stone
+N.
+Example case 3: One valid sequence of visited stones which uses the minimum number or jumps is
+(1,5,9,11). It is valid because the lengths of the jumps are:
+first jump:
+min(V
+1
+)+max(V
+5
+,V
+9
+,V
+11
+)=4
+second jump:
+min(V
+1
+,V
+5
+)+max(V
+9
+,V
+11
+)=4
+third jump:
+min(V
+1
+,V
+5
+,V
+9
+)+max(V
+11
+)=2

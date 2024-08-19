@@ -1,0 +1,43 @@
+My Fair Coins
+Problem
+There are coins of
+2 different denominations in Crazyland,
+1-cent coins and
+2-cent coins. They have two faces - heads and tails.
+Your task is to find out the the number of ways to create a linear arrangement of these coins so that their sum is
+N cents. The only condition on the linear arrangement is that the first coin in the arrangement should always have heads up. All other coins could have either tails or heads up.
+Take
+N=2 as an example. The possible arrangements are
+(1H,1H),
+(2H),
+(1H,1T), where
+H is heads and
+T is tails. Therefore there are
+3 possible arrangements that sum up to
+2-cents.
+Note: While counting make sure to differentiate between heads and tails.
+Input
+First line contains a single integer -
+T, the number of test cases.
+T lines follow, each containing a single integer
+N, the required sum.
+Constraints
+0≤T≤10
+4
+1≤N≤10
+9
+Output
+For each case the output should be a single integer representing the number of such arrangements possible. As the answer can be very large, print it modulo
+10
+9
++7.
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+1
+3
+8

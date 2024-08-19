@@ -1,0 +1,26 @@
+Sereja and LCM
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+In this problem Sereja is interested in number of arrays A[1], A[2], ..., A[N] (1 ≤ A[i] ≤ M, A[i] - integer) such that least common multiple (LCM) of all its elements is divisible by number D.
+Please, find sum of answers to the problem with D = L, D = L+1, ..., D = R. As answer could be large, please output it modulo (109 + 7).
+Input
+First line of input contain integer T - number of test cases.
+For each test case, only line of input contain four integers N, M, L, R.
+Output
+For each test case, output required sum modulo (109 + 7).
+Constraints
+1 ≤ T ≤ 10
+1 ≤ N ≤ 5*106
+1 ≤ L ≤ R ≤ M ≤ 1000
+Subtasks
+Subtask #1: 1 ≤ N, M ≤ 10 (25 points)
+Subtask #2: 1 ≤ N, M ≤ 1000 (25 points)
+Subtask #3: original constraints (50 points)
+Example
+Input:
+2
+5 5 1 5
+5 5 4 5
+Output:
+12310
+4202

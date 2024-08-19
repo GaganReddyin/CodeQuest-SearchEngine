@@ -1,0 +1,135 @@
+Minimum Digit Sum 2
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This problem is similar to the problem "MNDIGSUM". The only differences are in the constraints and in the input format. In this problem the range for the base
+B is
+[2,R], the value of
+n can be upto
+10
+12
+and the total number of queries is at most
+300. The differences are described in bold.
+Let
+f(n,B) be the sum of digits of the integer
+n when written in base
+B.
+More formally, if
+n=
+i=0
+∑
+∞
+a
+i
+B
+i
+where
+a
+i
+is an integer in the range
+[0,B−1], then
+f(n,B)=
+i=0
+∑
+∞
+a
+i
+.
+Given
+Q queries, each consisting of two integers
+n and
+r. Find the value of
+B corresponding to which
+f(n,B) is minimum for all
+2≤B≤r. If there are multiple such values, you can print any of them.
+Input Format
+The first line contains in single integer
+Q, the number of queries
+Each of the next
+Q lines contain two space separated integers
+n and
+r respectively.
+Output Format
+For each query (n r) find the value of the base
+B that lies within
+[2,r] such that
+f(n,B) is minimum.
+Constraints
+1≤Q≤300
+2≤n≤10
+12
+2≤r≤10
+12
+Subtasks
+Subtask #1 (50 points): original constraints
+This problem is worth a total of 50 points and is meant to be complementary to the problem "MNDIGSUM" (also worth 50 points) which is very similar to this problem, but has slightly different constraints.
+Sample 1:
+Input
+Output
+3
+216 7
+256 4
+31 5
+6
+2
+5
+Explanation:
+To compute
+f(n,B), first write the integer
+n in the form
+a
+0
++a
+1
+B+a
+2
+B
+2
++… such that
+0≤a
+i
+<B and
+a
+i
+is an integer. It can be shown that such a representation is unique. The sum of the digits is then
+i=0
+∑
+∞
+a
+i
+(to be computed in base 10).
+For example to compute
+f(216,2), observe that
+216=2
+7
++2
+6
++2
+4
++2
+3
+, and so the sum of digits is
+1+1+1+1=4. Similarly, to compute
+f(216,100), write
+216 as
+2∗100+16 and so the sum of digits is
+2+16=18.
+Test case
+1: We have
+f(216,2)=f(216,3)=4,
+f(216,4)=6,
+f(216,5)=8,
+f(216,6=1) and finally
+f(216,7)=12. Clearly the minimum is obtained when
+B=6.
+Test case
+2: Note that
+f(256,2)=f(256,4) =
+1, therefore both the answers
+2 and
+4 will be considered correct.
+Test case
+3:
+f(31,3)=f(31,5)=3 and
+f(31,4)=7, therefore both the answers
+3 and
+5 will be considered correct.

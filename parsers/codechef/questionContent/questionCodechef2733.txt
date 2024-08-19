@@ -1,0 +1,43 @@
+Concurrent Lines
+Problem
+While playing in the plains, Chef found a point
+A with coordinates
+(X,Y).
+Chef is interested in finding the number of straight lines passing through the point
+A such that their intercepts on both axes are positive integers.
+Input Format
+First and only line of input contains two integers
+X and
+Y - the coordinates of the point
+A.
+Output Format
+For each test case, print an integer - the number of lines satisfying the given conditions.
+Constraints
+1≤X≤10
+12
+1≤Y≤10
+12
+Sample 1:
+Input
+Output
+3 2
+4
+Explanation:
+There are
+4 lines satisfying all the conditions. These lines are:
+Sample 2:
+Input
+Output
+1 2
+2
+Explanation:
+There are
+2 such lines, which are :
+Sample 3:
+Input
+Output
+28 206
+16
+Explanation:
+There are
+16 such lines.

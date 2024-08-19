@@ -1,0 +1,372 @@
+/* css for .App class */
+
+.App {
+  position: absolute;
+  text-align: center;
+  background-color: #212121;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.image1 {
+  border-radius: 10% 0 0 10%;
+  width: 3rem;
+  padding: 0.7rem;
+  background-color: #fff;
+}
+
+.image2 {
+  border-radius: 0%;
+  width: 12.8rem;
+  padding: 0.7rem;
+  background-color: #fff;
+}
+
+.image3 {
+  border-radius: 0 10% 10% 0;
+  width: 2.85rem;
+  padding: 0.7rem;
+  background-color: #fff;
+}
+
+.wow {
+  font-size: medium;
+  font-weight: 400;
+  color: #fff;
+}
+
+.wow div {
+  margin: 0 1rem 1rem 1rem;
+}
+
+.App h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  max-width: 50rem;
+  width: 50%;
+  padding: 15px;
+  font-size: 17px;
+  color: black;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border: 2px solid #fff;
+}
+
+.button {
+  border: none;
+  background-color: #37ff8b;
+  text-decoration: none;
+  padding: 15px;
+  padding-bottom: 17px;
+  font-size: 17px;
+  color: #212121;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  cursor: pointer;
+}
+
+.container_x {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* === removing default button style ===*/
+.button1 {
+  margin: 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button1 {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #37ff8b;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button1:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+/* Styles for the content div */
+.content {
+  position: relative;
+  margin: 3rem auto;
+  margin-top: 0.9rem;
+  width: 900px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  overflow: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Styles for the ul list */
+.content ul {
+  color: #212121;
+  list-style-type: none;
+  font-size: large;
+  font-weight: 500;
+  padding: 0;
+  margin: 0%;
+}
+
+.content ul li {
+  background-color: #37ff8b;
+  margin-bottom: 10px;
+  height: 2.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.content ul li a {
+  text-decoration: none;
+  color: #212121;
+  font-size: large;
+  font-weight: 500;
+}
+
+/* Custom scrollbar styles */
+.content::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+.content::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Adjust the background color as needed */
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #888; /* Adjust the thumb color as needed */
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Adjust the thumb color on hover as needed */
+}
+
+.spinner {
+  width: 70.4px;
+  height: 70.4px;
+  --clr: rgb(247, 197, 159);
+  --clr-alpha: rgb(247, 197, 159, 0.1);
+  animation: spinner 1.6s infinite ease;
+  transform-style: preserve-3d;
+}
+
+.spinner > div {
+  background-color: var(--clr-alpha);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 3.5px solid var(--clr);
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+  transform: translateZ(35.2px);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+.tab {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #212121;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  padding-top: 0.3rem;
+  width: 18%;
+  height: 100%;
+}
+
+.sliders{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+  height: 5%;
+}
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  user-select: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  --clr: #0b6e4f;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 300ms;
+  margin-left: 0rem;
+  margin-right: 1.1rem;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: 0.5rem;
+  animation: pulse 500ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #e0e0e2;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #0b6e4f90;
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: -20deg;
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px #0b6e4f60;
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px #0b6e4f30;
+    rotate: 0;
+  }
+}
+
+.platform-slider{
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}

@@ -1,0 +1,126 @@
+F. Tree Factory
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Bytelandian Tree Factory produces trees for all kinds of industrial applications. You have been tasked with optimizing the production of a certain type of tree for an especially large and important order.
+The tree in question is a rooted tree with
+n
+vertices labelled with distinct integers from
+0
+to
+n−1
+. The vertex labelled
+0
+is the root of the tree, and for any non-root vertex
+v
+the label of its parent
+p(v)
+is less than the label of
+v
+.
+All trees at the factory are made from bamboo blanks. A bamboo is a rooted tree such that each vertex has exactly one child, except for a single leaf vertex with no children. The vertices of a bamboo blank can be labelled arbitrarily before its processing is started.
+To process a bamboo into another tree a single type of operation can be made: choose an arbitrary non-root vertex
+v
+such that its parent
+p(v)
+is not a root either. The operation consists of changing the parent of
+v
+to its parent's parent
+p(p(v))
+. Note that parents of all other vertices remain unchanged, in particular, the subtree of
+v
+does not change.
+Efficiency is crucial, hence you have to minimize the number of operations to make the desired tree from a bamboo blank. Construct any optimal sequence of operations to produce the desired tree.
+Note that the labelling of the resulting tree has to coincide with the labelling of the desired tree. Formally, the labels of the roots have to be equal, and for non-root vertices with the same label the labels of their parents should be the same.
+It is guaranteed that for any test present in this problem an answer exists, and further, an optimal sequence contains at most
+10
+6
+operations. Note that any hack that does not meet these conditions will be invalid.
+Input
+The first line contains a single integer
+n
+ — the number of vertices in the tree (
+2≤n≤
+10
+5
+).
+The second line contains
+n−1
+integers
+p(1),…,p(n−1)
+ — indices of parent vertices of
+1,…,n−1
+respectively (
+0≤p(i)<i
+).
+Output
+In the first line, print
+n
+distinct integers
+i
+d
+1
+,…,i
+d
+n
+ — the initial labelling of the bamboo blank starting from the root vertex (
+0≤i
+d
+i
+<n
+).
+In the second line, print a single integer
+k
+ — the number of operations in your sequence (
+0≤k≤
+10
+6
+).
+In the third line print
+k
+integers
+v
+1
+,…,
+v
+k
+describing operations in order. The
+i
+-th operation consists of changing
+p(
+v
+i
+)
+to
+p(p(
+v
+i
+))
+. Each operation should be valid, i.e. neither
+v
+i
+nor
+p(
+v
+i
+)
+can be the root of the tree at the moment.
+Examples
+input
+Copy
+5
+0 0 1 1
+output
+Copy
+0 2 1 4 3
+2
+1 3
+input
+Copy
+4
+0 1 2
+output
+Copy
+0 1 2 3
+0

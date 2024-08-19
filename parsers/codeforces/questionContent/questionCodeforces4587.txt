@@ -1,0 +1,28 @@
+A. Quirky Quantifiers
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Input
+The input contains a single integer a (10 ≤ a ≤ 999).
+Output
+Output 0 or 1.
+Examples
+input
+Copy
+13
+output
+Copy
+1
+input
+Copy
+927
+output
+Copy
+1
+input
+Copy
+48
+output
+Copy
+0

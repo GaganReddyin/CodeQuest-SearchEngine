@@ -1,0 +1,87 @@
+E. Swedish Heroes
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+While playing yet another strategy game, Mans has recruited
+n
+Swedish heroes, whose powers which can be represented as an array
+a
+.
+Unfortunately, not all of those mighty heroes were created as capable as he wanted, so that he decided to do something about it. In order to accomplish his goal, he can pick two consecutive heroes, with powers
+a
+i
+and
+a
+i+1
+, remove them and insert a hero with power
+−(
+a
+i
++
+a
+i+1
+)
+back in the same position.
+For example if the array contains the elements
+[5,6,7,8]
+, he can pick
+6
+and
+7
+and get
+[5,−(6+7),8]=[5,−13,8]
+.
+After he will perform this operation
+n−1
+times, Mans will end up having only one hero. He wants his power to be as big as possible. What's the largest possible power he can achieve?
+Input
+The first line contains a single integer
+n
+(
+1≤n≤200000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+) — powers of the heroes.
+Output
+Print the largest possible power he can achieve after
+n−1
+operations.
+Examples
+input
+Copy
+4
+5 6 7 8
+output
+Copy
+26
+input
+Copy
+5
+4 -5 9 -2 1
+output
+Copy
+15
+Note
+Suitable list of operations for the first sample:
+[5,6,7,8]→[−11,7,8]→[−11,−15]→[26]

@@ -1,0 +1,207 @@
+F. Minimal String Xoration
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an integer
+n
+and a string
+s
+consisting of
+2
+n
+lowercase letters of the English alphabet. The characters of the string
+s
+are
+s
+0
+s
+1
+s
+2
+⋯
+s
+2
+n
+−1
+.
+A string
+t
+of length
+2
+n
+(whose characters are denoted by
+t
+0
+t
+1
+t
+2
+⋯
+t
+2
+n
+−1
+) is a xoration of
+s
+if there exists an integer
+j
+(
+0≤j≤
+2
+n
+−1
+) such that, for each
+0≤i≤
+2
+n
+−1
+,
+t
+i
+=
+s
+i⊕j
+(where
+⊕
+denotes the operation bitwise XOR).
+Find the lexicographically minimal xoration of
+s
+.
+A string
+a
+is lexicographically smaller than a string
+b
+if and only if one of the following holds:
+a
+is a prefix of
+b
+, but
+a≠b
+;
+in the first position where
+a
+and
+b
+differ, the string
+a
+has a letter that appears earlier in the alphabet than the corresponding letter in
+b
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤18
+).
+The second line contains a string
+s
+consisting of
+2
+n
+lowercase letters of the English alphabet.
+Output
+Print a single line containing the lexicographically minimal xoration of
+s
+.
+Examples
+input
+Copy
+2
+acba
+output
+Copy
+abca
+input
+Copy
+3
+bcbaaabb
+output
+Copy
+aabbbcba
+input
+Copy
+4
+bdbcbccdbdbaaccd
+output
+Copy
+abdbdccacbdbdccb
+input
+Copy
+5
+ccfcffccccccffcfcfccfffffcccccff
+output
+Copy
+cccccffffcccccffccfcffcccccfffff
+input
+Copy
+1
+zz
+output
+Copy
+zz
+Note
+In the first test, the lexicographically minimal xoration
+t
+of
+s=
+"acba" is "abca". It's a xoration because, for
+j=3
+,
+t
+0
+=
+s
+0⊕j
+=
+s
+3
+=
+"a";
+t
+1
+=
+s
+1⊕j
+=
+s
+2
+=
+"b";
+t
+2
+=
+s
+2⊕j
+=
+s
+1
+=
+"c";
+t
+3
+=
+s
+3⊕j
+=
+s
+0
+=
+"a".
+There isn't any xoration of
+s
+lexicographically smaller than "abca".
+In the second test, the minimal string xoration corresponds to choosing
+j=4
+in the definition of xoration.
+In the third test, the minimal string xoration corresponds to choosing
+j=11
+in the definition of xoration.
+In the fourth test, the minimal string xoration corresponds to choosing
+j=10
+in the definition of xoration.
+In the fifth test, the minimal string xoration corresponds to choosing either
+j=0
+or
+j=1
+in the definition of xoration.

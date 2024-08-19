@@ -1,0 +1,159 @@
+B. Sort the Subarray
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Monocarp had an array
+a
+consisting of
+n
+integers. He has decided to choose two integers
+l
+and
+r
+such that
+1≤l≤r≤n
+, and then sort the subarray
+a[l..r]
+(the subarray
+a[l..r]
+is the part of the array
+a
+containing the elements
+a
+l
+,
+a
+l+1
+,
+a
+l+2
+,…,
+a
+r−1
+,
+a
+r
+) in non-descending order. After sorting the subarray, Monocarp has obtained a new array, which we denote as
+a
+′
+.
+For example, if
+a=[6,7,3,4,4,6,5]
+, and Monocarp has chosen
+l=2,r=5
+, then
+a
+′
+=[6,3,4,4,7,6,5]
+.
+You are given the arrays
+a
+and
+a
+′
+. Find the integers
+l
+and
+r
+that Monocarp could have chosen. If there are multiple pairs of values
+(l,r)
+, find the one which corresponds to the longest subarray.
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+Each test case consists of three lines:
+the first line contains one integer
+n
+(
+2≤n≤2⋅
+10
+5
+);
+the second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+);
+the third line contains
+n
+integers
+a
+′
+1
+,
+a
+′
+2
+,…,
+a
+′
+n
+(
+1≤
+a
+′
+i
+≤n
+).
+Additional constraints on the input:
+the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+;
+it is possible to obtain the array
+a
+′
+by sorting one subarray of
+a
+;
+a
+′
+≠a
+(there exists at least one position in which these two arrays are different).
+Output
+For each test case, print two integers — the values of
+l
+and
+r
+(
+1≤l≤r≤n
+). If there are multiple answers, print the values that correspond to the longest subarray. If there are still multiple answers, print any of them.
+Example
+input
+Copy
+3
+7
+6 7 3 4 4 6 5
+6 3 4 4 7 6 5
+3
+1 2 1
+1 1 2
+3
+2 2 1
+2 1 2
+output
+Copy
+2 5
+1 3
+2 3

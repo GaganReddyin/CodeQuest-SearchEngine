@@ -1,0 +1,70 @@
+Chef Designed a Network
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is a network engineer at CodeChef. Currently, he has to design a network that connects
+N computers (numbered
+1 through
+N).
+The network should consist of these
+N computers and exactly
+M cables. Usually, a cable needs to connect two different computers, but Chef is okay with connecting computers to themselves too. Therefore, let's describe a cable by the pair of computers
+(u,v) it connects, where
+1≤u≤v≤N. However, for each valid pair of computers
+(u,v), there must be at most one cable that directly connects this pair of computers.
+Let's define the data consumption factor of a computer as the number of computers which are directly connected to it. In particular, if a computer
+v is directly connected to itself (by a cable
+(v,v)), it is only counted as connected to itself once. The data consumption factor of the whole network is the maximum of data consumption factors of all computers.
+In the resulting network, each computer needs to be connected (directly or indirectly) to all other computers, so that they could communicate with each other.
+Determine whether it is possible to design such a network. If it is possible, find the minimum possible data consumption factor of the resulting network.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N and
+M.
+Output
+For each test case, print a single line containing one integer ― the minimum data consumption factor or
+−1 if Chef cannot design a required network.
+Constraints
+1≤T≤5⋅10
+5
+1≤N≤10
+6
+0≤M≤10
+15
+Subtasks
+Subtask #1 (10 points):
+1≤N≤10
+0≤M≤10
+3
+Subtask #2 (10 points):
+1≤T≤10
+2
+Subtask #3 (10 points):
+1≤T≤10
+3
+Subtask #4 (70 points): original constraints
+Sample 1:
+Input
+Output
+3
+2 3
+5 6
+3 3
+2
+2
+2
+Explanation:
+Example case 1: The optimal configuration (and the only configuration) of computers is to connect computers
+1 and
+2, connect computer
+1 to itself and computer
+2 to itself. Then, the consumption factor of each computer is
+2 because it is directly connected to itself and the other computer.
+Example case 3: Here, the cables can connect pairs of computers
+(1,2),
+(1,3) and
+(2,3). The consumption factor of each computer is
+2. There is a configuration with consumption factor
+1, where each computer is connected to itself, but all the computers are not connected, so this network configuration is invalid.

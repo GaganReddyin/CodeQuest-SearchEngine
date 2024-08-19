@@ -1,0 +1,174 @@
+Paisa Double
+Problem
+"Raju - zor zor se bolke sabko scheme bata de".
+Raju intends to scam everyone in order to become rich quickly. But before doing that, he must prove to everyone his innocence, by doubling his own money with the help of a scheme.
+Raju wants to double his money, but in order to invest in the scheme, he is required to solve the following problem. He has asked you to help him in solving the problem.
+You are given the following:
+K strings
+P
+1
+,P
+2
+,P
+3
+,…,P
+K
+A string
+S of length
+N.
+Some number of available characters from '
+a' to '
+z'. This is given to you as an array
+C of size
+26, where
+C
+1
+is the number of '
+a'-s,
+C
+2
+is the number of '
+b'-s,
+…,
+C
+26
+is the number of '
+z'-s you have.
+Solve the following problem independently for each
+X from
+0 to
+K:
+Is it possible to append some (possibly
+0) characters to
+S from the available characters such that the resulting string is strictly lexicographically greater than exactly
+X of the given
+K strings?
+Note that the process is independent for each
+X. That is, for each
+X, you start with the original string
+S and the values
+C
+1
+,C
+2
+,…,C
+26
+given in the input.
+Note: A string
+A is said to be lexicographically larger than a string
+B if:
+B is a proper prefix of
+A (for example,
+abc is larger than
+a and
+ab); or
+Let
+i be the first position where
+A and
+B differ (i.e,
+A
+1
+=B
+1
+,A
+2
+=B
+2
+,…,A
+i−1
+=B
+i−1
+). Then,
+A
+i
+>B
+i
+.
+Input Format
+The first line of input will contain one integer
+N, the size of the string
+S.
+The second line of input will contain string
+S.
+The third line of input will contain
+26 space-separated integers, representing the values
+C
+1
+,C
+2
+,…,C
+26
+.
+The fourth line of input will contain one integer
+K.
+The
+i-th of the next
+K lines of input will contain the string
+P
+i
+.
+Output Format
+Print
+K+1 lines of output. The
+i-th of these lines should contain the answer for
+X=i−1: Yes if it's possible to append some of the given characters to
+S to make it strictly lexicographically larger than exactly
+i−1 strings, and No otherwise.
+Each letter of the output may be printed in either uppercase or lowercase, i.e, Yes, YES, and yEs will all be treated as equivalent.
+Constraints
+1≤N≤10
+4
+0≤C
+i
+≤10
+6
+1≤K≤10
+4
+1≤∣P
+i
+∣≤10
+4
+Every input string will contain only lowercase English letters, i.e, the letters from
+a to
+z.
+The sum of
+∣P
+i
+∣ across all
+K strings won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+4
+abcd
+1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+6
+abc
+abcd
+ab
+abcde
+a
+abcd
+No
+No
+No
+Yes
+No
+Yes
+Yes
+Explanation:
+The answer for a few values of
+X is as follows:
+X=3: Leave
+S unchanged, and it is already greater than exactly three of the given strings ("abc", "ab", "a"). So, the answer is "Yes".
+X=4: There is no way to append some characters to the string
+S from the ones we have (one copy each of 'a', 'c', 'z') such that the resulting string will be greater than exactly
+4 strings out of the given
+6 strings. So, the output is "No".
+X=5: Append 'c' to
+S, to form "abcdc". This is greater than all the input strings except "abcde", as needed.
+X=6: Append 'z' to
+S, to form "abcdz". This is greater than every input string.

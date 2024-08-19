@@ -1,0 +1,132 @@
+A. Fancy Fence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Everybody knows that Balázs has the fanciest fence in the whole town. It's built up from
+N
+fancy sections. The sections are rectangles standing closely next to each other on the ground. The
+i
+th section has integer height
+h
+i
+and integer width
+w
+i
+. We are looking for fancy rectangles on this fancy fence. A rectangle is fancy if:
+its sides are either horizontal or vertical and have integer lengths
+the distance between the rectangle and the ground is integer
+the distance between the rectangle and the left side of the first section is integer
+it's lying completely on sections
+What is the number of fancy rectangles? This number can be very big, so we are interested in it modulo
+10
+9
++7
+.
+Input
+The first line contains
+N
+(
+1≤N≤
+10
+5
+) – the number of sections. The second line contains
+N
+space-separated integers, the
+i
+th number is
+h
+i
+(
+1≤
+h
+i
+≤
+10
+9
+). The third line contains
+N
+space-separated integers, the
+i
+th number is
+w
+i
+(
+1≤
+w
+i
+≤
+10
+9
+).
+Output
+You should print a single integer, the number of fancy rectangles modulo
+10
+9
++7
+. So the output range is
+0,1,2,…,
+10
+9
++6
+.
+Scoring
+Subtask
+1
+2
+3
+4
+5
+6
+7
+Points
+0
+12
+13
+15
+15
+18
+27
+Constraints
+sample
+N≤50and
+h
+i
+≤50and
+w
+i
+=1for alli
+h
+i
+=1or
+h
+i
+=2for alli
+all
+h
+i
+are equal
+h
+i
+≤
+h
+i+1
+for alli≤N−1
+N≤1000
+no additional constraints
+Example
+input
+Copy
+2
+1 2
+1 2
+output
+Copy
+12
+Note
+The fence looks like this:
+There are 5 fancy rectangles of shape:
+There are 3 fancy rectangles of shape:
+There is 1 fancy rectangle of shape:
+There are 2 fancy rectangles of shape:
+There is 1 fancy rectangle of shape:

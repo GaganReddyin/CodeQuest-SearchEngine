@@ -1,0 +1,76 @@
+Eidi Gift
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Eidi gifts are a tradition in which children receive money from elder relatives during the Eid celebration.
+Chef has three children (numbered
+1,2,3) and he wants to give them Eidi gifts. The oldest child, Chefu, thinks that a distribution of money is fair only if an older child always receives more money than a younger child; if two children have the same age, they should receive the same amounts of money.
+For each valid
+i, the
+i-th child is
+A
+i
+years old and it received
+C
+i
+units of money. Determine whether this distribution of money is fair.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains six space-separated integers
+A
+1
+,
+A
+2
+,
+A
+3
+,
+C
+1
+,
+C
+2
+and
+C
+3
+.
+Output
+For each test case, print a single line containing the string "FAIR" if the distribution is fair or "NOT FAIR" otherwise.
+Constraints
+1≤T≤1,000
+1≤A
+1
+,A
+2
+,A
+3
+≤17
+1≤C
+1
+,C
+2
+,C
+3
+≤100
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+5
+5 7 10 10 20 50
+5 5 5 20 10 20
+10 1 17 5 10 15
+3 6 3 8 10 9
+8 5 5 50 10 10
+FAIR
+NOT FAIR
+NOT FAIR
+NOT FAIR
+FAIR
+Explanation:
+Example case 2: All children have same age which is 5, but second child got less money than the other children, so it's not fair.
+Example case 3: First child is older than second child but he got less money than him, so it's not fair.
+Example case 4: First and third children have same age, but didn't get same amount of money, so it's not fair.

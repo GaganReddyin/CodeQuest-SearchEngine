@@ -1,0 +1,69 @@
+Box Game
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N boxes on a table, numbered
+1 through
+N from left to right. Each box has a number written on it; let's denote the number written on box
+i by
+A
+i
+.
+Two players ― Jafar and Almir ― are playing a game that lasts for
+K turns. The rules of the game are as follows:
+Before the game starts, they flip a coin to decide the starting player.
+In the first turn, the starting player chooses a box and places the ball in it.
+Afterwards, the players alternate turns (in the second turn, the non-starting player is playing).
+In each turn, the current player can move the ball one box to the left (unless it is in box
+1) or one box to the right (unless it is in box
+N).
+The result of the game is the number written on the box containing the ball after
+K turns.
+Jafar plays in such a way that when the game ends, the number on the box which contains the ball is the biggest possible. On the contrary, Almir wants this number to be the smallest possible.
+You know which player moves first. Determine the result of the game, assuming that both players play optimally.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+K and
+P, where
+P denotes the starting player (Jafar if
+P=0, Almir if
+P=1).
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+,
+Output
+For each test case, print a single line containing one integer ― the result of the game.
+Constraints
+1≤T≤1,000
+2≤N≤100
+1≤K≤10
+9
+0≤P≤1
+1≤A
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+4 3 0
+4 1 9 5
+4 3 1
+4 1 9 5
+9
+1

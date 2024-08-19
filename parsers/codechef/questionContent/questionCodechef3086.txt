@@ -1,0 +1,140 @@
+Minimum and Maximum
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is an interactive problem.
+There is a hidden sequence
+A
+1
+,A
+2
+,…,A
+N
+. You need to find indices of two smallest and two largest elements in it. Formally, you should find four integers
+a,
+b,
+c and
+d such that there is a permutation
+P
+1
+,P
+2
+,…,P
+N
+of the integers
+1 through
+N with the following properties:
+for each
+i (
+1≤i<N),
+A
+P
+i
+≤A
+P
+i+1
+holds
+P
+1
+=a,
+P
+2
+=b,
+P
+N−1
+=c and
+P
+N
+=d
+In order to find such indices, you may ask at most
+Q questions. In each question, you should choose two integers
+i and
+j (
+1≤i,j≤N); the grader compares the elements
+A
+i
+and
+A
+j
+and answers with
+i if
+A
+i
+≤A
+j
+, or with
+j if
+A
+i
+>A
+j
+.
+Note: The grader is adaptive, i.e. there is no initially fixed sequence
+A, but the grader chooses the answers to your questions in such a way that at any time, there is at least one sequence consistent with all the answers. The answer you choose should be correct for every sequence consistent with all the grader's answers. However, it is guaranteed that the grader is deterministic, i.e. its answers are uniquely determined by your questions.
+Interaction
+First, you should read a line containing a single integer
+T denoting the number of test cases. The description of interaction for
+T test cases follows.
+For each test case, first, you should read a line containing a single integer
+N. If
+N=−2, it means that your answer to the previous test case was incorrect and your program should terminate immediately.
+Then, you may ask questions.
+To ask a question, you should print a line containing three space-separated integers
+1,
+i and
+j (
+1≤i,j≤N).
+Then, you should read a line containing a single integer
+x.
+If the question was invalid, then
+x=−2. Otherwise,
+x is the answer to the question, i.e.
+i if
+A
+i
+≤A
+j
+or
+j otherwise.
+When you have determined your answer, you should print a line containing five space-separated integers
+2,
+a,
+b,
+c and
+d (
+1≤a,b,c,d≤N) that satisfy the conditions described above. If there are multiple possible solutions, you may find any one.
+Whenever you read
+−2, your program should terminate immediately to receive the Wrong Answer verdict. Otherwise, you may receive any verdict.
+Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤5
+4≤N≤1,000
+Subtasks
+Subtask #1 (50 points):
+Q=3N+20
+Subtask #2 (50 points):
+Q=⌊
+2
+3
+N⌋+20
+Example
+Grader                You
+1
+4
+                      1 1 2
+1
+                      1 2 1
+2
+                      1 1 3
+3
+                      1 1 4
+4
+                      1 3 4
+4
+                      2 4 3 1 2
+Explanation
+Example case 1: The hidden sequence is
+A=[3,3,2,1]. Note that another possible solution is
+a=4,
+b=3,
+c=2 and
+d=1.

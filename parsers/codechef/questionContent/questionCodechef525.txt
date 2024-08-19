@@ -1,0 +1,71 @@
+Game of Piles Version 1
+Problem
+There are
+N piles where the
+i
+th
+pile consists of
+A
+i
+stones.
+Chef and Chefina are playing a game taking alternate turns with Chef starting first.
+In his/her turn, a player can choose any non-empty pile and remove exactly
+1 stone from it.
+The game ends when exactly
+1 pile becomes empty. The player who made the last move wins.
+Determine the winner if both players play optimally.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N denoting the number of piles.
+Next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+- denoting the number of stones in each pile.
+Output Format
+For each test case, output CHEF if Chef wins the game, otherwise output CHEFINA.
+Note that the output is case-insensitive i.e. CHEF, Chef, cHeF, and chef are all considered the same.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+2 2
+1
+10
+3
+1 5 6
+CHEFINA
+CHEFINA
+CHEF
+Explanation:
+Test Case
+1: No matter which stone Chef removes, Chefina will remove the remaining stone from the same pile and make it empty.
+Test Case
+2: Since there is only
+1 pile containing
+10 stones, the game will last exactly
+10 moves with last move made by Chefina.
+Test Case
+3: Chef can remove
+1 stone from the first pile and thus make it empty.

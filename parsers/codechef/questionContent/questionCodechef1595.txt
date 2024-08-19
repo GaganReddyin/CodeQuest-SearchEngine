@@ -1,0 +1,61 @@
+Count Substrings
+Problem
+Read problems statements in Mandarin chinese and Vietnamese as well.
+Let's call a string
+X interesting if it satisfies the following conditions:
+X contains at least
+K pairwise distinct characters
+for any two characters
+c
+1
+and
+c
+2
+which appear in
+X, the frequency (number of occurrences) of
+c
+1
+in
+X is equal to the frequency of
+c
+2
+in
+X
+You are given a string
+S. Compute the number of interesting substrings of
+S. Two substrings are considered different if they are located at different positions in
+S.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a string
+S, followed by a space and and integer
+K.
+Output
+For each test case, print a single line containing one integer — the number of interesting substrings.
+Constraints
+1≤T≤10
+1≤∣S∣≤7,000
+the sum of
+∣S∣ in all test cases does not exceed
+14,000
+∣S∣ contains only lowercase English letters
+0≤K≤26
+Subtasks
+Subtask #1 (20 points):
+1≤∣S∣≤100
+Subtask #2 (20 points):
+1≤∣S∣≤1,000
+the sum of
+∣S∣ in all test cases does not exceed
+2,000
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+1
+ababc 2
+6
+Explanation:
+Example case 1: The interesting substrings are "ab", "ba", "ab", "bc", "abab" and "abc".

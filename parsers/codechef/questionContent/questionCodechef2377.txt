@@ -1,0 +1,68 @@
+Kira Loves Palindromes
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a string
+S. Find the number of ways to choose an unordered pair of non-overlapping non-empty substrings of this string (let's denote them by
+s
+1
+and
+s
+2
+in such a way that
+s
+2
+starts after
+s
+1
+ends) such that their concatenation
+s
+1
++s
+2
+is a palindrome.
+Two pairs
+(s
+1
+,s
+2
+) and
+(s
+1
+′
+,s
+2
+′
+) are different if
+s
+1
+is chosen at a different position from
+s
+1
+′
+or
+s
+2
+is chosen at a different position from
+s
+2
+′
+.
+Input
+The first and only line of the input contains a single string
+S.
+Output
+Print a single line containing one integer — the number of ways to choose a valid pair of substrings.
+Constraints
+1≤∣S∣≤1,000
+S contains only lowercase English letters
+Subtasks
+Subtask #1 (25 points):
+∣S∣≤100
+Subtask #2 (75 points): original constraints
+Sample 1:
+Input
+Output
+abba
+7
+Explanation:
+The following pairs of substrings can be chosen: ("a", "a"), ("a", "ba"), ("a", "bba"), ("ab", "a"), ("ab", "ba"), ("abb", "a"), ("b", "b").

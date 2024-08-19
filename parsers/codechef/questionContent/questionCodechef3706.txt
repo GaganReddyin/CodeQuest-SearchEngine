@@ -1,0 +1,93 @@
+Data Pipelines
+Problem
+###Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Data pipelines are very important in dealing with big data. A data pipeline takes data from some source stream(s), processes this data and sends it to output stream(s).
+Codechef Beam is an example of such a pipeline. This pipeline takes data from
+N
+s
+source streams and it is expected to send data to
+N
+oe
+output streams. However, the actual number of output streams may be different.
+Internally, Beam calculates a parameter
+K=⌈N
+s
+/N
+oe
+⌉: the maximum number of source streams that may be sent to a single output stream. Then, output streams are created. The first
+K input streams are assigned to one output stream, the next
+K input streams to a second output stream and so on, until there are less than
+K unassigned input streams. Then, if the number of unassigned input streams is positive, another output stream is created and all those unassigned input streams are assigned to it. For example, for
+N
+s
+=35,
+N
+oe
+=20, we have
+K=2 and the actual number of output streams is
+18:
+17 output streams taking
+2 input streams each and one output stream taking
+1 input stream.
+You are given
+N
+oe
+, the maximum possible number of input streams
+M and the desired final number of output streams
+N
+of
+. Find the number of integers
+x from
+1 to
+M (inclusive) such that if
+N
+s
+=x, Codechef Beam sends data to exactly
+N
+of
+output streams.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+M,
+N
+oe
+and
+N
+of
+.
+Output
+For each test case, print a single line containing one integer — the number of possible values of
+N
+s
+satisfying the given criteria.
+Constraints
+1≤T≤10
+3
+1≤M,N
+oe
+,N
+of
+≤10
+9
+Sample 1:
+Input
+Output
+2
+40 20 18
+40 20 5
+3
+1
+Explanation:
+Example case 1: The number of input streams
+N
+s
+can be
+18,
+35 or
+36.
+Example case 2: The number of input streams must be
+5, since the number of output streams cannot be
+5 otherwise.

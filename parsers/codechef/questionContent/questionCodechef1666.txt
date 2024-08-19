@@ -1,0 +1,89 @@
+Power Sum
+Problem
+You are given a sequence
+A of
+N integers such that every element is a non-negative power of
+2.
+A sequence is called good if its sum is a non-negative power of
+2. You would like to turn
+A into a good sequence.
+To achieve this, you can perform the following operation on
+A:
+Pick a non-empty subsequence of
+A, pick a positive integer
+X such that
+X≤2
+30
+, and multiply every element of this subsequence by
+X.
+Find the minimum number of operations required to turn
+A into a good sequence. Also, find one sequence of operations which does this. If there are multiple possible answers, you may find any of them.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print the answer in the following format:
+First, print one line containing an integer
+M, denoting the minimum number of moves required.
+Then, print
+2M lines describing
+M operations.
+Each operation is described by
+2 lines.
+On the first line, print two space-separated integers
+K and
+X, denoting the size of the subsequence and the multiplier for this operation.
+On the second line, print
+K distinct space-separated integers denoting the indices of the elements chosen to be multiplied in this operation. These
+K integers can be printed in any order.
+Constraints
+1≤T≤1000
+1≤N≤100
+1≤A
+i
+≤2
+20
+Subtasks
+Subtask #1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+2
+4
+4 8 4 32
+3
+2 2 4
+1
+3 2
+1 2 3
+0
+Explanation:
+Test case
+1: Multiplying the
+1
+st
+,2
+nd
+and
+3
+rd
+elements by
+2 turns the array into
+[8,16,8,32], whose sum is
+64=2
+6
+.
+Test case
+2: The array is already good.

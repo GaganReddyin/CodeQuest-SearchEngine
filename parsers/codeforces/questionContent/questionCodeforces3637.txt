@@ -1,0 +1,126 @@
+F2. Neko Rules the Catniverse (Large Version)
+time limit per test7 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem is same as the previous one, but has larger constraints.
+Aki is playing a new video game. In the video game, he will control Neko, the giant cat, to fly between planets in the Catniverse.
+There are
+n
+planets in the Catniverse, numbered from
+1
+to
+n
+. At the beginning of the game, Aki chooses the planet where Neko is initially located. Then Aki performs
+k−1
+moves, where in each move Neko is moved from the current planet
+x
+to some other planet
+y
+such that:
+Planet
+y
+is not visited yet.
+1≤y≤x+m
+(where
+m
+is a fixed constant given in the input)
+This way, Neko will visit exactly
+k
+different planets. Two ways of visiting planets are called different if there is some index
+i
+such that, the
+i
+-th planet visited in the first way is different from the
+i
+-th planet visited in the second way.
+What is the total number of ways to visit
+k
+planets this way? Since the answer can be quite large, print it modulo
+10
+9
++7
+.
+Input
+The only line contains three integers
+n
+,
+k
+and
+m
+(
+1≤n≤
+10
+9
+,
+1≤k≤min(n,12)
+,
+1≤m≤4
+) — the number of planets in the Catniverse, the number of planets Neko needs to visit and the said constant
+m
+.
+Output
+Print exactly one integer — the number of different ways Neko can visit exactly
+k
+planets. Since the answer can be quite large, print it modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+3 3 1
+output
+Copy
+4
+input
+Copy
+4 2 1
+output
+Copy
+9
+input
+Copy
+5 5 4
+output
+Copy
+120
+input
+Copy
+100 1 2
+output
+Copy
+100
+Note
+In the first example, there are
+4
+ways Neko can visit all the planets:
+1→2→3
+2→3→1
+3→1→2
+3→2→1
+In the second example, there are
+9
+ways Neko can visit exactly
+2
+planets:
+1→2
+2→1
+2→3
+3→1
+3→2
+3→4
+4→1
+4→2
+4→3
+In the third example, with
+m=4
+, Neko can visit all the planets in any order, so there are
+5!=120
+ways Neko can visit all the planets.
+In the fourth example, Neko only visit exactly
+1
+planet (which is also the planet he initially located), and there are
+100
+ways to choose the starting planet for Neko.

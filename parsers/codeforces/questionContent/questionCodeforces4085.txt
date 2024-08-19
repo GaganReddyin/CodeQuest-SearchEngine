@@ -1,0 +1,227 @@
+C. Maximum Subrectangle
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given two arrays
+a
+and
+b
+of positive integers, with length
+n
+and
+m
+respectively.
+Let
+c
+be an
+n×m
+matrix, where
+c
+i,j
+=
+a
+i
+⋅
+b
+j
+.
+You need to find a subrectangle of the matrix
+c
+such that the sum of its elements is at most
+x
+, and its area (the total number of elements) is the largest possible.
+Formally, you need to find the largest number
+s
+such that it is possible to choose integers
+x
+1
+,
+x
+2
+,
+y
+1
+,
+y
+2
+subject to
+1≤
+x
+1
+≤
+x
+2
+≤n
+,
+1≤
+y
+1
+≤
+y
+2
+≤m
+,
+(
+x
+2
+−
+x
+1
++1)×(
+y
+2
+−
+y
+1
++1)=s
+, and
+∑
+i=
+x
+1
+x
+2
+∑
+j=
+y
+1
+y
+2
+c
+i,j
+≤x.
+y
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤2000
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2000
+).
+The third line contains
+m
+integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+(
+1≤
+b
+i
+≤2000
+).
+The fourth line contains a single integer
+x
+(
+1≤x≤2⋅
+10
+9
+).
+Output
+If it is possible to choose four integers
+x
+1
+,
+x
+2
+,
+y
+1
+,
+y
+2
+such that
+1≤
+x
+1
+≤
+x
+2
+≤n
+,
+1≤
+y
+1
+≤
+y
+2
+≤m
+, and
+∑
+x
+2
+i=
+x
+1
+∑
+y
+2
+j=
+y
+1
+c
+i,j
+≤x
+, output the largest value of
+(
+x
+2
+−
+x
+1
++1)×(
+y
+2
+−
+y
+1
++1)
+among all such quadruplets, otherwise output
+0
+.
+Examples
+input
+Copy
+3 3
+1 2 3
+1 2 3
+9
+output
+Copy
+4
+input
+Copy
+5 1
+5 4 2 4 5
+2
+5
+output
+Copy
+1
+Note
+Matrix from the first sample and the chosen subrectangle (of blue color):
+Matrix from the second sample and the chosen subrectangle (of blue color):

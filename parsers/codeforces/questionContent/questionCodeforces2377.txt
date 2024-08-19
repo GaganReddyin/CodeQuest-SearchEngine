@@ -1,0 +1,181 @@
+D. Colored Rectangles
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given three multisets of pairs of colored sticks:
+R
+pairs of red sticks, the first pair has length
+r
+1
+, the second pair has length
+r
+2
+,
+…
+, the
+R
+-th pair has length
+r
+R
+;
+G
+pairs of green sticks, the first pair has length
+g
+1
+, the second pair has length
+g
+2
+,
+…
+, the
+G
+-th pair has length
+g
+G
+;
+B
+pairs of blue sticks, the first pair has length
+b
+1
+, the second pair has length
+b
+2
+,
+…
+, the
+B
+-th pair has length
+b
+B
+;
+You are constructing rectangles from these pairs of sticks with the following process:
+take a pair of sticks of one color;
+take a pair of sticks of another color different from the first one;
+add the area of the resulting rectangle to the total area.
+Thus, you get such rectangles that their opposite sides are the same color and their adjacent sides are not the same color.
+Each pair of sticks can be used at most once, some pairs can be left unused. You are not allowed to split a pair into independent sticks.
+What is the maximum area you can achieve?
+Input
+The first line contains three integers
+R
+,
+G
+,
+B
+(
+1≤R,G,B≤200
+) — the number of pairs of red sticks, the number of pairs of green sticks and the number of pairs of blue sticks.
+The second line contains
+R
+integers
+r
+1
+,
+r
+2
+,…,
+r
+R
+(
+1≤
+r
+i
+≤2000
+) — the lengths of sticks in each pair of red sticks.
+The third line contains
+G
+integers
+g
+1
+,
+g
+2
+,…,
+g
+G
+(
+1≤
+g
+i
+≤2000
+) — the lengths of sticks in each pair of green sticks.
+The fourth line contains
+B
+integers
+b
+1
+,
+b
+2
+,…,
+b
+B
+(
+1≤
+b
+i
+≤2000
+) — the lengths of sticks in each pair of blue sticks.
+Output
+Print the maximum possible total area of the constructed rectangles.
+Examples
+input
+Copy
+1 1 1
+3
+5
+4
+output
+Copy
+20
+input
+Copy
+2 1 3
+9 5
+1
+2 8 5
+output
+Copy
+99
+input
+Copy
+10 1 1
+11 7 20 15 19 14 2 4 13 14
+8
+11
+output
+Copy
+372
+Note
+In the first example you can construct one of these rectangles: red and green with sides
+3
+and
+5
+, red and blue with sides
+3
+and
+4
+and green and blue with sides
+5
+and
+4
+. The best area of them is
+4×5=20
+.
+In the second example the best rectangles are: red/blue
+9×8
+, red/blue
+5×5
+, green/blue
+2×1
+. So the total area is
+72+25+2=99
+.
+In the third example the best rectangles are: red/green
+19×8
+and red/blue
+20×11
+. The total area is
+152+220=372
+. Note that you can't construct more rectangles because you are not allowed to have both pairs taken to be the same color.

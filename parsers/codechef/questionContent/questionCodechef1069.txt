@@ -1,0 +1,164 @@
+Positive or Negative Subarrays
+Problem
+Consider an array
+A having length
+N such that
+A
+i
+=2
+i−1
+for all
+1≤i≤N.
+You are given an integer array
+B having length
+N such that
+B
+i
+=+1 or
+B
+i
+=−1 for all
+1≤i≤N.
+We create another array
+C of length
+N such that
+C
+i
+=B
+i
+⋅A
+i
+Let the number of subarrays of
+C having sum strictly greater than
+0 be
+P and
+Let the number of subarrays of
+C having sum strictly less than
+0 be
+Q
+Determine the value of
+∣P−Q∣. (Here
+∣x∣ denotes the absolute value of
+x)
+Note: An array
+X is a subarray of an array
+Y if
+X can be obtained from
+Y by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the array
+B.
+The second line of each test case contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+denoting the array
+B.
+Output Format
+For each test case, output the absolute difference between the number of subarrays of
+C having sum strictly greater than
+0 and the number of subarrays of
+C having sum strictly less than
+0.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+B
+i
+=+1 or
+B
+i
+=−1
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+4
+1 -1 1 1
+3
+-1 -1 -1
+2
+1 -1
+2
+1 1
+6
+6
+1
+3
+Explanation:
+In the first test case:-
+the given array
+B is
+[1,−1,1,1] and the given array
+A is
+[1,2,4,8],.
+We need to create array
+C by multiplying corresponding elements of
+A and
+B.
+Thus,
+C=[1,−2,4,8].
+The subarrays of the array
+[1,−2,4,8] and their corresponding sum are:
+[1]: sum
+=1
+[1,−2]: sum
+=−1
+[1,−2,4]: sum
+=3
+[1,−2,4,8]: sum
+=11
+[−2]: sum
+=−2
+[−2,4]: sum
+=2
+[−2,4,8]: sum
+=10
+[4]: sum
+=4
+[4,8]: sum
+=12
+[8]: sum
+=8
+So, the number of subarrays having sum strictly greater than
+0 is
+8, and the number of subarrays having sum strictly less than
+0 is
+2. Therefore, the answer is
+∣8−2∣=6.
+In the 4th test case:-
+Given the array
+A=[1,2] and the array
+B=[1,1], we need to create an array
+C by multiplying corresponding elements of
+A and
+B. Thus, we have:
+C=[1,2]
+The subarrays of the array
+C and their corresponding sum are:
+[1]: sum
+=1
+[2]: sum
+=2
+[1,2]: sum
+=3
+So, the number of subarrays having sum strictly greater than
+0 is
+3, and the number of subarrays having sum strictly less than
+0 is
+0. Therefore, the answer is
+∣3−0∣=3.

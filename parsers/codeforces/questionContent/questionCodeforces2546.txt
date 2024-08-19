@@ -1,0 +1,158 @@
+F. Swaps Again
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Ayush, Ashish and Vivek are busy preparing a new problem for the next Codeforces round and need help checking if their test cases are valid.
+Each test case consists of an integer
+n
+and two arrays
+a
+and
+b
+, of size
+n
+. If after some (possibly zero) operations described below, array
+a
+can be transformed into array
+b
+, the input is said to be valid. Otherwise, it is invalid.
+An operation on array
+a
+is:
+select an integer
+k
+(1≤k≤⌊
+n
+2
+⌋)
+swap the prefix of length
+k
+with the suffix of length
+k
+For example, if array
+a
+initially is
+{1,2,3,4,5,6}
+, after performing an operation with
+k=2
+, it is transformed into
+{5,6,3,4,1,2}
+.
+Given the set of test cases, help them determine if each one is valid or invalid.
+Input
+The first line contains one integer
+t
+(1≤t≤500)
+ — the number of test cases. The description of each test case is as follows.
+The first line of each test case contains a single integer
+n
+(1≤n≤500)
+ — the size of the arrays.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+(1≤
+a
+i
+≤
+10
+9
+)
+— elements of array
+a
+.
+The third line of each test case contains
+n
+integers
+b
+1
+,
+b
+2
+, ...,
+b
+n
+(1≤
+b
+i
+≤
+10
+9
+)
+— elements of array
+b
+.
+Output
+For each test case, print "Yes" if the given input is valid. Otherwise print "No".
+You may print the answer in any case.
+Example
+input
+Copy
+5
+2
+1 2
+2 1
+3
+1 2 3
+1 2 3
+3
+1 2 4
+1 3 4
+4
+1 2 3 2
+3 1 2 2
+3
+1 2 3
+1 3 2
+output
+Copy
+yes
+yes
+No
+yes
+No
+Note
+For the first test case, we can swap prefix
+a[1:1]
+with suffix
+a[2:2]
+to get
+a=[2,1]
+.
+For the second test case,
+a
+is already equal to
+b
+.
+For the third test case, it is impossible since we cannot obtain
+3
+in
+a
+.
+For the fourth test case, we can first swap prefix
+a[1:1]
+with suffix
+a[4:4]
+to obtain
+a=[2,2,3,1]
+. Now we can swap prefix
+a[1:2]
+with suffix
+a[3:4]
+to obtain
+a=[3,1,2,2]
+.
+For the fifth test case, it is impossible to convert
+a
+to
+b
+.

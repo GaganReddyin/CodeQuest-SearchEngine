@@ -1,0 +1,570 @@
+E. Serval and Music Game
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Serval loves playing music games. He meets a problem when playing music games, and he leaves it for you to solve.
+You are given
+n
+positive integers
+s
+1
+<
+s
+2
+<…<
+s
+n
+.
+f(x)
+is defined as the number of
+i
+(
+1≤i≤n
+) that exist non-negative integers
+p
+i
+,
+q
+i
+such that:
+s
+i
+=
+p
+i
+⌊
+s
+n
+x
+⌋+
+q
+i
+⌈
+s
+n
+x
+⌉
+s
+s
+Find out
+∑
+s
+n
+x=1
+x⋅f(x)
+modulo
+998244353
+.
+As a reminder,
+⌊x⌋
+denotes the maximal integer that is no greater than
+x
+, and
+⌈x⌉
+denotes the minimal integer that is no less than
+x
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test cases contains a single integer
+n
+(
+1≤n≤
+10
+6
+).
+The second line of each test case contains
+n
+positive integers
+s
+1
+,
+s
+2
+,…,
+s
+n
+(
+1≤
+s
+1
+<
+s
+2
+<…<
+s
+n
+≤
+10
+7
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+6
+, and the sum of
+s
+n
+does not exceed
+10
+7
+.
+Output
+For each test case, print a single integer in a single line — the sum of
+x⋅f(x)
+over all possible
+x
+modulo
+998244353
+.
+Example
+input
+Copy
+4
+3
+1 2 4
+4
+1 2 7 9
+4
+344208 591000 4779956 5403429
+5
+1633 1661 1741 2134 2221
+output
+Copy
+26
+158
+758737625
+12334970
+Note
+For the first test case,
+s
+n
+=4
+,
+f(x)
+are calculated as followings:
+f(1)=1
+⌊
+s
+n
+1
+⌋=4
+,
+⌈
+s
+n
+1
+⌉=4
+.
+It can be shown that such
+p
+1
+,
+p
+2
+and
+q
+1
+,
+q
+2
+that satisfy the conditions don't exist.
+Let
+p
+3
+=1
+and
+q
+3
+=0
+, then
+s
+3
+=
+p
+3
+⋅⌊
+s
+n
+1
+⌋+
+q
+3
+⋅⌈
+s
+n
+1
+⌉=1⋅4+0⋅4=4
+.
+f(2)=2
+⌊
+s
+n
+2
+⌋=2
+,
+⌈
+s
+n
+2
+⌉=2
+.
+It can be shown that such
+p
+1
+and
+q
+1
+that satisfy the conditions don't exist.
+Let
+p
+2
+=1
+and
+q
+2
+=0
+, then
+s
+2
+=
+p
+2
+⋅⌊
+s
+n
+2
+⌋+
+q
+2
+⋅⌈
+s
+n
+2
+⌉=1⋅2+0⋅2=2
+.
+Let
+p
+3
+=0
+and
+q
+3
+=2
+, then
+s
+3
+=
+p
+3
+⋅⌊
+s
+n
+2
+⌋+
+q
+3
+⋅⌈
+s
+n
+2
+⌉=0⋅2+2⋅2=4
+.
+f(3)=3
+⌊
+s
+n
+3
+⌋=1
+,
+⌈
+s
+n
+3
+⌉=2
+.
+Let
+p
+1
+=1
+and
+q
+1
+=0
+, then
+s
+1
+=
+p
+1
+⋅⌊
+s
+n
+3
+⌋+
+q
+1
+⋅⌈
+s
+n
+3
+⌉=1⋅1+0⋅2=1
+.
+Let
+p
+2
+=0
+and
+q
+2
+=1
+, then
+s
+2
+=
+p
+2
+⋅⌊
+s
+n
+3
+⌋+
+q
+2
+⋅⌈
+s
+n
+3
+⌉=0⋅1+1⋅2=2
+.
+Let
+p
+3
+=0
+and
+q
+3
+=2
+, then
+s
+3
+=
+p
+3
+⋅⌊
+s
+n
+3
+⌋+
+q
+3
+⋅⌈
+s
+n
+3
+⌉=0⋅1+2⋅2=4
+.
+f(4)=3
+⌊
+s
+n
+4
+⌋=1
+,
+⌈
+s
+n
+4
+⌉=1
+.
+Let
+p
+1
+=1
+and
+q
+1
+=0
+, then
+s
+1
+=
+p
+1
+⋅⌊
+s
+n
+4
+⌋+
+q
+1
+⋅⌈
+s
+n
+4
+⌉=1⋅1+0⋅1=1
+.
+Let
+p
+2
+=1
+and
+q
+2
+=1
+, then
+s
+2
+=
+p
+2
+⋅⌊
+s
+n
+4
+⌋+
+q
+2
+⋅⌈
+s
+n
+4
+⌉=1⋅1+1⋅1=2
+.
+Let
+p
+3
+=2
+and
+q
+3
+=2
+, then
+s
+3
+=
+p
+3
+⋅⌊
+s
+n
+4
+⌋+
+q
+3
+⋅⌈
+s
+n
+4
+⌉=2⋅1+2⋅1=4
+.
+Therefore, the answer is
+∑
+4
+x=1
+x⋅f(x)=1⋅1+2⋅2+3⋅3+4⋅3=26
+.
+For the second test case:
+f(1)=f(2)=f(3)=1
+f(4)=3
+f(5)=f(6)=f(7)=f(8)=f(9)=4
+For example, when
+x=3
+we have
+f(3)=1
+because there exist
+p
+4
+and
+q
+4
+:
+9=1⋅⌊
+9
+3
+⌋+2⋅⌈
+9
+3
+⌉
+9
+9
+It can be shown that it is impossible to find
+p
+1
+,
+p
+2
+,
+p
+3
+and
+q
+1
+,
+q
+2
+,
+q
+3
+that satisfy the conditions.
+When
+x=5
+we have
+f(5)=4
+because there exist
+p
+i
+and
+q
+i
+as followings:
+1=1⋅⌊
+9
+5
+⌋+0⋅⌈
+9
+5
+⌉
+9
+9
+2=0⋅⌊
+9
+5
+⌋+1⋅⌈
+9
+5
+⌉
+9
+9
+7=3⋅⌊
+9
+5
+⌋+2⋅⌈
+9
+5
+⌉
+9
+9
+9=3⋅⌊
+9
+5
+⌋+3⋅⌈
+9
+5
+⌉
+9
+9
+Therefore, the answer is
+∑
+9
+x=1
+x⋅f(x)=158
+.

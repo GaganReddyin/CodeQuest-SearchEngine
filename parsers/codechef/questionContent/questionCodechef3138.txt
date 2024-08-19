@@ -1,0 +1,27 @@
+Chef and Queries
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+As you know Chef likes problems which involving into newest data structures. Today he has troubes in solving tricky problem. You have array A consisting of N integers and Q queries to it. Queries are next: - L R K, how many values in segment A[L..R] have frequency not more than K.
+Input
+The first line of input contains T - number of test cases. T test cases follow.
+For each test case, first line contains an integer N - number of elements in array, and integer Q - number of queries to it.
+Second line contains N positive integer numbers - elements of array A. Each of next Q lines containing three integers L, R, K.
+Output
+For each query output answer for it in separate line.
+Constraints
+1 ≤ T, N, Q, sum over all values of N in the input, sum over all values of Q in the input ≤ 200,000
+1 ≤ Ai ≤ 109
+1 ≤ L ≤ R ≤ N
+1 ≤ K ≤ N
+Sample 1:
+Input
+Output
+1
+5 3
+1 2 3 2 1
+2 4 2
+1 5 1
+1 5 2
+2
+1
+3

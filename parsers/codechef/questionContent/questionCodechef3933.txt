@@ -1,0 +1,48 @@
+Random Permutation
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Chef has a random permutation
+P
+1
+,P
+2
+,…,P
+N
+and an integer
+K.
+A subsequence (not necessarily contiguous) of this permutation is called good if it has at most
+K pairs of neighbouring elements such that the left element is larger than the right element.
+Chef wants to know the maximum length of a good subsequence of his permutation. Can you help him?
+Input
+The first line of the input contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output
+Print a single line containing one integer ― the maximum length of a good subsequence.
+Constraints
+0≤K<N≤50,000
+1≤P
+i
+≤N for each valid
+i
+the permutation is chosen uniformly randomly among all permutations of the integers
+1 through
+N; note that
+K is not independent from the chosen permutation (it can be chosen differently depending on the permutation)
+Example Input
+8 1
+2 7 6 3 4 1 8 5
+Example Output
+5
+Explanation
+One good subsequence with the maximum length is
+[2,3,4,1,5].

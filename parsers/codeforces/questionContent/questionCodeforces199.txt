@@ -1,0 +1,144 @@
+A. Li Hua and Maze
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a rectangular maze of size
+n×m
+. Denote
+(r,c)
+as the cell on the
+r
+-th row from the top and the
+c
+-th column from the left. Two cells are adjacent if they share an edge. A path is a sequence of adjacent empty cells.
+Each cell is initially empty. Li Hua can choose some cells (except
+(
+x
+1
+,
+y
+1
+)
+and
+(
+x
+2
+,
+y
+2
+)
+) and place an obstacle in each of them. He wants to know the minimum number of obstacles needed to be placed so that there isn't a path from
+(
+x
+1
+,
+y
+1
+)
+to
+(
+x
+2
+,
+y
+2
+)
+.
+Suppose you were Li Hua, please solve this problem.
+Input
+The first line contains the single integer
+t
+(
+1≤t≤500
+) — the number of test cases.
+The first line of each test case contains two integers
+n,m
+(
+4≤n,m≤
+10
+9
+) — the size of the maze.
+The second line of each test case contains four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+(
+1≤
+x
+1
+,
+x
+2
+≤n,1≤
+y
+1
+,
+y
+2
+≤m
+) — the coordinates of the start and the end.
+It is guaranteed that
+|
+x
+1
+−
+x
+2
+|+|
+y
+1
+−
+y
+2
+|≥2
+.
+Output
+For each test case print the minimum number of obstacles you need to put on the field so that there is no path from
+(
+x
+1
+,
+y
+1
+)
+to
+(
+x
+2
+,
+y
+2
+)
+.
+Example
+input
+Copy
+3
+4 4
+2 2 3 3
+6 7
+1 1 2 3
+9 9
+5 1 3 6
+output
+Copy
+4
+2
+3
+Note
+In test case 1, you can put obstacles on
+(1,3),(2,3),(3,2),(4,2)
+. Then the path from
+(2,2)
+to
+(3,3)
+will not exist.

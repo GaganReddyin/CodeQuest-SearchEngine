@@ -1,0 +1,54 @@
+Tree Obsession
+Problem
+You will be given as input a tree consisting of N nodes, and a cost matrix C of size H x H. The matrix has the property that C(i, j) = C(j, i) and C(i, i) = 0.
+Chef is going to ask you Q queries now.
+In each query, you will be given a set S of k vertices. Say S = {V1, V2 ... Vk}. You will also be given a positive integer X. Your task is to find the minimum cost of a subset T of vertices of size X such that every vertex in T lies on a path between at least one pair of vertices in S.
+In other words, if T = {u1, u2, ... , uX}, then for every vertex ui, there should exist two vertices p and q such that ui lies on the path between p and q and both p, q belong to S. Note that ui can be p or q as well.
+For every vertex y, define the set Gy as the set of all pairs (i, j) such that y lies on the path between Vi and Vj and i <= j.
+Then, the cost of a set T is defined as:
+Note that for every vertex u in T, Gu has to be non empty.
+For every query that Chef poses, return the minimum cost of a set T with the given properties.
+Note: If there doesn't exist any set T, print No.
+Input
+The first input consists of two integers N and H, denoting the number of nodes in the tree and the size of Cost Matrix C. The nodes of the tree are numbered from 1 to N.
+Then (N-1) lines follow, each containing 2 integers a and b, denoting that there is an undirected edge between a and b in the tree.
+Each of the next H lines contain H space separated integers, describing the cost matrix C. The jth integer on the ith line is C[i][j].
+Next line contains a single integer Q, denoting the number of queries.
+Then 2*Q lines follow. The first line of each query contains 2 integers k and X, as specified in the problem. The second lines contains k space separated integers denoting the set S.
+Output
+For each query, print the required -1 or the minimum cost as specified in the problem.
+Constraints
+1 ≤ N ≤ 105
+1 ≤ Q ≤ 105
+1 ≤ k ≤ min(N, H)
+1 ≤ H ≤ 15
+1 ≤ X ≤ N
+-10000 ≤ Cij ≤ 10000, where Cij denotes values in Cost matrix
+Sample Input
+8 3
+1 2
+2 3
+2 4
+1 5
+5 6
+5 7
+7 8
+0 1 2
+1 0 -2
+2 -2 0
+3
+3 2
+3 6 4
+2 2
+2 3
+1 2
+8
+Sample Output
+-2
+2
+No
+Explanation
+The graph for the sample test case is given below, with the input vertices for the first query marked in yellow.
+For the first query, we need to find a set T of size two such that each vertex u in T lies on a path between a and b where both a and b belong to S = {3, 6, 4}, and the cost of T is minimum.
+For this query, the optimal answer either the set T = {1, 6} or T = {5, 6} or T = {1, 5}.
+The set G1 = {(0, 1), (1, 2)} and G6 = {(0, 1), (1, 1), (1, 2)}. Hence the cost corresponding to T = {1, 6} is (C[0][1] + C[1][2]) + (C[0][1] + C[1][1] + C[1][2]) which is equal to (1 + (-2)) + (1 + 0 + (-2)) = -2

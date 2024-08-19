@@ -1,0 +1,71 @@
+B. Unnatural Conditions
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let
+s(x)
+be sum of digits in decimal representation of positive integer
+x
+. Given two integers
+n
+and
+m
+, find some positive integers
+a
+and
+b
+such that
+s(a)≥n
+,
+s(b)≥n
+,
+s(a+b)≤m
+.
+Input
+The only line of input contain two integers
+n
+and
+m
+(
+1≤n,m≤1129
+).
+Output
+Print two lines, one for decimal representation of
+a
+and one for decimal representation of
+b
+. Both numbers must not contain leading zeros and must have length no more than
+2230
+.
+Examples
+input
+Copy
+6 5
+output
+Copy
+6 
+7
+input
+Copy
+8 16
+output
+Copy
+35 
+53
+Note
+In the first sample, we have
+n=6
+and
+m=5
+. One valid solution is
+a=6
+,
+b=7
+. Indeed, we have
+s(a)=6≥n
+and
+s(b)=7≥n
+, and also
+s(a+b)=s(13)=4≤m
+.

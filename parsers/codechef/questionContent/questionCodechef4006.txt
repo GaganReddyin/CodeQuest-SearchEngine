@@ -1,0 +1,274 @@
+Wireless Electricity (Challenge)
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Ada is in charge of upgrading Chefland's electrical network — she is implementing wireless electricity!
+For simplicity, let's consider Chefland a two-dimensional world, where the cities are represented by points on a plane and electric wires (which are not necessarily connecting the cities) are represented by straight line segments.
+There are
+N cities in Chefland (numbered
+1 through
+N) and
+M wires (numbered
+1 through
+M). For each valid
+i, the position of the
+i-th city is
+(X
+i
+,Y
+i
+). Also, for each valid
+i, the
+i-th wire is a line segment with endpoints
+(A
+i
+,B
+i
+) and
+(C
+i
+,D
+i
+) initially.
+In order to transmit power, Ada built two plates (line segments): the positive plate, which has endpoints
+(−1,0) and
+(0,−1), and the negative plate, which has endpoints
+(10
+6
++1,10
+6
+) and
+(10
+6
+,10
+6
++1).
+A wire is positive if it intersects the positive plate or intersects another wire about which we already know that it is positive. Similarly, a wire is negative if it intersects the negative plate or another negative wire. It is not allowed for any wire to be both positive and negative, because that creates a short-circuit.
+For each valid
+i, let
+S
+i
+be the minimum of distances of the
+i-th city from endpoints of positive wires, and let
+T
+i
+be the minimum of its distances from endpoints of negative wires. Then, the cost of transmitting electricity to the
+i-th city is
+S
+i
+2
++T
+i
+2
+. Let
+P be the sum of these costs over all cities.
+You are allowed to move the wires, but not to rotate them. For each valid
+i, the cost of moving the
+i-th segment by
+h
+i
+units horizontally and
+v
+i
+units vertically from its original position is
+h
+i
+2
++v
+i
+2
+. After such a move, the endpoints of the segment become
+(A
+i
++h
+i
+,B
+i
++v
+i
+) and
+(C
+i
++h
+i
+,D
+i
++v
+i
+). Let
+Q be the sum of costs of moving all the wires.
+Your goal is to move the wires and make
+P+Q as small as possible. In the final network of wires, there should be at least one positive wire, at least one negative wire, and no wire should be both positive and negative. However, it is allowed to have some wires that are neither positive nor negative.
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+X
+i
+and
+Y
+i
+.
+M more lines follow. For each valid
+i, the
+i-th of these lines contains four space-separated integers
+A
+i
+,
+B
+i
+,
+C
+i
+and
+D
+i
+.
+Output
+Print
+M lines. For each valid
+i, the
+i-th of these lines should contain two space-separated integers
+h
+i
+and
+v
+i
+denoting that the
+i-th wire is moved by
+h
+i
+(
+∣h
+i
+∣≤10
+6
+) units horizontally and by
+v
+i
+(
+∣v
+i
+∣≤10
+6
+) units vertically.
+Example Input
+4 4
+1 1
+2 2
+3 3
+4 4
+0 0 4 2
+3 5 4 2
+4 5 2 4
+1 5 3 2
+Example Output
+-1 0
+-1 0
+-1 1
+2 0
+Explanation
+The following figure shows the cities
+A,
+B,
+C and
+D, the positive plate
+EF, negative plate
+GH and the wires
+IJ,
+KL,
+MN and
+OP. Note that the negative plate is drawn closer for clarity.
+The following figure describes the state after moving the wires.
+Test Generation
+The source code used to generate test data can be downloaded here.
+N=10
+4
+M=2500
+all coordinates of the
+N cities are chosen uniformly randomly and independently among integers between
+0 and
+10
+6
+inclusive
+for each valid
+i,
+X
+i
+and
+Y
+i
+are chosen uniformly randomly and independently among integers between
+0 and
+10
+6
+inclusive
+a parameter
+L is chosen:
+L can be
+8,000,
+10,000,
+12,000,
+14,000 or
+16,000
+For each
+i from
+1 to
+M:
+two integers
+h
+i
+and
+v
+i
+different than zero are chosen uniformly randomly and independently between
+−L and
+L inclusive
+A
+i
+is chosen uniformly randomly among integers between
+max(0,−h
+i
+) and
+min(10
+6
+,10
+6
+−h
+i
+) inclusive
+B
+i
+is chosen uniformly randomly among integers between
+max(0,−v
+i
+) and
+min(10
+6
+,10
+6
+−v
+i
+) inclusive
+C
+i
+=A
+i
++h
+i
+D
+i
+=B
+i
++v
+i
+There are two test files for each possible value of
+L.
+Scoring
+The source code used to determine the score of your solution can be downloaded here.
+If your output is invalid, in particular if there is no positive wire, no negative wire, or if some wire is declared both positive and negative, you will receive the Wrong Answer verdict.
+The score for each test case (and therefore each test file) is
+P+Q. The score of a submission is equal to the sum of its scores over all test cases. Your goal is to minimise the score of your submission.
+There are 10 test files. During the contest, the displayed score will account for exactly 5 test files, i.e. your score reflects your submission's performance on 50% (5/10) of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other 5 test files.

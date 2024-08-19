@@ -1,0 +1,177 @@
+D. Captain Flint and Treasure
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Captain Fint is involved in another treasure hunt, but have found only one strange problem. The problem may be connected to the treasure's location or may not. That's why captain Flint decided to leave the solving the problem to his crew and offered an absurdly high reward: one day off. The problem itself sounds like this...
+There are two arrays
+a
+and
+b
+of length
+n
+. Initially, an
+ans
+is equal to
+0
+and the following operation is defined:
+Choose position
+i
+(
+1≤i≤n
+);
+Add
+a
+i
+to
+ans
+;
+If
+b
+i
+≠−1
+then add
+a
+i
+to
+a
+b
+i
+.
+What is the maximum
+ans
+you can get by performing the operation on each
+i
+(
+1≤i≤n
+) exactly once?
+Uncle Bogdan is eager to get the reward, so he is asking your help to find the optimal order of positions to perform the operation on them.
+Input
+The first line contains the integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of arrays
+a
+and
+b
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+6
+≤
+a
+i
+≤
+10
+6
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤n
+or
+b
+i
+=−1
+).
+Additional constraint: it's guaranteed that for any
+i
+(
+1≤i≤n
+) the sequence
+b
+i
+,
+b
+b
+i
+,
+b
+b
+b
+i
+,…
+is not cyclic, in other words it will always end with
+−1
+.
+Output
+In the first line, print the maximum
+ans
+you can get.
+In the second line, print the order of operations:
+n
+different integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+). The
+p
+i
+is the position which should be chosen at the
+i
+-th step. If there are multiple orders, print any of them.
+Examples
+input
+Copy
+3
+1 2 3
+2 3 -1
+output
+Copy
+10
+1 2 3 
+input
+Copy
+2
+-1 100
+2 -1
+output
+Copy
+99
+2 1 
+input
+Copy
+10
+-10 -1 2 2 5 -2 -3 -4 2 -6
+-1 -1 2 2 -1 5 5 7 7 9
+output
+Copy
+-9
+3 5 6 1 9 4 10 7 8 2

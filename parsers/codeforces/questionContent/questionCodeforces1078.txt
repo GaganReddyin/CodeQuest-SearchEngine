@@ -1,0 +1,379 @@
+E. Air Reform
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Berland is a large country with developed airlines. In total, there are
+n
+cities in the country that are historically served by the Berlaflot airline. The airline operates bi-directional flights between
+m
+pairs of cities,
+i
+-th of them connects cities with numbers
+a
+i
+and
+b
+i
+and has a price
+c
+i
+for a flight in both directions.
+It is known that Berlaflot flights can be used to get from any city to any other (possibly with transfers), and the cost of any route that consists of several consequent flights is equal to the cost of the most expensive of them. More formally, the cost of the route from a city
+t
+1
+to a city
+t
+k
+with
+(k−2)
+transfers using cities
+t
+2
+, 
+t
+3
+, 
+t
+4
+, …, 
+t
+k−1
+is equal to the maximum cost of flights from
+t
+1
+to
+t
+2
+, from
+t
+2
+to
+t
+3
+, from
+t
+3
+to
+t
+4
+and so on until the flight from
+t
+k−1
+to
+t
+k
+. Of course, all these flights must be operated by Berlaflot.
+A new airline, S8 Airlines, has recently started operating in Berland. This airline provides bi-directional flights between all pairs of cities that are not connected by Berlaflot direct flights. Thus, between each pair of cities there is a flight of either Berlaflot or S8 Airlines.
+The cost of S8 Airlines flights is calculated as follows: for each pair of cities
+x
+and
+y
+that is connected by a S8 Airlines flight, the cost of this flight is equal to the minimum cost of the route between the cities
+x
+and
+y
+at Berlaflot according to the pricing described earlier.
+It is known that with the help of S8 Airlines flights you can get from any city to any other with possible transfers, and, similarly to Berlaflot, the cost of a route between any two cities that consists of several S8 Airlines flights is equal to the cost of the most expensive flight.
+Due to the increased competition with S8 Airlines, Berlaflot decided to introduce an air reform and change the costs of its flights. Namely, for the
+i
+-th of its flight between the cities
+a
+i
+and
+b
+i
+, Berlaflot wants to make the cost of this flight equal to the minimum cost of the route between the cities
+a
+i
+and
+b
+i
+at S8 Airlines. Help Berlaflot managers calculate new flight costs.
+Input
+Each test consists of multiple test cases. The first line contains one integer
+t
+(
+1≤t≤10000
+) — the amount of test cases.
+The first line of each test case contains two integers
+n
+and
+m
+(
+4≤n≤200000
+,
+n−1≤m≤200000
+,
+m≤
+(n−1)(n−2)
+2
+) — the amount of cities in Berland and the amount of Berlaflot flights.
+The next
+m
+lines contain the description of Berlaflot flights. The
+i
+-th line contains three integers
+a
+i
+,
+b
+i
+and
+c
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+,
+1≤
+c
+i
+≤
+10
+9
+) — the numbers of cities that are connected with
+i
+-th Berlaflot flight and the price of
+i
+-th Berlaflot flight.
+It is guaranteed that no flight connects a city with itself, no two flights connect the same pair of cities. It is guaranteed that by using Berlaflot flights it is possible to get from any city to any other and by using S8 Airlines flights it is possible to get from any city to any other.
+Let
+N
+be the sum of
+n
+over all test cases and
+M
+be the sum of
+m
+over all test cases. It is guaranteed that
+N,M≤200000
+.
+Output
+For each test case you should print
+m
+integers in a single line,
+i
+-th of them should be the price of
+i
+-th Berlaflot flight after the air reform.
+Example
+input
+Copy
+3
+4 3
+1 2 1
+2 3 2
+4 3 3
+5 5
+1 2 1
+1 3 1
+2 4 1
+4 5 2
+5 1 3
+6 6
+1 2 3
+2 3 1
+3 6 5
+3 4 2
+4 5 4
+2 4 2
+output
+Copy
+3 3 3 
+1 1 1 2 2 
+4 4 5 3 4 4 
+Note
+In the first test case S8 Airlines will provide flights between these pairs of cities:
+(1,3)
+,
+(1,4)
+and
+(2,4)
+.
+The cost of a flight between cities
+1
+and
+3
+will be equal to
+2
+, since the minimum cost of the Berlaflot route is
+2
+ — the route consists of a flight between cities
+1
+and
+2
+costing
+1
+and a flight between cities
+2
+and
+3
+costing
+2
+, the maximum cost is
+2
+.
+The cost of a flight between cities
+1
+and
+4
+will be
+3
+, since the minimum cost of the Berlaflot route is
+3
+ — the route consists of a flight between cities
+1
+and
+2
+costing
+1
+, a flight between cities
+2
+and
+3
+costing
+2
+and a flight between cities
+3
+and
+4
+costing
+3
+, the maximum cost is
+3
+.
+The cost of a flight between cities
+2
+and
+4
+will be
+3
+, since the minimum cost of the Berlaflot route is
+3
+ — the route consists of a flight between cities
+2
+and
+3
+costing
+2
+and a flight between cities
+3
+and
+4
+costing
+3
+, the maximum cost is
+3
+.
+After the air reform, the cost of the Berlaflot flight between cities
+1
+and
+2
+will be
+3
+, since the minimum cost of the S8 Airlines route between these cities is
+3
+ — the route consists of a flight between cities
+1
+and
+4
+costing
+3
+and a flight between cities
+2
+and
+4
+costing
+3
+, the maximum cost is
+3
+.
+The cost of the Berlaflot flight between cities
+2
+and
+3
+will be
+3
+, since the minimum cost of the S8 Airlines route between these cities is
+3
+ — the route consists of a flight between cities
+2
+and
+4
+costing
+3
+, a flight between cities
+1
+and
+4
+costing
+3
+and a flight between
+1
+and
+3
+costing
+2
+, the maximum cost is
+3
+.
+The cost of the Berlaflot flight between cities
+3
+and
+4
+will be
+3
+, since the minimum cost of the S8 Airlines route between these cities is
+3
+ — the route consists of a flight between cities
+1
+and
+3
+costing
+2
+and a flight between cities
+1
+and
+4
+costing
+3
+, the maximum cost is
+3
+.
+In the second test case S8 Airlines will have the following flights: between cities
+1
+and
+4
+costing
+1
+, between cities
+2
+and
+3
+costing
+1
+, between cities
+2
+and
+5
+costing
+2
+, between cities
+3
+and
+4
+costing
+1
+and between cities
+3
+and
+5
+costing
+2
+.

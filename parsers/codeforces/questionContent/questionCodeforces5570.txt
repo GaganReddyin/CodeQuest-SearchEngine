@@ -1,0 +1,69 @@
+G. Xor-matic Number of the Graph
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an undirected graph, constisting of n vertices and m edges. Each edge of the graph has some non-negative integer written on it.
+Let's call a triple (u, v, s) interesting, if 1 ≤ u < v ≤ n and there is a path (possibly non-simple, i.e. it can visit the same vertices and edges multiple times) between vertices u and v such that xor of all numbers written on the edges of this path is equal to s. When we compute the value s for some path, each edge is counted in xor as many times, as it appear on this path. It's not hard to prove that there are finite number of such triples.
+Calculate the sum over modulo 109 + 7 of the values of s over all interesting triples.
+Input
+The first line of the input contains two integers n and m (1 ≤ n ≤ 100 000, 0 ≤ m ≤ 200 000) — numbers of vertices and edges in the given graph.
+The follow m lines contain three integers ui, vi and ti (1 ≤ ui, vi ≤ n, 0 ≤ ti ≤ 1018, ui ≠ vi) — vertices connected by the edge and integer written on it. It is guaranteed that graph doesn't contain self-loops and multiple edges.
+Output
+Print the single integer, equal to the described sum over modulo 109 + 7.
+Examples
+input
+Copy
+4 4
+1 2 1
+1 3 2
+2 3 3
+3 4 1
+output
+Copy
+12
+input
+Copy
+4 4
+1 2 1
+2 3 2
+3 4 4
+4 1 8
+output
+Copy
+90
+input
+Copy
+8 6
+1 2 2
+2 3 1
+2 4 4
+4 5 5
+4 6 3
+7 8 5
+output
+Copy
+62
+Note
+In the first example the are 6 interesting triples:
+(1, 2, 1)
+(1, 3, 2)
+(1, 4, 3)
+(2, 3, 3)
+(2, 4, 2)
+(3, 4, 1)
+The sum is equal to 1 + 2 + 3 + 3 + 2 + 1 = 12.
+In the second example the are 12 interesting triples:
+(1, 2, 1)
+(2, 3, 2)
+(1, 3, 3)
+(3, 4, 4)
+(2, 4, 6)
+(1, 4, 7)
+(1, 4, 8)
+(2, 4, 9)
+(3, 4, 11)
+(1, 3, 12)
+(2, 3, 13)
+(1, 2, 14)
+The sum is equal to 1 + 2 + 3 + 4 + 6 + 7 + 8 + 9 + 11 + 12 + 13 + 14 = 90.

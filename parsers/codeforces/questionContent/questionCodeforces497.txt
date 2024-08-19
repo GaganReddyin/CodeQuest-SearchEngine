@@ -1,0 +1,141 @@
+B. Diverse Substrings
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A non-empty digit string is diverse if the number of occurrences of each character in it doesn't exceed the number of distinct characters in it.
+For example:
+string "7" is diverse because 7 appears in it
+1
+time and the number of distinct characters in it is
+1
+;
+string "77" is not diverse because 7 appears in it
+2
+times and the number of distinct characters in it is
+1
+;
+string "1010" is diverse because both 0 and 1 appear in it
+2
+times and the number of distinct characters in it is
+2
+;
+string "6668" is not diverse because 6 appears in it
+3
+times and the number of distinct characters in it is
+2
+.
+You are given a string
+s
+of length
+n
+, consisting of only digits
+0
+to
+9
+. Find how many of its
+n(n+1)
+2
+substrings are diverse.
+A string
+a
+is a substring of a string
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.
+Note that if the same diverse string appears in
+s
+multiple times, each occurrence should be counted independently. For example, there are two diverse substrings in "77" both equal to "7", so the answer for the string "77" is
+2
+.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the string
+s
+.
+The second line of each test case contains a string
+s
+of length
+n
+. It is guaranteed that all characters of
+s
+are digits from
+0
+to
+9
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case print one integer — the number of diverse substrings of the given string
+s
+.
+Example
+input
+Copy
+7
+1
+7
+2
+77
+4
+1010
+5
+01100
+6
+399996
+5
+23456
+18
+789987887987998798
+output
+Copy
+1
+2
+10
+12
+10
+15
+106
+Note
+In the first test case, the diverse substring is "7".
+In the second test case, the only diverse substring is "7", which appears twice, so the answer is
+2
+.
+In the third test case, the diverse substrings are "0" (
+2
+times), "01", "010", "1" (
+2
+times), "10" (
+2
+times), "101" and "1010".
+In the fourth test case, the diverse substrings are "0" (
+3
+times), "01", "011", "0110", "1" (
+2
+times), "10", "100", "110" and "1100".
+In the fifth test case, the diverse substrings are "3", "39", "399", "6", "9" (
+4
+times), "96" and "996".
+In the sixth test case, all
+15
+non-empty substrings of "23456" are diverse.

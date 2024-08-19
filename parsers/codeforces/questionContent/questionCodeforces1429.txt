@@ -1,0 +1,148 @@
+D. Subsequence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice has an integer sequence
+a
+of length
+n
+and all elements are different. She will choose a subsequence of
+a
+of length
+m
+, and defines the value of a subsequence
+a
+b
+1
+,
+a
+b
+2
+,…,
+a
+b
+m
+as
+∑
+i=1
+m
+(m⋅
+a
+b
+i
+)−
+∑
+i=1
+m
+∑
+j=1
+m
+f(min(
+b
+i
+,
+b
+j
+),max(
+b
+i
+,
+b
+j
+)),
+m
+m
+m
+where
+f(i,j)
+denotes
+min(
+a
+i
+,
+a
+i+1
+,…,
+a
+j
+)
+.
+Alice wants you to help her to maximize the value of the subsequence she choose.
+A sequence
+s
+is a subsequence of a sequence
+t
+if
+s
+can be obtained from
+t
+by deletion of several (possibly, zero or all) elements.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤m≤n≤4000
+).
+The second line contains
+n
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+<
+2
+31
+).
+Output
+Print the maximal value Alice can get.
+Examples
+input
+Copy
+6 4
+15 2 18 12 13 4
+output
+Copy
+100
+input
+Copy
+11 5
+9 3 7 1 8 12 10 20 15 18 5
+output
+Copy
+176
+input
+Copy
+1 1
+114514
+output
+Copy
+0
+input
+Copy
+2 1
+666 888
+output
+Copy
+0
+Note
+In the first example, Alice can choose the subsequence
+[15,2,18,13]
+, which has the value
+4⋅(15+2+18+13)−(15+2+2+2)−(2+2+2+2)−(2+2+18+12)−(2+2+12+13)=100
+. In the second example, there are a variety of subsequences with value
+176
+, and one of them is
+[9,7,12,20,18]
+.

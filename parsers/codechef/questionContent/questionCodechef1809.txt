@@ -1,0 +1,109 @@
+Product Pain
+Problem
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+For a given array
+B
+1
+,B
+2
+,…,B
+M
+of length at least
+3, let's define its weight as the largest value of
+(B
+i
+−B
+j
+)⋅(B
+j
+−B
+k
+) over all possible triples
+(i,j,k) with
+1≤i,j,k≤M and
+i
+
+=j,j
+
+=k,k
+
+=i.
+You are given a sorted array
+A
+1
+,A
+2
+,…,A
+N
+(that is,
+A
+1
+≤A
+2
+≤…≤A
+N
+).
+Calculate the sum of weights of all contiguous subarrays of
+A of length at least
+3. That is, count the sum of weights of arrays
+[A
+i
+,A
+i+1
+,…,A
+j
+] over all
+1≤i<j≤N with
+j−i≥2.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing the sum of weights of all subarrays of
+A of length at least
+3.
+Constraints
+1≤T≤1000
+3≤N≤3000
+1≤A
+1
+≤A
+2
+…≤A
+N
+≤10
+6
+.
+Sum of
+N over all test cases won't exceed
+6000.
+Sample 1:
+Input
+Output
+2
+4
+1 2 3 4
+5
+1 42 69 228 2021
+4
+1041808
+Explanation:
+Explanation of the first test case of the sample:
+Given array has
+3 subarrays of length at least
+3.
+$[1, 2, 3]$ has weight $1$, with $i = 1, j = 2, k = 3$: $(1-2)\cdot(2-3) = 1$
+$[2, 3, 4]$ has weight $1$, with $i = 3, j = 2, k = 1$: $(4-3)\cdot(3-2) = 1$
+$[1, 2, 3, 4]$ has weight $2$, with $i = 1, j = 2, k = 4$: $(1-2)\cdot(2-4) = 2$, or with $i = 1, j = 3, k = 4$: $(1-3)\cdot(3-4) = 2$

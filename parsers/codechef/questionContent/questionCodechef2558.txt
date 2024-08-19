@@ -1,0 +1,83 @@
+P Equal To NP
+Problem
+You are given a string
+S, each character of which is either
+N or
+P. In one move, you can perform the following operation:
+Pick an index
+1≤i≤∣S∣ and flip
+S
+i
+, i.e, if
+S
+i
+=N set it to
+P and vice versa.
+Find the minimum number of moves required to obtain a string such that there exists a way to split it into several continuous substrings, each of which is either
+P or
+NP, and the number of
+P substrings in this splitting equals the number of
+NP substrings.
+For example,
+NPP and
+PNPPNP can be split this way (into
+NP +
+P and
+P +
+NP +
+P +
+NP respectively) but
+NNPP cannot.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of input of each test case contains the string
+S.
+Output Format
+For each test case, output a single line containing one integer — the minimum number of moves required to transform the string into the desired form.
+Constraints
+1≤T≤3.5⋅10
+4
+3≤∣S∣≤10
+5
+S contains only characters
+N and
+P
+∣S∣ is a multiple of
+3
+Sum of
+∣S∣ over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+3
+NNN
+PNP
+NPNPNPNNP
+2
+0
+2
+Explanation:
+Test Case
+1: Flip the second and third characters so that the string becomes
+NPP, which can be broken into substrings
+NP +
+P. Here the count of substrings of both types is
+1.
+Test Case
+2: The original string can already be split into
+P +
+NP, so no more moves are required.
+Test Case
+3: Flip the first and eighth characters so that the string becomes
+PPNPNPNPP, which can be broken into substrings
+P +
+P +
+NP +
+NP +
+NP +
+P. Here the count of substrings of both types is
+3.

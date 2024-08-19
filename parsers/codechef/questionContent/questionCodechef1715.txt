@@ -1,0 +1,68 @@
+Binary XOR
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given two binary strings
+A and
+B, each with length
+N. You may reorder the characters of
+A in an arbitrary way and reorder the characters of
+B also in an arbitrary (not necessarily the same) way. Then, you should compute the XOR of the resulting strings. Find the number of distinct values of this XOR which can be obtained, modulo
+1,000,000,007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains a single string
+A with length
+N.
+The third line contains a single string
+B with length
+N.
+Output
+For each test case, print a single line containing one integer ― the number of unique XORs modulo
+1,000,000,007.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+∣A∣=∣B∣=N
+A and
+B contain only characters '0' and '1'
+the sum of
+N over all test cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask #1 (10 points):
+N≤5
+the sum of
+N over all test cases does not exceed
+10
+Subtask #2 (30 points):
+N≤1,000
+the sum of
+N over all test cases does not exceed
+2⋅10
+3
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+1
+2
+00
+10
+2
+Explanation:
+Example case 1: The characters in each string can be reordered in two ways (swap them or do nothing), so there are four values of their XOR:
+"00" XOR "10" is "10"
+"00" XOR "01" is "01"
+"00" XOR "10" is "10"
+"00" XOR "01" is "01"
+There are only two distinct values.

@@ -1,0 +1,95 @@
+B. Views Matter
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You came to the exhibition and one exhibit has drawn your attention. It consists of
+n
+stacks of blocks, where the
+i
+-th stack consists of
+a
+i
+blocks resting on the surface.
+The height of the exhibit is equal to
+m
+. Consequently, the number of blocks in each stack is less than or equal to
+m
+.
+There is a camera on the ceiling that sees the top view of the blocks and a camera on the right wall that sees the side view of the blocks.
+Find the maximum number of blocks you can remove such that the views for both the cameras would not change.
+Note, that while originally all blocks are stacked on the floor, it is not required for them to stay connected to the floor after some blocks are removed. There is no gravity in the whole exhibition, so no block would fall down, even if the block underneath is removed. It is not allowed to move blocks by hand either.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤100000
+,
+1≤m≤
+10
+9
+) — the number of stacks and the height of the exhibit.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤m
+) — the number of blocks in each stack from left to right.
+Output
+Print exactly one integer — the maximum number of blocks that can be removed.
+Examples
+input
+Copy
+5 6
+3 3 3 3 3
+output
+Copy
+10
+input
+Copy
+3 5
+1 2 4
+output
+Copy
+3
+input
+Copy
+5 5
+2 3 1 4 4
+output
+Copy
+9
+input
+Copy
+1 1000
+548
+output
+Copy
+0
+input
+Copy
+3 3
+3 1 1
+output
+Copy
+1
+Note
+The following pictures illustrate the first example and its possible solution.
+Blue cells indicate removed blocks. There are
+10
+blue cells, so the answer is
+10
+.

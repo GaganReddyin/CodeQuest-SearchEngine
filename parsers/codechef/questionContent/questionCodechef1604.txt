@@ -1,0 +1,88 @@
+Equal Hamming Distance
+Problem
+Chef is given two binary strings
+A and
+B, each having length
+N.
+Chef wants to find the number of binary strings
+C, of length
+N, such that
+H(A,C)=H(B,C), where
+H(X,Y) denotes the hamming distance between the strings
+X and
+Y.
+Since the answer can be large, output it modulo
+10
+9
++7.
+Note: Hamming distance between two strings of equal length is the number of positions at which the corresponding characters are different.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N, the length of the strings.
+The second line contains the binary string
+A.
+The third line contains the binary string
+B.
+Output Format
+For each test case, output in a new line, the number of binary strings
+C which satisfy the given conditions modulo
+10
+9
++7.
+Constraints
+1≤T≤1000
+1≤N≤2⋅10
+5
+A and
+B consist of
+0 and
+1 only.
+Sum of
+N over all test cases do not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2
+11
+00
+5
+10101
+10101
+3
+101
+011
+2
+32
+4
+Explanation:
+Test case
+1: The number of strings
+C, of length
+2, such that
+H(A,C)=H(B,C) is
+2. The strings are:
+C=10: Here,
+H(11,10)=H(00,10)=1, as there is only one position where the corresponding characters are different.
+C=01: Here,
+H(11,01)=H(00,01)=1.
+Test case
+3: The number of strings
+C, of length
+3, such that
+H(A,C)=H(B,C) is
+4. The strings are:
+C=000: Here,
+H(101,000)=H(011,000)=2, as there are two positions where the corresponding characters are different.
+C=111: Here,
+H(101,111)=H(011,111)=1, as there is only one position where the corresponding characters are different.
+C=001: Here,
+H(101,001)=H(011,001)=1, as there is only one position where the corresponding characters are different.
+C=110: Here,
+H(101,110)=H(011,110)=2, as there are two positions where the corresponding characters are different.

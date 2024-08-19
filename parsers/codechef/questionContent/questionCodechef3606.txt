@@ -1,0 +1,163 @@
+Characteristic Polynomial Verification
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Given an array
+C of
+M integers and a square matrix
+A (with integer entries) of dimension
+N×N, verify whether the following equation is true,
+C
+0
+I
+N
++C
+1
+A+C
+2
+A
+2
++…C
+M−1
+A
+M−1
+≡0
+N
+(mod998244353)
+where
+0
+N
+is the square null matrix (matrix in which all elements are zero) and
+I
+N
+is the identity matrix, both having dimensions
+N×N.
+Note:
+Two matrices
+A,B each with integer entries are said to be congruent modulo
+M iff all entries of
+A−B are divisible by
+M. This is denoted as
+A≡B(modM).
+Since the input-output is large, prefer using fast input-output methods.
+Input Format
+The first line contains
+T denoting the number of test cases. Then the test cases follow.
+The first line of each test case contains a single integer
+M denoting the length of
+C.
+The second line of each testcase contains
+M space separated integers,
+C
+0
+,C
+1
+,…C
+M−1
+representing the array
+C.
+The third line of each testcase contains a single integer
+N denoting the size of the square matrix
+A.
+The
+i-th line of the next
+N lines contains
+N space-separated integers
+A
+i,1
+,A
+i,2
+,…,A
+i,N
+denoting the elements of the
+i-th row of the matrix
+A.
+Output Format
+For each test case, output on a single line YES if the equation
+C
+0
+I
+n
++C
+1
+A+C
+2
+A
+2
++…C
+M−1
+A
+M−1
+≡0
+N
+(mod998244353) satisfies, and NO otherwise.
+Output is case insensitive, i.e., you may print each character of the string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+Constraints
+1≤T≤200
+1≤N≤1000
+1≤M≤11
+0≤C
+i
+<998244353
+0≤A
+i,j
+<998244353
+Sum of
+N over all test cases does not exceed
+2000.
+Subtasks
+Subtask 1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+2
+3
+998244351 998244348 1
+2
+1 2
+3 4
+3
+998244351 998244348 1
+2
+1 1
+1 1
+YES
+NO
+Explanation:
+Both test cases have the same co-efficients. Since
+998244351≡−2(mod998244353) and
+998244348≡−5(mod998244353), for convenience of explanation, we shall take the co-efficients as
+−2,−5,1. Note that this does not affect the answer.
+Test case
+1: The given matrix,
+A=[
+1
+3
+2
+4
+], satisfies the equation
+−2I
+2
+−5A+A
+2
+=0
+2
+, so the answer is YES.
+Test case
+2: For the given matrix,
+A=[
+1
+1
+1
+1
+], the left hand side of the equation evaluates to,
+−2I
+2
+−5A+A
+2
+=[
+−5
+−3
+−3
+−5
+]. Clearly none of the entries are divisible by
+998244353, so the answer is NO.

@@ -1,0 +1,157 @@
+M. Managing Telephone Poles
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Mr. Chanek's city can be represented as a plane. He wants to build a housing complex in the city.
+There are some telephone poles on the plane, which is represented by a grid
+a
+of size
+(n+1)×(m+1)
+. There is a telephone pole at
+(x,y)
+if
+a
+x,y
+=1
+.
+For each point
+(x,y)
+, define
+S(x,y)
+as the square of the Euclidean distance between the nearest pole and
+(x,y)
+. Formally, the square of the Euclidean distance between two points
+(
+x
+1
+,
+y
+1
+)
+and
+(
+x
+2
+,
+y
+2
+)
+is
+(
+x
+2
+−
+x
+1
+)
+2
++(
+y
+2
+−
+y
+1
+)
+2
+.
+To optimize the building plan, the project supervisor asks you the sum of all
+S(x,y)
+for each
+0≤x≤n
+and
+0≤y≤m
+. Help him by finding the value of
+∑
+n
+x=0
+∑
+m
+y=0
+S(x,y)
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+0≤n,m<2000
+) — the size of the grid.
+Then
+(n+1)
+lines follow, each containing
+(m+1)
+integers
+a
+i,j
+(
+0≤
+a
+i,j
+≤1
+) — the grid denoting the positions of telephone poles in the plane. There is at least one telephone pole in the given grid.
+Output
+Output an integer denoting the value of
+∑
+n
+x=0
+∑
+m
+y=0
+S(x,y)
+.
+Examples
+input
+Copy
+2 2
+101
+000
+000
+output
+Copy
+18
+input
+Copy
+5 4
+10010
+00000
+01000
+00001
+00100
+00010
+output
+Copy
+36
+Note
+In the first example, the nearest telephone pole for the points
+(0,0)
+,
+(1,0)
+,
+(2,0)
+,
+(0,1)
+,
+(1,1)
+, and
+(2,1)
+is at
+(0,0)
+. While the nearest telephone pole for the points
+(0,2)
+,
+(1,2)
+, and
+(2,2)
+is at
+(0,2)
+. Thus,
+∑
+n
+x=0
+∑
+m
+y=0
+S(x,y)=(0+1+4)+(1+2+5)+(0+1+4)=18
+.

@@ -1,0 +1,172 @@
+A. Balanced Rating Changes
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Another Codeforces Round has just finished! It has gathered
+n
+participants, and according to the results, the expected rating change of participant
+i
+is
+a
+i
+. These rating changes are perfectly balanced — their sum is equal to
+0
+.
+Unfortunately, due to minor technical glitches, the round is declared semi-rated. It means that all rating changes must be divided by two.
+There are two conditions though:
+For each participant
+i
+, their modified rating change
+b
+i
+must be integer, and as close to
+a
+i
+2
+as possible. It means that either
+b
+i
+=⌊
+a
+i
+2
+⌋
+or
+b
+i
+=⌈
+a
+i
+2
+⌉
+. In particular, if
+a
+i
+is even,
+b
+i
+=
+a
+i
+2
+. Here
+⌊x⌋
+denotes rounding down to the largest integer not greater than
+x
+, and
+⌈x⌉
+denotes rounding up to the smallest integer not smaller than
+x
+.
+The modified rating changes must be perfectly balanced — their sum must be equal to
+0
+.
+Can you help with that?
+Input
+The first line contains a single integer
+n
+(
+2≤n≤13845
+), denoting the number of participants.
+Each of the next
+n
+lines contains a single integer
+a
+i
+(
+−336≤
+a
+i
+≤1164
+), denoting the rating change of the
+i
+-th participant.
+The sum of all
+a
+i
+is equal to
+0
+.
+Output
+Output
+n
+integers
+b
+i
+, each denoting the modified rating change of the
+i
+-th participant in order of input.
+For any
+i
+, it must be true that either
+b
+i
+=⌊
+a
+i
+2
+⌋
+or
+b
+i
+=⌈
+a
+i
+2
+⌉
+. The sum of all
+b
+i
+must be equal to
+0
+.
+If there are multiple solutions, print any. We can show that a solution exists for any valid input.
+Examples
+input
+Copy
+3
+10
+-5
+-5
+output
+Copy
+5
+-2
+-3
+input
+Copy
+7
+-7
+-29
+0
+3
+24
+-29
+38
+output
+Copy
+-3
+-15
+0
+2
+12
+-15
+19
+Note
+In the first example,
+b
+1
+=5
+,
+b
+2
+=−3
+and
+b
+3
+=−2
+is another correct solution.
+In the second example there are
+6
+possible solutions, one of them is shown in the example output.

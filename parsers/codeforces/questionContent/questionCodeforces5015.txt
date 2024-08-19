@@ -1,0 +1,47 @@
+C. Arpa and a game with Mojtaba
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mojtaba and Arpa are playing a game. They have a list of n numbers in the game.
+In a player's turn, he chooses a number pk (where p is a prime number and k is a positive integer) such that pk divides at least one number in the list. For each number in the list divisible by pk, call it x, the player will delete x and add to the list. The player who can not make a valid choice of p and k loses.
+Mojtaba starts the game and the players alternatively make moves. Determine which one of players will be the winner if both players play optimally.
+Input
+The first line contains a single integer n (1 ≤ n ≤ 100) — the number of elements in the list.
+The second line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 109) — the elements of the list.
+Output
+If Mojtaba wins, print "Mojtaba", otherwise print "Arpa" (without quotes).
+You can print each letter in any case (upper or lower).
+Examples
+input
+Copy
+4
+1 1 1 1
+output
+Copy
+Arpa
+input
+Copy
+4
+1 1 17 17
+output
+Copy
+Mojtaba
+input
+Copy
+4
+1 1 17 289
+output
+Copy
+Arpa
+input
+Copy
+5
+1 2 3 4 5
+output
+Copy
+Arpa
+Note
+In the first sample test, Mojtaba can't move.
+In the second sample test, Mojtaba chooses p = 17 and k = 1, then the list changes to [1, 1, 1, 1].
+In the third sample test, if Mojtaba chooses p = 17 and k = 1, then Arpa chooses p = 17 and k = 1 and wins, if Mojtaba chooses p = 17 and k = 2, then Arpa chooses p = 17 and k = 1 and wins.

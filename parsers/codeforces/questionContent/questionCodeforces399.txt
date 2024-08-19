@@ -1,0 +1,182 @@
+F. MCF
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a graph consisting of
+n
+vertices and
+m
+directed arcs. The
+i
+-th arc goes from the vertex
+x
+i
+to the vertex
+y
+i
+, has capacity
+c
+i
+and weight
+w
+i
+. No arc goes into the vertex
+1
+, and no arc goes from the vertex
+n
+. There are no cycles of negative weight in the graph (it is impossible to travel from any vertex to itself in such a way that the total weight of all arcs you go through is negative).
+You have to assign each arc a flow (an integer between
+0
+and its capacity, inclusive). For every vertex except
+1
+and
+n
+, the total flow on the arcs going to this vertex must be equal to the total flow on the arcs going from that vertex. Let the flow on the
+i
+-th arc be
+f
+i
+, then the cost of the flow is equal to
+∑
+i=1
+m
+f
+i
+w
+i
+. You have to find a flow which minimizes the cost.
+Sounds classical, right? Well, we have some additional constraints on the flow on every edge:
+if
+c
+i
+is even,
+f
+i
+must be even;
+if
+c
+i
+is odd,
+f
+i
+must be odd.
+Can you solve this problem?
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤100
+;
+1≤m≤200
+).
+Then
+m
+lines follow. The
+i
+-th of them contains four integers
+x
+i
+,
+y
+i
+,
+c
+i
+, and
+w
+i
+(
+1≤
+x
+i
+≤n−1
+;
+2≤
+y
+i
+≤n
+;
+x
+i
+≠
+y
+i
+;
+1≤
+c
+i
+≤100
+;
+−100≤
+w
+i
+≤100
+). These integers describe the
+i
+-th arc.
+Additional constraints on the input:
+there are no negative cycles in the graph.
+Output
+If a flow satisfying all of the constraints does not exist, print Impossible.
+Otherwise, print two lines:
+the first line should contain one word Possible;
+the second line should contain
+m
+integers
+f
+1
+,
+f
+2
+,…,
+f
+m
+.
+If there are multiple answers, print any of them. Note that the cost of the flow should be minimized.
+Examples
+input
+Copy
+3 3
+1 2 3 -10
+1 2 3 -15
+2 3 2 0
+output
+Copy
+Possible
+1 1 2
+input
+Copy
+3 3
+1 2 3 -10
+1 2 3 -15
+2 3 3 0
+output
+Copy
+Impossible
+input
+Copy
+3 3
+1 2 3 -10
+1 2 3 -15
+2 3 4 0
+output
+Copy
+Possible
+1 3 4
+input
+Copy
+6 7
+5 6 9 -40
+1 2 3 -10
+1 4 5 20
+4 5 7 30
+2 5 1 -15
+1 3 3 5
+3 5 3 0
+output
+Copy
+Possible
+5 1 1 1 1 3 3

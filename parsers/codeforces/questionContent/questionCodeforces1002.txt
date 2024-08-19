@@ -1,0 +1,175 @@
+K. Pandemic Restrictions
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+After a long time living abroad, you have decided to move back to Italy and have to find a place to live, but things are not so easy due to the ongoing global pandemic.
+Your three friends Fabio, Flavio and Francesco live at the points with coordinates
+(
+x
+1
+,
+y
+1
+),(
+x
+2
+,
+y
+2
+)
+and
+(
+x
+3
+,
+y
+3
+)
+, respectively. Due to the mobility restrictions in response to the pandemic, meetings are limited to
+3
+persons, so you will only be able to meet
+2
+of your friends at a time. Moreover, in order to contain the spread of the infection, the authorities have imposed the following additional measure: for each meeting, the sum of the lengths travelled by each of the attendees from their residence place to the place of the meeting must not exceed
+r
+.
+What is the minimum value of
+r
+(which can be any nonnegative real number) for which there exists a place of residence that allows you to hold the three possible meetings involving you and two of your friends? Note that the chosen place of residence need not have integer coordinates.
+Input
+The first line contains the two integers
+x
+1
+,
+y
+1
+(
+−
+10
+4
+≤
+x
+1
+,
+y
+1
+≤
+10
+4
+) — the coordinates of the house of your friend Fabio.
+The second line contains the two integers
+x
+2
+,
+y
+2
+(
+−
+10
+4
+≤
+x
+2
+,
+y
+2
+≤
+10
+4
+) — the coordinates of the house of your friend Flavio.
+The third line contains the two integers
+x
+3
+,
+y
+3
+(
+−
+10
+4
+≤
+x
+3
+,
+y
+3
+≤
+10
+4
+) — the coordinates of the house of your friend Francesco.
+It is guaranteed that your three friends live in different places (i.e., the three points
+(
+x
+1
+,
+y
+1
+)
+,
+(
+x
+2
+,
+y
+2
+)
+,
+(
+x
+3
+,
+y
+3
+)
+are guaranteed to be distinct).
+Output
+Print the minimum value of
+r
+which allows you to find a residence place satisfying the above conditions. Your answer is considered correct if its absolute or relative error does not exceed
+10
+−4
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is accepted if and only if
+|a−b|
+max(1,|b|)
+≤
+10
+−4
+.
+Examples
+input
+Copy
+0 0
+5 0
+3 3
+output
+Copy
+5.0686143166
+input
+Copy
+-1 0
+0 0
+1 0
+output
+Copy
+2.0000000000
+Note
+In the first sample, Fabio, Flavio and Francesco live at the points with coordinates
+(0,0)
+,
+(5,0)
+and
+(3,3)
+respectively. The optimal place of residence, represented by a green house in the picture below, is at the point with coordinates
+(2.3842...,0.4151...)
+.
+For instance, it is possible for you to meet Flavio and Francesco at the point depicted below, so that the sum of the lengths travelled by the three attendees is at most (and in fact equal to)
+r=5.0686...
+.
+In the second sample, any point on the segment
+{(x,0): −1≤x≤1}
+is an optimal place of residence.

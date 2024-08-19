@@ -1,0 +1,38 @@
+Buying Seedlings
+Problem
+Read problems statements in Mandarin Chinese , Russian and Vietnamese as well.
+Recently, Sergey bought a plot of S square units and now wants to build a cherry tree farm at this plot.
+In order to do so, he wants to visit the market and buy a number of cherry tree seedlings. There are N kinds of seedlings available in the market. One seedling of the ith kind will occupy Ai square units of Sergey's farm, will bring Sergey Ci burles of profit, and costs Bi burles each. There is an infinite amount of seedlings of each kind available.
+Now, Sergey wants to know the number of ways to buy some seedlings in such a way that the total space they occupy will not exceed the size of Sergey's plot of land and the profit from cherry trees from the seedlings bought exceeds the money spent on them.
+Input
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each description contains two space-separated integers N and S denoting the number of kinds of seedlings and the area of Sergey's plot of land.
+Each of the following N lines contains three space-separated integers — Ai, Bi, and Ci — denoting the area occupied by one seedling of the ith kind, the cost of one seedling of this kind and the profit a seedling of this kind will bring, respectively.
+Output
+For each test case, output a single line containing the number of ways to buy seedlings in such a way that the profit from these seedlings exceeds the expenses on these seedlings and the occupied area doesn't exceed S, modulo 109+7.
+Constraints
+1 ≤ Ai ≤ S
+1 ≤ sum of N in a single test case ≤ 100
+Subtask 1 (17 points):
+1 ≤ N, S ≤ 10
+1 ≤ Bi, Ci ≤ 10
+Subtask 2 (35 points):
+1 ≤ N, S ≤ 50
+1 ≤ Bi, Ci ≤ 50
+Subtask 3 (48 points):
+1 ≤ N, S ≤ 100
+1 ≤ Bi ≤ 100
+1 ≤ Ci ≤ 107
+Example
+Input:
+1
+2 2
+1 45 8668081
+1 97 55
+Output:
+3
+Explanation
+Example case 1. There are three possible options:
+Buy one seedling of the first kind.
+Buy two seedlings of the first kind.
+Buy one seedling of the first kind and one seedling of the second kind.

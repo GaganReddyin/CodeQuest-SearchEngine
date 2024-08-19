@@ -1,0 +1,100 @@
+Chef and the Combination Lock
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef has a combination lock with
+N wheels (numbered
+1 through
+N). For each valid
+i, on the
+i-th wheel, the integers from
+0 to
+A
+i
+(inclusive) are written in ascending order (
+0 and
+A
+i
+are also adjacent). Initially, one value on each wheel is selected uniformly randomly and independently.
+The lock operates in a very peculiar way: it opens when there is at least one wheel where either
+0 or the largest value on that wheel is selected. Chef wants to open the lock using the smallest possible number of operations; in one operation, he may choose one wheel and rotate it clockwise or counterclockwise by
+1 unit (i.e. select a value that is adjacent to the previously selected value on that wheel).
+Find the expected value of the number of operations which Chef needs to perform to open the lock.
+The expected number of operations can be represented as a fraction
+Q
+P
+, where
+P is a non-negative integer and
+Q a positive integer coprime with
+998,244,353. You should calculate
+P⋅Q
+−1
+modulo
+998,244,353, where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer
+P⋅Q
+−1
+modulo
+998,244,353.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+5
+0≤A
+i
+<998,244,352 for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (10 points):
+N≤5,000
+A
+i
+≤5,000 for each valid
+i
+the sum of
+N over all test cases does not exceed
+5,000
+Subtask #2 (20 points):
+N≤5,000
+the sum of
+N over all test cases does not exceed
+5,000
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+3
+2
+2 2
+2
+5 5
+3
+3 4 5
+443664157
+221832079
+598946612

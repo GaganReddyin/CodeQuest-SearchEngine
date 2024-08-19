@@ -1,0 +1,106 @@
+Operations on a Matrix
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+"It's totally fun to play troublemakers ― totally." - Lee Pace
+Sakshi had a matrix with
+N rows (numbered
+1 through
+N) and
+M columns (numbered
+1 through
+M). Initially, all cells of this matrix contained
+0-s. Let's denote a cell in row
+r and column
+c by
+(r,c).
+Sakshi is well-known for troubling others. This time, her friends Nikki and Mansi planned to take revenge and teach her a lesson, so they changed her matrix by performing the following operation
+Q times:
+Choose any valid cell
+(x,y).
+Add
+1 to all the cells in row
+x.
+Add
+1 to all the cells in column
+y.
+For each valid
+i, the cell chosen in the
+i-th operation was
+(X
+i
+,Y
+i
+). Nikki and Mansi challenged Sakshi to find the number of cells in the resulting matrix which contain odd integers. Sakshi is not good at math, since she has spent all her life troubling others, so this time, she really needs your help. Help Sakshi find the answer.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+Q.
+Q lines follow. For each
+i (
+1≤i≤Q), the
+i-th of these lines contains two space-separated integers
+X
+i
+and
+Y
+i
+.
+Output
+For each test case, print a single line containing one integer ― the number of cells with odd values.
+Constraints
+1≤T≤300
+1≤N,M,Q≤10
+5
+1≤X
+i
+≤N for each valid
+i
+1≤Y
+i
+≤M for each valid
+i
+the sum of
+N over all test cases does not exceed
+3⋅10
+5
+the sum of
+M over all test cases does not exceed
+3⋅10
+5
+the sum of
+Q over all test cases does not exceed
+3⋅10
+5
+Subtasks
+Subtask #1 (40 points):
+1≤N,M,Q≤300
+Subtask #2 (40 points):
+1≤T≤3
+1≤N⋅M≤10
+6
+1≤Q≤10
+5
+Subtask #3 (20 points): original constraints
+Sample 1:
+Input
+Output
+1
+2 2 3
+1 1
+1 2
+2 1
+2
+Explanation:
+Example case 1: After applying the first operation, the matrix becomes:
+2 1
+1 0
+After applying the second operation, it becomes:
+3 3
+1 1
+Finally, after applying the third operation, it becomes:
+4 3
+3 2

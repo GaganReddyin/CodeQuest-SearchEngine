@@ -1,0 +1,64 @@
+E. Placing Rooks
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Calculate the number of ways to place
+n
+rooks on
+n×n
+chessboard so that both following conditions are met:
+each empty cell is under attack;
+exactly
+k
+pairs of rooks attack each other.
+An empty cell is under attack if there is at least one rook in the same row or at least one rook in the same column. Two rooks attack each other if they share the same row or column, and there are no other rooks between them. For example, there are only two pairs of rooks that attack each other in the following picture:
+One of the ways to place the rooks for
+n=3
+and
+k=2
+Two ways to place the rooks are considered different if there exists at least one cell which is empty in one of the ways but contains a rook in another way.
+The answer might be large, so print it modulo
+998244353
+.
+Input
+The only line of the input contains two integers
+n
+and
+k
+(
+1≤n≤200000
+;
+0≤k≤
+n(n−1)
+2
+).
+Output
+Print one integer — the number of ways to place the rooks, taken modulo
+998244353
+.
+Examples
+input
+Copy
+3 2
+output
+Copy
+6
+input
+Copy
+3 3
+output
+Copy
+0
+input
+Copy
+4 0
+output
+Copy
+24
+input
+Copy
+1337 42
+output
+Copy
+807905441

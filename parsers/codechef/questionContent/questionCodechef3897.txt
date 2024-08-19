@@ -1,0 +1,58 @@
+Conquer Beyond the Wall
+Problem
+Keywords:
+World: A combination of nations
+Nation: A group of islands having same symbol (can be thought of as convex boundary over all islands having same symbol. 2 or more nations can intersect)
+Island: Represented by a symbol and its coordinate
+The Earth consist of many islands. Each island is identified by its symbol and position. We have a crazy villain with us who wants to rule a world that has his name.
+Given the extremity of his dream, he only wants to rule such a world that consist of nations having influence greater than his dream influence. Let us call these nations as special nation. The influence of any nation (group of islands having same symbol) is the max distance between any pair of islands within nation. If any nation has only one island, its influence is 0.
+To check whether he can spell his name, he will have to select a subset of special nations, and see whether there exists a line parallel to y axis that goes only through (cuts or touches) all of them and no other special nation. He can then use a subset of symbols cut by this line to spell out his name. (He is free to rearrange the symbols while spelling out his name)
+Tell him whether it will be possible to achieve his dream, and if so, what is the minimum number of nations that he has to conquer. (if a line cuts or touches an island, then the villain has to conquer it).
+It is to be noted that in case any nation has influence not greater than dream influence, Villian does not need to conquer this nation even if the line parallel to y-axis passes over it.
+###Input:
+First line will contain
+N,M,D, where
+N is the length of his name (consisting of unique symbols),
+M is the number of islands, and
+D is the dream influence.
+The next line will have
+N symbols
+Si describing the villains name.
+Next
+M lines each consist of 3 integers
+X,Y,S, where
+X,Y describes the island's coordinate and
+S is the island's symbol
+###Output: If it is possible for out villain to to spell out his name output
+YES followed by the minimum number of nation that he has to conquer separated by space. Otherwise output
+NO. (See sample output for clarity)
+###Constraints
+1≤N≤10
+6
+1≤M≤10
+6
+0≤D≤10
+9
+0≤X≤10
+9
+0≤Y≤10
+9
+0≤S≤10
+6
+0≤Si≤10
+6
+###Sample Input: 2 11 1
+1 4
+0 0 1
+10 0 1
+0 1 2
+3 1 2
+1 2 2
+7 1 3
+10 1 3
+8 2 3
+8 3 4
+1 4 4
+8 4 4
+###Sample Output: YES 2
+Image for Description

@@ -1,0 +1,69 @@
+RGB Construction
+Problem
+Chef's friend JJ challenged him to construct a tree which has exactly
+R red coloured nodes,
+G green coloured nodes and
+B blue coloured nodes.
+To make the task interesting he added an extra condition: the simple path between any two blue nodes should contain at least one red node and at least one green node.
+Can you help Chef to complete JJ's challenge by constructing any valid tree that satisfies these conditions?
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains
+R,
+G, and
+B - the number of red, green and blue nodes respectively in the tree.
+Output Format
+If a tree can be constructed that fulfils all the requirements then
+In the first line, output a string of length
+R+G+B in which the
+i
+th
+character (1-based indexing) is either R, G or B denoting the colour of the
+i
+th
+node as red, green or blue respectively.
+In the following
+R+G+B−1 lines, output two integers
+U and
+V denoting there is an edge between
+U
+th
+and
+V
+th
+node.
+If no tree fulfils the requirements print -1 in a single line.
+Constraints
+1≤T≤100
+3≤R+G+B≤1000
+R,G,B≥1
+Sample 1:
+Input
+Output
+3
+1 1 1
+1 1 2
+1 2 5
+RBG
+1 2
+1 3
+BRGB
+1 2
+2 3
+3 4
+-1
+Explanation:
+Test case
+1: There is only one blue node. Hence, any valid tree with
+1 red,
+1 green and
+1 blue node will pass the conditions.
+Test case
+2: There are two blue nodes numbered
+1 and
+4 and the simple path between them passes through one red node numbered
+2 and one green node numbered
+3. Hence, this tree is valid.
+Test case
+3: No valid tree can be constructed under the given constraints.

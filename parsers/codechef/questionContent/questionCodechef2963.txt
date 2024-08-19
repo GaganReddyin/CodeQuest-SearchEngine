@@ -1,0 +1,118 @@
+Maximize the NOSS
+Problem
+###Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+You are given a sequence of positive integers
+a
+1
+,a
+2
+,…,a
+N
+. You may change up to two elements of this sequence, each of them to any positive integer (not necessarily the same for two elements). Let's denote the resulting sequence by
+b
+1
+,b
+2
+,…,b
+N
+.
+Consider all
+2
+N
+subsequences of
+b
+1
+,b
+2
+,…,b
+N
+. For each subsequence, compute the sum of its elements (
+0 for the empty subsequence). Let's denote the set of these sums by
+S; note that a set contains each integer at most once. Finally, NOSS is the size of set
+S. For example, if
+[b
+1
+,b
+2
+,b
+3
+]=[17,23,40], then
+S={0,17,23,40,57,63,80} and NOSS is
+7.
+Find the maximum possible NOSS.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Output
+For each test case, print a single line containing one integer — the maximum possible NOSS.
+Constraints
+1≤T≤3
+2≤N≤10,000
+1≤a
+i
+≤10,000 for each valid
+i
+1≤∑
+i=1
+N
+a
+i
+≤10,000
+Subtasks
+Subtask #1 (20 points):
+1≤∑
+i=1
+N
+a
+i
+≤100
+Subtask #2 (20 points):
+1≤∑
+i=1
+N
+a
+i
+≤1000
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+3
+5 
+1 2 3 4 5
+6
+1 1 1 1 1 1
+3
+1 5 7
+32
+20
+8
+Explanation:
+Example case 1: One possible way is to change
+3 to
+10 and
+5 to
+20. Then
+S={0…7,10…17,20…27,30…37} (
+a…b denotes all integer from
+a to
+b inclusive) and NOSS is
+32.
+Example case 2: One possible way is to change one element of the initial sequence from
+1 to
+10 and another from
+1 to
+20.
+Example case 3: The optimal NOSS is achieved even if nothing is changed.

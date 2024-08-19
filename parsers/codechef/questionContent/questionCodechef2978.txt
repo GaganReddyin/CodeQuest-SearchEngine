@@ -1,0 +1,110 @@
+Similar Subsequence
+Problem
+Chef is given an array
+A of length
+N.
+He considers a subarray
+[L,R] to be good if and only if there exists a subsequence
+[i
+1
+,i
+2
+,…,i
+R−L+1
+] such that:
+A
+i
+k
+=A
+L+k−1
+for each
+1≤k≤R−L+1 (i.e. the subsequence is same as the subarray element-wise)
+For at least one value of
+k,
+i
+k
+
+=L+k−1 (i.e. the subsequence differs from the subarray index-wise).
+For each
+i
+(1≤i≤N), determine the number of good subarrays of length
+i.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N denoting the length of the array
+A.
+The second line contains
+N space-separated integers denoting the array
+A.
+Output Format
+For each test case, output
+N space separated integers denoting the number of good subarrays of length
+i for each
+1≤i≤N.
+Constraints
+1≤T≤5000
+1≤N≤10
+5
+1≤A
+i
+≤N
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+1 2 1 2
+5
+1 2 4 2 5
+6
+1 2 1 1 1 1
+4 2 0 0 
+2 2 0 0 0 
+5 4 4 3 1 0
+Explanation:
+In the below explanation, the subarray containing the elements
+[A
+L
+,A
+L+1
+,…,A
+R
+] will be denoted
+[L,R] and subsequences will be denoted by their choice of indices, as in the statement.
+Test case
+1: The good subarrays are:
+[1,1], with the corresponding subsequence being
+[3]
+[2,2], with the corresponding subsequence being
+[4]
+[3,3], with the corresponding subsequence being
+[1]
+[4,4], with the corresponding subsequence being
+[2]
+[1,2], with one corresponding subsequence being
+[3,4]
+[3,4], with one corresponding subsequence being
+[1,2]
+In total, there are
+4 good subarrays of length
+1 and
+2 of length
+2.
+Test case
+2: The good subarrays are:
+[2,2], with corresponding subsequence
+[4]
+[4,4], with corresponding subsequence
+[2]
+[1,2], with corresponding subsequence
+[1,4]
+[4,5], with corresponding subsequence
+[2,5]

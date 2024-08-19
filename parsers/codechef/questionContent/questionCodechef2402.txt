@@ -1,0 +1,182 @@
+Igzi and Burly Array
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef's friend Igzi is often at the coding gym, working out his mind muscles. When he is there, he asks Chef to guard his most prized posession: a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Initially, for each
+i (
+1≤i≤N),
+A
+i
+=i held. However, Chef sometimes gets bored and starts playing with the sequence. Since
+N can be very large, Chef has a lot of fun with it and he would like to share it with you.
+You should process
+Q queries of two types:
+1 x: set
+A
+x
+=0
+2 l r: find the maximum element in the subsequence
+A
+l
+,A
+l+1
+,…,A
+r
+Since Chef does not want to make Igzi angry, the queries are encoded so that they have to be processed online:
+For each query, let's denote the sum of answers to all previous queries of type 2, modulo
+N, by
+s. (Initially,
+s=0.)
+For each query of the first type, you are given an integer
+y. You can compute
+x as
+y+s.
+For each query of the second type, you are given two integers
+p and
+q. You can compute
+l as
+p+s and
+r as
+q+s.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The following
+Q lines describe queries.
+Each of these lines starts with an integer
+t denoting the type of the current query:
+t=1 for a query of the first type or
+t=2 for a query of the second type.
+For a query of the first type, it is followed by a space and an integer
+y.
+For a query of the second type, it is followed by a space and two space-separated integers
+p and
+q.
+Output
+For each query of the second type, print a single line containing one integer ― the maximum of the given subsequence.
+Constraints
+1≤T≤10
+1≤N≤10
+18
+1≤Q≤500,000
+1≤l≤r≤N
+1≤x≤N
+the sum of
+Q over all test cases does not exceed
+1,000,000
+Subtasks
+Subtask #1 (10 points):
+N,Q≤1,000
+Subtask #2 (10 points):
+N≤100,000
+Subtask #3 (30 points): each query of the second type appears after all queries of the first type
+Subtask #4 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+7 9
+2 2 5
+1 0
+2 -3 0
+1 1
+2 0 3
+1 -4
+1 -2
+2 -4 -1
+2 -5 -3
+5 
+4
+4
+0
+1
+Explanation:
+Query 1:
+l=2,
+r=5. The maximum element of the subsequence
+A
+2
+,A
+3
+,A
+4
+,A
+5
+is
+A
+5
+=5. After this query,
+s becomes
+5%7=5.
+Query 2:
+x=5.
+A
+5
+becomes
+0.
+Query 3:
+l=2,
+r=5. The maximum element of the same subsequence is now
+A
+4
+=4;
+s becomes
+(5+4)%7=2.
+Query 4:
+x=3,
+A
+3
+becomes
+0.
+Query 5:
+l=2,
+r=5. The maximum element of the same subsequence is still
+A
+4
+=4;
+s becomes
+(5+4+4)%7=6.
+Query 6:
+x=2,
+A
+2
+becomes
+0.
+Query 7:
+x=4,
+A
+4
+becomes
+0.
+Query 8:
+l=2,
+r=5. All elements of the same subsequence as before are
+0, so the maximum is
+0;
+s becomes
+(5+4+4+0)%7=6.
+Query 9:
+l=1,
+r=3. The maximum of the subsequence
+A
+1
+,A
+2
+,A
+3
+is
+A
+1
+=1;
+s becomes
+(5+4+4+0+1)%7=0.

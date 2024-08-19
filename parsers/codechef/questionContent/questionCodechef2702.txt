@@ -1,0 +1,84 @@
+Absolute Min Max
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is given a sequence of integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Chef considers a contiguous subsequence
+A
+l
+,A
+l+1
+,…,A
+r
+(where
+1≤l≤r≤N) fruitful if it satisfies the condition
+∣A
+l
+−A
+r
+∣=max(A
+l
+,A
+l+1
+,…,A
+r
+)−min(A
+l
+,A
+l+1
+,…,A
+r
+).
+Please help Chef find the number of fruitful contiguous subsequences of the sequence
+A.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer ― the number of fruitful contiguous subsequences.
+Constraints
+1≤T≤10
+1≤N≤250,000
+1≤A
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (20 points):
+N≤2,000
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+1
+3
+1 2 3
+6
+Explanation:
+Example case 1: All contiguous subsequences, i.e.
+[1],
+[2],
+[3],
+[1,2],
+[2,3] and
+[1,2,3], are fruitful.

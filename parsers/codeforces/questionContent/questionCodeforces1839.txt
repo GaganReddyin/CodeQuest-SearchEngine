@@ -1,0 +1,10 @@
+I. Mysterious language again, seriously?
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a mysterious language (codenamed "Secret 2021") available in "Custom Test" tab. Find out what this language is and write a program which outputs its name. Note that the program must be written in this language.
+Input
+This program has only one test, and it's empty (it doesn't give your program anything to read).
+Output
+Output the name of the mysterious language.

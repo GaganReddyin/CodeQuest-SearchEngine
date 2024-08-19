@@ -1,0 +1,235 @@
+E. Unordered Swaps
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice had a permutation
+p
+of numbers from
+1
+to
+n
+. Alice can swap a pair
+(x,y)
+which means swapping elements at positions
+x
+and
+y
+in
+p
+(i.e. swap
+p
+x
+and
+p
+y
+). Alice recently learned her first sorting algorithm, so she decided to sort her permutation in the minimum number of swaps possible. She wrote down all the swaps in the order in which she performed them to sort the permutation on a piece of paper.
+For example,
+[(2,3),(1,3)]
+is a valid swap sequence by Alice for permutation
+p=[3,1,2]
+whereas
+[(1,3),(2,3)]
+is not because it doesn't sort the permutation. Note that we cannot sort the permutation in less than
+2
+swaps.
+[(1,2),(2,3),(2,4),(2,3)]
+cannot be a sequence of swaps by Alice for
+p=[2,1,4,3]
+even if it sorts the permutation because
+p
+can be sorted in
+2
+swaps, for example using the sequence
+[(4,3),(1,2)]
+.
+Unfortunately, Bob shuffled the sequence of swaps written by Alice.
+You are given Alice's permutation
+p
+and the swaps performed by Alice in arbitrary order. Can you restore the correct sequence of swaps that sorts the permutation
+p
+? Since Alice wrote correct swaps before Bob shuffled them up, it is guaranteed that there exists some order of swaps that sorts the permutation.
+Input
+The first line contains
+2
+integers
+n
+and
+m
+(2≤n≤2⋅
+10
+5
+,1≤m≤n−1)
+ — the size of permutation and the minimum number of swaps required to sort the permutation.
+The next line contains
+n
+integers
+p
+1
+,
+p
+2
+,...,
+p
+n
+(
+1≤
+p
+i
+≤n
+, all
+p
+i
+are distinct)  — the elements of
+p
+. It is guaranteed that
+p
+forms a permutation.
+Then
+m
+lines follow. The
+i
+-th of the next
+m
+lines contains two integers
+x
+i
+and
+y
+i
+ — the
+i
+-th swap
+(
+x
+i
+,
+y
+i
+)
+.
+It is guaranteed that it is possible to sort
+p
+with these
+m
+swaps and that there is no way to sort
+p
+with less than
+m
+swaps.
+Output
+Print a permutation of
+m
+integers  — a valid order of swaps written by Alice that sorts the permutation
+p
+. See sample explanation for better understanding.
+In case of multiple possible answers, output any.
+Examples
+input
+Copy
+4 3
+2 3 4 1
+1 4
+2 1
+1 3
+output
+Copy
+2 3 1 
+input
+Copy
+6 4
+6 5 1 3 2 4
+3 1
+2 5
+6 3
+6 4
+output
+Copy
+4 1 3 2 
+Note
+In the first example,
+p=[2,3,4,1]
+,
+m=3
+and given swaps are
+[(1,4),(2,1),(1,3)]
+.
+There is only one correct order of swaps i.e
+[2,3,1]
+.
+First we perform the swap
+2
+from the input i.e
+(2,1)
+,
+p
+becomes
+[3,2,4,1]
+.
+Then we perform the swap
+3
+from the input i.e
+(1,3)
+,
+p
+becomes
+[4,2,3,1]
+.
+Finally we perform the swap
+1
+from the input i.e
+(1,4)
+and
+p
+becomes
+[1,2,3,4]
+which is sorted.
+In the second example,
+p=[6,5,1,3,2,4]
+,
+m=4
+and the given swaps are
+[(3,1),(2,5),(6,3),(6,4)]
+.
+One possible correct order of swaps is
+[4,2,1,3]
+.
+Perform the swap
+4
+from the input i.e
+(6,4)
+,
+p
+becomes
+[6,5,1,4,2,3]
+.
+Perform the swap
+2
+from the input i.e
+(2,5)
+,
+p
+becomes
+[6,2,1,4,5,3]
+.
+Perform the swap
+1
+from the input i.e
+(3,1)
+,
+p
+becomes
+[1,2,6,4,5,3]
+.
+Perform the swap
+3
+from the input i.e
+(6,3)
+and
+p
+becomes
+[1,2,3,4,5,6]
+which is sorted.
+There can be other possible answers such as
+[1,2,4,3]
+.

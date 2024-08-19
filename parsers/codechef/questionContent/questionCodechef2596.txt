@@ -1,0 +1,74 @@
+Path-etic Products
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given a tree with
+N nodes (numbered
+1 through
+N). A tree is a connected undirected graph without cycles.
+You have to assign an integer to each node; for each valid
+i, let's denote the integer assigned to node
+i by
+A
+i
+. This assignment must satisfy the following conditions:
+For each valid
+i,
+1≤A
+i
+≤2⋅10
+18
+.
+For each simple path in the tree, let's denote the set of nodes in this path by
+S. Then, the product
+P=∏
+v∈S
+A
+v
+is divisible by
+∣S∣.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+Each of the next
+N−1 lines contains two space-separated integers
+u and
+v denoting that nodes
+u and
+v are connected by an edge.
+Output
+For each test case, print a single line containing
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+If there any multiple solutions, you may find any one of them. It can be proved a solution always exists under the given constraints.
+Constraints
+1≤T≤200
+1≤N≤100
+1≤u,v≤N
+Example Input
+2
+6
+1 2
+2 3
+1 4
+5 1
+6 5
+2
+1 2
+Example Output
+2 3 2 4 6 5
+1 2
+Explanation
+Example case 1:
+This assignment satisfies all the conditions. For example, for the path
+2→1→5→6, the product
+P=3⋅2⋅6⋅5=180 is divisible by
+4 (the number of nodes in the path).

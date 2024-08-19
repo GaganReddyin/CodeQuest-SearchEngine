@@ -1,0 +1,29 @@
+C. Pōja Verdon
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Aenar has an array
+a
+consisting of
+n
+integers.
+Input
+The first line is the integer
+n
+(
+1≤n≤100
+).
+The second line contains
+n
+integers
+a
+i
+(
+0≤
+a
+i
+≤3979
+) — the contents of the array.
+Output
+Output a single number.

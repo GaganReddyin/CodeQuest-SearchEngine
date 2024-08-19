@@ -1,0 +1,127 @@
+E. Prefix Function Queries
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+s
+, consisting of lowercase Latin letters.
+You are asked
+q
+queries about it: given another string
+t
+, consisting of lowercase Latin letters, perform the following steps:
+concatenate
+s
+and
+t
+;
+calculate the prefix function of the resulting string
+s+t
+;
+print the values of the prefix function on positions
+|s|+1,|s|+2,…,|s|+|t|
+(
+|s|
+and
+|t|
+denote the lengths of strings
+s
+and
+t
+, respectively);
+revert the string back to
+s
+.
+The prefix function of a string
+a
+is a sequence
+p
+1
+,
+p
+2
+,…,
+p
+|a|
+, where
+p
+i
+is the maximum value of
+k
+such that
+k<i
+and
+a[1..k]=a[i−k+1..i]
+(
+a[l..r]
+denotes a contiguous substring of a string
+a
+from a position
+l
+to a position
+r
+, inclusive). In other words, it's the longest proper prefix of the string
+a[1..i]
+that is equal to its suffix of the same length.
+Input
+The first line contains a non-empty string
+s
+(
+1≤|s|≤
+10
+6
+), consisting of lowercase Latin letters.
+The second line contains a single integer
+q
+(
+1≤q≤
+10
+5
+) — the number of queries.
+Each of the next
+q
+lines contains a query: a non-empty string
+t
+(
+1≤|t|≤10
+), consisting of lowercase Latin letters.
+Output
+For each query, print the values of the prefix function of a string
+s+t
+on positions
+|s|+1,|s|+2,…,|s|+|t|
+.
+Examples
+input
+Copy
+aba
+6
+caba
+aba
+bababa
+aaaa
+b
+forces
+output
+Copy
+0 1 2 3 
+1 2 3 
+2 3 4 5 6 7 
+1 1 1 1 
+2 
+0 0 0 0 0 0 
+input
+Copy
+aacba
+4
+aaca
+cbbb
+aab
+ccaca
+output
+Copy
+2 2 3 1 
+0 0 0 0 
+2 2 0 
+0 0 1 0 1 

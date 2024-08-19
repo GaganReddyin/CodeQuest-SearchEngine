@@ -1,0 +1,117 @@
+Prefix Suffix And Or
+Problem
+JJ has an integer
+K. JJ also has an array
+A of length
+N where
+(0≤A
+i
+<2
+K
+). He can perform the following operations on
+A any number of times (possibly zero):
+Select
+i and
+x such that
+1≤i≤N and
+0≤x<2
+K
+and for each
+1≤j≤i, set
+A
+j
+:=A
+j
+&x.
+Select
+i and
+x such that
+1≤i≤N and
+0≤x<2
+K
+and for each
+i≤j≤N, set
+A
+j
+:=A
+j
+∣x.
+Here,
+& denotes the bitwise AND operation and
+∣ denotes the bitwise OR operation.
+Determine the number of different arrays JJ can obtain by applying the above operations zero or more times. Since the answer can be large, output the answer modulo
+998244353.
+Two arrays
+P and
+Q are said to be different if there exists any index
+i such that
+P
+i
+
+=Q
+i
+.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two space-separated integers
+N and
+K — the size of the array
+A and the parameter
+K mentioned in the statement.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the number of different arrays JJ can obtain, modulo
+998244353.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤K≤30
+0≤A
+i
+<2
+K
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2 1
+1 0
+2 1
+0 1
+4 2
+3 2 1 0
+4
+3
+72
+Explanation:
+Test case
+1:
+[0,0],
+[0,1],
+[1,0] and
+[1,1] are the arrays which can be obtained from
+A=[1,0].
+Test case
+2:
+[0,0],
+[0,1], and
+[1,1] are the arrays which can be obtained from
+A=[0,1]. Note that we cannot obtain
+[1,0].

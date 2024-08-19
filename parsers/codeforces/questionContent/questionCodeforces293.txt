@@ -1,0 +1,128 @@
+F. Three Chairs
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+One day Kira found
+n
+friends from Morioh and decided to gather them around a table to have a peaceful conversation. The height of friend
+i
+is equal to
+a
+i
+. It so happened that the height of each of the friends is unique.
+Unfortunately, there were only
+3
+chairs in Kira's house, and obviously, it will not be possible to seat all friends! So, Kira has to invite only
+3
+of his friends.
+But everything is not so simple! If the heights of the lowest and the tallest of the invited friends are not coprime, then the friends will play tricks on each other, which will greatly anger Kira.
+Kira became interested, how many ways are there to choose
+3
+of his friends so that they don't play tricks? Two ways are considered different if there is a friend invited in one way, but not in the other.
+Formally, if Kira invites friends
+i
+,
+j
+, and
+k
+, then the following should be true:
+gcd(min(
+a
+i
+,
+a
+j
+,
+a
+k
+),max(
+a
+i
+,
+a
+j
+,
+a
+k
+))=1
+, where
+gcd(x,y)
+denotes the greatest common divisor (GCD) of the numbers
+x
+and
+y
+.
+Kira is not very strong in computer science, so he asks you to count the number of ways to invide friends.
+Input
+The first line contains the number
+n
+(
+3≤n≤3⋅
+10
+5
+) — the number of Kira's friends.
+The next line contains
+n
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤3⋅
+10
+5
+) — heights of Kira's friends.
+Output
+In a single line output the number of ways to invite three friends.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+1
+input
+Copy
+4
+1 6 2 3
+output
+Copy
+3
+input
+Copy
+4
+16 4 8 2
+output
+Copy
+0
+input
+Copy
+10
+10 1 6 7 9 8 4 3 5 2
+output
+Copy
+77
+Note
+In the first example, only one way is suitable: invite friends
+1
+,
+2
+, and
+3
+. Here
+1<2<3
+, and the numbers
+1
+and
+3
+are coprime.

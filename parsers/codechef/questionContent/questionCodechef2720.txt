@@ -1,0 +1,122 @@
+Count the Ones
+Problem
+Alice recently converted all the positive integers from
+1 to
+2
+N
+−1 (both inclusive) into binary strings and stored them in an array
+S. Note that the binary strings do not have leading zeroes.
+While she was out, Bob sorted all the elements of
+S in lexicographical increasing order.
+Let
+S
+i
+denotes the
+i
+th
+string in the sorted array.
+Alice defined a function
+F such that
+F(S
+i
+) is equal to the count of
+1 in the string
+S
+i
+.
+For example,
+F(101)=2 and
+F(1000)=1.
+Given a positive integer
+K, find the value of
+∑
+i=1
+K
+F(S
+i
+).
+String
+P is lexicographically smaller than string
+Q if one of the following satisfies:
+P is a prefix of
+Q and
+P
+
+=Q.
+There exists an index
+i such that
+P
+i
+<Q
+i
+and for all
+j<i,
+P
+j
+=Q
+j
+.
+Input Format
+The first line will contain an integer
+T - number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers
+N and
+K.
+Output Format
+For each test case, output the value
+∑
+i=1
+K
+F(S
+i
+).
+Constraints
+1≤T≤3000
+1≤N≤50
+1≤K≤2
+N
+−1
+Sum of
+N over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+3 2
+3 4
+3 7
+2
+5
+12
+Explanation:
+Converting positive integers to Binary Strings:
+1=1
+2=10
+3=11
+4=100
+5=101
+6=110
+7=111
+Sorting Binary Strings in lexicographical order: After sorting, the strings will appear in the following order:
+[1,10,100,101,11,110,111].
+Test case
+1:
+F(S
+1
+)+F(S
+2
+)=F(1)+F(10)=1+1=2.
+Test case
+2:
+F(S
+1
+)+F(S
+2
+)+F(S
+3
+)+F(S
+4
+)=F(1)+F(10)+F(100)+F(101)=1+1+1+2=5.

@@ -1,0 +1,168 @@
+G. Max Sum Array
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+c=[
+c
+1
+,
+c
+2
+,…,
+c
+m
+]
+. An array
+a=[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+is constructed in such a way that it consists of integers
+1,2,…,m
+, and for each
+i∈[1,m]
+, there are exactly
+c
+i
+occurrences of integer
+i
+in
+a
+. So, the number of elements in
+a
+is exactly
+∑
+i=1
+m
+c
+i
+.
+Let's define for such array
+a
+the value
+f(a)
+as
+f(a)=
+∑
+1≤i<j≤n
+a
+i
+=
+a
+j
+j−i.
+f
+(
+)
+∑
+j
+i
+In other words,
+f(a)
+is the total sum of distances between all pairs of equal elements.
+Your task is to calculate the maximum possible value of
+f(a)
+and the number of arrays yielding the maximum possible value of
+f(a)
+. Two arrays are considered different, if elements at some position differ.
+Input
+The first line contains a single integer
+m
+(
+1≤m≤5⋅
+10
+5
+) — the size of the array
+c
+.
+The second line contains
+m
+integers
+c
+1
+,
+c
+2
+,…,
+c
+m
+(
+1≤
+c
+i
+≤
+10
+6
+) — the array
+c
+.
+Output
+Print two integers — the maximum possible value of
+f(a)
+and the number of arrays
+a
+with such value. Since both answers may be too large, print them modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+6
+1 1 1 1 1 1
+output
+Copy
+0 720
+input
+Copy
+1
+1000000
+output
+Copy
+499833345 1
+input
+Copy
+7
+123 451 234 512 345 123 451
+output
+Copy
+339854850 882811119
+Note
+In the first example, all possible arrays
+a
+are permutations of
+[1,2,3,4,5,6]
+. Since each array
+a
+will have
+f(a)=0
+, so maximum value is
+f(a)=0
+and there are
+6!=720
+such arrays.
+In the second example, the only possible array consists of
+10
+6
+ones and its
+f(a)=
+∑
+1≤i<j≤
+10
+6
+j−i=166666666666500000
+and
+166666666666500000mod
+10
+9
++7=499833345
+.

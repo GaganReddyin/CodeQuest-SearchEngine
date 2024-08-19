@@ -1,0 +1,26 @@
+F. Random Query
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array a consisting of n positive integers. You pick two integer numbers l and r from 1 to n, inclusive (numbers are picked randomly, equiprobably and independently). If l > r, then you swap values of l and r. You have to calculate the expected value of the number of unique elements in segment of the array from index l to index r, inclusive (1-indexed).
+Input
+The first line contains one integer number n (1 ≤ n ≤ 106). The second line contains n integer numbers a1, a2, ... an (1 ≤ ai ≤ 106) — elements of the array.
+Output
+Print one number — the expected number of unique elements in chosen segment.
+Your answer will be considered correct if its absolute or relative error doesn't exceed 10 - 4 — formally, the answer is correct if , where x is jury's answer, and y is your answer.
+Examples
+input
+Copy
+2
+1 2
+output
+Copy
+1.500000
+input
+Copy
+2
+2 2
+output
+Copy
+1.000000

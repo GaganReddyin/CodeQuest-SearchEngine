@@ -1,0 +1,198 @@
+D. Dirty Deeds Done Dirt Cheap
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+pairs of integers
+(
+a
+1
+,
+b
+1
+),(
+a
+2
+,
+b
+2
+),…,(
+a
+n
+,
+b
+n
+)
+. All of the integers in the pairs are distinct and are in the range from
+1
+to
+2⋅n
+inclusive.
+Let's call a sequence of integers
+x
+1
+,
+x
+2
+,…,
+x
+2k
+good if either
+x
+1
+<
+x
+2
+>
+x
+3
+<…<
+x
+2k−2
+>
+x
+2k−1
+<
+x
+2k
+, or
+x
+1
+>
+x
+2
+<
+x
+3
+>…>
+x
+2k−2
+<
+x
+2k−1
+>
+x
+2k
+.
+You need to choose a subset of distinct indices
+i
+1
+,
+i
+2
+,…,
+i
+t
+and their order in a way that if you write down all numbers from the pairs in a single sequence (the sequence would be
+a
+i
+1
+,
+b
+i
+1
+,
+a
+i
+2
+,
+b
+i
+2
+,…,
+a
+i
+t
+,
+b
+i
+t
+), this sequence is good.
+What is the largest subset of indices you can choose? You also need to construct the corresponding index sequence
+i
+1
+,
+i
+2
+,…,
+i
+t
+.
+Input
+The first line contains single integer
+n
+(
+2≤n≤3⋅
+10
+5
+) — the number of pairs.
+Each of the next
+n
+lines contain two numbers —
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤2⋅n
+) — the elements of the pairs.
+It is guaranteed that all integers in the pairs are distinct, that is, every integer from
+1
+to
+2⋅n
+is mentioned exactly once.
+Output
+In the first line print a single integer
+t
+ — the number of pairs in the answer.
+Then print
+t
+distinct integers
+i
+1
+,
+i
+2
+,…,
+i
+t
+ — the indexes of pairs in the corresponding order.
+Examples
+input
+Copy
+5
+1 7
+6 4
+2 10
+9 8
+3 5
+output
+Copy
+3
+1 5 3
+input
+Copy
+3
+5 4
+3 2
+6 1
+output
+Copy
+3
+3 2 1
+Note
+The final sequence in the first example is
+1<7>3<5>2<10
+.
+The final sequence in the second example is
+6>1<3>2<5>4
+.

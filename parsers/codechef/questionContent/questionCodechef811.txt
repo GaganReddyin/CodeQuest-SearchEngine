@@ -1,0 +1,72 @@
+Covid Spread
+Problem
+A disease is spreading through ChefLand!
+The disease spreads as follows:
+At the end of day
+0, a single person is infected with the disease.
+During the next
+10 days, the number of infected people doubles each day, until the disease has spread to all people in ChefLand.
+From day
+11 onwards, the number of infected people triples each day, until the disease has spread to all people in ChefLand.
+You are given the population of ChefLand
+N and a day
+D. How many people in ChefLand are infected at the end of day
+D?
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line containing two space-separated integers
+N and
+D — the population of ChefLand and the day for which you need to find the number of infected people, respectively.
+Output Format
+For each test case, print one line containing a single integer — the number of infected people in ChefLand at the end of day
+D.
+Constraints
+1≤T≤300
+1≤N≤10
+8
+0≤D≤10
+8
+Subtasks
+Subtask 1 (30 points):
+D≤20
+Subtask 2 (70 points): Original constraints
+Sample 1:
+Input
+Output
+4
+100 3
+2000 10
+6000 11
+10 11
+8
+1024
+3072
+10
+Explanation:
+Test Case 1:
+At the end of day
+1, the number of infected people is
+2×1=2.
+At the end of day
+2, the number of infected people is
+2×2=4.
+At the end of day
+3, the number of infected people is
+2×4=8.
+Test Case 2: Following the rules in the statement, it can be seen that at the end of day
+10, the total number of infected people is
+1024.
+Test Case 3: Note that starting at day
+11, the number of infected people triples each day,
+3×1024=3072.
+Test Case 4: At the end of day
+3, the number of infected people is
+8. Since there are only
+10 people in ChefLand (which is less than
+2×8=16), at the end of day
+4 all people in ChefLand are infected and thus the number of infected people is
+10 for all days from day
+4 onwards, including day
+11.

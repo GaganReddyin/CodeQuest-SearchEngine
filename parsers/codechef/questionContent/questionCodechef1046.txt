@@ -1,0 +1,109 @@
+Restore Sequence
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Alice has a very complex machine ― when fed with a sequence
+A
+1
+,A
+2
+,…,A
+N
+, it produces a sequence
+B
+1
+,B
+2
+,…,B
+N
+, where for each valid
+i,
+B
+i
+is the largest index
+j such that
+A
+i
+divides
+A
+j
+(since
+A
+i
+divides itself, such an index always exist). For example, if the machine is fed with
+A=[2,6,5,3,4], it produces
+B=[5,2,3,4,5].
+Alice gave you a sequence
+B that was produced by the machine. Find an integer sequence
+A such that when it is fed into the machine, then the machine produces the sequence
+B. Alice does not like huge integers, so make sure that
+1≤A
+i
+≤4⋅10
+6
+holds for each valid
+i.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Output
+For each test case, print a single line containing
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+. For each valid
+i,
+1≤A
+i
+≤4⋅10
+6
+should hold.
+If there are multiple solutions, you may print any of them. It is guaranteed that at least one solution exists.
+Constraints
+1≤T≤2⋅10
+4
+1≤N≤10
+5
+1≤B
+i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask #1 (20 points):
+B
+1
+,B
+2
+,…,B
+N
+are pairwise distinct
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2
+5
+5 2 3 4 5
+4
+4 4 4 4
+2 6 5 3 4
+2 6 3 12

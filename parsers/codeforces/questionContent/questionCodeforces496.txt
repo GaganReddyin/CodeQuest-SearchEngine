@@ -1,0 +1,189 @@
+C. Zero-Sum Prefixes
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The score of an array
+v
+1
+,
+v
+2
+,…,
+v
+n
+is defined as the number of indices
+i
+(
+1≤i≤n
+) such that
+v
+1
++
+v
+2
++…+
+v
+i
+=0
+.
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of length
+n
+. You can perform the following operation multiple times:
+select an index
+i
+(
+1≤i≤n
+) such that
+a
+i
+=0
+;
+then replace
+a
+i
+by an arbitrary integer.
+What is the maximum possible score of
+a
+that can be obtained by performing a sequence of such operations?
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of the array
+a
+.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+) — array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print the maximum possible score of the array
+a
+after performing a sequence of operations.
+Example
+input
+Copy
+5
+5
+2 0 1 -1 0
+3
+1000000000 1000000000 0
+4
+0 0 0 0
+8
+3 0 2 -10 10 -30 30 0
+9
+1 0 0 1 -1 0 1 0 -1
+output
+Copy
+3
+1
+4
+4
+5
+Note
+In the first test case, it is optimal to change the value of
+a
+2
+to
+−2
+in one operation.
+The resulting array
+a
+will be
+[2,−2,1,−1,0]
+, with a score of
+3
+:
+a
+1
++
+a
+2
+=2−2=0
+;
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
+=2−2+1−1=0
+;
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
++
+a
+5
+=2−2+1−1+0=0
+.
+In the second test case, it is optimal to change the value of
+a
+3
+to
+−2000000000
+, giving us an array with a score of
+1
+.
+In the third test case, it is not necessary to perform any operations.

@@ -1,0 +1,165 @@
+D1. Zero-One (Easy Version)
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. In this version,
+n≤3000
+,
+x≥y
+holds. You can make hacks only if both versions of the problem are solved.
+You are given two binary strings
+a
+and
+b
+, both of length
+n
+. You can do the following operation any number of times (possibly zero).
+Select two indices
+l
+and
+r
+(
+l<r
+).
+Change
+a
+l
+to
+(1−
+a
+l
+)
+, and
+a
+r
+to
+(1−
+a
+r
+)
+.
+If
+l+1=r
+, the cost of the operation is
+x
+. Otherwise, the cost is
+y
+.
+You have to find the minimum cost needed to make
+a
+equal to
+b
+or say there is no way to do so.
+Input
+The first line contains one integer
+t
+(
+1≤t≤600
+) — the number of test cases.
+Each test case consists of three lines. The first line of each test case contains three integers
+n
+,
+x
+, and
+y
+(
+5≤n≤3000
+,
+1≤y≤x≤
+10
+9
+) — the length of the strings, and the costs per operation.
+The second line of each test case contains the string
+a
+of length
+n
+. The string only consists of digits
+0
+and
+1
+.
+The third line of each test case contains the string
+b
+of length
+n
+. The string only consists of digits
+0
+and
+1
+.
+It is guaranteed that the sum of
+n
+over all test cases doesn't exceed
+3000
+.
+Output
+For each test case, if there is no way to make
+a
+equal to
+b
+, print
+−1
+. Otherwise, print the minimum cost needed to make
+a
+equal to
+b
+.
+Example
+input
+Copy
+4
+5 8 7
+01001
+00101
+5 7 2
+01000
+11011
+7 8 3
+0111001
+0100001
+5 10 1
+01100
+01100
+output
+Copy
+8
+-1
+6
+0
+Note
+In the first test case, selecting indices
+2
+and
+3
+costs
+8
+, which is the minimum possible cost.
+In the second test case, we cannot make
+a
+equal to
+b
+using any number of operations.
+In the third test case, we can perform the following operations:
+Select indices
+3
+and
+6
+. It costs
+3
+, and
+a
+is 0101011 now.
+Select indices
+4
+and
+6
+. It costs
+3
+, and
+a
+is 0100001 now.
+The total cost is
+6
+.
+In the fourth test case, we don't have to perform any operations.

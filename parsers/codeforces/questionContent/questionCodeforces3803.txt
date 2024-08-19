@@ -1,0 +1,71 @@
+C2. "Is the bit string periodic?" oracle
+time limit per test4 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Implement a quantum oracle on
+N
+qubits which checks whether the bits in the input vector
+x
+⃗ 
+→
+form a periodic bit string (i.e., implements the function
+f(
+x
+⃗ 
+)=1
+if
+x
+⃗ 
+→
+is periodic, and 0 otherwise).
+A bit string of length
+N
+is considered periodic with period
+P
+(
+1≤P≤N−1
+) if for all
+i∈[0,N−P−1]
+x
+i
+=
+x
+i+P
+. Note that
+P
+does not have to divide
+N
+evenly; for example, bit string "01010" is periodic with period
+P=2
+.
+You have to implement an operation which takes the following inputs:
+an array of
+N
+(
+2≤N≤7
+) qubits
+x
+in an arbitrary state (input register),
+a qubit
+y
+in an arbitrary state (output qubit),
+and performs a transformation
+|x⟩|y⟩→|x⟩|y⊕f(x)⟩
+. The operation doesn't have an output; its "output" is the state in which it leaves the qubits. Note that the input register
+x
+has to remain unchanged after applying the operation.
+Your code should have the following signature:
+namespace Solution {
+    open Microsoft.Quantum.Primitive;
+    open Microsoft.Quantum.Canon;
+
+    operation Solve (x : Qubit[], y : Qubit) : Unit {
+        body (...) {
+            // your code here
+        }
+        adjoint auto;
+    }
+}
+Note: the operation has to have an adjoint specified for it; adjoint auto means that the adjoint will be generated automatically. For details on adjoint, see Operation Definitions.
+You are not allowed to use measurements in your operation.

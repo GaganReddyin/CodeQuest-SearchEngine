@@ -1,0 +1,196 @@
+E. Rescheduling the Exam
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Now Dmitry has a session, and he has to pass
+n
+exams. The session starts on day
+1
+and lasts
+d
+days. The
+i
+th exam will take place on the day of
+a
+i
+(
+1≤
+a
+i
+≤d
+), all
+a
+i
+ — are different.
+Sample, where
+n=3
+,
+d=12
+,
+a=[3,5,9]
+. Orange — exam days. Before the first exam Dmitry will rest
+2
+days, before the second he will rest
+1
+day and before the third he will rest
+3
+days.
+For the session schedule, Dmitry considers a special value
+μ
+— the smallest of the rest times before the exam for all exams. For example, for the image above,
+μ=1
+. In other words, for the schedule, he counts exactly
+n
+numbers  — how many days he rests between the exam
+i−1
+and
+i
+(for
+i=0
+between the start of the session and the exam
+i
+). Then it finds
+μ
+ — the minimum among these
+n
+numbers.
+Dmitry believes that he can improve the schedule of the session. He may ask to change the date of one exam (change one arbitrary value of
+a
+i
+). Help him change the date so that all
+a
+i
+remain different, and the value of
+μ
+is as large as possible.
+For example, for the schedule above, it is most advantageous for Dmitry to move the second exam to the very end of the session. The new schedule will take the form:
+Now the rest periods before exams are equal to
+[2,2,5]
+. So,
+μ=2
+.
+Dmitry can leave the proposed schedule unchanged (if there is no way to move one exam so that it will lead to an improvement in the situation).
+Input
+The first line of input data contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of input test cases. The descriptions of test cases follow.
+An empty line is written in the test before each case.
+The first line of each test case contains two integers
+n
+and
+d
+(
+2≤n≤2⋅
+10
+5
+,1≤d≤
+10
+9
+) — the number of exams and the length of the session, respectively.
+The second line of each test case contains
+n
+integers
+a
+i
+(
+1≤
+a
+i
+≤d,
+a
+i
+<
+a
+i+1
+), where the
+i
+-th number means the date of the
+i
+-th exam.
+It is guaranteed that the sum of
+n
+for all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output the maximum possible value of
+μ
+if Dmitry can move any one exam to an arbitrary day. All values of
+a
+i
+should remain distinct.
+Example
+input
+Copy
+9
+
+3 12
+3 5 9
+
+2 5
+1 5
+
+2 100
+1 2
+
+5 15
+3 6 9 12 15
+
+3 1000000000
+1 400000000 500000000
+
+2 10
+3 4
+
+2 2
+1 2
+
+4 15
+6 11 12 13
+
+2 20
+17 20
+output
+Copy
+2
+1
+1
+2
+99999999
+3
+0
+1
+9
+Note
+The first sample is parsed in statement.
+One of the optimal schedule changes for the second sample:
+Initial schedule.
+New schedule.
+In the third sample, we need to move the exam from day
+1
+to any day from
+4
+to
+100
+.
+In the fourth sample, any change in the schedule will only reduce
+μ
+, so the schedule should be left as it is.
+In the fifth sample, we need to move the exam from day
+1
+to any day from
+100000000
+to
+300000000
+.
+One of the optimal schedule changes for the sixth sample:
+Initial schedule.
+New schedule.
+In the seventh sample, every day is exam day, and it is impossible to rearrange the schedule.

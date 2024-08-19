@@ -1,0 +1,83 @@
+Median Minimization
+Problem
+JJ loves playing with medians. He has an array
+A of length
+N (
+N is odd). He wants to partition the array
+A into two non-empty subsets
+P and
+Q such that the value of
+∣median(P)−median(Q)∣ is as small as possible. (Note that each
+A
+i
+must belong to either subset
+P or subset
+Q).
+Help him find this minimum value of
+∣median(P)−median(Q)∣.
+As a reminder, the median of a subset
+X of size
+N is the element which occupies the
+⌊
+2
+N+1
+⌋
+th
+position after we sort the elements in non-decreasing order. For example,
+median([3,1,4])=3,
+median([3,1,4,2])=2. (Here
+⌊x⌋ denotes the largest integer which does not exceed
+x).
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - the size of the array
+A.
+The second line of each test case contains
+N space separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+Output the minimum value of
+∣median(P)−median(Q)∣.
+Constraints
+1≤T≤100
+3≤N≤999
+1≤A
+i
+≤10
+9
+N is odd.
+Sample 1:
+Input
+Output
+3
+5
+2 7 4 8 2
+3
+1 2 3
+5
+1 1 1 1 1
+2
+1
+0
+Explanation:
+Test case
+1: We can divide the array into following two subsets:
+P=[2,8],Q=[7,4,2], which has
+∣median(P)−median(Q)∣=∣2−4∣=2. It can be proven that the answer can not be improved further.
+Test case
+2: We can divide the array into following two subsets:
+P=[1,3],Q=[2], which has
+∣median(P)−median(Q)∣=∣1−2∣=1. It can be proven that the answer can not be improved further.
+Test case
+3: Observe that, for any partition of the array into any two non-empty subsets, the median of both the subsets will be
+1. Therefore the answer is
+∣1−1∣=0.

@@ -1,0 +1,286 @@
+H. Rogue-like Game
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Marina plays a new rogue-like game. In this game, there are
+n
+different character species and
+m
+different classes. The game is played in runs; for each run, Marina has to select a species and a class for her character. If she selects the
+i
+-th species and the
+j
+-th class, she will get
+c
+i,j
+points for this run.
+Initially, some species and classes are unlocked, all others are locked. To unlock the
+i
+-th species, Marina has to get at least
+a
+i
+points in total for previous runs — that is, as soon as her total score for played runs is at least
+a
+i
+, this species is unlocked. Similarly, to unlock the
+j
+-th class, she has to get at least
+b
+j
+points in total for previous runs. If
+a
+i
+=0
+for some
+i
+, then this species is unlocked initially (the same applies to classes with
+b
+j
+=0
+).
+Marina wants to unlock all species and classes in the minimum number of runs. Before playing the game, she can read exactly one guide on some combination of species and class, and reading a guide will increase the score she gets for all runs with that combination by
+k
+(formally, before playing the game, she can increase exactly one value of
+c
+i,j
+by
+k
+).
+What is the minimum number of runs she has to play to unlock all species and classes if she chooses the combination to read a guide on optimally?
+Input
+The first line contains three integers
+n
+,
+m
+and
+k
+(
+1≤n,m≤1500
+;
+0≤k≤
+10
+9
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+(
+0=
+a
+1
+≤
+a
+2
+≤⋯≤
+a
+n
+≤
+10
+12
+), where
+a
+i
+is the number of points required to unlock the
+i
+-th species (or
+0
+, if it is unlocked initially). Note that
+a
+1
+=0
+, and these values are non-descending.
+The third line contains
+m
+integers
+b
+1
+,
+b
+2
+, ...,
+b
+m
+(
+0=
+b
+1
+≤
+b
+2
+≤⋯≤
+b
+m
+≤
+10
+12
+), where
+b
+i
+is the number of points required to unlock the
+i
+-th class (or
+0
+, if it is unlocked initially). Note that
+b
+1
+=0
+, and these values are non-descending.
+Then
+n
+lines follow, each of them contains
+m
+integers. The
+j
+-th integer in the
+i
+-th line is
+c
+i,j
+(
+1≤
+c
+i,j
+≤
+10
+9
+) — the score Marina gets for a run with the
+i
+-th species and the
+j
+-th class.
+Output
+Print one integer — the minimum number of runs Marina has to play to unlock all species and all classes if she can read exactly one guide before playing the game.
+Examples
+input
+Copy
+3 4 2
+0 5 7
+0 2 6 10
+2 5 5 2
+5 3 4 4
+3 4 2 4
+output
+Copy
+3
+input
+Copy
+4 2 1
+0 3 9 9
+0 2
+3 3
+5 1
+1 3
+2 3
+output
+Copy
+2
+input
+Copy
+3 3 5
+0 8 11
+0 0 3
+3 1 3
+1 2 1
+1 1 3
+output
+Copy
+2
+Note
+The explanation for the first test:
+Marina reads a guide on the combination of the
+1
+-st species and the
+2
+-nd class. Thus,
+c
+1,2
+becomes
+7
+. Initially, only the
+1
+-st species and the
+1
+-st class are unlocked.
+Marina plays a run with the
+1
+-st species and the
+1
+-st class. Her score becomes
+2
+, and she unlocks the
+2
+-nd class.
+Marina plays a run with the
+1
+-st species and the
+2
+-nd class. Her score becomes
+9
+, and she unlocks everything except the
+4
+-th class.
+Marina plays a run with the
+3
+-rd species and the
+3
+-rd class. Her score becomes
+11
+, and she unlocks the
+4
+-th class. She has unlocked everything in
+3
+runs.
+Note that this way to unlock everything is not the only one.
+The explanation for the second test:
+Marina reads a guide on the combination of the
+2
+-nd species and the
+1
+-st class. Thus,
+c
+2,1
+becomes
+6
+. Initially, only the
+1
+-st species and the
+1
+-st class are unlocked.
+Marina plays a run with the
+1
+-st species and the
+1
+-st class. Her score becomes
+3
+, and she unlocks the
+2
+-nd species and the
+2
+-nd class.
+Marina plays a run with the
+2
+-nd species and the
+1
+-st class. Her score becomes
+9
+, and she unlocks the
+3
+-rd species and the
+4
+-th species. She has unlocked everything in
+2
+runs.
+As in the
+1
+-st example, this is not the only way to unlock everything in
+2
+runs.

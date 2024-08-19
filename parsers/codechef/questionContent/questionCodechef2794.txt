@@ -1,0 +1,182 @@
+Charge Scheduling
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N people in a train and each of them gets on the train at time
+t=0.
+Each person on the train wants to use the charging station on the train for some amount of time, but unfortunately, the train has only one charging station and can only be used by
+1 person at any point in time.
+The
+i
+th
+person wants to use the charging station for
+A
+i
+minutes in total and will leave the train at time
+T
+i
+. A person will be satisfied after the journey, only if that person gets to use the charging station for the desired amount of time.
+Find a way to schedule the charging such that a maximum number of people is satisfied. In order to schedule, you can pick any interval of time, say
+[L,R), and ask the person
+i to use the charging station from
+t=L and leave just before
+t=R. After this the person
+i would have spent
+R−L minutes on the charging station and any person who is still on the train can begin using the charging station starting from
+t=R. An interval scheduling will be a set of time intervals and people assigned to those intervals.
+A schedule is valid if:
+No two intervals in the schedule intersect each other. Note that all
+[L,R) and
+[R,S) do not intersect each other.
+For all people
+i and all intervals
+[L,R) assigned to
+i,
+0≤L≤R≤T
+i
+, i.e. each person is not assigned to an interval of time when they are not on the train.
+You have to find optimal scheduling that does not contain more than
+2N intervals. It is guaranteed that there always exists optimal scheduling with the given constraints. If there are many such schedules, you can output any of them.
+Input Format
+The first line contains a single integer
+Q denoting the number of test cases. The description of
+Q test cases follows.
+Each test case contains
+3 lines of input.
+The first line of each test case contains a single integer
+N, the number of people on the train.
+The second line of each test case contains
+N space-separated integers,
+A
+1
+,A
+2
+,…A
+N
+, where
+A
+i
+is the amount of time that the
+i
+th
+person needs to use the charger.
+The third line of each test case contains
+N space separated integers,
+T
+1
+,T
+2
+,…T
+n
+, where
+T
+i
+is the time at which the
+i
+th
+person leaves the train.
+Output Format
+For each test case, in the first line, print a single integer
+M(≤2N), the number of different intervals that you want to schedule.
+M lines follow. For each valid
+i, the
+i
+th
+of these lines should contain three space-separated integers,
+i,L,R denoting that the person
+i should use the charging station from
+[L,R).
+The number of satisfied people should be maximum.
+The scheduling should be valid.
+It is possible to schedule the same person multiple times.
+The order in which the intervals are displayed does not matter.
+Constraints
+1≤Q≤3⋅10
+5
+1≤N≤3⋅10
+5
+0≤A
+i
+≤3⋅10
+5
+for each valid
+i
+0≤T
+i
+≤3⋅10
+5
+for each valid
+i
+The sum of
+N over all testcases does not exceed
+3⋅10
+5
+Subtasks
+Subtask #1 (10 points) :
+T
+i
+-s are equal for all
+N people
+Subtask #2 (90 points) : Original constraints
+Sample 1:
+Input
+Output
+4
+5
+31 32 6 13 7
+14 50 34 4 31
+5
+43 26 22 11 30
+26 4 41 46 49
+5
+36 40 49 19 37
+18 11 48 15 33
+5
+16 3 24 21 21
+24 31 36 49 50
+3
+3 0 6
+5 6 13
+2 13 45
+2
+4 0 11
+3 11 33
+0
+3
+2 0 3
+1 3 19
+4 19 40
+Explanation:
+Test case 1: Person
+1 and Person
+4 can never be satisfied because the time they spend on the train (
+14 and
+4 respectively) is less than the amount of time they want to spend for charging. The other three people can be assigned as shown (Person
+3 in the interval
+[0,6), Person
+5 in the interval
+[6,13) and finally Person
+2 in the interval
+[13,45). Note that there are multiple solutions, for example, we could have also assigned Person
+5 to
+[0,7) and Person
+3 to
+[7,13) instead. Both are considered correct.
+Test case 2: Person
+1 and Person
+2 can never be satisfied (they spend less time on the train than the amount of time they need to use the charging station). Among the remaining three, we cannot satisfy all of them, since the total time required would be
+30+11+22=63, but
+t=49, all of them would have left the train. However we can select either Persons
+3 and Person
+4 or Person
+4 and Person
+5 and schedule them in any order, and in both cases, both of the persons would be satisfied.
+Test case 3: No one can be satisfied and hence the answer is
+0.
+Test case 4: Apart from Person
+2 (who has a very low charging time), we cannot hope to satisfy more than
+2 of the others. This is because the sum of the
+3 least times is already
+58 and everyone would have left the train by
+t=50. Therefore the maximum number of people we can hope to satisfy is
+3, and the given solution constructs it.

@@ -1,0 +1,164 @@
+Exact Walks
+Problem
+Maui had an undirected connected graph
+G=(V,E), where
+V = {
+v
+1
+,v
+2
+,…,v
+N
+} and
+E is the edge set. He also had a list of positive non-zero integers
+a
+1
+,a
+2
+,…,a
+N
+. He was bored of his usual adventures and decided to build a new directed graph
+G
+′
+=(U,F).
+U = {
+u
+1
+,u
+2
+,…,u
+N
+} and
+(u
+i
+,u
+j
+)∈F if and only if there is a walk of length exactly
+a
+i
+from
+v
+i
+to
+v
+j
+in
+G. Note that this walk could repeat edges. He then noticed that the new directed graph
+G
+′
+had two vertices
+u
+i
+and
+u
+j
+, such that there was no path from
+u
+i
+to
+u
+j
+in
+G
+′
+. Note that there could be more such pairs of vertices.
+But now, Maui has lost his list of integers, and has only the graph
+G. Help him by constructing any list which would satisfy the property mentioned, or state that it cannot be done.
+###Input:
+The first line of the input contains two integers:
+N,M, which represent the number of nodes and edges in
+G respectively.
+The i-th of the next
+M lines contains two numbers
+i and
+j, which signify that the undirected edge
+(v
+i
+,v
+j
+) exists in
+G.
+###Output:
+If a list of integers which satisfies the property exists, print "YES" in the first line and the
+N integers in order in the second line. Each of the integers must satisfy
+1≤a
+i
+≤10
+9
+.
+If it does not exist, print "NO".
+###Constraints
+2≤N≤100
+1≤M≤
+2
+N∗(N−1)
+1≤i,j≤N
+The input graph will be connected.
+There will be no multi-edges or self-loops.
+###Subtasks
+19 points :
+2≤N≤15
+5 points : The input graph will be bi-partite.
+76 points : No further constraints.
+###Sample Input: 3 2 1 2 2 3
+###Sample Output: YES 2 1 2
+###Explanation: In our output,
+a
+1
+=2, and so there will be a direct edge from
+u
+1
+to
+u
+2
+if and only if there is a walk of length 2 between
+v
+1
+and
+v
+2
+. But there isn't any such walk. But there is a walk of length 2 between
+v
+1
+and
+v
+3
+, and so there is a direct edge from
+u
+1
+to
+u
+3
+in
+G
+′
+. Similarly you can check that the edge set of
+G
+′
+is {
+(u
+1
+,u
+3
+),(u
+3
+,u
+1
+),(u
+2
+,u
+1
+),(u
+2
+,u
+3
+)}. Now notice that there is no path from
+u
+1
+to
+u
+2
+in
+G
+′
+. Hence this is a valid output.

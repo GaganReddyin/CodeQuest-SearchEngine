@@ -1,0 +1,153 @@
+X and Two Groups
+Problem
+Read problems statements in Mandarin chinese , Russian and Vietnamese as well.
+Tumut, the best programmer in his village Applidz, invented a problem and decided to share it with you:
+You are given two integer sequences
+S
+1
+,S
+2
+,…,S
+N
+and
+T
+1
+,T
+2
+,…,T
+M
+and an integer
+x. You are allowed to perform the following operation any number of times:
+choose an element of
+S and an element of
+T (let's denote them by
+S
+i
+and
+T
+j
+respectively)
+decrease both
+S
+i
+and
+T
+j
+by
+x, i.e. replace
+S
+i
+by
+S
+i
+−x and
+T
+j
+by
+T
+j
+−x
+Let's denote the minimum and maximum value in the sequence
+S after performing the chosen operations (possibly none) by
+minS and
+maxS respectively. Similarly, let's denote the minimum and maximum value in
+T after performing the chosen operations by
+minT and
+maxT respectively. The goal is minimizing the expression
+(maxS+maxT)−(minS+minT). Compute the minimum value of this expression.
+Input
+The first line of the input contains three space-separated integers
+N,
+M and
+x.
+The second line contains
+N space-separated integers
+S
+1
+,S
+2
+…S
+N
+.
+The third line contains
+M space-separated integers
+T
+1
+,T
+2
+…T
+M
+.
+Output
+Print a single line containing one integer — the minimum possible value of the expression
+(maxS+maxT)−(minS+minT).
+Constraints
+1≤N,M≤5⋅10
+5
+1≤S
+i
+≤10
+9
+for each valid
+i
+1≤T
+i
+≤10
+9
+for each valid
+i
+1≤x≤10
+9
+Subtasks
+Subtask #1 (20 points):
+N,M≤20
+S
+i
+≤20 for each valid
+i
+T
+i
+≤20 for each valid
+i
+Subtask #2 (30 points):
+N,M≤1,000
+S
+i
+≤1,000 for each valid
+i
+T
+i
+≤1,000 for each valid
+i
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+2 2 3
+1 8
+2 3
+2
+Explanation:
+We can perform these two operations:
+decrease
+S
+2
+and
+T
+1
+by
+x
+decrease
+S
+2
+and
+T
+2
+by
+x
+Afterwards, the sequence
+S will be
+[1,2] and the sequence
+T will be
+[−1,0]. The resulting value of the given expression is
+(2+0)−(1+(−1))=2. It is impossible to obtain a smaller value no matter how many operations are performed.

@@ -1,0 +1,203 @@
+Restore the Permutation
+Problem
+Given a permutation
+P of size
+N, an array
+A of size
+N can be generated using the following method:
+If
+P
+i
+>P
+j
+for all
+(1≤j<i), set
+A
+i
+=0;
+Otherwise, set
+A
+i
+=max(j) where
+(1≤j<i) and
+(P
+j
+>P
+i
+).
+Unfortunately, we lost the permutation
+P and some elements of the array
+A.
+The lost elements of the array
+A are denoted as
+A
+i
+=−1. These elements can be replaced with any non-negative integer.
+Given an array
+A with some lost elements, check whether there exists a permutation
+P, such that, we can obtain the array
+A from
+P using the above method.
+If at least one such permutations exist, print the lexicographically smallest permutation.
+If no such permutation exists, print
+−1 instead.
+Note:
+A permutation of size
+N contains each element from
+1 to
+N exactly once.
+Permutation
+X is said to be lexicographically smaller than permutation
+Y if:
+X
+i
+<Y
+i
+;
+X
+j
+=Y
+j
+for all
+(1≤j<i).
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the size of
+A.
+The next line contains
+N space-separated integers:
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output on a new line:
+If at least one such permutations exist, print the lexicographically smallest permutation.
+If no such permutation exists, print
+−1 instead.
+Constraints
+1≤T≤10
+1≤N≤2⋅10
+5
+−1≤A
+i
+<N
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+5
+0 0 2 3 0
+5
+0 0 1 2 4
+2
+1 -1
+4
+-1 -1 -1 -1
+1 4 3 2 5
+-1
+-1
+1 2 3 4
+Explanation:
+Test case
+1: There are
+3 permutations which meet the condition
+{[1,4,3,2,5],[2,4,3,1,5],[3,4,2,1,5]}.
+The lexicographically smallest permutation is
+[1,4,3,2,5]. The array
+A is obtained as:
+A
+1
+:
+A
+1
+=0 as there exists no
+j<1 for which
+P
+i
+<P
+j
+.
+A
+2
+: Since
+P
+2
+>P
+1
+,
+A
+2
+=0.
+A
+3
+: We set
+A
+3
+as the maximum
+j such that
+j<3 and
+P
+j
+>P
+3
+. Thus,
+A
+3
+=j=2.
+A
+4
+: We set
+A
+4
+as the maximum
+j such that
+j<4 and
+P
+j
+>P
+4
+. Thus,
+A
+3
+=j=3.
+A
+5
+: Since
+P
+5
+is greater than
+P
+1
+,P
+2
+,P
+3
+, and
+P
+4
+,
+A
+5
+=0.
+Test case
+2: No permutation meets the condition.
+Test case
+3: No permutation meets the condition.
+Test case
+4: Since all elements of the array are missing, we can assume the elements.
+Consider the array
+[0,0,0,0]. The lexicographically smallest permutation using which the array
+A can be generated is
+[1,2,3,4].

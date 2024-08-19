@@ -1,0 +1,133 @@
+G. Yet Another Partiton Problem
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given array
+a
+1
+,
+a
+2
+,…,
+a
+n
+. You need to split it into
+k
+subsegments (so every element is included in exactly one subsegment).
+The weight of a subsegment
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+is equal to
+(r−l+1)⋅
+max
+l≤i≤r
+(
+a
+i
+)
+. The weight of a partition is a total weight of all its segments.
+Find the partition of minimal weight.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤2⋅
+10
+4
+,
+1≤k≤min(100,n)
+) — the length of the array
+a
+and the number of subsegments in the partition.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2⋅
+10
+4
+) — the array
+a
+.
+Output
+Print single integer — the minimal weight among all possible partitions.
+Examples
+input
+Copy
+4 2
+6 1 7 4
+output
+Copy
+25
+input
+Copy
+4 3
+6 1 7 4
+output
+Copy
+21
+input
+Copy
+5 4
+5 1 5 1 5
+output
+Copy
+21
+Note
+The optimal partition in the first example is next:
+6
+1
+7
+∣
+∣
+∣
+4
+.
+The optimal partition in the second example is next:
+6
+∣
+∣
+∣
+1
+∣
+∣
+∣
+7
+4
+.
+One of the optimal partitions in the third example is next:
+5
+∣
+∣
+∣
+1
+5
+∣
+∣
+∣
+1
+∣
+∣
+∣
+5
+.

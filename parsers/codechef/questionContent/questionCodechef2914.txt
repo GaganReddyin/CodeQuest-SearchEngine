@@ -1,0 +1,28 @@
+Terrible vectors
+Problem
+Read problems statements in Mandarin and Russian. Translations in Vietnamese to be uploaded soon.
+You are given an integer N. Consider a vector a of length N2 accessible via 0-based indexing.
+Let's call the following transformation a TVT-transformation (Terrible Vector transformation).
+
+We will call a vector g a good vector if
+For some reason, you want to find a vector a of length N2 such that it's elements are either 1 or -1 and after applying TVT-transformation (i.e. b), it results in a good vector.
+Input
+The first line of input contains an integer T denoting the number of test cases. Each test case is described by one line containing one integer N.
+Output
+For each test case output one line with the word NO if it's not possible to find such vector. Otherwise output YES on the first line and N2 space-separated integers (each either -1 or 1) on the second - the answer for this test case.
+If there are multiple possible answers, output any one of them.
+Constraints
+1 ≤ T ≤ 100
+1 ≤ N ≤ 100
+Sample 1:
+Input
+Output
+2
+1
+2
+YES
+1
+YES
+1 1 1 -1
+Explanation:
+Sample example 2: After TVT-transformation, the vector will transform to (4, 0, 0, 4) which is a good vector for N = 2

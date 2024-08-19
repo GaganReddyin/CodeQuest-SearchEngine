@@ -1,0 +1,67 @@
+Lucky Number Game
+Problem
+###Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Bob and Alice are playing a game with the following rules:
+Initially, they have an integer sequence
+A
+1
+,A
+2
+,…,A
+N
+; in addition, Bob has a lucky number
+a and Alice has a lucky number
+b.
+The players alternate turns. In each turn, the current player must remove a non-zero number of elements from the sequence; each removed element should be a multiple of the lucky number of this player.
+If it is impossible to remove any elements, the current player loses the game.
+It is clear that one player wins the game after a finite number of turns. Find the winner of the game if Bob plays first and both Bob and Alice play optimally.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+a and
+b.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing the string "ALICE" if the winner is Alice or "BOB" if the winner is Bob (without quotes).
+Constraints
+1≤T≤10
+1≤N≤2⋅10
+5
+1≤a,b≤100
+1≤A
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (18 points):
+a=b
+Subtask #2 (82 points): original constraints
+Sample 1:
+Input
+Output
+2
+5 3 2
+1 2 3 4 5
+5 2 4
+1 2 3 4 5
+ALICE
+BOB
+Explanation:
+Example case 1: Bob removes
+3 and the sequence becomes
+[1,2,4,5]. Then, Alice removes
+2 and the sequence becomes
+[1,4,5]. Now, Bob is left with no moves, so Alice is the winner.

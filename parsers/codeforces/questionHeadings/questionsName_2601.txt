@@ -1,0 +1,1 @@
+B2. "Is the number divisible by 3?" oracle

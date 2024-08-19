@@ -1,0 +1,98 @@
+F. Kate and imperfection
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Kate has a set
+S
+of
+n
+integers
+{1,…,n}
+.
+She thinks that imperfection of a subset
+M⊆S
+is equal to the maximum of
+gcd(a,b)
+over all pairs
+(a,b)
+such that both
+a
+and
+b
+are in
+M
+and
+a≠b
+.
+Kate is a very neat girl and for each
+k∈{2,…,n}
+she wants to find a subset that has the smallest imperfection among all subsets in
+S
+of size
+k
+. There can be more than one subset with the smallest imperfection and the same size, but you don't need to worry about it. Kate wants to find all the subsets herself, but she needs your help to find the smallest possible imperfection for each size
+k
+, will name it
+I
+k
+.
+Please, help Kate to find
+I
+2
+,
+I
+3
+, ...,
+I
+n
+.
+Input
+The first and only line in the input consists of only one integer
+n
+(
+2≤n≤5⋅
+10
+5
+)  — the size of the given set
+S
+.
+Output
+Output contains only one line that includes
+n−1
+integers:
+I
+2
+,
+I
+3
+, ...,
+I
+n
+.
+Examples
+input
+Copy
+2
+output
+Copy
+1 
+input
+Copy
+3
+output
+Copy
+1 1 
+Note
+First sample: answer is 1, because
+gcd(1,2)=1
+.
+Second sample: there are subsets of
+S
+with sizes
+2,3
+with imperfection equal to 1. For example,
+{2,3}
+and
+{1,2,3}
+.

@@ -1,0 +1,107 @@
+E1. Daleks' Invasion (easy)
+time limit per test6 seconds
+memory limit per test128 megabytes
+inputstandard input
+outputstandard output
+Heidi found out that the Daleks have created a network of bidirectional Time Corridors connecting different destinations (at different times!). She suspects that they are planning another invasion on the entire Space and Time. In order to counter the invasion, she plans to deploy a trap in the Time Vortex, along a carefully chosen Time Corridor. She knows that tinkering with the Time Vortex is dangerous, so she consulted the Doctor on how to proceed. She has learned the following:
+Different Time Corridors require different amounts of energy to keep stable.
+Daleks are unlikely to use all corridors in their invasion. They will pick a set of Corridors that requires the smallest total energy to maintain, yet still makes (time) travel possible between any two destinations (for those in the know: they will use a minimum spanning tree).
+Setting the trap may modify the energy required to keep the Corridor stable.
+Heidi decided to carry out a field test and deploy one trap, placing it along the first Corridor. But she needs to know whether the Daleks are going to use this corridor after the deployment of the trap.
+She gives you a map of Time Corridors (an undirected graph) with energy requirements for each Corridor.
+For a Corridor
+c
+,
+E
+max
+(c)
+is the largest
+e≤
+10
+9
+such that if we changed the required amount of energy of
+c
+to
+e
+, then the Daleks may still be using
+c
+in their invasion (that is, it belongs to some minimum spanning tree). Your task is to calculate
+E
+max
+(
+c
+1
+)
+for the Corridor
+c
+1
+that Heidi plans to arm with a trap, which is the first edge in the graph.
+Input
+The first line contains integers
+n
+and
+m
+(
+2≤n≤
+10
+5
+,
+n−1≤m≤
+10
+6
+), number of destinations to be invaded and the number of Time Corridors.
+Each of the next
+m
+lines describes a Corridor: destinations
+a
+,
+b
+and energy
+e
+(
+1≤a,b≤n
+,
+a≠b
+,
+0≤e≤
+10
+9
+).
+It's guaranteed, that no pair
+{a,b}
+will repeat and that the graph is connected — that is, it is possible to travel between any two destinations using zero or more Time Corridors.
+Output
+Output a single integer:
+E
+max
+(
+c
+1
+)
+for the first Corridor
+c
+1
+from the input.
+Example
+input
+Copy
+3 3
+1 2 8
+2 3 3
+3 1 4
+output
+Copy
+4
+Note
+After the trap is set, the new energy requirement for the first Corridor may be either smaller, larger, or equal to the old energy requiremenet.
+In the example, if the energy of the first Corridor is set to
+4
+or less, then the Daleks may use the set of Corridors
+{{1,2},{2,3}}
+(in particular, if it were set to less than
+4
+, then this would be the only set of Corridors that they would use). However, if it is larger than
+4
+, then they will instead use the set
+{{2,3},{3,1}}
+.

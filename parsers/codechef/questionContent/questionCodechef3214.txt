@@ -1,0 +1,55 @@
+Watermelon Farmer
+Problem
+Greeny, a watermelon farmer, has land of dimensions m units by n units. The farm can be divided into m*n cells, each of dimension 1 unit by 1 unit. The cell at row i and column j is denoted by (i, j). Rows are numbered from 1 to m and columns are numbered from 1 to n.
+Watermelon plants here grow in a strange way. Each plant's lifespan is exactly 1 week. By the middle of the week, a plant bears exactly one ripe watermelon. At the end of the week the plant dies. Before a plant dies, its watermelon explodes. Each watermelon has exactly 9 seeds and when a watermelon explodes in cell (i, j) one of its seeds remains in cell (i, j) and the remaining 8 seeds fly off to different adjacent cells. In other words, each of the 8 cells adjacent to the cell (i, j) receive exactly one seed from (i, j).If the watermelon is at an edge or a corner of the farm, some seeds fly outside the farm. Soil outside the farm is not fertile, so seeds which fly out of the farm don't germinate. The seeds which land on the farm germinate immediately.
+In the middle of each week, Greeny collects watermelons from each cell so that she can sell them in the market. She collects watermelons in groups of P from each cell. If the number of watermelons in a cell is not a multiple of P, she leaves the remainder in the field so that they can explode and multiply.
+Greeny initially plants x seeds in the cell (1, 1), y seeds in the cell (m, n) and 0 seeds in the rest of the cells. (The seeds sown by her immediately germinate into little plants.) She wants to know how her farm will look like after W weeks, i.e. she wants to know the number of plants in each cell. Can you help her?
+Input
+The first line of input consists of a single integer T, the number of test cases. T test cases follow.
+Each test case consists of 6 space-separated integers m, n, W, P, x, y.
+Output
+Output the configurations of the farm for all test cases separated by an empty line. For each test case, output m lines. In each line, output n space separated integers.
+The jth integer of the ith line should be equal to the number of plants in the cell (i, j) after W weeks.
+Constraints
+1 ≤ T ≤ 20
+2 ≤ m, n ≤ 50
+0 ≤ w ≤ 108
+2 ≤ p ≤ 108
+0 ≤ x, y < p
+Sample input
+3
+3 3 0 20 4 5
+3 3 1 20 4 5
+3 3 2 20 4 5
+Sample output
+4 0 0
+0 0 0
+0 0 5
+
+4 4 0
+4 9 5
+0 5 5
+
+1 6 18
+6 16 8
+18 8 4
+Explanation
+Initial configuration:
+4 0 0
+0 0 0
+0 0 5
+This is the answer to the first test case.
+1 week later:
+4 4 0
+4 9 5
+0 5 5
+Since all cells have less than P watermelons, there's nothing to harvest. This is the answer for the second test case.
+Another week later:
+21 26 18
+26 36 28
+18 28 24
+Since some cells have more than P watermelons, Greeny harvests those cells and then the field looks like this:
+1 6 18
+6 16 8
+18 8 4
+This is the answer for the third test case.

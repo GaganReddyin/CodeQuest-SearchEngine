@@ -1,0 +1,65 @@
+Find the Modulus
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+The jury has a secret number
+N, where
+1≤N≤10
+18
+. You want to know this number, and you are allowed to ask the jury some queries. In each query, you give the jury a number
+X where
+0≤X≤2⋅10
+18
+, and the jury tells you
+XmodN.
+Please find
+N using at most two queries per test case.
+Interaction Format
+The first line of contains
+T - the number of test cases.
+For each test case, you are allowed to allowed to ask the jury at most two queries. To make a query, output ? X on one line; the jury will return the value of
+xmodN to the input for you to read.
+In the case you exceed the number of queries, the judge will exit with the Wrong Answer verdict.
+Once you have found the answer, output ! N on one line. This does not count as a query.
+If you output the wrong value for
+N, the judge will exit with the Wrong Answer verdict; if you output the correct value for
+N, the judge will silently continues. This means you should start asking queries for the next test case right after outputting the value of
+N for the previous test case.
+Constraints
+1≤T≤100
+1≤N≤10
+18
+0≤X≤2⋅10
+18
+Sample 1:
+Input
+Output
+2
+5
+0
+4
+5
+? 5
+? 6
+! 6
+? 4
+? 5
+! 39
+Explanation:
+Test case
+1: Jury's secret number is
+N=6. Your first query is
+X=5, so the jury returns
+5mod6=5. Your second query is
+X=6, so the jury returns
+6mod6=0. Finally, you output
+6 as the final answer, which is the correct answer.
+Test case
+2: Jury's secret number is
+N=39. Your first query is
+X=4, so the jury returns
+4mod39=4. Your second query is
+X=5, so the jury returns
+5mod39=5. Finally, you output
+39 as the final answer, which is the correct answer (but a completely wild guess).
+Note that the jury does not output anything other than the answers to the queries, so please start asking queries for the next test case after outputting
+N for the previous test case.

@@ -1,0 +1,191 @@
+D. Koxia and Game
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Koxia and Mahiru are playing a game with three arrays
+a
+,
+b
+, and
+c
+of length
+n
+. Each element of
+a
+,
+b
+and
+c
+is an integer between
+1
+and
+n
+inclusive.
+The game consists of
+n
+rounds. In the
+i
+-th round, they perform the following moves:
+Let
+S
+be the multiset
+{
+a
+i
+,
+b
+i
+,
+c
+i
+}
+.
+Koxia removes one element from the multiset
+S
+by her choice.
+Mahiru chooses one integer from the two remaining in the multiset
+S
+.
+Let
+d
+i
+be the integer Mahiru chose in the
+i
+-th round. If
+d
+is a permutation
+†
+†
+, Koxia wins. Otherwise, Mahiru wins.
+Currently, only the arrays
+a
+and
+b
+have been chosen. As an avid supporter of Koxia, you want to choose an array
+c
+such that Koxia will win. Count the number of such
+c
+, modulo
+998244353
+.
+Note that Koxia and Mahiru both play optimally.
+†
+†
+A permutation of length
+n
+is an array consisting of
+n
+distinct integers from
+1
+to
+n
+in arbitrary order. For example,
+[2,3,1,5,4]
+is a permutation, but
+[1,2,2]
+is not a permutation (
+2
+appears twice in the array), and
+[1,3,4]
+is also not a permutation (
+n=3
+but there is
+4
+in the array).
+Input
+Each test consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤2⋅
+10
+4
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the size of the arrays.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+).
+The third line of each test case contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤n
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+Output a single integer — the number of
+c
+makes Koxia win, modulo
+998244353
+.
+Example
+input
+Copy
+2
+3
+1 2 2
+1 3 3
+5
+3 3 1 3 4
+4 5 2 5 5
+output
+Copy
+6
+0
+Note
+In the first test case, there are
+6
+possible arrays
+c
+that make Koxia win —
+[1,2,3]
+,
+[1,3,2]
+,
+[2,2,3]
+,
+[2,3,2]
+,
+[3,2,3]
+,
+[3,3,2]
+.
+In the second test case, it can be proved that no array
+c
+makes Koxia win.

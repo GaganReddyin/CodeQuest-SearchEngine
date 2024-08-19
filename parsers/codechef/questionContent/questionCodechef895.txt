@@ -1,0 +1,82 @@
+Plusle and Minun on Array
+Problem
+Chef has an array
+A of length
+N. He defines the alternating sum of the array as:
+S=∣A
+1
+∣−∣A
+2
+∣+∣A
+3
+∣−∣A
+4
+∣+…(−1)
+N−1
+⋅∣A
+N
+∣
+Chef is allowed to perform the following operation on the array at most once:
+Choose two indices
+i and
+j
+(1≤i<j≤N) and swap the elements
+A
+i
+and
+A
+j
+.
+Find the maximum alternating sum Chef can achieve by performing the operation at most once.
+Note:
+∣X∣ denotes the absolute value of
+X. For example,
+∣−4∣=4 and
+∣7∣=7.
+Input Format
+The first line will contain
+T - the number of test cases. Then the test cases follow.
+First line of each test case contains a single integer
+N - size of the array
+A.
+Second line of each test case contains
+N space separated integers - denoting the elements of array
+A.
+Output Format
+For each testcase, output in a single line, the maximum alternating sum Chef can obtain by performing the operation at most once.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+−10
+9
+≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+2
+10 -10
+7
+-3 -2 -1 0 1 2 3
+0
+6
+Explanation:
+Test Case
+1: One optimal way is to perform no operations. Thus the alternating sum is
+∣10∣−∣−10∣=10−10=0.
+Test Case
+2: One optimal way is to choose
+i=2 and
+j=5. After swapping, the array is
+[−3,1,−1,0,−2,2,3]. The alternating sum in this case is
+∣−3∣−∣1∣+∣−1∣−∣0∣+∣−2∣−∣2∣+∣3∣=6.

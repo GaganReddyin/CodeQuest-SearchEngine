@@ -1,0 +1,77 @@
+Piles Parity
+Problem
+Chef and Chefina are playing a game involving
+N piles where the
+i
+th
+pile
+(1≤i≤N) has
+A
+i
+stones initially.
+They take alternate turns with Chef starting the game.
+In his/her turn a player can choose any non-empty pile (say
+i
+th
+pile) and remove
+X stones from it iff:
+Parity of
+X is same as parity of
+i.
+1≤X≤A
+i
+.
+The player who cannot make a move loses. Determine the winner of the game if both players play optimally.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N — the number of piles.
+Next line contains
+N space-separated integers
+A
+1
+,A
+2
+,A
+3
+,…,A
+N
+- denoting the number of stones in each pile initially.
+Output Format
+For each test case, output CHEF if Chef wins the game, CHEFINA otherwise.
+The output is case-insensitive. Thus, the strings Chef, CHEF, chef, and cheF are all considered identical.
+Constraints
+1≤T≤4000
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+2
+1
+2
+3
+2 1 3
+CHEFINA
+CHEF
+Explanation:
+Test case
+1: Chef makes the first move and can only remove
+X=1 stone from the pile. Thus, the pile has
+1 stone left which Chefina can remove. Chef has no possible move left and thus Chefina wins.
+Note that Chef cannot remove
+X=2 stones in the first turn as
+X should have the same parity as
+i=1.
+Test case
+2: It can be shown that if both players play optimally, Chef wins the game.

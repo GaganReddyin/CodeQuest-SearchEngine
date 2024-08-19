@@ -1,0 +1,139 @@
+Unstable Subarray
+Problem
+You are given an array
+A of size
+N.
+We define the function
+f(l,r)=∑
+i=l
+r−1
+(A
+i
+−A
+i+1
+), where
+1≤l≤r≤N.
+Note that
+f(i,i) is defined as
+0.
+A subarray
+A[l,r] is considered unstable if
+f(l,r)
+
+=(A
+r
+−A
+l
+).
+Count the number of unstable subarrays in the array.
+Note that the subarray
+A[l,r] consists of
+A
+l
+,A
+(l+1)
+,…,A
+(r−1)
+,A
+r
+.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains a single integer
+N — the number of elements in the array.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+— the elements of the array.
+Output Format
+For each test case, output on a new line, the count of unstable subarrays.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+10 20 30
+4
+1 2 1 2
+5
+1 2 3 4 5
+3
+4
+10
+Explanation:
+Test case
+1: There are
+3 unstable subarrays:
+A[1,2]: Here
+f(1,2)=10−20=−10 and
+A
+2
+−A
+1
+=10.
+A[1,3]: Here
+f(1,3)=(10−20)+(20−30)=−10−10=−20 and
+A
+3
+−A
+1
+=20.
+A[2,3]: Here
+f(2,3)=20−30=−10 and
+A
+3
+−A
+2
+=10.
+Test case
+2: There are
+4 unstable subarrays:
+A[1,2]: Here
+f(1,2)=1−2=−1 and
+A
+2
+−A
+1
+=1.
+A[1,4]: Here
+f(1,4)=(1−2)+(2−1)+(1−2)=−1+1−1=−1 and
+A
+4
+−A
+1
+=1.
+A[2,3]: Here
+f(2,3)=2−1=1 and
+A
+3
+−A
+2
+=−1.
+A[3,4]: Here
+f(3,4)=1−2=−1 and
+A
+4
+−A
+3
+=1.

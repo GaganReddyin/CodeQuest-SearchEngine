@@ -1,0 +1,92 @@
+Yet Another Tree Problem
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a connected graph with
+N vertices (numbered
+1 through
+N) and
+N−1 bidirectional edges. Also, you are given a sequence
+K
+1
+,K
+2
+,…,K
+N
+.
+Let's denote the distance between vertices
+u and
+v by
+d(u,v). Next, for each valid
+i, let's define
+D
+i
+as the maximum integer such that there are at least
+K
+i
+vertices
+v with
+d(i,v)>D
+i
+. (It can be proven that such integers exist for the given constraints.)
+Your task is to find the values of
+D
+1
+,D
+2
+,…,D
+N
+.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+K
+1
+,K
+2
+,…,K
+N
+.
+Each of the next
+N−1 lines contains two space-separated integeres
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+Output
+Print a single line containing
+N space-separated integers
+D
+1
+,D
+2
+,…,D
+N
+.
+Constraints
+1≤N≤10
+5
+1≤K
+i
+≤N−1 for each valid
+i
+1≤u,v≤N
+Subtasks
+Subtask #1 (20 points):
+1≤N≤10
+3
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+8
+1 2 3 6 6 4 5 2
+1 2
+2 3
+2 5
+2 6
+4 5
+5 7
+5 8
+2 1 2 1 0 1 1 2

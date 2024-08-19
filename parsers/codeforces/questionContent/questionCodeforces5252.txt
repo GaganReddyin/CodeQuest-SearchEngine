@@ -1,0 +1,30 @@
+A. k-Factorization
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given a positive integer n, find k integers (not necessary distinct) such that all these integers are strictly greater than 1, and their product is equal to n.
+Input
+The first line contains two integers n and k (2 ≤ n ≤ 100000, 1 ≤ k ≤ 20).
+Output
+If it's impossible to find the representation of n as a product of k numbers, print -1.
+Otherwise, print k integers in any order. Their product must be equal to n. If there are multiple answers, print any of them.
+Examples
+input
+Copy
+100000 2
+output
+Copy
+2 50000 
+input
+Copy
+100000 20
+output
+Copy
+-1
+input
+Copy
+1024 5
+output
+Copy
+2 64 2 2 2 

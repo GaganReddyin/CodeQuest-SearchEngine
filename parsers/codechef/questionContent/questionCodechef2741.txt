@@ -1,0 +1,109 @@
+Least Size
+Problem
+You are given a tree with
+N nodes where each node is numbered from
+1 to
+N.
+Suppose you root the tree at node
+R.
+Then, the score of a permutation
+P of length
+N is defined as the size of the set
+S containing
+LCA(P
+i
+,P
+i+1
+) for all
+1≤i<N.
+Find the minimum score of a permutation over all possible roots and all possible permutations of length
+N.
+You need to print the root
+R and the permutation
+P which results in the minimum score.
+In case there are multiple answers, you may print any.
+Note:
+A permutation
+P of length
+N consists of all integers from
+1 to
+N exactly once.
+LCA(A,B) denotes the lowest common ancestor of nodes
+A and
+B.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test contains an integer
+N, denoting the number of nodes in the tree.
+The next
+N−1 lines contain two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between the nodes
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, print two lines.
+In the first line, output
+R, the root for which a permutation has minimum score.
+In the second line, print
+N space separated integers, denoting the permutation with minimum score.
+If there are multiple answers, you can print any of them.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+1≤u
+i
+,v
+i
+≤N,u
+i
+
+=v
+i
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+2
+2
+1 2
+5
+1 2
+2 3
+3 4
+4 5
+2
+1 2
+3
+1 5 3 2 4
+Explanation:
+Test case
+1: Consider
+R=2 and
+P=[1,2]. Thus,
+S={LCA(1,2)}={2}.
+Thus, the score is
+∣S∣=1, which is minimum possible.
+Test case
+2: Consider
+R=3 and
+P=[1,5,3,2,4]. Thus,
+S={LCA(1,5),LCA(5,3),LCA(3,2),LCA(2,4)}={3}.
+Thus, the score is
+∣S∣=1, which is minimum possible.

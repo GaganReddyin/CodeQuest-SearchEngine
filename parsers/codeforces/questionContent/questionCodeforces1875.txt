@@ -1,0 +1,122 @@
+B. Box Fitting
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given
+n
+rectangles, each of height
+1
+. Each rectangle's width is a power of
+2
+(i. e. it can be represented as
+2
+x
+for some non-negative integer
+x
+).
+You are also given a two-dimensional box of width
+W
+. Note that
+W
+may or may not be a power of
+2
+. Moreover,
+W
+is at least as large as the width of the largest rectangle.
+You have to find the smallest height of this box, such that it is able to fit all the given rectangles. It is allowed to have some empty space left in this box after fitting all the rectangles.
+You cannot rotate the given rectangles to make them fit into the box. Moreover, any two distinct rectangles must not overlap, i. e., any two distinct rectangles must have zero intersection area.
+See notes for visual explanation of sample input.
+Input
+The first line of input contains one integer
+t
+(
+1≤t≤5⋅
+10
+3
+) — the number of test cases. Each test case consists of two lines.
+For each test case:
+the first line contains two integers
+n
+(
+1≤n≤
+10
+5
+) and
+W
+(
+1≤W≤
+10
+9
+);
+the second line contains
+n
+integers
+w
+1
+,
+w
+2
+,…,
+w
+n
+(
+1≤
+w
+i
+≤
+10
+6
+), where
+w
+i
+is the width of the
+i
+-th rectangle. Each
+w
+i
+is a power of
+2
+;
+additionally,
+max
+i=1
+n
+w
+i
+≤W
+.
+The sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+Output
+t
+integers. The
+i
+-th integer should be equal to the answer to the
+i
+-th test case — the smallest height of the box.
+Example
+input
+Copy
+2
+5 16
+1 2 8 4 8
+6 10
+2 8 8 2 2 8
+output
+Copy
+2
+3
+Note
+For the first test case in the sample input, the following figure shows one way to fit the given five rectangles into the 2D box with minimum height:
+In the figure above, the number inside each rectangle is its width. The width of the 2D box is
+16
+(indicated with arrow below). The minimum height required for the 2D box in this case is
+2
+(indicated on the left).
+In the second test case, you can have a minimum height of three by keeping two blocks (one each of widths eight and two) on each of the three levels.

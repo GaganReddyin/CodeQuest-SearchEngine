@@ -1,0 +1,84 @@
+E3. Daleks' Invasion (hard)
+time limit per test10 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+With your help, Heidi has prepared a plan of trap placement and defence. Yet suddenly, the Doctor popped out of the TARDIS and told her that he had spied on the Daleks' preparations, and there is more of them than ever. Desperate times require desperate measures, so Heidi is going to risk meeting with the Daleks and she will consider placing a trap along any Corridor.
+This means she needs your help again in calculating
+E
+max
+(c)
+– the largest
+e≤
+10
+9
+such that if we changed the energy requirement of
+c
+to
+e
+, then the Daleks might use
+c
+in their invasion – but this time for all Time Corridors.
+Input
+First line: number
+n
+of destinations, number
+m
+of corridors (
+2≤n≤
+10
+5
+,
+n−1≤m≤
+10
+6
+). The next
+m
+lines: destinations
+a
+,
+b
+and energy
+e
+(
+1≤a,b≤n
+,
+a≠b
+,
+0≤e≤
+10
+9
+).
+No pair
+{a,b}
+will repeat. The graph is guaranteed to be connected. It is not guaranteed that all energy requirements
+e
+are distinct, or that the minimum spanning tree is unique.
+Output
+Output
+m
+lines, each containing one integer:
+E
+max
+(
+c
+i
+)
+for the
+i
+-th Corridor
+c
+i
+from the input.
+Example
+input
+Copy
+3 3
+1 2 8
+2 3 3
+3 1 4
+output
+Copy
+4
+8
+8

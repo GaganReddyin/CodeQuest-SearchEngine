@@ -1,0 +1,83 @@
+E. Rectangle Painting 2
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a square grid of size
+n×n
+. Some cells are colored in black, all others are colored in white. In one operation you can select some rectangle and color all its cells in white. It costs
+min(h,w)
+to color a rectangle of size
+h×w
+. You are to make all cells white for minimum total cost.
+The square is large, so we give it to you in a compressed way. The set of black cells is the union of
+m
+rectangles.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤
+10
+9
+,
+0≤m≤50
+) — the size of the square grid and the number of black rectangles.
+Each of the next
+m
+lines contains 4 integers
+x
+i1
+y
+i1
+x
+i2
+y
+i2
+(
+1≤
+x
+i1
+≤
+x
+i2
+≤n
+,
+1≤
+y
+i1
+≤
+y
+i2
+≤n
+) — the coordinates of the bottom-left and the top-right corner cells of the
+i
+-th black rectangle.
+The rectangles may intersect.
+Output
+Print a single integer — the minimum total cost of painting the whole square in white.
+Examples
+input
+Copy
+10 2
+4 1 5 10
+1 4 10 5
+output
+Copy
+4
+input
+Copy
+7 6
+2 1 2 1
+4 2 4 3
+2 5 2 5
+2 3 5 3
+1 2 1 2
+3 2 5 3
+output
+Copy
+3
+Note
+The examples and some of optimal solutions are shown on the pictures below.

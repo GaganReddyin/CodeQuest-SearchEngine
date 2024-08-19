@@ -1,0 +1,316 @@
+H. Holy Diver
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You are given an array which is initially empty. You need to perform
+n
+operations of the given format:
+"
+a
+l
+r
+k
+": append
+a
+to the end of the array. After that count the number of integer pairs
+x,y
+such that
+l≤x≤y≤r
+and
+mex(
+a
+x
+,
+a
+x+1
+,…,
+a
+y
+)=k
+.
+The elements of the array are numerated from
+1
+in the order they are added to the array.
+To make this problem more tricky we don't say your real parameters of the queries. Instead your are given
+a
+′
+,
+l
+′
+,
+r
+′
+,
+k
+′
+. To get
+a
+,
+l
+,
+r
+,
+k
+on the
+i
+-th operation you need to perform the following:
+a:=(
+a
+′
++lans)mod(n+1)
+,
+l:=(
+l
+′
++lans)modi+1
+,
+r:=(
+r
+′
++lans)modi+1
+,
+if
+l>r
+swap
+l
+and
+r
+,
+k:=(
+k
+′
++lans)mod(n+1)
+,
+where
+lans
+is the answer to the previous operation, initially
+lans
+is equal to zero.
+i
+is the id of the operation, operations are numbered from
+1
+.
+The
+mex(S)
+, where
+S
+is a multiset of non-negative integers, is the smallest non-negative integer which does not appear in the set. For example,
+mex({2,2,3})=0
+and
+mex({0,1,4,1,6})=2
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of the array.
+The next
+n
+lines contain the description of queries.
+Each of them
+n
+lines contains four non-negative integers
+a
+′
+,
+l
+′
+,
+r
+′
+,
+k
+′
+(
+0,≤
+a
+′
+,
+l
+′
+,
+r
+′
+,
+k
+′
+≤
+10
+9
+), describing one operation.
+Output
+For each query print a single integer — the answer to this query.
+Examples
+input
+Copy
+5
+0 0 0 1
+0 1 0 5
+5 2 1 0
+5 2 1 0
+2 4 3 3
+output
+Copy
+1
+1
+2
+6
+3
+input
+Copy
+5
+2 0 0 2
+2 0 1 1
+0 0 2 0
+3 2 2 0
+0 2 3 0
+output
+Copy
+0
+0
+3
+0
+0
+Note
+For the first example the decoded values of
+a
+,
+l
+,
+r
+,
+k
+are the following:
+a
+1
+=0,
+l
+1
+=1,
+r
+1
+=1,
+k
+1
+=1
+a
+2
+=1,
+l
+2
+=1,
+r
+2
+=2,
+k
+2
+=0
+a
+3
+=0,
+l
+3
+=1,
+r
+3
+=3,
+k
+3
+=1
+a
+4
+=1,
+l
+4
+=1,
+r
+4
+=4,
+k
+4
+=2
+a
+5
+=2,
+l
+5
+=1,
+r
+5
+=5,
+k
+5
+=3
+For the second example the decoded values of
+a
+,
+l
+,
+r
+,
+k
+are the following:
+a
+1
+=2,
+l
+1
+=1,
+r
+1
+=1,
+k
+1
+=2
+a
+2
+=2,
+l
+2
+=1,
+r
+2
+=2,
+k
+2
+=1
+a
+3
+=0,
+l
+3
+=1,
+r
+3
+=3,
+k
+3
+=0
+a
+4
+=0,
+l
+4
+=2,
+r
+4
+=2,
+k
+4
+=3
+a
+5
+=0,
+l
+5
+=3,
+r
+5
+=4,
+k
+5
+=0

@@ -1,0 +1,81 @@
+Tree Queries
+Problem
+You are given an undirected weighted tree of
+N nodes, numbered from
+1 to
+N.
+The cost of a path is defined as the bitwise AND of the weights of the edges on that path. The cost of the path having only one node is, by default,
+0.
+You are given
+Q queries. In each query, you will be given a node
+x. For each query, your task is to find two nodes
+u and
+v, such that
+The node
+x lies on the simple path from node
+u to node
+v.
+The cost of this path is greater than
+0.
+The number of nodes on this path is maximum
+If there are multiple answers, print any. If there exists no answer, print "
+−1−1" (without quotes).
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N, denoting the number of nodes in the tree.
+The next
+N−1 lines contains three space-separated integers
+u,
+v and
+w, denoting an undirected edge between node
+u and node
+v with weight
+w.
+The next line contains an integer
+Q denoting the number of queries.
+The next
+Q lines contain an integer
+x denoting the query node.
+Output Format
+For each test case, output
+Q lines containing two space-separated integers, the answer to that query.
+Constraints
+1≤T≤1000
+1≤N,Q≤10
+5
+1≤u,v,x≤N
+0≤w≤10
+9
+The sum of
+N and
+Q over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+1
+6
+2 1 5
+3 2 2
+4 2 4
+5 4 6
+6 4 0
+3
+2
+3
+6
+5 1
+3 2
+-1 -1
+Explanation:
+In the first query, the bitwise AND of the simple path from node
+5 to node
+1 is
+(6&4&5) which is
+4.
+In the third query, there is no possible answer.

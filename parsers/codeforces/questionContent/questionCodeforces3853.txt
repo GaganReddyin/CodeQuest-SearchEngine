@@ -1,0 +1,152 @@
+C. Brutality
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are playing a new famous fighting game: Kortal Mombat XII. You have to perform a brutality on your opponent's character.
+You are playing the game on the new generation console so your gamepad have
+26
+buttons. Each button has a single lowercase Latin letter from 'a' to 'z' written on it. All the letters on buttons are pairwise distinct.
+You are given a sequence of hits, the
+i
+-th hit deals
+a
+i
+units of damage to the opponent's character. To perform the
+i
+-th hit you have to press the button
+s
+i
+on your gamepad. Hits are numbered from
+1
+to
+n
+.
+You know that if you press some button more than
+k
+times in a row then it'll break. You cherish your gamepad and don't want to break any of its buttons.
+To perform a brutality you have to land some of the hits of the given sequence. You are allowed to skip any of them, however changing the initial order of the sequence is prohibited. The total damage dealt is the sum of
+a
+i
+over all
+i
+for the hits which weren't skipped.
+Note that if you skip the hit then the counter of consecutive presses the button won't reset.
+Your task is to skip some hits to deal the maximum possible total damage to the opponent's character and not break your gamepad buttons.
+Input
+The first line of the input contains two integers
+n
+and
+k
+(
+1≤k≤n≤2⋅
+10
+5
+) — the number of hits and the maximum number of times you can push the same button in a row.
+The second line of the input contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+), where
+a
+i
+is the damage of the
+i
+-th hit.
+The third line of the input contains the string
+s
+consisting of exactly
+n
+lowercase Latin letters — the sequence of hits (each character is the letter on the button you need to press to perform the corresponding hit).
+Output
+Print one integer
+dmg
+— the maximum possible damage to the opponent's character you can deal without breaking your gamepad buttons.
+Examples
+input
+Copy
+7 3
+1 5 16 18 7 2 10
+baaaaca
+output
+Copy
+54
+input
+Copy
+5 5
+2 4 1 3 1000
+aaaaa
+output
+Copy
+1010
+input
+Copy
+5 4
+2 4 1 3 1000
+aaaaa
+output
+Copy
+1009
+input
+Copy
+8 1
+10 15 2 1 4 8 15 16
+qqwweerr
+output
+Copy
+41
+input
+Copy
+6 3
+14 18 9 19 2 15
+cccccc
+output
+Copy
+52
+input
+Copy
+2 1
+10 10
+qq
+output
+Copy
+10
+Note
+In the first example you can choose hits with numbers
+[1,3,4,5,6,7]
+with the total damage
+1+16+18+7+2+10=54
+.
+In the second example you can choose all hits so the total damage is
+2+4+1+3+1000=1010
+.
+In the third example you can choose all hits expect the third one so the total damage is
+2+4+3+1000=1009
+.
+In the fourth example you can choose hits with numbers
+[2,3,6,8]
+. Only this way you can reach the maximum total damage
+15+2+8+16=41
+.
+In the fifth example you can choose only hits with numbers
+[2,4,6]
+with the total damage
+18+19+15=52
+.
+In the sixth example you can change either first hit or the second hit (it does not matter) with the total damage
+10
+.

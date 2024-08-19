@@ -1,0 +1,199 @@
+D. For Gamers. By Gamers.
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Monocarp is playing a strategy game. In the game, he recruits a squad to fight monsters. Before each battle, Monocarp has
+C
+coins to spend on his squad.
+Before each battle starts, his squad is empty. Monocarp chooses one type of units and recruits no more units of that type than he can recruit with
+C
+coins.
+There are
+n
+types of units. Every unit type has three parameters:
+c
+i
+ — the cost of recruiting one unit of the
+i
+-th type;
+d
+i
+ — the damage that one unit of the
+i
+-th type deals in a second;
+h
+i
+ — the amount of health of one unit of the
+i
+-th type.
+Monocarp has to face
+m
+monsters. Every monster has two parameters:
+D
+j
+ — the damage that the
+j
+-th monster deals in a second;
+H
+j
+ — the amount of health the
+j
+-th monster has.
+Monocarp has to fight only the
+j
+-th monster during the
+j
+-th battle. He wants all his recruited units to stay alive. Both Monocarp's squad and the monster attack continuously (not once per second) and at the same time. Thus, Monocarp wins the battle if and only if his squad kills the monster strictly faster than the monster kills one of his units. The time is compared with no rounding.
+For each monster, Monocarp wants to know the minimum amount of coins he has to spend to kill that monster. If this amount is greater than
+C
+, then report that it's impossible to kill that monster.
+Input
+The first line contains two integers
+n
+and
+C
+(
+1≤n≤3⋅
+10
+5
+;
+1≤C≤
+10
+6
+) — the number of types of units and the amount of coins Monocarp has before each battle.
+The
+i
+-th of the next
+n
+lines contains three integers
+c
+i
+,
+d
+i
+and
+h
+i
+(
+1≤
+c
+i
+≤C
+;
+1≤
+d
+i
+,
+h
+i
+≤
+10
+6
+).
+The next line contains a single integer
+m
+(
+1≤m≤3⋅
+10
+5
+) — the number of monsters that Monocarp has to face.
+The
+j
+-th of the next
+m
+lines contains two integers
+D
+j
+and
+H
+j
+(
+1≤
+D
+j
+≤
+10
+6
+;
+1≤
+H
+j
+≤
+10
+12
+).
+Output
+Print
+m
+integers. For each monster, print the minimum amount of coins Monocarp has to spend to kill that monster. If this amount is greater than
+C
+, then print
+−1
+.
+Examples
+input
+Copy
+3 10
+3 4 6
+5 5 5
+10 3 4
+3
+8 3
+5 4
+10 15
+output
+Copy
+5 3 -1 
+input
+Copy
+5 15
+14 10 3
+9 2 2
+10 4 3
+7 3 5
+4 3 1
+6
+11 2
+1 1
+4 7
+2 1
+1 14
+3 3
+output
+Copy
+14 4 14 4 7 7 
+input
+Copy
+5 13
+13 1 9
+6 4 5
+12 18 4
+9 13 2
+5 4 5
+2
+16 3
+6 2
+output
+Copy
+12 5 
+Note
+Consider the first monster of the first example.
+Monocarp can't recruit one unit of the first type, because it will take both him and the monster
+0.75
+seconds to kill each other. He can recruit two units for the cost of
+6
+coins and kill the monster in
+0.375
+second.
+Monocarp can recruit one unit of the second type, because he kills the monster in
+0.6
+seconds, and the monster kills him in
+0.625
+seconds. The unit is faster. Thus,
+5
+coins is enough.
+Monocarp will need at least three units of the third type to kill the first monster, that will cost
+30
+coins.
+Monocarp will spend the least coins if he chooses the second type of units and recruits one unit of that type.

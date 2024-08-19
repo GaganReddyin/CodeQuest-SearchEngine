@@ -1,0 +1,231 @@
+Subsequence LCM
+Problem
+You are given an array
+A consisting of
+N integers.
+Find the number of subsequences
+S having length
+M such that:
+M
+>
+1;
+For any pair of indices
+(i,j) in the subsequence
+S,
+(lcm(M,S
+i
+)−S
+i
+)=(lcm(M,S
+j
+)−S
+j
+). Here
+lcm(a,b) denotes the lcm of integers
+a and
+b.
+Since the answer can be huge, print it modulo
+10
+9
++7.
+Note that, a subsequence of an array is obtained by deleting the elements at some (possibly none or all) indices of the array. For example, all the subsequences of array
+[1,2,2] are
+{[A
+1
+],[A
+2
+],[A
+3
+],[A
+1
+,A
+2
+],[A
+1
+,A
+3
+],[A
+2
+,A
+3
+],[A
+1
+,A
+2
+,A
+3
+]}, that is,
+{[1],[2],[2],[1,2],[1,2],[2,2],[1,2,2]}.
+Input Format
+The first line of input contains
+T, the number of test cases.
+The first line of each test case contains an integer
+N, the number of elements in the array.
+The next line of each test case contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+, the elements of the array
+A.
+Output Format
+For each test case, output a single integer denoting the answer modulo
+10
+9
++7.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+1≤A
+i
+≤10
+7
+Sum of
+N of over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+3
+3
+1 2 3
+3
+2 2 2
+5
+2 2 3 3 3
+0
+4
+5
+Explanation:
+Test case
+1: There is no subsequence satisfying all the conditions.
+Test case
+2: The valid subsequences are:
+{A
+1
+,A
+2
+},{A
+1
+,A
+3
+},{A
+2
+,A
+3
+}, and
+{A
+1
+,A
+2
+,A
+3
+}.
+For subsequence
+{A
+1
+,A
+3
+},
+(lcm(2,A
+1
+)−A
+1
+)=(lcm(2,A
+3
+)−A
+3
+)=0.
+Similarly, for all pairs in the subsequence
+{A
+1
+,A
+2
+,A
+3
+},
+(lcm(3,S
+i
+)−S
+i
+)=(lcm(3,S
+j
+)−S
+j
+)=4.
+Test case
+3: The valid subsequences are:
+{A
+1
+,A
+2
+},{A
+3
+,A
+4
+},{A
+4
+,A
+5
+},{A
+3
+,A
+5
+}, and
+{A
+3
+,A
+4
+,A
+5
+}.
+For subsequence
+{A
+1
+,A
+2
+},
+(lcm(2,A
+1
+)−A
+1
+)=(lcm(2,A
+2
+)−A
+2
+). Same condition holds for subsequences
+{A
+3
+,A
+4
+},{A
+4
+,A
+5
+},{A
+3
+,A
+5
+}. For all pairs in the subsequence
+{A
+3
+,A
+4
+,A
+5
+},
+(lcm(3,S
+i
+)−S
+i
+)=(lcm(3,S
+j
+)−S
+j
+)=0.

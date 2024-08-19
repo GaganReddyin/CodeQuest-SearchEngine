@@ -1,0 +1,199 @@
+B. Count Subrectangles
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of length
+n
+and array
+b
+of length
+m
+both consisting of only integers
+0
+and
+1
+. Consider a matrix
+c
+of size
+n×m
+formed by following rule:
+c
+i,j
+=
+a
+i
+⋅
+b
+j
+(i.e.
+a
+i
+multiplied by
+b
+j
+). It's easy to see that
+c
+consists of only zeroes and ones too.
+How many subrectangles of size (area)
+k
+consisting only of ones are there in
+c
+?
+A subrectangle is an intersection of a consecutive (subsequent) segment of rows and a consecutive (subsequent) segment of columns. I.e. consider four integers
+x
+1
+,
+x
+2
+,
+y
+1
+,
+y
+2
+(
+1≤
+x
+1
+≤
+x
+2
+≤n
+,
+1≤
+y
+1
+≤
+y
+2
+≤m
+) a subrectangle
+c[
+x
+1
+…
+x
+2
+][
+y
+1
+…
+y
+2
+]
+is an intersection of the rows
+x
+1
+,
+x
+1
++1,
+x
+1
++2,…,
+x
+2
+and the columns
+y
+1
+,
+y
+1
++1,
+y
+1
++2,…,
+y
+2
+.
+The size (area) of a subrectangle is the total number of cells in it.
+Input
+The first line contains three integers
+n
+,
+m
+and
+k
+(
+1≤n,m≤40000,1≤k≤n⋅m
+), length of array
+a
+, length of array
+b
+and required size of subrectangles.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤1
+), elements of
+a
+.
+The third line contains
+m
+integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+(
+0≤
+b
+i
+≤1
+), elements of
+b
+.
+Output
+Output single integer — the number of subrectangles of
+c
+with size (area)
+k
+consisting only of ones.
+Examples
+input
+Copy
+3 3 2
+1 0 1
+1 1 1
+output
+Copy
+4
+input
+Copy
+3 5 4
+1 1 1
+1 1 1 1 1
+output
+Copy
+14
+Note
+In first example matrix
+c
+is:
+There are
+4
+subrectangles of size
+2
+consisting of only ones in it:
+In second example matrix
+c
+is:

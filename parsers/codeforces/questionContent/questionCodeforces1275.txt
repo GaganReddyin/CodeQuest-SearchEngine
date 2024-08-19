@@ -1,0 +1,94 @@
+A. Long Comparison
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Monocarp wrote down two numbers on a whiteboard. Both numbers follow a specific format: a positive integer
+x
+with
+p
+zeros appended to its end.
+Now Monocarp asks you to compare these two numbers. Can you help him?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains two integers
+x
+1
+and
+p
+1
+(
+1≤
+x
+1
+≤
+10
+6
+;0≤
+p
+1
+≤
+10
+6
+) — the description of the first number.
+The second line of each testcase contains two integers
+x
+2
+and
+p
+2
+(
+1≤
+x
+2
+≤
+10
+6
+;0≤
+p
+2
+≤
+10
+6
+) — the description of the second number.
+Output
+For each testcase print the result of the comparison of the given two numbers. If the first number is smaller than the second one, print '<'. If the first number is greater than the second one, print '>'. If they are equal, print '='.
+Example
+input
+Copy
+5
+2 1
+19 0
+10 2
+100 1
+1999 0
+2 3
+1 0
+1 0
+99 0
+1 2
+output
+Copy
+>
+=
+<
+=
+<
+Note
+The comparisons in the example are:
+20>19
+,
+1000=1000
+,
+1999<2000
+,
+1=1
+,
+99<100
+.

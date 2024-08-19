@@ -1,0 +1,28 @@
+Special String
+Problem
+You are given a string $S$ and you want to make it $(n,k)$ special. String $A$ is $(n,k)$ special if after concatenating $n$ copies of string $A$ we get at least $k$ substring of $A$ in the resulting string (Overlapping substrings also count). Your task is to find the minimum number of characters you need to alter to make string $S$, $(n,k)$ special.
+Note : Inputs are given such that it is always possible to get at least k substrings.
+Input
+The first line contains a single integer $T$, which denotes the number of test cases. The description of each test case follows.
+<li> The first line of each test case contains two integers $n$ and $k$.
+</li>
+<li>
+    The second line of each test case contains the string $S$. 
+</li>
+Output
+For each test case, Output minimum number of characters you need to alter to make string $S$, $(n,k)$ special.
+Constraints
+$1 ≤ T ≤ 2010$
+$1 ≤ |S| ≤ 10^{5}$
+$1 ≤ n ≤ 10^{5}$
+$1 ≤ k ≤ 10^{10}$
+The sum of $|S|$ over all test cases does not exceed $10^{5}$
+Sample Input
+2
+3 4
+abac
+3 9
+abac
+Sample Output
+1
+2

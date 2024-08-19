@@ -1,0 +1,144 @@
+B. XY Sequence
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given four integers
+n
+,
+B
+,
+x
+and
+y
+. You should build a sequence
+a
+0
+,
+a
+1
+,
+a
+2
+,…,
+a
+n
+where
+a
+0
+=0
+and for each
+i≥1
+you can choose:
+either
+a
+i
+=
+a
+i−1
++x
+or
+a
+i
+=
+a
+i−1
+−y
+.
+Your goal is to build such a sequence
+a
+that
+a
+i
+≤B
+for all
+i
+and
+∑
+i=0
+n
+a
+i
+is maximum possible.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Next
+t
+cases follow.
+The first and only line of each test case contains four integers
+n
+,
+B
+,
+x
+and
+y
+(
+1≤n≤2⋅
+10
+5
+;
+1≤B,x,y≤
+10
+9
+).
+It's guaranteed that the total sum of
+n
+doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer — the maximum possible
+∑
+i=0
+n
+a
+i
+.
+Example
+input
+Copy
+3
+5 100 1 30
+7 1000000000 1000000000 1000000000
+4 1 7 3
+output
+Copy
+15
+4000000000
+-10
+Note
+In the first test case, the optimal sequence
+a
+is
+[0,1,2,3,4,5]
+.
+In the second test case, the optimal sequence
+a
+is
+[0,
+10
+9
+,0,
+10
+9
+,0,
+10
+9
+,0,
+10
+9
+]
+.
+In the third test case, the optimal sequence
+a
+is
+[0,−3,−6,1,−2]
+.

@@ -1,0 +1,105 @@
+F. Desktop Rearrangement
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Your friend Ivan asked you to help him rearrange his desktop. The desktop can be represented as a rectangle matrix of size
+n×m
+consisting of characters '.' (empty cell of the desktop) and '*' (an icon).
+The desktop is called good if all its icons are occupying some prefix of full columns and, possibly, the prefix of the next column (and there are no icons outside this figure). In other words, some amount of first columns will be filled with icons and, possibly, some amount of first cells of the next (after the last full column) column will be also filled with icons (and all the icons on the desktop belong to this figure). This is pretty much the same as the real life icons arrangement.
+In one move, you can take one icon and move it to any empty cell in the desktop.
+Ivan loves to add some icons to his desktop and remove them from it, so he is asking you to answer
+q
+queries: what is the minimum number of moves required to make the desktop good after adding/removing one icon?
+Note that queries are permanent and change the state of the desktop.
+Input
+The first line of the input contains three integers
+n
+,
+m
+and
+q
+(
+1≤n,m≤1000;1≤q≤2⋅
+10
+5
+) — the number of rows in the desktop, the number of columns in the desktop and the number of queries, respectively.
+The next
+n
+lines contain the description of the desktop. The
+i
+-th of them contains
+m
+characters '.' and '*' — the description of the
+i
+-th row of the desktop.
+The next
+q
+lines describe queries. The
+i
+-th of them contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+≤n;1≤
+y
+i
+≤m
+) — the position of the cell which changes its state (if this cell contained the icon before, then this icon is removed, otherwise an icon appears in this cell).
+Output
+Print
+q
+integers. The
+i
+-th of them should be the minimum number of moves required to make the desktop good after applying the first
+i
+queries.
+Examples
+input
+Copy
+4 4 8
+..**
+.*..
+*...
+...*
+1 3
+2 3
+3 1
+2 3
+3 4
+4 3
+2 3
+2 2
+output
+Copy
+3
+4
+4
+3
+4
+5
+5
+5
+input
+Copy
+2 5 5
+*...*
+*****
+1 3
+2 2
+1 3
+1 5
+2 3
+output
+Copy
+2
+3
+3
+3
+2

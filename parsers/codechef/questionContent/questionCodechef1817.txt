@@ -1,0 +1,72 @@
+Permutation XOR Sum
+Problem
+For a permutation
+P of integers from
+1 to
+N, let's define its value as
+(1⊕P
+1
+)+(2⊕P
+2
+)+…+(N⊕P
+N
+).
+Given
+N, find the maximum possible value of the permutation of integers from
+1 to
+N.
+As a reminder,
+⊕ denotes the bitwise XOR operation
+Input Format
+The first line of the input contains a single integer
+T
+− the number of test cases. The description of test cases follows.
+The only line of each test case contains a single integer
+N.
+Output Format
+For each test case, output the maximum possible value of the permutation of integers from
+1 to
+N.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+9
+.
+Subtasks
+Subtask 1 (60 points): The sum of
+N over all test cases doesn't exceed
+10
+6
+. Subtask 2 (40 points): No additional constraints.
+Sample 1:
+Input
+Output
+5
+1
+2
+3
+4
+29012022
+0
+6
+6
+20
+841697449540506
+Explanation:
+For
+N=1, the only such permutation is
+P=(1), its value is
+1⊕1=0.
+For
+N=2, the permutation with the best value is
+P=(2,1), with value
+1⊕2+2⊕1=6.
+For
+N=3, the permutation with the best value is
+P=(2,1,3), with value
+1⊕2+2⊕1+3⊕3=6.
+For
+N=4, the permutation with the best value is
+P=(2,1,4,3), with value
+1⊕2+2⊕1+3⊕4+4⊕3=20.

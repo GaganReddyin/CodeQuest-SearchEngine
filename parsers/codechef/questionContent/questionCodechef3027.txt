@@ -1,0 +1,101 @@
+Winning Ways 2
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef's Combinatorial Games Competition is starting again this year, and the qualification round is happening right now! This time, Chef is keeping it simple ― there will be two-player games with the following rules:
+Initially, the players are given an integer sequence
+S.
+The players alternate turns.
+In each turn, the current player must choose one or more elements of the current sequence
+S such that the values of all chosen elements are identical, and erase these elements from
+S.
+When a player cannot choose anything (the sequence
+S is already empty), this player loses the game.
+Since Chef is currently busy planning for the finals, he does not have time to prepare sequences for all qualification games. Instead, he chose a large sequence
+A
+1
+,A
+2
+,…,A
+N
+and he wants to use its contiguous subsequences for the games. To get a idea of how these games will turn out, Chef wants you to answer
+Q queries. In each query, you are given a subsequence
+A
+L
+,A
+L+1
+,…,A
+R
+, and you have to find the number of winning moves the first player can play on the first turn. Since this number can be quite large, compute it modulo
+998,244,353.
+Assume that both players play optimally. The queries are independent ― the sequence
+A does not change.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains a single integer
+Q.
+Each of the next
+Q lines contains two space-separated integers
+L and
+R describing a query.
+Output
+For each query, print a single line containing one integer ― the number of winning moves of the first player modulo
+998,244,353.
+Constraints
+1≤T≤5
+1≤N,Q≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+1≤L≤R≤N
+Subtasks
+Subtask #1 (10 points):
+N,Q≤100
+A
+i
+≤10
+5
+for each valid
+i
+Subtask #2 (20 points):
+N,Q≤10
+3
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+5
+1 2 1 2 2
+3
+1 1
+2 3
+2 5
+1
+0
+3
+Explanation:
+Example case 1:
+In the first game, there is only one move and it is a winning move for the first player.
+In the second game, the second player can always win regardless of the first player's move.
+In the third game, the first player can choose the subset of elements with indices
+{2,4},
+{2,5} or
+{4,5} (in the input sequence
+A) to ensure his victory in the future.

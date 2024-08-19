@@ -1,0 +1,49 @@
+Bad Tuples
+Problem
+A tuple of positive integers
+(a,b,c) is said to be a bad tuple if
+a,b,c are distinct,
+a divides
+b, and
+b divides
+c. For example,
+(1,2,4) and
+(7,21,42) are bad tuples while
+(1,2,3) and
+(2,4,4) are not.
+Chef has the
+N integers from
+1 to
+N with him. He wants to pick a subset of these numbers such that it doesn't contain a bad tuple. How many distinct subsets can he pick?
+Input Format
+The first and only line of input contains a single integer
+N, the number of available integers.
+Output Format
+Output the number of subsets that don't contain any bad tuples in them.
+Constraints
+1≤N≤60
+Sample 1:
+Input
+Output
+2
+4
+Sample 2:
+Input
+Output
+4
+14
+Explanation:
+Test case
+1: There are
+4 subsets in total —
+{},
+{1},
+{2},
+{1,2}. None of these subsets violate the condition.
+Test case
+2: There are
+16 subsets in total, out of which
+2 subsets —
+{1,2,4} and
+{1,2,3,4} — violate the given condition as they contain the bad tuple
+(1,2,4) in them.

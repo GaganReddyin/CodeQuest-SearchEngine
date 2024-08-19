@@ -1,0 +1,62 @@
+B. Nirvana
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Kurt reaches nirvana when he finds the product of all the digits of some positive integer. Greater value of the product makes the nirvana deeper.
+Help Kurt find the maximum possible product of digits among all integers from
+1
+to
+n
+.
+Input
+The only input line contains the integer
+n
+(
+1≤n≤2⋅
+10
+9
+).
+Output
+Print the maximum product of digits among all integers from
+1
+to
+n
+.
+Examples
+input
+Copy
+390
+output
+Copy
+216
+input
+Copy
+7
+output
+Copy
+7
+input
+Copy
+1000000000
+output
+Copy
+387420489
+Note
+In the first example the maximum product is achieved for
+389
+(the product of digits is
+3⋅8⋅9=216
+).
+In the second example the maximum product is achieved for
+7
+(the product of digits is
+7
+).
+In the third example the maximum product is achieved for
+999999999
+(the product of digits is
+9
+9
+=387420489
+).

@@ -1,0 +1,90 @@
+Yet Another Palindrome Problem
+Problem
+Chef has an array
+A of size
+N. He can perform the following operation on
+A:
+Select an
+i
+(1≤i≤N) and for all
+1≤j≤i, set
+A
+j
+:=A
+j
++1 (i.e. add
+1 to every element in the prefix of length
+i).
+Chef wants to convert
+A to a palindrome by using the above operation minimum number of times. Can you help Chef?
+If it is not possible to convert
+A to a palindrome, output
+−1.
+Note: An array is called palindrome if it reads the same backwards and forwards, for e.g.
+[1,4,1] and
+[7,3,3,7] are palindromic arrays.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the minimum number of operations required to convert
+A to a palindromic array.
+If it is not possible to do so, output
+−1.
+Constraints
+1≤T≤10
+5
+1≤N≤3⋅10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+4 2 2 4
+5
+5 4 3 2 1
+4
+1 2 3 4
+0
+-1
+3
+Explanation:
+Test case
+1: The given array is already a palindrome.
+Test case
+2: It can be proven that it is not possible to convert
+A to a palindromic array using the given operation.
+Test case
+3: We can perform the following operations:
+Select
+i=1,
+[1,2,3,4]→[2,2,3,4]
+Select
+i=2,
+[2,2,3,4]→[3,3,3,4]
+Select
+i=1,
+[3,3,3,4]→[4,3,3,4]

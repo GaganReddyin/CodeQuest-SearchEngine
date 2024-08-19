@@ -1,0 +1,189 @@
+D. Alice and the Doll
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice got a new doll these days. It can even walk!
+Alice has built a maze for the doll and wants to test it. The maze is a grid with
+n
+rows and
+m
+columns. There are
+k
+obstacles, the
+i
+-th of them is on the cell
+(
+x
+i
+,
+y
+i
+)
+, which means the cell in the intersection of the
+x
+i
+-th row and the
+y
+i
+-th column.
+However, the doll is clumsy in some ways. It can only walk straight or turn right at most once in the same cell (including the start cell). It cannot get into a cell with an obstacle or get out of the maze.
+More formally, there exist
+4
+directions, in which the doll can look:
+The doll looks in the direction along the row from the first cell to the last. While moving looking in this direction the doll will move from the cell
+(x,y)
+into the cell
+(x,y+1)
+;
+The doll looks in the direction along the column from the first cell to the last. While moving looking in this direction the doll will move from the cell
+(x,y)
+into the cell
+(x+1,y)
+;
+The doll looks in the direction along the row from the last cell to first. While moving looking in this direction the doll will move from the cell
+(x,y)
+into the cell
+(x,y−1)
+;
+The doll looks in the direction along the column from the last cell to the first. While moving looking in this direction the doll will move from the cell
+(x,y)
+into the cell
+(x−1,y)
+.
+.
+Standing in some cell the doll can move into the cell in the direction it looks or it can turn right once. Turning right once, the doll switches it's direction by the following rules:
+1→2
+,
+2→3
+,
+3→4
+,
+4→1
+. Standing in one cell, the doll can make at most one turn right.
+Now Alice is controlling the doll's moves. She puts the doll in of the cell
+(1,1)
+(the upper-left cell of the maze). Initially, the doll looks to the direction
+1
+, so along the row from the first cell to the last. She wants to let the doll walk across all the cells without obstacles exactly once and end in any place. Can it be achieved?
+Input
+The first line contains three integers
+n
+,
+m
+and
+k
+, separated by spaces (
+1≤n,m≤
+10
+5
+,0≤k≤
+10
+5
+) — the size of the maze and the number of obstacles.
+Next
+k
+lines describes the obstacles, the
+i
+-th line contains two integer numbers
+x
+i
+and
+y
+i
+, separated by spaces (
+1≤
+x
+i
+≤n,1≤
+y
+i
+≤m
+), which describes the position of the
+i
+-th obstacle.
+It is guaranteed that no two obstacles are in the same cell and no obstacle is in cell
+(1,1)
+.
+Output
+Print 'Yes' (without quotes) if the doll can walk across all the cells without obstacles exactly once by the rules, described in the statement.
+If it is impossible to walk across the maze by these rules print 'No' (without quotes).
+Examples
+input
+Copy
+3 3 2
+2 2
+2 1
+output
+Copy
+Yes
+input
+Copy
+3 3 2
+3 1
+2 2
+output
+Copy
+No
+input
+Copy
+3 3 8
+1 2
+1 3
+2 1
+2 2
+2 3
+3 1
+3 2
+3 3
+output
+Copy
+Yes
+Note
+Here is the picture of maze described in the first example:
+In the first example, the doll can walk in this way:
+The doll is in the cell
+(1,1)
+, looks to the direction
+1
+. Move straight;
+The doll is in the cell
+(1,2)
+, looks to the direction
+1
+. Move straight;
+The doll is in the cell
+(1,3)
+, looks to the direction
+1
+. Turn right;
+The doll is in the cell
+(1,3)
+, looks to the direction
+2
+. Move straight;
+The doll is in the cell
+(2,3)
+, looks to the direction
+2
+. Move straight;
+The doll is in the cell
+(3,3)
+, looks to the direction
+2
+. Turn right;
+The doll is in the cell
+(3,3)
+, looks to the direction
+3
+. Move straight;
+The doll is in the cell
+(3,2)
+, looks to the direction
+3
+. Move straight;
+The doll is in the cell
+(3,1)
+, looks to the direction
+3
+. The goal is achieved, all cells of the maze without obstacles passed exactly once.

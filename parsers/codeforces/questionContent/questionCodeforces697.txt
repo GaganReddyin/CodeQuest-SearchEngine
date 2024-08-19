@@ -1,0 +1,183 @@
+E. Add Modulo 10
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array of
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+You can apply the following operation an arbitrary number of times:
+select an index
+i
+(
+1≤i≤n
+) and replace the value of the element
+a
+i
+with the value
+a
+i
++(
+a
+i
+mod10)
+, where
+a
+i
+mod10
+is the remainder of the integer dividing
+a
+i
+by
+10
+.
+For a single index (value
+i
+), this operation can be applied multiple times. If the operation is applied repeatedly to the same index, then the current value of
+a
+i
+is taken into account each time. For example, if
+a
+i
+=47
+then after the first operation we get
+a
+i
+=47+7=54
+, and after the second operation we get
+a
+i
+=54+4=58
+.
+Check if it is possible to make all array elements equal by applying multiple (possibly zero) operations.
+For example, you have an array
+[6,11]
+.
+Let's apply this operation to the first element of the array. Let's replace
+a
+1
+=6
+with
+a
+1
++(
+a
+1
+mod10)=6+(6mod10)=6+6=12
+. We get the array
+[12,11]
+.
+Then apply this operation to the second element of the array. Let's replace
+a
+2
+=11
+with
+a
+2
++(
+a
+2
+mod10)=11+(11mod10)=11+1=12
+. We get the array
+[12,12]
+.
+Thus, by applying
+2
+operations, you can make all elements of an array equal.
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. What follows is a description of each test case.
+The first line of each test case contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the size of the array.
+The second line of each test case contains
+n
+integers
+a
+i
+(
+0≤
+a
+i
+≤
+10
+9
+) — array elements.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case print:
+YES if it is possible to make all array elements equal;
+NO otherwise.
+You can print YES and NO in any case (for example, the strings yEs, yes, Yes and YES will be recognized as a positive answer) .
+Example
+input
+Copy
+10
+2
+6 11
+3
+2 18 22
+5
+5 10 5 10 5
+4
+1 2 4 8
+2
+4 5
+3
+93 96 102
+2
+40 6
+2
+50 30
+2
+22 44
+2
+1 5
+output
+Copy
+Yes
+No
+Yes
+Yes
+No
+Yes
+No
+No
+Yes
+No
+Note
+The first test case is clarified above.
+In the second test case, it is impossible to make all array elements equal.
+In the third test case, you need to apply this operation once to all elements equal to
+5
+.
+In the fourth test case, you need to apply this operation to all elements until they become equal to
+8
+.
+In the fifth test case, it is impossible to make all array elements equal.
+In the sixth test case, you need to apply this operation to all elements until they become equal to
+102
+.

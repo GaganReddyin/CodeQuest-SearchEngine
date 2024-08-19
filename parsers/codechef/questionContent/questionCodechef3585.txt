@@ -1,0 +1,77 @@
+Flippable Points
+Problem
+You are given a set
+S of
+N distinct integer points in the
+2D plane. Initially, each point has a color, either red or green.
+You have to perform some number of operations (possibly
+0) on this set of points such that all points are green after all operations.
+An operation is:
+Choose some line that does not pass through any of the points in
+S. This line should also not pass through the origin.
+The line divides the space into two half-planes. Let
+Q be the set of all points in
+S that are also in the same half-plane as the origin.
+Flip the colors of all the points in
+Q. That is, if a point in
+Q had the color red then it becomes green and vice versa.
+What is the minimum number of operations that need to be done to convert all the points to green color?
+It can be proven that it's always possible to convert any set of colored points to the green color in a finite number of operations.
+Input Format
+The first line of each test case contains a single integer
+N - the size of
+S.
+The next line contains a string of length
+N where the
+i-th character of the string is
+R if the
+i-th point is red and
+G if it's green.
+The
+i-th line of next
+N lines contains two integers
+x
+i
+,y
+i
+- the coordinates of the
+i-th point of set
+S.
+Output Format
+For every test case, you must print the minimum number of operations needed to convert all points to green color.
+Constraints
+1≤N≤17
+−10
+6
+≤x
+i
+,y
+i
+≤10
+6
+(x
+i
+,y
+i
+)
+
+=(0,0) for all
+i
+All points are pairwise distinct
+Sample 1:
+Input
+Output
+9
+RRGRGGRGR
+2 -4
+-9 5
+-2 -1
+-6 2
+7 -2
+-9 -6
+3 -5
+5 0
+0 -3
+2
+Explanation:
+The below image explains the operations needed. The black line is the line selected in the operation and the blue point is the origin.

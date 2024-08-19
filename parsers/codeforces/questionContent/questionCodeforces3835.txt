@@ -1,0 +1,150 @@
+A. Parity
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer
+n
+(
+n≥0
+) represented with
+k
+digits in base (radix)
+b
+. So,
+n=
+a
+1
+⋅
+b
+k−1
++
+a
+2
+⋅
+b
+k−2
++…
+a
+k−1
+⋅b+
+a
+k
+.
+k
+1
+k
+2
+For example, if
+b=17,k=3
+and
+a=[11,15,7]
+then
+n=11⋅
+17
+2
++15⋅17+7=3179+255+7=3441
+.
+Determine whether
+n
+is even or odd.
+Input
+The first line contains two integers
+b
+and
+k
+(
+2≤b≤100
+,
+1≤k≤
+10
+5
+) — the base of the number and the number of digits.
+The second line contains
+k
+integers
+a
+1
+,
+a
+2
+,…,
+a
+k
+(
+0≤
+a
+i
+<b
+) — the digits of
+n
+.
+The representation of
+n
+contains no unnecessary leading zero. That is,
+a
+1
+can be equal to
+0
+only if
+k=1
+.
+Output
+Print "even" if
+n
+is even, otherwise print "odd".
+You can print each letter in any case (upper or lower).
+Examples
+input
+Copy
+13 3
+3 2 7
+output
+Copy
+even
+input
+Copy
+10 9
+1 2 3 4 5 6 7 8 9
+output
+Copy
+odd
+input
+Copy
+99 5
+32 92 85 74 4
+output
+Copy
+odd
+input
+Copy
+2 2
+1 0
+output
+Copy
+even
+Note
+In the first example,
+n=3⋅
+13
+2
++2⋅13+7=540
+, which is even.
+In the second example,
+n=123456789
+is odd.
+In the third example,
+n=32⋅
+99
+4
++92⋅
+99
+3
++85⋅
+99
+2
++74⋅99+4=3164015155
+is odd.
+In the fourth example
+n=2
+.

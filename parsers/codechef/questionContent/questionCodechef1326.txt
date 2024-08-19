@@ -1,0 +1,129 @@
+Distinct Pairs
+Problem
+###Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef has two integer sequences
+A
+1
+,A
+2
+,…,A
+N
+and
+B
+1
+,B
+2
+,…,B
+M
+. You should choose
+N+M−1 pairs, each in the form
+(A
+x
+,B
+y
+), such that the sums
+A
+x
++B
+y
+are all pairwise distinct.
+It is guaranteed that under the given constraints, a solution always exists. If there are multiple solutions, you may find any one.
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+M space-separated integers
+B
+1
+,B
+2
+,…,B
+M
+.
+Output
+Print
+N+M−1 lines. Each of these lines should contain two space-separated integers
+x and
+y denoting that you chose a pair
+(A
+x+1
+,B
+y+1
+).
+Constraints
+1≤N,M≤2⋅10
+5
+∣A
+i
+∣≤10
+9
+for each valid
+i
+∣B
+i
+∣≤10
+9
+for each valid
+i
+A
+1
+,A
+2
+,…,A
+N
+are pairwise distinct
+B
+1
+,B
+2
+,…,B
+M
+are pairwise distinct
+Subtasks
+Subtask #1 (25 points):
+1≤N,M≤10
+3
+Subtask #2 (75 points): original constraints
+Sample 1:
+Input
+Output
+3 2
+10 1 100
+4 3
+2 1
+0 0
+1 0
+0 1
+Explanation:
+The chosen pairs and their sums are:
+A
+3
++B
+2
+=100+3=103
+A
+1
++B
+1
+=10+4=14
+A
+2
++B
+1
+=1+4=5
+A
+1
++B
+2
+=10+3=13
+Since all sums are distinct, this is a correct output.

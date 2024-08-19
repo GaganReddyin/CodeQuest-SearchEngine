@@ -1,0 +1,96 @@
+E. Ehab's REAL Number Theory Problem
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of length
+n
+that has a special condition: every element in this array has at most 7 divisors. Find the length of the shortest non-empty subsequence of this array product of whose elements is a perfect square.
+A sequence
+a
+is a subsequence of an array
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero or all) elements.
+Input
+The first line contains an integer
+n
+(
+1≤n≤
+10
+5
+) — the length of
+a
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,
+…
+,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+) — the elements of the array
+a
+.
+Output
+Output the length of the shortest non-empty subsequence of
+a
+product of whose elements is a perfect square. If there are several shortest subsequences, you can find any of them. If there's no such subsequence, print "-1".
+Examples
+input
+Copy
+3
+1 4 6
+output
+Copy
+1
+input
+Copy
+4
+2 3 6 6
+output
+Copy
+2
+input
+Copy
+3
+6 15 10
+output
+Copy
+3
+input
+Copy
+4
+2 3 5 7
+output
+Copy
+-1
+Note
+In the first sample, you can choose a subsequence
+[1]
+.
+In the second sample, you can choose a subsequence
+[6,6]
+.
+In the third sample, you can choose a subsequence
+[6,15,10]
+.
+In the fourth sample, there is no such subsequence.

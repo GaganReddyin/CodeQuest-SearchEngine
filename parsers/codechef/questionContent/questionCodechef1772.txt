@@ -1,0 +1,80 @@
+Maximise the bridges
+Problem
+Read problem statements in Bengali, Russian, Mandarin and Vietnamese as well.
+Chef is given two integers
+N and
+M. Please help Chef find any connected undirected graph
+G consisting of exactly
+N vertices and
+M edges, such that the number of bridges in
+G is maximized (among all graphs with
+N vertices and
+M edges).
+G cannot have self-loops or multiple edges.
+If there is more than one connected undirected graph with the maximum number of bridges, you may print any one of them.
+Note: A bridge is an edge whose removal increases the number of connected components of the graph.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each testcase consists of a single line of input, containing two integers
+N,M - the number of vertices and edges of the graph you must construct.
+Output Format
+For each test case, output
+M lines where the
+i-th line contains two space-separated integers denoting the
+i-th edge of the graph
+G you constructed. The edges may be printed in any order, and for each edge the endpoints may be printed in any order.
+Note that
+G must not contain self-loops or multiple edges, and no other graph on
+N vertices and
+M edges can contain strictly more bridges than
+G.
+Constraints
+1≤T≤10
+3
+2≤N≤10
+3
+N−1≤M≤min(N⋅(N−1)/2,10
+5
+)
+Sum of
+N over all test cases do not exceed
+10
+3
+Sum of
+M over all test cases do not exceed
+10
+5
+Subtasks
+Subtask 1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+3
+4 4
+5 4
+3 3
+1 2
+2 3
+3 4
+1 3
+1 2
+2 3
+3 4
+4 5
+1 2
+2 3
+3 1
+Explanation:
+Test case
+1: There is exactly
+1 bridge in the graph and it cannot be increased further.
+Test case
+2: Since
+M=N−1 and we are required to output a connected graph, the graph will always be a tree and hence have
+4 bridges. Any tree is acceptable here.
+Test case
+3: Since
+M=N⋅(N−1)/2 our only choice is a complete graph, which has
+0 bridges.

@@ -1,0 +1,191 @@
+E. Colors and Intervals
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The numbers
+1,2,…,n⋅k
+are colored with
+n
+colors. These colors are indexed by
+1,2,…,n
+. For each
+1≤i≤n
+, there are exactly
+k
+numbers colored with color
+i
+.
+Let
+[a,b]
+denote the interval of integers between
+a
+and
+b
+inclusive, that is, the set
+{a,a+1,…,b}
+. You must choose
+n
+intervals
+[
+a
+1
+,
+b
+1
+],[
+a
+2
+,
+b
+2
+],…,[
+a
+n
+,
+b
+n
+]
+such that:
+for each
+1≤i≤n
+, it holds
+1≤
+a
+i
+<
+b
+i
+≤n⋅k
+;
+for each
+1≤i≤n
+, the numbers
+a
+i
+and
+b
+i
+are colored with color
+i
+;
+each number
+1≤x≤n⋅k
+belongs to at most
+⌈
+n
+k−1
+⌉
+intervals.
+One can show that such a family of intervals always exists under the given constraints.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤n≤100
+,
+2≤k≤100
+) — the number of colors and the number of occurrences of each color.
+The second line contains
+n⋅k
+integers
+c
+1
+,
+c
+2
+,…,
+c
+nk
+(
+1≤
+c
+j
+≤n
+), where
+c
+j
+is the color of number
+j
+. It is guaranteed that, for each
+1≤i≤n
+, it holds
+c
+j
+=i
+for exactly
+k
+distinct indices
+j
+.
+Output
+Output
+n
+lines. The
+i
+-th line should contain the two integers
+a
+i
+and
+b
+i
+.
+If there are multiple valid choices of the intervals, output any.
+Examples
+input
+Copy
+4 3
+2 4 3 1 1 4 2 3 2 1 3 4
+output
+Copy
+4 5
+1 7
+8 11
+6 12
+input
+Copy
+1 2
+1 1
+output
+Copy
+1 2
+input
+Copy
+3 3
+3 1 2 3 2 1 2 1 3
+output
+Copy
+6 8
+3 7
+1 4
+input
+Copy
+2 3
+2 1 1 1 2 2
+output
+Copy
+2 3
+5 6
+Note
+In the first sample, each number can be contained in at most
+⌈
+4
+3−1
+⌉=2
+intervals. The output is described by the following picture:
+In the second sample, the only interval to be chosen is forced to be
+[1,2]
+, and each number is indeed contained in at most
+⌈
+1
+2−1
+⌉=1
+interval.
+In the third sample, each number can be contained in at most
+⌈
+3
+3−1
+⌉=2
+intervals. The output is described by the following picture:

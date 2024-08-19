@@ -1,0 +1,98 @@
+B. Binary String Constructing
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given three integers
+a
+,
+b
+and
+x
+. Your task is to construct a binary string
+s
+of length
+n=a+b
+such that there are exactly
+a
+zeroes, exactly
+b
+ones and exactly
+x
+indices
+i
+(where
+1≤i<n
+) such that
+s
+i
+≠
+s
+i+1
+. It is guaranteed that the answer always exists.
+For example, for the string "01010" there are four indices
+i
+such that
+1≤i<n
+and
+s
+i
+≠
+s
+i+1
+(
+i=1,2,3,4
+). For the string "111001" there are two such indices
+i
+(
+i=3,5
+).
+Recall that binary string is a non-empty sequence of characters where each character is either 0 or 1.
+Input
+The first line of the input contains three integers
+a
+,
+b
+and
+x
+(
+1≤a,b≤100,1≤x<a+b)
+.
+Output
+Print only one string
+s
+, where
+s
+is any binary string satisfying conditions described above. It is guaranteed that the answer always exists.
+Examples
+input
+Copy
+2 2 1
+output
+Copy
+1100
+input
+Copy
+3 3 3
+output
+Copy
+101100
+input
+Copy
+5 3 6
+output
+Copy
+01010100
+Note
+All possible answers for the first example:
+1100;
+0011.
+All possible answers for the second example:
+110100;
+101100;
+110010;
+100110;
+011001;
+001101;
+010011;
+001011.

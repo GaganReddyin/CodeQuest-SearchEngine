@@ -1,0 +1,262 @@
+E. Power or XOR?
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+The symbol
+∧
+is quite ambiguous, especially when used without context. Sometimes it is used to denote a power (
+a∧b=
+a
+b
+) and sometimes it is used to denote the XOR operation (
+a∧b=a⊕b
+).
+You have an ambiguous expression
+E=
+A
+1
+∧
+A
+2
+∧
+A
+3
+∧…∧
+A
+n
+. You can replace each
+∧
+symbol with either a
+Power
+operation or a
+XOR
+operation to get an unambiguous expression
+E
+′
+.
+The value of this expression
+E
+′
+is determined according to the following rules:
+All
+Power
+operations are performed before any
+XOR
+operation. In other words, the
+Power
+operation takes precedence over
+XOR
+operation. For example,
+4XOR6Power2=4⊕(
+6
+2
+)=4⊕36=32
+.
+Consecutive powers are calculated from left to right. For example,
+2Power3Power4=(
+2
+3
+)
+4
+=
+8
+4
+=4096
+.
+You are given an array
+B
+of length
+n
+and an integer
+k
+. The array
+A
+is given by
+A
+i
+=
+2
+B
+i
+and the expression
+E
+is given by
+E=
+A
+1
+∧
+A
+2
+∧
+A
+3
+∧…∧
+A
+n
+. You need to find the XOR of the values of all possible unambiguous expressions
+E
+′
+which can be obtained from
+E
+and has at least
+k
+∧
+symbols used as
+XOR
+operation. Since the answer can be very large, you need to find it modulo
+2
+2
+20
+. Since this number can also be very large, you need to print its binary representation without leading zeroes. If the answer is equal to
+0
+, print
+0
+.
+Input
+The first line of input contains two integers
+n
+and
+k
+(1≤n≤
+2
+20
+,0≤k<n)
+.
+The second line of input contains
+n
+integers
+B
+1
+,
+B
+2
+,…,
+B
+n
+(1≤
+B
+i
+<
+2
+20
+)
+.
+Output
+Print a single line containing a binary string without leading zeroes denoting the answer to the problem. If the answer is equal to
+0
+, print
+0
+.
+Examples
+input
+Copy
+3 2
+3 1 2
+output
+Copy
+1110
+input
+Copy
+3 1
+3 1 2
+output
+Copy
+1010010
+input
+Copy
+3 0
+3 1 2
+output
+Copy
+1000000000000000001010010
+input
+Copy
+2 1
+1 1
+output
+Copy
+0
+Note
+For each of the testcases
+1
+to
+3
+,
+A={
+2
+3
+,
+2
+1
+,
+2
+2
+}={8,2,4}
+and
+E=8∧2∧4
+.
+For the first testcase, there is only one possible valid unambiguous expression
+E
+′
+=8⊕2⊕4=14=(1110
+)
+2
+.
+For the second testcase, there are three possible valid unambiguous expressions
+E
+′
+:
+8⊕2⊕4=14
+8
+2
+⊕4=64⊕4=68
+8⊕
+2
+4
+=8⊕16=24
+XOR of the values of all of these is
+14⊕68⊕24=82=(1010010
+)
+2
+.
+For the third testcase, there are four possible valid unambiguous expressions
+E
+′
+:
+8⊕2⊕4=14
+8
+2
+⊕4=64⊕4=68
+8⊕
+2
+4
+=8⊕16=24
+(
+8
+2
+)
+4
+=
+64
+4
+=
+2
+24
+=16777216
+XOR of the values of all of these is
+14⊕68⊕24⊕16777216=16777298=(1000000000000000001010010
+)
+2
+.
+For the fourth testcase,
+A={2,2}
+and
+E=2∧2
+. The only possible valid unambiguous expression
+E
+′
+=2⊕2=0=(0
+)
+2
+.

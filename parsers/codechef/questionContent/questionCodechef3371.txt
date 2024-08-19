@@ -1,0 +1,153 @@
+Palindromes Machine
+Problem
+Dr. Hasan is one of the most famous inventors in the world. One day, he invented a wonderful machine in order to examine the possibility of generating new palindrome strings by merging other strings.
+Hasan's machine takes a sequence of strings
+(A
+1
+,A
+2
+,…,A
+K
+) as the input;
+K may be any positive integer. The length of each of these strings must be exactly
+N; for each valid
+j, let's denote the
+j-th character of the
+i-th string by
+A
+i,j
+. The machine magically generates a string
+B by merging these strings and it determines if
+B is a palindrome. The string
+B is generated as follows:
+B
+1
+=A
+1,1
+,B
+2
+=A
+2,1
+,…,B
+K
+=A
+K,1
+B
+K+1
+=A
+1,2
+,B
+K+2
+=A
+2,2
+,…,B
+2⋅K
+=A
+K,2
+...
+B
+(N−1)⋅K+1
+=A
+1,N
+,B
+(N−1)⋅K+2
+=A
+2,N
+,…,B
+N⋅K
+=A
+K,N
+Hasan wants to test his new machine, so he prepared
+N strings
+S
+1
+,S
+2
+,…,S
+N
+. Each of these strings has length
+N. Now, he wants to choose a sequence of
+K pairwise distinct indices
+i
+1
+,i
+2
+,…,i
+K
+, where
+1≤K≤M, and run the machine with strings
+(S
+i
+1
+,S
+i
+2
+,…,S
+i
+K
+). His goal is to make the machine report that the string it generated is a palindrome.
+Can you help Hasan with testing his machine and tell him the number of sequences of indices he can choose? Since the answer could be very large, compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains a single string
+S
+i
+.
+Output
+For each test case, print a single line containing one integer — the number of sequences Hasan can choose, modulo
+10
+9
++7.
+Constraints
+1≤T≤100
+1≤N≤10
+3
+1≤M≤N
+∣S
+i
+∣=N for each valid
+i
+S
+1
+,S
+2
+,…,S
+N
+contain only lowercase English letters
+the sum of
+N over all test cases does not exceed
+5⋅10
+3
+Sample 1:
+Input
+Output
+1
+4 2
+aaaa
+abcb
+abcb
+bcba
+5
+Explanation:
+Example case 1: Hasan can choose the following sequences of indices:
+(1): the input of the machine is ("aaaa") and the generated string
+B is "aaaa"
+(2,4): the input is ("abcb", "bcba") and
+B is "abbccbba"
+(3,4): the input is ("abcb", "bcba") and
+B is "abbccbba"
+(4,2): the input is ("bcba", "abcb") and
+B is "bacbbcab"
+(4,3): the input is ("bcba", "abcb") and
+B is "bacbbcab"

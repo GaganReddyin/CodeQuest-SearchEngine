@@ -1,0 +1,37 @@
+F. Mice and Holes
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+One day Masha came home and noticed n mice in the corridor of her flat. Of course, she shouted loudly, so scared mice started to run to the holes in the corridor.
+The corridor can be represeted as a numeric axis with n mice and m holes on it. ith mouse is at the coordinate xi, and jth hole — at coordinate pj. jth hole has enough room for cj mice, so not more than cj mice can enter this hole.
+What is the minimum sum of distances that mice have to go through so that they all can hide in the holes? If ith mouse goes to the hole j, then its distance is |xi - pj|.
+Print the minimum sum of distances.
+Input
+The first line contains two integer numbers n, m (1 ≤ n, m ≤ 5000) — the number of mice and the number of holes, respectively.
+The second line contains n integers x1, x2, ..., xn ( - 109 ≤ xi ≤ 109), where xi is the coordinate of ith mouse.
+Next m lines contain pairs of integer numbers pj, cj ( - 109 ≤ pj ≤ 109, 1 ≤ cj ≤ 5000), where pj is the coordinate of jth hole, and cj is the maximum number of mice that can hide in the hole j.
+Output
+Print one integer number — the minimum sum of distances. If there is no solution, print -1 instead.
+Examples
+input
+Copy
+4 5
+6 2 8 9
+3 6
+2 1
+3 6
+4 7
+4 7
+output
+Copy
+11
+input
+Copy
+7 2
+10 20 30 40 50 45 35
+-1000000000 10
+1000000000 1
+output
+Copy
+7000000130

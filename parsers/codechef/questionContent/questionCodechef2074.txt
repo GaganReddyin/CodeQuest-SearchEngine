@@ -1,0 +1,142 @@
+Strict Permutation
+Problem
+You are given an integer
+N. You have to find a permutation
+P of the integers
+{1,2,…,N} that satisfies
+M conditions of the following form:
+(X
+i
+,Y
+i
+), denoting that the element
+X
+i
+(1≤X
+i
+≤N) must appear in the prefix of length
+Y
+i
+. Formally, if the index of the element
+X
+i
+is
+K
+i
+(i.e,
+P
+K
+i
+=X
+i
+), then the condition
+1≤K
+i
+≤Y
+i
+must hold.
+Print -1 if no such permutation exists. In case multiple permutations that satisfy all the conditions exist, find the lexicographically smallest one.
+Note: If two arrays
+A and
+B have the same length
+N, then
+A is called lexicographically smaller than
+B only if there exists an index
+i(1≤i≤N) such that
+A
+1
+=B
+1
+,
+A
+2
+=B
+2
+,
+…,
+A
+i−1
+=B
+i−1
+,A
+i
+<B
+i
+.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first line of each test case contains two space-separated integers
+N and
+M — the length of permutation and the number of conditions to be satisfied respectively.
+The next
+M lines describe the conditions. The
+i-th of these
+M lines contains two space-separated integers
+X
+i
+and
+Y
+i
+.
+Output Format
+For each test case, output a single line containing the answer:
+If no permutation satisfies the given conditions, print −1.
+Otherwise, print
+N space-separated integers, denoting the elements of the permutation. If there are multiple answers, output the lexicographically smallest one.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤M≤N
+1≤X
+i
+,Y
+i
+≤N
+X
+i
+
+=X
+j
+for each
+1≤i<j≤M.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+3 2
+2 1
+1 2
+4 3
+1 2
+4 1
+3 2
+4 1
+2 3
+5 2
+5 4
+3 2
+2 1 3
+-1
+1 2 3 4
+1 3 2 5 4
+Explanation:
+Test case
+1: The only permutation of length
+3 that satisfies all the conditions is
+[2,1,3].
+Test case
+2: There is no permutation of length
+4 that satisfies all the given conditions.
+Test case
+3: There are many permutations of length
+4 that satisfy all the conditions, such as
+[1,2,3,4],[1,4,2,3],[1,3,2,4],[2,1,4,3],[2,1,3,4], etc.
+[1,2,3,4] is the lexicographically smallest among them.

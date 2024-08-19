@@ -1,0 +1,121 @@
+Polygon Chain
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+A polygon
+T is said to be inside a polygon
+S if all points that lie strictly inside
+T (not on the perimeter of
+T) also lie strictly inside
+S.
+A multiset of polygons
+{Q
+1
+,Q
+2
+,…,Q
+r
+} is said to form a chain if there is a permutation
+p
+1
+,p
+2
+,…,p
+r
+of the integers
+1 through
+r such that for each
+i (
+1≤i<r),
+Q
+p
+i
+is inside
+Q
+p
+i+1
+.
+You are given
+N convex polygons
+P
+1
+,P
+2
+,…,P
+N
+in a 2D Cartesian coordinate system. Every
+10
+−100
+seconds, you may choose one of the polygons and translate it by upto
+10
+−100
+either along the
+x-axis or along the
+y-axis.
+Find the minimum amount of time necessary to make all
+N polygons form a chain or decide that it is impossible.
+Input
+The first line of the input contains a single integer
+N. The descriptions of
+N polygons follow.
+For each polygon:
+The first line contains a single integer
+M denoting the number of its vertices.
+The following
+M lines describe the vertices in counterclockwise order. Each of these lines contains two space-separated integers
+x and
+y denoting the coordinates of one vertex.
+Output
+If it is impossible to make the polygons form a chain, print a single line containing the integer
+−1.
+Otherwise, print a single line containing one real number ― the minimum amount of time. Your answer will be considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Constraints
+2≤N≤20
+the sum of
+M over all polygons does not exceed
+100
+∣x∣,∣y∣≤100
+Subtasks
+Subtask #1 (10 points):
+N=2 and both polygons are axis-aligned rectangles
+Subtask #2 (20 points):
+N=2
+Subtask #3 (20 points): all polygons are axis-aligned rectangles
+Subtask #4 (50 points): original constraints
+Example Input
+2
+4
+1 3
+2 2
+3 3
+2 4
+4
+0 0
+2 0
+2 2
+0 2
+Example Output
+3
+Explanation
+Example case 1: Both
+P
+1
+and
+P
+2
+are squares. If we move
+P
+2
+by
+1 unit in the
+x-direction and by
+2 units in the
+y-direction, the vertices of
+P
+1
+become the midpoints of edges of
+P
+2
+.

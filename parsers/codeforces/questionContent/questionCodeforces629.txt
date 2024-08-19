@@ -1,0 +1,278 @@
+F. Late For Work (submissions are not allowed)
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem was copied by the author from another online platform. Codeforces strongly condemns this action and therefore further submissions to this problem are not accepted.
+Debajyoti has a very important meeting to attend and he is already very late. Harsh, his driver, needs to take Debajyoti to the destination for the meeting as fast as possible.
+Harsh needs to pick up Debajyoti from his home and take him to the destination so that Debajyoti can attend the meeting in time. A straight road with
+n
+traffic lights connects the home and the destination for the interview. The traffic lights are numbered in order from
+1
+to
+n
+.
+Each traffic light cycles after
+t
+seconds. The
+i
+-th traffic light is
+green
+(in which case Harsh can cross the traffic light) for the first
+g
+i
+seconds, and
+red
+(in which case Harsh must wait for the light to turn
+green
+) for the remaining
+(t−
+g
+i
+)
+seconds, after which the pattern repeats. Each light's cycle repeats indefinitely and initially, the
+i
+-th light is
+c
+i
+seconds into its cycle (a light with
+c
+i
+=0
+has just turned
+green
+). In the case that Harsh arrives at a light at the same time it changes colour, he will obey the new colour. Formally, the
+i
+-th traffic light is
+green
+from
+[0,
+g
+i
+)
+and
+red
+from
+[
+g
+i
+,t)
+(after which it repeats the cycle). The
+i
+-th traffic light is initially at the
+c
+i
+-th second of its cycle.
+From the
+i
+-th traffic light, exactly
+d
+i
+seconds are required to travel to the next traffic light (that is to the
+(i+1)
+-th light). Debajyoti's home is located just before the first light and Debajyoti drops for the interview as soon as he passes the
+n
+-th light. In other words, no time is required to reach the first light from Debajyoti's home or to reach the interview centre from the
+n
+-th light.
+Harsh does not know how much longer it will take for Debajyoti to get ready. While waiting, he wonders what is the minimum possible amount of time he will spend driving provided he starts the moment Debajyoti arrives, which can be anywhere between
+0
+to
+∞
+seconds from now. Can you tell Harsh the minimum possible amount of time he needs to spend on the road?
+Please note that Harsh can only start or stop driving at integer moments of time.
+Input
+The first line of input will contain two integers,
+n
+and
+t
+(
+2≤n≤2⋅
+10
+5
+,
+2≤t≤
+10
+9
+) denoting the number of traffic lights and the cycle length of the traffic lights respectively.
+n
+lines of input follow. The
+i
+-th line will contain two integers
+g
+i
+and
+c
+i
+(
+1≤
+g
+i
+<t
+,
+0≤
+c
+i
+<t
+) describing the
+i
+-th traffic light.
+The following line of input contains
+n−1
+integers
+d
+1
+,
+d
+2
+,…,
+d
+n−1
+(
+0≤
+d
+i
+≤
+10
+9
+) — the time taken to travel from the
+i
+-th to the
+(i+1)
+-th traffic light.
+Output
+Output a single integer — the minimum possible amount of time Harsh will spend driving.
+Examples
+input
+Copy
+5 10
+4 2
+7 3
+3 6
+5 2
+8 0
+1 2 3 4
+output
+Copy
+11
+input
+Copy
+6 9
+5 3
+5 5
+7 0
+5 8
+7 7
+6 6
+0 0 0 0 0
+output
+Copy
+3
+Note
+In the first example, Harsh can do the following:
+Initially, the
+5
+traffic lights are at the following seconds in their cycle:
+{2,3,6,2,0}
+.
+An optimal time for Harsh to start is if Debajyoti arrives after
+1
+second. Note that this
+1
+second will not be counted in the final answer.
+The lights will be now at
+{3,4,7,3,1}
+, so Harsh can drive from the
+1
+-st light to the
+2
+-nd light, which requires
+1
+second to travel.
+The lights are now at
+{4,5,8,4,2}
+, so Harsh can continue driving, without stopping, to the
+3
+-rd light, which requires
+2
+seconds to travel.
+The lights are now at
+{6,7,0,6,4}
+, so Harsh continues to the
+4
+-th light, which requires
+3
+seconds to travel.
+The lights are now at
+{9,0,3,9,7}
+. Harsh must wait
+1
+second for the
+4
+-th light to turn green before going to the
+5
+-th light, which requires
+4
+seconds to travel.
+The lights are now at
+{4,5,8,4,2}
+, so Harsh can continue traveling, without stopping, to the meeting destination. The total time that Harsh had to drive for is
+1+2+3+1+4=11
+seconds.
+In the second example, Harsh can do the following:
+Initially, the
+6
+traffic lights are at the following seconds in their cycle:
+{3,5,0,8,7,6}
+.
+An optimal time for Harsh to start is if Debajyoti arrives after
+1
+second. Note that this
+1
+second will not be counted in the final answer.
+The lights will be now at
+{4,6,1,0,8,7}
+, so Harsh can drive from the
+1
+-st light to the
+2
+-nd light, which requires
+0
+seconds to travel.
+The lights are still at
+{4,6,1,0,8,7}
+. Harsh must wait
+3
+seconds for the
+2
+-nd light to turn green, before going to the
+3
+-rd light, which requires
+0
+seconds to travel.
+The lights are now at
+{7,0,4,3,2,1}
+, so Harsh continues to the
+4
+-th light, which requires
+0
+seconds to travel.
+The lights are still at
+{7,0,4,3,2,1}
+, so Harsh continues to the
+5
+-th light, which requires
+0
+seconds to travel.
+The lights are still at
+{7,0,4,3,2,1}
+, so Harsh continues to the
+6
+-th light, which requires
+0
+seconds to travel.
+The lights are still at
+{7,0,4,3,2,1}
+, so Harsh can continue traveling, without stopping, to the meeting destination. The total time that Harsh had to drive for is
+0+3+0+0+0=3
+seconds.

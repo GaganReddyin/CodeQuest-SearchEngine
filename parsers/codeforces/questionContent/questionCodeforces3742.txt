@@ -1,0 +1,45 @@
+F. Clear the String
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+s
+of length
+n
+consisting of lowercase Latin letters. You may apply some operations to this string: in one operation you can delete some contiguous substring of this string, if all letters in the substring you delete are equal. For example, after deleting substring bbbb from string abbbbaccdd we get the string aaccdd.
+Calculate the minimum number of operations to delete the whole string
+s
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤500
+) — the length of string
+s
+.
+The second line contains the string
+s
+(
+|s|=n
+) consisting of lowercase Latin letters.
+Output
+Output a single integer — the minimal number of operation to delete string
+s
+.
+Examples
+input
+Copy
+5
+abaca
+output
+Copy
+3
+input
+Copy
+8
+abcddcba
+output
+Copy
+4

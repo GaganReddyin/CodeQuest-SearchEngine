@@ -1,0 +1,124 @@
+E. Fix the String
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A regular bracket sequence is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters "1" and "+" between the original characters of the sequence. For example:
+bracket sequences "()()" and "(())" are regular (the resulting expressions are: "(1)+(1)" and "((1+1)+1)");
+bracket sequences ")(", "(" and ")" are not.
+You are given two strings
+s
+and
+a
+, the string
+s
+has length
+n
+, the string
+a
+has length
+n−3
+. The string
+s
+is a bracket sequence (i. e. each element of this string is either an opening bracket character or a closing bracket character). The string
+a
+is a binary string (i. e. each element of this string is either 1 or 0).
+The string
+a
+imposes some constraints on the string
+s
+: for every
+i
+such that
+a
+i
+is 1, the string
+s
+i
+s
+i+1
+s
+i+2
+s
+i+3
+should be a regular bracket sequence. Characters of
+a
+equal to 0 don't impose any constraints.
+Initially, the string
+s
+may or may not meet these constraints. You can perform the following operation any number of times: replace some character of
+s
+with its inverse (i. e. you can replace an opening bracket with a closing bracket, or vice versa).
+Determine if it is possible to change some characters in
+s
+so that it meets all of the constraints, and if it is possible, calculate the minimum number of characters to be changed.
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+Each test case consists of three lines. The first line contains one integer
+n
+(
+4≤n≤2⋅
+10
+5
+). The second line contains the string
+s
+, consisting of exactly
+n
+characters; each character of
+s
+is either '(' or ')'. The third line contains the string
+a
+, consisting of exactly
+n−3
+characters; each character of
+a
+is either '1' or '0'.
+Additional constraint on the input: the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer: the minimum number of characters that need to be changed in
+s
+, or
+−1
+if it is impossible.
+Example
+input
+Copy
+6
+4
+))((
+1
+4
+))((
+0
+4
+()()
+0
+6
+))(()(
+101
+6
+))(()(
+001
+5
+(((((
+11
+output
+Copy
+2
+0
+0
+4
+1
+-1

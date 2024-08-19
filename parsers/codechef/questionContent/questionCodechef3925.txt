@@ -1,0 +1,47 @@
+Best Triangle
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Given N points on a 2D plane and an integer K, choose 3 distinct points so that the area of the triangle whose vertices are the chosen points does not exceed K/2. If there are multiple such triangles, among all possible triangles choose the one which has maximum area.
+Input
+First line contains two integers N and K.
+Each of the next N lines contains two integers Xi and Yi, denoting the coordinates of the i-th point.
+Output
+Output a single integer, the maximum area of a triangle which does not exceed K/2, multiplied by 2. If there's no valid triangle output -1 instead.
+Constraints
+3 ≤ N ≤ 3000
+1 ≤ K ≤ 1018
+1 ≤ Xi,Yi ≤ 109
+No two points will have same coordinates
+No three points will be collinear
+  Example 1
+Input:
+4 7
+1 1
+5 1
+3 3
+3 2
+Output:
+4
+Example 2
+Input:
+3 7
+1 1
+4 1
+1 4
+Output:
+-1
+Example 3
+Input:
+7 1234567890123
+1234567 7654321
+1111111 2222222
+1212121 2323232
+3333333 1122334
+9292929 2929292
+1234456 5654645
+5435733 2342134
+Output:
+755024295480
+  Explanation
+Example case 1. There are 4 triangles in total, and their areas are: 1, 1, 2 and 4. The ones which does not exceed 7/2 are 1, 1 and 2 so the biggest area is 2, and since we are required to multiply the area by 2 before outputting it, it becomes 4.
+Example case 2. The only triangle has an area equal to 9/2, which is more than 7/2. So the answer is -1.

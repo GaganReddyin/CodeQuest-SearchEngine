@@ -1,0 +1,41 @@
+Kisses & Hugs
+Problem
+Princess Artapoelc greeted her guests by either kissing on the cheek (K) or hugging (H). From the first guest
+she kisses, she has a compulsion to necessarily kiss every alternate guest from that first kissed guest. That is if the guests are G1,
+G2, ..., Gi, Gi+1, ..., Gn and if she first kissed Gi then she must necessarily kiss
+Gi+2, Gi+4, Gi+6 ... till the last possible guest. Your task is to determine in how many ways she can greet N guests.
+Input
+First line of the input contains T (T ≤ 1000) denoting the number of test cases.
+T lines follow each containing a single integer N (1 ≤ N ≤ 10^9) denoting the number of guests.
+Output
+For each case the output should be a single integer representing the number of ways Artapoelc can greet N guests. As the
+answer can be large print it modulo 1000000007.
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+2
+4
+6
+Explanation:
+<p>
+    In the first case the possible ways are
+</p>
+<p>
+    K, H
+</p>
+<p>
+    Second case:
+</p>
+<p>
+    KH, HK, HH, KK
+</p>
+<p>
+    Third case:
+</p>
+<p>
+    HHH, HHK, HKH, HKK, KHK, KKK
+</p>

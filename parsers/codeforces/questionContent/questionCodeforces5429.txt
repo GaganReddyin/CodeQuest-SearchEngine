@@ -1,0 +1,46 @@
+E. Byteland coins
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+There are n types of coins in Byteland. Conveniently, the denomination of the coin type k divides the denomination of the coin type k + 1, the denomination of the coin type 1 equals 1 tugrick. The ratio of the denominations of coin types k + 1 and k equals ak. It is known that for each x there are at most 20 coin types of denomination x.
+Byteasar has bk coins of type k with him, and he needs to pay exactly m tugricks. It is known that Byteasar never has more than 3·105 coins with him. Byteasar want to know how many ways there are to pay exactly m tugricks. Two ways are different if there is an integer k such that the amount of coins of type k differs in these two ways. As all Byteland citizens, Byteasar wants to know the number of ways modulo 109 + 7.
+Input
+The first line contains single integer n (1 ≤ n ≤ 3·105) — the number of coin types.
+The second line contains n - 1 integers a1, a2, ..., an - 1 (1 ≤ ak ≤ 109) — the ratios between the coin types denominations. It is guaranteed that for each x there are at most 20 coin types of denomination x.
+The third line contains n non-negative integers b1, b2, ..., bn — the number of coins of each type Byteasar has. It is guaranteed that the sum of these integers doesn't exceed 3·105.
+The fourth line contains single integer m (0 ≤ m < 1010000) — the amount in tugricks Byteasar needs to pay.
+Output
+Print single integer — the number of ways to pay exactly m tugricks modulo 109 + 7.
+Examples
+input
+Copy
+1
+
+4
+2
+output
+Copy
+1
+input
+Copy
+2
+1
+4 4
+2
+output
+Copy
+3
+input
+Copy
+3
+3 3
+10 10 10
+17
+output
+Copy
+6
+Note
+In the first example Byteasar has 4 coins of denomination 1, and he has to pay 2 tugricks. There is only one way.
+In the second example Byteasar has 4 coins of each of two different types of denomination 1, he has to pay 2 tugricks. There are 3 ways: pay one coin of the first type and one coin of the other, pay two coins of the first type, and pay two coins of the second type.
+In the third example the denominations are equal to 1, 3, 9.

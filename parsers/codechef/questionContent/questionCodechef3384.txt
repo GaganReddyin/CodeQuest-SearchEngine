@@ -1,0 +1,138 @@
+Dearrange sorting
+Problem
+You are given a permutation
+P of length
+N. A permutation of length
+N is an array where every element from
+1 to
+N occurs exactly once.
+You must perform some operations on the array to make it sorted in increasing order. In one operation, you must:
+Select two indices
+L and
+R
+(1≤L<R≤N)
+Completely dearrange the subarray
+P
+L
+,P
+L+1
+,…P
+R
+A dearrangement of an array
+A is any permutation
+B of
+A for which
+B
+i
+
+=A
+i
+for all
+i.
+For example, consider the array
+A=[2,1,3,4]. Some examples of dearrangements of
+A are
+[1,2,4,3],
+[3,2,4,1] and
+[4,3,2,1].
+[3,5,2,1] is not a valid dearrangement since it is not a permutation of
+A.
+[1,2,3,4] is not a valid dearrangement either since
+B
+3
+=A
+3
+and
+B
+4
+=A
+4
+.
+Find the minimum number of operations required to sort the array in increasing order. It is guaranteed that the given permutation can be sorted in atmost
+1000 operations.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the permutation
+P.
+The second line of each test case contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+denoting the permutation
+P.
+Output Format
+On the first line of each test case output the minimum number of operations
+M. The description of the
+M operations must follow.
+Each operation must be described in two lines
+On the first line of each operation output two space separated integers
+L and
+R
+(1≤L<R≤N) — the indices of the subarray chosen.
+On the second line output
+N space separated integers — the permutation
+P after dearranging the subarray
+P
+L
+,P
+L+1
+,…P
+R
+. Note that you have to output the whole permutation
+{P
+1
+,P
+2
+,…P
+N
+}
+Constraints
+1≤T≤200
+3≤N≤1000
+P is a permutation of length
+N
+The sum of
+N over all test cases does not exceed
+1000
+It is guaranteed that the given permutations can be sorted in atmost
+1000 operations.
+Sample 1:
+Input
+Output
+2
+5
+1 2 3 4 5
+5
+2 1 3 5 4
+0
+2
+1 2
+1 2 3 5 4
+4 5
+1 2 3 4 5
+Explanation:
+Test case
+1: No operations are required since the permutation is already sorted.
+Test case
+2: Initially,
+P=[2,1,3,5,4]. Consider the following sequence of operations.
+Choose
+L=1 and
+R=2 and dearrange the subarray in the following manner
+[
+2,1
+,3,5,4]→[1,2,3,5,4]
+Choose
+L=4 and
+R=5 and dearrange the subarray in the following manner
+[1,2,3,
+5,4
+]→[1,2,3,4,5]
+It can be shown that it is not possible to sort the given permutation in less than
+2 operations.

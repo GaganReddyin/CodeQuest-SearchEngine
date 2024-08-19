@@ -1,0 +1,183 @@
+D. AB-string
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The string
+t
+1
+t
+2
+…
+t
+k
+is good if each letter of this string belongs to at least one palindrome of length greater than 1.
+A palindrome is a string that reads the same backward as forward. For example, the strings A, BAB, ABBA, BAABBBAAB are palindromes, but the strings AB, ABBBAA, BBBA are not.
+Here are some examples of good strings:
+t
+= AABBB (letters
+t
+1
+,
+t
+2
+belong to palindrome
+t
+1
+…
+t
+2
+and letters
+t
+3
+,
+t
+4
+,
+t
+5
+belong to palindrome
+t
+3
+…
+t
+5
+);
+t
+= ABAA (letters
+t
+1
+,
+t
+2
+,
+t
+3
+belong to palindrome
+t
+1
+…
+t
+3
+and letter
+t
+4
+belongs to palindrome
+t
+3
+…
+t
+4
+);
+t
+= AAAAA (all letters belong to palindrome
+t
+1
+…
+t
+5
+);
+You are given a string
+s
+of length
+n
+, consisting of only letters A and B.
+You have to calculate the number of good substrings of string
+s
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤3⋅
+10
+5
+) — the length of the string
+s
+.
+The second line contains the string
+s
+, consisting of letters A and B.
+Output
+Print one integer — the number of good substrings of string
+s
+.
+Examples
+input
+Copy
+5
+AABBB
+output
+Copy
+6
+input
+Copy
+3
+AAA
+output
+Copy
+3
+input
+Copy
+7
+AAABABB
+output
+Copy
+15
+Note
+In the first test case there are six good substrings:
+s
+1
+…
+s
+2
+,
+s
+1
+…
+s
+4
+,
+s
+1
+…
+s
+5
+,
+s
+3
+…
+s
+4
+,
+s
+3
+…
+s
+5
+and
+s
+4
+…
+s
+5
+.
+In the second test case there are three good substrings:
+s
+1
+…
+s
+2
+,
+s
+1
+…
+s
+3
+and
+s
+2
+…
+s
+3
+.

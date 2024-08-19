@@ -1,0 +1,173 @@
+H. Help BerLine
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Very soon, the new cell phone services provider "BerLine" will begin its work in Berland!
+The start of customer service is planned along the main street of the capital. There are
+n
+ base stations that are already installed. They are located one after another along the main street in the order from the 
+1
+-st to the 
+n
+-th from left to right.
+Currently, all these base stations are turned off. They will be turned on one by one, one base station per day, according to some permutation
+p=[
+p
+1
+,
+p
+2
+,…,
+p
+n
+]
+(
+1≤
+p
+i
+≤n
+), where
+p
+i
+is the index of a base station that will be turned on on the
+i
+-th day. Thus, it will take
+n
+days to turn on all base stations.
+Each base station is characterized by its operating frequency
+f
+i
+ — an integer between
+1
+and
+24
+, inclusive.
+There is an important requirement for operating frequencies of base stations. Consider an arbitrary moment in time. For any phone owner, if we consider all base stations turned on in the access area of their phone, then in this set of base stations there should be at least one whose operating frequency is unique among the frequencies of these stations. Since the power of the phone and the position are not known in advance, this means that for any nonempty subsegment of turned on base stations, at least one of them has to have the operating frequency that is unique among the stations of this subsegment.
+For example, let's take a look at a case of
+n=7
+, all
+n
+stations are turned on, and their frequencies are equal to
+f=[1,2,1,3,1,2,1]
+. Consider any subsegment of the base stations — there is a base station with a unique frequency within this subsegment. However, if
+f=[1,2,1,2,3,2,1]
+, then there is no unique frequency on the segment
+[1,2,1,2]
+from the index
+1
+to the index
+4
+, inclusive.
+Your task is to assign a frequency from
+1
+to
+24
+to each of
+n
+base stations in such a way that the frequency requirement is met at every moment. Remember that the base stations are turned on in the order of the given permutation
+p
+.
+Input
+The first line of the input contains an integer
+t
+(
+1≤t≤50
+) — the number of test cases in the input. Then
+t
+test case descriptions follow.
+The first line of a test case contains an integer
+n
+(
+1≤n≤8500
+) — the number of "BerLine" base stations.
+The following line contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the order in which the base stations are turned on, i. e. on the
+i
+-th day the base station with the index
+p
+i
+is turned on.
+It is guaranteed that a correct answer exists for all test cases in the input.
+Output
+Print exactly
+t
+lines, where the
+j
+-th line contains the answer for the
+j
+-th test case in the input. Print the required frequencies
+f
+1
+,
+f
+2
+,…,
+f
+n
+(
+1≤
+f
+i
+≤24
+). If there are several possible answers, print any of them.
+Example
+input
+Copy
+5
+3
+1 3 2
+3
+1 2 3
+1
+1
+10
+6 10 4 2 7 9 5 8 3 1
+10
+2 4 6 9 1 8 10 5 3 7
+output
+Copy
+1 3 2 
+10 20 10
+1 
+2 3 4 5 3 1 3 5 4 2 
+1 2 3 4 5 6 7 8 9 10
+Note
+In the first test case
+n=3
+and
+p=[1,3,2]
+. The base stations can be assigned frequencies
+[1,3,2]
+.
+Day 1: only the base station
+1
+is turned on, its frequency is
+1
+.
+Day 2: the base stations
+1
+and
+3
+are turned on, their frequencies are
+[1,2]
+.
+Day 3: all base stations are turned on, their frequencies are
+[1,3,2]
+(in the direction along the street).
+On each day, each nonempty subsegment of turned on base stations has a base station with a unique frequency among this subsegment. It can be shown that three distinct frequencies are necessary in this test case.

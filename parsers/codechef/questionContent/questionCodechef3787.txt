@@ -1,0 +1,121 @@
+Powers of 2
+Problem
+You have an array
+P of length
+N. Also in front of you, there are
+N bags of gems lined up in a row where the
+i-th bag from the left has
+2
+P
+i
+gems in it.
+You can take any bags of gems from them following the given rules:
+You are not allowed to take two adjacent bags.
+You are allowed to take at most
+k bags.
+For each value of
+k from
+1 to
+⌈
+2
+N
+⌉, find the maximum number of gems you can obtain.
+Since the answers may be too large, print them modulo
+10
+9
++7.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - the number of bags of gems.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output Format
+For each test case, print a single line containing
+⌈
+2
+N
+⌉ integers. The
+k-th of them is the maximum number of gems you can obtain if you take no more than
+k bags, modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+5
+2≤N≤2⋅10
+5
+0≤P
+i
+≤N
+the sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+4
+3
+0 3 0
+4
+1 3 2 0
+6
+2 4 4 3 3 1
+5
+5 5 5 5 5
+8 8
+8 9
+16 24 28
+32 64 96
+Explanation:
+Test Case-1:
+For
+k=1: It is optimal to pick index:
+2. Therefore the number of gems
+=2
+P
+2
+=8.
+For
+k=2: Optimal selection is exactly same.
+Test Case-3:
+For
+k=1: It is optimal to pick indices:
+3. Therefore the number of gems
+=2
+P
+3
+=16.
+For
+k=2: It is optimal to pick indices:
+2,5. Therefore the number of gems
+=2
+P
+2
++2
+P
+5
+=24.
+For
+k=3: It is optimal to pick indices:
+1,3,5. Therefore the number of gems
+=2
+P
+1
++2
+P
+3
++2
+P
+5
+=28.

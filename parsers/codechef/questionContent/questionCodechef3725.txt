@@ -1,0 +1,160 @@
+Alice Potter and Wingardium Leviosa
+Problem
+Alice wants to clean up the mess in her room. She has
+N objects in her room, numbered from
+1 to
+N.
+Each object must be in its place. In other words,
+i
+th
+object should be in the
+i
+th
+location.
+Currently, the object with the index
+P
+i
+is in the
+i
+th
+location.
+To move the objects, Alice can use the spell Wingardium Leviosa. To perform it:
+She needs to specify
+N different indices
+K
+1
+,K
+2
+,…,K
+N
+(1≤K
+i
+≤N).
+The object that was at location
+K
+1
+will move to location
+K
+2
+, the object that was at location
+K
+2
+will move to location
+K
+3
+,
+… , the object that was at location
+K
+N−1
+will move to location
+K
+N
+, the object that was at location
+K
+N
+will move to location
+K
+1
+(all of these happen simultaneously).
+Your task is to help Alice move all the objects to their places by using the spell Wingardium Leviosa at most
+4 times or to inform her that it is impossible.
+Input Format
+The first line of the input contains a single integer
+N — the number of items.
+The second line contains
+N integers
+P
+1
+,P
+2
+,…,P
+N
+—
+P
+i
+is the index of the item that is initially located in the
+i
+th
+location.
+Output Format
+If it is possible to move all the items to their places by using the spell Wingardium Leviosa at most
+4 times, then:
+In the first line print the number
+M
+(0≤M≤4) — the number of spells to be used.
+Next, print
+M lines of spell descriptions. A spell description is
+N numbers
+K
+1
+,K
+2
+,…,K
+N
+(1≤K
+i
+≤N), all
+K
+i
+have to be distinct.
+If there are multiple correct answers, print any of them. Note that you do not need to minimise
+M.
+Otherwise, print a single integer
+−1.
+Constraints
+1≤N≤10
+6
+1≤P
+i
+≤N, all
+P
+i
+are distinct
+Sample 1:
+Input
+Output
+3
+1 2 3
+3
+1 2 3 
+1 2 3 
+2 3 1
+Explanation:
+After the first spell, the indices of objects at corresponding locations becomes
+[3,1,2].
+After the second spell, the indices of objects at corresponding locations becomes
+[2,3,1].
+After the third spell, the indices of objects at corresponding locations becomes
+[1,2,3].
+Thus, all objects are at their places.
+Note that all objects were in their places at the start, so
+M=0 would also be a correct output.
+Sample 2:
+Input
+Output
+4
+3 4 1 2
+4
+1 3 2 4 
+1 2 3 4 
+2 1 3 4 
+2 3 4 1
+Explanation:
+After the first spell, the indices of objects at corresponding locations becomes
+[2,1,3,4].
+After the second spell, the indices of objects at corresponding locations becomes
+[4,2,1,3].
+After the third spell, the indices of objects at corresponding locations becomes
+[2,3,4,1].
+After the fourth operation, the indices of objects at corresponding locations becomes
+[1,2,3,4].
+Thus, all objects are at their places.
+Sample 3:
+Input
+Output
+5
+4 1 5 2 3
+-1
+Explanation:
+It is not possible to move all objects to their places in at most
+4 spells.

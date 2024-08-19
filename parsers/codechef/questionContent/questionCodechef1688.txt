@@ -1,0 +1,113 @@
+The One with Ross Wedding
+Problem
+Even before they leave the apartment, Joey drives Chandler crazy by forgetting everything useful, even his passport, but crying every five seconds "London, baby!", and photographing absolutely everything all the time, as if 6 hours on an airplane with Monica weren't bad enough. On reaching, Joey uses a map to visit the famous places nearby.
+Joey is currently at the coordinates
+(0,0) and he wants to reach the coordinates
+(P,Q). Chandler has a set of instructions for Joey to move. He provides Joey a binary string
+S of length
+N. Joey chooses one of the axes : either x-axis or y-axis. Joey then follows the instructions. To follow the
+i
+th
+instruction:
+If
+S
+i
+=
+0, Joey has to change his axis immediately and move in any direction (positive or negative) of the resulting axis by
+1 unit.
+If
+S
+i
+=
+1, Joey can move in any direction (positive or negative) along the current axis by
+1 unit.
+For x-axis, moving in positive direction implies moving from
+(x,y) to
+(x+1,y) and moving in negative direction implies moving from
+(x,y) to
+(x−1,y). Similarly, for y-axis, moving in positive direction implies moving from
+(x,y) to
+(x,y+1) and moving in negative direction implies moving from
+(x,y) to
+(x,y−1).
+Determine if Joey can reach
+(P,Q) at the end.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+First line of each testcase contains of three integers
+N,P,Q.
+Second line of each test case contains a binary string
+S.
+Output Format
+For each test case print "YES" if he can reach coordinates
+(P,Q) at the end, else print "NO".
+You may print each character of each string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+−10
+6
+≤P,Q≤10
+6
+S contains
+0,1 only.
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+3 0 -1
+111
+4 2 0
+1101
+2 0 1
+00
+YES
+YES
+NO
+Explanation:
+Test case 1: Joey starts by choosing the y-axis.
+S
+0
+=1, he chooses to move towards the positive direction of y-axis.
+S
+1
+=1, he chooses to move towards the negative direction of y-axis.
+S
+2
+=1, he moves towards the negative direction of y-axis. Thus, his path is
+(0,0)
+→
+(0,1)
+→
+(0,0)
+→
+(0,−1).
+Test case 2: Joey starts by choosing x-axis.
+S
+0
+=1, he chooses to move towards the positive direction of x-axis.
+S
+1
+=1, he chooses to moves towards the positive direction of x-axis.
+S
+2
+=0, he changes the axis and chooses to move towards the negative direction of y-axis
+S
+3
+=0, he changes the axis and chooses to move towards the positive direction of y-axis. Thus, his path is
+(0,0)
+→
+(1,0)
+→
+(2,0)
+→
+(2,−1)
+→
+(2,0).

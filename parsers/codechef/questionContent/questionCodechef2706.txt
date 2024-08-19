@@ -1,0 +1,59 @@
+D-Value
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Dr.D is bored, so he's making up problems to pass the time. Here is one of them.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Find the number of 7-tuples of indices
+(a,b,c,d,e,f,g) such that:
+1≤a<b<c<d<e<f<g≤N
+A
+g
+<A
+e
+<A
+f
+<A
+d
+<A
+b
+<A
+c
+<A
+a
+Since this number could be huge, compute it modulo
+987654319.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing one integer — the number of tuples modulo
+987654319.
+Constraints
+1≤N≤3,000
+1≤A
+i
+≤10
+9
+for each valid
+i
+Sample 1:
+Input
+Output
+10
+7 7 5 6 4 2 3 1 1 1
+6

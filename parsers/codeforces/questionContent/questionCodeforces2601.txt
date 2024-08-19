@@ -1,0 +1,91 @@
+B2. "Is the number divisible by 3?" oracle
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Implement a quantum oracle on
+N
+qubits which checks whether the input bit string is a little-endian notation of a number that is divisible by 3.
+Your operation should take the following inputs:
+an array of
+N≤8
+qubits "inputs" in an arbitrary state.
+a qubit "output" in an arbitrary state.
+Your operation should perform a unitary transformation on those qubits that can be described by its effect on the basis states: if "inputs" is in the basis state
+|x⟩
+and "output" is in the basis state
+|y⟩
+, the result of applying the operation should be
+|x⟩|y⊕f(x)⟩
+, where
+f(x)=1
+if the integer represented by the bit string
+x
+is divisible by
+3
+, and
+0
+otherwise.
+For example, if the qubits passed to your operation are in the state
+1
+2
+√
+(|110⟩+|001⟩
+)
+x
+⊗|0
+⟩
+y
+=
+1
+2
+√
+(|3⟩+|4⟩
+)
+x
+⊗|0
+⟩
+y
+, the state of the system after applying the operation should be
+1
+2
+√
+(|3
+⟩
+x
+⊗|1
+⟩
+y
++|4
+⟩
+x
+|0
+⟩
+y
+)=
+1
+2
+√
+(|110
+⟩
+x
+⊗|1
+⟩
+y
++|001
+⟩
+x
+|0
+⟩
+y
+)
+.
+Your code should have the following signature (note that your operation should have Adjoint and Controlled variants defined for it; is Adj+Ctl in the operation signature will generate them automatically based on your code):
+namespace Solution {
+    open Microsoft.Quantum.Intrinsic;
+
+    operation Solve (inputs : Qubit[], output : Qubit) : Unit is Adj+Ctl {
+        // your code here
+    }
+}
+Your code is not allowed to use measurements or arbitrary rotation gates. This operation can be implemented using just the X gate and its controlled variants (possibly with multiple qubits as controls).

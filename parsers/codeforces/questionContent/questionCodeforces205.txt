@@ -1,0 +1,134 @@
+A. Typical Interview Problem
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+The FB-string is formed as follows. Initially, it is empty. We go through all positive integers, starting from
+1
+, in ascending order, and do the following for each integer:
+if the current integer is divisible by
+3
+, append F to the end of the FB-string;
+if the current integer is divisible by
+5
+, append B to the end of the FB-string.
+Note that if an integer is divisible by both
+3
+and
+5
+, we append F, and then B, not in the opposite order.
+The first
+10
+characters of the FB-string are FBFFBFFBFB: the first F comes from the integer
+3
+, the next character (B) comes from
+5
+, the next F comes from the integer
+6
+, and so on. It's easy to see that this string is infinitely long. Let
+f
+i
+be the
+i
+-th character of FB-string; so,
+f
+1
+is F,
+f
+2
+is B,
+f
+3
+is F,
+f
+4
+is F, and so on.
+You are given a string
+s
+, consisting of characters F and/or B. You have to determine whether it is a substring (contiguous subsequence) of the FB-string. In other words, determine if it is possible to choose two integers
+l
+and
+r
+(
+1≤l≤r
+) so that the string
+f
+l
+f
+l+1
+f
+l+2
+…
+f
+r
+is exactly
+s
+.
+For example:
+FFB is a substring of the FB-string: if we pick
+l=3
+and
+r=5
+, the string
+f
+3
+f
+4
+f
+5
+is exactly FFB;
+BFFBFFBF is a substring of the FB-string: if we pick
+l=2
+and
+r=9
+, the string
+f
+2
+f
+3
+f
+4
+…
+f
+9
+is exactly BFFBFFBF;
+BBB is not a substring of the FB-string.
+Input
+The first line contains one integer
+t
+(
+1≤t≤2046
+) — the number of test cases.
+Each test case consists of two lines. The first line contains one integer
+k
+(
+1≤k≤10
+) — the number of characters in
+s
+. The second line contains
+s
+, which is a string of exactly
+k
+characters. Each character of
+s
+is either F or B.
+Output
+For each test case, print YES if
+s
+is a substring of the FB-string, or NO otherwise.
+You may print each letter in any case (YES, yes, Yes will all be recognized as positive answer, NO, no and nO will all be recognized as negative answer).
+Example
+input
+Copy
+3
+3
+FFB
+8
+BFFBFFBF
+3
+BBB
+output
+Copy
+YES
+YES
+NO

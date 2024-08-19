@@ -1,0 +1,197 @@
+C. Tonya and Burenka-179
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Tonya was given an array of
+a
+of length
+n
+written on a postcard for his birthday. For some reason, the postcard turned out to be a cyclic array, so the index of the element located strictly to the right of the
+n
+-th is
+1
+. Tonya wanted to study it better, so he bought a robot "Burenka-179".
+A program for Burenka is a pair of numbers
+(s,k)
+, where
+1≤s≤n
+,
+1≤k≤n−1
+. Note that
+k
+cannot be equal to
+n
+. Initially, Tonya puts the robot in the position of the array
+s
+. After that, Burenka makes exactly
+n
+steps through the array. If at the beginning of a step Burenka stands in the position
+i
+, then the following happens:
+The number
+a
+i
+is added to the usefulness of the program.
+"Burenka" moves
+k
+positions to the right (
+i:=i+k
+is executed, if
+i
+becomes greater than
+n
+, then
+i:=i−n
+).
+Help Tonya find the maximum possible usefulness of a program for "Burenka" if the initial usefulness of any program is
+0
+.
+Also, Tony's friend Ilyusha asks him to change the array
+q
+times. Each time he wants to assign
+a
+p
+:=x
+for a given index
+p
+and a value
+x
+. You need to find the maximum possible usefulness of the program after each of these changes.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) is the number of test cases. The description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+q
+(
+2≤n≤2⋅
+10
+5
+,
+0≤q≤2⋅
+10
+5
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — elements of the array.
+The following
+q
+lines contain changes, each of them contains two integers
+p
+and
+x
+(
+1≤p≤n
+,
+1≤x≤
+10
+9
+), meaning you should assign
+a
+p
+:=x
+.
+It is guaranteed that the sum of
+n
+and the sum of
+q
+over all test cases do not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output
+q+1
+numbers — the maximum usefulness of a program initially and after each of the changes.
+Example
+input
+Copy
+4
+2 1
+1 2
+1 3
+4 4
+4 1 3 2
+2 6
+4 6
+1 1
+3 11
+9 3
+1 7 9 4 5 2 3 6 8
+3 1
+2 1
+9 1
+6 3
+1 1 1 1 1 1
+1 5
+4 4
+3 8
+output
+Copy
+3
+5
+14
+16
+24
+24
+24
+57
+54
+36
+36
+6
+18
+27
+28
+Note
+In the first test case, initially and after each request, the answer is achieved at
+s=1
+,
+k=1
+or
+s=2
+,
+k=1
+.
+In the second test case, initially, the answer is achieved when
+s=1
+,
+k=2
+or
+s=3
+,
+k=2
+. After the first request, the answer is achieved at
+s=2
+,
+k=2
+or
+s=4
+,
+k=2
+.

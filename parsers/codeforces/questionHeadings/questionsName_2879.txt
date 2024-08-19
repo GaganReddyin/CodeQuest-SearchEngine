@@ -1,0 +1,1 @@
+C. Segment tree or Fenwick?

@@ -1,0 +1,124 @@
+Traversing Trees
+Problem
+You are given a tree rooted at node
+1 with
+N vertices. The
+i
+th vertex initially has value
+A
+i
+(1≤i≤N). You are also given
+Q queries.
+In each query you are given a vertex
+V. Let
+S={S
+1
+,S
+2
+,...S
+x
+} denote the set of vertices such that
+S
+i
+is in the subtree of
+V, distance between
+S
+i
+and
+V is even and
+S
+i
+
+=V for all
+i. For all
+S
+i
+, add
+A
+S
+i
+to
+A
+V
+and change the value of
+A
+S
+i
+to zero.
+Find the values of all the vertices after all queries are performed.
+Note-The distance between two vertices is defined as the number of edges traversed on the shortest path from one vertex to the other.
+Input:
+The first line contains an integer
+T denoting the number of test cases.
+The first line of each test case contain two integers
+N and
+Q.
+The second line contains
+N space separated integers,
+A
+1
+,A
+2
+,...,A
+n
+denoting the initial values of the vertices.
+The next
+N−1 lines contain two integers
+u and
+v denoting an edge between
+uand
+v.
+The next
+Q lines contain a single integer which is the query.
+Output:
+Print a single line containing
+N integers for each test case which is the final values of the vertices.
+###Constraints:
+1≤T≤10
+1≤N≤200000
+1≤Q≤200000
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+200000.
+The sum of
+Q over all test cases does not exceed
+200000.
+###Sample Input 1 4 3 6 2 7 3 1 2 2 3 3 4 3 2 1
+###Sample Output 13 5 0 0
+###Explanation
+Node
+3 has no child in its subtree which is at an even distance so there is no change in the values. Values of nodes after
+1st query:
+6,2,7,3.
+Node
+4 is at an even distance in the subtree of node
+2 so
+A
+4
+gets added to
+A
+2
+and
+A
+4
+becomes 0. Values of nodes after
+2nd query:
+6,5,7,0.
+Node
+3 is at an even distance in the subtree of node
+1 so
+A
+3
+gets added to
+A
+1
+and
+A
+3
+becomes 0. Values of nodes after
+3rd query:
+13,5,0,0.

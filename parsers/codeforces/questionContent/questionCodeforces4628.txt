@@ -1,0 +1,45 @@
+F. Fafa and Array
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Fafa has an array A of n positive integers, the function f(A) is defined as . He wants to do q queries of two types:
+1 l r x — find the maximum possible value of f(A), if x is to be added to one element in the range [l,  r]. You can choose to which element to add x.
+2 l r x — increase all the elements in the range [l,  r] by value x.
+Note that queries of type 1 don't affect the array elements.
+Input
+The first line contains one integer n (3 ≤ n ≤ 105) — the length of the array.
+The second line contains n positive integers a1, a2, ..., an (0 < ai ≤ 109) — the array elements.
+The third line contains an integer q (1 ≤ q ≤ 105) — the number of queries.
+Then q lines follow, line i describes the i-th query and contains four integers ti li ri xi .
+It is guaranteed that at least one of the queries is of type 1.
+Output
+For each query of type 1, print the answer to the query.
+Examples
+input
+Copy
+5
+1 1 1 1 1
+5
+1 2 4 1
+2 2 3 1
+2 4 4 2
+2 3 4 1
+1 3 3 2
+output
+Copy
+2
+8
+input
+Copy
+5
+1 2 3 4 5
+4
+1 2 4 2
+2 2 4 1
+2 3 4 1
+1 2 4 2
+output
+Copy
+6
+10

@@ -1,0 +1,62 @@
+A. Aramic script
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In Aramic language words can only represent objects.
+Words in Aramic have special properties:
+A word is a root if it does not contain the same letter more than once.
+A root and all its permutations represent the same object.
+The root
+x
+of a word
+y
+is the word that contains all letters that appear in
+y
+in a way that each letter appears once. For example, the root of "aaaa", "aa", "aaa" is "a", the root of "aabb", "bab", "baabb", "ab" is "ab".
+Any word in Aramic represents the same object as its root.
+You have an ancient script in Aramic. What is the number of different objects mentioned in the script?
+Input
+The first line contains one integer
+n
+(
+1≤n≤
+10
+3
+) — the number of words in the script.
+The second line contains
+n
+words
+s
+1
+,
+s
+2
+,…,
+s
+n
+ — the script itself. The length of each string does not exceed
+10
+3
+.
+It is guaranteed that all characters of the strings are small latin letters.
+Output
+Output one integer — the number of different objects mentioned in the given ancient Aramic script.
+Examples
+input
+Copy
+5
+a aa aaa ab abb
+output
+Copy
+2
+input
+Copy
+3
+amer arem mrea
+output
+Copy
+1
+Note
+In the first test, there are two objects mentioned. The roots that represent them are "a","ab".
+In the second test, there is only one object, its root is "amer", the other strings are just permutations of "amer".

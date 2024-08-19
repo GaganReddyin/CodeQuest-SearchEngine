@@ -1,0 +1,30 @@
+C. Array Sum
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+You are given an array of integers. Calculate the sum of its elements.
+Input
+The i-th line of the input contains an integer ai (0 ≤ a ≤ 1000) — the i-th element of the array. The size of the array is between 1 and 10, inclusive. Note that the size of the array is not given explicitly!
+Output
+Output a single integer — the sum of the elements of the array.
+Examples
+input
+Copy
+2
+15
+110
+3
+output
+Copy
+130
+input
+Copy
+90
+0
+21
+331
+45
+output
+Copy
+487

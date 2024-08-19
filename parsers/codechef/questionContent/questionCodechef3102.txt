@@ -1,0 +1,139 @@
+Medicine Strength
+Problem
+There are
+N types of medicines and
+M types of diseases where medicine types are numbered from
+1 to
+N and disease types are numbered from
+1 to
+M. You have infinite medicines of each type.
+For every disease
+d, you have a strength
+f(d). Initially,
+f(d)=0 for all
+1≤d≤M.
+The
+i
+th
+medicine increments your strength for a particular disease (say
+x
+i
+) and decrements your strength for another disease (say
+y
+i
+). In particular, if you take the medicine of
+i
+th
+type, then:
+f(x
+i
+)→f(x
+i
+)+1
+f(y
+i
+)→f(y
+i
+)−1
+Let
+S be a subset of the
+M diseases. You are considered immune to
+S if and only if, there exists a finite number of medicines you can take such that after you take all those medicines, you have
+f(d)>0 for all
+d∈S.
+Remember that you have infinite medicines of each type. So you could take
+10 medicines of type
+1, and
+3 medicines of type
+2, etc.
+Count the number of subsets of diseases you are immune to. Print the number modulo
+10
+9
++7.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+M — the number of types of medicines and the number of types of diseases, respectively.
+The next
+N lines describe the medicines. The
+i
+th
+of these
+N lines contain two space-separated integers
+x
+i
+and
+y
+i
+, denoting the disease on which the strength increases and decreases respectively after taking the
+i
+th
+medicine.
+Output Format
+For each test case, output on a new line, the number of subsets of diseases you are immune to, modulo
+10
+9
++7.
+Constraints
+1≤T≤1000
+1≤N≤2⋅10
+5
+2≤M≤10
+5
+1≤x
+i
+,y
+i
+≤M
+x
+i
+
+=y
+i
+and the ordered pair
+(x
+i
+,y
+i
+) is pairwise distinct for
+1≤i≤N.
+The sum of
+N+M over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+2 3
+2 1
+3 1
+6 5
+4 1
+5 1
+4 5
+1 3
+3 2
+2 1
+4
+28
+Explanation:
+Test case
+1: There are
+4 subsets of diseases that you are immune to.
+The
+{} set: there are no diseases so you are automatically immune to the empty set.
+{2}: If you take the first tablet, you become immune.
+{3}: If you take the second tablet, you become immune.
+{2,3}: If you take the first and second tablet then your,
+f(1) becomes
+−2,
+f(2) becomes
+1 and
+f(3) becomes
+1. Which makes you immune to this subset.
+It can be proven that you are not immune to any other subset.

@@ -1,0 +1,64 @@
+Optimal Xor Set
+Problem
+Read problem statements in Vietnamese,
+Bengali, Mandarin Chinese, and Russian as well.
+Find
+K distinct numbers in the range
+[1,N] such that the bitwise XOR of all the numbers is maximized. Print any set of these numbers that maximize the XOR.
+###Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+Each test case contains a single line of input, two integers
+N,
+K.
+###Output For each test case, output
+K distinct integers in any order as described in the problem.
+###Constraints
+1≤T≤10
+4
+1≤K≤N≤10
+6
+The sum of
+N over all queries is at most
+4⋅10
+6
+.
+The sum of
+K over all queries is at most
+2⋅10
+6
+.
+###Subtasks Subtask #1 (5 points):
+1≤T≤50
+1≤K≤N≤20
+Subtask #2 (20 points):
+1≤T≤50
+1≤K≤N≤200
+The sum of
+N over all queries is at most
+800.
+The sum of
+K over all queries is at most
+400.
+Subtask #3 (75 points): original constraints
+###Sample Input
+3
+10 1
+9 2
+8 7
+###Sample Output
+10
+7 8
+1 2 3 4 5 6 8
+###Explanation Test Case
+1: The only possible set is
+{10} which gives the value
+10.
+Test Case
+2: The other possible set is
+{9,6} which gives the value
+9⊕6=15=7⊕8.
+Test Case
+3: The only possible set is
+{1,2,3,4,5,6,8} which gives the value
+1⊕2⊕3⊕4⊕5⊕6⊕8=15.

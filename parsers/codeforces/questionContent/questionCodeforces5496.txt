@@ -1,0 +1,37 @@
+D. Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths
+time limit per test
+3 seconds
+memory limit per test
+256 megabytes
+input
+standard input
+output
+standard output
+Just in case somebody missed it: we have wonderful girls in Arpa’s land.
+Arpa has a rooted tree (connected acyclic graph) consisting of n vertices. The vertices are numbered 1 through n, the vertex 1 is the root. There is a letter written on each edge of this tree. Mehrdad is a fan of Dokhtar-kosh things. He call a string Dokhtar-kosh, if we can shuffle the characters in string such that it becomes palindrome.
+He asks Arpa, for each vertex v, what is the length of the longest simple path in subtree of v that form a Dokhtar-kosh string.
+Input
+The first line contains integer n (1  ≤  n  ≤  5·105) — the number of vertices in the tree.
+(n  -  1) lines follow, the i-th of them contain an integer pi + 1 and a letter ci + 1 (1  ≤  pi + 1  ≤  i, ci + 1 is lowercase English letter, between a and v, inclusively), that mean that there is an edge between nodes pi + 1 and i + 1 and there is a letter ci + 1 written on this edge.
+Output
+Print n integers. The i-th of them should be the length of the longest simple path in subtree of the i-th vertex that form a Dokhtar-kosh string.
+Examples
+Input
+Copy
+4
+1 s
+2 a
+3 s
+Output
+Copy
+3 1 1 0 
+Input
+Copy
+5
+1 a
+2 h
+1 a
+4 h
+Output
+Copy
+4 1 0 1 0 

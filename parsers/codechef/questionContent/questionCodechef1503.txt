@@ -1,0 +1,32 @@
+Chef and Easy Problem
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+You are given a sequence A1, A2, ..., AN and Q queries. In each query, you are given two parameters L and R; you have to find the smallest integer X such that 0 ≤ X < 231 and the value of (AL xor X) + (AL+1 xor X) + ... + (AR xor X) is maximum possible.
+Note: xor denotes the bitwise xor operation.
+Input
+The first line of the input contains two space-separated integers N and Q denoting the number of elements in A and the number of queries respectively.
+The second line contains N space-separated integers A1, A2, ..., AN.
+Each of the next Q lines contains two space-separated integers L and R describing one query.
+Output
+For each query, print a single line containing one integer — the minimum value of X.
+Constraints
+1 ≤ N ≤ 105
+1 ≤ Q ≤ 105
+0 ≤ Ai < 231 for each valid i
+Subtasks
+Subtask #1 (18 points):
+1 ≤ N ≤ 103
+1 ≤ Q ≤ 103
+0 ≤ Ai < 210 for each valid i
+Subtask #2 (82 points): original constraints
+Sample 1:
+Input
+Output
+5 3
+20 11 18 2 13
+1 3
+3 5
+2 4
+2147483629
+2147483645
+2147483645

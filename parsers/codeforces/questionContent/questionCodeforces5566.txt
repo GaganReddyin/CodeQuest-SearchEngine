@@ -1,0 +1,41 @@
+E. Too Much Money
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alfred wants to buy a toy moose that costs c dollars. The store doesn’t give change, so he must give the store exactly c dollars, no more and no less. He has n coins. To make c dollars from his coins, he follows the following algorithm: let S be the set of coins being used. S is initially empty. Alfred repeatedly adds to S the highest-valued coin he has such that the total value of the coins in S after adding the coin doesn’t exceed c. If there is no such coin, and the value of the coins in S is still less than c, he gives up and goes home. Note that Alfred never removes a coin from S after adding it.
+As a programmer, you might be aware that Alfred’s algorithm can fail even when there is a set of coins with value exactly c. For example, if Alfred has one coin worth $3, one coin worth $4, and two coins worth $5, and the moose costs $12, then Alfred will add both of the $5 coins to S and then give up, since adding any other coin would cause the value of the coins in S to exceed $12. Of course, Alfred could instead combine one $3 coin, one $4 coin, and one $5 coin to reach the total.
+Bob tried to convince Alfred that his algorithm was flawed, but Alfred didn’t believe him. Now Bob wants to give Alfred some coins (in addition to those that Alfred already has) such that Alfred’s algorithm fails. Bob can give Alfred any number of coins of any denomination (subject to the constraint that each coin must be worth a positive integer number of dollars). There can be multiple coins of a single denomination. He would like to minimize the total value of the coins he gives Alfred. Please find this minimum value. If there is no solution, print "Greed is good". You can assume that the answer, if it exists, is positive. In other words, Alfred's algorithm will work if Bob doesn't give him any coins.
+Input
+The first line contains c (1 ≤ c ≤ 200 000) — the price Alfred wants to pay. The second line contains n (1 ≤ n ≤ 200 000) — the number of coins Alfred initially has. Then n lines follow, each containing a single integer x (1 ≤ x ≤ c) representing the value of one of Alfred's coins.
+Output
+If there is a solution, print the minimum possible total value of the coins in a solution. Otherwise, print "Greed is good" (without quotes).
+Examples
+input
+Copy
+12
+3
+5
+3
+4
+output
+Copy
+5
+input
+Copy
+50
+8
+1
+2
+4
+8
+16
+37
+37
+37
+output
+Copy
+Greed is good
+Note
+In the first sample, Bob should give Alfred a single coin worth $5. This creates the situation described in the problem statement.
+In the second sample, there is no set of coins that will cause Alfred's algorithm to fail.

@@ -1,0 +1,45 @@
+Palpal Strings
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+A string is called a Palpal string if it can be divided into contiguous substrings such that:
+Each character of the whole string belongs to exactly one substring.
+Each of these substrings is a palindrome with length greater than
+1.
+For example, "abbbaddzcz" is a Palpal string, since it can be divided into "abbba", "dd" and "zcz".
+You are given a string
+s. You may rearrange the characters of this string in any way you choose. Find out if it is possible to rearrange them in such a way that you obtain a Palpal string.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single string
+s.
+Output
+For each test case, print a single line containing the string "YES" if the characters of
+s can be rearranged to form a Palpal string or "NO" if it is impossible (without quotes).
+You may print each character of each string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+Constraints
+1≤T≤10
+5
+1≤∣s∣≤100
+s contains only lowercase English letters
+the sum of
+∣s∣ over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+3
+acbbbadzdz
+abcd
+xyxyxy
+YES
+NO
+YES
+Explanation:
+Example case 1: The string "acbbbadzdz" can be rearranged to "abbbaddzcz", which is the Palpal string mentioned above.
+Example case 2: It can be shown that "abcd" cannot be rearranged to form a Palpal string.
+Example case 3: The string "xyxyxy" is already a Palpal string, since it can divided into "xyx" and "yxy".

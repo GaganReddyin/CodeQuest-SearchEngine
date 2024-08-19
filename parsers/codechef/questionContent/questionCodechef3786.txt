@@ -1,0 +1,134 @@
+Binary String Randomizer
+Problem
+Chef JJ is a fan of random events and calculating probabilities.
+He designed a machine called the binary string randomizer (BSRand). BSRand takes a binary string
+A (say, of length
+N) as input and then generates a binary string
+B (of the same length
+N) as output using the following algorithm:
+For each
+i from
+1 to
+N,
+Uniformly randomly choose an integer
+j between
+1 and
+N.
+Uniformly randomly choose an integer
+k between
+1 and
+N.
+Set
+B
+i
+:=A
+j
+⊕A
+k
+(where
+⊕ represents the bitwise XOR operation)
+Given a binary string
+A, Chef JJ passes it through BSRand
+T times (i.e, first he passes the binary string
+A through the BSRand, then he passes the resultant binary string through BSRand again, and so on. This is done
+T times in total). Calculate the probability that the final binary string obtained is
+B.
+You need to print the probability of getting binary string
+B modulo
+998244353. Formally, let
+M=998244353. It can be shown that the answer can be expressed as an irreducible fraction
+q
+p
+, where
+p and
+q are integers and
+q
+
+≡0(modM). Output
+p⋅q
+−1
+(modM). In other words, output the (unique) integer
+x which satisfies
+0≤x<M and
+x⋅q≡p(modM).
+Input Format
+The first line of the input contains two integers
+N and
+T - the length of the binary strings
+A and
+B and the number of times chef JJ passes the binary string through BSRand, respectively.
+The second line contains the binary string
+A.
+The third line contains the binary string
+B.
+Output Format
+Output the probability of getting binary string
+B from binary string
+A after passing it through BSRand
+T times, modulo
+998244353.
+Constraints
+1≤N≤100
+1≤T≤10
+6
+Sample 1:
+Input
+Output
+2 1
+01
+11
+748683265
+Sample 2:
+Input
+Output
+2 1
+00
+11
+0
+Sample 3:
+Input
+Output
+2 2
+11
+00
+1
+Explanation:
+Test Case
+1: For
+i=1, we notice that the BSRand can select the following combinations of
+(j,k):
+(1,1),(1,2),(2,1),(2,2). Out of these
+4 combinations, we see that only
+2 of them give
+1 as result. Therefore, the probability that
+B
+1
+becomes
+1 is
+2
+1
+.
+For
+i=2, similarly the the probability that
+B
+2
+becomes
+1 is
+2
+1
+.
+Therefore the probability that the final string is
+11 is
+2
+1
+⋅
+2
+1
+=
+4
+1
+=748683265(mod998244353).
+Test Case
+2: It can be proved that there is no way to get string
+11 from
+00.

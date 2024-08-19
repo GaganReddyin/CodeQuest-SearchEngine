@@ -1,0 +1,197 @@
+C. White Sheet
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a white sheet of paper lying on a rectangle table. The sheet is a rectangle with its sides parallel to the sides of the table. If you will take a look from above and assume that the bottom left corner of the table has coordinates
+(0,0)
+, and coordinate axes are left and bottom sides of the table, then the bottom left corner of the white sheet has coordinates
+(
+x
+1
+,
+y
+1
+)
+, and the top right —
+(
+x
+2
+,
+y
+2
+)
+.
+After that two black sheets of paper are placed on the table. Sides of both black sheets are also parallel to the sides of the table. Coordinates of the bottom left corner of the first black sheet are
+(
+x
+3
+,
+y
+3
+)
+, and the top right —
+(
+x
+4
+,
+y
+4
+)
+. Coordinates of the bottom left corner of the second black sheet are
+(
+x
+5
+,
+y
+5
+)
+, and the top right —
+(
+x
+6
+,
+y
+6
+)
+.
+Example of three rectangles.
+Determine if some part of the white sheet can be seen from the above after the two black sheets are placed. The part of the white sheet can be seen if there is at least one point lying not strictly inside the white sheet and strictly outside of both black sheets.
+Input
+The first line of the input contains four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+(0≤
+x
+1
+<
+x
+2
+≤
+10
+6
+,0≤
+y
+1
+<
+y
+2
+≤
+10
+6
+)
+— coordinates of the bottom left and the top right corners of the white sheet.
+The second line of the input contains four integers
+x
+3
+,
+y
+3
+,
+x
+4
+,
+y
+4
+(0≤
+x
+3
+<
+x
+4
+≤
+10
+6
+,0≤
+y
+3
+<
+y
+4
+≤
+10
+6
+)
+— coordinates of the bottom left and the top right corners of the first black sheet.
+The third line of the input contains four integers
+x
+5
+,
+y
+5
+,
+x
+6
+,
+y
+6
+(0≤
+x
+5
+<
+x
+6
+≤
+10
+6
+,0≤
+y
+5
+<
+y
+6
+≤
+10
+6
+)
+— coordinates of the bottom left and the top right corners of the second black sheet.
+The sides of each sheet of paper are parallel (perpendicular) to the coordinate axes.
+Output
+If some part of the white sheet can be seen from the above after the two black sheets are placed, print "YES" (without quotes). Otherwise print "NO".
+Examples
+input
+Copy
+2 2 4 4
+1 1 3 5
+3 1 5 5
+output
+Copy
+NO
+input
+Copy
+3 3 7 5
+0 0 4 6
+0 0 7 4
+output
+Copy
+YES
+input
+Copy
+5 2 10 5
+3 1 7 6
+8 1 11 7
+output
+Copy
+YES
+input
+Copy
+0 0 1000000 1000000
+0 0 499999 1000000
+500000 0 1000000 1000000
+output
+Copy
+YES
+Note
+In the first example the white sheet is fully covered by black sheets.
+In the second example the part of the white sheet can be seen after two black sheets are placed. For example, the point
+(6.5,4.5)
+lies not strictly inside the white sheet and lies strictly outside of both black sheets.

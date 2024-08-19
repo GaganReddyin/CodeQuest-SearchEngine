@@ -1,0 +1,91 @@
+A. Commentary Boxes
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Berland Football Cup starts really soon! Commentators from all over the world come to the event.
+Organizers have already built
+n
+commentary boxes.
+m
+regional delegations will come to the Cup. Every delegation should get the same number of the commentary boxes. If any box is left unoccupied then the delegations will be upset. So each box should be occupied by exactly one delegation.
+If
+n
+is not divisible by
+m
+, it is impossible to distribute the boxes to the delegations at the moment.
+Organizers can build a new commentary box paying
+a
+burles and demolish a commentary box paying
+b
+burles. They can both build and demolish boxes arbitrary number of times (each time paying a corresponding fee). It is allowed to demolish all the existing boxes.
+What is the minimal amount of burles organizers should pay to satisfy all the delegations (i.e. to make the number of the boxes be divisible by
+m
+)?
+Input
+The only line contains four integer numbers
+n
+,
+m
+,
+a
+and
+b
+(
+1≤n,m≤
+10
+12
+,
+1≤a,b≤100
+), where
+n
+is the initial number of the commentary boxes,
+m
+is the number of delegations to come,
+a
+is the fee to build a box and
+b
+is the fee to demolish a box.
+Output
+Output the minimal amount of burles organizers should pay to satisfy all the delegations (i.e. to make the number of the boxes be divisible by
+m
+). It is allowed that the final number of the boxes is equal to
+0
+.
+Examples
+input
+Copy
+9 7 3 8
+output
+Copy
+15
+input
+Copy
+2 7 3 7
+output
+Copy
+14
+input
+Copy
+30 6 17 19
+output
+Copy
+0
+Note
+In the first example organizers can build
+5
+boxes to make the total of
+14
+paying
+3
+burles for the each of them.
+In the second example organizers can demolish
+2
+boxes to make the total of
+0
+paying
+7
+burles for the each of them.
+In the third example organizers are already able to distribute all the boxes equally among the delegations, each one get
+5
+boxes.

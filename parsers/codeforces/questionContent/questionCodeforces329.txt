@@ -1,0 +1,196 @@
+C. Library game
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alessia and Bernardo are discovering the world of competitive programming through the books of their university library.
+The library consists of
+m
+sections numbered from
+1
+to
+m
+. Each section contains only books dedicated to a particular subject and different sections correspond to different subjects. In order to prevent the students from wandering in the library, the university has established a system of passes. Each pass has a length
+y
+associated to it and allows access to an interval of
+y
+consecutive sections in the library. During a visit, the student must choose exactly one book from one of these sections and leave the library. Each pass can be used only once.
+At the moment Alessia and Bernardo have
+n
+passes of lengths
+x
+1
+,
+x
+2
+,…,
+x
+n
+. They have different opinions on the best way to improve: Alessia thinks that it is important to study many different topics, while Bernardo believes that it is important to study deeply at least one topic. So, Alessia wants to use the
+n
+passes to get
+n
+books on distinct topics, while Bernardo would like to get at least two books on the same topic.
+They have reached the following agreement: for each of the following
+n
+days, Alessia will choose a pass of length
+y
+among those which are still available and an interval of
+y
+sections in the library, and Bernardo will go into the library and will take exactly one book from one of those sections.
+Can Bernardo manage to get at least two books on the same subject, or will Alessia be able to avoid it?
+You should decide whether you want to be Alessia or Bernardo, and you have to fulfill the goal of your chosen character. The judge will impersonate the other character. Note that, even if at some moment Bernardo has already taken two books on the same subject, the interaction should go on until the end of the
+n
+days.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤100
+,
+n≤m≤5000
+) — the number of passes and the number of sections.
+The second line contains
+n
+integers
+x
+1
+,
+x
+2
+,…,
+x
+n
+(
+1≤
+x
+i
+≤m
+) — the lengths of the passes available.
+Interaction
+First, you should print a line containing either the string
+Alessia
+or the string
+Bernardo
+— the character that you want to impersonate.
+Then, for each of the
+n
+turns:
+If you are taking the role of Alessia, print a single line consisting of two integers
+y
+and
+a
+(
+1≤a≤m−y+1
+) — you are choosing a pass of length
+y
+and the interval of sections
+[a,a+y−1]
+. Note that at least one pass of length
+y
+must still be available. After this, read a single integer
+b
+(
+a≤b≤a+y−1
+) — the subject of the book selected by Bernardo.
+If you are taking the role of Bernardo, read two integers
+y
+and
+a
+(
+1≤a≤m−y+1
+) — the length of the pass chosen by Alessia and the index of the first section of the interval. It is guaranteed that there is at least one pass of length
+y
+available. Then, print a line consisting of a single integer
+b
+(
+a≤b≤a+y−1
+) — the subject from which you choose to take a book.
+If one of your interactions is malformed, the interactor terminates immediately and your program receives the verdict
+WRONG-ANSWER
+. Otherwise, you will receive the verdict according to the game's criteria described above.
+After printing a line do not forget to end the line and flush the output. Otherwise, you will get the verdict
+TIMELIMIT
+. To flush the output, use:
+fflush(stdout)
+in C;
+fflush(stdout)
+,
+cout << flush
+or
+cout.flush()
+in C++;
+System.out.flush()
+in Java and Kotlin;
+sys.stdout.flush()
+in Python.
+Examples
+input
+Copy
+5 14
+3 7 2 3 10
+output
+Copy
+-
+input
+Copy
+4 10
+4 1 6 4
+output
+Copy
+-
+Note
+In the first sample, it can be shown that Alessia can accomplish her goal. An example of interaction (after reading the input) follows:
+Contestant
+Alessia
+311
+102
+71
+210
+36
+Judge
+13
+9
+4
+10
+7
+Explanation
+The program will act as Alessia
+Choose y=3 and a=11
+Judge selects b=13
+Choose y=10 and a=2
+Judge selects b=9
+Choose y=7 and a=1
+Judge selects b=4
+Choose y=2 and a=10
+Judge selects b=10
+Choose y=3 and a=6
+Judge selects b=7
+The program of the contestant wins because all the books chosen by Bernardo pertain to different topics. The actions performed by the contestant and the judge in this example of interaction may be non-optimal.
+In the second sample, it can be shown that Bernardo can manage to fulfil his goal. An example of interaction (after reading the input) follows:
+Contestant
+Bernardo
+4
+10
+4
+8
+Judge
+41
+110
+63
+45
+Explanation
+The program will act as Bernardo
+Judge chooses y=4 and a=1
+Select b=4
+Judge chooses y=1 and a=10
+Select b=10
+Judge chooses y=6 and a=3
+Select b=4
+Judge chooses y=4 and a=5
+Select b=8
+The program of the contestant wins because Bernardo has selected two books on topic number
+4
+. The actions performed by the contestant and the judge in this example of interaction may be non-optimal.

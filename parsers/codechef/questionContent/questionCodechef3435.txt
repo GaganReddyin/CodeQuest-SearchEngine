@@ -1,0 +1,21 @@
+Forces in the crystal
+Problem
+Suppose that we have a crystalline triangular grid of atoms. Atoms are arranged on a regular grid, and each atom has six neighbors (unless it lies on the boundary of crystal). Each atom has an electric charge of q, and can be polarized in only one of two directions: up or down (the laws of physics in Byteland are somewhat surprising!). If two atoms are neighbors and share the same polarization, then a destructive force against the crystal occurs, whose value is equal to q1*q2. We can choose the polarization for each atom, and we would like to minimize total force working against the crystal, i.e., the sum of values of all the individual forces.
+Input
+First, 1000≤n≤2000, the size of input. Then n lines with n numbers in each follow. In the x-th line, 1≤x≤n, the y-th number, 1≤y≤n, is the charge of the atom with coordinates in the crystal equal to (x,y) if x is odd, (x,y+1/2) otherwise. For any atom at coordinates (x,y), the coordinates of the neighbors are assumed to be the following (as long as they appear in the crystal): (x-1,y-1/2),(x-1,y+1/2),(x,y-1),(x,y+1),(x+1,y-1/2),(x+1,y+1/2). Each charge q is in the range 0.1≤q≤1.
+Output
+For each atom given at input, output 0 or 1 depending on whether the polarization of the atom should be directed up or down.
+Score
+The score of your program is equal to the value of the force acting on the crystal. The program is tested multiple times for different data sets, and the results are averaged.
+Example
+Input:
+3
+1 2 3
+4 5 6
+7 8 9
+Output:
+0 0 0
+0 0 0
+0 0 1
+Score:
+269 = (12+14+23+25+24+36+35+45+47+48+56+58+7*8)

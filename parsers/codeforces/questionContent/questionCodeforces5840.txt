@@ -1,0 +1,22 @@
+D. Number of Parallelograms
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given n points on a plane. All the points are distinct and no three of them lie on the same line. Find the number of parallelograms with the vertices at the given points.
+Input
+The first line of the input contains integer n (1 ≤ n ≤ 2000) — the number of points.
+Each of the next n lines contains two integers (xi, yi) (0 ≤ xi, yi ≤ 109) — the coordinates of the i-th point.
+Output
+Print the only integer c — the number of parallelograms with the vertices at the given points.
+Example
+input
+Copy
+4
+0 1
+1 0
+1 1
+2 0
+output
+Copy
+1

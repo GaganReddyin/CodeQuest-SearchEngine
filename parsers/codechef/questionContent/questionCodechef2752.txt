@@ -1,0 +1,27 @@
+Logan and DIGIT IMMUNE numbers
+Problem
+  Charles, Laura and Logan have been staying in a hotel in Oklahoma City. The Reavers catched up with them, but Charles suffers a seizure and telepathically freezes everyone in the hotel
+Logan must inject Charles with a suppressant. However, to counter this freezing effect, he must find the DIGIT IMMUNE numbers as soon as possible.
+A Digit-Immune number is a number which is not divisible by any of its digits. For example: 23,27,37 etc.
+Now, there also exists an additional condition to these type of numbers.
+A digit-immune number will be called an odd-digit-immune number if it contains only odd digits.
+He has to tackle certain queries.
+In a single query, Logan is given two integers A and B. He has to find Kth odd digit-immune number between A and B (both inclusive).
+If there are less than K odd digit-immune numbers between A and B, print "-1"(without quotes).
+  Input
+First line contains an integer Q denoting the number of queries.
+Each of the next Q lines contains three integers A, B and K respectively.
+  Output
+For each of the Q queries, print the required answer in new line.
+  Constraints
+1 ≤ Q ≤ 50
+1 ≤ A ≤ B ≤ 1018
+1 ≤ K ≤ 1018
+  Example
+Input:
+1
+10 100 4
+Output:
+59
+  Explanation
+Odd-digit-immune numbers in given range are {37,53,57,59,....}.

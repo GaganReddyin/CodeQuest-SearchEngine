@@ -1,0 +1,32 @@
+F. Uniformly Branched Trees
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A tree is a connected graph without cycles.
+Two trees, consisting of n vertices each, are called isomorphic if there exists a permutation p: {1, ..., n} → {1, ..., n} such that the edge (u, v) is present in the first tree if and only if the edge (pu, pv) is present in the second tree.
+Vertex of the tree is called internal if its degree is greater than or equal to two.
+Count the number of different non-isomorphic trees, consisting of n vertices, such that the degree of each internal vertex is exactly d. Print the answer over the given prime modulo mod.
+Input
+The single line of the input contains three integers n, d and mod (1 ≤ n ≤ 1000, 2 ≤ d ≤ 10, 108 ≤ mod ≤ 109)  — the number of vertices in the tree, the degree of internal vertices and the prime modulo.
+Output
+Print the number of trees over the modulo mod.
+Examples
+input
+Copy
+5 2 433416647
+output
+Copy
+1
+input
+Copy
+10 3 409693891
+output
+Copy
+2
+input
+Copy
+65 4 177545087
+output
+Copy
+910726

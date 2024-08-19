@@ -1,0 +1,115 @@
+B. I love AAAB
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call a string good if its length is at least
+2
+and all of its characters are
+A
+except for the last character which is
+B
+. The good strings are
+AB,AAB,AAAB,…
+. Note that
+B
+is not a good string.
+You are given an initially empty string
+s
+1
+.
+You can perform the following operation any number of times:
+Choose any position of
+s
+1
+and insert some good string in that position.
+Given a string
+s
+2
+, can we turn
+s
+1
+into
+s
+2
+after some number of operations?
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single string
+s
+2
+(
+1≤|
+s
+2
+|≤2⋅
+10
+5
+).
+It is guaranteed that
+s
+2
+consists of only the characters
+A
+and
+B
+.
+It is guaranteed that the sum of
+|
+s
+2
+|
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print "YES" (without quotes) if we can turn
+s
+1
+into
+s
+2
+after some number of operations, and "NO" (without quotes) otherwise.
+You can output "YES" and "NO" in any case (for example, strings "yEs", "yes" and "Yes" will be recognized as a positive response).
+Example
+input
+Copy
+4
+AABAB
+ABB
+AAAAAAAAB
+A
+output
+Copy
+YES
+NO
+YES
+NO
+Note
+In the first test case, we transform
+s
+1
+as such:
+∅→AAB→AABAB
+.
+In the third test case, we transform
+s
+1
+as such:
+∅→AAAAAAAAB
+.
+In the second and fourth test case, it can be shown that it is impossible to turn
+s
+1
+into
+s
+2
+.

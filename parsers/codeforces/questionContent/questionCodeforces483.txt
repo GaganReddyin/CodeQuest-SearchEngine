@@ -1,0 +1,161 @@
+D. Count GCD
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two integers
+n
+and
+m
+and an array
+a
+of
+n
+integers. For each
+1≤i≤n
+it holds that
+1≤
+a
+i
+≤m
+.
+Your task is to count the number of different arrays
+b
+of length
+n
+such that:
+1≤
+b
+i
+≤m
+for each
+1≤i≤n
+, and
+gcd(
+b
+1
+,
+b
+2
+,
+b
+3
+,...,
+b
+i
+)=
+a
+i
+for each
+1≤i≤n
+.
+Here
+gcd(
+a
+1
+,
+a
+2
+,…,
+a
+i
+)
+denotes the greatest common divisor (GCD) of integers
+a
+1
+,
+a
+2
+,…,
+a
+i
+.
+Since this number can be too large, print it modulo
+998244353
+.
+Input
+Each test consist of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. The description of test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+1≤n≤2⋅
+10
+5
+,
+1≤m≤
+10
+9
+) — the length of the array
+a
+and the maximum possible value of the element.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤m
+) — the elements of the array
+a
+.
+It is guaranteed that the sum of
+n
+across all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a single integer — the number of different arrays satisfying the conditions above. Since this number can be large, print it modulo
+998244353
+.
+Example
+input
+Copy
+5
+3 5
+4 2 1
+2 1
+1 1
+5 50
+2 3 5 2 3
+4 1000000000
+60 30 1 1
+2 1000000000
+1000000000 2
+output
+Copy
+3
+1
+0
+595458194
+200000000
+Note
+In the first test case, the possible arrays
+b
+are:
+[4,2,1]
+;
+[4,2,3]
+;
+[4,2,5]
+.
+In the second test case, the only array satisfying the demands is
+[1,1]
+.
+In the third test case, it can be proven no such array exists.

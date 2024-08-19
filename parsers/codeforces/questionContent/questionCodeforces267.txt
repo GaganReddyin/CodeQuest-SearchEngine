@@ -1,0 +1,154 @@
+B. Cake Assembly Line
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A cake assembly line in a bakery was once again optimized, and now
+n
+cakes are made at a time! In the last step, each of the
+n
+cakes should be covered with chocolate.
+Consider a side view on the conveyor belt, let it be a number line. The
+i
+-th cake occupies the segment
+[
+a
+i
+−w,
+a
+i
++w]
+on this line, each pair of these segments does not have common points. Above the conveyor, there are
+n
+dispensers, and when a common button is pressed, chocolate from the
+i
+-th dispenser will cover the conveyor segment
+[
+b
+i
+−h,
+b
+i
++h]
+. Each pair of these segments also does not have common points.
+Cakes and dispensers corresponding to the first example.
+The calibration of this conveyor belt part has not yet been performed, so you are to make it. Determine if it's possible to shift the conveyor so that each cake has some chocolate on it, and there is no chocolate outside the cakes. You can assume that the conveyour is long enough, so the cakes never fall. Also note that the button can only be pressed once.
+In the first example we can shift the cakes as shown in the picture.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+5
+). The description of the test cases follows.
+The first line of each test case contains three integers
+n
+,
+w
+, and
+h
+(
+1≤n≤
+10
+5
+;
+1≤w,h≤
+10
+5
+;
+h≤w
+) — the number of cakes and dispensers, as well as the halfwidths of cakes and segments on which the chocolate is dispensed.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — the positions of the cakes centers. It is guaranteed that
+a
+i
++w<
+a
+i+1
+−w
+for all
+i
+.
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+, ...,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+9
+) — the positions of the dispensers. It is guaranteed that
+b
+i
++h<
+b
+i+1
+−h
+for all
+i
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case output "YES", if it's possible to shift the conveyor in such a way that each cake ends up with some chocolate, and no chocolate is outside the cakes, and "NO" otherwise.
+You can output the answer in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Example
+input
+Copy
+4
+3 10 5
+65 95 165
+40 65 145
+5 2 1
+1 6 11 16 21
+4 9 14 19 24
+3 3 2
+13 22 29
+5 16 25
+4 4 1
+27 36 127 136
+35 50 141 144
+output
+Copy
+YES
+YES
+NO
+YES
+Note
+The first example is shown in the figures in the statement.
+In the second example, we can move the conveyor, for example, so that the centers of the cakes are at
+4,9,14,19,24
+.
+In the third example, we can't move the conveyor accordingly.

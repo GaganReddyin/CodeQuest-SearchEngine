@@ -1,0 +1,109 @@
+Team Trees
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a string
+S with length
+N. You should find two non-intersecting substrings of
+S such that the second one is a substring of the first one and the product of these substrings' lengths is the maximum possible. More formally, let's denote a contiguous substring
+S
+l
+,S
+l+1
+,…,S
+r
+by
+S[l,r]; you should find integers
+l
+1
+,
+r
+1
+,
+l
+2
+and
+r
+2
+which satisfy these four criteria:
+1≤l
+1
+≤r
+1
+≤N and
+1≤l
+2
+≤r
+2
+≤N
+r
+2
+<l
+1
+or
+r
+1
+<l
+2
+S[l
+2
+,r
+2
+] is a contiguous substring of
+S[l
+1
+,r
+1
+]
+the product
+P=(r
+2
+−l
+2
++1)⋅(r
+1
+−l
+1
++1) is maximum possible
+Find the maximum value of
+P. It is guaranteed that for the given test data, there is at least one way to choose
+l
+1
+,r
+1
+,l
+2
+,r
+2
+such that the first three criteria are satisfied, i.e. the answer is well-defined.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains a single string
+S with length
+N.
+Output
+Print a single line containing one integer ― the maximum product
+P.
+Constraints
+1≤N≤2⋅10
+6
+S contains only lowercase English letters
+Subtasks
+Subtask #1 (50 points):
+N≤10
+3
+Subtask #2 (50 points): original constraints
+Example Input 1
+5
+abaab
+Example Output 1
+6
+Explanation
+We can choose substrings
+S[1,2] and
+S[3,5].
+Example Input 2
+25
+atcodercodeforcescodechef
+Example Output 2
+76

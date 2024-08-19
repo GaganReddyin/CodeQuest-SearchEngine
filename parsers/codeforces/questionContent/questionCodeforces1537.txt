@@ -1,0 +1,256 @@
+E. Down Below
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+In a certain video game, the player controls a hero characterized by a single integer value: power.
+On the current level, the hero got into a system of
+n
+caves numbered from
+1
+to
+n
+, and
+m
+tunnels between them. Each tunnel connects two distinct caves. Any two caves are connected with at most one tunnel. Any cave can be reached from any other cave by moving via tunnels.
+The hero starts the level in cave
+1
+, and every other cave contains a monster.
+The hero can move between caves via tunnels. If the hero leaves a cave and enters a tunnel, he must finish his movement and arrive at the opposite end of the tunnel.
+The hero can use each tunnel to move in both directions. However, the hero can not use the same tunnel twice in a row. Formally, if the hero has just moved from cave
+i
+to cave
+j
+via a tunnel, he can not head back to cave
+i
+immediately after, but he can head to any other cave connected to cave
+j
+with a tunnel.
+It is known that at least two tunnels come out of every cave, thus, the hero will never find himself in a dead end even considering the above requirement.
+To pass the level, the hero must beat the monsters in all the caves. When the hero enters a cave for the first time, he will have to fight the monster in it. The hero can beat the monster in cave
+i
+if and only if the hero's power is strictly greater than
+a
+i
+. In case of beating the monster, the hero's power increases by
+b
+i
+. If the hero can't beat the monster he's fighting, the game ends and the player loses.
+After the hero beats the monster in cave
+i
+, all subsequent visits to cave
+i
+won't have any consequences: the cave won't have any monsters, and the hero's power won't change either.
+Find the smallest possible power the hero must start the level with to be able to beat all the monsters and pass the level.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100
+). Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+3≤n≤1000
+;
+n≤m≤min(
+n(n−1)
+2
+,2000)
+) — the number of caves and tunnels.
+The second line contains
+n−1
+integers
+a
+2
+,
+a
+3
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — values the hero's power are compared to while fighting monsters in caves
+2,3,…,n
+.
+The third line contains
+n−1
+integers
+b
+2
+,
+b
+3
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+9
+) — increases applied to the hero's power for beating monsters in caves
+2,3,…,n
+.
+Each of the next
+m
+lines contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+;
+u
+i
+≠
+v
+i
+) — the numbers of caves connected with a tunnel.
+No two caves are connected with more than one tunnel. Any cave can be reached from any other cave by moving via tunnels. At least two tunnels come out of every cave.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+1000
+, and the sum of
+m
+over all test cases does not exceed
+2000
+.
+Output
+For each test case print a single integer — the smallest possible power the hero must start the level with to be able to beat all the monsters and pass the level.
+Example
+input
+Copy
+3
+4 4
+11 22 13
+8 7 5
+1 2
+2 3
+3 4
+4 1
+4 4
+11 22 13
+5 7 8
+1 2
+2 3
+3 4
+4 1
+5 7
+10 40 20 30
+7 2 10 5
+1 2
+1 5
+2 3
+2 4
+2 5
+3 4
+4 5
+output
+Copy
+15
+15
+19
+Note
+In the first test case, the hero can pass the level with initial power
+15
+as follows:
+move from cave
+1
+to cave
+2
+: since
+15>11
+, the hero beats the monster, and his power increases to
+15+8=23
+;
+move from cave
+2
+to cave
+3
+: since
+23>22
+, the hero beats the monster, and his power increases to
+23+7=30
+;
+move from cave
+3
+to cave
+4
+: since
+30>13
+, the hero beats the monster, and his power increases to
+30+5=35
+.
+In the second test case, the situation is similar except that the power increases for beating monsters in caves
+2
+and
+4
+are exchanged. The hero can follow a different route,
+1→4→3→2
+, and pass the level with initial power
+15
+.
+In the third test case, the hero can pass the level with initial power
+19
+as follows:
+move from cave
+1
+to cave
+2
+: since
+19>10
+, the hero beats the monster, and his power increases to
+19+7=26
+;
+move from cave
+2
+to cave
+4
+: since
+26>20
+, the hero beats the monster, and his power increases to
+26+10=36
+;
+move from cave
+4
+to cave
+5
+: since
+36>30
+, the hero beats the monster, and his power increases to
+36+5=41
+;
+move from cave
+5
+to cave
+2
+: there is no monster in this cave anymore, nothing happens;
+move from cave
+2
+to cave
+3
+: since
+41>40
+, the hero beats the monster, and his power increases to
+41+2=43
+.

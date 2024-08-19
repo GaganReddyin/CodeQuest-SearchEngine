@@ -1,0 +1,168 @@
+C. Bottom-Tier Reversals
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You have a permutation: an array
+a=[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+of distinct integers from
+1
+to
+n
+. The length of the permutation
+n
+is odd.
+You need to sort the permutation in increasing order.
+In one step, you can choose any prefix of the permutation with an odd length and reverse it. Formally, if
+a=[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+, you can choose any odd integer
+p
+between
+1
+and
+n
+, inclusive, and set
+a
+to
+[
+a
+p
+,
+a
+p−1
+,…,
+a
+1
+,
+a
+p+1
+,
+a
+p+2
+,…,
+a
+n
+]
+.
+Find a way to sort
+a
+using no more than
+5n
+2
+reversals of the above kind, or determine that such a way doesn't exist. The number of reversals doesn't have to be minimized.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤100
+). Description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+3≤n≤2021
+;
+n
+is odd) — the length of the permutation.
+The second line contains
+n
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — the permutation itself.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2021
+.
+Output
+For each test case, if it's impossible to sort the given permutation in at most
+5n
+2
+reversals, print a single integer
+−1
+.
+Otherwise, print an integer
+m
+(
+0≤m≤
+5n
+2
+), denoting the number of reversals in your sequence of steps, followed by
+m
+integers
+p
+i
+(
+1≤
+p
+i
+≤n
+;
+p
+i
+is odd), denoting the lengths of the prefixes of
+a
+to be reversed, in chronological order.
+Note that
+m
+doesn't have to be minimized. If there are multiple answers, print any.
+Example
+input
+Copy
+3
+3
+1 2 3
+5
+3 4 5 2 1
+3
+2 1 3
+output
+Copy
+4
+3 3 3 3
+2
+3 5
+-1
+Note
+In the first test case, the permutation is already sorted. Any even number of reversals of the length
+3
+prefix doesn't change that fact.
+In the second test case, after reversing the prefix of length
+3
+the permutation will change to
+[5,4,3,2,1]
+, and then after reversing the prefix of length
+5
+the permutation will change to
+[1,2,3,4,5]
+.
+In the third test case, it's impossible to sort the permutation.

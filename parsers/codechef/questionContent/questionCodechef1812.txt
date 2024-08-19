@@ -1,0 +1,92 @@
+Gasoline
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N cars (numbered
+1 through
+N) on a circular track with length
+N. For each
+i (
+2≤i≤N), the
+i-th of them is at a distance
+i−1 clockwise from car
+1, i.e. car
+1 needs to travel a distance
+i−1 clockwise to reach car
+i.
+For each valid
+i, you can fill the
+i-th car's tank with up to
+f
+i
+litres of gasoline, with cost
+c
+i
+coins per litre.
+After that, you choose some car, sit in this car and start driving in the clockwise direction. To move one unit of distance in this direction, you need to spend
+1 litre of gasoline. When you pass another car (even if you'd run out of gasoline exactly at that point), you steal all its gasoline. You cannot move if you do not have any gasoline left.
+Your goal is to fill the cars in such a way that you are able to choose an optimal car, travel the clockwise distance
+N and return to the place where you were initially. Under this constraint, you want to pay the least possible number of coins.
+Find the smallest number of coins you need to pay. It is guaranteed that there is a way to travel the distance
+N. It can be proved that in such a case, the smallest number of coins is always an integer.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+f
+1
+,f
+2
+,…,f
+N
+.
+The third line contains
+N space-separated integers
+c
+1
+,c
+2
+,…,c
+N
+.
+Output
+For each test case, print a single line containing one integer ― the smallest possible number of coins you need to pay.
+Constraints
+1≤T≤10
+1≤N≤200,000
+0≤f
+i
+≤10
+9
+for each valid
+i
+0≤c
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (10 points):
+N≤2,000
+Subtask #2 (90 points): original constraints
+Sample 1:
+Input
+Output
+3
+3
+1 1 1
+1 1 1
+3
+3 0 0
+10 0 0
+3
+3 3 3
+3 2 1
+3
+30
+3

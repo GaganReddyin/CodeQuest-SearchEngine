@@ -1,0 +1,206 @@
+C. LuoTianyi and XOR-Tree
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+LuoTianyi gives you a tree with values in its vertices, and the root of the tree is vertex
+1
+.
+In one operation, you can change the value in one vertex to any non-negative integer.
+Now you need to find the minimum number of operations you need to perform to make each path from the root to leaf
+†
+†
+has a bitwise XOR value of zero.
+†
+†
+A leaf in a rooted tree is a vertex that has exactly one neighbor and is not a root.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the number of vertices in the tree.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+), the
+i
+-th number represents the value in the
+i
+-th vertex.
+Next
+n−1
+lines describe the edges of the tree. The
+i
+-th line contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n,
+u
+i
+≠
+v
+i
+) — the vertices connected by an edge of the tree. It's guaranteed that the given edges form a tree.
+Output
+Print a single integer — the minimum number of operations.
+Examples
+input
+Copy
+6
+3 5 7 5 8 4
+1 2
+1 3
+1 4
+3 5
+4 6
+output
+Copy
+3
+input
+Copy
+8
+7 10 7 16 19 9 16 11
+1 5
+4 2
+6 5
+5 2
+7 2
+2 3
+3 8
+output
+Copy
+3
+input
+Copy
+4
+1 2 1 2
+1 2
+2 3
+4 3
+output
+Copy
+0
+input
+Copy
+9
+4 3 6 1 5 5 5 2 7
+1 2
+2 3
+4 1
+4 5
+4 6
+4 7
+8 1
+8 9
+output
+Copy
+2
+Note
+The tree in the first example:
+If we change the value in the vertex
+2
+to
+3
+, the value in the vertex
+5
+to
+4
+, and the value in the vertex
+6
+to
+6
+, then the tree will be ok.
+The bitwise XOR from the root to the leaf
+2
+will be
+3⊕3=0
+.
+The bitwise XOR from the root to the leaf
+5
+will be
+4⊕7⊕3=0
+.
+The bitwise XOR from the root to the leaf
+6
+will be
+6⊕5⊕3=0
+.
+The tree in the second example:
+If we change the value in the vertex
+2
+to
+4
+, the value in the vertex
+3
+to
+27
+, and the value in the vertex
+6
+to
+20
+, then the tree will be ok.
+The bitwise XOR from the root to the leaf
+6
+will be
+20⊕19⊕7=0
+.
+The bitwise XOR from the root to the leaf
+8
+will be
+11⊕27⊕4⊕19⊕7=0
+.
+The bitwise XOR from the root to the leaf
+4
+will be
+16⊕4⊕19⊕7=0
+.
+The bitwise XOR from the root to the leaf
+7
+will be
+16⊕4⊕19⊕7=0
+.
+In the third example, the only leaf is the vertex
+4
+and the bitwise XOR on the path to it is
+1⊕2⊕1⊕2=0
+, so we don't need to change values.
+In the fourth example, we can change the value in the vertex
+1
+to
+5
+, and the value in the vertex
+4
+to
+0
+.
+Here
+⊕
+denotes the bitwise XOR operation.

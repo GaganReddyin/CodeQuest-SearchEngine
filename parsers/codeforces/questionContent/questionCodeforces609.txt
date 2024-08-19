@@ -1,0 +1,203 @@
+D. Prefixes and Suffixes
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have two strings
+s
+1
+and
+s
+2
+of length
+n
+, consisting of lowercase English letters. You can perform the following operation any (possibly zero) number of times:
+Choose a positive integer
+1≤k≤n
+.
+Swap the prefix of the string
+s
+1
+and the suffix of the string
+s
+2
+of length
+k
+.
+Is it possible to make these two strings equal by doing described operations?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Then the test cases follow.
+Each test case consists of three lines.
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the strings
+s
+1
+and
+s
+2
+.
+The second line contains the string
+s
+1
+of length
+n
+, consisting of lowercase English letters.
+The third line contains the string
+s
+2
+of length
+n
+, consisting of lowercase English letters.
+It is guaranteed that the sum of
+n
+for all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print "YES" if it is possible to make the strings equal, and "NO" otherwise.
+Example
+input
+Copy
+7
+3
+cbc
+aba
+5
+abcaa
+cbabb
+5
+abcaa
+cbabz
+1
+a
+a
+1
+a
+b
+6
+abadaa
+adaaba
+8
+abcabdaa
+adabcaba
+output
+Copy
+YES
+YES
+NO
+YES
+NO
+NO
+YES
+Note
+In the first test case:
+Initially
+s
+1
+=cbc
+,
+s
+2
+=aba
+.
+Operation with
+k=1
+, after the operation
+s
+1
+=abc
+,
+s
+2
+=abc
+.
+In the second test case:
+Initially
+s
+1
+=abcaa
+,
+s
+2
+=cbabb
+.
+Operation with
+k=2
+, after the operation
+s
+1
+=bbcaa
+,
+s
+2
+=cbaab
+.
+Operation with
+k=3
+, after the operation
+s
+1
+=aabaa
+,
+s
+2
+=cbbbc
+.
+Operation with
+k=1
+, after the operation
+s
+1
+=cabaa
+,
+s
+2
+=cbbba
+.
+Operation with
+k=2
+, after the operation
+s
+1
+=babaa
+,
+s
+2
+=cbbca
+.
+Operation with
+k=1
+, after the operation
+s
+1
+=aabaa
+,
+s
+2
+=cbbcb
+.
+Operation with
+k=2
+, after the operation
+s
+1
+=cbbaa
+,
+s
+2
+=cbbaa
+.
+In the third test case, it's impossible to make strings equal.

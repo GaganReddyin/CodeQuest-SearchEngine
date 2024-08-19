@@ -1,0 +1,64 @@
+ XOR maximum-minimum matrices
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Chef has an integer matrix
+A of
+N rows and
+M columns, and an integer
+X.
+A submatrix is defined as a rectangle of values inside
+A. More formally, given two intervals
+[l,r] and
+[L,R], the corresponding submatrix consists of the values
+a
+ij
+such that
+l≤i≤r and
+L≤j≤R. Two submatrices are considered different if one of the ranges
+[l,r] or
+[L,R] differs.
+Chef uses
+f(X) to denote the total number of submatrices
+B in which
+max(B)⊕min(B)=X,
+where
+⊕ denotes bitwise XOR,
+max(B) denotes the maximum integer in
+B, and
+min(B) denotes the minimum integer in
+B.
+Chef does not know in which order he would like to put the rows. He wishes to know the value of
+f(X) for every permutation of rows, but since the amount of them can be too large, he wants to know the sum of the answers over all permutations.
+###Input
+The first line contains three space-separated integers
+N,
+M and
+X.
+Next
+N lines contains
+M integers each: the
+j-th integer of the
+i-th line
+A
+ij
+.
+###Output
+Output the sum of
+f(X) over all permutations of the rows of
+A.
+###Constraints
+1≤N≤8
+1≤M≤10
+5
+0≤X,A
+ij
+≤10
+9
+Sample 1:
+Input
+Output
+3 3 3
+1 2 1
+0 3 0
+2 1 2
+120

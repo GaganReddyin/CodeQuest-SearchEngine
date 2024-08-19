@@ -1,0 +1,94 @@
+C. Powers Of Two
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A positive integer
+x
+is called a power of two if it can be represented as
+x=
+2
+y
+, where
+y
+is a non-negative integer. So, the powers of two are
+1,2,4,8,16,…
+.
+You are given two positive integers
+n
+and
+k
+. Your task is to represent
+n
+as the sum of exactly
+k
+powers of two.
+Input
+The only line of the input contains two integers
+n
+and
+k
+(
+1≤n≤
+10
+9
+,
+1≤k≤2⋅
+10
+5
+).
+Output
+If it is impossible to represent
+n
+as the sum of
+k
+powers of two, print NO.
+Otherwise, print YES, and then print
+k
+positive integers
+b
+1
+,
+b
+2
+,…,
+b
+k
+such that each of
+b
+i
+is a power of two, and
+∑
+i=1
+k
+b
+i
+=n
+. If there are multiple answers, you may print any of them.
+Examples
+input
+Copy
+9 4
+output
+Copy
+YES
+1 2 2 4 
+input
+Copy
+8 1
+output
+Copy
+YES
+8 
+input
+Copy
+5 1
+output
+Copy
+NO
+input
+Copy
+3 7
+output
+Copy
+NO

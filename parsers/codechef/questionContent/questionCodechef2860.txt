@@ -1,0 +1,43 @@
+Prefix borders
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Let's define a border substring of a string as a non-empty substring that's both a suffix and a prefix of this string.
+You are given a string S with length N and Q queries. In each query, you are given the p-th prefix of S (let's denote it by S1..p) and an integer k. Consider the k-th shortest border of S1..p (if it exists). Compute the length of this border substring or determine that it doesn't exist.
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains two space-separated integers N and Q.
+The second line contains a single string S.
+Each of the following Q lines contains two space-separated integers p and k describing one query.
+Output
+For each test case, print Q lines. For each i (1 ≤ i ≤ Q), the i-th of these lines should contain a single integer — the answer to the i-th query (the length of the k-th shortest border or -1 if it doesn't exist).
+Constraints
+1 ≤ T ≤ 100
+1 ≤ N, Q ≤ 200,000
+|S| = N
+1 ≤ sum of N over all test cases ≤ 200,000
+1 ≤ sum of Q over all test cases ≤ 200,000
+1 ≤ p, k ≤ N
+S contains only lowercase English letters
+Subtasks
+Subtask #1 (20 points):
+Q, N ≤ 100
+sum of N over all test cases ≤ 500
+sum of Q over all test cases ≤ 500
+Subtask #2 (20 points):
+N ≤ 100
+sum of N over all test cases ≤ 500
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+1
+5 4
+abcab
+2 1
+5 1
+5 2
+5 3
+2
+2
+5
+-1

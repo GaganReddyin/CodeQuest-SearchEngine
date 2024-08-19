@@ -1,0 +1,54 @@
+Function Function
+Problem
+Consider a bijective function $ƒ$ $$ f: {1, 2, 3, \dots, n} \rightarrow {1, 2, 3, \dots, n} $$
+We have $M$ different color. We have to associate a color to every $x \in {1, 2, 3, ... n}$ with one of the color such that $x$ and$ƒ(ƒ(x))$ has same color .
+Let G be an array, where G[x] = pair(ƒ[x], color[x]).
+Find the number of distinct arrays G modulo 1000000007.
+Input Format:
+First and the only line of the input, contains 2 space seperated intergers N and M.
+Output Format:
+Print single integer, i.e, number of distinct arrays G modulo 1000000007.
+Constraints:
+1<= N <= 2000
+1<= M <= 2000
+Sample Input 1:
+2 2
+Sample Output 1:
+8
+Explanation:
+Case 1:
+G[1] = (1, 1)
+G[2] = (2, 1)
+
+Case 2:
+G[1] = (1, 2)
+G[2] = (2, 2)
+
+Case 3:
+G[1] = (1, 1)
+G[2] = (2, 2)
+
+Case 4:
+G[1] = (1, 2)
+G[2] = (2, 1)
+
+Case 5:
+G[1] = (2, 1)
+G[2] = (1, 1)
+
+Case 6:
+G[1] = (2, 2)
+G[2] = (1, 2)
+
+Case 7:
+G[1] = (2, 1)
+G[2] = (1, 2)
+
+Case 8:
+G[1] = (2, 2)
+G[2] = (1, 1)
+
+Sample Input 2:
+3 2
+Sample Output 2:
+36

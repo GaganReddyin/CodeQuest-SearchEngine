@@ -1,0 +1,172 @@
+E. Maximums and Minimums
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of positive integers.
+Find the number of pairs of indices
+(l,r)
+, where
+1≤l≤r≤n
+, that pass the check. The check is performed in the following manner:
+The minimum and maximum numbers are found among
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+.
+The check is passed if the maximum number is divisible by the minimum number.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤10
+) — the number of test cases. Then the test cases follow.
+Each test case consists of two lines.
+The first line contains a single integer
+n
+(
+1≤n≤5⋅
+10
+5
+) — the size of the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+5⋅
+10
+5
+.
+Output
+For each test case, print a single integer — the number of pairs of indices that pass the check.
+Example
+input
+Copy
+6
+1
+1
+2
+2 4
+2
+2 3
+4
+2 4 7 14
+7
+16 5 18 7 7 12 14
+6
+16 14 2 6 16 2
+output
+Copy
+1
+3
+2
+7
+10
+19
+Note
+Below
+x∣y
+denotes that
+y
+is divisible by
+x
+.
+In the first test case, there is one pair
+(1,1)
+, the maximum for this pair is
+1
+, the minimum is also
+1
+,
+1∣1
+, so the check is passed, and the answer is
+1
+.
+In the second test case, there are
+3
+segments:
+(1,1)
+: the maximum is
+2
+, the minimum is
+2
+,
+2∣2
+, so the check is passed.
+(1,2)
+: the maximum is
+4
+, the minimum is
+2
+,
+2∣4
+, so the check is passed.
+(2,2)
+: the maximum is
+4
+, the minimum is
+4
+,
+4∣4
+, so the check is passed.
+In the third test case, there are
+3
+segments:
+(1,1)
+: the maximum is
+2
+, the minimum is
+2
+,
+2∣2
+, so the check is passed.
+(1,2)
+: the maximum is
+3
+, the minimum is
+2
+,
+3
+isn't divisible by
+2
+, so the check is failed.
+(2,2)
+: the maximum is
+3
+, the minimum is
+3
+,
+3∣3
+, so the check is passed.

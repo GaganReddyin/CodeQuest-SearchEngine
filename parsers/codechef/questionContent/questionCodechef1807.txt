@@ -1,0 +1,59 @@
+Palindromic Binary Numbers
+Problem
+We call a non-negative number
+x good if its binary representation is palindromic. For example,
+107 is good because its binary representation is
+1101011 which is palindromic while
+10 is not good because its binary representation is
+1010 which is not palindromic.
+Recall that, a string is said to be palindromic if it reads the same backward as forward.
+You are given a number
+n. You have to express
+n as a sum of at most
+12 good numbers. If there exist multiple answers, print any one of them.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each testcase contains a single integer
+n.
+Output Format
+For each testcase, print a single integer
+m (
+1≤m≤12), denoting the number of good numbers. In the next line, print a sequence of
+m good numbers whose sum is equal to
+n. If there are multiple such sequences, print any of them.
+Constraints
+1≤T≤1000
+1≤n≤1000
+Sample 1:
+Input
+Output
+2
+24
+4
+2
+21 3
+4
+1 1 1 1
+Explanation:
+Test case
+1:
+21 is good because
+21=(10101)
+2
+which is palindromic.
+3 is good because
+3=(11)
+2
+which is palindromic.
+Test case
+2:
+1 is good because
+1=(1)
+2
+which is palindromic.
+Here
+()
+2
+denotes binary representation of the number.

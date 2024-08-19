@@ -1,0 +1,114 @@
+B. Playing with GCD
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer array
+a
+of length
+n
+.
+Does there exist an array
+b
+consisting of
+n+1
+positive integers such that
+a
+i
+=gcd(
+b
+i
+,
+b
+i+1
+)
+for all
+i
+(
+1≤i≤n
+)?
+Note that
+gcd(x,y)
+denotes the greatest common divisor (GCD) of integers
+x
+and
+y
+.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+5
+). Description of the test cases follows.
+The first line of each test case contains an integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the array
+a
+.
+The second line of each test case contains
+n
+space-separated integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+representing the array
+a
+(
+1≤
+a
+i
+≤
+10
+4
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, output "YES" if such
+b
+exists, otherwise output "NO". You can print each letter in any case (upper or lower).
+Example
+input
+Copy
+4
+1
+343
+2
+4 2
+3
+4 2 4
+4
+1 1 1 1
+output
+Copy
+YES
+YES
+NO
+YES
+Note
+In the first test case, we can take
+b=[343,343]
+.
+In the second test case, one possibility for
+b
+is
+b=[12,8,6]
+.
+In the third test case, it can be proved that there does not exist any array
+b
+that fulfills all the conditions.

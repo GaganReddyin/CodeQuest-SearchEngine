@@ -1,0 +1,131 @@
+Xor X,Get MAX
+Problem
+This is an interactive problem.
+There’s a hidden array
+A consisting of
+N distinct non-negative integers.
+You are allowed to interact with the judge using queries. Each query is of the form:
+X
+Y: Given two non-negative integers
+X and
+Y
+(1≤X≤N,0≤Y<2
+30
+) as the query, the hidden array
+A is updated by setting
+A
+X
+:=A
+X
+⊕Y, where
+⊕ denotes the bitwise XOR operation.
+After each query, the judge will return the maximum value of the updated array.
+Your task is to make all the elements of the array equal to
+0 using at most
+10
+5
+operations.
+Interaction
+The first line of input will contain a single integer
+N, the size of the array
+A.
+To make a query, you should print a line containing two space-separated integers
+X and
+Y
+(1≤X≤N,0≤Y<2
+30
+). Then, you must read a line containing a single non-negative integer, denoting the maximum element of the updated array. In case the query is invalid or you asked more than
+10
+5
+queries, the judge will return
+−1.
+To end the interaction, once all the elements of the array are
+0, you should print a single line containing an integer
+0. Then, you must read a line containing a single integer:
+1, if your output is correct, or
+−1 otherwise.
+Note
+After printing a query do not forget to output end of line and flush the output. To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python.
+After you print
+0, do not forget to read a line containing a single integer:
+1, if your output is correct, or
+−1 otherwise.
+If the test status is Wrong Answer, either your answer is incorrect or you asked more than
+10
+5
+queries.
+If the test status is Judge Error, either you have't flushed the output, or your I/O is invalid.
+Constraints
+1≤N≤3000
+0≤A
+i
+<2
+30
+Elements of array A are distinct initially.
+Example
+You                 Grader
+                    3
+1 0
+                    3
+3 7 
+                    4
+2 2
+                    4
+3 4
+                    1
+1 1 
+                    0
+0
+                    1
+Explanation
+Here,
+A=[1,2,3] initially.
+Operation
+1:
+A
+1
+:=A
+1
+⊕0,
+A=[1,2,3]. The maximum value of updated array is
+3.
+Operation
+2:
+A
+3
+:=A
+3
+⊕7,
+A=[1,2,4]. The maximum value of updated array is
+4.
+Operation
+3:
+A
+2
+:=A
+2
+⊕2,
+A=[1,0,4]. The maximum value of updated array is
+4.
+Operation
+4:
+A
+3
+:=A
+3
+⊕4,
+A=[1,0,0]. The maximum value of updated array is
+1.
+Operation
+5:
+A
+1
+:=A
+1
+⊕1,
+A=[0,0,0]. The maximum value of updated array is
+0.

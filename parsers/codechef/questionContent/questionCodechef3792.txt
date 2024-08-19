@@ -1,0 +1,32 @@
+So Straight
+Problem
+Given 2 arrays A, B (1-indexed) each having length N. There are 2 types of queries. You have to handle Q of them.
+Type 1 : 1 L
+Add the subarray B1, B2, B3 ... BN-L+1 to AL, AL+1, AL+2 ... AN respectively.
+i.e. Add B1 to AL, B2 to AL+1 ... BN-L+1 to AN.
+
+Type 2 : 2 L R
+Print the sum AL + AL+1 + AL+2 + ... AR
+Input Format:
+First line of the input contains two space separated integer denoting N, Q respectively.
+Next 2 lines of the input, each containing N space separating integers, denotes array A and array B respectively. Next Q lines describes a query. Each query starts with a integer t, denoting the type of query and contains one or two integer depending on type of query as described in the problem statement.
+Output Format:
+For each query of type 2 print the answer.
+Constraints:
+1<= N <=200000
+1<= Q <=200000
+1<= Ai <=100000
+1<= Bi <=100000
+1<= t <=2
+For type 1 query, 1 <= L <= N
+For type 2 query, 1 <= L <= R <= N
+Sample Input:
+4 3
+1 2 1 4
+2 1 2 3
+1 2
+2 1 1
+2 2 4
+Sample Output:
+1
+12

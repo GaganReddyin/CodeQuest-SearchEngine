@@ -1,0 +1,57 @@
+C. Black Widow
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Natalia Romanova is trying to test something on the new gun S.H.I.E.L.D gave her. In order to determine the result of the test, she needs to find the number of answers to a certain equation. The equation is of form:
+Where represents logical OR and represents logical exclusive OR (XOR), and vi, j are some boolean variables or their negations. Natalia calls the left side of the equation a XNF formula. Each statement in brackets is called a clause, and vi, j are called literals.
+In the equation Natalia has, the left side is actually a 2-XNF-2 containing variables x1, x2, ..., xm and their negations. An XNF formula is 2-XNF-2 if:
+For each 1 ≤ i ≤ n, ki ≤ 2, i.e. the size of each clause doesn't exceed two.
+Each variable occurs in the formula at most two times (with negation and without negation in total). Please note that it's possible that a variable occurs twice but its negation doesn't occur in any clause (or vice versa).
+Natalia is given a formula of m variables, consisting of n clauses. Please, make sure to check the samples in order to properly understand how the formula looks like.
+Natalia is more into fight than theory, so she asked you to tell her the number of answers to this equation. More precisely, you need to find the number of ways to set x1, ..., xm with true and false (out of total of 2m ways) so that the equation is satisfied. Since this number can be extremely large, you need to print the answer modulo 109 + 7.
+Please, note that some variable may appear twice in one clause, or not appear in the equation at all (but still, setting it to false or true gives different ways to set variables).
+Input
+The first line of input contains two integers n and m (1 ≤ n, m ≤ 100 000) — the number of clauses and the number of variables respectively.
+The next n lines contain the formula. The i-th of them starts with an integer ki — the number of literals in the i-th clause. It is followed by ki non-zero integers ai, 1, ..., ai, ki. If ai, j > 0 then vi, j is xai, j otherwise it's negation of x - ai, j (1 ≤ ki ≤ 2,  - m ≤ ai, j ≤ m, ai, j ≠ 0).
+Output
+Print the answer modulo 1 000 000 007 (109 + 7) in one line.
+Examples
+input
+Copy
+6 7
+2 4 -2
+2 6 3
+2 -7 1
+2 -5 1
+2 3 6
+2 -2 -5
+output
+Copy
+48
+input
+Copy
+8 10
+1 -5
+2 4 -6
+2 -2 -6
+2 -7 9
+2 10 -1
+2 3 -1
+2 -8 9
+2 5 8
+output
+Copy
+544
+input
+Copy
+2 3
+2 1 1
+2 -3 3
+output
+Copy
+4
+Note
+The equation in the first sample is:
+The equation in the second sample is:
+The equation in the third sample is:

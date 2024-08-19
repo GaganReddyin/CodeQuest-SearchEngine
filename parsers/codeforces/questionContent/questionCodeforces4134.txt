@@ -1,0 +1,184 @@
+H. Self-exploration
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Being bored of exploring the Moon over and over again Wall-B decided to explore something he is made of — binary numbers. He took a binary number and decided to count how many times different substrings of length two appeared. He stored those values in
+c
+00
+,
+c
+01
+,
+c
+10
+and
+c
+11
+, representing how many times substrings 00, 01, 10 and 11 appear in the number respectively. For example:
+10111100→
+c
+00
+=1, 
+c
+01
+=1, 
+c
+10
+=2, 
+c
+11
+=3
+10000→
+c
+00
+=3, 
+c
+01
+=0, 
+c
+10
+=1, 
+c
+11
+=0
+10101001→
+c
+00
+=1, 
+c
+01
+=3, 
+c
+10
+=3, 
+c
+11
+=0
+1→
+c
+00
+=0, 
+c
+01
+=0, 
+c
+10
+=0, 
+c
+11
+=0
+Wall-B noticed that there can be multiple binary numbers satisfying the same
+c
+00
+,
+c
+01
+,
+c
+10
+and
+c
+11
+constraints. Because of that he wanted to count how many binary numbers satisfy the constraints
+c
+xy
+given the interval
+[A,B]
+. Unfortunately, his processing power wasn't strong enough to handle large intervals he was curious about. Can you help him? Since this number can be large print it modulo
+10
+9
++7
+.
+Input
+First two lines contain two positive binary numbers
+A
+and
+B
+(
+1≤A≤B<
+2
+100000
+), representing the start and the end of the interval respectively. Binary numbers
+A
+and
+B
+have no leading zeroes.
+Next four lines contain decimal numbers
+c
+00
+,
+c
+01
+,
+c
+10
+and
+c
+11
+(
+0≤
+c
+00
+,
+c
+01
+,
+c
+10
+,
+c
+11
+≤100000
+) representing the count of two-digit substrings 00, 01, 10 and 11 respectively.
+Output
+Output one integer number representing how many binary numbers in the interval
+[A,B]
+satisfy the constraints mod
+10
+9
++7
+.
+Examples
+input
+Copy
+10
+1001
+0
+0
+1
+1
+output
+Copy
+1
+input
+Copy
+10
+10001
+1
+2
+3
+4
+output
+Copy
+0
+Note
+Example 1: The binary numbers in the interval
+[10,1001]
+are
+10,11,100,101,110,111,1000,1001
+. Only number 110 satisfies the constraints:
+c
+00
+=0,
+c
+01
+=0,
+c
+10
+=1,
+c
+11
+=1
+.
+Example 2: No number in the interval satisfies the constraints

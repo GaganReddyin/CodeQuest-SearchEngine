@@ -1,0 +1,34 @@
+F. SUM and REPLACE
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let D(x) be the number of positive divisors of a positive integer x. For example, D(2) = 2 (2 is divisible by 1 and 2), D(6) = 4 (6 is divisible by 1, 2, 3 and 6).
+You are given an array a of n integers. You have to process two types of queries:
+REPLACE l r — for every replace ai with D(ai);
+SUM l r — calculate .
+Print the answer for each SUM query.
+Input
+The first line contains two integers n and m (1 ≤ n, m ≤ 3·105) — the number of elements in the array and the number of queries to process, respectively.
+The second line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 106) — the elements of the array.
+Then m lines follow, each containing 3 integers ti, li, ri denoting i-th query. If ti = 1, then i-th query is REPLACE li ri, otherwise it's SUM li ri (1 ≤ ti ≤ 2, 1 ≤ li ≤ ri ≤ n).
+There is at least one SUM query.
+Output
+For each SUM query print the answer to it.
+Example
+input
+Copy
+7 6
+6 4 1 10 3 2 4
+2 1 7
+2 4 5
+1 3 5
+2 4 4
+1 5 7
+2 1 7
+output
+Copy
+30
+13
+4
+22

@@ -1,0 +1,126 @@
+Manhattan Rectangle
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is an interactive problem.
+Chef has a secret rectangle. The sides of this rectangle are aligned with Cartesian axes
+x and
+y. Let's denote the coordinates of the lower left corner of the rectangle by
+(x
+l
+,y
+l
+) and the coordinates of the upper right corner by
+(x
+u
+,y
+u
+); it is guaranteed that
+x
+l
+,y
+l
+,x
+u
+,y
+u
+are non-negative integers. Your task is to find these coordinates.
+You may ask Chef at most
+Q queries (providing your answer does not count as a query). In each query, you give Chef a point with integer coordinates
+(x
+0
+,y
+0
+). Chef responds with the Manhattan distance of this point to the closest point in the secret rectangle, i.e. if we denote the set of points in the rectangle by
+S={(p,q)∣p,q∈Zandx
+l
+≤p≤x
+u
+andy
+l
+≤q≤y
+u
+}, then Chef answers with
+min
+(p,q)∈S
+∣p−x
+0
+∣+∣q−y
+0
+∣.
+Interaction
+First, your program should read a line containing a single integer ― the number of test cases
+T. The description of interaction for
+T test cases follows.
+For each test case, you may ask queries. To ask a query, print a line containing the character 'Q', a space and two space-separated integers
+x
+0
+and
+y
+0
+(
+0≤x
+0
+,y
+0
+≤10
+9
+). Then, you should read a line containing a single integer. If this integer is non-negative, it denotes the answer to your query. Otherwise, it means that you exceeded the limit on the number of queries, the coordinates you printed are invalid or some other error occured.
+When you have found the secret rectangle, you should print a line containing the character 'A', a space and four space-separated integers
+x
+l
+,
+y
+l
+,
+x
+u
+and
+y
+u
+. Then, you should read a single line containing one integer, which is
+1 if your answer was correct or negative if it was wrong.
+Note that when you read a negative integer, you should immediately terminate your program to receive a Wrong Answer verdict; otherwise, you may receive any verdict. Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤500
+0≤x
+l
+≤x
+u
+≤10
+9
+0≤y
+l
+≤y
+u
+≤10
+9
+Subtasks
+Subtask #1 (10 points):
+T≤10
+x
+u
+,y
+u
+≤100
+Q=12345
+Subtask #2 (40 points):
+Q=70
+Subtask #3 (50 points):
+Q=7
+Example
+You                 Grader
+                    1
+Q 1 2
+                    0
+Q 3 4
+                    0
+Q 0 1
+                    2
+Q 4 5
+                    2
+A 1 2 3 4
+                    1
+Explanation
+Example case 1: From answers to the first two queries, it is clear that the lower left and upper right corner of the rectangle lie at points
+(1,2) and
+(3,4) respectively.

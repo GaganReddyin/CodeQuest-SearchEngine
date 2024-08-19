@@ -1,0 +1,119 @@
+F. Comfortably Numb
+time limit per test8 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+non-negative integers.
+The numbness of a subarray
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+(for arbitrary
+l≤r
+) is defined as
+max(
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+)⊕(
+a
+l
+⊕
+a
+l+1
+⊕…⊕
+a
+r
+),
+(
+)
+⊕
+(
+⊕
+⊕
+⊕
+)
+where
+⊕
+denotes the bitwise XOR operation.
+Find the maximum numbness over all subarrays.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤1000
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+).
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print one integer — the maximum numbness over all subarrays of the given array.
+Example
+input
+Copy
+2
+5
+1 2 3 4 5
+3
+10 47 52
+output
+Copy
+7
+47
+Note
+For the first test case, for the subarray
+[3,4,5]
+, its maximum value is
+5
+. Hence, its numbness is
+3⊕4⊕5⊕5
+=
+7
+. This is the maximum possible numbness in this array.
+In the second test case the subarray
+[47,52]
+provides the maximum numbness.

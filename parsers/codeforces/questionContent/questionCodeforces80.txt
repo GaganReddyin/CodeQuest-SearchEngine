@@ -1,0 +1,135 @@
+A. Politics
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In a debate club with
+n
+members, including yourself (member
+1
+), there are
+k
+opinions to be discussed in sequence. During each discussion, members express their agreement or disagreement with the opinion. Let's define
+Y
+as the number of members who agree and
+N
+as the number of members who disagree. After each discussion, members leave the club based on the following criteria:
+If more members agree than disagree (
+Y>N
+), all members who disagreed leave the club.
+If more members disagree than agree (
+Y<N
+), all members who agreed leave the club.
+If there is a tie (
+Y=N
+), all members leave the club.
+As the club president, your goal is to stay in the club and maximize the number of members remaining after the meeting. You have access to each member's stance on all
+k
+opinions before the meeting starts, and you can expel any number of members (excluding yourself) before the meeting begins.
+Determine the maximum number of members, including yourself, who can remain in the club after the meeting. You don't need to provide the specific expulsion strategy but only the maximum number of members that can stay. Ensure that you remain in the club after the meeting as well.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤1000
+). Description of the test cases follows.
+The first line of each test case contains two positive integers
+n
+and
+k
+(
+1≤n,k≤100
+) — the number of members and the number of discussions.
+The
+i
+-th of the following
+n
+lines contains a string
+t
+i
+of length
+k
+. The
+j
+-th character in the string
+t
+i
+indicates whether the
+i
+-th member agrees or disagrees with the
+j
+-th opinion if they are present during that discussion. A "+" symbol means the member agrees, while a "-" symbol means the member disagrees.
+It is guaranteed that the sum of
+n⋅k
+over all test cases does not exceed
+5⋅
+10
+4
+.
+Output
+For each test case, output the maximum number of members, including yourself, who can remain in the club after the meeting.
+Example
+input
+Copy
+5
+2 2
+++
++-
+1 3
++-+
+4 1
++
+-
+-
++
+5 4
+++++
++--+
+++-+
++-++
+++++
+4 2
+++
+--
+--
+-+
+output
+Copy
+1
+1
+2
+2
+1
+Note
+For convenience, we will analyze the examples based on who actually attended the meeting (i. e. was not expelled) rather than who was expelled.
+Example 1:
+Only the first member could have attended the meeting, otherwise both members would have left after the second opinion is discussed.
+Example 2:
+There is only a single member that attends the meeting and stays till the end.
+Example 3:
+The club has
+4
+members and only one opinion will be discussed during the meeting. Let's analyze the possible outcomes based on the participants in the meeting:
+If only the first member attends, they'll be the only one left after the meeting.
+If the first member attends with the second or third member, they will be a tie in the discussion, making them both leave.
+If the first member attends with the second and third members, the first member will be in the minority and will leave after the discussion, which contradicts the statement.
+If the first and fourth members attend, they will agree during the discussion and both remain till the end.
+If the first, second, and fourth members attend, the second member will be in the minority during the discussion, and only the first and fourth members will remain at the end. The same happens if the second member is replaced by the third member.
+If all four members attend, there will be a tie during the discussion, making everyone leave.
+The maximum number of members remaining after the meeting is
+2
+.
+Example 4:
+The club has
+5
+members and
+4
+opinions will be discussed during the meeting.
+One way to achieve the maximum number of members is if only the first, third, and fifth members attend the meeting. In this case, they all agree during the first two discussions, after which the third member is in the minority during the third discussion. Then, the first and fifth members agree in the last discussion, and those two members stay till the end of the meeting.
+Example 5:
+The club has
+4
+members and
+2
+opinions will be discussed.
+If the first three members attend the meeting, the first member will be in the minority during the first discussion and will leave the club. After that, the second and third members will both disagree with the second opinion, and they both will stay till the end of the meeting. In this way, there will be 2 members left after the meeting, but it is an invalid outcome, as it forces the first member to leave. Therefore, the maximum number of 1 member is achieved if only the first member attends the meeting.

@@ -1,0 +1,43 @@
+Misha and Nice Sets
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Misha calls a non-empty set of positive integers nice if it has the following properties:
+Each element of the set is between
+l and
+r (inclusive).
+The greatest positive integer which divides each element of the set is exactly
+g.
+Misha likes nice sets, so she wants to find the size of the largest nice set. Help her solve the problem.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+l,
+r and
+g.
+Output
+For each test case, print a single line containing one integer — the maximum number of elements in a nice set, or
+0 if no nice set exists.
+Constraints
+1≤T≤200
+1≤g≤10
+18
+1≤l≤r≤10
+18
+Sample 1:
+Input
+Output
+2
+5 15 4
+15 20 35
+2
+0
+Explanation:
+Example case 1: Misha can choose the set
+{8,12}.
+Example case 2: All numbers in the range
+[l,r] are smaller than
+35, so there is no way to choose a non-empty subset of these numbers where each element is divisible by
+35 and the answer is
+0.

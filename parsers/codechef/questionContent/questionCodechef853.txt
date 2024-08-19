@@ -1,0 +1,58 @@
+Difference Matrix
+Problem
+You are given an integer
+N. You need to find an
+N×N matrix such that:
+Each element of the matrix is an integer from
+1 to
+N
+2
+;
+All elements of the matrix are unique;
+The absolute difference between elements in neighbouring cells is strictly greater than
+1.
+It can be shown that there is at least one matrix that satisfies the given conditions. If multiple matrices satisfy the given conditions, print any.
+Note that two cells are considered to be neighbours if they have a common side or a common vertex (i.e. a cell can have at most
+8 neighbouring cells).
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case contains a single line of input, an integer
+N, denoting the number of rows and columns in the required matrix.
+Output Format
+For each test case, output
+N lines, where the
+i
+th
+line contains
+N space-separated integers, denoting the elements of the
+i
+th
+row.
+Constraints
+1≤T≤1000
+4≤N≤1000
+The sum of
+N
+2
+over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+1
+4
+12 10 6 14
+3 8 4 1
+5 15 11 9
+2 7 13 16
+Explanation:
+Test case
+1: The given matrix satisfies all the conditions.
+Note that all elements are unique and in the range
+[1,N
+2
+]. Also, the absolute difference between any two neighbouring cells is greater than
+1.

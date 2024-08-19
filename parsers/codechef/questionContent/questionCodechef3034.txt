@@ -1,0 +1,162 @@
+Minimum Ugliness
+Problem
+You are given a tree with
+N nodes where the nodes are numbered from
+1 to
+N. The tree is rooted at node
+1.
+The shortest distance between two nodes
+u and
+v is the number of edges in the unique shortest path between
+u and
+v in the tree. Let it be denoted by
+dist(u,v).
+You have
+Q queries of the following type:
+For the
+i-th query, let
+A
+i
+be a set of
+K
+i
+nodes in the tree denoted by
+A
+i,1
+,A
+i,2
+,⋯,A
+i,K
+i
+.
+We define the Ugliness of a node
+x as
+max(dist(x,y)) over all
+y∈A
+i
+.
+For each query, find the minimum Ugliness among all nodes of the tree.
+Note: Due to heavy input and output files, please use Fast IO.
+Input Format
+The first line of the input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+Q, denoting the number of nodes in the tree and the number of queries, respectively.
+The next
+N−1 lines describe the edges. The
+i-th of these
+N−1 lines contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+.
+Then the
+Q queries follow. Each query consists of
+2 lines of input.
+The first line of the
+i-th query contains a single integer
+K
+i
+, denoting the size of the set
+A
+i
+.
+The second line of the
+i-th query contains
+K
+i
+space-separated integers
+A
+i,1
+,A
+i,2
+,⋯,A
+i,K
+i
+, denoting the set of nodes in
+A
+i
+.
+Output Format
+For each test case, print
+Q lines.
+The
+i-th line for each test case should print the answer for the
+i-th query of that test case.
+Constraints
+1≤T≤10
+5
+1≤N,Q≤10
+5
+1≤u
+i
+,v
+i
+≤N
+The graph formed is a tree
+1≤K
+i
+≤N
+1≤A
+i,j
+≤N
+All elements in
+A
+i
+are distinct
+The sum of
+N and
+Q over all test cases won't exceed
+2⋅10
+5
+The sum of
+K
+i
+over all test cases won't exceed
+4⋅10
+5
+.
+Sample 1:
+Input
+Output
+1
+7 2
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+1
+4
+4
+4 7 5 6
+0
+2
+Explanation:
+In the first query, if we choose node
+4, then all the special nodes
+(only node
+4) are at a maximum distance of
+0. Hence the answer to the first query is
+0.
+In the second query, if we choose node
+1, then all the special nodes
+(4,
+7,
+5 and
+6) are at a maximum distance of
+2 from node
+1. We cannot do any better, and hence the answer to the second query is
+2.

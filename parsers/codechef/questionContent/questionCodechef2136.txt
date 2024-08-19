@@ -1,0 +1,175 @@
+Sardar and GCD
+Problem
+Sardar Khan has finally decided to attack Ramadhir - he will bomb one of Ramadhir's businesses in Wasseypur. Sardar Khan knows that Ramadhir has
+N businesses (numbered
+1 to
+N) and that there are
+N−1 roads connecting pairs of these businesses in such a way that all businesses are connected. Further, Sardar knows that each business has a specific value - the
+i-th business has value
+A
+i
+.
+When Sardar Khan destroys a business, he also destroys every road directly connected to it. Formally, destroying business
+v also destroys all existing roads of the form
+(u,v).
+Sardar thinks that the damage dealt to Ramadhir upon destroying business
+v equals the sum of the greatest common divisors of every remaining maximal connected set of businesses. More formally,
+Let the connected components of the graph obtained on deleting
+v and edges incident to it be
+C
+1
+,C
+2
+,…,C
+k
+.
+Define
+gcd(C
+i
+) to be
+gcd(A
+i
+1
+,A
+i
+2
+,…,A
+i
+r
+) where
+C
+i
+consists of vertices
+i
+1
+,i
+2
+,…,i
+r
+.
+The damage caused by destroying
+v is then
+∑
+i=1
+k
+gcd(C
+i
+).
+Sardar Khan wants to maximize the damage he deals. Can you find the maximum possible damage he can achieve, given that he destroys exactly one business?
+If the process of computing damage is still unclear, please refer to sample test cases for an explained example.
+Input Format
+The first line of input contains an integer
+T, denoting the total number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N, denoting the number of businesses Ramadhir owns.
+Each of the next
+N−1 lines contains
+2 integers
+a and
+b, denoting a road between businesses
+a and
+b.
+Finally, the last line of each test case contains
+N space-separated positive integers
+A
+1
+,A
+2
+,…,A
+N
+, where
+A
+i
+is the value of the
+i-th business.
+Output Format
+For each test case, output a single line containing one integer - the maximum possible damage that Sardar Khan can deal.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases will not exceed
+5⋅10
+5
+.
+It is guaranteed that the given roads connect every business.
+Sample 1:
+Input
+Output
+1
+5
+1 2
+1 3
+3 4
+3 5
+4 6 8 12 15
+29
+Explanation:
+If business
+1 is bombed, the remaining connected components are
+{(2),(3,4,5)}. This gives a damage of
+gcd(A
+2
+)+gcd(A
+3
+,A
+4
+,A
+5
+)=6+1=7.
+If business
+2 is bombed, the remaining connected components are
+{(1,3,4,5)}. This gives a damage of
+gcd(A
+1
+,A
+3
+,A
+4
+,A
+5
+)=1.
+If business
+3 is bombed, the remaining connected components are
+{(1,2),(4),(5)}. This gives a damage of
+gcd(A
+1
+,A
+2
+)+gcd(A
+4
+)+gcd(A
+5
+)=2+12+15=29.
+If business
+4 is bombed, the remaining connected components are
+{(1,2,3,5)}. This gives a damage of
+gcd(A
+1
+,A
+2
+,A
+3
+,A
+5
+)=1.
+If business
+5 is bombed, the remaining connected components are
+{(1,2,3,4)}. This gives a damage of
+gcd(A
+1
+,A
+2
+,A
+3
+,A
+4
+)=2.
+Clearly, bombing business
+3 gives the maximum possible damage, that being 29.

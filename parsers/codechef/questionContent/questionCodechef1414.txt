@@ -1,0 +1,75 @@
+Subarray XOR
+Problem
+Mary loves binary strings.
+Given a binary string
+S, she defines the beauty of the string as the bitwise XOR of decimal representations of all substrings of
+S.
+Find the beauty of string
+S. Since the answer can be huge, print it modulo
+998244353.
+For example, the decimal representation of binary string
+1101 is
+1⋅2
+3
++1⋅2
+2
++0⋅2
+1
++1⋅2
+0
+=8+4+0+1=13. Kindly refer sample explanation for more such examples.
+A string
+A is a substring of a string
+B if
+A can be obtained from
+B by deleting several (possibly zero) characters from the beginning and several (possibly zero) characters from the end.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of test cases follow.
+First line of each test case contains one integer
+N - the length of the binary string.
+Second line of each test case contains the binary string
+S.
+Output Format
+For each test case, output in a single line, beauty of the string modulo
+998244353.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+2
+10
+3
+101
+4
+1111
+3
+6
+12
+Explanation:
+Test Case
+1: All substrings of the string
+S=10 are
+[1,0,10]. The decimal representation of these substrings is denoted by the array
+[1,0,2]. Bitwise XOR of all these values is
+1⊕0⊕2=3.
+Test Case
+2: All substrings of the string
+S=101 are
+[1,0,1,10,01,101]. The decimal representation of these substrings is denoted by the array
+[1,0,1,2,1,5]. Bitwise XOR of all these values is:
+1⊕0⊕1⊕2⊕1⊕5=6.
+Test Case
+3: All substrings of the string
+S=1111 are
+[1,1,1,1,11,11,11,111,111,1111]. The decimal representation of these substrings is denoted by the array
+[1,1,1,1,3,3,3,7,7,15]. Bitwise XOR of all these values is:
+1⊕1⊕1⊕1⊕3⊕3⊕3⊕7⊕7⊕15=12.

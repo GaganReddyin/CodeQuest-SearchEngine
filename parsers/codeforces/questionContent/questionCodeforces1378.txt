@@ -1,0 +1,134 @@
+G. Changing Brackets
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A sequence of round and square brackets is given. You can change the sequence by performing the following operations:
+change the direction of a bracket from opening to closing and vice versa without changing the form of the bracket: i.e. you can change '(' to ')' and ')' to '('; you can change '[' to ']' and ']' to '['. The operation costs
+0
+burles.
+change any square bracket to round bracket having the same direction: i.e. you can change '[' to '(' but not from '(' to '['; similarly, you can change ']' to ')' but not from ')' to ']'. The operation costs
+1
+burle.
+The operations can be performed in any order any number of times.
+You are given a string
+s
+of the length
+n
+and
+q
+queries of the type "l r" where
+1≤l<r≤n
+. For every substring
+s[l…r]
+, find the minimum cost to pay to make it a correct bracket sequence. It is guaranteed that the substring
+s[l…r]
+has an even length.
+The queries must be processed independently, i.e. the changes made in the string for the answer to a question
+i
+don't affect the queries
+j
+(
+j>i
+). In other words, for every query, the substring
+s[l…r]
+is given from the initially given string
+s
+.
+A correct bracket sequence is a sequence that can be built according the following rules:
+an empty sequence is a correct bracket sequence;
+if "s" is a correct bracket sequence, the sequences "(s)" and "[s]" are correct bracket sequences.
+if "s" and "t" are correct bracket sequences, the sequence "st" (the concatenation of the sequences) is a correct bracket sequence.
+E.g. the sequences "", "(()[])", "[()()]()" and "(())()" are correct bracket sequences whereas "(", "[(])" and ")))" are not.
+Input
+The first line contains one integer
+t
+(
+1≤t≤100
+) — the number of test cases. Then
+t
+test cases follow.
+For each test case, the first line contains a non-empty string
+s
+containing only round ('(', ')') and square ('[', ']') brackets. The length of the string doesn't exceed
+10
+6
+. The string contains at least
+2
+characters.
+The second line contains one integer
+q
+(
+1≤q≤2⋅
+10
+5
+) — the number of queries.
+Then
+q
+lines follow, each of them contains two integers
+l
+and
+r
+(
+1≤l<r≤n
+where
+n
+is the length of
+s
+). It is guaranteed that the substring
+s[l…r]
+has even length.
+It is guaranteed that the sum of the lengths of all strings given in all test cases doesn't exceed
+10
+6
+. The sum of all
+q
+given in all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case output in a separate line for each query one integer
+x
+(
+x≥0
+) — the minimum cost to pay to make the given substring a correct bracket sequence.
+Example
+input
+Copy
+3
+([))[)()][]]
+3
+1 12
+4 9
+3 6
+))))))
+2
+2 3
+1 4
+[]
+1
+1 2
+output
+Copy
+0
+2
+1
+0
+0
+0
+Note
+Consider the first test case. The first query describes the whole given string, the string can be turned into the following correct bracket sequence: "([()])()[[]]". The forms of the brackets aren't changed so the cost of changing is
+0
+.
+The second query describes the substring ")[)()]". It may be turned into "(()())", the cost is equal to
+2
+.
+The third query describes the substring "))[)". It may be turned into "()()", the cost is equal to
+1
+.
+The substrings of the second test case contain only round brackets. It's possible to prove that any sequence of round brackets having an even length may be turned into a correct bracket sequence for the cost of
+0
+burles.
+In the third test case, the single query describes the string "[]" that is already a correct bracket sequence.

@@ -1,0 +1,79 @@
+Fake Swaps
+Problem
+Read problems statements in Russian and Bengali.
+You are given two binary strings
+S and
+P. You need to convert
+S into
+P using the following operation any number of times (possibly zero):
+Pick three binary values
+X,
+Y, and
+Z, such that at least one of them is equal to
+1 and at least one of them is equal to
+0. Then, pick three distinct indices
+i,
+j, and
+k, and assign
+S
+i
+=X,
+S
+j
+=Y, and
+S
+k
+=Z.
+Determine whether it's possible to convert
+S into
+P.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains
+N denoting the length of
+S and
+P.
+The second line of each test case contains
+S.
+The third line of each test case contains
+P.
+Output Format
+For each test case, output on one line YES if it is possible to convert
+S to
+P, or NO if it is not possible to do so. Output is case insensitive.
+Constraints
+1≤T≤1000
+3≤N≤1000
+∣S∣=∣P∣=N
+Sample 1:
+Input
+Output
+2
+4
+1001
+0101
+3
+111
+000
+YES
+NO
+Explanation:
+For the first test case, we choose
+X=0,Y=1 and
+Z=1. This satisfies the above condition. Three indices
+(i,j,k) are chosen as
+(1,2,4), and
+(A
+1
+,A
+2
+,A
+4
+) are then assigned as
+(0,1,1) respectively. After this operation,
+S transforms into 0101.
+For the second test case, no set of any operations is possible to make
+S equals to
+P.

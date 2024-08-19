@@ -1,0 +1,124 @@
+The Last Droid
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+The droid R2-D2 is travelling in space with a special mission. In space, there are
+N planets (numbered
+1 through
+N) and
+M bidirectional space highways. Each space highway connects two planets and in order to use it, R2-D2 needs to have a sufficiently high status level.
+The droid’s mission consists of
+Q stages. In each stage, there are two planets
+x and
+y such that the droid should start the stage at planet
+x with some initial status level
+L (
+L≥0) and travel to planet
+y. For each valid
+i, when R2-D2 is at planet
+i (including the initial planet
+x), he may increase his status level by
+A
+i
+; it is not allowed to increase the status level multiple times on the same planet in the same stage. Find the minimum value of
+L such that it is possible for R2-D2 to reach planet
+y or determine that it is impossible to reach planet
+y for any
+L.
+Note that the level R2-D2 has at the end of each stage is not carried over to the next stages (he may start the next stage with a lower initial status level).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Each of the following
+M lines contains three space separated integers
+U,
+V and
+W denoting that there is a space highway between planets
+U and
+V and R2-D2 may use this highway only if his status level is at least
+W.
+The next line contains a single integer
+Q.
+The following
+Q lines describe stages. Each of these lines contains two space-separated integers
+x and
+y.
+Output
+For each stage, print a single line containing one integer ― the minimum status level required to complete the stage, or
+−1 if it is impossible to complete this stage.
+Constraints
+1≤T≤100
+1≤N,M,Q≤10
+5
+0≤A
+i
+≤10
+9
+for each valid
+i
+0≤W≤10
+9
+1≤U,V,x,y≤N
+the sum of
+N over all test cases does not exceed
+400,000
+the sum of
+M over all test cases does not exceed
+400,000
+the sum of
+Q over all test cases does not exceed
+400,000
+Subtasks
+Subtask #1 (12 points):
+N,Q≤1,000
+M≤1,200
+the sum of
+N over all test cases does not exceed
+4,000
+the sum of
+M over all test cases does not exceed
+4,000
+the sum of
+Q over all test cases does not exceed
+4,000
+Subtask #2 (28 points):
+A
+i
+=0 for each valid
+i
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+1
+6 5
+1 3 1 2 0 0
+1 2 4
+1 3 2
+1 4 3
+3 4 5
+3 5 7
+4
+2 2
+1 5
+5 1
+3 6
+0
+1
+7
+-1
+Explanation:
+In the second stage, R2-D2 can travel through planets
+1→3→1→4→1→2→1→3→5.

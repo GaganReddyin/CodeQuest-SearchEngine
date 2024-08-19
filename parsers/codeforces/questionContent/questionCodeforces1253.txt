@@ -1,0 +1,136 @@
+C. Representative Edges
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+An array
+a
+1
+,
+a
+2
+,…,
+a
+n
+is good if and only if for every subsegment
+1≤l≤r≤n
+, the following holds:
+a
+l
++
+a
+l+1
++…+
+a
+r
+=
+1
+2
+(
+a
+l
++
+a
+r
+)⋅(r−l+1)
+.
+You are given an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. In one operation, you can replace any one element of this array with any real number. Find the minimum number of operations you need to make this array good.
+Input
+The first line of input contains one integer
+t
+(
+1≤t≤100
+): the number of test cases.
+Each of the next
+t
+lines contains the description of a test case.
+In the first line you are given one integer
+n
+(
+1≤n≤70
+): the number of integers in the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−100≤
+a
+i
+≤100
+): the initial array.
+Output
+For each test case, print one integer: the minimum number of elements that you need to replace to make the given array good.
+Example
+input
+Copy
+5
+4
+1 2 3 4
+4
+1 1 2 2
+2
+0 -1
+6
+3 -2 4 -1 -4 0
+1
+-100
+output
+Copy
+0
+2
+0
+3
+0
+Note
+In the first test case, the array is good already.
+In the second test case, one of the possible good arrays is
+[1,1,
+1
+–
+,
+1
+–
+]
+(replaced elements are underlined).
+In the third test case, the array is good already.
+In the fourth test case, one of the possible good arrays is
+[
+−2.5
+–
+–
+–
+–
+–
+,−2,
+−1.5
+–
+–
+–
+–
+–
+,−1,
+−0.5
+–
+–
+–
+–
+–
+,0]
+.

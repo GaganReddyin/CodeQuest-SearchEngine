@@ -1,0 +1,76 @@
+Another Tree with Number Theory
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a rooted tree with
+N nodes (numbered
+1 through
+N; node
+1 is the root). For each
+i (
+1≤i≤N−1), the parent of the node
+i+1 is
+p
+i
+.
+You need to answer
+Q queries. (Sounds quite familiar!) For each query, first,
+W tasks are given to node
+V. These tasks are processed in the tree in the following way:
+When a node receives
+a tasks and it has no children, all
+a tasks are executed by this node.
+Otherwise, i.e. if the node has
+K>0 children, where
+K is a divisor of
+a, then this node gives
+a/K of these tasks to each of its children. This process is performed recursively by each child on the tasks it receives.
+Otherwise, i.e. if the node has
+K>0 children, but
+K is not a divisor of
+a, all
+a tasks are ignored and none of this node's children receive any tasks.
+For each query, find the number of tasks that are not executed, i.e. end up ignored, possibly after passing down the tree.
+Input
+The first line of the input contains a single integer
+N.
+The second line contains
+N−1 space-separated integers
+p
+1
+,p
+2
+,…,p
+N−1
+.
+The third line contains a single integer
+Q.
+Q lines follow. Each of these lines contains two space-separated integers
+V and
+W describing a query.
+Output
+For each query, print a single line containing one integer ― the number of tasks that are not executed.
+Constraints
+1≤N,Q≤10
+5
+1≤p
+i
+≤N for each valid
+i
+the graph described on the input is a tree
+1≤V≤N
+1≤W≤10
+6
+Subtasks
+Subtask #1 (20 points):
+N≤100
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+5
+1 1 2 2
+2
+1 10
+1 20
+5
+0

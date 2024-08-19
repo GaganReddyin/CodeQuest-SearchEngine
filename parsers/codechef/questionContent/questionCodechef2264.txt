@@ -1,0 +1,77 @@
+Palindromes Not Allowed
+Problem
+A string
+S is called good if none of the substrings of
+S of length
+≥2 are palindromic.
+For e.g.
+S=
+hello is not good but
+S=
+world is good.
+You are given a string
+A of length
+N (containing lowercase Latin letters only). Rearrange
+A to form a good string or determine it is not possible to do so.
+Recall that a string is called palindromic if it reads the same backwards and forwards. For example,
+noon and
+level are palindromic strings.
+Input Format
+The first line of input contains a single integer
+T — the number of test cases. The description of the test cases follows.
+The first line of each test case contains one integer
+N — the length of the string
+A.
+The second line of each test case contains the string
+A of length
+N.
+Output Format
+For each test case, if it is possible to rearrange
+A to convert it into a good string, print YES in the first line and print the rearranged string in the second line. Otherwise, print NO.
+You may print each character of YES and NO in uppercase or lowercase (for e.g. yes, yEs, Yes will be considered identical).
+If there are multiple rearrangements of the string which are good, print any of them.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+The string
+A contains lowercase Latin letters only
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+4
+5
+world
+5
+hello
+7
+aaabbcc
+6
+pppppr
+YES
+world
+YES
+lehol
+YES
+abcabca
+NO
+Explanation:
+Test case
+1:
+world is already a good string.
+Test case
+2:
+hello can be rearranged to form
+lehol which is good.
+Test case
+3:
+aaabbcc can be rearranged to form
+abcabca which is good.
+Test case
+4: It can be proven that none of the rearrangements of
+pppppr is good.

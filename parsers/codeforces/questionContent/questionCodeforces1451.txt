@@ -1,0 +1,183 @@
+C. Cactus Lady and her Cing
+time limit per test5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Cactus lady loves her cactuses very much. Especially she likes a small cactus named Cing. Cing can be seen as a connected undirected graph in which every vertex lies on at most one simple cycle. Intuitively, a cactus is a generalization of a tree where some cycles are allowed. Multiedges (multiple edges between a pair of vertices) and loops (edges that connect a vertex to itself) are not allowed.
+She bought a special grid for her special little cactus Cing. This grid can be represented as a graph consisting of two paths of length
+400000
+,
+u
+(0,−200000)
+−
+u
+(0,−199999)
+−…−
+u
+(0,200000)
+and
+u
+(1,−200000)
+−
+u
+(1,−199999)
+−…−
+u
+(1,200000)
+, connected together by
+400001
+edges
+(
+u
+(0,i)
+,
+u
+(1,i)
+)
+for each
+i
+. In other words, a grid can be seen as a ladder.
+Cactus lady wants to know whether she can embed Cing into this grid, i.e., map each vertex of the cactus onto a separate vertex of the grid while each edge of the cactus will be mapped onto some edge of the grid.
+Input
+The first line contains an integer
+t
+ — the number of test cases.
+Each test case begins with a line containing two integers
+n
+and
+m
+ — the number of vertices and the number of edges in a given cactus, respectively (
+1≤n≤200000
+;
+0≤m≤250000
+).
+Each of the following
+m
+lines contains two integers
+v
+and
+u
+, describing the edges of the cactus (
+1≤v,u≤n,u≠v
+).
+The total sum of all
+n
+in the input doesn't exceed
+200000
+.
+Output
+Print an answer for each test case in the same order the cases appear in the input.
+For each test case print "No" in the first line, if no layout exists.
+Otherwise print "Yes" in the first line, and the following
+n
+lines describing the layout. The
+i
+-th of these
+n
+lines should contain two integers
+x
+i
+and
+y
+i
+, the location of the
+i
+-th vertex (
+0≤
+x
+i
+≤1
+;
+−200000≤
+y
+i
+≤200000
+).
+Example
+input
+Copy
+5
+4 3
+1 2
+2 3
+3 4
+
+8 7
+1 2
+3 2
+2 4
+4 5
+4 6
+6 7
+6 8
+
+5 4
+1 2
+1 3
+1 4
+1 5
+
+8 9
+1 2
+2 3
+3 4
+1 4
+4 5
+5 6
+6 7
+7 8
+5 8
+
+10 10
+1 2
+2 3
+3 4
+4 5
+5 6
+6 1
+3 7
+4 8
+1 9
+6 10
+output
+Copy
+Yes
+0 0
+0 1
+1 1
+1 2
+Yes
+0 3
+1 3
+1 4
+1 2
+0 2
+1 1
+0 1
+1 0
+No
+Yes
+0 0
+1 0
+1 1
+0 1
+0 2
+0 3
+1 3
+1 2
+Yes
+1 1
+1 2
+1 3
+0 3
+0 2
+0 1
+1 4
+0 4
+1 0
+0 0
+Note
+Empty lines between test cases are for clarity. In real test cases there are no empty lines.
+In these notes, we consider the embeddings for tests 2 and 4.
+We start with the embedding for test 2.
+Here goes the embedding for test 4.

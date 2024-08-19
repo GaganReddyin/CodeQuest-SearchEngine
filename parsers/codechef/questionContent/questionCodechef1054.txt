@@ -1,0 +1,76 @@
+Prime Xor
+Problem
+For
+3 distinct prime integers
+A,B, and
+C
+(1<A,B,C<2
+30
+), we define positive integers
+X,Y, and
+Z as:
+X=A⊕B,Y=B⊕C, and
+Z=C⊕A, where
+⊕ denotes the bitwise XOR operation.
+Given only two integers
+X and
+Y and the fact that at least one integer amongst
+X,Y, and
+Z is odd, find the values of
+A,B, and
+C.
+Note:
+You need to print the integers
+A,B, and
+C in ascending order.
+It is guaranteed in the input that a unique answer exists.
+Input Format
+The first line contains one integer
+T — the number of test cases. Then
+T test cases follow.
+Each test case consists of one line which contains
+2 integers
+X and
+Y.
+Output Format
+For each test case, print
+3 integers —
+A,B, and
+C in ascending order where
+(1<A,B,C<2
+30
+).
+Constraints
+1≤T≤10
+5
+1≤X,Y<2
+30
+Sample 1:
+Input
+Output
+2
+1 6
+9 15
+2 3 5
+2 11 13
+Explanation:
+Test Case
+1: The answer is
+A=2,B=3,C=5. Thus,
+X=2⊕3=1,Y=3⊕5=6,Z=2⊕5=7. Note that
+X and
+Y are same as mentioned in input and the values
+X as well as
+Z are odd.
+Test Case
+2: The answer is
+A=11,B=2,C=13. Thus,
+X=11⊕2=9,Y=2⊕13=15,Z=11⊕13=6. Note that
+X and
+Y are same as mentioned in input and the values
+X as well as
+Y are odd. Thus, the values of
+A,B, and
+C in ascending order are
+2,11, and
+13.

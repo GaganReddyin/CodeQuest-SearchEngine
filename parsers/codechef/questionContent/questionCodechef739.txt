@@ -1,0 +1,22 @@
+Help Voldemort
+Problem
+The story of Harry Potter begins when Lord Voldemort arrives at his house at Privet Drive. Harry's house has N rooms placed in one line. Each room has its own energy level and no two rooms have exactly same energy. Lord Voldemort arrives at the room which has lowest energy while Harry is at the room having highest energy.
+Lord Voldemort has to reach Harry's room. Voldemort can travel from a room having energy X to any other room having energy Y such that |X-Y| is minimum and that room hasn't been visited before. The energy required for moving from room having energy X to room having energy Y is X*Y.
+Since Lord Voldemort is busy practicing Avada Kedavra to kill Harry, so he asks you to find the energy required to reach Harry's room.
+Input
+The first line of input contains 1 integer N denoting the number of rooms.
+The second line contains N space separated integers denoting energy levels of each room.
+Output
+Print the required energy.
+Constraints
+2 ≤ N ≤ 1000
+1 ≤ Ei ≤ 10000
+Sample 1:
+Input
+Output
+3
+4 2 1
+10
+Explanation:
+Lord Voldemort arrives at room 3 and Harry is in room 1.
+Total energy consumed = 1*2 + 2*4 = 10.

@@ -1,0 +1,97 @@
+K-Beautiful Subarrays
+Problem
+You are given an array
+A of size
+N.
+You may perform at most
+M operations, where each operation allows you to increase an element of the array by
+1.
+An array is considered
+K-beautiful if all subarrays of size
+K have equal sum of elements.
+Find the number of ways to make the array
+K-beautiful using no more than
+M operations. Since the answer can be large, output your answer modulo
+998244353.
+Note that, two ways of making the array
+K-beautiful are considered different, if the final arrays in both the ways are different.
+Input Format
+The first line contains a single positive integer
+T, indicating the number of test cases.
+The first line of each test case contains three positive integers
+N,
+M, and
+K, denoting the size of the array, the maximum number of operation to be performed, and the subarray size respectively.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, the elements of the array.
+Output Format
+For each test case, output one non-negative positive integer, denoting the number of ways to make the array
+K-beautiful, modulo
+998244353.
+Constraints
+1≤T≤2⋅10
+4
+1≤N,M≤10
+6
+1≤K≤N
+1≤A
+i
+≤10
+18
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+The sum of
+M over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+5
+5 4 3
+1 2 1 2 1
+3 3 2
+7 3 4
+2 3 2
+1 2
+4 1 2
+3 1 4 2
+4 3 2
+3 1 4 3
+5
+1
+10
+0
+1
+Explanation:
+Test case
+1: We can make the array
+A=[1,2,1,2,1], as
+3-beautiful using at most
+4 operations. There are
+5 ways to make the array
+3-beautiful. The final arrays in these ways are:
+[2,2,1,2,2],
+[2,2,2,2,2],
+[2,2,3,2,2],
+[2,3,1,2,3], and
+[3,2,1,3,2].
+Test case
+2: We can make the array
+A=[7,3,4], as
+2-beautiful using at most
+3 operations. There is only
+1 way to make the array
+2-beautiful. The final array in that way would be
+[7,3,7].

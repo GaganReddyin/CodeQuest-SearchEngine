@@ -1,0 +1,44 @@
+Perfect Necklace
+Problem
+Chef wants to gift his girlfriend a necklace made of beads. The beads can be made of either Stone, Glass, Quartz, Ruby or Diamond (he need not use all five types of beads) .
+Each bead has a value associated with its beauty as follows
+-2 for Stone
+-1 for Glass
+0 for Quartz
+1 for Ruby
+2 for Diamond
+Each bead also has a cost given by S, G, Q, R and D for the respective bead.
+There are q queries for you. In each query chef wants to know the minimum cost for creating a necklace using exactly X beads and overall beauty of Y.
+Overall beauty Y is defined as the sum of beauty of each bead used in the necklace.
+Since you’re a great programmer, he wants you to answer each query as soon as possible.
+###Input
+First line contains 5 space separated integers S, G, Q, R, D, the respective cost of beads. Next line contains q the number of queries next q lines had two integers X and Y , the number of beads to be used and the overall beauty
+###Output
+for each query output the answer in a new line output the minimum cost if it exists otherwise print -1
+###Constrains
+1≤q≤5∗10
+5
+0≤S,G,Q,R,D≤10
+6
+0≤X≤100
+−200≤Y≤200
+###Subtasks
+10 points :
+0≤X≤2
+20 points :
+q=1
+70 points : original constrains
+###Sample Input
+1 2 2 3 4
+3
+2 0
+1 -2
+3 6
+###Sample Output
+4
+1
+12
+###Explanation
+in the first query we can take (stone,diamond), (glass,ruby), (quarts,quarts) but the minimum cost would be if we took quarts and quarts which is 4
+second query there is only one way that is to take one stone and the cost is 1
+third query also there is only one way to take three diamonds and the cost is 12

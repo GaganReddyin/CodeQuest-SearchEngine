@@ -1,0 +1,28 @@
+F. Ace It!
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Input
+The only line of the input is a string of 7 characters. The first character is letter A, followed by 6 digits. The input is guaranteed to be valid (for certain definition of "valid").
+Output
+Output a single integer.
+Examples
+input
+Copy
+A221033
+output
+Copy
+21
+input
+Copy
+A223635
+output
+Copy
+22
+input
+Copy
+A232726
+output
+Copy
+23

@@ -1,0 +1,137 @@
+F. Zombies
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Polycarp plays a computer game in a post-apocalyptic setting. The zombies have taken over the world, and Polycarp with a small team of survivors is defending against hordes trying to invade their base. The zombies are invading for
+x
+minutes starting from minute
+0
+. There are
+n
+entrances to the base, and every minute one zombie attempts to enter through every entrance.
+The survivors can defend the entrances against the zombies. There are two options:
+manually — shoot the zombies coming through a certain entrance;
+automatically — set up an electric fence on a certain entrance to fry the zombies.
+If an entrance is defended either or both ways during some minute, no zombie goes through.
+Every entrance is defended by a single dedicated survivor. The
+i
+-th entrance is defended manually from minute
+l
+i
+until minute
+r
+i
+, non-inclusive —
+[
+l
+i
+,
+r
+i
+)
+.
+There are
+k
+generators that can be used to defend the entrances automatically. Every entrance should be connected to exactly one generator, but a generator can be connected to multiple entrances (or even none of them). Each generator will work for exactly
+m
+consecutive minutes. Polycarp can choose when to power on each generator independently of each other, the
+m
+minute long interval should be fully inside the
+[0,x)
+time interval.
+Polycarp is a weird gamer. He wants the game to be as difficult as possible for him. So he wants to connect each entrance to a generator and choose the time for each generator in such a way that as many zombies as possible enter the base. Please, help him to achieve that!
+Input
+The first line contains four integers
+n,k,x
+and
+m
+(
+1≤k≤n≤2000
+;
+1≤m≤x≤
+10
+9
+) — the number of entrances, the number of generators, the duration of the zombie invasion and the duration of all generators.
+The
+i
+-th of the next
+n
+lines contains two integers
+l
+i
+and
+r
+i
+(
+0≤
+l
+i
+<
+r
+i
+≤x
+) — the time interval the
+i
+-th entrance is defended manually.
+Output
+Print a single integer — the largest number of zombies that can enter the base after Polycarp connects each entrance to some generator and chooses the time for each generator.
+Examples
+input
+Copy
+3 3 10 3
+0 2
+1 7
+4 7
+output
+Copy
+18
+input
+Copy
+3 2 10 3
+0 2
+1 7
+4 7
+output
+Copy
+18
+input
+Copy
+3 1 10 3
+0 2
+1 7
+4 7
+output
+Copy
+16
+input
+Copy
+2 1 20 6
+11 13
+2 14
+output
+Copy
+22
+input
+Copy
+5 3 7 4
+4 6
+0 3
+4 7
+1 5
+2 7
+output
+Copy
+14
+input
+Copy
+6 3 9 4
+3 9
+4 9
+2 5
+0 5
+6 9
+2 3
+output
+Copy
+26

@@ -1,0 +1,63 @@
+Control the Pollution
+Problem
+There are two types of vehicles in Chefland.
+Bus which has a capacity of
+100 people.
+Car which has a capacity of
+4 people.
+There are
+N people who want to travel from place
+A to place
+B. You know that a single bus emits
+X units of smoke while a single car emits
+Y units of smoke in their journey from
+A to
+B.
+You want to arrange some buses and cars to carry all these
+N people such that total smoke emitted is minimized. Output the minimized smoke value.
+Input Format
+First line will contain
+T, the number of test cases. Then the test cases follow.
+Each test case contains three integers
+N,
+X,
+Y - the number of people who want to travel, the units of smoke emitted by a bus and the units of smoke emitted by a car respectively.
+Output Format
+For each test case, output the minimum units of smoke emitted in transporting the
+N people.
+Constraints
+1≤T≤1000
+1≤N≤1000
+1≤X,Y≤1000
+Sample 1:
+Input
+Output
+3
+9 40 8
+15 20 20
+105 80 10
+24
+20
+100
+Explanation:
+Test case-1: In the optimal case, we will use
+3 cars where the
+1-st and
+2-nd car will carry
+4 people each and the
+3-rd car will carry
+1 person.
+Therefore smoke emitted
+=3×8=24 units.
+Test case-2: In the optimal case, we will use
+1 bus to carry all the
+15 people.
+Therefore smoke emitted
+=1×20=20 units.
+Test case-3: In the optimal case, we will use
+1 bus to carry
+100 people and use
+2 cars to carry the remaining
+5 people.
+Therefore smoke emitted
+=1×80+2×10=100 units.

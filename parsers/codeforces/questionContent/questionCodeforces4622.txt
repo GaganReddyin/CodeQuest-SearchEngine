@@ -1,0 +1,29 @@
+B. Vile Grasshoppers
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The weather is fine today and hence it's high time to climb the nearby pine and enjoy the landscape.
+The pine's trunk includes several branches, located one above another and numbered from 2 to y. Some of them (more precise, from 2 to p) are occupied by tiny vile grasshoppers which you're at war with. These grasshoppers are known for their awesome jumping skills: the grasshopper at branch x can jump to branches .
+Keeping this in mind, you wisely decided to choose such a branch that none of the grasshoppers could interrupt you. At the same time you wanna settle as high as possible since the view from up there is simply breathtaking.
+In other words, your goal is to find the highest branch that cannot be reached by any of the grasshoppers or report that it's impossible.
+Input
+The only line contains two integers p and y (2 ≤ p ≤ y ≤ 109).
+Output
+Output the number of the highest suitable branch. If there are none, print -1 instead.
+Examples
+input
+Copy
+3 6
+output
+Copy
+5
+input
+Copy
+3 4
+output
+Copy
+-1
+Note
+In the first sample case grasshopper from branch 2 reaches branches 2, 4 and 6 while branch 3 is initially settled by another grasshopper. Therefore the answer is 5.
+It immediately follows that there are no valid branches in second sample case.

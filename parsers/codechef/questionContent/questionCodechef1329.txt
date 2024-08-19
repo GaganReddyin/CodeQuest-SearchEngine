@@ -1,0 +1,106 @@
+Average Gift
+Problem
+Chef has a set
+S containing
+N distinct integers.
+Chef wants to gift Chefina an array
+A of any finite length such that the following conditions hold true:
+A
+i
+∈S
+∀i. In other words, each element of the array
+A should belong to the set
+S.
+Mean value of all the elements in
+A is exactly
+X.
+Find whether there exists an array
+A of finite length satisfying the above conditions.
+Input Format
+First line will contain
+T, the number of test cases. Then the test cases follow.
+First line of each test case contains two integers
+N and
+X - denoting the size of set
+S and the mean value of the required array.
+Second line contains
+N distinct integers
+S
+1
+,S
+2
+,…,S
+N
+- denoting the set
+S.
+Output Format
+For each test case, output in a single line, YES if there exists an array satisfying the given conditions, NO otherwise.
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤S
+i
+≤10
+9
+1≤X≤10
+9
+S
+i
+
+=S
+j
+for
+i
+
+=j
+Sum of
+N over all test case do not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+3 2
+1 2 3
+1 5
+3
+2 5
+4 6
+1 5
+5
+YES
+NO
+YES
+YES
+Explanation:
+Test Case
+1: One of the valid arrays is
+A=[2,2]. Here,
+2∈{1,2,3}. Also, mean value of the array is
+2
+2+2
+=2.
+Test Case
+2: Since all elements of the array can only be equal to
+3, the mean value of
+A cannot be equal to
+5.
+Test Case
+3: One of the valid arrays is
+A=[4,6]. Here,
+4∈{4,6} and
+6∈{4,6}. Also, mean value of the array is
+2
+4+6
+=5.
+Test Case
+4: One of the valid arrays is
+A=[5]. Here,
+5∈{5}. Also, mean value of the array is
+1
+5
+=5.

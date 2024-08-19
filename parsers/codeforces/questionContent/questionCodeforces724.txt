@@ -1,0 +1,158 @@
+D. Rorororobot
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a grid, consisting of
+n
+rows and
+m
+columns. The rows are numbered from
+1
+to
+n
+from bottom to top. The columns are numbered from
+1
+to
+m
+from left to right. The
+i
+-th column has the bottom
+a
+i
+cells blocked (the cells in rows
+1,2,…,
+a
+i
+), the remaining
+n−
+a
+i
+cells are unblocked.
+A robot is travelling across this grid. You can send it commands — move up, right, down or left. If a robot attempts to move into a blocked cell or outside the grid, it explodes.
+However, the robot is broken — it executes each received command
+k
+times. So if you tell it to move up, for example, it will move up
+k
+times (
+k
+cells). You can't send it commands while the robot executes the current one.
+You are asked
+q
+queries about the robot. Each query has a start cell, a finish cell and a value
+k
+. Can you send the robot an arbitrary number of commands (possibly, zero) so that it reaches the finish cell from the start cell, given that it executes each command
+k
+times?
+The robot must stop in the finish cell. If it visits the finish cell while still executing commands, it doesn't count.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤
+10
+9
+;
+1≤m≤2⋅
+10
+5
+) — the number of rows and columns of the grid.
+The second line contains
+m
+integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+(
+0≤
+a
+i
+≤n
+) — the number of blocked cells on the bottom of the
+i
+-th column.
+The third line contains a single integer
+q
+(
+1≤q≤2⋅
+10
+5
+) — the number of queries.
+Each of the next
+q
+lines contain five integers
+x
+s
+,
+y
+s
+,
+x
+f
+,
+y
+f
+and
+k
+(
+a[
+y
+s
+]<
+x
+s
+≤n
+;
+1≤
+y
+s
+≤m
+;
+a[
+y
+f
+]<
+x
+f
+≤n
+;
+1≤
+y
+f
+≤m
+;
+1≤k≤
+10
+9
+) — the row and the column of the start cell, the row and the column of the finish cell and the number of times each your command is executed. The start and the finish cell of each query are unblocked.
+Output
+For each query, print "YES" if you can send the robot an arbitrary number of commands (possibly, zero) so that it reaches the finish cell from the start cell, given that it executes each command
+k
+times. Otherwise, print "NO".
+Example
+input
+Copy
+11 10
+9 0 0 10 3 4 8 11 10 8
+6
+1 2 1 3 1
+1 2 1 3 2
+4 3 4 5 2
+5 3 11 5 3
+5 3 11 5 2
+11 9 9 10 1
+output
+Copy
+YES
+NO
+NO
+NO
+YES
+YES

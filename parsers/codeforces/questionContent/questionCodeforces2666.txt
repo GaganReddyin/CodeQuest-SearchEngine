@@ -1,0 +1,210 @@
+G. Two IP Cameras
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have two IP cameras of the same model. Each camera can take photos starting from some moment of time with a fixed period. You can freely choose the starting moment but you can choose the period only as one of
+k
+values
+p
+1
+,
+p
+2
+,…,
+p
+k
+which are chosen by the camera's manufacturer.
+You have
+n
+moments of interest
+x
+1
+,
+x
+2
+,…,
+x
+n
+. You'd like to configure both cameras in such a way that at least one camera will take a photo in each of these moments. Configuring the camera means setting the moment when it takes the first photo and the gap between two consecutive photos (which should be one of the values
+p
+1
+,
+p
+2
+,…,
+p
+k
+). It's not a problem for you that cameras can take photos at other moments of time — you only care about moments of interest.
+Input
+The first line contains two integers
+k
+and
+n
+(
+1≤k≤
+10
+5
+;
+2≤n≤
+10
+5
+) — the number of periods to choose and the number of moments of interest.
+The second line contains
+k
+integers
+p
+1
+,
+p
+2
+,…,
+p
+k
+(
+1≤
+p
+1
+<
+p
+2
+<⋯<
+p
+k
+≤
+10
+6
+) — the periods to choose in the ascending order.
+The third line contains
+n
+integers
+x
+1
+,
+x
+2
+,…,
+x
+n
+(
+1≤
+x
+1
+<
+x
+2
+<⋯<
+x
+n
+≤
+10
+6
+) — the moments of interest in the ascending order.
+Output
+Print YES (case insensitive) in the first line if there is a way to configure cameras.
+In the second line, print two integers
+s
+1
+and
+c
+p
+1
+(
+1≤
+s
+1
+≤
+10
+6
+;
+1≤c
+p
+1
+≤
+10
+6
+;
+c
+p
+1
+∈{
+p
+1
+,…,
+p
+k
+}
+) — the starting moment and the period for the first camera. The period should be one of the given periods.
+In the third line, print two integers
+s
+2
+and
+c
+p
+2
+(
+1≤
+s
+2
+≤
+10
+6
+;
+1≤c
+p
+2
+≤
+10
+6
+;
+c
+p
+2
+∈{
+p
+1
+,…,
+p
+k
+}
+) — the starting moment and the period for the second camera. The period should be one of the given periods.
+If there is no way to configure cameras, print NO (case insensitive). If there are multiple ways, you may print any of them.
+Examples
+input
+Copy
+3 5
+3 5 7
+1 4 5 7 12
+output
+Copy
+YES
+1 3
+5 7
+input
+Copy
+3 2
+1 2 3
+1 10
+output
+Copy
+YES
+1 1
+10 1
+input
+Copy
+3 4
+1 2 3
+5 7 9 11
+output
+Copy
+YES
+5 1
+5 1
+input
+Copy
+3 4
+10 20 100
+2 3 4 7
+output
+Copy
+NO

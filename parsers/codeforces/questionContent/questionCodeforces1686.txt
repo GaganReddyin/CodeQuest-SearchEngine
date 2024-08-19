@@ -1,0 +1,87 @@
+F. Binary String Partition
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call a string
+t
+consisting of characters 0 and/or 1 beautiful, if either the number of occurrences of character 0 in this string does not exceed
+k
+, or the number of occurrences of characters 1 in this string does not exceed
+k
+(or both). For example, if
+k=3
+, the strings 101010, 111, 0, 00000, 1111111000 are beautiful, and the strings 1111110000, 01010101 are not beautiful.
+You are given a string
+s
+. You have to divide it into the minimum possible number of beautiful strings, i. e., find a sequence of strings
+t
+1
+,
+t
+2
+,…,
+t
+m
+such that every
+t
+i
+is beautiful,
+t
+1
++
+t
+2
++⋯+
+t
+m
+=s
+(where
++
+is the concatenation operator), and
+m
+is minimum possible.
+For every
+k
+from
+1
+to
+|s|
+, find the minimum possible number of strings such that
+s
+can be divided into them (i. e. the minimum possible
+m
+in the partition).
+Input
+The only line contains one string
+s
+(
+1≤|s|≤2⋅
+10
+5
+). Each character of
+s
+is either 0 or 1.
+Output
+Print
+|s|
+integers. The
+i
+-th integer should be equal to the minimum number of strings in the partition of
+s
+, when
+k=i
+.
+Examples
+input
+Copy
+00100010
+output
+Copy
+2 1 1 1 1 1 1 1
+input
+Copy
+1001011100
+output
+Copy
+3 2 2 2 1 1 1 1 1 1

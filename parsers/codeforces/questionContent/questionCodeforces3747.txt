@@ -1,0 +1,91 @@
+A. Regular Bracket Sequence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A string is called bracket sequence if it does not contain any characters other than "(" and ")". A bracket sequence is called regular if it it is possible to obtain correct arithmetic expression by inserting characters "+" and "1" into this sequence. For example, "", "(())" and "()()" are regular bracket sequences; "))" and ")((" are bracket sequences (but not regular ones), and "(a)" and "(1)+(1)" are not bracket sequences at all.
+You have a number of strings; each string is a bracket sequence of length
+2
+. So, overall you have
+cn
+t
+1
+strings "((",
+cn
+t
+2
+strings "()",
+cn
+t
+3
+strings ")(" and
+cn
+t
+4
+strings "))". You want to write all these strings in some order, one after another; after that, you will get a long bracket sequence of length
+2(cn
+t
+1
++cn
+t
+2
++cn
+t
+3
++cn
+t
+4
+)
+. You wonder: is it possible to choose some order of the strings you have such that you will get a regular bracket sequence? Note that you may not remove any characters or strings, and you may not add anything either.
+Input
+The input consists of four lines,
+i
+-th of them contains one integer
+cn
+t
+i
+(
+0≤cn
+t
+i
+≤
+10
+9
+).
+Output
+Print one integer:
+1
+if it is possible to form a regular bracket sequence by choosing the correct order of the given strings,
+0
+otherwise.
+Examples
+input
+Copy
+3
+1
+4
+3
+output
+Copy
+1
+input
+Copy
+0
+0
+0
+0
+output
+Copy
+1
+input
+Copy
+1
+2
+3
+4
+output
+Copy
+0
+Note
+In the first example it is possible to construct a string "(())()(()((()()()())))", which is a regular bracket sequence.
+In the second example it is possible to construct a string "", which is a regular bracket sequence.

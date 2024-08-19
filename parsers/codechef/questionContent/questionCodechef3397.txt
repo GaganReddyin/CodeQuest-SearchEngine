@@ -1,0 +1,104 @@
+Special String
+Problem
+Consider the string of infinite length obtained by repeating abcdefghijklmnopqrstuvwxyz infinitely many times. That is, it looks like abc...xyzabc...xyzabc...
+Let string
+B be the prefix of this string of length
+M. For example,
+if
+M=6,
+B= abcdef
+if
+M=29,
+B= abcdefghijklmnopqrstuvwxyzabc
+Vedansh calls a string
+X special if it contains
+B as a substring. Formally,
+X is special if for some
+1≤L≤R≤∣X∣,
+X
+L…R
+=B.
+Vedansh has string
+S of length
+N (consisting of lowercase Latin letters only). He wants to convert
+S into a special string. To do so he can perform the following operation:
+Pick an
+i such that
+1≤i≤N and delete
+S
+i
+. The remaining parts of
+S are concatenated.
+Since Vedansh is lazy, he wants to do this in the minimum number of operations or determine if
+S cannot be converted to a special string. Help Vedansh in doing so.
+Input Format
+The first line of input contains a single integer
+T — the number of test cases. The description of
+T test cases follows.
+Each test case consists of three lines of input
+The first line of each test case contains an integer
+N — the length of the string
+S.
+The second line of each test case contains the string
+S which consists of lowercase Latin letters only.
+The third line of each test case contains an integer
+M — the length of the string
+B whose form is described in the statement.
+Output Format
+For each test case, if
+A can be converted to a special string, output the minimum number of operations to do so. Otherwise output
+−1.
+Constraints
+1≤T≤1000
+1≤M≤N≤10
+6
+S consists of only lowercase Latin letters
+It is guaranteed that the sum of
+N over all test case does not exceed
+10
+6
+.
+Subtasks
+Sample 1:
+Input
+Output
+3
+9
+ababbdced
+4
+7
+bdcgehx
+5
+6
+acbcbd
+3
+3
+-1
+1
+Explanation:
+Test case
+1:
+M=4, so
+B=abcd. We can delete the following characters from
+S:
+ababbdced
+→
+ab
+abcd
+, which has
+B as a substring.
+Test case
+2:
+M=5, so
+B=abcde. It can be shown that
+S can not be converted into a special string.
+Test case
+3:
+M=3, so
+B=abc. We can delete the following characters from
+S:
+acbcbd
+→
+abc
+bd, which has
+B as a substring.

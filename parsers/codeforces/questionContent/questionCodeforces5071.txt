@@ -1,0 +1,31 @@
+D. Winter is here
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Winter is here at the North and the White Walkers are close. John Snow has an army consisting of n soldiers. While the rest of the world is fighting for the Iron Throne, he is going to get ready for the attack of the White Walkers.
+He has created a method to know how strong his army is. Let the i-th soldier’s strength be ai. For some k he calls i1, i2, ..., ik a clan if i1 < i2 < i3 < ... < ik and gcd(ai1, ai2, ..., aik) > 1 . He calls the strength of that clan k·gcd(ai1, ai2, ..., aik). Then he defines the strength of his army by the sum of strengths of all possible clans.
+Your task is to find the strength of his army. As the number may be very large, you have to print it modulo 1000000007 (109 + 7).
+Greatest common divisor (gcd) of a sequence of integers is the maximum possible integer so that each element of the sequence is divisible by it.
+Input
+The first line contains integer n (1 ≤ n ≤ 200000) — the size of the army.
+The second line contains n integers a1, a2, ..., an (1 ≤ ai ≤ 1000000) — denoting the strengths of his soldiers.
+Output
+Print one integer — the strength of John Snow's army modulo 1000000007 (109 + 7).
+Examples
+input
+Copy
+3
+3 3 1
+output
+Copy
+12
+input
+Copy
+4
+2 3 4 6
+output
+Copy
+39
+Note
+In the first sample the clans are {1}, {2}, {1, 2} so the answer will be 1·3 + 1·3 + 2·3 = 12

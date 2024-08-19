@@ -1,0 +1,162 @@
+F. Copy of a Copy of a Copy
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It all started with a black-and-white picture, that can be represented as an
+n×m
+matrix such that all its elements are either
+0
+or
+1
+. The rows are numbered from
+1
+to
+n
+, the columns are numbered from
+1
+to
+m
+.
+Several operations were performed on the picture (possibly, zero), each of one of the two kinds:
+choose a cell such that it's not on the border (neither row
+1
+or
+n
+, nor column
+1
+or
+m
+) and it's surrounded by four cells of the opposite color (four zeros if it's a one and vice versa) and paint it the opposite color itself;
+make a copy of the current picture.
+Note that the order of operations could be arbitrary, they were not necessarily alternating.
+You are presented with the outcome: all
+k
+copies that were made. Additionally, you are given the initial picture. However, all
+k+1
+pictures are shuffled.
+Restore the sequence of the operations. If there are multiple answers, print any of them. The tests are constructed from the real sequence of operations, i. e. at least one answer always exists.
+Input
+The first line contains three integers
+n,m
+and
+k
+(
+3≤n,m≤30
+;
+0≤k≤100
+) — the number of rows and columns of the pictures and the number of copies made, respectively.
+Then
+k+1
+pictures follow —
+k
+copies and the initial picture. Their order is arbitrary.
+Each picture consists of
+n
+lines, each consisting of
+m
+characters, each character is either
+0
+or
+1
+. There is an empty line before each picture.
+Output
+In the first line, print a single integer — the index of the initial picture. The pictures are numbered from
+1
+to
+k+1
+in the order they appear in the input.
+In the second line, print a single integer
+q
+ — the number of operations.
+Each of the next
+q
+lines should contain an operation. The operations should be listed in order they were applied. Each operation is one of two types:
+1
+x
+y
+ — recolor a cell
+(x,y)
+(the
+y
+-th cell in the
+x
+-th row, it should not be on the border and it should be surrounded by four cells of opposite color to itself);
+2
+i
+ — make a copy of the current picture and assign it index
+i
+(picture with index the
+i
+should be equal to the current picture).
+Each index from
+1
+to
+k+1
+should appear in the output exactly once — one of them is the index of the initial picture, the remaining
+k
+are arguments of the operations of the second kind.
+If there are multiple answers, print any of them. The tests are constructed from the real sequence of operations, i. e. at least one answer always exists.
+Examples
+input
+Copy
+3 3 1
+
+010
+111
+010
+
+010
+101
+010
+output
+Copy
+2
+2
+1 2 2
+2 1
+input
+Copy
+4 5 3
+
+00000
+01000
+11100
+01000
+
+00000
+01000
+10100
+01000
+
+00000
+01010
+10100
+01000
+
+00000
+01000
+10100
+01000
+output
+Copy
+3
+5
+1 2 4
+2 2
+2 4
+1 3 2
+2 1
+input
+Copy
+5 3 0
+
+110
+010
+001
+011
+001
+output
+Copy
+1
+0

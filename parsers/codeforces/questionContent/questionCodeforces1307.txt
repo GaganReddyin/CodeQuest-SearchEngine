@@ -1,0 +1,148 @@
+A. Divide and Multiply
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+William has array of
+n
+numbers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. He can perform the following sequence of operations any number of times:
+Pick any two items from array
+a
+i
+and
+a
+j
+, where
+a
+i
+must be a multiple of
+2
+a
+i
+=
+a
+i
+2
+a
+j
+=
+a
+j
+⋅2
+Help William find the maximal sum of array elements, which he can get by performing the sequence of operations described above.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). Description of the test cases follows.
+The first line of each test case contains an integer
+n
+(1≤n≤15)
+, the number of elements in William's array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(1≤
+a
+i
+<16)
+, the contents of William's array.
+Output
+For each test case output the maximal sum of array elements after performing an optimal sequence of operations.
+Example
+input
+Copy
+5
+3
+6 4 2
+5
+1 2 3 4 5
+1
+10
+3
+2 3 4
+15
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8
+output
+Copy
+50
+46
+10
+26
+35184372088846
+Note
+In the first example test case the optimal sequence would be:
+Pick
+i=2
+and
+j=1
+. After performing a sequence of operations
+a
+2
+=
+4
+2
+=2
+and
+a
+1
+=6⋅2=12
+, making the array look as: [12, 2, 2].
+Pick
+i=2
+and
+j=1
+. After performing a sequence of operations
+a
+2
+=
+2
+2
+=1
+and
+a
+1
+=12⋅2=24
+, making the array look as: [24, 1, 2].
+Pick
+i=3
+and
+j=1
+. After performing a sequence of operations
+a
+3
+=
+2
+2
+=1
+and
+a
+1
+=24⋅2=48
+, making the array look as: [48, 1, 1].
+The final answer
+48+1+1=50
+.
+In the third example test case there is no way to change the sum of elements, so the answer is
+10
+.

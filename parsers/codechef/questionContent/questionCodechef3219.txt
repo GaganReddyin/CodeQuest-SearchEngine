@@ -1,0 +1,122 @@
+Profitable Paths 2
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree with
+N vertices (numbered
+1 through
+N) and a sequence of integers
+A
+1
+,A
+2
+,…,A
+N
+. You may choose an arbitrary permutation
+p
+1
+,p
+2
+,…,p
+N
+of the integers
+1 through
+N. For each valid
+i, you should assign the value
+A
+p
+i
+to vertex
+i.
+Then, you should choose a vertex of the tree and
+K−1 times, perform one of the following operations:
+Move forward — move to a vertex which is adjacent to your current vertex. However, you must not move to the vertex in which you were immediately before the previus operation (if it exists).
+Turn around — stay in your current vertex. You may only do this if it is impossible to move forward. Since you do not move in this operation, you may move forward again afterwards.
+In this process, you obtain a sequence of vertices
+v
+1
+,v
+2
+,…,v
+K
+— the initial vertex and the vertices in which you were after each operation. Your score is
+∑
+i=1
+K
+A
+p
+v
+i
+. What is the maximum possible value of this score?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Each of the following
+N−1 lines contains two space-separated integers
+u and
+v denoting that vertices
+u and
+v are connected by an edge.
+Output
+For each test case, print a single line containing one integer — the maximum possible score.
+Constraints
+1≤T≤1,000
+2≤N≤300,000
+1≤K≤10
+9
+1≤A
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Subtasks
+Subtask #1 (50 points):
+N≤1,000
+K≤2,000
+the sum of
+N over all test cases does not exceed
+2,000
+the sum of
+K over all test cases does not exceed
+2,000
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+3
+3 3
+1 1 1
+1 2
+2 3
+2 2
+1 2
+1 2
+3 3
+1 2 3
+1 2
+2 3
+3
+3
+8
+Explanation:
+Example case 3: We start at vertex
+2, move forward to vertex
+3, then turn around without moving anywhere and end the process. The score is
+2+3+3=8.

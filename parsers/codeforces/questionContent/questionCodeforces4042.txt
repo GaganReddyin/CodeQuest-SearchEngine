@@ -1,0 +1,70 @@
+E. Random Forest Rank
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Let's define rank of undirected graph as rank of its adjacency matrix in
+R
+n×n
+.
+Given a tree. Each edge of this tree will be deleted with probability
+1/2
+, all these deletions are independent. Let
+E
+be the expected rank of resulting forest. Find
+E⋅
+2
+n−1
+modulo
+998244353
+(it is easy to show that
+E⋅
+2
+n−1
+is an integer).
+Input
+First line of input contains
+n
+(
+1≤n≤5⋅
+10
+5
+) — number of vertices.
+Next
+n−1
+lines contains two integers
+u
+v
+(
+1≤u,v≤n;u≠v
+) — indices of vertices connected by edge.
+It is guaranteed that given graph is a tree.
+Output
+Print one integer — answer to the problem.
+Examples
+input
+Copy
+3
+1 2
+2 3
+output
+Copy
+6
+input
+Copy
+4
+1 2
+1 3
+1 4
+output
+Copy
+14
+input
+Copy
+4
+1 2
+2 3
+3 4
+output
+Copy
+18

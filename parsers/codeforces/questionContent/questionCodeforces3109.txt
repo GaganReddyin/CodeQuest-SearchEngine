@@ -1,0 +1,121 @@
+D. Harmonious Graph
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're given an undirected graph with
+n
+nodes and
+m
+edges. Nodes are numbered from
+1
+to
+n
+.
+The graph is considered harmonious if and only if the following property holds:
+For every triple of integers
+(l,m,r)
+such that
+1≤l<m<r≤n
+, if there exists a path going from node
+l
+to node
+r
+, then there exists a path going from node
+l
+to node
+m
+.
+In other words, in a harmonious graph, if from a node
+l
+we can reach a node
+r
+through edges (
+l<r
+), then we should able to reach nodes
+(l+1),(l+2),…,(r−1)
+too.
+What is the minimum number of edges we need to add to make the graph harmonious?
+Input
+The first line contains two integers
+n
+and
+m
+(
+3≤n≤200 000
+and
+1≤m≤200 000
+).
+The
+i
+-th of the next
+m
+lines contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+), that mean that there's an edge between nodes
+u
+and
+v
+.
+It is guaranteed that the given graph is simple (there is no self-loop, and there is at most one edge between every pair of nodes).
+Output
+Print the minimum number of edges we have to add to the graph to make it harmonious.
+Examples
+input
+Copy
+14 8
+1 2
+2 7
+3 4
+6 3
+5 7
+3 8
+6 8
+11 12
+output
+Copy
+1
+input
+Copy
+200000 3
+7 9
+9 8
+4 5
+output
+Copy
+0
+Note
+In the first example, the given graph is not harmonious (for instance,
+1<6<7
+, node
+1
+can reach node
+7
+through the path
+1→2→7
+, but node
+1
+can't reach node
+6
+). However adding the edge
+(2,4)
+is sufficient to make it harmonious.
+In the second example, the given graph is already harmonious.

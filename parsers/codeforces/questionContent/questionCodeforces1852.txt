@@ -1,0 +1,119 @@
+D. Flip the Cards
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a deck of
+n
+cards. The
+i
+-th card has a number
+a
+i
+on the front and a number
+b
+i
+on the back. Every integer between
+1
+and
+2n
+appears exactly once on the cards.
+A deck is called sorted if the front values are in increasing order and the back values are in decreasing order. That is, if
+a
+i
+<
+a
+i+1
+and
+b
+i
+>
+b
+i+1
+for all
+1≤i<n
+.
+To flip a card
+i
+means swapping the values of
+a
+i
+and
+b
+i
+. You must flip some subset of cards (possibly, none), then put all the cards in any order you like. What is the minimum number of cards you must flip in order to sort the deck?
+Input
+The first line contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of cards.
+The next
+n
+lines describe the cards. The
+i
+-th of these lines contains two integers
+a
+i
+,
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤2n
+). Every integer between
+1
+and
+2n
+appears exactly once.
+Output
+If it is impossible to sort the deck, output "-1". Otherwise, output the minimum number of flips required to sort the deck.
+Examples
+input
+Copy
+5
+3 10
+6 4
+1 9
+5 8
+2 7
+output
+Copy
+2
+input
+Copy
+2
+1 2
+3 4
+output
+Copy
+-1
+input
+Copy
+3
+1 2
+3 6
+4 5
+output
+Copy
+-1
+Note
+In the first test case, we flip the cards
+(1,9)
+and
+(2,7)
+. The deck is then ordered
+(3,10),(5,8),(6,4),(7,2),(9,1)
+. It is sorted because
+3<5<6<7<9
+and
+10>8>4>2>1
+.
+In the second test case, it is impossible to sort the deck.

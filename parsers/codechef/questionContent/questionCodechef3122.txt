@@ -1,0 +1,154 @@
+Add Subtract Equalize
+Problem
+Chef has an array
+A of length
+N.
+In one operation, Chef can do the following:
+Select any non-empty subsequence
+S={S
+1
+,S
+2
+,S
+3
+,…S
+k
+} of
+A (where the
+S
+i
+are the indices of the array representing the chosen subsequence)
+Then, choose one index from this subsequence, say
+S
+j
+Finally, either add
+A
+S
+j
+to every element of the subsequence, or subtract
+A
+S
+j
+from every element of the subsequence. Formally, Chef must choose to do exactly one of:
+Set
+A
+S
+i
+=A
+S
+i
++A
+S
+j
+for every
+1≤i≤k, or
+Set
+A
+S
+i
+=A
+S
+i
+−A
+S
+j
+for every
+1≤i≤k
+Chef's task is to make all the elements of the array equal within
+100 operations.
+Note that after each operation,
+−10
+18
+≤A
+i
+≤10
+18
+should hold for every element of the array.
+See output details for instructions regarding the output format.
+Input Format
+The first line of input contains a single integer
+N denoting the length of the array
+A.
+The second line of input contains
+N space-separated integers denoting the array
+A.
+Output Format
+On the first line output the number of operations you are going to perform, say
+k.
+Then, for each
+i=1,2,…,k, the
+i-th operation must be printed on three lines as follows:
+On a new line, print
+x, the length of the chosen subsequence in this operation.
+On the next line, print
+x distinct indices denoting the chosen subsequence
+S.
+On the next line, print
++ S
+j
+if you want to add
+A
+S
+j
+to all the elements of the subsequence
+S
+− S
+j
+if you want to subtract
+A
+S
+j
+from all the elements of the subsequence
+S.
+Constraints
+2≤N≤1000
+1≤A
+i
+≤10
+5
+Sample 1:
+Input
+Output
+4
+4 1 2 3
+2
+2
+2 4
++ 2
+2
+2 3
++ 3
+Sample 2:
+Input
+Output
+3
+1 2 3
+3
+1
+3
+- 3
+2
+1 3
++ 1
+1
+3
++ 3
+Explanation:
+Test case
+1: The operations change the array as follows:
+Initial array =
+{4,1,2,3}
+Array after first operation =
+{4,2,2,4}
+Array after second operation =
+{4,4,4,4}.
+Test case
+2: The operations change the array as follows:
+Initial array =
+{1,2,3}
+Array after first operation =
+{1,2,0}
+Array after second operation =
+{2,2,1}.
+Array after third operation =
+{2,2,2}.

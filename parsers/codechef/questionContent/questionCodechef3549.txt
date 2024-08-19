@@ -1,0 +1,31 @@
+Irrational Root
+Problem
+Read problems statements in Mandarin Chinese and Vietnamese as well.
+It is well-known that ∑sqrt(ai), ai ∈ N is a root of some integer-coefficient polynomial. For example: sqrt(2) is a root of polynomial: x2 − 2. Now, your task is to find not only such polynomial but also the minimal one. When comparing two polynomials, firstly, we consider their degree and then the coefficient of the highest term, and then the second highest term and so on.
+(Note that we consider only polynomial with the coefficient of highest term is positive)
+Input
+First line contains an integer T denotes the number of test cases. Each test case is described by an integer n and followed by n space-separated integers ai.
+Output:
+Each test case print an integer k denotes the degree of polynomial in a single line. Then next line print k + 1 space-separated integers modulo 109 + 7, coefficients from lowest to highest term.
+Constraints
+1 ≤ T ≤ 5, 1 ≤ n ≤ 15
+ai are n distinct primes, 1 ≤ ai ≤ 109
+Subtasks
+Subtask #1: (10 points): n ≤ 3
+Subtask #2: (20 points): n ≤ 5
+Subtask #3: (30 points): n ≤ 10
+Subtask #4: (40 points): n ≤ 15
+Example
+Input:
+2
+1
+2
+2
+2 3
+Output:
+2
+1000000005 0 1
+4
+1 0 999999997 0 1
+Explanation
+The first polynomial is x2 − 2, and the second one is x4 − 10x2 + 1.

@@ -1,0 +1,101 @@
+Chef vs Bharat
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef and his friend Bharat have decided to play the game "The Chefora Spell".
+In the game, a positive integer
+N (in decimal system) is considered a "Chefora" if the number of digits
+d is odd and it satisfies the equation
+N=∑
+i=0
+d−1
+N
+i
+⋅10
+i
+,
+where
+N
+i
+is the
+i-th digit of
+N from the left in
+0-based indexing.
+Let
+A
+i
+denote the
+i-th smallest Chefora number.
+They'll ask each other
+Q questions, where each question contains two integers
+L and
+R. The opponent then has to answer with
+(∏
+i=L+1
+R
+(A
+L
+)
+A
+i
+)mod10
+9
++7.
+Bharat has answered all the questions right, and now it is Chef's turn. But since Chef fears that he could get some questions wrong, you have come to his rescue!
+Input Format
+The first line contains an integer
+Q - the number of questions Bharat asks.
+Each of the next
+Q lines contains two integers
+L and
+R.
+Output Format
+Print
+Q integers - the answers to the questions on separate lines.
+Constraints
+1≤Q≤10
+5
+1≤L<R≤10
+5
+Subtasks
+Subtask #1 (30 points):
+1≤Q≤5⋅10
+3
+1≤L<R≤5⋅10
+3
+Subtask #2 (70 points): Original constraints
+Sample 1:
+Input
+Output
+2
+1 2
+9 11
+1
+541416750
+Explanation:
+For the first question:
+(A
+1
+)
+A
+2
+=1
+2
+=1.
+For the second question:
+(A
+9
+)
+A
+10
+⋅(A
+9
+)
+A
+11
+=9
+101
+⋅9
+111
+≡541416750(mod10
+9
++7).

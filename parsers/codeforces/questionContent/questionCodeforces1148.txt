@@ -1,0 +1,143 @@
+D. Make Them Equal
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have an array of integers
+a
+of size
+n
+. Initially, all elements of the array are equal to
+1
+. You can perform the following operation: choose two integers
+i
+(
+1≤i≤n
+) and
+x
+(
+x>0
+), and then increase the value of
+a
+i
+by
+⌊
+a
+i
+x
+⌋
+(i.e. make
+a
+i
+=
+a
+i
++⌊
+a
+i
+x
+⌋
+).
+After performing all operations, you will receive
+c
+i
+coins for all such
+i
+that
+a
+i
+=
+b
+i
+.
+Your task is to determine the maximum number of coins that you can receive by performing no more than
+k
+operations.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+k
+(
+1≤n≤
+10
+3
+;0≤k≤
+10
+6
+) — the size of the array and the maximum number of operations, respectively.
+The second line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+3
+).
+The third line contains
+n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+(
+1≤
+c
+i
+≤
+10
+6
+).
+The sum of
+n
+over all test cases does not exceed
+10
+3
+.
+Output
+For each test case, print one integer — the maximum number of coins that you can get by performing no more than
+k
+operations.
+Example
+input
+Copy
+4
+4 4
+1 7 5 2
+2 6 5 2
+3 0
+3 5 2
+5 4 7
+5 9
+5 2 5 6 3
+5 9 1 9 7
+6 14
+11 4 6 2 8 16
+43 45 9 41 15 38
+output
+Copy
+9
+0
+30
+167

@@ -1,0 +1,128 @@
+Random Chocolates
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+We all know that Chef got a box of
+N chocolates (numbered
+1 through
+N) as his birthday present. For each valid
+i, the
+i-th chocolate has a sweetness value
+W
+i
+. Chef is going to play the following randomised game for fun with his brother:
+First, an integer
+k between
+1 and
+N (inclusive) is chosen uniformly randomly.
+Then,
+k times, Chef chooses a chocolate from the box uniformly randomly and independently (each chocolate may be chosen multiple times). For each
+i (
+1≤i≤k), let's denote the sweetness of the
+i-th chocolate chosen by Chef by
+A
+i
+.
+Chef's brother does the same thing ―
+k times, he also chooses a chocolate from the box uniformly randomly and independently from each other or Chef's choices (so each chocolate may still be chosen multiple times). For each
+i (
+1≤i≤k), let's denote the sweetness of the
+i-th chocolate chosen by Chef's brother by
+B
+i
+.
+The score of the game is
+∑
+i=1
+k
+∑
+j=1
+k
+gcd(A
+i
+,B
+j
+).
+Find the expected value of the score. It can be proved that this expected value can be expressed as a fraction
+Q
+P
+, where
+P and
+Q are positive integers and
+Q is coprime with
+998,244,353. You should compute
+P⋅Q
+−1
+modulo
+998,244,353, where
+Q
+−1
+denotes the multiplicative inverse of
+Q modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+W
+1
+,W
+2
+,…,W
+N
+.
+Output
+For each test case, print a single line containing one integer
+P⋅Q
+−1
+modulo
+998,244,353.
+Constraints
+1≤T≤5
+1≤N≤3⋅10
+5
+1≤W
+i
+≤5⋅10
+5
+for each valid
+i
+Sample 1:
+Input
+Output
+2
+3
+1 2 3
+4
+2 2 2 2
+887328320
+15
+Explanation:
+Example case 2:
+When
+k=1, the score is
+1
+2
+⋅2=2.
+When
+k=2, the score is
+2
+2
+⋅2=8.
+When
+k=3, the score is
+3
+2
+⋅2=18.
+When
+k=4, the score is
+4
+2
+⋅2=32.
+The expected score is
+4
+2+8+18+32
+=15.

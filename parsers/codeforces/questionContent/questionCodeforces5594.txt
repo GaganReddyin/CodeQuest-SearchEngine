@@ -1,0 +1,20 @@
+F. Array Covering
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Misha has an array of integers of length n. He wants to choose k different continuous subarrays, so that each element of the array belongs to at least one of the chosen subarrays.
+Misha wants to choose the subarrays in such a way that if he calculated the sum of elements for each subarray, and then add up all these sums, the resulting value was maximum possible.
+Input
+The first line of input contains two integers: n, k (1 ≤ n ≤ 100 000, 1 ≤ k ≤ n·(n + 1) / 2) — the number of elements in the array and the number of different subarrays that must be chosen.
+The second line contains n integers ai ( - 50 000 ≤ ai ≤ 50 000) — the elements of the array.
+Output
+Output one integer — the maximum possible value Misha can get by choosing k different subarrays.
+Example
+input
+Copy
+5 4
+6 -4 -10 -4 7
+output
+Copy
+11

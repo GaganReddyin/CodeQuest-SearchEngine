@@ -1,0 +1,1 @@
+A. Circular Local MiniMax

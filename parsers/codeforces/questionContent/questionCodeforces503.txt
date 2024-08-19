@@ -1,0 +1,181 @@
+A. Two Groups
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+integers. You want to distribute these
+n
+integers into two groups
+s
+1
+and
+s
+2
+(groups can be empty) so that the following conditions are satisfied:
+For each
+i
+(1≤i≤n)
+,
+a
+i
+goes into exactly one group.
+The value
+|sum(
+s
+1
+)|−|sum(
+s
+2
+)|
+is the maximum possible among all such ways to distribute the integers.
+Here
+sum(
+s
+1
+)
+denotes the sum of the numbers in the group
+s
+1
+, and
+sum(
+s
+2
+)
+denotes the sum of the numbers in the group
+s
+2
+.
+Determine the maximum possible value of
+|sum(
+s
+1
+)|−|sum(
+s
+2
+)|
+.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(1≤t≤2⋅
+10
+4
+)
+ — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(1≤n≤
+10
+5
+)
+ — the length of the array
+a
+.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+…
+a
+n
+(−
+10
+9
+≤
+a
+i
+≤
+10
+9
+)
+ — elements of the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer  — the maximum possible value of
+|sum(
+s
+1
+)|−|sum(
+s
+2
+)|
+.
+Example
+input
+Copy
+4
+2
+10 -10
+4
+-2 -1 11 0
+3
+2 3 2
+5
+-9 2 0 0 -4
+output
+Copy
+0
+8
+7
+11
+Note
+In the first testcase, we can distribute as
+s
+1
+={10}
+,
+s
+2
+={−10}
+. Then the value will be
+|10|−|−10|=0
+.
+In the second testcase, we can distribute as
+s
+1
+={0,11,−1}
+,
+s
+2
+={−2}
+. Then the value will be
+|0+11−1|−|−2|=10−2=8
+.
+In the third testcase, we can distribute as
+s
+1
+={2,3,2}
+,
+s
+2
+={}
+. Then the value will be
+|2+3+2|−|0|=7
+.
+In the fourth testcase, we can distribute as
+s
+1
+={−9,−4,0}
+,
+s
+2
+={2,0}
+. Then the value will be
+|−9−4+0|−|2+0|=13−2=11
+.

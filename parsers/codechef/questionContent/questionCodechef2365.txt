@@ -1,0 +1,88 @@
+Perfection
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a sequence of positive integers
+A
+1
+,A
+2
+,…,A
+N
+. You should make all its elements equal by performing a sequence of operations.
+In one operation, you may choose any contiguous subsequence
+A
+l
+,A
+l+1
+,…,A
+r
+such that for each
+i (
+l+1≤i≤r),
+A
+i
+=A
+l
+, i.e. a sequence of identical elements, then choose any integer
+x<A
+l
+, and for each
+i (
+l≤i≤r), replace
+A
+i
+by
+x. The integers
+x chosen in different operations may be different.
+Find the smallest number of operations necessary to make all elements of the given sequence equal.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+Print a single line containing one integer ― the smallest number of operations.
+Constraints
+1≤T≤100
+1≤N≤5⋅10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Subtasks
+Subtask #1 (50 points):
+A
+i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+5,000
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+5
+5 9 8 3 12
+2
+19 19
+4
+0

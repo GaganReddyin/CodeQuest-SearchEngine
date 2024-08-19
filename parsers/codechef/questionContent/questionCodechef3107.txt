@@ -1,0 +1,159 @@
+Bullets and Enemies
+Problem
+There are
+N enemies standing from left to right with strengths
+S
+1
+,S
+2
+,…,S
+N
+.
+M bullets are to be fired from the left side such that only one bullet is fired at a time. The
+i
+th
+bullet
+(1≤i≤M) has power
+P
+i
+and capacity
+C
+i
+.
+This means that the
+i
+th
+bullet affects the first
+C
+i
+alive enemies from the left side and decreases the strength of each of those
+C
+i
+enemies by
+P
+i
+.
+Once an enemy’s strength becomes less than or equal to
+0, the enemy dies and its strength becomes
+0.
+Find the strength of all the enemies after all
+M bullets are fired.
+Input Format
+First line will contain
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains two space-separated integers
+N and
+M.
+The second line contains
+N space-separated integers
+S
+1
+,S
+2
+,…,S
+N
+, denoting strength of the enemies.
+The third line contains
+M space-separated integers
+P
+1
+,P
+2
+,…,P
+M
+, denoting the power of the
+i
+th
+bullet.
+The fourth line contains
+M space-separated integers
+C
+1
+,C
+2
+,…,C
+M
+, denoting the capacity of the
+i
+th
+bullet.
+Output Format
+For each test case, output
+N space-separated integers denoting the final strength of the enemies.
+Constraints
+1≤T≤10
+3
+1≤N,M≤3⋅10
+5
+1≤S
+i
+,P
+i
+≤10
+9
+1≤C
+i
+≤N
+Sum of
+N over all the test cases does not exceed
+3⋅10
+5
+.
+Sum of
+M over all the test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+7 4
+51 84 24 19 77 10 34
+3 6 3 10
+2 2 6 2
+4 3
+10 5 4 8
+4 2 3
+2 4 2
+29 62 21 16 74 7 34
+1 0 0 6
+Explanation:
+Test case
+1: Initial strength of the enemies is
+[51,84,24,19,77,10,34].
+The power of the first bullet is
+3 and the capacity is
+2. This means that the first bullet reduces the strength of the first and second enemies by
+3. The strength of the enemies after the first bullet is fired:
+[48,81,24,19,77,10,34].
+The power of the second bullet is
+6 and the capacity is
+2. This means that the second bullet reduces the strength of first and second enemies by
+6. The strength of the enemies after the second bullet is fired:
+[42,75,24,19,77,10,34].
+The strength of enemies after third bullet is fired:
+[39,72,21,16,74,7,34].
+The strength of enemies after fourth bullet is fired:
+[29,62,21,16,74,7,34].
+Test case
+2: Initial strength of the enemies is
+[10,5,4,8].
+The power of the first bullet is
+4 and the capacity is
+2. This means that the first bullet reduces the strength of the first and second enemies by
+4. The strength of the enemies after the first bullet is fired:
+[6,1,4,8].
+The power of the second bullet is
+2 and the capacity is
+4. This means that the second bullet reduces the strength of the first four enemies by
+2. The strength of the enemies after the second bullet is fired:
+[4,0,2,6]. Note that due to this bullet, the second enemy dies and its strength becomes
+0.
+The power of the third bullet is
+3 and the capacity is
+2. This means that the third bullet reduces the strength of the first two alive enemies by
+3. The strength of the enemies after the third bullet is fired:
+[1,0,0,6]. Note that since the second enemy is already dead, enemies
+1 and
+3 are affected by this bullet.

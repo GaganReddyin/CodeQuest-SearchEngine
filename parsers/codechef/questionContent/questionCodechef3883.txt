@@ -1,0 +1,198 @@
+Graph Labelling
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given a directed graph
+G with
+N vertices (numbered
+1 through
+N) and
+M edges. Let's denote the set of its vertices by
+V, the set of its edges by
+E and an edge from a vertex
+u to a vertex
+v by
+(u,v). Then, let's define:
+For each
+u,v∈V,
+R(u,v) is true if
+v can be reached from
+u or false otherwise. Specifically, if
+u=v, it is always true.
+For each
+v∈V, a set of vertices
+N(v)={u∈V∣R(u,v)∧R(v,u)}.
+For each subset
+U⊆V, two sets of edges
+Out(U)={(u,v)∈E∣u∈U} and
+In(U)={(v,u)∈E∣u∈U}.
+You need to assign a label to each edge in
+E; you may only use labels
+1 and
+2. The costs of labelling an edge are
+c
+1
+and
+c
+2
+for the labels
+1 and
+2 respectively.
+In the resulting graph,
+Q constraints (numbered
+1 through
+Q) need to be satisfied. For each valid
+i, the
+i-th constraint is that the number of edges in a set
+S
+i
+with the label
+x
+i
+should be between
+l
+i
+and
+r
+i
+(inclusive);
+S
+i
+is determined by a given vertex
+w
+i
+and the type of this constraint
+t
+i
+as follows:
+t
+i
+=1:
+S
+i
+=Out(N(w
+i
+))
+t
+i
+=2:
+S
+i
+=In(N(w
+i
+))
+t
+i
+=3:
+S
+i
+=Out({w
+i
+})
+t
+i
+=4:
+S
+i
+=In({w
+i
+})
+Find the smallest cost of labelling all the edges in such a way that these
+Q constraints are satisfied or determine that there is no solution satisfying all constraints.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+N,
+M and
+Q.
+Each of the following
+M lines contains two space-separated integers
+u and
+v denoting a directed edge
+(u,v).
+The next line contains two space-separated integers
+c
+1
+and
+c
+2
+.
+Q lines follow. For each valid
+i, the
+i-th of these lines contains five space-separated integers
+t
+i
+,
+w
+i
+,
+x
+i
+,
+l
+i
+and
+r
+i
+.
+Output
+For each test case, print a single line containing one integer ― the smallest cost of labelling the edges or
+−1 if it is impossible to label the edges in such a way that all constraints are satisfied.
+Constraints
+1≤T≤100
+1≤N≤3⋅10
+4
+0≤M≤3⋅10
+4
+0≤Q≤3⋅10
+5
+1≤u,v≤N
+1≤c
+1
+,c
+2
+≤10
+9
+1≤t
+i
+≤4 for each valid
+i
+1≤w
+i
+≤N for each valid
+i
+x
+i
+∈{1,2} for each valid
+i
+0≤l
+i
+≤r
+i
+≤M for each valid
+i
+the sum of
+N over all test cases does not exceed
+6⋅10
+4
+the sum of
+M over all test cases does not exceed
+6⋅10
+4
+the sum of
+Q over all test cases does not exceed
+6⋅10
+5
+Sample 1:
+Input
+Output
+1
+4 4 1
+1 2
+2 3
+1 3
+3 4
+10 20
+3 1 1 1 1
+50

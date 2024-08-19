@@ -1,0 +1,118 @@
+Minimum OR Spanning Tree
+Problem
+The or-weight of a weighted tree is defined as the bitwise-or of the weights of all edges of the tree.
+You are given an undirected weighted connected graph with
+N nodes and
+M edges.
+Your task is to find the spanning tree with minimum or-weight.
+You should answer
+Q queries. For the
+i
+th
+query:
+We add an undirected edge between nodes
+x
+i
+and
+y
+i
+with weight
+0.
+You should output the answer after each modification.
+Note:
+Each query is independent. In other words, we modify on the original graph each time.
+An undirected graph has edges with no direction.
+A weighted graph is a graph where a weight is assigned to each edge.
+A connected graph is a graph where every pair of nodes is connected.
+Input Format
+The first line of contains three space-separated integers
+N,
+M and
+Q — the number of nodes, edges and queries, respectively.
+The next
+M lines describe the edges. The
+i
+th
+of these
+M lines contain three space-separated integers
+u
+i
+,
+v
+i
+and
+w
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+with weight
+w
+i
+.
+The next
+Q lines describe the queries. The
+i
+th
+of these
+Q lines contain two space-separated integers
+x
+i
+and
+y
+i
+, denoting that we add an undirected edge between nodes
+x
+i
+and
+y
+i
+with weight
+0.
+Output Format
+For each query, output on a new line - the minimum or-weight of a spanning tree after adding a new edge.
+Constraints
+3≤N,M,Q≤10
+5
+N−1≤M≤
+2
+N⋅(N−1)
+1≤u
+i
+,v
+i
+,x
+i
+,y
+i
+≤N
+0≤w
+i
+<2
+30
+Sample 1:
+Input
+Output
+5 6 3
+1 2 2
+1 3 1
+1 4 4
+2 4 1
+3 4 2
+4 5 0
+2 4
+3 4
+4 5
+2
+1
+3
+Explanation:
+Test case
+1:
+Test case
+2:
+Test case
+3:

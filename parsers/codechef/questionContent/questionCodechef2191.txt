@@ -1,0 +1,76 @@
+Corrupted Seven-Segment Display
+Problem
+###Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+Consider a seven-segment display, which can be used to show a decimal digit (
+0 through
+9). When a digit is shown on a working display, specific segments of the display turn on, as depicted in the following image (for digits
+1 through
+9):
+0 is depicted as usual, with all the segments turned on, except the middle one.
+Some of the segments of this display (possibly all or none) are dead ― they never turn on. In order to find out which segments could be dead, we ran
+N tests with the display. For each
+i (
+1≤i≤N), in the
+i-th test, we tried to show the digit
+x
+i
+and out of the
+7 segments of the display,
+y
+i
+segments turned on.
+It is possible that the results of tests have been recorded incorrectly. Determine if the recorded results are valid, i.e. if there is a set of dead segments such that in each test, the recorded number of segments that turned on is correct. If it is valid, calculate the minimum possible number of dead segments and the maximum possible number of dead segments consistent with the results of the tests.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains two space-separated integers
+x
+i
+and
+y
+i
+.
+Output
+For each test case:
+If the results of tests are invalid, print a single line containing the string "invalid" (without quotes).
+Otherwise, print a single line containing two space-separated integers ― the minimum and maximum number of dead segments.
+Constraints
+1≤T≤1,000
+1≤N≤10
+0≤x
+i
+≤9 for each valid
+i
+0≤y
+i
+≤7 for each valid
+i
+x
+1
+,x
+2
+,…,x
+N
+are pairwise distinct
+Subtasks
+Subtask #1 (20 points):
+N=1
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2
+2
+2 4
+5 4
+2
+8 6
+0 7
+1 2
+invalid

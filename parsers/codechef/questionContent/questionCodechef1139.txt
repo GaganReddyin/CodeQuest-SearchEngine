@@ -1,0 +1,34 @@
+Chef and squares
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+  Chef has finished his freshman year in college. As a present, his parents gave him a new problem to solve:
+Chef has to fill a K x K square grid of integers in a certain way. Let us say that such a grid is valid if:
+Each cell contains an integer from 1 and K (inclusive).
+No integer appears twice in the same row or the same column.
+Let F(K) be maximum possible distance between the center of the square and the closest cell that contains 1, among all possible squares with the side length K.
+Here, we use the following notions:
+The distance between cell (x, y) and (i, j) is equal to |x-i|+|y-j|.
+The center of a K x K square is cell ((K+1)/2, (K+1)/2) for odd K.
+Input
+The first line of input contains a single integer T denoting the number of test cases.
+Each test case consists of a single line containing a single odd integer K.
+  Output
+For each test case, print K lines each consisting of K space separated integers giving some square grid where the distance from the center of the grid to the nearest 1 is exactly F(K). If there's more than 1 possible answer output any of them.
+  Constraints
+Ki is odd.
+Subtask #1 (10 points) :
+1 ≤ T ≤ 50
+1 ≤ Ki≤ 5
+Subtask #1 (90 points) :
+1 ≤ T ≤ 10
+1 ≤ Ki < 400
+Sample 1:
+Input
+Output
+2
+1
+3
+1
+3 2 1
+1 3 2
+2 1 3

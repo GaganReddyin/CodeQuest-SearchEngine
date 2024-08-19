@@ -1,0 +1,25 @@
+C. Magic Odd Square
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Find an n × n matrix with different numbers from 1 to n2, so the sum in each row, column and both main diagonals are odd.
+Input
+The only line contains odd integer n (1 ≤ n ≤ 49).
+Output
+Print n lines with n integers. All the integers should be different and from 1 to n2. The sum in each row, column and both main diagonals should be odd.
+Examples
+input
+Copy
+1
+output
+Copy
+1
+input
+Copy
+3
+output
+Copy
+2 1 4
+3 5 7
+6 9 8

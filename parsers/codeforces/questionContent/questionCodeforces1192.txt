@@ -1,0 +1,184 @@
+A. Ancient Civilization
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Martian scientists explore Ganymede, one of Jupiter's numerous moons. Recently, they have found ruins of an ancient civilization. The scientists brought to Mars some tablets with writings in a language unknown to science.
+They found out that the inhabitants of Ganymede used an alphabet consisting of two letters, and each word was exactly
+ℓ
+letters long. So, the scientists decided to write each word of this language as an integer from
+0
+to
+2
+ℓ
+−1
+inclusively. The first letter of the alphabet corresponds to zero bit in this integer, and the second letter corresponds to one bit.
+The same word may have various forms in this language. Then, you need to restore the initial form. The process of doing it is described below.
+Denote the distance between two words as the amount of positions, in which these words differ. For example, the distance between
+1001
+2
+and
+1100
+2
+(in binary) is equal to two, as these words have different letters in the second and the fourth positions, counting from left to right. Further, denote the distance between words
+x
+and
+y
+as
+d(x,y)
+.
+Let the word have
+n
+forms, the
+i
+-th of which is described with an integer
+x
+i
+. All the
+x
+i
+are not necessarily different, as two various forms of the word can be written the same. Consider some word
+y
+. Then, closeness of the word
+y
+is equal to the sum of distances to each of the word forms, i. e. the sum
+d(
+x
+i
+,y)
+over all
+1≤i≤n
+.
+The initial form is the word
+y
+with minimal possible nearness.
+You need to help the scientists and write the program which finds the initial form of the word given all its known forms. Note that the initial form is not necessarily equal to any of the
+n
+given forms.
+Input
+The first line contains an integer
+t
+(
+1≤t≤100
+) — the number of test cases. The following are descriptions of the test cases.
+The first line contains two integers
+n
+and
+ℓ
+(
+1≤n≤100
+,
+1≤ℓ≤30
+) — the amount of word forms, and the number of letters in one word.
+The second line contains
+n
+integers
+x
+i
+(
+0≤
+x
+i
+≤
+2
+ℓ
+−1
+) — word forms. The integers are not necessarily different.
+Output
+For each test, print a single integer, the initial form of the word, i. e. such
+y
+(
+0≤y≤
+2
+ℓ
+−1
+) that the sum
+d(
+x
+i
+,y)
+over all
+1≤i≤n
+is minimal possible. Note that
+y
+can differ from all the integers
+x
+i
+.
+If there are multiple ways to restore the initial form, print any.
+Example
+input
+Copy
+7
+3 5
+18 9 21
+3 5
+18 18 18
+1 1
+1
+5 30
+1 2 3 4 5
+6 10
+99 35 85 46 78 55
+2 1
+0 1
+8 8
+5 16 42 15 83 65 78 42
+output
+Copy
+17
+18
+1
+1
+39
+0
+2
+Note
+In the first test case, the words can be written as
+x
+1
+=
+10010
+2
+,
+x
+2
+=
+01001
+2
+and
+x
+3
+=
+10101
+2
+in binary. Let
+y=
+10001
+2
+. Then,
+d(
+x
+1
+,y)=2
+(the difference is in the fourth and the fifth positions),
+d(
+x
+2
+,y)=2
+(the difference is in the first and the second positions),
+d(
+x
+3
+,y)=1
+(the difference is in the third position). So, the closeness is
+2+2+1=5
+. It can be shown that you cannot achieve smaller closeness.
+In the second test case, all the forms are equal to
+18
+(
+10010
+2
+in binary), so the initial form is also
+18
+. It's easy to see that closeness is equal to zero in this case.

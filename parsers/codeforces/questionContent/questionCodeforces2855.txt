@@ -1,0 +1,176 @@
+C. Kuroni and Impossible Calculation
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+To become the king of Codeforces, Kuroni has to solve the following problem.
+He is given
+n
+numbers
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Help Kuroni to calculate
+∏
+1≤i<j≤n
+|
+a
+i
+−
+a
+j
+|
+. As result can be very big, output it modulo
+m
+.
+If you are not familiar with short notation,
+∏
+1≤i<j≤n
+|
+a
+i
+−
+a
+j
+|
+is equal to
+|
+a
+1
+−
+a
+2
+|⋅|
+a
+1
+−
+a
+3
+|⋅
+…
+⋅|
+a
+1
+−
+a
+n
+|⋅|
+a
+2
+−
+a
+3
+|⋅|
+a
+2
+−
+a
+4
+|⋅
+…
+⋅|
+a
+2
+−
+a
+n
+|⋅
+…
+⋅|
+a
+n−1
+−
+a
+n
+|
+. In other words, this is the product of
+|
+a
+i
+−
+a
+j
+|
+for all
+1≤i<j≤n
+.
+Input
+The first line contains two integers
+n
+,
+m
+(
+2≤n≤2⋅
+10
+5
+,
+1≤m≤1000
+) — number of numbers and modulo.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+).
+Output
+Output the single number —
+∏
+1≤i<j≤n
+|
+a
+i
+−
+a
+j
+|modm
+.
+Examples
+input
+Copy
+2 10
+8 5
+output
+Copy
+3
+input
+Copy
+3 12
+1 4 5
+output
+Copy
+0
+input
+Copy
+3 7
+1 4 9
+output
+Copy
+1
+Note
+In the first sample,
+|8−5|=3≡3mod10
+.
+In the second sample,
+|1−4|⋅|1−5|⋅|4−5|=3⋅4⋅1=12≡0mod12
+.
+In the third sample,
+|1−4|⋅|1−9|⋅|4−9|=3⋅8⋅5=120≡1mod7
+.

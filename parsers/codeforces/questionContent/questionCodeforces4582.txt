@@ -1,0 +1,29 @@
+F. 2 + 2 != 4
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+One very experienced problem writer decided to prepare a problem for April Fools Day contest. The task was very simple - given an arithmetic expression, return the result of evaluating this expression. However, looks like there is a bug in the reference solution...
+Input
+The only line of input data contains the arithmetic expression. The expression will contain between 2 and 10 operands, separated with arithmetic signs plus and/or minus. Each operand will be an integer between 0 and 255, inclusive.
+Output
+Reproduce the output of the reference solution, including the bug.
+Examples
+input
+Copy
+8-7+6-5+4-3+2-1-0
+output
+Copy
+4
+input
+Copy
+2+2
+output
+Copy
+-46
+input
+Copy
+112-37
+output
+Copy
+375

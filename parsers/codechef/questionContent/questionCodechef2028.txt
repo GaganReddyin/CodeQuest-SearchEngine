@@ -1,0 +1,92 @@
+Good Median
+Problem
+###Read problems statements Hindi , Vietnamese , Mandarin Chinese , Russian and Bengali as well.
+Raja only participates in contests and does not upsolve, but he claims that he has been upsolving. Chef wants to test if he is really improving, so he asks Raja to solve the following problem.
+The median of a sequence of numbers is computed in the following way:
+sort the sequence in non-decreasing order
+if the number of elements of this sequence is odd, the median is its middle element
+if the number of elements is even, the median is the average (arithmetic mean) of its two middle elements
+For example, the median of
+[1,3,2] is
+2 and the median of
+[2,3,3,2] is
+(2+3)/2=5/2.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Let's call a subsequence
+A
+i
+1
+,A
+i
+2
+,…,A
+i
+k
+(for any
+k>0,
+1≤i
+1
+<i
+2
+<…<i
+k
+≤N) good if the median of this subsequence is an element of this subsequence. Find the number of good subsequences. Since this number may be large, compute it modulo
+1000000007 (
+10
+9
++7).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the number of good subsequences modulo
+10
+9
++7.
+Constraints
+1≤T≤30
+1≤N≤1,000
+1≤A
+i
+≤2N for each valid
+i
+Subtasks
+Subtask #1 (5 points):
+A is a permutation of integers
+1 through
+N
+Subtask #2 (25 points):
+1≤N≤100
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+3
+2 3 2
+5
+Explanation:
+Example case 1: The good subsequences are
+[2],
+[3],
+[2],
+[2,2],
+[2,3,2].

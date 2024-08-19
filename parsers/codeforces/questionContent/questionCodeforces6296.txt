@@ -1,0 +1,34 @@
+D. Mike and Fish
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+As everyone knows, bears love fish. But Mike is a strange bear; He hates fish! The even more strange thing about him is he has an infinite number of blue and red fish.
+He has marked n distinct points in the plane. i-th point is point (xi, yi). He wants to put exactly one fish in each of these points such that the difference between the number of red fish and the blue fish on each horizontal or vertical line is at most 1.
+He can't find a way to perform that! Please help him.
+Input
+The first line of input contains integer n (1 ≤ n ≤ 2 × 105).
+The next n lines contain the information about the points, i-th line contains two integers xi and yi (1 ≤ xi, yi ≤ 2 × 105), the i-th point coordinates.
+It is guaranteed that there is at least one valid answer.
+Output
+Print the answer as a sequence of n characters 'r' (for red) or 'b' (for blue) where i-th character denotes the color of the fish in the i-th point.
+Examples
+input
+Copy
+4
+1 1
+1 2
+2 1
+2 2
+output
+Copy
+brrb
+input
+Copy
+3
+1 1
+1 2
+2 1
+output
+Copy
+brr

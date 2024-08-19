@@ -1,0 +1,296 @@
+C. Candies!
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider a sequence of digits of length
+2
+k
+[
+a
+1
+,
+a
+2
+,…,
+a
+2
+k
+]
+. We perform the following operation with it: replace pairs
+(
+a
+2i+1
+,
+a
+2i+2
+)
+with
+(
+a
+2i+1
++
+a
+2i+2
+)mod10
+for
+0≤i<
+2
+k−1
+. For every
+i
+where
+a
+2i+1
++
+a
+2i+2
+≥10
+we get a candy! As a result, we will get a sequence of length
+2
+k−1
+.
+Less formally, we partition sequence of length
+2
+k
+into
+2
+k−1
+pairs, each consisting of 2 numbers: the first pair consists of the first and second numbers, the second of the third and fourth
+…
+, the last pair consists of the (
+2
+k
+−1
+)-th and (
+2
+k
+)-th numbers. For every pair such that sum of numbers in it is at least
+10
+, we get a candy. After that, we replace every pair of numbers with a remainder of the division of their sum by
+10
+(and don't change the order of the numbers).
+Perform this operation with a resulting array until it becomes of length
+1
+. Let
+f([
+a
+1
+,
+a
+2
+,…,
+a
+2
+k
+])
+denote the number of candies we get in this process.
+For example: if the starting sequence is
+[8,7,3,1,7,0,9,4]
+then:
+After the first operation the sequence becomes
+[(8+7)mod10,(3+1)mod10,(7+0)mod10,(9+4)mod10]
+=
+[5,4,7,3]
+, and we get
+2
+candies as
+8+7≥10
+and
+9+4≥10
+.
+After the second operation the sequence becomes
+[(5+4)mod10,(7+3)mod10]
+=
+[9,0]
+, and we get one more candy as
+7+3≥10
+.
+After the final operation sequence becomes
+[(9+0)mod10]
+=
+[9]
+.
+Therefore,
+f([8,7,3,1,7,0,9,4])=3
+as we got
+3
+candies in total.
+You are given a sequence of digits of length
+n
+s
+1
+,
+s
+2
+,…
+s
+n
+. You have to answer
+q
+queries of the form
+(
+l
+i
+,
+r
+i
+)
+, where for
+i
+-th query you have to output
+f([
+s
+l
+i
+,
+s
+l
+i
++1
+,…,
+s
+r
+i
+])
+. It is guaranteed that
+r
+i
+−
+l
+i
++1
+is of form
+2
+k
+for some nonnegative integer
+k
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the length of the sequence.
+The second line contains
+n
+digits
+s
+1
+,
+s
+2
+,…,
+s
+n
+(
+0≤
+s
+i
+≤9
+).
+The third line contains a single integer
+q
+(
+1≤q≤
+10
+5
+) — the number of queries.
+Each of the next
+q
+lines contains two integers
+l
+i
+,
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+) —
+i
+-th query. It is guaranteed that
+r
+i
+−
+l
+i
++1
+is a nonnegative integer power of
+2
+.
+Output
+Output
+q
+lines, in
+i
+-th line output single integer —
+f([
+s
+l
+i
+,
+s
+l
+i
++1
+,…,
+s
+r
+i
+])
+, answer to the
+i
+-th query.
+Examples
+input
+Copy
+8
+8 7 3 1 7 0 9 4
+3
+1 8
+2 5
+7 7
+output
+Copy
+3
+1
+0
+input
+Copy
+6
+0 1 2 3 3 5
+3
+1 2
+1 4
+3 6
+output
+Copy
+0
+0
+1
+Note
+The first example illustrates an example from the statement.
+f([7,3,1,7])=1
+: sequence of operations is
+[7,3,1,7]→[(7+3)mod10,(1+7)mod10]
+=
+[0,8]
+and one candy as
+7+3≥10
+→
+[(0+8)mod10]
+=
+[8]
+, so we get only
+1
+candy.
+f([9])=0
+as we don't perform operations with it.

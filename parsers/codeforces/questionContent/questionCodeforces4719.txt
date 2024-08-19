@@ -1,0 +1,66 @@
+E. Congruence Equation
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given an integer
+x
+. Your task is to find out how many positive integers
+n
+(
+1≤n≤x
+) satisfy
+n⋅
+a
+n
+≡b(modp),
+n
+where
+a,b,p
+are all known constants.
+Input
+The only line contains four integers
+a,b,p,x
+(
+2≤p≤
+10
+6
++3
+,
+1≤a,b<p
+,
+1≤x≤
+10
+12
+). It is guaranteed that
+p
+is a prime.
+Output
+Print a single integer: the number of possible answers
+n
+.
+Examples
+input
+Copy
+2 3 5 8
+output
+Copy
+2
+input
+Copy
+4 6 7 13
+output
+Copy
+1
+input
+Copy
+233 233 10007 1
+output
+Copy
+1
+Note
+In the first sample, we can see that
+n=2
+and
+n=8
+are possible answers.

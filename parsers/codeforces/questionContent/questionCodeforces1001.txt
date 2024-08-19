@@ -1,0 +1,128 @@
+L. Il Derby della Madonnina
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The derby between Milan and Inter is happening soon, and you have been chosen as the assistant referee for the match, also known as linesman. Your task is to move along the touch-line, namely the side of the field, always looking very carefully at the match to check for offside positions and other offences.
+Football is an extremely serious matter in Italy, and thus it is fundamental that you keep very close track of the ball for as much time as possible. This means that you want to maximise the number of kicks which you monitor closely. You are able to monitor closely a kick if, when it happens, you are in the position along the touch-line with minimum distance from the place where the kick happens.
+Fortunately, expert analysts have been able to accurately predict all the kicks which will occur during the game. That is, you have been given two lists of integers,
+t
+1
+,…,
+t
+n
+and
+a
+1
+,…,
+a
+n
+, indicating that
+t
+i
+seconds after the beginning of the match the ball will be kicked and you can monitor closely such kick if you are at the position
+a
+i
+along the touch-line.
+At the beginning of the game you start at position
+0
+and the maximum speed at which you can walk along the touch-line is
+v
+units per second (i.e., you can change your position by at most
+v
+each second). What is the maximum number of kicks that you can monitor closely?
+Input
+The first line contains two integers
+n
+and
+v
+(
+1≤n≤2⋅
+10
+5
+,
+1≤v≤
+10
+6
+) — the number of kicks that will take place and your maximum speed.
+The second line contains
+n
+integers
+t
+1
+,…,
+t
+n
+(
+1≤
+t
+i
+≤
+10
+9
+) — the times of the kicks in the match. The sequence of times is guaranteed to be strictly increasing, i.e.,
+t
+1
+<
+t
+2
+<⋯<
+t
+n
+.
+The third line contains
+n
+integers
+a
+1
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+) — the positions along the touch-line where you have to be to monitor closely each kick.
+Output
+Print the maximum number of kicks that you can monitor closely.
+Examples
+input
+Copy
+3 2
+5 10 15
+7 17 29
+output
+Copy
+2
+input
+Copy
+5 1
+5 7 8 11 13
+3 3 -2 -2 4
+output
+Copy
+3
+input
+Copy
+1 2
+3
+7
+output
+Copy
+0
+Note
+In the first sample, it is possible to move to the right at maximum speed for the first
+3.5
+seconds and stay at position
+7
+until the first kick happens, and then immediately move right also at maximum speed to watch the second kick at position
+17
+. There is no way to monitor closely the third kick after the second kick, so at most
+2
+kicks can be seen.

@@ -1,0 +1,117 @@
+Good Binary Strings
+Problem
+You are given a binary string
+S. A binary string is a string consisting of only
+0's and
+1's.
+A binary string is called good if it has an equal number of occurrences of
+01 substrings and
+10 substrings. Note that these substrings may overlap. For example, the string
+1101001 is good since there are two occurrences of
+01 (
+11
+01
+001 and
+11010
+01
+) and two occurrences of
+10 (
+1
+10
+1001 and
+110
+10
+01).
+Find the number of indices
+i
+(1≤i≤∣S∣) such that after flipping
+S
+i
+, the resultant binary string is good. (If
+S
+i
+is
+0, flipping it changes it to
+1, and if
+S
+i
+is
+1, flipping it changes it to
+0)
+Note: A string
+A is a substring of a string
+B if
+A can be obtained from
+B by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The second line of each test case contains a binary string
+S containing
+0s and
+1s only.
+Output Format
+For each test case, output on a single line the number indices
+i such that flipping
+S
+i
+results in a good binary string.
+Constraints
+1≤T≤10
+5
+2≤∣S∣≤2⋅10
+5
+The sum of lengths of
+S over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+10100
+11111
+2
+3
+Explanation:
+Test case 1: When
+i=1, flipping
+S
+1
+produces the string
+00100, which is good since there is one occurrence of
+01 (
+0
+01
+00) and one occurrence of
+10 (
+00
+10
+0).
+When
+i=5, flipping
+S
+5
+produces the string
+10101, which is good since there are two occurrences of
+01 (
+1
+01
+01 and
+101
+01
+) and are two occurrences of
+10 (
+10
+101 and
+10
+10
+1).
+It can be shown that for
+i=2,3,4 flipping
+S
+i
+does not result in a good binary string.
+Thus the number of indices resulting in a good binary string is
+2.

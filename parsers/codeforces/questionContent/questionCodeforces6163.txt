@@ -1,0 +1,44 @@
+D. Number of Binominal Coefficients
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For a given prime integer p and integers α, A calculate the number of pairs of integers (n, k), such that 0 ≤ k ≤ n ≤ A and is divisible by pα.
+As the answer can be rather large, print the remainder of the answer moduly 109 + 7.
+Let us remind you that is the number of ways k objects can be chosen from the set of n objects.
+Input
+The first line contains two integers, p and α (1 ≤ p, α ≤ 109, p is prime).
+The second line contains the decimal record of integer A (0 ≤ A < 101000) without leading zeroes.
+Output
+In the single line print the answer to the problem.
+Examples
+input
+Copy
+2 2
+7
+output
+Copy
+3
+input
+Copy
+3 1
+9
+output
+Copy
+17
+input
+Copy
+3 3
+9
+output
+Copy
+0
+input
+Copy
+2 4
+5000
+output
+Copy
+8576851
+Note
+In the first sample three binominal coefficients divisible by 4 are , and .

@@ -1,0 +1,57 @@
+Minimum Deletions
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+The greatest common divisor (GCD) of a sequence is the greatest positive integer which divides each element of this sequence.
+You are given a sequence
+A of positive integers with size
+N. You are allowed to delete up to
+N−1 elements from this sequence. (I.e., you may delete any number of elements, including zero, as long as the resulting sequence is non-empty.)
+Please find the minimum number of elements which have to be deleted so that the GCD of the resulting sequence would be equal to
+1, or determine that it is impossible.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the minimum number of elements to delete, or
+−1 if it is impossible to make the GCD equal to
+1.
+Constraints
+1≤T≤100
+2≤N≤1,000
+1≤A
+i
+≤50,000 for each valid
+i
+Subtasks
+Subtask #1 (20 points):
+2≤N≤3
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2
+2
+2 3
+2
+2 4
+0
+-1
+Explanation:
+Example case 1: The GCD is already equal to
+1, so the answer is
+0.
+Example case 2: It is impossible to make the GCD equal to
+1, so the answer is
+−1.

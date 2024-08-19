@@ -1,0 +1,267 @@
+Avoid Alternating
+Problem
+You have a grid with
+N rows and
+M columns in which
+K cells are black and the rest are white.
+Let
+(i,j) represent the cell in the
+i-th row from the top and the
+j-th column from the left.
+If you are currently at cell
+(i,j), you can:
+move one cell down to
+(i+1,j)
+move one cell right to
+(i,j+1)
+The cost of a path is defined as the number of times you move between two cells that have different colours.
+You are given
+Q queries. In the
+i-th query, you are initially at
+(1,1) and want to reach
+(X
+i
+,Y
+i
+) with the minimum cost.
+For each query, before you begin, you can perform the following operation any number of times (possibly zero):
+Choose a column and flip the colour of all cells in this column (i.e. change the colour of all the black cells to white and the colour of all the white cells to black in this column)
+For each query, what is the minimum cost of a path from
+(1,1) to
+(X
+i
+,Y
+i
+) after performing this operation any number of times (possibly zero)?
+Note: The operations applied in different queries are independent of each other.
+Input Format
+The first line of the input contains a single integer
+T - the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three integers
+N,
+M,
+K and
+Q - the number of rows, the number of columns, the number of black cells and the number of queries respectively.
+The following
+K lines each contain two integers
+A
+i
+and
+B
+i
+- indicating that the
+i-th black cell is at
+(A
+i
+,B
+i
+).
+The following
+Q lines each contain two integers
+X
+i
+and
+Y
+i
+- the destination cell of the
+i-th query.
+Output Format
+For each test case, print a single line containing
+Q space separated integers ― the answer for each of the
+Q queries.
+Constraints
+1≤T≤10
+5
+1≤N,M,K,Q≤3⋅10
+5
+1≤A
+i
+,X
+i
+≤N
+1≤B
+i
+,Y
+i
+≤M
+(A
+i
+,B
+i
+)
+
+=(A
+j
+,B
+j
+) ,
+∀i
+
+=j
+(X
+i
+,Y
+i
+)
+
+=(X
+j
+,Y
+j
+) ,
+∀i
+
+=j
+the sum of
+N over all test cases does not exceed
+6⋅10
+5
+the sum of
+M over all test cases does not exceed
+6⋅10
+5
+the sum of
+K over all test cases does not exceed
+6⋅10
+5
+the sum of
+Q over all test cases does not exceed
+6⋅10
+5
+Sample 1:
+Input
+Output
+5
+1 1 1 1
+1 1
+1 1
+3 1 2 2
+1 1
+3 1
+2 1
+3 1
+3 4 3 3
+1 2
+2 1
+1 4
+1 4
+3 4
+2 1
+4 3 5 2
+2 1
+2 2
+2 3
+3 2
+4 2
+4 1
+4 2
+6 3 5 2
+2 1
+3 2
+3 3
+5 2
+5 3
+3 3
+6 3
+0 
+1 2 
+0 0 1 
+2 1 
+1 2
+Explanation:
+Test case 1:
+Query 1: We are already at
+(1,1), so the minimum cost is
+0.
+Test case 2:
+Initial Grid:
+Query 1: The only sequence of possible moves is
+(1,1)
+cost = 1
+black to white
+(2,1). So the total cost is
+1.
+Query 2: The only sequence of possible moves is
+(1,1)
+cost = 1
+black to white
+(2,1)
+cost = 1
+white to black
+(3,1). So the cost is
+2.
+It can be shown that no better answer is possible by performing any column flipping operations.
+Test case 3:
+Initial Grid:
+Query 1: One optimal solution is to flip columns
+2 and
+4 to obtain the following grid.
+Then you can perform the following moves for a cost of
+0 -
+(1,1)
+cost = 0
+white to white
+(1,2)
+cost = 0
+white to white
+(1,3)
+cost = 0
+white to white
+(1,4)
+Query 2: One optimal solution is to flip columns
+2.
+Then you can perform the following moves for a cost of
+0 -
+(1,1)
+cost = 0
+white to white
+(1,2)
+cost = 0
+white to white
+(1,3)
+cost = 0
+white to white
+(2,3)
+cost = 0
+white to white
+(2,4)
+cost = 0
+white to white
+(3,4)
+Query 3: One optimal solution is to flip no columns and then perform the following moves for a cost of
+1 -
+(1,1)
+cost = 1
+white to black
+(2,1) for a total cost of
+1.
+Test case 4:
+Initial Grid:
+Query 1: One optimal solution is to flip no columns and then perform the following moves for a cost of
+2 -
+(1,1)
+cost = 1
+white to black
+(2,1)
+cost = 1
+black to white
+(3,1)
+cost = 0
+white to white
+(4,1)
+Query 2: One optimal solution is to flip no columns and then perform the following moves for a cost of
+1 -
+(1,1)
+cost = 1
+white to black
+(2,1)
+cost = 0
+black to black
+(2,2)
+cost = 0
+black to black
+(3,2)
+cost = 0
+black to black
+(4,2)

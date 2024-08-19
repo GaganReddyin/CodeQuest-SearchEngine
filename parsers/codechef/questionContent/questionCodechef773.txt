@@ -1,0 +1,94 @@
+Permutation And Median
+Problem
+Given a sequence of
+N elements, Chef defines a function
+F(i)
+(1≤i≤N) as the median of the first
+i elements of the sequence.
+Chef wants to get a permutation
+P of length
+N such that
+P
+i
+=F(i)
+∀
+1≤i≤N. Can you help Chef in achieving this?
+Note that:
+The median of a sequence is the middle element in the sorted order of the sequence. If
+N is even, choose the element at
+2
+N
+position in the sorted order. If
+N is odd, choose the middle element.
+A permutation of length
+N is an array of
+N integers
+P=[P
+1
+,P
+2
+,…,P
+N
+] such that every integer from
+1 to
+N (inclusive) appears in it exactly once. For example,
+[2,5,4,1,3] is a permutation of length
+5 while
+[2,5,2,1,3] is not.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follows.
+Each test case consists of a single line of input, an integer
+N, the length of the required permutation.
+Output Format
+For each test case, output in a new line,
+N space-separated integers, denoting a permutation satisfying the condition.
+Constraints
+1≤T≤700
+1≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+1
+2 1 
+3 1 2
+Explanation:
+Test Case
+1:
+[1] is the only permutation and it satisfies the condition as the median of the sequence
+[1] is
+1.
+Test Case
+2: The possible permutations of length
+2 are
+[1,2] and
+[2,1]. The only permutation that satisfies the condition is
+[2,1]. Here,
+P
+1
+=2=median([2]) and
+P
+2
+=1=median([2,1]).
+Test Case
+3: There are
+6 possible permutations out of which only
+[3,1,2] satisfies the above condition. Here,
+P
+1
+=3=median([3]),P
+2
+=1=median([3,1]), and
+P
+3
+=2=median([3,1,2]).

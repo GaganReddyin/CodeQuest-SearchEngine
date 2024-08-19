@@ -1,0 +1,90 @@
+G. M-numbers
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+For a given positive integer
+m
+, a positive number is called a
+m
+-number if the product of its digits is
+m
+. For example, the beginning of a series of
+24
+-numbers are as follows:
+38
+,
+46
+,
+64
+,
+83
+,
+138
+,
+146
+,
+164
+,
+183
+,
+226
+...
+You are given a positive integer
+m
+and
+k
+. Print
+k
+-th among
+m
+-numbers if all
+m
+-numbers are sorted in ascending order.
+Input
+A single line of input contains two integers
+m
+and
+k
+(
+2≤m≤
+10
+9
+,
+1≤k≤
+10
+9
+).
+Output
+Print the desired number —
+k
+-th among all
+m
+-numbers if
+m
+-numbers are sorted in ascending order. If the answer does not exist, print -1.
+Examples
+input
+Copy
+24 9
+output
+Copy
+226
+input
+Copy
+24 1
+output
+Copy
+38
+input
+Copy
+5040 1000000000
+output
+Copy
+111121111315213227111
+input
+Copy
+2020 2020
+output
+Copy
+-1

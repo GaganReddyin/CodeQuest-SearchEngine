@@ -1,0 +1,244 @@
+D. Miss Punyverse
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+The Oak has
+n
+nesting places, numbered with integers from
+1
+to
+n
+. Nesting place
+i
+is home to
+b
+i
+bees and
+w
+i
+wasps.
+Some nesting places are connected by branches. We call two nesting places adjacent if there exists a branch between them. A simple path from nesting place
+x
+to
+y
+is given by a sequence
+s
+0
+,…,
+s
+p
+of distinct nesting places, where
+p
+is a non-negative integer,
+s
+0
+=x
+,
+s
+p
+=y
+, and
+s
+i−1
+and
+s
+i
+are adjacent for each
+i=1,…,p
+. The branches of The Oak are set up in such a way that for any two pairs of nesting places
+x
+and
+y
+, there exists a unique simple path from
+x
+to
+y
+. Because of this, biologists and computer scientists agree that The Oak is in fact, a tree.
+A village is a nonempty set
+V
+of nesting places such that for any two
+x
+and
+y
+in
+V
+, there exists a simple path from
+x
+to
+y
+whose intermediate nesting places all lie in
+V
+.
+A set of villages
+P
+is called a partition if each of the
+n
+nesting places is contained in exactly one of the villages in
+P
+. In other words, no two villages in
+P
+share any common nesting place, and altogether, they contain all
+n
+nesting places.
+The Oak holds its annual Miss Punyverse beauty pageant. The two contestants this year are Ugly Wasp and Pretty Bee. The winner of the beauty pageant is determined by voting, which we will now explain. Suppose
+P
+is a partition of the nesting places into
+m
+villages
+V
+1
+,…,
+V
+m
+. There is a local election in each village. Each of the insects in this village vote for their favorite contestant. If there are strictly more votes for Ugly Wasp than Pretty Bee, then Ugly Wasp is said to win in that village. Otherwise, Pretty Bee wins. Whoever wins in the most number of villages wins.
+As it always goes with these pageants, bees always vote for the bee (which is Pretty Bee this year) and wasps always vote for the wasp (which is Ugly Wasp this year). Unlike their general elections, no one abstains from voting for Miss Punyverse as everyone takes it very seriously.
+Mayor Waspacito, and his assistant Alexwasp, wants Ugly Wasp to win. He has the power to choose how to partition The Oak into exactly
+m
+villages. If he chooses the partition optimally, determine the maximum number of villages in which Ugly Wasp wins.
+Input
+The first line of input contains a single integer
+t
+(
+1≤t≤100
+) denoting the number of test cases. The next lines contain descriptions of the test cases.
+The first line of each test case contains two space-separated integers
+n
+and
+m
+(
+1≤m≤n≤3000
+). The second line contains
+n
+space-separated integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+0≤
+b
+i
+≤
+10
+9
+). The third line contains
+n
+space-separated integers
+w
+1
+,
+w
+2
+,…,
+w
+n
+(
+0≤
+w
+i
+≤
+10
+9
+). The next
+n−1
+lines describe the pairs of adjacent nesting places. In particular, the
+i
+-th of them contains two space-separated integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n
+,
+x
+i
+≠
+y
+i
+) denoting the numbers of two adjacent nesting places. It is guaranteed that these pairs form a tree.
+It is guaranteed that the sum of
+n
+in a single file is at most
+10
+5
+.
+Output
+For each test case, output a single line containing a single integer denoting the maximum number of villages in which Ugly Wasp wins, among all partitions of The Oak into
+m
+villages.
+Example
+input
+Copy
+2
+4 3
+10 160 70 50
+70 111 111 0
+1 2
+2 3
+3 4
+2 1
+143 420
+214 349
+2 1
+output
+Copy
+2
+0
+Note
+In the first test case, we need to partition the
+n=4
+nesting places into
+m=3
+villages. We can make Ugly Wasp win in
+2
+villages via the following partition:
+{{1,2},{3},{4}}
+. In this partition,
+Ugly Wasp wins in village
+{1,2}
+, garnering
+181
+votes as opposed to Pretty Bee's
+170
+;
+Ugly Wasp also wins in village
+{3}
+, garnering
+111
+votes as opposed to Pretty Bee's
+70
+;
+Ugly Wasp loses in the village
+{4}
+, garnering
+0
+votes as opposed to Pretty Bee's
+50
+.
+Thus, Ugly Wasp wins in
+2
+villages, and it can be shown that this is the maximum possible number.
+In the second test case, we need to partition the
+n=2
+nesting places into
+m=1
+village. There is only one way to do this:
+{{1,2}}
+. In this partition's sole village, Ugly Wasp gets
+563
+votes, and Pretty Bee also gets
+563
+votes. Ugly Wasp needs strictly more votes in order to win. Therefore, Ugly Wasp doesn't win in any village.

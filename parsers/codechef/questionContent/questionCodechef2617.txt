@@ -1,0 +1,132 @@
+Square Function
+Problem
+Read problem statements in Russian, Mandarin Chinese, Bengali, and Vietnamese as well.
+Let's define a function
+F(X) as follows:
+F(X)=
+Y
+X
+where
+Y is the largest perfect square that divides
+X.
+For example,
+The largest perfect square that divides
+12 is
+4. Hence
+F(12)=
+4
+12
+=3.
+The largest perfect square that divides
+36 is
+36. Hence
+F(36)=
+36
+36
+=1.
+The largest perfect square that divides
+7 is
+1. Hence
+F(7)=
+1
+7
+=7.
+You are given an array
+A consisting of
+N integers. A pair of integer (
+i,
+j) is called Good if
+1≤i<j≤N and
+F(A
+i
+∗A
+j
+)>1. Find the number of Good pairs.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N.
+The second line of each testcase contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer - the number of Good pairs.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤A
+i
+≤10
+6
+The sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+3
+3
+2 3 12
+4 
+1 2 3 4
+3
+2 3 7
+2
+5
+3
+Explanation:
+Test case
+1:
+(i=1,j=2):
+F(A
+1
+∗A
+2
+)=F(2∗3)=F(6)=
+1
+6
+=6>1.
+(i=1,j=3):
+F(A
+1
+∗A
+3
+)=F(2∗12)=F(24)=
+4
+24
+=6>1.
+(i=2,j=3):
+F(A
+2
+∗A
+3
+)=F(3∗12)=F(36)=
+36
+36
+=1≯1.
+So there are 2 Good pairs.
+Test case
+2: All pairs except (
+1,4) are Good pairs as
+F(A
+1
+∗A
+4
+)=F(1∗4)=F(4)=
+4
+4
+=1≯1.
+Test case
+3: All pairs are Good pairs.

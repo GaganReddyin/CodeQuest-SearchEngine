@@ -1,0 +1,227 @@
+G. Omkar and Pies
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Omkar has a pie tray with
+k
+(
+2≤k≤20
+) spots. Each spot in the tray contains either a chocolate pie or a pumpkin pie. However, Omkar does not like the way that the pies are currently arranged, and has another ideal arrangement that he would prefer instead.
+To assist Omkar,
+n
+elves have gathered in a line to swap the pies in Omkar's tray. The
+j
+-th elf from the left is able to swap the pies at positions
+a
+j
+and
+b
+j
+in the tray.
+In order to get as close to his ideal arrangement as possible, Omkar may choose a contiguous subsegment of the elves and then pass his pie tray through the subsegment starting from the left. However, since the elves have gone to so much effort to gather in a line, they request that Omkar's chosen segment contain at least
+m
+(
+1≤m≤n
+) elves.
+Formally, Omkar may choose two integers
+l
+and
+r
+satisfying
+1≤l≤r≤n
+and
+r−l+1≥m
+so that first the pies in positions
+a
+l
+and
+b
+l
+will be swapped, then the pies in positions
+a
+l+1
+and
+b
+l+1
+will be swapped, etc. until finally the pies in positions
+a
+r
+and
+b
+r
+are swapped.
+Help Omkar choose a segment of elves such that the amount of positions in Omkar's final arrangement that contain the same type of pie as in his ideal arrangement is the maximum possible. Note that since Omkar has a big imagination, it might be that the amounts of each type of pie in his original arrangement and in his ideal arrangement do not match.
+Input
+The first line contains three integers
+n
+,
+m
+, and
+k
+(
+1≤m≤n≤
+10
+6
+and
+2≤k≤20
+)  — the number of elves, the minimum subsegment length, and the number of spots in Omkar's tray respectively.
+The second and third lines each contain a string of length
+k
+consisting of
+0
+s and
+1
+s that represent initial arrangement of pies and ideal arrangement of pies; the
+j
+-th character in each string is equal to
+0
+if the
+j
+-th spot in the arrangement contains a chocolate pie and is equal to
+1
+if the
+j
+-th spot in the arrangement contains a pumpkin pie. It is not guaranteed that the two strings have the same amount of
+0
+s or the same amount of
+1
+s.
+n
+lines follow. The
+j
+-th of these lines contains two integers
+a
+j
+and
+b
+j
+(
+1≤
+a
+j
+,
+b
+j
+≤k
+,
+a
+j
+≠
+b
+j
+) which indicate that the
+j
+-th elf from the left can swap the pies at positions
+a
+j
+and
+b
+j
+in the tray.
+Output
+Output two lines.
+The first line should contain a single integer
+s
+(
+0≤s≤k
+) equal to the amount of positions that contain the same type of pie in Omkar's final arrangement and in Omkar's ideal arrangement;
+s
+should be the maximum possible.
+The second line should contain two integers
+l
+and
+r
+satisfying
+1≤l≤r≤n
+and
+r−l+1≥m
+, indicating that Omkar should pass his tray through the subsegment
+l,l+1,…,r
+to achieve a final arrangement with
+s
+positions having the same type of pie as his ideal arrangement.
+If there are multiple answers you may output any of them.
+Examples
+input
+Copy
+4 2 5
+11000
+00011
+1 3
+3 5
+4 2
+3 4
+output
+Copy
+5
+1 3
+input
+Copy
+4 3 5
+11000
+00011
+1 3
+1 5
+2 4
+1 5
+output
+Copy
+3
+1 4
+Note
+In the first test case, the swaps will go like this:
+Swap
+1
+and
+3
+: 11000 becomes 01100
+Swap
+3
+and
+5
+: 01100 becomes 01001
+Swap
+4
+and
+2
+: 01001 becomes 00011
+The final arrangement is the same as the ideal arrangement 00011, so there are
+5
+positions with the same type of pie, which is optimal.
+In the second test case, the swaps will go like this:
+Swap
+1
+and
+3
+: 11000 becomes 01100
+Swap
+1
+and
+5
+: 01100 becomes 01100
+Swap
+4
+and
+2
+: 01100 becomes 00110
+Swap
+1
+and
+5
+: 00110 becomes 00110
+The final arrangement has
+3
+positions with the same type of pie as the ideal arrangement 00011, those being positions
+1
+,
+2
+, and
+4
+. In this case the subsegment of elves
+(l,r)=(2,3)
+is more optimal, but that subsegment is only length
+2
+and therefore does not satisfy the constraint that the subsegment be of length at least
+m=3
+.

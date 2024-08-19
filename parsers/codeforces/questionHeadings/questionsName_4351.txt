@@ -1,0 +1,1 @@
+C2. Distinguish zero state and plus state without errors

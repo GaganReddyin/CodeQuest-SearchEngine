@@ -1,0 +1,100 @@
+Rearrange Ranges
+Problem
+Let
+f([x
+1
+,x
+2
+,⋯,x
+k
+]) be the minimum number of subarrays such that each
+x
+i
+belongs to exactly one subarray, and it's possible to arrange the subarrays in a way that makes
+x increasing. For example,
+f([5,4,1,2,3])=3 since we can divide
+x into three subarrays:
+[5],[4],[1,2,3] then rearrange them to
+[1,2,3],[4],[5].
+You are given a permutation
+P of length
+N. You are also given
+Q queries of the form
+L,R. For each query, find the value of
+f([P
+L
+,P
+L+1
+,⋯,P
+R
+]).
+Input Format
+The first line contains two space-separated integers,
+N and
+Q.
+The second line contains a permutation
+P of length
+N, represented by
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+The
+i-th line of the next
+Q lines contains two integers,
+L and
+R.
+Output Format
+For each query, print the answer to the subarray on a new line.
+Constraints
+1≤N,Q≤5⋅10
+5
+1≤P
+i
+≤N
+P is a permutation
+1≤L≤R≤N
+Subtasks
+Subtask 1 (10 points):
+1≤N,Q≤10
+3
+Subtask 2 (30 points):
+1≤N,Q≤5⋅10
+4
+Subtask 3 (60 points):
+1≤N,Q≤5⋅10
+5
+Sample 1:
+Input
+Output
+6 4
+5 1 3 2 4 6
+1 2
+2 3
+1 5
+3 6
+2
+1
+5
+3
+Explanation:
+Test case
+1: Divide the subarray
+[5,1] into
+[5] and
+[1].
+Test case
+2: The subarray
+[1,3] is already sorted, no need to divide it further
+Test case
+3: Divide the subarray into
+[5],[1],[3],[2] and
+[4].
+Test case
+4: Divide the subarray into
+[3],[2] and
+[4,6].

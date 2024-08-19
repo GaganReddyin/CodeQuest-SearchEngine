@@ -1,0 +1,208 @@
+D. Color with Occurrences
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given some text
+t
+and a set of
+n
+strings
+s
+1
+,
+s
+2
+,…,
+s
+n
+.
+In one step, you can choose any occurrence of any string
+s
+i
+in the text
+t
+and color the corresponding characters of the text in red. For example, if
+t=bababa
+and
+s
+1
+=ba
+,
+s
+2
+=aba
+, you can get
+t=bababa
+,
+t=bababa
+or
+t=bababa
+in one step.
+You want to color all the letters of the text
+t
+in red. When you color a letter in red again, it stays red.
+In the example above, three steps are enough:
+Let's color
+t[2…4]=
+s
+2
+=aba
+in red, we get
+t=bababa
+;
+Let's color
+t[1…2]=
+s
+1
+=ba
+in red, we get
+t=bababa
+;
+Let's color
+t[4…6]=
+s
+2
+=aba
+in red, we get
+t=bababa
+.
+Each string
+s
+i
+can be applied any number of times (or not at all). Occurrences for coloring can intersect arbitrarily.
+Determine the minimum number of steps needed to color all letters
+t
+in red and how to do it. If it is impossible to color all letters of the text
+t
+in red, output -1.
+Input
+The first line of the input contains an integer
+q
+(
+1≤q≤100
+) —the number of test cases in the test.
+The descriptions of the test cases follow.
+The first line of each test case contains the text
+t
+(
+1≤|t|≤100
+), consisting only of lowercase Latin letters, where
+|t|
+is the length of the text
+t
+.
+The second line of each test case contains a single integer
+n
+(
+1≤n≤10
+) — the number of strings in the set.
+This is followed by
+n
+lines, each containing a string
+s
+i
+(
+1≤|
+s
+i
+|≤10
+) consisting only of lowercase Latin letters, where
+|
+s
+i
+|
+ — the length of string
+s
+i
+.
+Output
+For each test case, print the answer on a separate line.
+If it is impossible to color all the letters of the text in red, print a single line containing the number -1.
+Otherwise, on the first line, print the number
+m
+— the minimum number of steps it will take to turn all the letters
+t
+red.
+Then in the next
+m
+lines print pairs of indices:
+w
+j
+and
+p
+j
+(
+1≤j≤m
+), which denote that the string with index
+w
+j
+was used as a substring to cover the occurrences starting in the text
+t
+from position
+p
+j
+. The pairs can be output in any order.
+If there are several answers, output any of them.
+Example
+input
+Copy
+6
+bababa
+2
+ba
+aba
+caba
+2
+bac
+acab
+abacabaca
+3
+aba
+bac
+aca
+baca
+3
+a
+c
+b
+codeforces
+4
+def
+code
+efo
+forces
+aaaabbbbcccceeee
+4
+eeee
+cccc
+aaaa
+bbbb
+output
+Copy
+3
+2 2
+1 1
+2 4
+-1
+4
+1 1
+2 6
+3 3
+3 7
+4
+3 1
+1 2
+2 3
+1 4
+2
+4 5
+2 1
+4
+3 1
+4 5
+2 9
+1 13
+Note
+The first test case is explained in the problem statement.
+In the second test case, it is impossible to color all the letters of the text in red.

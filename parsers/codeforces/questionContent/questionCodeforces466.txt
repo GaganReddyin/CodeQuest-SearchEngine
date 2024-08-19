@@ -1,0 +1,148 @@
+D. Range = √Sum
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer
+n
+. Find a sequence of
+n
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+such that
+1≤
+a
+i
+≤
+10
+9
+for all
+i
+and
+max(
+a
+1
+,
+a
+2
+,…,
+a
+n
+)−min(
+a
+1
+,
+a
+2
+,…,
+a
+n
+)=
+a
+1
++
+a
+2
++⋯+
+a
+n
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+√
+.
+It can be proven that there exists a sequence of distinct integers that satisfies all the conditions above.
+Input
+The first line of input contains
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first and only line of each test case contains one integer
+n
+(
+2≤n≤3⋅
+10
+5
+) — the length of the sequence you have to find.
+The sum of
+n
+over all test cases does not exceed
+3⋅
+10
+5
+.
+Output
+For each test case, output
+n
+space-separated distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+satisfying the conditions in the statement.
+If there are several possible answers, you can output any of them. Please remember that your integers must be distinct!
+Example
+input
+Copy
+3
+2
+5
+4
+output
+Copy
+3 1
+20 29 18 26 28
+25 21 23 31
+Note
+In the first test case, the maximum is
+3
+, the minimum is
+1
+, the sum is
+4
+, and
+3−1=
+4
+–
+√
+.
+In the second test case, the maximum is
+29
+, the minimum is
+18
+, the sum is
+121
+, and
+29−18=
+121
+−
+−
+−
+√
+.
+For each test case, the integers are all distinct.

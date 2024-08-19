@@ -1,0 +1,121 @@
+Alone Alice!
+Problem
+Alice, being alone, has thought of punishing you with a string problem.
+Alice has a string
+S of length
+N. From
+S, she forms a new string
+T in the following way:
+Add all distinct subarrays of
+S which are palindromes to a set.
+Sort the set in lexicographically ascending order.
+Initialise
+T as empty string and append each palindrome to string
+T.
+For example: If Alice has
+S=abbab, then all the distinct subarrays of
+S which are palindromes are
+{a,abba,b,bb,bab}. After sorting in lexicographically ascending order, she would get
+{a,abba,b,bab,bb}. Now, after appending each palindrome to an empty string
+T,
+T:=T+a,T=a.
+T:=T+abba,T=aabba.
+T:=T+b,T=aabbab.
+T:=T+bab,T=aabbabbab.
+T:=T+bb,T=aabbabbabbb.
+So, finally she ended up with the string
+T=aabbabbabbb.
+Now, Alice will give you the string
+S and
+Q queries of the form:
+L
+R : You have to print the substring of string
+T starting at index
+L (
+1-based indexing) and ending at index
+R. If no such substring exists, i.e
+L,R> length of
+T, print
+−1 instead.
+Note:
+A substring is obtained by deletion of several (possibly zero) characters from the beginning of the string and several (possibly zero) characters from the end of the string.
+A string
+A is lexicographically smaller than a string
+B if and only if one of the following holds:
+A is a prefix of
+B, but
+A
+
+=B;
+Let
+i denote the first position where
+A and
+B differ, then
+A
+i
+<B
+i
+.
+Input Format
+First line will contain an integer
+N denoting the length of the string.
+The next line will contain a string
+S.
+The third line will contain an integer
+Q denoting the number of queries.
+Next
+Q lines, each will contain two space-separated integers
+L and
+R.
+Output Format
+For each query, print the substring
+T[L,R] (
+1-based indexing) in a new line. If no such substring exists, i.e
+L,R> length of
+T, print
+−1 instead.
+Constraints
+1≤N≤2⋅10
+5
+1≤Q≤2⋅10
+5
+1≤L≤R≤10
+10
+The sum of
+(R−L+1) over all queries won't exceed
+5⋅10
+5
+.
+S will contain lowercase english alphabets only.
+Sample 1:
+Input
+Output
+5
+abbab
+6
+1 1
+2 4
+5 8
+1 8
+9 11
+1 14
+a
+abb
+abba
+aabbabba
+bbb
+-1
+Explanation:
+Here
+T=aabbabbabbb. The explanation for deriving
+T has been given in the problem statement.
+Query
+1:
+T[1,1]=a.
+Query
+2:
+T[2,4]=abb.
+Query
+6: Here
+R=14 which is greater than the length of the string. Thus, the answer is
+−1.

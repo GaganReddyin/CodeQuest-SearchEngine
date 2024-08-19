@@ -1,0 +1,148 @@
+Minimize the Bits
+Problem
+You are given a binary string
+A of length
+N. The decimal representation of this string could be huge.
+Your task is to find out two binary strings
+B and
+C, each of length
+N, such that:
+(A)
+10
+=(B)
+10
+−(C)
+10
+;
+The total count of
+1s in
+B and
+C is minimum.
+If multiple such strings
+B and
+C exist, you can print any.
+It can be proven that at least one solution always exists.
+Note:
+(X)
+10
+represents the decimal representation of binary string
+X.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains one integer
+N — the length of the binary string
+A.
+The following line has the binary string
+A of length
+N.
+Output Format
+For each test case, output binary strings
+B and
+C, each of length
+N, on separate lines.
+Constraints
+1≤T≤4⋅10
+4
+1≤N≤10
+5
+A
+i
+∈{0,1}
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+00111
+2
+10
+01000
+00001
+10
+00
+Explanation:
+Test case
+1:
+(A)
+10
+=1⋅2
+0
++1⋅2
+1
++1⋅2
+2
++0⋅2
+3
++0⋅2
+4
+=7.
+Consider
+B=(01000)
+2
+≡(8)
+10
+and
+C=(00001)
+2
+≡(1)
+10
+. Here,
+(A)
+10
+=(B)
+10
+−(C)
+10
+;
+The total count of
+1s in
+B and
+C is
+2.
+It can be shown that there exist no other values of
+B and
+C which satisfy the condition and have a smaller total count of
+2.
+Test case
+2:
+(A)
+10
+=0⋅2
+0
++1⋅2
+1
+=2.
+Consider
+B=(10)
+2
+≡(2)
+10
+and
+C=(00)
+2
+≡(0)
+10
+. Here,
+(A)
+10
+=(B)
+10
+−(C)
+10
+;
+The total count of
+1s in
+B and
+C is
+1.
+It can be shown that there exist no other values of
+B and
+C which satisfy the condition and have a smaller total count of
+1.

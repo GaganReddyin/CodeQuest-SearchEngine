@@ -1,0 +1,97 @@
+Subsequence LCS
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Consider every pair that consists of:
+1) One of the longest non-decreasing subsequences of
+A.
+2) One of the longest non-increasing subsequences of
+A.
+Find the maximum possible length of the longest common subsequence of the two sequences in such a pair.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains an integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, print a single line containing one integer ― the maximum possible length of the longest common subsequence of any longest non-decreasing subsequence of
+A and any longest non-increasing subsequence of
+A.
+Constraints
+1≤T≤100
+1≤N≤2⋅10
+5
+the sum of
+N over all test cases does not exceed
+2⋅10
+5
+1≤A
+i
+≤N for each valid
+i
+Subtasks
+Subtask #1 (20 points):
+T≤90
+N≤1000
+the sum of
+N over all test cases does not exceed
+5000
+the numbers in the sequence
+A are pairwise distinct
+Subtask #2 (20 points):
+T≤42
+N≤1000
+the sum of
+N over all test cases does not exceed
+5000
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+4
+8
+6 5 1 2 7 8 4 3
+6
+1 6 5 2 3 4
+7
+2 5 3 3 1 3 7
+6
+6 1 4 2 4 5
+0
+1
+3
+2
+Explanation:
+Example case 1: No pair of subsequences, containing one of the longest non-decreasing subsequences and one of longest non-increasing subsequences have a number in common. Hence, the answer is
+0.
+Example case 2: The maximum length of the longest common subsequence is
+1 and it can be achieved by choosing the longest non-decreasing subsequence
+{1,2,3,4} and the longest non-increasing subsequence
+{6,5,2}. The longest common subsequence of those two subsequences is
+{2}.
+Example case 3: The maximum length of the longest common subsequence is
+3 and it can be achieved by choosing the longest non-decreasing subsequence
+{2,3,3,3,7} and the longest non-increasing subsequence
+{5,3,3,3}. The longest common subsequence of those two subsequences is
+{3,3,3}.
+Example case 4: The maximum length of the longest common subsequence is
+2 and it can be achieved by choosing the longest non-decreasing subsequence
+{1,4,4,5} and the longest non-increasing subsequence
+{6,4,4}. The longest common subsequence of those two subsequences is
+{4,4}.

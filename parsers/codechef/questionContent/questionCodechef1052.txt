@@ -1,0 +1,41 @@
+Chef And The Patents
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef has decided to start a new firm called PatentChef. However, he's stuck with some big legal issues. Their firm has received offers from a lot of companies, so Chef told his friend Junior Chef to look over some patent cases and solve them as quickly as he can.
+Junior Chef is very smart and has an eye for every little detail. He quickly found a case and went ahead to solve it. The patent case is as follows:
+There are N patents to be filed for a company. Chef’s firm has the first M months of the year 2018 to finish this task. (The months in a year are numbered 1 through 12.) Chef's firm has K workers (including Junior Chef) available to work on this case. Each worker can prepare exactly one patent per month.
+Junior Chef assigns work to workers starting from the first month of the year. He can have any workers work on this case on any month provided that they're chosen according to the following conditions:
+Each worker can only work on this patent case for at most one month.
+Each worker has to work either on an even month or an odd month of the year. You are given a string S with length K and the following meaning: for each valid i, if the i-th character of S is E, worker i has to work on an even month; if it's O, this worker has to work on an odd month.
+At most X workers can work on this patent case each month.
+Determine whether Chef’s firm and Junior Chef can finish this patent case in time.
+Input
+The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains four space-separated integers N, M, X and K.
+The second line contains a single string S.
+Output
+For each test case, print a single line containing the string "yes" if it's possible to finish the patent case or "no" otherwise (without quotes).
+Constraints
+1 ≤ T ≤ 1000
+0 ≤ X ≤ 106
+1 ≤ N, K ≤ 106
+0 ≤ M ≤ 12
+1 ≤ sum of K over all test cases ≤ 107
+|S| = K
+each character of S is either E or O
+Subtasks
+Subtask #1 (20 points): 1 ≤ N ≤ M ≤ 12
+Subtask #2 (80 points): original constraints
+Sample 1:
+Input
+Output
+2
+4 4 2 4
+EEOO
+4 3 1 4
+EEOO
+yes
+no
+Explanation:
+Example case 1: The firm can prepare 2 patents per month, so in the first month (odd), workers 3 and 4 can work on 2 patents, and in the second month (even), workers 1 and 2 can work on the remaining 2 patents.
+Example case 2: There is no way for multiple workers to work on the same (even or odd) month. Hence, it's impossible to finish 4 patents in 3 months.

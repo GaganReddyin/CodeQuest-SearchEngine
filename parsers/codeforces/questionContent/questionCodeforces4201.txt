@@ -1,0 +1,278 @@
+F. Boolean Computer
+time limit per test7 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice has a computer that operates on
+w
+-bit integers. The computer has
+n
+registers for values. The current content of the registers is given as an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+The computer uses so-called "number gates" to manipulate this data. Each "number gate" takes two registers as inputs and calculates a function of the two values stored in those registers. Note that you can use the same register as both inputs.
+Each "number gate" is assembled from bit gates. There are six types of bit gates: AND, OR, XOR, NOT AND, NOT OR, and NOT XOR, denoted "A", "O", "X", "a", "o", "x", respectively. Each bit gate takes two bits as input. Its output given the input bits
+b
+1
+,
+b
+2
+is given below:
+b
+1
+0
+0
+1
+1
+b
+2
+0
+1
+0
+1
+A
+0
+0
+0
+1
+O
+0
+1
+1
+1
+X
+0
+1
+1
+0
+a
+1
+1
+1
+0
+o
+1
+0
+0
+0
+x
+1
+0
+0
+1
+To build a "number gate", one takes
+w
+bit gates and assembles them into an array. A "number gate" takes two
+w
+-bit integers
+x
+1
+and
+x
+2
+as input. The "number gate" splits the integers into
+w
+bits and feeds the
+i
+-th bit of each input to the
+i
+-th bit gate. After that, it assembles the resulting bits again to form an output word.
+For instance, for
+4
+-bit computer we might have a "number gate" "AXoA" (AND, XOR, NOT OR, AND). For two inputs,
+13=
+1101
+2
+and
+10=
+1010
+2
+, this returns
+12=
+1100
+2
+, as
+1
+and
+1
+is
+1
+,
+1
+xor
+0
+is
+1
+, not (
+0
+or
+1
+) is
+0
+, and finally
+1
+and
+0
+is
+0
+.
+You are given a description of
+m
+"number gates". For each gate, your goal is to report the number of register pairs for which the "number gate" outputs the number
+0
+. In other words, find the number of ordered pairs
+(i,j)
+where
+1≤i,j≤n
+, such that
+w
+k
+(
+a
+i
+,
+a
+j
+)=0
+, where
+w
+k
+is the function computed by the
+k
+-th "number gate".
+Input
+The first line contains three integers:
+w
+,
+n
+, and
+m (1≤w≤12,1≤n≤3⋅
+10
+4
+,1≤m≤5⋅
+10
+4
+)
+ — the word size, the number of variables, and the number of gates.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(0≤
+a
+i
+<
+2
+w
+)
+ — the value of variables stored in the registers.
+Each of the next
+m
+lines contains a string
+g
+j
+ (|
+g
+j
+|=w)
+with a description of a single gate. Each character of
+g
+j
+is one of "A", "O", "X", "a", "o", "x".
+Output
+Print
+m
+lines. The
+i
+-th line should contain the number of ordered pairs of variables for which the
+i
+-th gate returns zero.
+Examples
+input
+Copy
+4 3 1
+13 10 6
+AXoA
+output
+Copy
+3
+input
+Copy
+1 7 6
+0 1 1 0 1 0 0
+A
+O
+X
+a
+o
+x
+output
+Copy
+40
+16
+25
+9
+33
+24
+input
+Copy
+6 2 4
+47 12
+AOXaox
+AAaaAA
+xxxxxx
+XXXXXX
+output
+Copy
+2
+3
+0
+2
+input
+Copy
+2 2 2
+2 0
+xO
+Ox
+output
+Copy
+2
+0
+Note
+In the first test case, the inputs in binary are
+1101
+,
+1010
+,
+0110
+. The pairs that return
+0
+are
+(13,6)
+,
+(6,13)
+, and
+(6,6)
+. As it was already mentioned in the problem statement,
+13⊕10=10⊕13=12
+. The other pairs are
+13⊕13=11
+,
+10⊕10=8
+and
+10⊕6=6⊕10=4
+.

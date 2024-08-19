@@ -1,0 +1,65 @@
+LOVEMUFFIN
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian and Vietnamese as well.
+OWCA has fallen and now, L.O.V.E.M.U.F.F.I.N are finally free to do whatever they want.
+In order to celebrate their victory, the
+N members of L.O.V.E.M.U.F.F.I.N (numbered
+1 through
+N) want to have some ice-cream. But first, they need to divide the loot they found in OWCA's headquarters. The loot consists of
+M dollar bills. In the order from member
+1 to member
+N, the members of L.O.V.E.M.U.F.F.I.N start to propose plans to divide the loot, i.e. the number of dollar bills each member should receive (not necessarily the same for everyone). Whenever someone proposes a plan, a vote is held. Let's denote the current number of members of L.O.V.E.M.U.F.F.I.N by
+x. If at least
+⌊
+K
+x
+⌋+1 members vote for a plan, this plan is accepted, the loot is distributed accordingly, no other plans are proposed and everyone goes for icecream. Otherwise, the person who proposed the plan is thrown off the roof for wasting the others' time with nonsense and the next person proposes a plan.
+As we all know, all members of L.O.V.E.M.U.F.F.I.N are smart evil scientists. Therefore, during each vote and for each member, this member will vote against the currently proposed plan if they are sure that if this plan is rejected, they will gain at least as much loot as if it was accepted. Assume that all scientists act optimally and are aware that everyone else also acts optimally. We consider those who are thrown off the roof to gain exactly
+−10
+100
+dollars in loot, since they will not live to see another day.
+Dr. D happens to be the first person to devise a plan. Can Dr. D avoid being thrown off the roof? If so, what is the maximum amount of loot Dr. D can gain? You should find the answers for multiple scenarios; in each scenario,
+N and
+M can be different, but
+K is the same for all scenarios.
+Input
+The first line of the input contains two space-separated integers
+K and
+Q.
+Each of the next
+Q lines contains two space-separated integers
+N and
+M describing a scenario.
+Output
+For each scenario, print a single line. If Dr. D can avoid being thrown off the roof, this line should contain a single integer - the maximum amount of loot. Otherwise, it should contain the string "Thrown off the roof." (without quotes).
+Constraints
+2≤K≤10
+5
+1≤Q≤5⋅10
+5
+1≤N≤10
+18
+2≤M≤10
+18
+Subtasks
+Subtask #1 (15 points):
+K=2
+N,M≤5,000
+the sum of
+N over all scenarios does not exceed
+5,000
+Subtask #2 (15 points):
+K=2
+the sum of
+N over all scenarios does not exceed
+5⋅10
+5
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+2 2
+5 5
+1 100
+2
+100

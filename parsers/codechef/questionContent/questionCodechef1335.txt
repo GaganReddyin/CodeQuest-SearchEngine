@@ -1,0 +1,69 @@
+Spreading Charges
+Problem
+Chef has a string
+S of length
+N, consisting of +, -, and 0, where + denotes a source of positive charge, - denotes a source of negative charge, and 0 denotes a neutral object.
+Each second, the charge sources emit their respective charge to their immediate neighbours. The charge emissions cannot affect other charge sources but can convert a neutral object into a charge source as following:
+If an object was initially neutral, and had exactly one charged source as neighbour, it becomes a charged source as received by its neighbour.
+If an object was initially neutral, and had no charged source as neighbour, it remains a neutral object.
+If an object was initially neutral, and had both charged sources as neighbours, it becomes a charged source as received by its neighbours. Note that in case of neighbours with opposite charges, the object remains neutral.
+For example, after one second, +0+ becomes +++, 00- becomes 0--, 000 remains 000 and +0- remains +0-. Refer to samples for further explanation.
+Find out the number of neutral objects in the string after infinite time.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the number of objects.
+The next line contains a string
+S of length
+N, consisting of +, -, and 0, where + denotes a source of positive charge, - denotes a source of negative charge, and 0 denotes a neutral object.
+Output Format
+For each test case, output on a new line, the number of neutral objects in the string after infinite time.
+Constraints
+1≤T≤2000
+1≤N≤10
+5
+S consists of +, -, and 0 only.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+2
+00
+3
+-+0
+6
+00+-00
+8
+0-0+000-
+2
+0
+0
+2
+Explanation:
+Test case
+1: Since there is no charge source, both neutral objects will remain neutral.
+Test case
+2: After
+1 second:
+The negative source emits a negative charge, but since there is no neutral neighbour for the negative source, it has no effect.
+The positive source emits a positive charge and since the neighbour to its right is neutral, the neutral object becomes a positive source.
+Thus, the string becomes -++ after one second. Note that the string will remain the same after this and thus, it has no neutral objects after infinite time.
+Test case
+3:
+After
+1 second, the string is 0++--0. Note that only the immediate neutral neighbours of charge sources have been affected.
+After
+2 seconds, the string is +++---. Since all objects are now charged sources, they will remain the same now onwards.
+Thus, after infinite time, the string has no neutral objects.
+Test case
+4: After
+1 second, the string is --0++0--. Note that the string will remain the same now onwards.
+Thus, after infinite time, the string has
+2 neutral objects.

@@ -1,0 +1,137 @@
+Similar Arrays
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given two arrays of positive integers,
+A and
+B, both of length
+N. You must choose a sequence of
+N non-increasing real numbers
+R
+1
+,R
+2
+,…R
+N
+to multiply with
+B
+1
+,B
+2
+,…B
+N
+respectively, such that the sum of the squares of their differences with corresponding terms
+A
+1
+,A
+2
+,…A
+N
+is minimized.
+Formally, find the minimum possible value of
+i=1
+∑
+N
+(A
+i
+−R
+i
+B
+i
+)
+2
+, over all possible
+N-tuples of real numbers
+R=(R
+1
+,R
+2
+,…R
+N
+) satisfying
+R
+1
+≥R
+2
+≥⋯≥R
+N
+###Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N, the length of arrays
+A and
+B.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…A
+N
+.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…B
+N
+.
+###Output For each test case, print the minimum possible value of the objective as described in the statement.
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+###Constraints
+2≤N≤5⋅10
+5
+The sum of
+N over all test cases doesn't exceed
+5⋅10
+5
+1≤A
+i
+,B
+i
+≤1000 for each valid
+i.
+###Subtasks
+Subtask 1 (5 points):
+T=1,N=2.
+Subtask 2 (11 points): The sum of
+N over all test cases doesn't exceed
+20.
+Subtask 3 (13 points): The sum of
+N over all test cases doesn't exceed
+300.
+Subtask 4 (14 points): The sum of
+N over all test cases doesn't exceed
+2000.
+Subtask 5 (20 points): The sum of
+N over all test cases doesn't exceed
+7000.
+Subtask 6 (37 points): No additional constraints
+###Sample Input
+3
+2
+2 5
+1 8
+5
+7 9 1 4 3
+9 8 6 13 1
+10
+66 23 51 81 60 7 26 127 66 8
+9 88 77 12 2 38 7 63 90 111
+###Sample Output
+0.000000000000000
+12.247238031469687
+17698.696831405897683
+###Explanation In the first test case, we choose
+R
+1
+=2 and
+R
+2
+=0.625

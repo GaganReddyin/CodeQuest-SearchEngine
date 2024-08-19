@@ -1,0 +1,72 @@
+Find eX
+Problem
+Chef has
+4 positive integers
+A,
+B,
+C, and
+D such that
+A
+%
+B=C
+%
+D.
+Find the smallest positive integer
+X such that
+(A+X)
+%
+B=(C+X)
+%
+D holds.
+It is guaranteed that such
+X always exists.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first and only line of each test case contains four space-separated integers
+A,
+B,
+C, and
+D.
+Output Format
+For each test case, print a single line containing one integer —
+X, the smallest integer satisfying the conditions.
+Constraints
+1≤T≤10
+5
+1≤A,B,C,D≤10
+9
+A
+%
+B=C
+%
+D
+Sample 1:
+Input
+Output
+3
+4 7 4 8
+5 1 8 2
+3 2 4 3
+1
+2
+5
+Explanation:
+Test case
+1: The smallest
+X satisfying the equation is
+1, as
+(4+1)
+%
+7=(4+1)
+%
+8=5.
+Test case
+2: The smallest
+X satisfying the equation is
+2, as
+(5+2)
+%
+1=(8+2)
+%
+2=0.

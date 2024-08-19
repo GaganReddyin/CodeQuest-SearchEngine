@@ -1,0 +1,33 @@
+Cakewalk
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are playing EVE Online. Initially, you have one dollar, but you have somehow acquired two cheat codes. The first cheat code multiplies the amount of money you own by
+10, while the second one multiplies it by
+20. The cheat codes can be used any number of times.
+You want to have exactly
+N dollars. Now you are wondering: can you achieve that by only using some sequence of cheat codes?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output
+For each test case, print a single line containing the string "Yes" if you can make exactly
+N dollars or "No" otherwise.
+Constraints
+1≤T≤100
+1≤N≤10
+18
+Sample 1:
+Input
+Output
+4
+200
+90
+1000000000000
+1024000000000
+Yes
+No
+Yes
+No

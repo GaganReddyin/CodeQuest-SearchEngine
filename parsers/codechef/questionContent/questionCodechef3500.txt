@@ -1,0 +1,116 @@
+Subtree Center
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree with
+N nodes (numbered
+1 through
+N) and
+Q queries (numbered
+1 through
+Q). For each valid
+i, in the
+i-th query, you are given
+K
+i
+nodes
+x
+1
+,x
+2
+,…,x
+K
+i
+. Consider the smallest subtree which contains all of these nodes; you should find all centers of this subtree.
+A node is called a center of a tree if it lies in the middle of at least one longest path in that tree. Note that there may be multiple longest paths (paths with the same maximum length) and for a longest path which contains an even number of nodes, there are two nodes lying in the middle of this path.
+Note: A subtree here refers to a connected subgraph of the tree. Selecting a node does not mean all its descendants have to be selected.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+N−1 lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+u and
+v denoting that there is an edge between nodes
+u and
+v in the tree.
+Q more lines follow. For each valid
+i, the
+i-th of these lines contains an integer
+K
+i
+, followed by a space and
+K
+i
+space-separated integers
+x
+1
+,x
+2
+,…,x
+K
+i
+.
+Note: The input and output of this problem are large, so prefer using fast input/output methods.
+Output
+For each query, print a single line containing an integer
+C denoting the number of centers, followed by a space and
+C space-separated integers — the nodes which are centers of the given subtree, sorted in increasing order.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤u,v≤N
+the graph described on the input is a tree
+1≤Q≤10
+6
+1≤x
+i
+≤N for each valid
+i
+for each query,
+x
+1
+,x
+2
+,…,x
+K
+i
+are pairwise distinct
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+the sum of
+K
+i
+over all queries in all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+2
+3 2
+1 2
+2 3
+2 1 3
+2 1 2
+5 2
+1 2
+2 3
+2 4
+3 5
+1 2
+2 4 5
+1 2
+2 1 2
+1 2
+2 2 3
+Explanation:
+Example case 1: The figure below describes the second query. The smallest subtree containing the given nodes is coloured red and the nodes which are its centers are coloured blue.
+Example case 2: The figure below describes the second query with subtree and centers coloured in the same way.

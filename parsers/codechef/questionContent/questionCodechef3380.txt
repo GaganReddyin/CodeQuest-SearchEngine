@@ -1,0 +1,136 @@
+Boring Trip
+Problem
+The famous country Chefland can be represented as a number line. There are
+N attractions in Chefland, among which the
+i-th attraction's position is
+X
+i
+, and the time taken to completely explore it is
+S
+i
+hours. For convenience, we'll assume the time needed to move
+1 unit distance is
+1 hour.
+One day, Chef decides to visit
+K distinct attractions. He wants you to plan the trip, including selecting the attractions and arranging them. In addition, he somehow wants the trip to be as boring as possible.
+To him, the boredomness of a trip is the total time wasted, including the time spent while moving between the attractions, and the time spent in exploring the attractions.
+Formally, if you list the indices of the attractions in the order he visits as an array
+P=[P
+1
+,P
+2
+,P
+3
+,...,P
+K
+], then the boredomness equals
+∑
+i=2
+K
+∣X
+P
+i
+−X
+P
+i−1
+∣ +
+∑
+i=1
+K
+S
+P
+i
+.
+Your task is to find the maximum boredomness his trip could have.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains two space-separated integers
+N and
+K - the number of attractions in the city and the number of attractions Chef wants to visit.
+N lines then follow, the
+i-th of which contains two space-separated integers
+X
+i
+and
+S
+i
+- the location and the time needed to completely explore the
+i-th attraction.
+Output Format
+For each test case, output the maximum possible boredomness the trip could have.
+Constraints
+1≤T≤1000
+2≤K≤N≤2⋅10
+5
+K is even
+−10
+9
+≤X
+i
+≤10
+9
+1≤S
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+2
+7 4
+0 3
+1 7
+2 4
+3 9
+4 5
+5 7
+6 4
+4 2
+0 7
+0 10
+0 8
+0 9
+39
+19
+Explanation:
+Test case
+1: The trip with the maximum boredomness is
+[4,7,2,6]. The boredomness equals
+∣X
+4
+−X
+7
+∣+∣X
+7
+−X
+2
+∣+∣X
+2
+−X
+6
+∣+S
+4
++S
+7
++S
+2
++S
+6
+=3+6+4+9+4+7+7=39.
+Test case
+2: The trip with the maximum boredomness is
+[2,4]. The boredomness equals
+∣X
+2
+−X
+4
+∣+S
+2
++S
+4
+=0+10+9=19.

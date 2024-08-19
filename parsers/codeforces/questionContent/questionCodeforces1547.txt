@@ -1,0 +1,95 @@
+H. DIY Tree
+time limit per test6 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+William really likes puzzle kits. For one of his birthdays, his friends gifted him a complete undirected edge-weighted graph consisting of
+n
+vertices.
+He wants to build a spanning tree of this graph, such that for the first
+k
+vertices the following condition is satisfied: the degree of a vertex with index
+i
+does not exceed
+d
+i
+. Vertices from
+k+1
+to
+n
+may have any degree.
+William wants you to find the minimum weight of a spanning tree that satisfies all the conditions.
+A spanning tree is a subset of edges of a graph that forms a tree on all
+n
+vertices of the graph. The weight of a spanning tree is defined as the sum of weights of all the edges included in a spanning tree.
+Input
+The first line of input contains two integers
+n
+,
+k
+(
+2≤n≤50
+,
+1≤k≤min(n−1,5)
+).
+The second line contains
+k
+integers
+d
+1
+,
+d
+2
+,…,
+d
+k
+(
+1≤
+d
+i
+≤n
+).
+The
+i
+-th of the next
+n−1
+lines contains
+n−i
+integers
+w
+i,i+1
+,
+w
+i,i+2
+,…,
+w
+i,n
+(
+1≤
+w
+i,j
+≤100
+): weights of edges
+(i,i+1),(i,i+2),…,(i,n)
+.
+Output
+Print one integer: the minimum weight of a spanning tree under given degree constraints for the first
+k
+vertices.
+Example
+input
+Copy
+10 5
+5 3 4 2 1
+29 49 33 12 55 15 32 62 37
+61 26 15 58 15 22 8 58
+37 16 9 39 20 14 58
+10 15 40 3 19 55
+53 13 37 44 52
+23 59 58 4
+69 80 29
+89 28
+48
+output
+Copy
+95

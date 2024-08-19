@@ -1,0 +1,115 @@
+MEX Sequences
+Problem
+Chef is learning about absolute MEX sequences.
+A sequence
+A of
+N integers is said to be an absolute MEX sequence, if the following property holds for all
+1≤i≤N:
+∣A
+i
+−MEX(A
+1
+,A
+2
+,…,A
+i
+)∣≤1
+Chef has two integers
+N and
+M. Find the total number of absolute MEX sequences
+A, of length
+N, such that
+0≤A
+i
+≤M.
+Since answer can be huge, output the answer modulo
+10
+9
++7.
+Note:
+∣X∣ denotes the absolute value of
+X. For example,
+∣4∣=4 and
+∣−7∣=7.
+MEX(A
+1
+,A
+2
+,…,A
+N
+) denotes the MEX of the sequence
+[A
+1
+,A
+2
+,…,A
+N
+]. For example,
+MEX(2,2,1)=0, and
+MEX(3,1,0,1)=2.
+Input Format
+First line will contain
+T, number of test cases. Then, the test cases follow.
+Each test case contains of a single line of input, containing two space-separated integers
+N and
+M, as mentioned in statement.
+Output Format
+For each test case, output in a single line, the total number of absolute MEX sequences satisfying the condition, modulo
+10
+9
++7 .
+Constraints
+1≤T≤1000
+1≤N≤10
+6
+0≤M≤10
+6
+The sum of
+N over all test cases does not exceed
+2⋅10
+6
+The sum of
+M over all test cases does not exceed
+2⋅10
+6
+Sample 1:
+Input
+Output
+2
+3 2
+3 1
+8
+4
+Explanation:
+Test case
+1: Possible absolute MEX sequences are
+[0,0,0],[0,0,1],[0,1,2],[0,1,1],[0,2,2],[1,1,1],[0,0,2],[0,2,0].
+Consider the sequence
+[0,1,1]:
+i=1:
+∣A
+1
+−MEX(A
+1
+)∣=∣0−1∣=1≤1
+i=2:
+∣A
+2
+−MEX(A
+1
+,A
+2
+)∣=∣1−2∣=1≤1
+i=3:
+∣A
+3
+−MEX(A
+1
+,A
+2
+,A
+3
+)∣=∣1−2∣=1≤1
+Test case
+2: Possible absolute MEX sequences are
+[0,0,0],[0,0,1],[0,1,1],[1,1,1].

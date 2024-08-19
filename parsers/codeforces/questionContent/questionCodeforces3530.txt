@@ -1,0 +1,143 @@
+C. Electrification
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+At first, there was a legend related to the name of the problem, but now it's just a formal statement.
+You are given
+n
+points
+a
+1
+,
+a
+2
+,…,
+a
+n
+on the
+OX
+axis. Now you are asked to find such an integer point
+x
+on
+OX
+axis that
+f
+k
+(x)
+is minimal possible.
+The function
+f
+k
+(x)
+can be described in the following way:
+form a list of distances
+d
+1
+,
+d
+2
+,…,
+d
+n
+where
+d
+i
+=|
+a
+i
+−x|
+(distance between
+a
+i
+and
+x
+);
+sort list
+d
+in non-descending order;
+take
+d
+k+1
+as a result.
+If there are multiple optimal answers you can print any of them.
+Input
+The first line contains single integer
+T
+(
+1≤T≤2⋅
+10
+5
+) — number of queries. Next
+2⋅T
+lines contain descriptions of queries. All queries are independent.
+The first line of each query contains two integers
+n
+,
+k
+(
+1≤n≤2⋅
+10
+5
+,
+0≤k<n
+) — the number of points and constant
+k
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+1
+<
+a
+2
+<⋯<
+a
+n
+≤
+10
+9
+) — points in ascending order.
+It's guaranteed that
+∑n
+doesn't exceed
+2⋅
+10
+5
+.
+Output
+Print
+T
+integers — corresponding points
+x
+which have minimal possible value of
+f
+k
+(x)
+. If there are multiple answers you can print any of them.
+Example
+input
+Copy
+3
+3 2
+1 2 5
+2 1
+1 1000000000
+1 0
+4
+output
+Copy
+3
+500000000
+4

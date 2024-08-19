@@ -1,0 +1,234 @@
+Expected Buildings
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef is standing in the centre of a circle. The perimeter of the circle is divided into
+h units (numbered
+1 through
+h) and some of those units contain buildings. There are
+N buildings in total (numbered
+1 through
+N); let's denote the position of building
+i, i.e. the number of the unit containing this building, by
+p
+i
+. Note that a unit may contain more than one building.
+Chef has a vision range equal to
+x. This means he can look at an arbitrary contiguous range of
+x units at the same time.
+Chef likes to play with his girlfriend Cheftanya. Since he belongs to Wakanda, he decided to play a shooting game. In this game, he is going to look in some direction and shoot all the buildings he sees (without looking in any other direction). Cheftanya chooses the direction in which he looks; since she loves mathematics, she is going to choose this direction randomly using a special probability density function defined below. Before playing the game, though, she is interested in the expected number of buildings Chef will shoot. Chef is going to be busy shooting, so she asks for your help. Can you impress Cheftanya with your skills?
+This expected value can be written as a fraction
+P/Q, where
+P and
+Q are coprime. Since we are in the 21st century, nobody is interested in fractions. Therefore, you should compute
+P⋅Q
+−1
+modulo
+163577857, where
+Q
+−1
+denotes the modular inverse of
+Q modulo
+163577857. (It is guaranteed that this inverse exists and is unique.)
+Consider a sequence of integers
+a
+1
+,a
+2
+,…,a
+h
+; let's denote
+s=∑
+i=1
+h
+a
+i
+. We guarantee that
+s is not divisible by respective modulo (
+163577857). For each
+i (
+1≤i≤h), the probability that Cheftanya directs Chef to look at units
+i,i+1,…,i+x−1 is
+a
+i
+/s; the units are cyclic, so we can consider "unit
+i" to be equivalent to "unit
+i−h". Since the sequence
+a can be very large, you are only given its first
+K elements. You are also given a sequence
+c
+1
+,c
+2
+,…,c
+K
+; the remainder of sequence
+a can be generated using the formula
+a
+i
+=∑
+j=1
+K
+c
+j
+⋅a
+i−j
+∀i:K<i≤h.
+Input
+The first line of the input contains a single integer
+N denoting the number of buildings.
+The second line contains a single integer
+h denoting the total number of units the circle is divided into.
+The third line contains a single integer
+x denoting Chef's vision range.
+The fourth line contains a single integer
+K.
+The fifth line contains
+N space-separated integers
+p
+1
+,p
+2
+,…,p
+N
+denoting the positions of the buildings.
+The sixth line contains
+K space-separated integers
+a
+1
+,a
+2
+,…,a
+K
+.
+The seventh line contains
+K space-separated integers
+c
+1
+,c
+2
+,…,c
+K
+denoting the coefficients for generating the remaining probabilities.
+Output
+Print a single line containing one integer — the number equivalent to the expected number of buildings modulo
+163577857.
+Constraints
+1≤p
+i
+≤h for each valid
+i
+1≤x,K≤h
+0≤a
+i
+≤10
+9
+for each valid
+i
+0≤c
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (5 points):
+1≤N≤1,000
+1≤h≤10,000
+1≤K≤10
+Subtask #2 (10 points):
+1≤N≤50,000
+1≤h≤10
+6
+1≤K≤10
+Subtask #3 (30 points):
+1≤N≤100
+1≤h≤10
+9
+1≤K≤100
+Subtask #4 (55 points):
+1≤N≤2,000
+1≤h≤10
+9
+1≤K≤100
+Sample 1:
+Input
+Output
+3
+5
+3
+2
+1 3 5
+1 1
+1 1
+13631490
+Explanation:
+The complete sequence
+a is equal to
+{1,1,2,3,5} and
+s=∑a
+i
+=1+1+2+3+5=12. Chef looks at the range starting with unit
+1 with probability
+a
+1
+/s=1/12, at the range starting with unit
+3 with probability
+a
+3
+/s=1/6, and so on. The expected number of buildings he shoots is therefore equal to
+12
+1
+⋅2+
+12
+1
+⋅1+
+12
+2
+⋅2+
+12
+3
+⋅2+
+12
+5
+⋅2=
+12
+23
+=23⋅12
+−1
+=13631490.
+Example Input
+3
+5
+3
+2
+1 3 1
+1 1
+1 1
+Example Output
+27262978
+Explanation
+Again,
+a={1,1,2,3,5},
+s=1+1+2+3+5=12, so the probabilities are the same as in the previous example. However, there are two buildings in unit
+1. The expected value
+=
+12
+1
+⋅3+
+12
+1
+⋅1+
+12
+2
+⋅1+
+12
+3
+⋅2+
+12
+5
+⋅2=
+12
+22
+=11⋅6
+−1
+=27262978.

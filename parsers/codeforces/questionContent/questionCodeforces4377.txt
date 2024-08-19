@@ -1,0 +1,176 @@
+F. Cards and Joy
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+players sitting at the card table. Each player has a favorite number. The favorite number of the
+j
+-th player is
+f
+j
+.
+There are
+k⋅n
+cards on the table. Each card contains a single integer: the
+i
+-th card contains number
+c
+i
+. Also, you are given a sequence
+h
+1
+,
+h
+2
+,…,
+h
+k
+. Its meaning will be explained below.
+The players have to distribute all the cards in such a way that each of them will hold exactly
+k
+cards. After all the cards are distributed, each player counts the number of cards he has that contains his favorite number. The joy level of a player equals
+h
+t
+if the player holds
+t
+cards containing his favorite number. If a player gets no cards with his favorite number (i.e.,
+t=0
+), his joy level is
+0
+.
+Print the maximum possible total joy levels of the players after the cards are distributed. Note that the sequence
+h
+1
+,…,
+h
+k
+is the same for all the players.
+Input
+The first line of input contains two integers
+n
+and
+k
+(
+1≤n≤500,1≤k≤10
+) — the number of players and the number of cards each player will get.
+The second line contains
+k⋅n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+k⋅n
+(
+1≤
+c
+i
+≤
+10
+5
+) — the numbers written on the cards.
+The third line contains
+n
+integers
+f
+1
+,
+f
+2
+,…,
+f
+n
+(
+1≤
+f
+j
+≤
+10
+5
+) — the favorite numbers of the players.
+The fourth line contains
+k
+integers
+h
+1
+,
+h
+2
+,…,
+h
+k
+(
+1≤
+h
+t
+≤
+10
+5
+), where
+h
+t
+is the joy level of a player if he gets exactly
+t
+cards with his favorite number written on them. It is guaranteed that the condition
+h
+t−1
+<
+h
+t
+holds for each
+t∈[2..k]
+.
+Output
+Print one integer — the maximum possible total joy levels of the players among all possible card distributions.
+Examples
+input
+Copy
+4 3
+1 3 2 8 5 5 8 2 2 8 5 2
+1 2 2 5
+2 6 7
+output
+Copy
+21
+input
+Copy
+3 3
+9 9 9 9 9 9 9 9 9
+1 2 3
+1 2 3
+output
+Copy
+0
+Note
+In the first example, one possible optimal card distribution is the following:
+Player
+1
+gets cards with numbers
+[1,3,8]
+;
+Player
+2
+gets cards with numbers
+[2,2,8]
+;
+Player
+3
+gets cards with numbers
+[2,2,8]
+;
+Player
+4
+gets cards with numbers
+[5,5,5]
+.
+Thus, the answer is
+2+6+6+7=21
+.
+In the second example, no player can get a card with his favorite number. Thus, the answer is
+0
+.

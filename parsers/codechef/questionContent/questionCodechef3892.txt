@@ -1,0 +1,182 @@
+Square Loop
+Problem
+You are given an
+N×N square matrix
+G. Each cell of the matrix contains either O or X .
+A movement from cell
+(X
+1
+,Y
+1
+) to
+(X
+2
+,Y
+2
+) is legal only if:
+G
+(X
+1
+,Y
+1
+)
+=G
+(X
+2
+,Y
+2
+)
+= O;
+X
+1
+=X
+2
+or
+Y
+1
+=Y
+2
+.
+A path
+(X
+1
+,Y
+1
+)→(X
+2
+,Y
+2
+)→⋯→(X
+K
+,Y
+K
+) of length
+K is valid if it meets all of the following conditions:
+It starts from the first row and ends at the first row. Formally,
+X
+1
+=X
+K
+=1.
+You can not visit a cell twice. Formally, for any pair
+(i,j) such that
+(1≤i<j≤K), either
+X
+i
+
+=X
+j
+or
+Y
+i
+
+=Y
+j
+holds true .
+(X
+i
+,Y
+i
+)→(X
+(i+1)
+,Y
+(i+1)
+) is a legal movement for all
+(1≤i<K).
+At least one cell outside the first row is visited. Formally,
+∃X
+i
+
+=1
+(1<i<K).
+You need to answer
+Q queries. Each query is of the form:
+X
+Y: Given integers
+X and
+Y, such that
+(1≤X,Y≤N) and
+G
+(X,Y)
+= O, change
+G
+(X,Y)
+to X and find the length of the shortest valid path in the matrix. If no such path exists, print
+−1 instead.
+Note: Each modification is independent. In other words, for each query, we modify on the original matrix
+G.
+Input Format
+The first line of input will contain two space-separated integers
+N and
+Q, the dimension of matrix and the number of queries.
+The next
+N lines describe
+G. The
+i
+th
+of these
+N lines contains
+N characters.
+The next
+Q lines describe the queries. For the
+i
+th
+line, there are two space-separated integers
+X
+i
+and
+Y
+i
+, describing the
+i
+th
+query.
+Note: It is guaranteed that before each modification
+G
+(X
+i
+,Y
+i
+)
+= O, and, there are no duplicate queries.
+Output Format
+For each query, output on a new line, the length of the shortest valid path in the matrix. If no such path exists, print
+−1 instead.
+Constraints
+1≤N≤400
+1≤Q≤10
+5
+G
+(i,j)
+= O or X
+Sample 1:
+Input
+Output
+3 3
+OOX
+OXO
+OOO
+3 3
+3 1
+1 1
+4
+6
+-1
+Explanation:
+Query
+1: Update
+G
+(3,3)
+to X. The smallest valid path is
+(1,1)→(3,1)→(3,2)→(1,2).
+Query
+2: Update
+G
+(3,1)
+to X. The smallest valid path is
+(1,1)→(2,1)→(2,3)→(3,3)→(3,2)→(1,2).
+Query
+3: Update
+G
+(1,1)
+to X. No valid path exists.

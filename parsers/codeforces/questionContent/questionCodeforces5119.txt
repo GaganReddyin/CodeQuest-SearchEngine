@@ -1,0 +1,51 @@
+C. DNA Evolution
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Everyone knows that DNA strands consist of nucleotides. There are four types of nucleotides: "A", "T", "G", "C". A DNA strand is a sequence of nucleotides. Scientists decided to track evolution of a rare species, which DNA strand was string s initially.
+Evolution of the species is described as a sequence of changes in the DNA. Every change is a change of some nucleotide, for example, the following change can happen in DNA strand "AAGC": the second nucleotide can change to "T" so that the resulting DNA strand is "ATGC".
+Scientists know that some segments of the DNA strand can be affected by some unknown infections. They can represent an infection as a sequence of nucleotides. Scientists are interested if there are any changes caused by some infections. Thus they sometimes want to know the value of impact of some infection to some segment of the DNA. This value is computed as follows:
+Let the infection be represented as a string e, and let scientists be interested in DNA strand segment starting from position l to position r, inclusive.
+Prefix of the string eee... (i.e. the string that consists of infinitely many repeats of string e) is written under the string s from position l to position r, inclusive.
+The value of impact is the number of positions where letter of string s coincided with the letter written under it.
+Being a developer, Innokenty is interested in bioinformatics also, so the scientists asked him for help. Innokenty is busy preparing VK Cup, so he decided to delegate the problem to the competitors. Help the scientists!
+Input
+The first line contains the string s (1 ≤ |s| ≤ 105) that describes the initial DNA strand. It consists only of capital English letters "A", "T", "G" and "C".
+The next line contains single integer q (1 ≤ q ≤ 105) — the number of events.
+After that, q lines follow, each describes one event. Each of the lines has one of two formats:
+1 x c, where x is an integer (1 ≤ x ≤ |s|), and c is a letter "A", "T", "G" or "C", which means that there is a change in the DNA: the nucleotide at position x is now c.
+2 l r e, where l, r are integers (1 ≤ l ≤ r ≤ |s|), and e is a string of letters "A", "T", "G" and "C" (1 ≤ |e| ≤ 10), which means that scientists are interested in the value of impact of infection e to the segment of DNA strand from position l to position r, inclusive.
+Output
+For each scientists' query (second type query) print a single integer in a new line — the value of impact of the infection on the DNA.
+Examples
+input
+Copy
+ATGCATGC
+4
+2 1 8 ATGC
+2 2 6 TTT
+1 4 T
+2 2 6 TA
+output
+Copy
+8
+2
+4
+input
+Copy
+GAGTTGTTAA
+6
+2 3 4 TATGGTG
+1 1 T
+1 6 G
+2 5 9 AGTAATA
+1 10 G
+2 2 6 TTGT
+output
+Copy
+0
+3
+1
+Note
+Consider the first example. In the first query of second type all characters coincide, so the answer is 8. In the second query we compare string "TTTTT..." and the substring "TGCAT". There are two matches. In the third query, after the DNA change, we compare string "TATAT..."' with substring "TGTAT". There are 4 matches.

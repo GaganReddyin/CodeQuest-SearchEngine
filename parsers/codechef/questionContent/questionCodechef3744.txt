@@ -1,0 +1,120 @@
+Equal Inversions
+Problem
+JJ has two binary strings
+A and
+B, both of length
+N. He can perform the following operations on
+A:
+1. Pick any index
+i
+(1≤i≤N) and flip
+A
+i
+(i.e. change
+0 to
+1 and
+1 to
+0)
+2. Reverse
+A
+JJ wants the number of inversions in
+A to be equal to the number of inversions in
+B by performing at most
+⌈
+2
+N
+⌉ operations. Can you help him?
+Note: The number of inversions in a binary string
+S is the number of pairs
+(i,j) such that
+1≤i<j≤N and
+S
+i
+>S
+j
+.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the length of the binary strings
+A and
+B.
+The second line of each test case contains a binary string
+A of length
+N containing
+0s and
+1s only.
+The third line of each test case contains a binary string
+B of length
+N containing
+0s and
+1s only.
+Output Format
+For each test case, in the first line, output an integer
+M
+(0≤M≤⌈
+2
+N
+⌉) - the number of operations. Output the operations performed in the following
+M lines. Output:
+1 i: for denoting operation of type
+1 on index
+i.
+2: for denoting operation of type
+2.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+4
+4
+0101
+1000
+2
+00
+11
+5
+00001
+11110
+2
+00
+10
+1
+2
+0
+2
+2
+1 4
+1
+1 1
+Explanation:
+Test Case 1: The following operation can be performed:
+0101
+reverse
+1010
+inversions(1010)=inversions(1000)=3
+Test Case 2: No operations need to be performed since the number of inversions is already the same.
+inversions(00)=inversions(11)=0
+Test Case 3: The following operations can be performed:
+00001
+reverse
+10000
+flip A
+4
+10010
+inversions(10010)=inversions(11110)=4
+Test Case 4: The following operation can be performed:
+00
+flip A
+1
+10
+inversions(10)=inversions(10)=1

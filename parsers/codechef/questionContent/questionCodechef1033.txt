@@ -1,0 +1,100 @@
+Magda and Silly Pairs
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef and his friend Magda have
+2N mutual friends:
+N of these friends are chefs and the other
+N are chefettes. The chefs are numbered
+1 through
+N and the chefettes are (independently) also numbered
+1 through
+N. Since Magda wants their friends to be as happy as possible and to preserve traditional family values, she wants to pair them up in such a way that each chef is paired with exactly one chefette and each chefette with exactly one chef.
+The chefs have heights
+A
+1
+,A
+2
+,…,A
+N
+and the chefettes have heights
+B
+1
+,B
+2
+,…,B
+N
+. For each valid
+i,j, if the
+i-th chef and the
+j-th chefette are paired, they will have exactly one child with height
+⌊
+2
+A
+i
++B
+j
+⌋. Magda wants to pair up the chefs and chefettes in such a way that the sum of heights of all their children (
+N children in total) is maximum possible. Please help her do that.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+.
+Output
+Print a single line containing one integer ― the maximum sum of heights of the children.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+1≤B
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (40 points):
+1≤N≤100
+Subtask #2 (60 points): original constraints
+Sample 1:
+Input
+Output
+2
+3
+4 5 6
+1 2 3
+5
+4 8 6 4 1
+2 5 7 4 7
+10
+23
+Explanation:
+Example case 1: One possible solution is to pair the first chef with the second chefette, the second chef with the first chefette and the third chef with the third chefette. Their children will have heights
+3,
+3 and
+4, respectively.

@@ -1,0 +1,130 @@
+F2. Alice and Recoloring 2
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The difference between the versions is in the costs of operations. Solution for one version won't work for another!
+Alice has a grid of size
+n×m
+, initially all its cells are colored white. The cell on the intersection of
+i
+-th row and
+j
+-th column is denoted as
+(i,j)
+. Alice can do the following operations with this grid:
+Choose any subrectangle containing cell
+(1,1)
+, and flip the colors of all its cells. (Flipping means changing its color from white to black or from black to white).
+This operation costs
+1
+coin.
+Choose any subrectangle containing cell
+(n,1)
+, and flip the colors of all its cells.
+This operation costs
+3
+coins.
+Choose any subrectangle containing cell
+(1,m)
+, and flip the colors of all its cells.
+This operation costs
+4
+coins.
+Choose any subrectangle containing cell
+(n,m)
+, and flip the colors of all its cells.
+This operation costs
+2
+coins.
+As a reminder, subrectangle is a set of all cells
+(x,y)
+with
+x
+1
+≤x≤
+x
+2
+,
+y
+1
+≤y≤
+y
+2
+for some
+1≤
+x
+1
+≤
+x
+2
+≤n
+,
+1≤
+y
+1
+≤
+y
+2
+≤m
+.
+Alice wants to obtain her favorite coloring with these operations. What's the smallest number of coins that she would have to spend? It can be shown that it's always possible to transform the initial grid into any other.
+Input
+The first line of the input contains
+2
+integers
+n,m
+(
+1≤n,m≤500
+) — the dimensions of the grid.
+The
+i
+-th of the next
+n
+lines contains a string
+s
+i
+of length
+m
+, consisting of letters W and B. The
+j
+-th character of string
+s
+i
+is W if the cell
+(i,j)
+is colored white in the favorite coloring of Alice, and B if it's colored black.
+Output
+Output the smallest number of coins Alice would have to spend to achieve her favorite coloring.
+Examples
+input
+Copy
+3 3
+WWW
+WBB
+WBB
+output
+Copy
+2
+input
+Copy
+10 15
+WWWBBBWBBBBBWWW
+BBBBWWWBBWWWBBB
+BBBWWBWBBBWWWBB
+BBWBWBBWWWBBWBW
+BBBBWWWBBBWWWBB
+BWBBWWBBBBBBWWW
+WBWWBBBBWWBBBWW
+WWBWWWWBBWWBWWW
+BWBWWBWWWWWWBWB
+BBBWBWBWBBBWWBW
+output
+Copy
+68
+Note
+In the first sample, it's optimal to just apply the fourth operation once to the rectangle containing cells
+(2,2),(2,3),(3,2),(3,3)
+. This would cost
+2
+coins.

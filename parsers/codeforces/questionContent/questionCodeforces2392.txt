@@ -1,0 +1,187 @@
+D. Boboniu and Jianghu
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Since Boboniu finished building his Jianghu, he has been doing Kungfu on these mountains every day.
+Boboniu designs a map for his
+n
+mountains. He uses
+n−1
+roads to connect all
+n
+mountains. Every pair of mountains is connected via roads.
+For the
+i
+-th mountain, Boboniu estimated the tiredness of doing Kungfu on the top of it as
+t
+i
+. He also estimated the height of each mountain as
+h
+i
+.
+A path is a sequence of mountains
+M
+such that for each
+i
+(
+1≤i<|M|
+), there exists a road between
+M
+i
+and
+M
+i+1
+. Boboniu would regard the path as a challenge if for each
+i
+(
+1≤i<|M|
+),
+h
+M
+i
+≤
+h
+M
+i+1
+.
+Boboniu wants to divide all
+n−1
+roads into several challenges. Note that each road must appear in exactly one challenge, but a mountain may appear in several challenges.
+Boboniu wants to minimize the total tiredness to do all the challenges. The tiredness of a challenge
+M
+is the sum of tiredness of all mountains in it, i.e.
+∑
+|M|
+i=1
+t
+M
+i
+.
+He asked you to find the minimum total tiredness. As a reward for your work, you'll become a guardian in his Jianghu.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤2⋅
+10
+5
+), denoting the number of the mountains.
+The second line contains
+n
+integers
+t
+1
+,
+t
+2
+,…,
+t
+n
+(
+1≤
+t
+i
+≤
+10
+6
+), denoting the tiredness for Boboniu to do Kungfu on each mountain.
+The third line contains
+n
+integers
+h
+1
+,
+h
+2
+,…,
+h
+n
+(
+1≤
+h
+i
+≤
+10
+6
+), denoting the height of each mountain.
+Each of the following
+n−1
+lines contains two integers
+u
+i
+,
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n,
+u
+i
+≠
+v
+i
+), denoting the ends of the road. It's guaranteed that all mountains are connected via roads.
+Output
+Print one integer: the smallest sum of tiredness of all challenges.
+Examples
+input
+Copy
+5
+40 10 30 50 20
+2 3 2 3 1
+1 2
+1 3
+2 4
+2 5
+output
+Copy
+160
+input
+Copy
+5
+1000000 1 1 1 1
+1000000 1 1 1 1
+1 2
+1 3
+1 4
+1 5
+output
+Copy
+4000004
+input
+Copy
+10
+510916 760492 684704 32545 484888 933975 116895 77095 127679 989957
+402815 705067 705067 705067 623759 103335 749243 138306 138306 844737
+1 2
+3 2
+4 3
+1 5
+6 4
+6 7
+8 7
+8 9
+9 10
+output
+Copy
+6390572
+Note
+For the first example:
+In the picture, the lighter a point is, the higher the mountain it represents. One of the best divisions is:
+Challenge
+1
+:
+3→1→2
+Challenge
+2
+:
+5→2→4
+The total tiredness of Boboniu is
+(30+40+10)+(20+10+50)=160
+. It can be shown that this is the minimum total tiredness.

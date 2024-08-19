@@ -1,0 +1,89 @@
+Permutation Xority
+Problem
+You are given an integer
+N. Construct a permutation
+A of length
+N which is attractive.
+A permutation is called attractive if the bitwise XOR of all absolute differences of adjacent pairs of elements is equal to
+0.
+Formally, a permutation
+A=[A
+1
+,A
+2
+,…,A
+N
+] of length
+N is said to be attractive if:
+∣A
+1
+−A
+2
+∣⊕∣A
+2
+−A
+3
+∣⊕…⊕∣A
+N−1
+−A
+N
+∣=0
+where
+⊕ denotes the bitwise XOR operation.
+Output any attractive permutation of length
+N. If no attractive permutation exists, print
+−1 instead.
+Note: A permutation of length
+N is an array
+A=[A
+1
+,A
+2
+,…,A
+N
+] such that every integer from
+1 to
+N occurs exactly once in
+A. For example,
+[1,2,3] and
+[2,3,1] are permutations of length
+3, but
+[1,2,1],
+[4,1,2], and
+[2,3,1,4] are not.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of a single line of input, containing one integer
+N.
+Output Format
+For each test case, output on a single line an attractive permutation of
+N integers, or
+−1 if no attractive permutation exists.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+Sum of
+N over all cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+3
+6
+3 2 1
+5 2 3 6 4 1
+Explanation:
+Test Case
+1:
+∣3−2∣⊕∣2−1∣=1⊕1=0
+Note that there are other correct answers — for example,
+[1,2,3] would also be accepted as correct.
+Test Case
+2:
+∣5−2∣⊕∣2−3∣⊕∣3−6∣⊕∣6−4∣⊕∣4−1∣=3⊕1⊕3⊕2⊕3=0

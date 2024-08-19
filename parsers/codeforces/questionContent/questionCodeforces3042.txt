@@ -1,0 +1,87 @@
+C. K Integers
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a permutation
+p
+1
+,
+p
+2
+,…,
+p
+n
+.
+In one move you can swap two adjacent values.
+You want to perform a minimum number of moves, such that in the end there will exist a subsegment
+1,2,…,k
+, in other words in the end there should be an integer
+i
+,
+1≤i≤n−k+1
+such that
+p
+i
+=1,
+p
+i+1
+=2,…,
+p
+i+k−1
+=k
+.
+Let
+f(k)
+be the minimum number of moves that you need to make a subsegment with values
+1,2,…,k
+appear in the permutation.
+You need to find
+f(1),f(2),…,f(n)
+.
+Input
+The first line of input contains one integer
+n
+(
+1≤n≤200000
+): the number of elements in the permutation.
+The next line of input contains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+: given permutation (
+1≤
+p
+i
+≤n
+).
+Output
+Print
+n
+integers, the minimum number of moves that you need to make a subsegment with values
+1,2,…,k
+appear in the permutation, for
+k=1,2,…,n
+.
+Examples
+input
+Copy
+5
+5 4 3 2 1
+output
+Copy
+0 1 3 6 10 
+input
+Copy
+3
+1 2 3
+output
+Copy
+0 0 0 

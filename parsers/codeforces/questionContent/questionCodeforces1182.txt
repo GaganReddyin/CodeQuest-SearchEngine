@@ -1,0 +1,122 @@
+E. Black and White Tree
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a tree consisting of
+n
+vertices. Some of the vertices (at least two) are black, all the other vertices are white.
+You place a chip on one of the vertices of the tree, and then perform the following operations:
+let the current vertex where the chip is located is
+x
+. You choose a black vertex
+y
+, and then move the chip along the first edge on the simple path from
+x
+to
+y
+.
+You are not allowed to choose the same black vertex
+y
+in two operations in a row (i. e., for every two consecutive operations, the chosen black vertex should be different).
+You end your operations when the chip moves to the black vertex (if it is initially placed in a black vertex, you don't perform the operations at all), or when the number of performed operations exceeds
+100
+500
+.
+For every vertex
+i
+, you have to determine if there exists a (possibly empty) sequence of operations that moves the chip to some black vertex, if the chip is initially placed on the vertex
+i
+.
+Input
+The first line contains one integer
+n
+(
+3≤n≤3⋅
+10
+5
+) — the number of vertices in the tree.
+The second line contains
+n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+(
+0≤
+c
+i
+≤1
+), where
+c
+i
+=0
+means that the
+i
+-th vertex is white, and
+c
+i
+=1
+means that the
+i
+-th vertex is black. At least two values of
+c
+i
+are equal to
+1
+.
+Then
+n−1
+lines follow, each of them contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+;
+u
+i
+≠
+v
+i
+) — the endpoints of some edge. These edges form a tree.
+Output
+Print
+n
+integers. The
+i
+-th integer should be equal to
+1
+if there exists a (possibly empty) sequence of operations that moves the chip to some black vertex if it is placed on the vertex
+i
+, and
+0
+if no such sequence of operations exists.
+Example
+input
+Copy
+8
+0 1 0 0 0 0 1 0
+8 6
+2 5
+7 8
+6 5
+4 5
+6 1
+7 3
+output
+Copy
+0 1 1 1 1 0 1 1 

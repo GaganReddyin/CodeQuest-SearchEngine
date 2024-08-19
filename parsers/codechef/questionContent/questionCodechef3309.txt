@@ -1,0 +1,42 @@
+Before Having Donuts
+Problem
+###Read problems statements Hindi , Vietnamese , Mandarin Chinese , Russian and Bengali as well.
+When Chef was cooking donuts, thunder suddenly came across the gray-blue sky. That's how Lemon came to Earth, and that's also why she loves DONUTS! Since Lemon is a clever person, she often thinks about some problem before having donuts. This time, she thought about the following problem:
+There are
+N donuts. Each donut is a torus described by parameters
+x,
+y,
+z,
+R,
+r, where the center of the torus has Cartesian coordinates
+(x,y,z),
+R is the distance from the center of the torus to the center of its tube and
+r is the radius of the tube. The rotational axis of each torus is parallel with the
+z-axis.
+The tori may touch or intersect each other. What is the total volume they take up, i.e. the volume of the union of all
+N tori?
+Input
+The first line of the input contains a single integer
+N.
+Each of the following
+N lines contains five space-separated real numbers
+x,
+y,
+z,
+R and
+r describing one torus.
+Output
+Print a single line containing one real number — the total volume of the
+N tori. Your answer will be considered correct if its absolute error does not exceed
+10
+−2
+.
+Constraints
+1≤N≤20
+−900≤x,y,z≤600
+0.1≤r≤R≤50
+Example Input
+1
+0 0 0 5 2
+Example Output
+394.78417590

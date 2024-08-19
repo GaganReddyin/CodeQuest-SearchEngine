@@ -1,0 +1,178 @@
+Too Many LIS 2
+Problem
+This problem has two subtasks worth
+50 points each.
+You are given an integer
+N. You also have
+N empty sets
+S
+1
+,S
+2
+,…,S
+N
+.
+Consider all the arrays
+A of length
+N such that
+0≤A
+i
+≤1 for each
+1≤i≤N (there are
+2
+N
+such arrays in total).
+For each of these
+2
+N
+arrays, we compute an array
+B of length
+N where
+B
+i
+= length of longest non-decreasing subsequence for the prefix of length
+i of array
+A. (For example: if
+N=5 and
+A=[0,1,0,1,1], then
+B=[1,2,2,3,4].) Next we add the array
+B to the set
+S
+B
+N
+(For example,
+B=[1,2,2,3,4] would be added to
+S
+4
+).
+Output the size of sets
+S
+1
+,S
+2
+,…,S
+N
+as
+N space-separated integers. Since the size of the sets might be large, output the values modulo
+10
+9
++7.
+Note that the
+S
+i
+are sets, and hence do not contain duplicate elements. Please look at the sample cases below for an explained example.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a single integer
+N.
+Output Format
+For each test case, output on a new line the
+N space separated integers, size of sets
+S
+1
+,S
+2
+,…,S
+N
+, modulo
+10
+9
++7.
+Constraints
+1≤T≤500
+1≤N≤2⋅10
+5
+The sum of
+N over all tests won't exceed
+2⋅10
+5
+.
+Subtasks
+Subtask #1 (50 points):
+1≤T≤100
+1≤N≤5⋅10
+3
+The sum of
+N over all tests won't exceed
+5⋅10
+3
+.
+Subtask #2 (50 points): Original constraints
+Sample 1:
+Input
+Output
+3
+2
+3
+4
+1 1
+0 2 1
+0 2 3 1
+Explanation:
+Test case
+1:
+For
+A=[0,0],
+B=[1,2]
+For
+A=[0,1],
+B=[1,2]
+For
+A=[1,0],
+B=[1,1]
+For
+A=[1,1],
+B=[1,2]
+Therefore,
+S
+1
+={[1,1]},S
+2
+={[1,2]}
+Test case
+2:
+For
+A=[0,0,0],
+B=[1,2,3]
+For
+A=[0,0,1],
+B=[1,2,3]
+For
+A=[0,1,0],
+B=[1,2,2]
+For
+A=[0,1,1],
+B=[1,2,3]
+For
+A=[1,0,0],
+B=[1,1,2]
+For
+A=[1,0,1],
+B=[1,1,2]
+For
+A=[1,1,0],
+B=[1,2,2]
+For
+A=[1,1,1],
+B=[1,2,3]
+Therefore,
+S
+1
+={},S
+2
+={[1,1,2],[1,2,2]},S
+3
+={[1,2,3]}
+Test case
+3:
+S
+1
+={},S
+2
+={[1,1,2,2],[1,2,2,2]},S
+3
+={[1,1,2,3],[1,2,2,3],[1,2,3,3]},S
+4
+={[1,2,3,4]}

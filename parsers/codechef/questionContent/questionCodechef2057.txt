@@ -1,0 +1,81 @@
+K - balanced string
+Problem
+A binary string
+S of length
+N is called
+K-balanced string if it holds the following property: For each index
+i(1≤i≤N) such that
+S
+i
+= '1', there must exist an index
+j(1≤j≤N) such that
+S
+j
+= '1' and
+∣i−j∣=K, where
+∣x∣ denotes the absolute value of
+x.
+For example, if
+K=1, "00", "110", "011011" are 1-balanced strings, while "010" , "1001" are not; if
+K=2, "10101", "0101000101" are 2-balanced strings, while "0110" , "1001", "010" are not.
+Chef is given a binary string
+S of length
+N and an integer
+K. He can perform the following operation on the string:
+Select an index of the string, and flip the character at that index. This means if the character was "0", it becomes "1", and vice versa.
+What is the minimum number of operations Chef will have to perform so that the string becomes
+K-balanced?
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N,K.
+The second line of each test case contains a string
+S.
+Output Format
+For each test case, print a single line containing one integer - the minimum number operation Chef needs to perform on the given string to make it
+K-balanced.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+1≤K≤N
+S contains only characters '
+0' and '
+1'.
+The sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+4
+2 1
+01
+3 1
+111
+4 2
+1101
+5 3
+11110
+1
+0
+1
+2
+Explanation:
+Test case
+1: Chef applies one operation on the index
+2 and the string becomes "00" which is a 1-balanced string.
+Test case
+2: The given string is already 1-balanced.
+Test case
+3: Chef applies one operation on the index
+3 and the string becomes "1111" which is a 2-balanced string.
+Test case
+4: Chef applies one operation on the index
+2 and another operation on the index
+3. Hence, the string becomes "10010" which is a 3-balanced string.

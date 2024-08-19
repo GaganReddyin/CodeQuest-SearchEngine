@@ -1,0 +1,130 @@
+Monsters Battle
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef and Chefina are playing a game.
+Chef has
+N monsters (numbered
+1 through
+N). For each valid
+i, the
+i-th monster has a value
+V
+1,i
+and it is either in attack mode or defense mode. The initial states of the monsters are described by a string
+D
+1
+: for each valid
+i, the
+i-th monster is in attack mode if the
+i-th character of
+D
+1
+is 'A' or in defense mode if the
+i-th character is 'D'.
+Chefina has
+M monsters (numbered
+1 through
+M). Their values are
+V
+2,1
+,V
+2,2
+,…,V
+2,M
+and their initial states are described by a string
+D
+2
+in the same way.
+In the game, the players alternate turns; Chef plays first. During each turn, the current player may either end the game immediately or do the following: choose one of their own living monsters in attack mode, choose a monster of the other player in defense mode, attack and kill this defending monster and change the attacking monster to defense mode. Note that once a monster is in defense mode, it never changes to attack mode.
+Each player is trying to maximise the difference
+X−Y, where
+X is the sum of values of this player's living monsters (in both modes, but only if they are alive) and
+Y is the sum of values of the opponent's living monsters. Assuming that both players are playing optimally, calculate the sum of values of Chef's living monsters minus the sum of values of Chefina's living monsters after the game ends.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+The second line contains
+N space-separated integers
+V
+1,1
+,V
+1,2
+,…,V
+1,N
+.
+The third line contains a single string
+D
+1
+with length
+N.
+The fourth line contains
+M space-separated integers
+V
+2,1
+,V
+2,2
+,…,V
+2,M
+.
+The fifth line contains a single string
+D
+2
+with length
+M.
+Output
+For each test case, print a single line containing one integer ― the sum of values of Chef's living monsters minus the sum of values of Chefina's living monsters after the game ends.
+Constraints
+1≤T≤100
+1≤N,M≤10
+5
+initially, Chefina has at least one monster in defense mode
+D
+1
+and
+D
+2
+contain only characters 'A' and 'D'
+1≤V
+i,j
+≤10
+9
+for each valid
+i,j
+the sum of
+N over all test cases does not exceed
+10
+6
+the sum of
+M over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (50 points):
+N,M≤10
+3
+initially, Chefina has exactly one monster in defense mode and Chef has no monsters in defense mode
+the sum of
+N over all test cases does not exceed
+10
+4
+the sum of
+M over all test cases does not exceed
+10
+4
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+3 3
+5 4 60
+AAA
+2 15 16
+DAA
+38
+Explanation:
+Example case 1: Chef attacks Chefina's first monster with his second monster. On the next turn, Chefina decides to end the game.

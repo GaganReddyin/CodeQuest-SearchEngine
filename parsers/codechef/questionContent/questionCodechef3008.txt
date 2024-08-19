@@ -1,0 +1,143 @@
+Buying a New String
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+In Chefland, each citizen has their own personal string. Chef is no exception. Recently, his string broke and he went to a shop to get a new one.
+There are two strings in the shop:
+A and
+B. Chef may choose any substring
+A
+s
+of
+A (possibly empty) and any substring
+B
+s
+of
+B (also possibly empty). Then, the shop assistant cuts these substrings out and sells a single string
+C=A
+s
++B
+s
+(here,
++ denotes string concatenation) to Chef. For example, if
+A is "aba" and
+B is "cde", then some of the strings Chef can buy are "ba", "bac", "bacd", "ae", "d", "acde", "aba", "cde" or "abacde".
+Chef has seen a lot of strings in his life and he liked exactly
+N of them (numbered
+1 through
+N). For each valid
+i, the
+i-th of these strings is denoted by
+S
+i
+and according to Chef, it has a beauty
+b
+i
+. Let's denote the number of substrings of
+C that are equal to
+S
+i
+by
+cnt
+i
+(C). If Chef buys a string
+C, he says that the pleasure he gets from this string is
+∑
+i=1
+N
+cnt
+i
+(C)⋅b
+i
+.
+What is the maximum possible pleasure Chef can get from a string he buys in the shop?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single string
+A.
+The second line contains a single string
+B.
+The third line contains a single integer
+N.
+The following
+N lines describe Chef's favourite strings. For each valid
+i, the
+i-th of these lines contains a string
+S
+i
+, followed by a space and an integer
+b
+i
+.
+Output
+For each test case, print a single line containing one integer ― the maximum pleasure.
+Constraints
+1≤T≤10
+1≤∣A∣,∣B∣≤10
+3
+1≤N≤10
+4
+1≤∣S
+i
+∣≤26 for each valid
+i
+1≤b
+i
+≤10
+5
+for each valid
+i
+A,B,S
+1
+,S
+2
+,…,S
+N
+contain only lowercase English letters
+S
+1
+,S
+2
+,…,S
+N
+are pairwise distinct
+the sum of
+∣A∣ over all test cases does not exceed
+2⋅10
+3
+the sum of
+∣B∣ over all test cases does not exceed
+2⋅10
+3
+the sum of
+N over all test cases does not exceed
+2⋅10
+4
+Subtasks
+Subtask #1 (20 points, time limit 2 seconds):
+∣A∣,∣B∣,N≤100
+Subtask #2 (30 points, time limit 1 second):
+the sum of
+∣A∣ over all test cases does not exceed
+500
+the sum of
+∣B∣ over all test cases does not exceed
+500
+Subtask #3 (50 points, time limit 1 second): original constraints
+Sample 1:
+Input
+Output
+1
+hitech
+codechef
+3
+chef 3
+code 1
+eche 5
+13
+Explanation:
+Example case 1: Chef can buy the string
+C = "tech" + "echef" = "techechef". In this string
+C, one substring is "chef", there are no substrings "code" and two substrings are "eche". Chef's pleasure in this case is
+1⋅3+0⋅1+2⋅5=13, which is the maximum possible pleasure.

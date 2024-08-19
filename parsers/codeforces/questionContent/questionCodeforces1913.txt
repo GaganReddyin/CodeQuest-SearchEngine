@@ -1,0 +1,130 @@
+E. Fib-tree
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let
+F
+k
+denote the
+k
+-th term of Fibonacci sequence, defined as below:
+F
+0
+=
+F
+1
+=1
+for any integer
+n≥0
+,
+F
+n+2
+=
+F
+n+1
++
+F
+n
+You are given a tree with
+n
+vertices. Recall that a tree is a connected undirected graph without cycles.
+We call a tree a Fib-tree, if its number of vertices equals
+F
+k
+for some
+k
+, and at least one of the following conditions holds:
+The tree consists of only
+1
+vertex;
+You can divide it into two Fib-trees by removing some edge of the tree.
+Determine whether the given tree is a Fib-tree or not.
+Input
+The first line of the input contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of vertices in the tree.
+Then
+n−1
+lines follow, each of which contains two integers
+u
+and
+v
+(
+1≤u,v≤n
+,
+u≠v
+), representing an edge between vertices
+u
+and
+v
+. It's guaranteed that given edges form a tree.
+Output
+Print "YES" if the given tree is a Fib-tree, or "NO" otherwise.
+You can print your answer in any case. For example, if the answer is "YES", then the output "Yes" or "yeS" will also be considered as correct answer.
+Examples
+input
+Copy
+3
+1 2
+2 3
+output
+Copy
+YES
+input
+Copy
+5
+1 2
+1 3
+1 4
+1 5
+output
+Copy
+NO
+input
+Copy
+5
+1 3
+1 2
+4 5
+3 4
+output
+Copy
+YES
+Note
+In the first sample, we can cut the edge
+(1,2)
+, and the tree will be split into
+2
+trees of sizes
+1
+and
+2
+correspondently. Any tree of size
+2
+is a Fib-tree, as it can be split into
+2
+trees of size
+1
+.
+In the second sample, no matter what edge we cut, the tree will be split into
+2
+trees of sizes
+1
+and
+4
+. As
+4
+isn't
+F
+k
+for any
+k
+, it's not Fib-tree.
+In the third sample, here is one possible order of cutting the edges so that all the trees in the process are Fib-trees:
+(1,3),(1,2),(4,5),(3,4)
+.

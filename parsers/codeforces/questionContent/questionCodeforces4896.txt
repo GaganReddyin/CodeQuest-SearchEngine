@@ -1,0 +1,46 @@
+E. Numbers on the blackboard
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+A sequence of n integers is written on a blackboard. Soon Sasha will come to the blackboard and start the following actions: let x and y be two adjacent numbers (x before y), then he can remove them and write x + 2y instead of them. He will perform these operations until one number is left. Sasha likes big numbers and will get the biggest possible number.
+Nikita wants to get to the blackboard before Sasha and erase some of the numbers. He has q options, in the option i he erases all numbers to the left of the li-th number and all numbers to the right of ri-th number, i. e. all numbers between the li-th and the ri-th, inclusive, remain on the blackboard. For each of the options he wants to know how big Sasha's final number is going to be. This number can be very big, so output it modulo 109 + 7.
+Input
+The first line contains two integers n and q (1 ≤ n, q ≤ 105) — the number of integers on the blackboard and the number of Nikita's options.
+The next line contains n integers a1, a2, ..., an ( - 109 ≤ ai ≤ 109) — the sequence on the blackboard.
+Each of the next q lines contains two integers li and ri (1 ≤ li ≤ ri ≤ n), describing Nikita's options.
+Output
+For each option output Sasha's result modulo 109 + 7.
+Examples
+input
+Copy
+3 3
+1 2 3
+1 3
+1 2
+2 3
+output
+Copy
+17
+5
+8
+input
+Copy
+3 1
+1 2 -3
+1 3
+output
+Copy
+1000000006
+input
+Copy
+4 2
+1 1 1 -1
+1 4
+3 4
+output
+Copy
+5
+1000000006
+Note
+In the second sample Nikita doesn't erase anything. Sasha first erases the numbers 1 and 2 and writes 5. Then he erases 5 and -3 and gets -1. -1 modulo 109 + 7 is 109 + 6.

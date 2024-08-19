@@ -1,0 +1,182 @@
+F. Assigning Fares
+time limit per test6 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Mayor of city M. decided to launch several new metro lines during 2020. Since the city has a very limited budget, it was decided not to dig new tunnels but to use the existing underground network.
+The tunnel system of the city M. consists of
+n
+metro stations. The stations are connected with
+n−1
+bidirectional tunnels. Between every two stations
+v
+and
+u
+there is exactly one simple path. Each metro line the mayor wants to create is a simple path between stations
+a
+i
+and
+b
+i
+. Metro lines can intersects freely, that is, they can share common stations or even common tunnels. However, it's not yet decided which of two directions each line will go. More precisely, between the stations
+a
+i
+and
+b
+i
+the trains will go either from
+a
+i
+to
+b
+i
+, or from
+b
+i
+to
+a
+i
+, but not simultaneously.
+The city
+M
+uses complicated faring rules. Each station is assigned with a positive integer
+c
+i
+ — the fare zone of the station. The cost of travel from
+v
+to
+u
+is defined as
+c
+u
+−
+c
+v
+roubles. Of course, such travel only allowed in case there is a metro line, the trains on which go from
+v
+to
+u
+. Mayor doesn't want to have any travels with a negative cost, so it was decided to assign directions of metro lines and station fare zones in such a way, that fare zones are strictly increasing during any travel on any metro line.
+Mayor wants firstly assign each station a fare zone and then choose a lines direction, such that all fare zones are increasing along any line. In connection with the approaching celebration of the day of the city, the mayor wants to assign fare zones so that the maximum
+c
+i
+will be as low as possible. Please help mayor to design a new assignment or determine if it's impossible to do. Please note that you only need to assign the fare zones optimally, you don't need to print lines' directions. This way, you solution will be considered correct if there will be a way to assign directions of every metro line, so that the fare zones will be strictly increasing along any movement of the trains.
+Input
+The first line contains an integers
+n
+,
+m
+(
+2≤n,≤500000, 1≤m≤500000
+) — the number of stations in the city and the number of metro lines.
+Each of the following
+n−1
+lines describes another metro tunnel. Each tunnel is described with integers
+v
+i
+,
+u
+i
+(
+1≤
+v
+i
+, 
+u
+i
+≤n
+,
+v
+i
+≠
+u
+i
+). It's guaranteed, that there is exactly one simple path between any two stations.
+Each of the following
+m
+lines describes another metro line. Each line is described with integers
+a
+i
+,
+b
+i
+(
+1≤
+a
+i
+, 
+b
+i
+≤n
+,
+a
+i
+≠
+b
+i
+).
+Output
+In the first line print integer
+k
+ — the maximum fare zone used.
+In the next line print integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+(
+1≤
+c
+i
+≤k
+)  — stations' fare zones.
+In case there are several possible answers, print any of them. In case it's impossible to assign fare zones, print "-1".
+Examples
+input
+Copy
+3 1
+1 2
+2 3
+1 3
+output
+Copy
+3
+1 2 3
+input
+Copy
+4 3
+1 2
+1 3
+1 4
+2 3
+2 4
+3 4
+output
+Copy
+-1
+input
+Copy
+7 5
+3 4
+4 2
+2 5
+5 1
+2 6
+4 7
+1 3
+6 7
+3 7
+2 1
+3 6
+output
+Copy
+-1
+Note
+In the first example, line
+1→3
+goes through the stations 1, 2, 3 in this order. In this order the fare zones of the stations are increasing. Since this line has 3 stations, at least three fare zones are needed. So the answer 1, 2, 3 is optimal.
+In the second example, it's impossible to assign fare zones to be consistent with a metro lines.

@@ -1,0 +1,56 @@
+Xor Counting
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Find the number of sequences with
+K elements which satisfy the following conditions:
+Each element is an integer between
+L and
+R inclusive.
+The bitwise XOR of all elements is between
+A and
+B inclusive.
+Since the number of sequences satisfying the given conditions can be quite large, compute it modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains five space-separated integers
+L,
+R,
+A,
+B and
+K.
+Output
+For each test case, print a single line containing one integer — the number of valid sequences modulo
+998,244,353.
+Constraints
+1≤T≤10
+0≤L≤R<2
+60
+0≤A≤B<2
+60
+1≤K≤50
+Example Input
+3
+26 54 18 34 1
+3 5 4 7 2
+2 9 0 100 3
+Example Output
+9
+4
+512
+###EXPLANATION: In the first testcase, we have to choose one integer in
+[26,54]∩[18,34]=[26,34]. So, there are 9 ways.
+In the second testcase, we have to choose two integers in
+[3,5] with bitwise xor in
+[4,7]. There are 4 possible ways:
+3⊕4=7
+3⊕5=6
+4⊕3=7
+5⊕3=6.
+In the third testcase all
+8
+3
+possible sequences are valid, hence the answer is
+512.

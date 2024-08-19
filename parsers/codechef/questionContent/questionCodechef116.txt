@@ -1,0 +1,41 @@
+Enormous Input Test
+Problem
+You are given
+N integers. Find the count of numbers divisible by
+K.
+Input Format
+The input begins with two positive integers
+N,
+K. The next
+N lines contains one positive integer each denoted by
+A
+i
+.
+Output Format
+Output a single number denoting how many integers are divisible by
+K.
+Constraints
+1≤N,K≤10
+7
+1≤A
+i
+≤10
+9
+Sample 1:
+Input
+Output
+7 3
+1
+51
+966369
+7
+9
+999996
+11
+4
+Explanation:
+The integers divisible by
+3 are
+51,966369,9, and
+999996. Thus, there are
+4 integers in total.

@@ -1,0 +1,98 @@
+D2. Equalizing by Division (hard version)
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between easy and hard versions is the number of elements in the array.
+You are given an array
+a
+consisting of
+n
+integers. In one move you can choose any
+a
+i
+and divide it by
+2
+rounding down (in other words, in one move you can set
+a
+i
+:=⌊
+a
+i
+2
+⌋
+).
+You can perform such an operation any (possibly, zero) number of times with any
+a
+i
+.
+Your task is to calculate the minimum possible number of operations required to obtain at least
+k
+equal numbers in the array.
+Don't forget that it is possible to have
+a
+i
+=0
+after some operations, thus the answer always exists.
+Input
+The first line of the input contains two integers
+n
+and
+k
+(
+1≤k≤n≤2⋅
+10
+5
+) — the number of elements in the array and the number of equal numbers required.
+The second line of the input contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤2⋅
+10
+5
+), where
+a
+i
+is the
+i
+-th element of
+a
+.
+Output
+Print one integer — the minimum possible number of operations required to obtain at least
+k
+equal numbers in the array.
+Examples
+input
+Copy
+5 3
+1 2 2 4 5
+output
+Copy
+1
+input
+Copy
+5 3
+1 2 3 4 5
+output
+Copy
+2
+input
+Copy
+5 3
+1 2 3 3 3
+output
+Copy
+0

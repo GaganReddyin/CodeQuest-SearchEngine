@@ -1,0 +1,175 @@
+D. Circular Dance
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+kids, numbered from
+1
+to
+n
+, dancing in a circle around the Christmas tree. Let's enumerate them in a clockwise direction as
+p
+1
+,
+p
+2
+, ...,
+p
+n
+(all these numbers are from
+1
+to
+n
+and are distinct, so
+p
+is a permutation). Let the next kid for a kid
+p
+i
+be kid
+p
+i+1
+if
+i<n
+and
+p
+1
+otherwise. After the dance, each kid remembered two kids: the next kid (let's call him
+x
+) and the next kid for
+x
+. Each kid told you which kids he/she remembered: the kid
+i
+remembered kids
+a
+i,1
+and
+a
+i,2
+. However, the order of
+a
+i,1
+and
+a
+i,2
+can differ from their order in the circle.
+Example: 5 kids in a circle,
+p=[3,2,4,1,5]
+(or any cyclic shift). The information kids remembered is:
+a
+1,1
+=3
+,
+a
+1,2
+=5
+;
+a
+2,1
+=1
+,
+a
+2,2
+=4
+;
+a
+3,1
+=2
+,
+a
+3,2
+=4
+;
+a
+4,1
+=1
+,
+a
+4,2
+=5
+;
+a
+5,1
+=2
+,
+a
+5,2
+=3
+.
+You have to restore the order of the kids in the circle using this information. If there are several answers, you may print any. It is guaranteed that at least one solution exists.
+If you are Python programmer, consider using PyPy instead of Python when you submit your code.
+Input
+The first line of the input contains one integer
+n
+(
+3≤n≤2⋅
+10
+5
+) — the number of the kids.
+The next
+n
+lines contain
+2
+integers each. The
+i
+-th line contains two integers
+a
+i,1
+and
+a
+i,2
+(
+1≤
+a
+i,1
+,
+a
+i,2
+≤n,
+a
+i,1
+≠
+a
+i,2
+) — the kids the
+i
+-th kid remembered, given in arbitrary order.
+Output
+Print
+n
+integers
+p
+1
+,
+p
+2
+, ...,
+p
+n
+— permutation of integers from
+1
+to
+n
+, which corresponds to the order of kids in the circle. If there are several answers, you may print any (for example, it doesn't matter which kid is the first in the circle). It is guaranteed that at least one solution exists.
+Examples
+input
+Copy
+5
+3 5
+1 4
+2 4
+1 5
+2 3
+output
+Copy
+3 2 4 1 5 
+input
+Copy
+3
+2 3
+3 1
+1 2
+output
+Copy
+3 1 2 

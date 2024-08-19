@@ -1,0 +1,187 @@
+Inversions Retrieval
+Problem
+There is a hidden vector
+F, which initially has
+N values
+F
+0
+,F
+1
+,…,F
+N−1
+, which are a permutation of
+{0,1,…,N−1}. You want to find the number of inversions in
+F, that is, the number of pairs
+(i,j) with
+0≤i<j≤N−1 and
+F
+i
+>F
+j
+.
+By calling some functions defined later, you can append some values to the end of
+F. Say, currently
+F=[F
+0
+,F
+1
+,…,F
+k−1
+]. At any instant, any value in
+F must be in the range
+[0,10
+9
+], otherwise you get a wrong answer verdict. You can call the following functions, each of which appends some value to
+F:
+put
+i: This function appends
+i to the end of
+F.
+compose
+i (
+0≤i<k,0≤F
+i
+<k) : This function appends
+F
+F
+i
+to the end of
+F.
+add
+i
+j (
+0≤i,j<k) : This function appends
+F
+i
++F
+j
+to the end of
+F.
+subtract
+i
+j (
+0≤i,j<k) : This function appends
+F
+i
+−F
+j
+to the end of
+F.
+multiply
+i
+j (
+0≤i,j<k) : This function appends
+F
+i
+×F
+j
+to the end of
+F.
+xor
+i
+j (
+0≤i,j<k) : This function appends
+F
+i
+⊕F
+j
+to the end of
+F, where
+⊕ denotes the bitwise exclusive-or operator.
+compare
+i
+j (
+0≤i,j<k) : This function appends
+1 to the end of
+F, if
+F
+i
+<F
+j
+and
+0 otherwise.
+You are only given the value of
+N. You need to make at most
+10
+6
+function calls such that in the end, the last value in
+F contains the number of inversions in the original permutation, i.e, the number of inversions in
+[F
+0
+,F
+1
+,…,F
+N−1
+].
+Note that to get the points for a subtask, your output for that subtask should be able to provide the correct answer for every possible permutation of
+{0,1,…,N−1} that satisfies the constraints of that subtask. See the explanation of the sample provided below for an example.
+Input Format
+Each test case consists of two lines of input.
+The first line of the input will contain a single integer
+N, denoting the size of the hidden permutation.
+The second line of the input will contain a single integer with the value
+1 if the test case belongs to subtask
+1 and
+0 otherwise.
+Output Format
+In the first line, output the number of function calls you to want to make. This number should not exceed
+10
+6
+.
+In each of the following lines, output the function call as described in the problem statement.
+Constraints
+1≤N≤7000
+Subtasks
+Subtask 1 (25 points):
+N≤7000
+There exist at most two indices
+0≤i<N with
+F
+i
+
+=i.
+Subtask 2 (4 points):
+N≤1000.
+Subtask 3 (13 points):
+N≤1400.
+Subtask 4 (27 points):
+N≤4000.
+Subtask 5 (16 points):
+N≤5000.
+Subtask 6 (9 points):
+N≤6000.
+Subtask 7 (4 points):
+N≤6500.
+Subtask 8 (2 points):
+N≤7000.
+Sample 1:
+Input
+Output
+2 
+1
+2
+put 1
+multiply 0 2
+Explanation:
+In the beginning, the vector is
+[F
+0
+,F
+1
+]. After the first call, it would be
+[F
+0
+,F
+1
+,1]. After the second call, it would be
+[F
+0
+,F
+1
+,1,F
+0
+]. So, if the original vector was
+[0,1] the final value would be
+0 and if the original vector was
+[1,0], the final value would be
+1.

@@ -1,0 +1,219 @@
+M. Algoland and Berland
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Once upon a time Algoland and Berland were a single country, but those times are long gone. Now they are two different countries, but their cities are scattered on a common territory.
+All cities are represented as points on the Cartesian plane. Algoland consists of
+a
+cities numbered from
+1
+to
+a
+. The coordinates of the
+i
+-th Algoland city are a pair of integer numbers
+(x
+a
+i
+,y
+a
+i
+)
+. Similarly, Berland consists of
+b
+cities numbered from
+1
+to
+b
+. The coordinates of the
+j
+-th Berland city are a pair of integer numbers
+(x
+b
+j
+,y
+b
+j
+)
+. No three of the
+a+b
+mentioned cities lie on a single straight line.
+As the first step to unite the countries, Berland decided to build several bidirectional freeways. Each freeway is going to be a line segment that starts in a Berland city and ends in an Algoland city. Freeways can't intersect with each other at any point except freeway's start or end. Moreover, the freeways have to connect all
+a+b
+cities. Here, connectivity means that one can get from any of the specified
+a+b
+cities to any other of the
+a+b
+cities using freeways. Note that all freeways are bidirectional, which means that one can drive on each of them in both directions.
+Mayor of each of the
+b
+Berland cities allocated a budget to build the freeways that start from this city. Thus, you are given the numbers
+r
+1
+,
+r
+2
+,…,
+r
+b
+, where
+r
+j
+is the number of freeways that are going to start in the
+j
+-th Berland city. The total allocated budget is very tight and only covers building the minimal necessary set of freeways. In other words,
+r
+1
++
+r
+2
++⋯+
+r
+b
+=a+b−1
+.
+Help Berland to build the freeways so that:
+each freeway is a line segment connecting a Berland city and an Algoland city,
+no freeways intersect with each other except for the freeway's start or end,
+freeways connect all
+a+b
+cities (all freeways are bidirectional),
+there are
+r
+j
+freeways that start from the
+j
+-th Berland city.
+Input
+Input contains one or several test cases. The first input line contains a single integer number
+t
+(
+1≤t≤3000
+) — number of test cases. Then,
+t
+test cases follow. Solve test cases separately, test cases are completely independent and do not affect each other.
+Each test case starts with a line containing space-separated integers
+a
+and
+b
+(
+1≤a,b≤3000
+) — numbers of Algoland cities and number of Berland cities correspondingly.
+The next line contains
+b
+space-separated integers
+r
+1
+,
+r
+2
+,…,
+r
+b
+(
+1≤
+r
+b
+≤a
+) where
+r
+j
+is the number of freeways, that should start in the
+j
+-th Berland city. It is guaranteed that
+r
+1
++
+r
+2
++⋯+
+r
+b
+=a+b−1
+.
+The next
+a
+lines contain coordinates of the Algoland cities — pairs of space-separated integers
+x
+a
+i
+,y
+a
+i
+(
+−10000≤x
+a
+i
+,y
+a
+i
+≤10000
+). The next
+b
+lines contain coordinates of the Berland cities — pairs of space-separated integers
+x
+b
+i
+,y
+b
+i
+(
+−10000≤x
+b
+i
+,y
+b
+i
+≤10000
+). All cities are located at distinct points, no three of the
+a+b
+cities lie on a single straight line.
+Sum of values
+a
+across all test cases doesn't exceed
+3000
+. Sum of values
+b
+across all test cases doesn't exceed
+3000
+.
+Output
+For each of the
+t
+test cases, first print "YES" if there is an answer or "NO" otherwise.
+If there is an answer, print the freeway building plan in the next
+a+b−1
+lines. Each line of the plan should contain two space-separated integers
+j
+and
+i
+which means that a freeway from the
+j
+-th Berland city to the
+i
+-th Algoland city should be built. If there are multiple solutions, print any.
+Example
+input
+Copy
+2
+2 3
+1 1 2
+0 0
+1 1
+1 2
+3 2
+4 0
+1 1
+1
+0 0
+0 1
+output
+Copy
+YES
+2 2
+1 2
+3 2
+3 1
+YES
+1 1

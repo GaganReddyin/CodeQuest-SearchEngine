@@ -1,0 +1,96 @@
+Lunchtime
+Problem
+Read problem statements in Russian, Bengali, and Mandarin Chinese as well.
+There are
+N students standing in a canteen queue, numbered
+1 to
+N from left to right. For each valid
+i, the
+i-th student has a height
+h
+i
+.
+Two students
+i and
+j can see each other if there are no taller students standing between them. Formally, students
+i and
+j (
+i<j) can see each other if for each integer
+k (
+i<k<j),
+h
+k
+≤h
+i
+,h
+j
+.
+For each valid
+i, determine the number
+c
+i
+of students that have the same height as student
+i and can be seen by student
+i.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+h
+1
+,h
+2
+,…,h
+N
+.
+Output
+For each test case, print a single line containing
+N space-separated integers
+c
+1
+,c
+2
+,…,c
+N
+.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤h
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+5
+Subtasks
+Subtask #1 (30 points): the sum of
+N over all test cases does not exceed
+10
+3
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+5
+1 2 2 3 2
+0 1 1 0 0
+Explanation:
+Example case 1: Student
+3 can see students
+2 and
+4, but only student
+2 has the same height (height
+2). On the other hand, student
+3 cannot see student
+5 since student
+4 is taller and therefore blocking the view.

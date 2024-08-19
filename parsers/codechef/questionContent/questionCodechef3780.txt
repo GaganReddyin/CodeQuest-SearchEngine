@@ -1,0 +1,128 @@
+Yet Another Counting Problem
+Problem
+Nayra doesn't like stories of people receiving random arrays as birthday presents, but this time she received an array as a present for her own birthday! After struggling for a day trying to figure out what to do with this array, she asked Aryan for help. He gave her this problem.
+You are given an array
+A=[A
+1
+,A
+2
+,…,A
+N
+] containing
+N distinct integers. Count the number of ways to form (unordered) sets of disjoint increasing subsequences of
+A.
+Formally, count the number of sets
+S={S
+1
+,S
+2
+,…,S
+k
+} such that:
+Each
+S
+i
+is an increasing subsequence of
+A.
+If
+i
+
+=j,
+S
+i
+and
+S
+j
+are disjoint, i.e,
+i
+
+=j⟹S
+i
+∩S
+j
+=∅
+Note that it is not necessary that the sequences
+S
+1
+,S
+2
+,…,S
+k
+form a partition of
+A - in other words, some elements of
+A may not be in any chosen subsequence.
+Two sets are considered equal if they contain the same subsequences. For example, the sets
+{[1,2],[3]} and
+{[3],[1,2]} are considered to be the same and should only be counted once.
+Note that the final answer can be rather large, so compute its remainder after dividing it by
+10
+9
++7.
+Please refer to the sample for a few examples.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N - the size of
+A.
+The second line contains
+N distinct space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+- the elements of
+A.
+Output Format
+For each test, print one line containing a single integer, the answer to the problem modulo
+(10
+9
++7).
+Constraints
+1≤T≤2000
+1≤N≤20
+1≤A
+i
+≤N
+The elements of
+A are distinct.
+Each input file contains at most
+3 tests with
+N>10.
+Subtasks
+Subtask 1 (15 points):
+N≤14
+Subtask 2 (15 points):
+N≤16
+Subtask 3 (40 points):
+N≤18
+Subtask 4 (30 points):
+N≤20
+Sample 1:
+Input
+Output
+2
+2
+1 2
+7
+1 2 7 3 6 4 5
+5
+1537
+Explanation:
+Test case 1: All possible sets are
+{},{[1]},{[2]},{[1],[2]},{[1,2]}. Note that the empty set is also counted; and it is not necessary to use every element of
+A in some increasing subsequence.
+Test case 2: Some of the valid possible ways are:
+S={[1,2,7],[3,6],[4]}.
+S={[1,2,6],[7],[3],[4]}
+S={[1,2,6],[7],[3,5],[4]}
+S={[1,2,6],[7],[3,4]}
+S={[1,4],[2,3],[6],[7]}
+Once again, note that we count unordered sets. So, the following sets are considered the same:
+{[1,4],[2,3],[6],[7]} or
+{[6],[1,4],[2,3],[7]} or
+{[1,4],[6],[2,3],[7]} or
+{[7],[2,3],[6],[1,4]}

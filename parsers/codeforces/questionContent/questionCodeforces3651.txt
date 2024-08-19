@@ -1,0 +1,114 @@
+A. Stock Arbitraging
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Welcome to Codeforces Stock Exchange! We're pretty limited now as we currently allow trading on one stock, Codeforces Ltd. We hope you'll still be able to make profit from the market!
+In the morning, there are
+n
+opportunities to buy shares. The
+i
+-th of them allows to buy as many shares as you want, each at the price of
+s
+i
+bourles.
+In the evening, there are
+m
+opportunities to sell shares. The
+i
+-th of them allows to sell as many shares as you want, each at the price of
+b
+i
+bourles. You can't sell more shares than you have.
+It's morning now and you possess
+r
+bourles and no shares.
+What is the maximum number of bourles you can hold after the evening?
+Input
+The first line of the input contains three integers
+n,m,r
+(
+1≤n≤30
+,
+1≤m≤30
+,
+1≤r≤1000
+) — the number of ways to buy the shares on the market, the number of ways to sell the shares on the market, and the number of bourles you hold now.
+The next line contains
+n
+integers
+s
+1
+,
+s
+2
+,…,
+s
+n
+(
+1≤
+s
+i
+≤1000
+);
+s
+i
+indicates the opportunity to buy shares at the price of
+s
+i
+bourles.
+The following line contains
+m
+integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+(
+1≤
+b
+i
+≤1000
+);
+b
+i
+indicates the opportunity to sell shares at the price of
+b
+i
+bourles.
+Output
+Output a single integer — the maximum number of bourles you can hold after the evening.
+Examples
+input
+Copy
+3 4 11
+4 2 5
+4 4 5 4
+output
+Copy
+26
+input
+Copy
+2 2 50
+5 7
+4 2
+output
+Copy
+50
+Note
+In the first example test, you have
+11
+bourles in the morning. It's optimal to buy
+5
+shares of a stock at the price of
+2
+bourles in the morning, and then to sell all of them at the price of
+5
+bourles in the evening. It's easy to verify that you'll have
+26
+bourles after the evening.
+In the second example test, it's optimal not to take any action.

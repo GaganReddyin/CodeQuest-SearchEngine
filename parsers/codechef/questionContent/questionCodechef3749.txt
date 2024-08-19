@@ -1,0 +1,55 @@
+The Illusionist
+Problem
+Niket is an incredible magician. He has prepared an extraordinary magic trick which he calls as the biggest achievement of his life. He will be performing this magic trick for the first time in the
+K-Pop World Festival. He is nervous and wants to make sure that everything goes well. His magic trick consists of
+N acts labeled from 1 to N. Every act except act 1 is
+directly dependent upon the successful execution of exactly one of the previous acts. The act i is said to be dependent upon act j iff -
+act i is directly dependent upon the act j (j < i) or
+act i is dependent upon some act x which is dependent upon the act j. (j < x < i)
+An act can never happen if one or more of its dependencies failed. Note that
+not happening is not the same as failing. Also, every act has an associated value
+a
+i
+which gets added to the audience's anger if that act
+fails. If the anger becomes very large, people will start throwing sharp objects at Niket.
+Since he is going to perform in the
+K-Pop World Festival, he is interested in knowing the minimum possible anger value of audience in the hypothetical situation where he was able to successfully execute
+exactly K acts during his performance. This means that the remaining acts either failed or could not happen (because of the dependency constraints).
+###Input The first line contains a single interger
+T - the number of testcases.
+For each testcase,
+The first line contains two space separated integers
+N and
+K.
+The following N-1 lines contain the information about the acts 2 to N. ith of these lines contains two space separated integers
+p
+i
+(
+p
+i
+< i+1) and
+a
+i
+- This means that the (i+1)th act is directly dependent upon the
+p
+i
+th act and adds
+a
+i
+to the anger value.
+###Output For each testcase, print a line containing the minimum anger value of audience if Niket could perform exactly
+K of the acts successfully.
+###Constraints
+1≤T≤10
+1≤N≤2000
+1≤K≤N
+1≤a
+i
+≤10
+9
+###Sample Input 1 5 3 1 5 2 4 2 6 3 8
+###Sample Output 4
+###Explanation If Niket fails on act 3,
+a
+3
+= 4 gets added to the audience's anger and the act 5 can never happen. This means only 3 acts 1,2 and 4 are successful.

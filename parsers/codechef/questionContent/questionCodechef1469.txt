@@ -1,0 +1,93 @@
+The Last Problem
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Deep wants to become a 7-star coder on CodeChef. To achieve this goal, everyday, he has to solve as many problems as he can. But for the first time since he was new to programming, he wasn't able to solve a single problem and lost his confidence. Can you help him solve the problem so that he gets a new boost to go ahead?
+In this problem, you are given a matrix that extends infinitely to the right and down, filled with values as shown below.
+Let
+(x,y) denote the cell in the
+x-th row and
+y-th column. The upper-left cell
+(1,1) contains an integer
+1. You begin at the cell
+(x
+1
+,y
+1
+) and must walk to the cell
+(x
+2
+,y
+2
+) by only moving right and down. Formally, from the cell
+(x,y), in one step you can move to the cell
+(x+1,y) or
+(x,y+1).
+The value of a path is the sum of the values in all visited cells, including
+(x
+1
+,y
+1
+) and
+(x
+2
+,y
+2
+). You need to calculate the maximum possible value on the path of a path from
+(x
+1
+,y
+1
+) to
+(x
+2
+,y
+2
+).
+###Input
+The first line contains an integer
+T, the number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+.
+###Output For each test case, output in a single line the maximum possible value of a path from
+(x
+1
+,y
+1
+) to
+(x
+2
+,y
+2
+).
+###Constraints
+1≤T≤1000
+1≤x
+1
+≤x
+2
+≤1000
+1≤y
+1
+≤y
+2
+≤1000
+Sample 1:
+Input
+Output
+1
+1 1 3 3
+32
+Explanation:
+The only way to achieve the maximum possible value is by visiting cells with values
+1→3→6→9→13.

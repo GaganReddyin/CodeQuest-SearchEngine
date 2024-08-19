@@ -1,0 +1,202 @@
+F. Trucks and Cities
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cities along the road, which can be represented as a straight line. The
+i
+-th city is situated at the distance of
+a
+i
+kilometers from the origin. All cities are situated in the same direction from the origin. There are
+m
+trucks travelling from one city to another.
+Each truck can be described by
+4
+integers: starting city
+s
+i
+, finishing city
+f
+i
+, fuel consumption
+c
+i
+and number of possible refuelings
+r
+i
+. The
+i
+-th truck will spend
+c
+i
+litres of fuel per one kilometer.
+When a truck arrives in some city, it can be refueled (but refueling is impossible in the middle of nowhere). The
+i
+-th truck can be refueled at most
+r
+i
+times. Each refueling makes truck's gas-tank full. All trucks start with full gas-tank.
+All trucks will have gas-tanks of the same size
+V
+litres. You should find minimum possible
+V
+such that all trucks can reach their destinations without refueling more times than allowed.
+Input
+First line contains two integers
+n
+and
+m
+(
+2≤n≤400
+,
+1≤m≤250000
+) — the number of cities and trucks.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+,
+a
+i
+<
+a
+i+1
+) — positions of cities in the ascending order.
+Next
+m
+lines contains
+4
+integers each. The
+i
+-th line contains integers
+s
+i
+,
+f
+i
+,
+c
+i
+,
+r
+i
+(
+1≤
+s
+i
+<
+f
+i
+≤n
+,
+1≤
+c
+i
+≤
+10
+9
+,
+0≤
+r
+i
+≤n
+) — the description of the
+i
+-th truck.
+Output
+Print the only integer — minimum possible size of gas-tanks
+V
+such that all trucks can reach their destinations.
+Example
+input
+Copy
+7 6
+2 5 7 10 14 15 17
+1 3 10 0
+1 7 12 7
+4 5 13 3
+4 7 10 1
+4 7 10 1
+1 5 11 2
+output
+Copy
+55
+Note
+Let's look at queries in details:
+the
+1
+-st truck must arrive at position
+7
+from
+2
+without refuelling, so it needs gas-tank of volume at least
+50
+.
+the
+2
+-nd truck must arrive at position
+17
+from
+2
+and can be refueled at any city (if it is on the path between starting point and ending point), so it needs gas-tank of volume at least
+48
+.
+the
+3
+-rd truck must arrive at position
+14
+from
+10
+, there is no city between, so it needs gas-tank of volume at least
+52
+.
+the
+4
+-th truck must arrive at position
+17
+from
+10
+and can be refueled only one time: it's optimal to refuel at
+5
+-th city (position
+14
+) so it needs gas-tank of volume at least
+40
+.
+the
+5
+-th truck has the same description, so it also needs gas-tank of volume at least
+40
+.
+the
+6
+-th truck must arrive at position
+14
+from
+2
+and can be refueled two times: first time in city
+2
+or
+3
+and second time in city
+4
+so it needs gas-tank of volume at least
+55
+.

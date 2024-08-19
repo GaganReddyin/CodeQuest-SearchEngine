@@ -1,0 +1,215 @@
+G3. Doremy's Perfect DS Class (Hard Version)
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between this problem and the other two versions is the maximum number of queries. In this version, you are allowed to ask at most
+20
+queries. You can make hacks only if all versions of the problem are solved.
+This is an interactive problem.
+"Everybody! Doremy's Perfect Data Structure Class is about to start! Come and do your best if you want to have as much IQ as me!" In today's Data Structure class, Doremy is teaching everyone a powerful data structure — Doremy tree! Now she gives you a quiz to prove that you are paying attention in class.
+Given an array
+a
+of length
+m
+, Doremy tree supports the query
+Q(l,r,k)
+, where
+1≤l≤r≤m
+and
+1≤k≤m
+, which returns the number of distinct integers in the array
+[⌊
+a
+l
+k
+⌋,⌊
+a
+l+1
+k
+⌋,…,⌊
+a
+r
+k
+⌋]
+.
+Doremy has a secret permutation
+p
+of integers from
+1
+to
+n
+. You can make queries, in one query, you give
+3
+integers
+l,r,k
+(
+1≤l≤r≤n
+,
+1≤k≤n
+) and receive the value of
+Q(l,r,k)
+for the array
+p
+. Can you find the index
+y
+(
+1≤y≤n
+) such that
+p
+y
+=1
+in at most
+20
+queries?
+Note that the permutation
+p
+is fixed before any queries are made.
+Interaction
+You begin the interaction by reading an integer
+n
+(
+3≤n≤1024
+) in the first line — the length of the permutation.
+To make a query, you should output
+"?
+l r k
+" (
+1≤l≤r≤n
+,
+1≤k≤n
+)
+in a separate line. After each query, you should read an integer
+x
+ — the value of
+Q(l,r,k)
+for
+p
+. In this version of the problem, you can make at most
+20
+such queries.
+To give the answer, you should output
+"!
+y
+" (
+1≤y≤n
+)
+in a separate line, where
+p
+y
+=1
+.
+After printing a query or the answer, do not forget to output the end of line and flush the output. Otherwise, you will get Idleness limit exceeded. To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see documentation for other languages.
+Hacks Format
+The first line of the hack contains an integer
+n
+(
+3≤n≤1024
+) — the length of the permutation.
+The second line of the hack contains
+n
+distinct integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+) — the permutation.
+Example
+input
+Copy
+5
+
+2
+
+2
+
+1
+
+3
+output
+Copy
+? 1 3 4
+
+? 3 5 3
+
+? 3 4 5
+
+? 3 5 2
+
+! 4
+Note
+The permutation in the example is
+[3,5,2,1,4]
+.
+The input and output for example illustrate possible interaction on that test (empty lines are inserted only for clarity).
+In this interaction process:
+For the first query,
+⌊
+3
+4
+⌋=0,⌊
+5
+4
+⌋=1,⌊
+2
+4
+⌋=0
+, so the answer is
+2
+.
+For the second query,
+⌊
+2
+3
+⌋=0,⌊
+1
+3
+⌋=0,⌊
+4
+3
+⌋=1
+, so the answer is still
+2
+.
+For the third query,
+⌊
+2
+5
+⌋=0,⌊
+1
+5
+⌋=0
+, so the answer is
+1
+.
+For the fourth query,
+⌊
+2
+2
+⌋=1,⌊
+1
+2
+⌋=0,⌊
+4
+2
+⌋=2
+, so the answer is
+3
+.
+The correct answer is got after
+4
+queries, so this process will be judged correct.

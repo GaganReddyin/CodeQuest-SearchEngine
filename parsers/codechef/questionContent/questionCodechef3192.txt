@@ -1,0 +1,124 @@
+Remove Numbers
+Problem
+Two players are playing a game. They are given an array
+A
+1
+,A
+2
+,…,A
+N
+as well as an array
+B
+1
+,B
+2
+,…,B
+M
+.
+The game consists of
+M rounds. Players are participating in rounds alternatively. During the
+i-th round (for
+i from
+1 to
+M) the corresponding player (first player, if
+i is odd, and second if
+i is even) has to do exactly one of the following:
+remove all elements from the array
+A that are divisible by
+B
+i
+,
+remove all elements from the array
+A that are not divisible by
+B
+i
+.
+The first player wants to minimize the sum of the remaining elements in the array
+A after all
+M rounds, and the second wants to maximize it. Find the sum of the remaining elements in the array
+A after all
+M rounds if both players are playing optimally.
+Input Format
+The first line contains two integers
+N,
+M
+− the length of the array
+A and the number of rounds in the game.
+The second line contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+− the elements of the array
+A.
+The third line contains
+M integers
+B
+1
+,B
+2
+,…,B
+M
+− the elements of the array
+B.
+Output Format
+Output a single integer
+− the sum of the remaining elements of the array
+A after all
+M rounds if both players are playing optimally.
+Constraints
+1≤N≤2⋅10
+4
+1≤M≤2⋅10
+5
+−4⋅10
+14
+≤A
+i
+≤4⋅10
+14
+1≤B
+i
+≤4⋅10
+14
+Subtasks
+Subtask 1 (22 points):
+B
+i+1
+modB
+i
+=0 (
+1≤i<M)
+Subtask 2 (24 points):
+1≤M≤20
+Subtask 3 (28 points):
+1≤M≤100
+Subtask 4 (26 points): No additional constraints
+Sample 1:
+Input
+Output
+6 2
+2 2 5 2 2 7
+2 5
+7
+Explanation:
+In the sample, one possible flow of the game is the following:
+Round
+1: first player removes from
+A all elements divisible by
+2.
+A becomes
+(5,7).
+Round
+2: second player removes from
+A all elements divisible by
+5.
+A becomes
+(7). If he had removed from
+A all elements not divisible by
+5,
+A would become
+(5), which has a smaller sum of elements and therefore is not desirable for the second player.

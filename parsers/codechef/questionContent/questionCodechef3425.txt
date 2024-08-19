@@ -1,0 +1,228 @@
+Chef and Sums
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef gave you a sequence of integers
+a
+1
+,a
+2
+,…,a
+N
+and
+3 integers
+K,
+m and
+x. Let's define the following functions:
+G(i
+1
+,…,i
+K
+)=gcd(a
+i
+1
+,…,a
+i
+K
+)
+S
+x
+(i
+1
+,…,i
+K
+)=a
+i
+1
+x
++a
+i
+2
+x
++…+a
+i
+K
+x
+P
+m
+(i
+1
+,…,i
+K
+)=(a
+i
+1
+⋅a
+i
+2
+⋅…⋅a
+i
+K
+)
+m
+W(T)=smallestprimedivisorofP
+1
+(T)
+Chef wants you to compute the sum of
+G(T)⋅W(T)⋅S
+x
+(T)⋅P
+m
+(T) over all
+K-tuples of indices
+T=(i
+1
+,i
+2
+,…,i
+K
+) such that
+i
+j
+∈{1,2,…,N} for each valid
+j (there are
+N
+K
+of these
+K-tuples). Since this sum could be enormous, compute it modulo
+10
+9
++7.
+Input
+The first line of the input contains four space-separated integers
+N,
+K,
+m and
+x.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Output
+Print a single line containing one integer
+∑
+T
+G(T)⋅W(T)⋅S
+x
+(T)⋅P
+m
+(T) modulo
+10
+9
++7.
+Constraints
+1≤N≤10
+6
+1≤K,m,x≤10
+18
+2≤a
+i
+≤10
+6
+for each valid
+i
+Subtasks
+Subtask #1 (5 points):
+N≤10
+K≤6
+Subtask #2 (20 points): for each valid
+i,
+a
+i
+is even
+Subtask #3 (75 points): original constraints
+Sample 1:
+Input
+Output
+3 2 1 1
+2 3 4
+2414
+Explanation:
+Example case 1: We have
+N
+K
+=3
+2
+=9 possible pairs
+T of indices. The corresponding summands are:
+T=(1,1):
+gcd(2,2)⋅(2
+1
++2
+1
+)⋅(2⋅2)
+1
+⋅2=64
+T=(1,2):
+gcd(2,3)⋅(2
+1
++3
+1
+)⋅(2⋅3)
+1
+⋅2=60
+T=(1,3):
+gcd(2,4)⋅(2
+1
++4
+1
+)⋅(2⋅4)
+1
+⋅2=192
+T=(2,1):
+gcd(3,2)⋅(3
+1
++2
+1
+)⋅(3⋅2)
+1
+⋅2=60
+T=(2,2):
+gcd(3,3)⋅(3
+1
++3
+1
+)⋅(3⋅3)
+1
+⋅3=486
+T=(2,3):
+gcd(3,4)⋅(3
+1
++4
+1
+)⋅(3⋅4)
+1
+⋅2=168
+T=(3,1):
+gcd(4,2)⋅(4
+1
++2
+1
+)⋅(4⋅2)
+1
+⋅2=192
+T=(3,2):
+gcd(4,3)⋅(4
+1
++3
+1
+)⋅(4⋅3)
+1
+⋅2=168
+T=(3,3):
+gcd(4,4)⋅(4
+1
++4
+1
+)⋅(4⋅4)
+1
+⋅2=1024
+Their sum modulo
+10
+9
++7 is
+2414.

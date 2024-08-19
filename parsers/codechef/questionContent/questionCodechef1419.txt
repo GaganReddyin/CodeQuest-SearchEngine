@@ -1,0 +1,38 @@
+Racing
+Problem
+Read problem statements in Russian, Bengali, and Mandarin Chinese as well.
+Ann is going to take part in a race. At the start, she has
+X units of energy. For each subsequent second, she can decide to run or to rest (she must perform the chosen action during the whole second). If she runs, she loses one unit of energy during that second and if she rests, she gains one unit of energy during that second. However, if Ann decides to rest when she has
+X units of energy, she does not gain any extra energy. Naturally, she cannot decide to run if she has
+0 units of energy.
+Ann needs to run for
+R minutes to reach the goal and she needs to reach it within
+M minutes. Is Ann able to finish the race on time?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+X,
+R and
+M.
+Output
+For each test case, print a single line containing the string "YES" if Ann is able to finish the race or "NO" otherwise (without quotes).
+Constraints
+1≤T≤10
+5
+1≤X,R,M≤10
+9
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+60 3 5
+60 3 4
+YES
+NO
+Explanation:
+Example case 1: Ann can run during the first, third and fifth minute. There are other possible solutions.
+Example case 2: It is not possible for Ann to finish the race within four minutes.

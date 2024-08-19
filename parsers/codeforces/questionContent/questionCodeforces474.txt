@@ -1,0 +1,103 @@
+D. The Beach
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Andrew loves the sea. That's why, at the height of the summer season, he decided to go to the beach, taking a sunbed with him to sunbathe.
+The beach is a rectangular field with
+n
+rows and
+m
+columns. Some cells of the beach are free, some have roads, stones, shops and other non-movable objects. Some of two adjacent along the side cells can have sunbeds located either horizontally or vertically.
+Andrew hopes to put his sunbed somewhere, but that's a bad luck, there may no longer be free places for him! That's why Andrew asked you to help him to find a free place for his sunbed. Andrew's sunbed also should be places on two adjacent cells.
+If there are no two adjacent free cells, then in order to free some place for a sunbed, you will have to disturb other tourists. You can do the following actions:
+Come to some sunbed and, after causing
+p
+units of discomfort to its owner, lift the sunbed by one of its sides and rotate it by
+90
+degrees. One half of the sunbed must remain in the same cell and another half of the sunbed must move to the free cell. At the same time, anything could be on the way of a sunbed during the rotation .
+Rotation of the sunbed by
+90
+degrees around cell
+(1,2)
+.
+Come to some sunbed and, after causing
+q
+units of discomfort to its owner, shift the sunbed along its long side by one cell. One half of the sunbed must move to the place of another, and another — to the free cell.
+Shift of the sunbed by one cell to the right.
+In any moment each sunbed occupies two adjacent free cells. You cannot move more than one sunbed at a time.
+Help Andrew to free a space for his sunbed, causing the minimum possible number of units of discomfort to other tourists, or detect that it is impossible.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤300000
+,
+1≤n⋅m≤300000
+) — the number of rows and columns in rectangle.
+The second line contains two integers
+p
+and
+q
+(
+1≤p,q≤
+10
+9
+) — the number of units of discomfort caused by rotation and shift of a sunbed, respectively.
+Each of the following
+n
+lines contains
+m
+characters, describing cells of the rectangle. Each lines consists of characters "L", "R", "D", "U", "." and "#", denoting the type of the cell. Characters "L", "R", "D" and "U" denote a half of a sunbed placed in the cell — left, right, bottom and top half, respectively. Character "." denotes a free cell and character "#" — a cell, occupied by some non-movable object.
+Output
+Print one integer — the minimum possible number of units of discomfort, caused to other tourists, to free a space for a sunbed. If it is impossible to free a space for a sunbed, print
+−1
+.
+Examples
+input
+Copy
+2 5
+5 2
+.LR##
+##LR.
+output
+Copy
+4
+input
+Copy
+2 3
+4 5
+LR.
+#.#
+output
+Copy
+-1
+input
+Copy
+4 3
+10 10
+.LR
+###
+UU#
+DD.
+output
+Copy
+-1
+input
+Copy
+3 6
+10 7
+.U##.#
+#DLR##
+.##LR.
+output
+Copy
+24
+Note
+In the first example we can shift upper sunbed to the left and lower sunbed — to the right. Andrew will be able to put his sunbed vertically in the middle of the beach. We well cause
+2+2=4
+units of discomfort. It is easy to prove that it is an optimal answer.
+Optimal strategy in the first example (Andrew's sunbed is colored white).
+In the second example it is impossible to free a space for Andrew's sunbed. All possible states of the beach after any rotates and shifts are illustrated in the problem statement.

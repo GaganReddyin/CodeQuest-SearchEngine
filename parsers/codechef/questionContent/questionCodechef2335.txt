@@ -1,0 +1,45 @@
+Charles and the BRUTAL subsequences
+Problem
+  Donald: "Be careful! I need the girl"
+Logan: "What Girl??"
+Donald Pierce and his enforcers, the Reavers have captured Canibal, and have attacked Logan and Xavier.
+Prof. Charles Xavier proposes a plan. He is currently assessing several strings, and the answer lies in the common prefix of those strings.
+Charles asks Logan for rendering help.
+Logan is provided with some N strings – Str[1], Str[2],......Str[N] , and he must tell Charles the number of BRUTAL SUBSEQUENCES of size more than 1.
+Consider you have a subsequence of size k – Str[i1], Str[i2] , Str[i3] ,....Str[ik], and i1 < i2 < i3 < ......< ik. And let us say that we have 2 symbols- ‘((‘ and ‘))’.
+StrA (( StrB denotes that StrA has length strictly less than that of StrB ,and both have some common prefix.
+StrA )) StrB denotes that StrB has length strictly less than that of StrA ,and both have some common prefix.
+Now, a Brutal Subsequence of size k is defined as follows-
+Str[i1] (( Str[i2] )) Str[i3] (( Str[i4] )) ......
+OR
+  Str[i1] )) Str[i2] (( Str[i3] )) Str[i4] (( ......
+Two subsequences are considered to be different if their sizes are not same or they have atleast one constituent index which is not same.
+Logan proposed a solution to this problem, but Charles is certain that the solution is not perfectly correct.
+To stop their unnecessary quarrel, you need to help both of them.
+Input
+First line contains an integer N denoting the number of strings.
+Next N lines contains the string where string on ith line denotes Str[i].
+  Output
+Print the number of Brutal Subsequences. As the answer can be very large print it modulo 109+7.
+  Constraints
+All strings comprise lower case characters only ['a'-'z']
+1 ≤ N ≤ 105
+1 ≤ |Str[i]| ≤ 105
+1 ≤ Sum of the length of all strings ≤ 106
+  Example
+Input:
+5
+wolverine
+wolverinexmen
+wolv
+perl
+pe
+Output:
+5
+  Explanation
+The 5 brutal subsequences are-
+wolverine (( wolverinexmen
+wolverine )) wolv
+wolverinexmen )) wolv
+wolverine (( wolverinexmen )) wolv
+perl )) pe

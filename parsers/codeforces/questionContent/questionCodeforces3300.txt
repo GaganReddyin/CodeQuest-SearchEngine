@@ -1,0 +1,159 @@
+G. Path Queries
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a weighted tree consisting of
+n
+vertices. Recall that a tree is a connected graph without cycles. Vertices
+u
+i
+and
+v
+i
+are connected by an edge with weight
+w
+i
+.
+You are given
+m
+queries. The
+i
+-th query is given as an integer
+q
+i
+. In this query you need to calculate the number of pairs of vertices
+(u,v)
+(
+u<v
+) such that the maximum weight of an edge on a simple path between
+u
+and
+v
+doesn't exceed
+q
+i
+.
+Input
+The first line of the input contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+) — the number of vertices in the tree and the number of queries.
+Each of the next
+n−1
+lines describes an edge of the tree. Edge
+i
+is denoted by three integers
+u
+i
+,
+v
+i
+and
+w
+i
+— the labels of vertices it connects (
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+) and the weight of the edge (
+1≤
+w
+i
+≤2⋅
+10
+5
+). It is guaranteed that the given edges form a tree.
+The last line of the input contains
+m
+integers
+q
+1
+,
+q
+2
+,…,
+q
+m
+(
+1≤
+q
+i
+≤2⋅
+10
+5
+), where
+q
+i
+is the maximum weight of an edge in the
+i
+-th query.
+Output
+Print
+m
+integers — the answers to the queries. The
+i
+-th value should be equal to the number of pairs of vertices
+(u,v)
+(
+u<v
+) such that the maximum weight of an edge on a simple path between
+u
+and
+v
+doesn't exceed
+q
+i
+.
+Queries are numbered from
+1
+to
+m
+in the order of the input.
+Examples
+input
+Copy
+7 5
+1 2 1
+3 2 3
+2 4 1
+4 5 2
+5 7 4
+3 6 2
+5 2 3 4 1
+output
+Copy
+21 7 15 21 3 
+input
+Copy
+1 2
+1 2
+output
+Copy
+0 0 
+input
+Copy
+3 3
+1 2 1
+2 3 2
+1 3 2
+output
+Copy
+1 3 3 
+Note
+The picture shows the tree from the first example:

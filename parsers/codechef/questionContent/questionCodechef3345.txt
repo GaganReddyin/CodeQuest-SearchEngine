@@ -1,0 +1,165 @@
+AND Palindromes
+Problem
+You are given an array
+A consisting of
+N integers. Calculate the number of ways to divide this array into subsegments, such that the sequence formed by taking bitwise AND in each segment of the partition is a palindrome.
+More formally, consider a partition of the array into segments
+[L
+1
+,R
+1
+],
+[L
+2
+,R
+2
+],
+[L
+3
+,R
+3
+],
+…,
+[L
+k
+,R
+k
+] such that
+L
+1
+=1,L
+2
+=R
+1
++1,L
+3
+=R
+2
++1,…,L
+k
+=R
+k−1
++1,R
+k
+=N. Let's define
+B
+i
+as AND on
+i-th segment:
+B
+i
+=A
+L
+i
+∧…∧A
+R
+i
+, where
+x
+1
+∧x
+2
+∧…∧x
+t
+, denotes bitwise AND of numbers
+x
+1
+,…,x
+t
+.
+A partition is palindromic if
+B
+i
+=B
+k+1−i
+for every
+1≤i≤k. Your task is to calculate the number of palindromic partitions. Since this number can be large, calculate it modulo
+998244353.
+Input Format
+The first line of input contains
+T — the number of test cases you need to solve.
+The first line of each test case contains one integer
+N — the size of the array.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,…,A
+N
+— the elements of the array
+A.
+Output Format
+For each test case, output on a new line the number of ways to partition
+A into subsegments, such that the bitwise AND of these segments form a palindrome.
+Constraints
+T≤1500
+2≤N≤3000
+Sum of
+N over all test cases is at most
+3000.
+0≤A
+i
+<2
+30
+Sample 1:
+Input
+Output
+3
+3
+1 1 1
+4
+3 4 5 6
+5
+1 1 0 1 0
+4
+1
+4
+Explanation:
+Test case
+1: The palindromic partitions are
+{[1,3]},{[1],[2,3]},{[1,2],[3]},{[1],[2],[3]}. To see why:
+For
+{[1,3]},
+B=[A
+1
+∧A
+2
+∧A
+3
+]=[1]
+For
+{[1],[2,3]},
+B=[A
+1
+,A
+2
+∧A
+3
+]=[1,1]
+For
+{[1,2],[3]},
+B=[A
+1
+∧A
+2
+,A
+3
+]=[1,1]
+For
+{[1],[2],[3]},
+B=[A
+1
+,A
+2
+,A
+3
+]=[1,1,1]
+Clearly
+B is a palindrome in all
+4 cases.
+Test case
+2: The only palindromic partition is
+{[1,4]}.
+Test case
+3: The palindromic partitions are
+{[1,3],[4,5]},{[1,3],[4],[5]},{[1,4],[5]},{[1,5]}.

@@ -1,0 +1,40 @@
+D. Xenolith? Hippodrome?
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Input
+The input contains two integers
+N
+,
+M
+(
+1≤N≤1024,2≤M≤16
+), separated by a single space.
+Output
+Output "YES" or "NO".
+Examples
+input
+Copy
+2 3
+output
+Copy
+YES
+input
+Copy
+3 2
+output
+Copy
+NO
+input
+Copy
+33 16
+output
+Copy
+YES
+input
+Copy
+26 5
+output
+Copy
+NO

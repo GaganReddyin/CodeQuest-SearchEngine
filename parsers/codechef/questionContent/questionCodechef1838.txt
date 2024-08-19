@@ -1,0 +1,144 @@
+Consecutive Deletions
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given a positive integer
+K and a sequence
+A
+1
+,A
+2
+,…,A
+N
+. Initially, each element of this sequence is
+0 or
+1; your goal is to make all elements equal to
+0.
+In order to do that, you may perform the following operation any number of times:
+Choose a subarray (a contiguous subsequence) with length
+K, i.e. choose two indices
+L and
+R such that
+1≤L≤R≤N and
+R−L+1=K.
+Choose one element of that subarray and change it to
+0, i.e. choose an index
+P such that
+L≤P≤R and change
+A
+P
+to
+0.
+The cost of this operation is the sum of this subarray
+A
+L
++A
+L+1
++…+A
+R
+before
+A
+P
+is changed.
+Find the minimum total cost (sum of costs of individual operations) of making all elements of
+A equal to
+0.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer ― the minimum cost of turning all elements of
+A into zeros.
+Constraints
+1≤T≤200
+1≤K≤N≤2⋅10
+5
+0≤A
+i
+≤1 for each valid
+i
+the sum of
+N over all test cases does not exceed
+4⋅10
+5
+Sample 1:
+Input
+Output
+3
+5 3
+1 0 1 0 1
+4 4
+1 1 0 1
+3 1
+1 1 0
+3
+6
+2
+Explanation:
+Example case 1: The minimum cost is
+3 and it can be obtained using the following sequence of operations:
+choose the subarray
+[L,R]=[2,4] and set
+A
+3
+=0 with cost
+1
+choose the subarray
+[1,3] and set
+A
+1
+=0 with cost
+1
+choose the subarray
+[3,5] and set
+A
+5
+=0 with cost
+1
+Example case 2: We have to choose the whole sequence (
+[L,R]=[1,4]) in each operation, so the total cost is
+3+2+1=6:
+choose the subarray
+[1,4] and set
+A
+1
+=0 with cost
+3
+choose the subarray
+[1,4] and set
+A
+2
+=0 with cost
+2
+choose the subarray
+[1,4] and set
+A
+4
+=0 with cost
+1
+Example case 3: The minimum cost is
+2 and it can be obtained using the following sequence of operations:
+choose the subarray
+[2,2] and set
+A
+2
+=0 with cost
+1
+choose the subarray
+[1,1] and set
+A
+1
+=0 with cost
+1

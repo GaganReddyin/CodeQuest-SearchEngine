@@ -1,0 +1,109 @@
+Servers
+Problem
+Read problem statements in Mandarin and Russian.
+Roger wants to start a cloud computing company. First, he went to some companies to promote his cloud computing system and
+N of them (numbered
+1 through
+N) showed interest. Each of these
+N clients has one task, which consists of a number of processes that needs to be executed every second. Let's denote the number of processes for the
+i-th client by
+D
+i
+.
+Roger, happy to have a bunch of clients, went to buy a server for his system. Unfortunately, there are
+Q different servers on sale (numbered
+1 through
+Q), but Roger can only afford one. For each valid
+i, Roger knows that the
+i-th server's performance is described by two integers
+C
+i
+and
+P
+i
+with the following meaning:
+Let's split a second into
+P
+i
+equal time segments.
+The server has
+C
+i
+cores. During each time segment, each core may execute a process or do nothing.
+During each second, each process must be executed exactly once ― by exactly one core during exactly one time segment.
+If two processes belong to the same task, they may not be executed by different cores during the same time segment due to synchronisation issues.
+Processes that belong to the same task do not have to be executed by the same core or in any particular order. They also do not have to be executed during contiguous time segments.
+Since tasks can be extreme sometimes, all the servers are equipped with a new technology named Exclusive Processing. Initially, we may choose one task which should run in exclusive processing mode (since it demands a lot of power). Then, instead of executing one process, each core may execute two processes belonging to this task during any time segment. Executing just one process belonging to this task during one time segment is also allowed. However, it is still not allowed for different cores to execute processes belonging to the same task during the same time segment.
+Now Roger needs your help. For each server, he wants to know the number of subsets of the
+N clients that can be served by this server. Since these numbers can be very large, compute them modulo
+987,654,319.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+D
+1
+,D
+2
+,…,D
+N
+.
+Q lines follow. For each
+i (
+1≤i≤Q), the
+i-th of these lines contains two space-separated integers
+C
+i
+and
+P
+i
+.
+Output
+For each server, print a single line containing one integer ― the number of subsets it can serve modulo
+987,654,319.
+Constraints
+1≤N≤600
+1≤Q≤360,000
+1≤D
+i
+≤600 for each valid
+i
+1≤C
+i
+≤600 for each valid
+i
+1≤P
+i
+≤360,000 for each valid
+i
+Subtasks
+Subtask #1 (50 points):
+N,Q≤50
+D
+i
+≤50 for each valid
+i
+C
+i
+,P
+i
+≤50 for each valid
+i
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+6 5
+8 2 5 3 6 2
+1 6
+2 4
+2 3
+4 1
+4 2
+19
+27
+16
+3
+8

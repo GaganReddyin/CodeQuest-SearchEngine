@@ -1,0 +1,86 @@
+Increasing String 
+Problem
+You are given a string
+S, consisting of lowercase English letters. You can do the following operation at most once :
+Choose a subsequence of the string
+S, then remove it from
+S and concatenate the subsequence at the end of the remaining string.
+Find the lexicographically minimum string that can be obtained by performing this operation at most once on
+S.
+Note that:
+A string
+A is a subsequence of a string
+B if
+A can be obtained by deleting several (possibly, zero or all) characters from
+B.
+Given two strings of the same length
+A and
+B, we say that
+A is lexicographically smaller than
+B if there exists an index
+i such that
+A
+1
+=B
+1
+,A
+2
+=B
+2
+,…,A
+i−1
+=B
+i−1
+and
+A
+i
+<B
+i
+.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a string
+S.
+Output Format
+For each test case, print a single line containing the lexicographically minimum string which can be obtained from
+S by performing the given operation at most once.
+Constraints
+1≤T≤2⋅10
+5
+1≤∣S∣≤10
+5
+S contains only lowercase English letters.
+Sum of
+∣S∣ over all test cases does not exceed
+10
+6
+.
+Subtasks
+Subtask 1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+4
+aba
+abcd
+cbcdbef
+fabcdac
+aab
+abcd
+bbccdef
+aacfbcd
+Explanation:
+Test case
+1: It is optimal to choose the subsequence
+b, then remove and concatenate the subsequence at the end of the remaining string
+aa. Hence the final string is
+aa+b=aab.
+Test case
+2: The given string is already lexicographically minimum.
+Test case
+3: It is optimal to choose the subsequence
+ccdef, then remove and concatenate the subsequence at the end of the remaining string
+bb. Hence the final string is
+bb+ccdef=bbccdef.

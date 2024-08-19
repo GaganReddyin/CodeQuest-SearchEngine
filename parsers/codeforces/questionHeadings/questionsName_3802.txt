@@ -1,0 +1,1 @@
+C3. "Is the number of ones divisible by 3?" oracle

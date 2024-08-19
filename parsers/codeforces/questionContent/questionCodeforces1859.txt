@@ -1,0 +1,185 @@
+E. Subset Trick
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Vanya invented an interesting trick with a set of integers.
+Let an illusionist have a set of positive integers
+S
+. He names a positive integer
+x
+. Then an audience volunteer must choose some subset (possibly, empty) of
+S
+without disclosing it to the illusionist. The volunteer tells the illusionist the size of the chosen subset. And here comes the trick: the illusionist guesses whether the sum of the subset elements does not exceed
+x
+. The sum of elements of an empty subset is considered to be
+0
+.
+Vanya wants to prepare the trick for a public performance. He prepared some set of distinct positive integers
+S
+. Vasya wants the trick to be successful. He calls a positive number
+x
+unsuitable, if he can't be sure that the trick would be successful for every subset a viewer can choose.
+Vanya wants to count the number of unsuitable integers for the chosen set
+S
+.
+Vanya plans to try different sets
+S
+. He wants you to write a program that finds the number of unsuitable integers for the initial set
+S
+, and after each change to the set
+S
+. Vanya will make
+q
+changes to the set, and each change is one of the following two types:
+add a new integer
+a
+to the set
+S
+, or
+remove some integer
+a
+from the set
+S
+.
+Input
+The first line contains two integers
+n
+,
+q
+(
+1≤n,q≤200000
+) — the size of the initial set
+S
+and the number of changes.
+The next line contains
+n
+distinct integers
+s
+1
+,
+s
+2
+,…,
+s
+n
+(
+1≤
+s
+i
+≤
+10
+13
+) — the initial elements of
+S
+.
+Each of the following
+q
+lines contain two integers
+t
+i
+,
+a
+i
+(
+1≤
+t
+i
+≤2
+,
+1≤
+a
+i
+≤
+10
+13
+), describing a change:
+If
+t
+i
+=1
+, then an integer
+a
+i
+is added to the set
+S
+. It is guaranteed that this integer is not present in
+S
+before this operation.
+If
+t
+i
+=2
+, then an integer
+a
+i
+is removed from the set
+S
+. In is guaranteed that this integer is present in
+S
+before this operation.
+Output
+Print
+q+1
+lines.
+In the first line print the number of unsuitable integers for the initial set
+S
+. In the next
+q
+lines print the number of unsuitable integers for
+S
+after each change.
+Example
+input
+Copy
+3 11
+1 2 3
+2 1
+1 5
+1 6
+1 7
+2 6
+2 2
+2 3
+1 10
+2 5
+2 7
+2 10
+output
+Copy
+4
+1
+6
+12
+19
+13
+8
+2
+10
+3
+0
+0
+Note
+In the first example the initial set is
+S={1,2,3}
+. For this set the trick can be unsuccessful for
+x∈{1,2,3,4}
+. For example, if
+x=4
+, the volunteer can choose the subset
+{1,2}
+with sum
+3≤x
+, and can choose the subset
+{2,3}
+with sum
+5>x
+. However, in both cases the illusionist only know the same size of the subset (
+2
+), so he can't be sure answering making a guess. Since there is only one subset of size
+3
+, and the sum of each subset of smaller size does not exceed
+5
+, all
+x≥5
+are suitable.

@@ -1,0 +1,172 @@
+E. Impressionism
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Burenka has two pictures
+a
+and
+b
+, which are tables of the same size
+n×m
+. Each cell of each painting has a color — a number from
+0
+to
+2⋅
+10
+5
+, and there are no repeating colors in any row or column of each of the two paintings, except color
+0
+.
+Burenka wants to get a picture
+b
+from the picture
+a
+. To achieve her goal, Burenka can perform one of
+2
+operations: swap any two rows of
+a
+or any two of its columns. Tell Burenka if she can fulfill what she wants, and if so, tell her the sequence of actions.
+The rows are numbered from
+1
+to
+n
+from top to bottom, the columns are numbered from
+1
+to
+m
+from left to right.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n⋅m≤2⋅
+10
+5
+) — the sizes of the table.
+The
+i
+-th of the next
+n
+lines contains
+m
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,m
+(
+0≤
+a
+i,j
+≤2⋅
+10
+5
+) — the colors of the
+i
+-th row of picture
+a
+. It is guaranteed that there are no identical colors in the same row or column, except color
+0
+.
+The
+i
+-th of the following
+n
+lines contains
+m
+integers
+b
+i,1
+,
+b
+i,2
+,…,
+b
+i,m
+(
+0≤
+b
+i,j
+≤2⋅
+10
+5
+) — the colors of the
+i
+-th row of picture
+b
+. It is guaranteed that there are no identical colors in the same row or column, except color
+0
+.
+Output
+In the first line print the number
+−1
+if it is impossible to achieve what Burenka wants, otherwise print the number of actions in your solution
+k
+(
+0≤k≤2⋅
+10
+5
+). It can be proved that if a solution exists, then there exists a solution where
+k≤2⋅
+10
+5
+.
+In the next
+k
+lines print the operations. First print the type of the operation (
+1
+— swap rows,
+2
+— columns), and then print the two indices of rows or columns to which the operation is applied.
+Note that you don't have to minimize the number of operations.
+Examples
+input
+Copy
+3 3
+1 0 2
+0 0 0
+2 0 1
+2 0 1
+0 0 0
+1 0 2
+output
+Copy
+1
+1 1 3
+input
+Copy
+4 4
+0 0 1 2
+3 0 0 0
+0 1 0 0
+1 0 0 0
+2 0 0 1
+0 3 0 0
+0 1 0 0
+0 0 1 0
+output
+Copy
+4
+1 3 4
+2 3 4
+2 2 3
+2 1 2
+input
+Copy
+3 3
+1 2 0
+0 0 0
+0 0 0
+1 0 0
+2 0 0
+0 0 0
+output
+Copy
+-1

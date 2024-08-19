@@ -1,0 +1,95 @@
+Chef Up
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+Chef is a wanted criminal, and
+N police officers are up for catching him. The officers want to catch Chef no matter the cost, and Chef also wants to eliminate as many officers as possible (preferably everyone) before getting caught (or before running away after eliminating everyone). Neither the officers nor Chef will run away before accomplishing their goals.
+Chef and the officers are on a one-dimensional grid with coordinates ranging from
+−10
+10
+to
+10
+10
+. Chef is initially standing at coordinate
+C, and the
+i-th officer is initially at coordinate
+P
+i
+. The officers and Chef then take turns to move, with the officer team moving first.
+During their turn, officers will have to move to an adjacent unoccupied cell one by one, in any order they want. Every officer will have to move. At every moment of time, no two officers can be in the same cell, and also no officer can be in the same cell as Chef. If the officer is unable to move to an adjacent unoccupied cell, he is eliminated (and the cell he was in becomes unoccupied). Note that the officer team will try to move to eliminate as few officers as possible. For example, with
+P=[2,3,4] and
+C=6, then the next positions of the officers can be
+[1,2,3],
+[1,2,5],
+[1,4,5], or
+[3,4,5]. However, with
+P=[2,3,4] and
+C=5, the only possible set of the next positions of the officers is
+[1,2,3].
+After the officer team's turn, Chef also moves to an adjacent unoccupied cell, or gets caught if he cannot find any adjacent unoccupied cell. The process then repeats until either Chef is caught, or all officers are eliminated and Chef runs away.
+You need to find out the maximum number of officers that can be eliminated by Chef, and if Chef can run away or not.
+As a reminder, two cells with coordinates
+X and
+Y are adjacent if and only if
+∣X−Y∣=1.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains a single integer
+N - the number of officers.
+The second line of each test case contains a single integer
+C - the initial coordinate of Chef.
+The third line of each test case contains
+N integers
+P
+1
+,P
+2
+,…,P
+N
+- the initial coordinates of the officers.
+Output Format
+For each test case, output on a single line two space-separated integers: the first integer is the maximum number of officers that can be eliminated by Chef, and the second integer is
+1 if Chef runs away or
+−1 if Chef will be caught.
+Constraints
+1≤T≤10
+1≤N≤10
+5
+1≤C≤10
+9
+1≤P
+i
+≤10
+9
+All the coordinates are unique. That means
+P
+i
+
+=C for all
+1≤i≤N, and
+P
+i
+
+=P
+j
+for all
+1≤i<j≤N
+Sample 1:
+Input
+Output
+2
+2
+2
+1 4
+1
+2
+1
+1 -1
+1 1
+Explanation:
+Test case
+1: Chef chooses to always move to the left (i.e. to the smaller coordinate); this forces the officer at coordinate
+1 to always move to the left, and eventually being cornered and eliminated. However, the officer at coordinate
+4 cannot be eliminated, and hence Chef will be caught at the end.
+Test case
+2: Similarly, Chef chooses to always move to the left, and eventually eliminating the only officer, thus running away at the end.

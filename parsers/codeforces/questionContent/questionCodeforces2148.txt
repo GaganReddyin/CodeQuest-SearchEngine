@@ -1,0 +1,161 @@
+A. Division
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Oleg's favorite subjects are History and Math, and his favorite branch of mathematics is division.
+To improve his division skills, Oleg came up with
+t
+pairs of integers
+p
+i
+and
+q
+i
+and for each pair decided to find the greatest integer
+x
+i
+, such that:
+p
+i
+is divisible by
+x
+i
+;
+x
+i
+is not divisible by
+q
+i
+.
+Oleg is really good at division and managed to find all the answers quickly, how about you?
+Input
+The first line contains an integer
+t
+(
+1≤t≤50
+) — the number of pairs.
+Each of the following
+t
+lines contains two integers
+p
+i
+and
+q
+i
+(
+1≤
+p
+i
+≤
+10
+18
+;
+2≤
+q
+i
+≤
+10
+9
+) — the
+i
+-th pair of integers.
+Output
+Print
+t
+integers: the
+i
+-th integer is the largest
+x
+i
+such that
+p
+i
+is divisible by
+x
+i
+, but
+x
+i
+is not divisible by
+q
+i
+.
+One can show that there is always at least one value of
+x
+i
+satisfying the divisibility conditions for the given constraints.
+Example
+input
+Copy
+3
+10 4
+12 6
+179 822
+output
+Copy
+10
+4
+179
+Note
+For the first pair, where
+p
+1
+=10
+and
+q
+1
+=4
+, the answer is
+x
+1
+=10
+, since it is the greatest divisor of
+10
+and
+10
+is not divisible by
+4
+.
+For the second pair, where
+p
+2
+=12
+and
+q
+2
+=6
+, note that
+12
+is not a valid
+x
+2
+, since
+12
+is divisible by
+q
+2
+=6
+;
+6
+is not valid
+x
+2
+as well:
+6
+is also divisible by
+q
+2
+=6
+.
+The next available divisor of
+p
+2
+=12
+is
+4
+, which is the answer, since
+4
+is not divisible by
+6
+.

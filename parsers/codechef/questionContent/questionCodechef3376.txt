@@ -1,0 +1,45 @@
+3D Queries
+Problem
+Read problems statements in Mandarin and Russian. Translations in Vietnamese to be uploaded soon.
+Today, you finally have a chance to compete with a famous coder like Vasia and prove your mettle.
+While he likes the real world as well, his adventures in 3D computer puzzles make him the undisputed King of the subject. Until now, that is!
+Vasia has N distinct points in 3 dimensional space and he is going to ask you to find the following sum Q times.
+Where A,B,C and D are some evil integers chosen by Vasia, and their values vary for each summation query.
+Input
+First line contains two integers N and Q. N is number of points, and Q is number of queries.
+The next N lines contain integer point coordinates Xi, Yi, Zi.
+The last Q lines contain a query each in the form of 4 integers A, B, C, D.
+Note that all the integers in a single line are separated by single spaces.
+Output
+For each query, output a single line containing the sum accurate up to 10-6.
+Constraints
+2 ≤ N ≤ 777777
+1 ≤ Q ≤ 77
+1 ≤ Xi, Yi, Zi ≤ 77
+1 ≤ Ai, Bi, Ci ≤ 77
+1 ≤ Di ≤ 7777
+P.S. I hope the digit "7" brings you luck :)
+Sample 1:
+Input
+Output
+10 5
+ 45 70 41
+ 9 1 43
+ 1 68 8
+ 70 76 7
+ 1 19 33
+ 71 70 53
+ 42 54 71
+ 11 13 30
+ 16 63 25
+ 30 24 34
+ 56 61 29 7328
+ 63 32 18 365
+ 37 41 11 2332
+ 36 19 43 7432
+ 68 55 46 6338
+6.692386875130186
+ 1.323651551014940
+ 2.269817185835997
+ 6.783038317971530
+ 5.816449269601737

@@ -1,0 +1,50 @@
+Robot Detector
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There is a robot in the cell
+(0,0) of an infinite grid. One cell
+(X,Y) contains an obstacle and all other cells are free. We only know that
+1≤X≤R and
+1≤Y≤C, but not the exact location of the obstacle.
+You may give the robot a sequence of instructions. There are four types of instructions:
+L: move one cell to the left, i.e. from a cell
+(x,y) to
+(x−1,y)
+R: move one cell to the right, i.e. from a cell
+(x,y) to
+(x+1,y)
+D: move one cell down, i.e. from a cell
+(x,y) to
+(x,y−1)
+U: move one cell up, i.e. from a cell
+(x,y) to
+(x,y+1)
+The robot attempts to perform these instructions one by one. When performing an instruction, if the cell it needs to move to is free, then it moves to that cell; otherwise, it stays in its current cell.
+Consider the following process: you choose a fixed sequence of instructions for the robot, which performs these instructions; then you are given the final cell of the robot and based on only that information, you determine the position of the obstacle. Find a sufficiently short sequence of instructions such that if this process was performed, you would always be able to correctly determine the position of the obstacle. It can be proved that for the given constraints, such a sequence always exists.
+Input
+The first and only line of the input contains two space-separated integers
+R and
+C.
+Output
+Print a single line containing one string, which should describe the sequence of instructions for the robot. This string may only contain the characters 'L', 'R', 'U' and 'D', and its length must not exceed
+10
+4
+.
+Constraints
+1≤R,C≤20
+Subtasks
+Subtask #1 (5 points):
+R=1,C=20
+Subtask #2 (20 points):
+R=5,C=5
+Subtask #3 (75 points): original constraints
+Example Input
+1 2
+Example Output
+UR
+Explanation
+If the obstacle is in the cell
+(1,1), the robot ends up in the cell
+(0,1). Otherwise, i.e. if the obstacle is in the cell
+(1,2), the robot ends up in
+(1,1). The final position of the robot would always be enough to find the obstacle.

@@ -1,0 +1,46 @@
+Chef and Tree
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Chef has a tree on N nodes. Each node v has an integer label Cv attached to it. Chef also has two other integers, A and B. He needs to run Q queries on the tree, each of which can be one of the following two types:
+1 u v w — add w to the labels of all vertices which lie on a simple path between nodes u and v.
+2 u v — find the number of vertices x on a simple path between u and v for which A*Cx + B ≥ 0.
+Please help Chef run these queries.
+Input
+The first line of input contains an integer T denoting the number of test cases.
+The first line of each test case contains two positive numbers: N and Q.
+The second line of each test case contains two positive numbers A and B.
+The third line of each test case contains N integers — C1, C2, ... , CN — labels of the nodes.
+The next N - 1 lines contain two integers u, v each, denoting a pair vertices connected by an edge.
+The following Q lines contains queries.
+Output
+For each query of the second type, output a single line containing a single integer — its result.
+Constraints
+1 ≤ T ≤ 105
+1 ≤ N, Q ≤ 105
+1 ≤ u, v ≤ N
+0 ≤ A, |B|, |Ci| ≤ 109
+1 ≤ w ≤ 104
+Sum of N over all test cases cannot be greater than 105.
+Sum of Q over all test cases cannot be greater than 105.
+All numbers in the input are integers.
+Example
+Input:
+1
+5 6
+1 0
+-1 2 -3 4 -5
+1 2
+1 3
+2 4
+2 5
+1 4 3 1
+2 4 3
+1 3 3 1
+2 3 3
+1 3 3 2
+2 4 3
+
+Output:
+3
+0
+4

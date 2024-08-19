@@ -1,0 +1,114 @@
+B. BinCoin
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+employees in the BinCoin company numbered from
+1
+to
+n
+. The subordination structure in this company is a rooted tree. In other words:
+There is one CEO in the company — the main boss.
+Each other employee has exactly one direct superior.
+There are no cycles in the subordination structure.
+Moreover, due to the inexplicable love of the CEO of BinCoin for all the binary stuff, the subordination structure in the company is a binary rooted tree. That means each employee is directly superior to exactly zero or two other employees.
+In the CEO's opinion, working in this company is almost as dangerous as in mines. So, employees should sign the waiver of claims sometimes. This process happens in the following way. Initially, CEO takes the journal, then recursively the following procedure is performed:
+If an employee that holds the journal does not have any subordinates, they sign the waiver in the journal and give it back to their superior. The procedure stops if that was the CEO, who has no superior.
+Otherwise
+they choose one of two of their direct subordinates uniformly at random and give the journal to one of them;
+when they get the journal back, they sign it;
+and then they give it to another direct subordinate;
+when they get it back again, they give it back to their superior. The procedure stops if that was the CEO, who has no superior.
+All random choices are independent.
+One day, the CEO realized that they could not remember the subordination tree. Fortunately, they have the journal with
+k
+records. Each record is a sequence of employees in the order they've signed in a journal.
+Help CEO restore the subordination tree.
+Input
+The first line contains two integers
+n
+and
+k
+ — the number of employees and the number of records in the journal (
+1≤n≤999
+;
+50≤k≤100
+).
+Each of the next
+k
+lines contains a permutation of integers from
+1
+to
+n
+ — the order of employees in the corresponding record.
+It is guaranteed that the input was obtained as described in the statement with a real random choice.
+Output
+Output
+n
+integers
+p
+i
+. If
+i
+is a CEO, then
+p
+i
+should be
+−1
+. Otherwise,
+p
+i
+should be the index of the direct superior of
+i
+-th employee.
+Your output should correspond to a binary rooted tree. If there are several trees satisfying the input, you can output any one of them.
+Examples
+input
+Copy
+3 50
+1 2 3    1 2 3    3 2 1    1 2 3
+3 2 1    1 2 3    1 2 3    1 2 3
+1 2 3    3 2 1    1 2 3    3 2 1
+1 2 3    3 2 1    1 2 3    3 2 1
+1 2 3    1 2 3    3 2 1    1 2 3
+3 2 1    1 2 3    3 2 1    1 2 3
+1 2 3    3 2 1    1 2 3    1 2 3
+1 2 3    1 2 3    3 2 1    1 2 3
+3 2 1    3 2 1    1 2 3    3 2 1
+1 2 3    3 2 1    3 2 1    1 2 3
+1 2 3    3 2 1    1 2 3    3 2 1
+3 2 1    3 2 1    1 2 3    1 2 3
+3 2 1    3 2 1    
+output
+Copy
+2 -1 2 
+input
+Copy
+5 60
+2 4 3 5 1    1 5 2 4 3    1 5 2 4 3
+1 5 2 4 3    1 5 3 4 2    1 5 3 4 2
+1 5 3 4 2    1 5 3 4 2    1 5 3 4 2
+3 4 2 5 1    2 4 3 5 1    1 5 2 4 3
+3 4 2 5 1    2 4 3 5 1    2 4 3 5 1
+1 5 2 4 3    3 4 2 5 1    3 4 2 5 1
+1 5 2 4 3    2 4 3 5 1    1 5 2 4 3
+1 5 3 4 2    3 4 2 5 1    1 5 3 4 2
+1 5 2 4 3    1 5 3 4 2    1 5 2 4 3
+2 4 3 5 1    2 4 3 5 1    2 4 3 5 1
+2 4 3 5 1    2 4 3 5 1    1 5 2 4 3
+1 5 3 4 2    1 5 2 4 3    3 4 2 5 1
+1 5 3 4 2    3 4 2 5 1    3 4 2 5 1
+1 5 2 4 3    2 4 3 5 1    1 5 2 4 3
+1 5 3 4 2    2 4 3 5 1    2 4 3 5 1
+1 5 2 4 3    1 5 2 4 3    1 5 2 4 3
+1 5 2 4 3    1 5 2 4 3    3 4 2 5 1
+3 4 2 5 1    3 4 2 5 1    1 5 2 4 3
+1 5 3 4 2    1 5 3 4 2    2 4 3 5 1
+3 4 2 5 1    1 5 2 4 3    3 4 2 5 1
+output
+Copy
+5 4 4 5 -1 
+Note
+In order to fit on the page, several consecutive lines in the examples were joined into one. The real inputs follow the input description.

@@ -1,0 +1,89 @@
+Expected Xor
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Monisha likes to paint. She has painted
+N paintings (numbered
+1 through
+N) and wants to choose some subset of these paintings for an exhibition. For each valid
+i, the
+i-th painting has beauty
+b
+i
+and the probability that it will be displayed at the exhibition is
+p
+i
+. Each painting is chosen or excluded from the exhibition independently randomly.
+The beauty of the resulting exhibition is the bitwise XOR of the beauties of all displayed paintings. If no paintings are displayed, the XOR is
+0.
+Monisha wants to find out how beautiful her exhibition is going to be. Help her compute the expected value of the beauty of the exhibition.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+b
+1
+,b
+2
+,…,b
+N
+.
+The third line contains
+N space-separated real numbers
+p
+1
+,p
+2
+,…,p
+N
+. Each of these numbers is given with at most five digits after the decimal point.
+Output
+For each test case, print a single line containing one real number — the expected beauty of the exhibition. Your answer will be considered correct if its absolute or relative error does not exceed
+10
+−6
+.
+Constraints
+1≤N≤10
+5
+0≤b
+i
+≤10
+9
+for each valid
+i
+0≤p
+i
+≤1 for each valid
+i
+the sum of
+N over all test cases does not exceed
+4⋅10
+5
+Sample 1:
+Input
+Output
+2
+3
+5 6 2
+1.0 0.0 0.5
+4
+2 2 2 2
+0.5 0.5 0.5 0.5
+6.000000000000000
+1.000000000000000
+Explanation:
+Example case 1: The first painting must be displayed at the exhibition, the second one must be excluded. If the third painting is displayed (with probability
+0.5), the beauty is
+5⊕2=7; if it is excluded (with probability
+0.5), the beauty is
+5. The expected beauty is
+0.5⋅5+0.5⋅7=6.
+Example case 2: If there is an odd number of paintings at the exhibition, the beauty is
+2; this has a probability of
+0.5. If there is an even number of paintings, the beauty is
+0 (with probability
+0.5), so the expected beauty is
+0.5⋅0+0.5⋅2=1.

@@ -1,0 +1,89 @@
+Make Array Odd
+Problem
+You are given an array
+A and an integer
+X. You are allowed to perform the following operation on the array:
+Select two distinct indices
+i and
+j and set both
+A
+i
+and
+A
+j
+as
+((A
+i
+⊕A
+j
+)∣X) simultaneously. Here
+⊕ and
+∣ denote the bitwise XOR and bitwise OR operations respectively.
+Find the minimum number of operations required to make all elements of the array odd. If it is not possible to do so, print
+−1 instead.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of input.
+The first line of each test case contains two space-separated integers
+N, the size of the array and
+X.
+The next line contains
+N space-separated integers denoting the elements of the array
+A.
+Output Format
+For each test case, output on a new line, the minimum number of operations required to make all elements of the array odd. If it is not possible to do so, print
+−1 instead.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+0≤X<2
+30
+0≤A
+i
+<2
+30
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+2
+3 6
+5 7 9
+5 4
+2 3 4 17 9
+0
+2
+Explanation:
+Test case
+1: All elements are already odd. Thus, the number of operation required will be
+0.
+Test case
+2: We can make all elements odd using
+2 operations -
+In first operation, we choose
+i=1,j=5.
+Here,
+(A
+i
+⊕A
+j
+)∣X=(2⊕9)∣4=11∣4=15. Thus, the new array becomes
+[15,3,4,17,15].
+In second operation, we choose
+i=4,j=3.
+Here,
+(A
+i
+⊕A
+j
+)∣X=(17⊕4)∣4=21∣4=21. Thus, the new array becomes
+[15,3,21,21,15].
+All elements of the array are odd now. It can be shown that we cannot achieve this in less than
+2 operations.

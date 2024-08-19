@@ -1,0 +1,75 @@
+A. Another Sorting Problem
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Andi and Budi were given an assignment to tidy up their bookshelf of
+n
+books. Each book is represented by the book title — a string
+s
+i
+numbered from
+1
+to
+n
+, each with length
+m
+. Andi really wants to sort the book lexicographically ascending, while Budi wants to sort it lexicographically descending.
+Settling their fight, they decided to combine their idea and sort it asc-desc-endingly, where the odd-indexed characters will be compared ascendingly, and the even-indexed characters will be compared descendingly.
+A string
+a
+occurs before a string
+b
+in asc-desc-ending order if and only if in the first position where
+a
+and
+b
+differ, the following holds:
+if it is an odd position, the string
+a
+has a letter that appears earlier in the alphabet than the corresponding letter in
+b
+;
+if it is an even position, the string
+a
+has a letter that appears later in the alphabet than the corresponding letter in
+b
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n⋅m≤
+10
+6
+).
+The
+i
+-th of the next
+n
+lines contains a string
+s
+i
+consisting of
+m
+uppercase Latin letters — the book title. The strings are pairwise distinct.
+Output
+Output
+n
+integers — the indices of the strings after they are sorted asc-desc-endingly.
+Example
+input
+Copy
+5 2
+AA
+AB
+BB
+BA
+AZ
+output
+Copy
+5 2 1 3 4
+Note
+The following illustrates the first example.

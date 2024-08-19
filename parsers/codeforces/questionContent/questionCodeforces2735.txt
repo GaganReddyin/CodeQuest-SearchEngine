@@ -1,0 +1,167 @@
+B. Kind Anton
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Once again, Boris needs the help of Anton in creating a task. This time Anton needs to solve the following problem:
+There are two arrays of integers
+a
+and
+b
+of length
+n
+. It turned out that array
+a
+contains only elements from the set
+{−1,0,1}
+.
+Anton can perform the following sequence of operations any number of times:
+Choose any pair of indexes
+(i,j)
+such that
+1≤i<j≤n
+. It is possible to choose the same pair
+(i,j)
+more than once.
+Add
+a
+i
+to
+a
+j
+. In other words,
+j
+-th element of the array becomes equal to
+a
+i
++
+a
+j
+.
+For example, if you are given array
+[1,−1,0]
+, you can transform it only to
+[1,−1,−1]
+,
+[1,0,0]
+and
+[1,−1,1]
+by one operation.
+Anton wants to predict if it is possible to apply some number (zero or more) of these operations to the array
+a
+so that it becomes equal to array
+b
+. Can you help him?
+Input
+Each test contains multiple test cases.
+The first line contains the number of test cases
+t
+(
+1≤t≤10000
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+)  — the length of arrays.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−1≤
+a
+i
+≤1
+)  — elements of array
+a
+. There can be duplicates among elements.
+The third line of each test case contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+−
+10
+9
+≤
+b
+i
+≤
+10
+9
+)  — elements of array
+b
+. There can be duplicates among elements.
+It is guaranteed that the sum of
+n
+over all test cases doesn't exceed
+10
+5
+.
+Output
+For each test case, output one line containing "YES" if it's possible to make arrays
+a
+and
+b
+equal by performing the described operations, or "NO" if it's impossible.
+You can print each letter in any case (upper or lower).
+Example
+input
+Copy
+5
+3
+1 -1 0
+1 1 -2
+3
+0 1 1
+0 2 2
+2
+1 0
+1 41
+2
+-1 0
+-1 -41
+5
+0 1 -1 1 -1
+1 1 -1 1 -1
+output
+Copy
+YES
+NO
+YES
+YES
+NO
+Note
+In the first test-case we can choose
+(i,j)=(2,3)
+twice and after that choose
+(i,j)=(1,2)
+twice too. These operations will transform
+[1,−1,0]→[1,−1,−2]→[1,1,−2]
+In the second test case we can't make equal numbers on the second position.
+In the third test case we can choose
+(i,j)=(1,2)
+41
+times. The same about the fourth test case.
+In the last lest case, it is impossible to make array
+a
+equal to the array
+b
+.

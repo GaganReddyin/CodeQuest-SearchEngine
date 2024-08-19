@@ -1,0 +1,154 @@
+Ticket Machine
+Problem
+In the only movie theatre in Chefland, there is a single long row of
+M seats. The seats are indexed
+1 to
+M from left to right. There is exactly one ticket for each individual seat.
+N people, numbered
+1 to
+N, want to buy tickets for seats in this row.
+Person
+i wants exactly
+S
+i
+number of tickets. They also have a strong preference for viewing angles. Specifically, person
+i requires that each of their seats must be indexed between
+A
+i
+and
+B
+i
+. It is guaranteed that
+A
+i
+≥A
+i−1
+for
+2≤i≤N.
+For each
+i (
+1≤i≤N), calculate the largest
+j (
+i≤j≤N) such that all people from
+i to
+j can be accommodated together and given tickets according to their requirements.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+M - the number of people and seats respectively.
+N lines then follow. The
+i-th line contains integers
+A
+i
+,
+B
+i
+, and
+S
+i
+- the acceptable seat indices for person
+i and the required number of tickets.
+Output Format
+For each test case, output a single line with
+N space-separated integers. The
+i-th of these integers should be the largest valid
+j (
+i≤j≤N) such that all people from
+i to
+j can be accommodated together.
+Constraints
+1≤T≤5⋅10
+4
+2≤N≤2⋅10
+5
+1≤M≤10
+9
+1≤A
+i
+≤B
+i
+≤M
+A
+i
+≥A
+i−1
+for
+2≤i≤N
+1≤S
+i
+≤B
+i
+−A
+i
++1
+Sum of
+N over all test cases is at most
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+7 10
+2 10 5
+3 10 5
+4 9 1
+5 9 5
+6 8 1
+7 8 1
+8 8 1
+3 10
+2 10 9
+2 9 1
+8 9 1
+1 3 4 4 7 7 7
+1 3 3
+Explanation:
+Test case
+1:
+i=1: It can be shown that person
+2 cannot be accommodated with person
+1. The maximum valid
+j in this case is
+1 itself.
+i=2: We can accommodate persons
+2 and
+3 together, and more people after person
+3 cannot be accommodated. One way to do this is by ensuring that the set of seats assigned to person
+2 is
+{3,4,6,7,8} and to person
+3 is
+{5}.
+i=3: We can accommodate persons
+3 and
+4 together, and more people after person
+4 cannot be accommodated. One way to do this is by ensuring that the set of seats assigned to person
+3 is
+{4} and to person
+4 is
+{5,6,7,8,9}.
+i=4: We cannot accommodate more people after person
+4.
+i=5: We can accommodate all persons
+5,
+6, and
+7 together. One way to do this is by ensuring that the set of seats assigned to person
+5 is
+{6}, to person
+6 is
+{7}, and to person
+7 is
+{8}.
+i=6: We can accommodate persons
+6 and
+7 together. One way to do this is by ensuring that the set of seats assigned to person
+6 is
+{7} and to person
+7 is
+{8}.
+i=7: The maximum
+j possible is
+7 itself.

@@ -1,0 +1,209 @@
+F. Dish Shopping
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+m
+people living in a city. There are
+n
+dishes sold in the city. Each dish
+i
+has a price
+p
+i
+, a standard
+s
+i
+and a beauty
+b
+i
+. Each person
+j
+has an income of
+in
+c
+j
+and a preferred beauty
+pre
+f
+j
+.
+A person would never buy a dish whose standard is less than the person's income. Also, a person can't afford a dish with a price greater than the income of the person. In other words, a person
+j
+can buy a dish
+i
+only if
+p
+i
+≤in
+c
+j
+≤
+s
+i
+.
+Also, a person
+j
+can buy a dish
+i
+, only if
+|
+b
+i
+−pre
+f
+j
+|≤(in
+c
+j
+−
+p
+i
+)
+. In other words, if the price of the dish is less than the person's income by
+k
+, the person will only allow the absolute difference of at most
+k
+between the beauty of the dish and his/her preferred beauty.
+Print the number of dishes that can be bought by each person in the city.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n≤
+10
+5
+,
+1≤m≤
+10
+5
+), the number of dishes available in the city and the number of people living in the city.
+The second line contains
+n
+integers
+p
+i
+(
+1≤
+p
+i
+≤
+10
+9
+), the price of each dish.
+The third line contains
+n
+integers
+s
+i
+(
+1≤
+s
+i
+≤
+10
+9
+), the standard of each dish.
+The fourth line contains
+n
+integers
+b
+i
+(
+1≤
+b
+i
+≤
+10
+9
+), the beauty of each dish.
+The fifth line contains
+m
+integers
+in
+c
+j
+(
+1≤in
+c
+j
+≤
+10
+9
+), the income of every person.
+The sixth line contains
+m
+integers
+pre
+f
+j
+(
+1≤pre
+f
+j
+≤
+10
+9
+), the preferred beauty of every person.
+It is guaranteed that for all integers
+i
+from
+1
+to
+n
+, the following condition holds:
+p
+i
+≤
+s
+i
+.
+Output
+Print
+m
+integers, the number of dishes that can be bought by every person living in the city.
+Examples
+input
+Copy
+3 3
+2 1 3
+2 4 4
+2 1 1
+2 2 3
+1 2 4
+output
+Copy
+1 2 0 
+input
+Copy
+4 3
+1 2 1 1
+3 3 1 3
+2 1 3 2
+1 1 3
+1 2 1
+output
+Copy
+0 2 3 
+Note
+In the first example, the first person can buy dish
+2
+, the second person can buy dishes
+1
+and
+2
+and the third person can buy no dishes.
+In the second example, the first person can buy no dishes, the second person can buy dishes
+1
+and
+4
+, and the third person can buy dishes
+1
+,
+2
+and
+4
+.

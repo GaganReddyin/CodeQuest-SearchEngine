@@ -1,0 +1,84 @@
+F. Yet Another Substring Reverse
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+s
+consisting only of first
+20
+lowercase Latin letters ('a', 'b', ..., 't').
+Recall that the substring
+s[l;r]
+of the string
+s
+is the string
+s
+l
+s
+l+1
+…
+s
+r
+. For example, the substrings of "codeforces" are "code", "force", "f", "for", but not "coder" and "top".
+You can perform the following operation no more than once: choose some substring
+s[l;r]
+and reverse it (i.e. the string
+s
+l
+s
+l+1
+…
+s
+r
+becomes
+s
+r
+s
+r−1
+…
+s
+l
+).
+Your goal is to maximize the length of the maximum substring of
+s
+consisting of distinct (i.e. unique) characters.
+The string consists of distinct characters if no character in this string appears more than once. For example, strings "abcde", "arctg" and "minecraft" consist of distinct characters but strings "codeforces", "abacaba" do not consist of distinct characters.
+Input
+The only line of the input contains one string
+s
+consisting of no more than
+10
+6
+characters 'a', 'b', ..., 't' (first
+20
+lowercase Latin letters).
+Output
+Print one integer — the maximum possible length of the maximum substring of
+s
+consisting of distinct characters after reversing no more than one its substring.
+Examples
+input
+Copy
+abacaba
+output
+Copy
+3
+input
+Copy
+abcdecdf
+output
+Copy
+6
+input
+Copy
+aabbcc
+output
+Copy
+3
+input
+Copy
+abcdeefc
+output
+Copy
+6

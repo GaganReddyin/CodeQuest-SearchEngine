@@ -1,0 +1,119 @@
+Coordinate Compression 
+Problem
+Read problems statements in Hindi, Mandarin chinese , Russian and Vietnamese as well.
+You are given a sequence of integers
+A
+1
+,A
+2
+,…,A
+N
+. For an integer
+K, let's define a
+K-compressed sequence
+B
+1
+,B
+2
+,…,B
+N
+as follows:
+for each valid
+i,
+B
+i
+is a positive integer
+for each valid
+i, if there are exactly
+X numbers smaller than or equal to
+A
+i
+in the subsequence
+A
+max(1,i−K)
+,…,A
+min(N,i+K)
+, then there must be exactly
+X numbers smaller than or equal to
+B
+i
+in the subsequence
+B
+max(1,i−K)
+,…,B
+min(N,i+K)
+B
+1
++B
+2
++⋯+B
+N
+is minimum possible
+You may notice that for
+K=N−1 or
+K=N, this becomes the well-known technique of coordinate compression.
+For example, consider the sequence
+A=[4,2,8,1,4,3,8,1]. If we choose
+K=1, then the
+K-compressed sequence will be
+B=[2,1,2,1,2,1,2,1]. The sum of its elements is
+12, which is the minimum.
+For a given integer
+S, find the number of values of
+K (
+0≤K≤N) such that the sum of elements of the
+K-compressed sequence does not exceed
+S.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+S.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the number of values of
+K such that the sum of the compressed sequence is
+≤S.
+Constraints
+1≤T≤3
+1≤N≤10
+5
+1≤S≤10
+9
+0≤A
+i
+≤10
+9
+for each valid
+i
+Subtasks
+Subtask #1 (10 points):
+1≤N≤100
+Subtask #2 (30 points):
+1≤N≤1,000
+Subtask #3 (60 points): original constraints
+Sample 1:
+Input
+Output
+2
+4 8
+2 7 1 12
+8 20
+4 2 8 1 4 3 8 1
+2
+4
+Explanation:
+Example case 1: The possible values of
+K are
+0 and
+1.

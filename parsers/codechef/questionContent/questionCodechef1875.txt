@@ -1,0 +1,38 @@
+Maze Love
+Problem
+Problem Statement
+Olivia, another cyborg with crafted legs is a very dear friend of Geneo. On the eve of valentines day, Olivia decides to surprise Geneo by arriving at his home with a gift. The gift is special, so is her way of reaching home.
+Olivia's legs are driven by batteries and can deliver only a fixed amount of energy. Once she has charged the batteries for certain period, she knows exactly how much energy they contain. Let this energy be P. She wants to completely consume the energy in travelling so that she gets to stay at Geneo's home longer under the guise of charging the batteries.
+As it is 2042, the roads in town form a perfect rectangular maze. Olivia lives at the corner (0,0) and Geneo lives at position (XGeneo, YGeneo). Each direction (North, South, East and West) has its associated per unit travel costs given by CNorth, CSouth, CEast and CWest. Her aim is that the energy left after reaching Geneo's home should be exactly zero.
+Note 1: You can assume the town to be laid out infinitely in all the directions.
+Note 2: The following are the meaning of directions:
+North : From (x, y) to (x, y + 1)
+South : From (x, y) to (x, y - 1)
+East : From (x, y) to (x + 1, y)
+West : From (x, y) to (x - 1, y)
+Input section
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+The first line of each test case contains 7 space separated integers, XGeneo, YGeneo, CNorth, CSouth, CEast, CWest and P as described in the statement above.
+Output section
+For each test case, output a single line containing the minimum amount of distance taken by Olivia to reach Geneo with zero energy remaining
+If the energy cannot be made zero without violating the constraints, print -1
+Input constraints
+1 ≤ T ≤ 200
+1 ≤ XGeneo, YGeneo ≤ 103
+1 ≤ CNorth, CSouth, CEast, CWest ≤ 103
+1 ≤ P ≤ 106
+Sample 1:
+Input
+Output
+4
+10 8 9 1 9 1 90
+2 3 4 4 2 2 20
+346 36 580 403 656 10 906997
+73 544 559 336 831 759 707865
+-1
+7
+2092
+-1
+Explanation:
+For the second test case, one of the possible paths is : (0, 0) -> (1, 0) -> (2, 0) -> (2, 1) -> (2, 2) -> (2, 3) -> (3, 3) -> (2, 3).
+This walk is of length 7, and the directions taken at each step are E, E, N, N, N, E, W. So the total energy spent is 2 + 2 + 4 + 4 + 4 + 2 + 2 = 20, which means that she reached the house with 0 energy left.

@@ -1,0 +1,275 @@
+C. Min-Max Array Transformation
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+, which is sorted in non-descending order. You decided to perform the following steps to create array
+b
+1
+,
+b
+2
+,…,
+b
+n
+:
+Create an array
+d
+consisting of
+n
+arbitrary non-negative integers.
+Set
+b
+i
+=
+a
+i
++
+d
+i
+for each
+b
+i
+.
+Sort the array
+b
+in non-descending order.
+You are given the resulting array
+b
+. For each index
+i
+, calculate what is the minimum and maximum possible value of
+d
+i
+you can choose in order to get the given array
+b
+.
+Note that the minimum (maximum)
+d
+i
+-s are independent of each other, i. e. they can be obtained from different possible arrays
+d
+.
+Input
+The first line contains the single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the length of arrays
+a
+,
+b
+and
+d
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+;
+a
+i
+≤
+a
+i+1
+) — the array
+a
+in non-descending order.
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+1≤
+b
+i
+≤
+10
+9
+;
+b
+i
+≤
+b
+i+1
+) — the array
+b
+in non-descending order.
+Additional constraints on the input:
+there is at least one way to obtain the array
+b
+from the
+a
+by choosing an array
+d
+consisting of non-negative integers;
+the sum of
+n
+doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print two lines. In the first line, print
+n
+integers
+d
+min
+1
+,
+d
+min
+2
+,…,
+d
+min
+n
+, where
+d
+min
+i
+is the minimum possible value you can add to
+a
+i
+.
+Secondly, print
+n
+integers
+d
+max
+1
+,
+d
+max
+2
+,…,
+d
+max
+n
+, where
+d
+max
+i
+is the maximum possible value you can add to
+a
+i
+.
+All
+d
+min
+i
+and
+d
+max
+i
+values are independent of each other. In other words, for each
+i
+,
+d
+min
+i
+is just the minimum value among all possible values of
+d
+i
+.
+Example
+input
+Copy
+4
+3
+2 3 5
+7 11 13
+1
+1000
+5000
+4
+1 2 3 4
+1 2 3 4
+4
+10 20 30 40
+22 33 33 55
+output
+Copy
+5 4 2
+11 10 8
+4000
+4000
+0 0 0 0
+0 0 0 0
+12 2 3 15
+23 13 3 15
+Note
+In the first test case, in order to get
+d
+min
+1
+=5
+, we can choose, for example,
+d=[5,10,6]
+. Then
+b
+=
+[2+5,3+10,5+6]
+=
+[7,13,11]
+=
+[7,11,13]
+.
+For
+d
+min
+2
+=4
+, we can choose
+d
+=
+[9,4,8]
+. Then
+b
+=
+[2+9,3+4,5+8]
+=
+[11,7,13]
+=
+[7,11,13]
+.

@@ -1,0 +1,130 @@
+F. Red-Black Number
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+It is given a non-negative integer
+x
+, the decimal representation of which contains
+n
+digits. You need to color each its digit in red or black, so that the number formed by the red digits is divisible by
+A
+, and the number formed by the black digits is divisible by
+B
+.
+At least one digit must be colored in each of two colors. Consider, the count of digits colored in red is
+r
+and the count of digits colored in black is
+b
+. Among all possible colorings of the given number
+x
+, you need to output any such that the value of
+|r−b|
+is the minimum possible.
+Note that the number
+x
+and the numbers formed by digits of each color, may contain leading zeros.
+Example of painting a number for
+A=3
+and
+B=13
+The figure above shows an example of painting the number
+x=02165
+of
+n=5
+digits for
+A=3
+and
+B=13
+. The red digits form the number
+015
+, which is divisible by
+3
+, and the black ones —
+26
+, which is divisible by
+13
+. Note that the absolute value of the difference between the counts of red and black digits is
+1
+, it is impossible to achieve a smaller value.
+Input
+The first line contains one integer
+t
+(
+1≤t≤10
+) — the number of test cases. Then
+t
+test cases follow.
+Each test case consists of two lines. The first line contains three integers
+n
+,
+A
+,
+B
+(
+2≤n≤40
+,
+1≤A,B≤40
+). The second line contains a non-negative integer
+x
+containing exactly
+n
+digits and probably containing leading zeroes.
+Output
+For each test case, output in a separate line:
+-1 if the desired coloring does not exist;
+a string
+s
+of
+n
+characters, each of them is a letter 'R' or 'B'. If the
+i
+-th digit of the number
+x
+is colored in red, then the
+i
+-th character of the string
+s
+must be the letter 'R', otherwise the letter 'B'.
+The number formed by digits colored red should divisible by
+A
+. The number formed by digits colored black should divisible by
+B
+. The value
+|r−b|
+should be minimal, where
+r
+is the count of red digits,
+b
+is the count of black digits. If there are many possible answers, print any of them.
+Example
+input
+Copy
+4
+5 3 13
+02165
+4 2 1
+1357
+8 1 1
+12345678
+2 7 9
+90
+output
+Copy
+RBRBR
+-1
+BBRRRRBB
+BR
+Note
+The first test case is considered in the statement.
+In the second test case, there are no even digits, so it is impossible to form a number from its digits that is divisible by
+2
+.
+In the third test case, each coloring containing at least one red and one black digit is possible, so you can color
+4
+digits in red and
+4
+in black (
+|4−4|=0
+, it is impossible to improve the result).
+In the fourth test case, there is a single desired coloring.

@@ -1,0 +1,172 @@
+G. Columns Swaps
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a table
+a
+of size
+2×n
+(i.e. two rows and
+n
+columns) consisting of integers from
+1
+to
+n
+.
+In one move, you can choose some column
+j
+(
+1≤j≤n
+) and swap values
+a
+1,j
+and
+a
+2,j
+in it. Each column can be chosen no more than once.
+Your task is to find the minimum number of moves required to obtain permutations of size
+n
+in both first and second rows of the table or determine if it is impossible to do that.
+You have to answer
+t
+independent test cases.
+Recall that the permutation of size
+n
+is such an array of size
+n
+that contains each integer from
+1
+to
+n
+exactly once (the order of elements doesn't matter).
+Input
+The first line of the input contains one integer
+t
+(
+1≤t≤2⋅
+10
+4
+) — the number of test cases. Then
+t
+test cases follow.
+The first line of the test case contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of columns in the table. The second line of the test case contains
+n
+integers
+a
+1,1
+,
+a
+1,2
+,…,
+a
+1,n
+(
+1≤
+a
+1,i
+≤n
+), where
+a
+1,i
+is the
+i
+-th element of the first row of the table. The third line of the test case contains
+n
+integers
+a
+2,1
+,
+a
+2,2
+,…,
+a
+2,n
+(
+1≤
+a
+2,i
+≤n
+), where
+a
+2,i
+is the
+i
+-th element of the second row of the table.
+It is guaranteed that the sum of
+n
+does not exceed
+2⋅
+10
+5
+(
+∑n≤2⋅
+10
+5
+).
+Output
+For each test case print the answer: -1 if it is impossible to obtain permutation of size
+n
+in both first and the second rows of the table, or one integer
+k
+in the first line, where
+k
+is the minimum number of moves required to obtain permutations in both rows, and
+k
+distinct integers
+po
+s
+1
+,po
+s
+2
+,…,po
+s
+k
+in the second line (
+1≤po
+s
+i
+≤n
+) in any order — indices of columns in which you need to swap values to obtain permutations in both rows. If there are several answers, you can print any.
+Example
+input
+Copy
+6
+4
+1 2 3 4
+2 3 1 4
+5
+5 3 5 1 4
+1 2 3 2 4
+3
+1 2 1
+3 3 2
+4
+1 2 2 1
+3 4 3 4
+4
+4 3 1 4
+3 2 2 1
+3
+1 1 2
+3 2 2
+output
+Copy
+0
+
+2
+2 3 
+1
+1 
+2
+3 4 
+2
+3 4 
+-1

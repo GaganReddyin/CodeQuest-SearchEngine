@@ -1,0 +1,156 @@
+Dragonado And XOR
+Problem
+Dragonado rarely gets stuck on a problem, unless of course, if it's a XOR Problem.
+Dragonado while coming back from the Fruit Market, finds an array
+A of
+N elements. He wants to find
+4 integers, say
+i
+1
+,i
+2
+,i
+3
+and
+i
+4
+, such that:
+popcount(A
+i
+1
+⊕A
+i
+2
+)=popcount(A
+i
+3
+⊕A
+i
+4
+)
+1≤i
+1
+,i
+2
+,i
+3
+,i
+4
+≤N and
+i
+1
+,i
+2
+,i
+3
+,i
+4
+are pairwise distinct.
+Here,
+popcount(x) denotes the number of set bits in the binary representation of
+x. Secondly,
+⊕ denotes the bitwise XOR operation.
+Can you help Dragonado find four integers
+i
+1
+,i
+2
+,i
+3
+and
+i
+4
+which satisfy the given conditions?
+Output
+−1 if no answer exists.
+If multiple answers exist, output any.
+Note: The input of this problem is large, so use fast input/output methods.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N - the size of the array
+A.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output
+i
+1
+,i
+2
+,i
+3
+,i
+4
+which satisfy the given conditions.
+Output
+−1 if no numbers satisfying the conditions exist.
+Constraints
+1≤T≤10
+4
+4≤N≤10
+5
+1≤A
+i
+≤10
+9
+It is guaranteed that sum of
+N over all test cases does not exceed
+2⋅10
+6
+Sample 1:
+Input
+Output
+2
+4
+1 2 5 6
+4
+1 2 3 4
+1 4 2 3
+-1
+Explanation:
+Test case-1:
+1,4,2,3 is a valid answer because:
+popcount(A
+1
+⊕A
+4
+)=popcount(7)=3
+popcount(A
+2
+⊕A
+3
+)=popcount(7)=3
+Therefore,
+popcount(A
+i
+1
+⊕A
+i
+2
+)=popcount(A
+i
+3
+⊕A
+i
+4
+)
+Test case-2: We can prove that no
+i
+1
+,i
+2
+,i
+3
+,i
+4
+exist that satisfy the given conditions.

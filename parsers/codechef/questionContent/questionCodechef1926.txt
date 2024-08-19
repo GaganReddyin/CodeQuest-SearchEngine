@@ -1,0 +1,89 @@
+KBG and GN-Theory
+Problem
+After solving some Graph Theory related problems KBG challenged Sameer to solve the following problem.
+There is an undirected graph consisting of
+N vertices numbered from
+1 to
+N.
+For every pair of vertices
+u and
+v
+(u
+
+=v) in the graph, there is a undirected weighted edge between
+u and
+v if and only if
+u divides
+v, with weight
+u
+v
+. Note that such a graph will not have self loops or multiple edges.
+You must answer
+Q queries. In each query you are given two vertices
+u and
+v. You must find the minimum distance from vertex
+u to vertex
+v.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+Q — the number of vertices and the number of queries.
+The next
+Q lines contain two space-separated integers
+u and
+v — vertices corresponding to the query.
+Output Format
+For each test case, print
+Q lines — the answers to the
+Q queries.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤Q≤10
+5
+1≤u,v≤N
+The sum of
+N over all test cases does not exceed
+10
+5
+.
+The sum of
+Q over all test cases does not exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+1
+6 2
+3 6
+2 3
+2
+5
+Explanation:
+Test case 1: Given
+N=6 and
+2 queries..
+In the first query,
+u=3 and
+v=6. So there is an edge from
+6 to
+3 with weight
+2. we can use that path and minimum cost will be
+2.
+In the second query,
+u=2 and
+v=3. So there is an edge from
+2 to
+1 with weight
+2 and from
+3 to
+1 with weight
+3. we can use that path
+(2→1→3) and minimum cost will be
+5.

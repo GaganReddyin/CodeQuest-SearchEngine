@@ -1,0 +1,81 @@
+K-MEX
+Problem
+You are given an array
+A containing
+N integers. Find if it is possible to choose exactly
+M elements from the array such that the MEX of the chosen elements is exactly
+K.
+Recall that the MEX of an array is the smallest non-negative integer that does not belong to the array. For example, the MEX of
+[2,2,1] is
+0 because
+0 does not belong to the array, the MEX of
+[3,1,0,1] is
+2 because
+0 and
+1 belong to the array, but
+2 does not.
+Input Format
+The first line contains an integer
+T, denoting the number of test cases. The
+T test cases then follow:
+The first line of each test case contains an integer
+N,M,K, denoting the length of the array, the number of elements to be chosen, and the required MEX respectively.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, denoting the elements of the array.
+Output Format
+For each test case, print YES if it is possible to choose
+M elements from the array
+A so that the MEX of the chosen elements is exactly
+K and NO otherwise.
+You may print each character of the string in uppercase or lowercase (for example, the strings yEs, yes, Yes and YES will all be treated as identical).
+Constraints
+1≤T≤100
+1≤N≤100
+1≤M≤N
+0≤A
+i
+,K≤N
+Sample 1:
+Input
+Output
+6
+5 4 2
+0 1 3 0 3
+2 1 2
+0 1
+3 3 3
+0 1 2
+4 3 3
+2 0 4 3
+5 4 2
+0 2 1 2 5
+6 5 2
+0 1 0 2 0 3
+YES
+NO
+YES
+NO
+NO
+YES
+Explanation:
+Test case
+1: The chosen elements are
+0,1,3,0 and
+MEX([0,1,3,0])=2.
+Test case
+3: The chosen elements are
+0,1,2 and
+MEX([0,1,2])=3.
+Test case
+6: The chosen elements are
+0,1,0,0,3 and
+MEX([0,1,0,0,3])=2.
+Test case
+2,4,5: There is no way to choose elements to obtain the required MEX.

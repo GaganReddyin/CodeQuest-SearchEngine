@@ -1,0 +1,27 @@
+Professor X and Grouping of Numbers
+Problem
+Upon his first meeting with Laura, Professor X has got a problem for her. Although her exceptional skills are already visible, the professor wants to test her intellectual skills.
+So, Professor X gives Laura an array A consisting of N natural numbers. The task for Laura is to distribute these N numbers into some groups such that for any 2 numbers of different groups, the Greatest Common Divisor of both numbers must be 1. Laura has to maximise the number of such groups possible and output the count of groups. Can you help Laura with this problem ?
+Input
+First line of the input contains N, the size of the array.
+Next line contains N natural numbers A1, A2, A3, ........, AN, the elements of the array.
+Output
+The only line of output must contain the number of such groups possible.
+Constraints
+1 ≤ N ≤ 106
+2 ≤ Ai ≤ 107
+Sample 1:
+Input
+Output
+9
+60 12 30 24 58 33 18 25 16
+1
+Sample 2:
+Input
+Output
+8
+2 5 13 9 7 25 21 6
+3
+Explanation:
+Example case 1. In this case, maximum 3 groups having the mentioned property, can be formed: [2,6,7,9,21], [13], [5,25].
+Example case 2. In this case, only 1 group can be formed. There is no way to form 2 or more groups such that any two numbers of different groups have Greatest Common Divisor as 1.

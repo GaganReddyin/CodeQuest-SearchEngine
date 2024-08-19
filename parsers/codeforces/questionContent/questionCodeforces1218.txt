@@ -1,0 +1,196 @@
+B. Integers Shop
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The integers shop sells
+n
+segments. The
+i
+-th of them contains all integers from
+l
+i
+to
+r
+i
+and costs
+c
+i
+coins.
+Tomorrow Vasya will go to this shop and will buy some segments there. He will get all integers that appear in at least one of bought segments. The total cost of the purchase is the sum of costs of all segments in it.
+After shopping, Vasya will get some more integers as a gift. He will get integer
+x
+as a gift if and only if all of the following conditions are satisfied:
+Vasya hasn't bought
+x
+.
+Vasya has bought integer
+l
+that is less than
+x
+.
+Vasya has bought integer
+r
+that is greater than
+x
+.
+Vasya can get integer
+x
+as a gift only once so he won't have the same integers after receiving a gift.
+For example, if Vasya buys segment
+[2,4]
+for
+20
+coins and segment
+[7,8]
+for
+22
+coins, he spends
+42
+coins and receives integers
+2,3,4,7,8
+from these segments. He also gets integers
+5
+and
+6
+as a gift.
+Due to the technical issues only the first
+s
+segments (that is, segments
+[
+l
+1
+,
+r
+1
+],[
+l
+2
+,
+r
+2
+],…,[
+l
+s
+,
+r
+s
+]
+) will be available tomorrow in the shop.
+Vasya wants to get (to buy or to get as a gift) as many integers as possible. If he can do this in differents ways, he selects the cheapest of them.
+For each
+s
+from
+1
+to
+n
+, find how many coins will Vasya spend if only the first
+s
+segments will be available.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+The first line of each test case contains the single integer
+n
+(
+1≤n≤
+10
+5
+) — the number of segments in the shop.
+Each of next
+n
+lines contains three integers
+l
+i
+,
+r
+i
+,
+c
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤
+10
+9
+,1≤
+c
+i
+≤
+10
+9
+) — the ends of the
+i
+-th segments and its cost.
+It is guaranteed that the total sum of
+n
+over all test cases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case output
+n
+integers: the
+s
+-th (
+1≤s≤n
+) of them should be the number of coins Vasia will spend in the shop if only the first
+s
+segments will be available.
+Example
+input
+Copy
+3
+2
+2 4 20
+7 8 22
+2
+5 11 42
+5 11 42
+6
+1 4 4
+5 8 9
+7 8 7
+2 10 252
+1 11 271
+1 10 1
+output
+Copy
+20
+42
+42
+42
+4
+13
+11
+256
+271
+271
+Note
+In the first test case if
+s=1
+then Vasya can buy only the segment
+[2,4]
+for
+20
+coins and get
+3
+integers.
+The way to get
+7
+integers for
+42
+coins in case
+s=2
+is described in the statement.
+In the second test case note, that there can be the same segments in the shop.

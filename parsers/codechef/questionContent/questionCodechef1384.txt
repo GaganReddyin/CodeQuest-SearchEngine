@@ -1,0 +1,60 @@
+Games of Wasseypur
+Problem
+Everything was going well in Wasseypur until Ramadhir Singh found out that Sahid Khan plans to kill him someday and takeover his mine. To protect himself, he decided to take preemptive measures and kill Sahid Khan first. However, Sahid Khan also learnt of Ramadhir Singh's plan to kill him, and soon Wasseypur was all set for bloodshed - but Chef intervened! Instead of resorting to violence, he convinced them to settle things by playing a game called the Game of Wasseypur.
+The game is as follows: There is a string
+S of length
+N consisting of only
+0
+′
+s and
+1
+′
+s. Players take turns moving - on his turn, a player chooses some
+block of
+S and erases it. The remaining parts of
+S are then concatenated together (without changing the order), and the other player then makes a move on this modified string.
+A
+block in the string is defined as a maximal non-empty substring consisting of the same character. For example, if
+S=0001110110011, there are
+6 blocks: in order from left to right,
+000,111,0,11,00,11.
+The player who is unable to make a move at the end loses the game and has to leave Wasseypur. Assuming that both players play optimally and Sahid Khan starts, find the winner of the game.
+Input Format
+The first line of input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N denoting the length of the string.
+The second line of each test case contains the binary string
+S.
+Output Format
+For each test case, output a single line containing the string “SAHID” (without quotes) if Sahid Khan will be the winner, and “RAMADHIR” otherwise.
+Each character of the output can be printed either in lowercase or uppercase (so if Sahid wins, “SAHID”, “sahid” and “sAHiD” are all acceptable outputs).
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+S is a binary string, consisting of
+0 and
+1 only
+Sum of
+N over all test cases will not exceed
+10
+6
+Sample 1:
+Input
+Output
+2
+4
+0000
+4
+0011
+SAHID
+RAMADHIR
+Explanation:
+Test case 1: There is only one block
+0000, which Sahid Khan will erase in the first move. Ramadhir Singh is then left unable to make a move and loses.
+Test case 2: There are two blocks-
+00 and
+11. Sahid has to erase any one of the two, following which Ramadhir will erase the remaining block and make the string empty. Now, Sahid cannot make a move and will lose the game.

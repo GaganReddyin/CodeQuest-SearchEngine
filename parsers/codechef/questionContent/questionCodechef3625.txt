@@ -1,0 +1,26 @@
+Chef and Vectors
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Chef has an integer array X, and a binary array S, both of size N. He wants to know how many vectors (denote by V) of N elements exist, for which the following conditions hold for all valid indices i (that is, for all 1 ≤ i ≤ N).
+0 ≤ Vi < 1018
+If Si = 1, Vi is ≥ Xi, and if Si = 0, Vi ≤ Xi
+Sum of the elements of V, when viewed as a string, contains "47" as a substring.
+Please help Chef find this count. Since it may be a very large number, you should output the count modulo 109+7.
+Input
+The first line of input contains one integer N. The next N lines contain two integers each, with the ith containing Si and Xi. If Si = 0, then Vi ≤ Xi, otherwise Vi ≥ Xi.
+Output
+Output a single line containing a single integer — the answer to Chef's problem modulo 109+7.
+Constraints
+1 ≤ N ≤ 8
+0 ≤ Xi < 1018
+Si is either 0 or 1.
+Example
+Input:
+2
+0 22
+0 30
+
+Output:
+6
+Explanation:
+There are 6 such vectors: (17, 30), (18, 29), (19, 28), (20, 27), (21, 26), (22, 25).

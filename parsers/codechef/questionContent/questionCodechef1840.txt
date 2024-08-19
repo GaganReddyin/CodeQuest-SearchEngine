@@ -1,0 +1,70 @@
+The Rumbling
+Problem
+The Rumbling is a hypothetical cataclysmic event involving Karl Fritz's Wall Titans marching across the Earth, destroying all life upon it. Eren Yeager who possesses the Founding Titan has decided to begin The Rumbling to show the true power of the Eldians to the rest of the world.
+There are
+N Titans standing in a line from west to east. Each of the Titans is facing one of the four directions i.e., North, South, East, or West, represented by uppercase English letters 'N', 'S', 'E', and 'W' respectively.
+A Titan can rotate on the spot where it is standing. It requires
+X units of energy to rotate
+90 degrees clockwise, and
+Y units of energy to rotate
+90 degrees anti-clockwise.
+For the activation of The Rumbling, all the Titans must face Eren Yeager.
+So, Eren wants to position himself on the West-East line (on which other Titans are standing). He can either stand to the left of all Titans, in between two consecutive Titans, or to the right of all Titans. He wants to choose a position that minimizes the units of energy required by all the Titans to rotate and face him. Find the minimum units of energy required by all the Titans for the Activation of the Rumbling in the optimal configuration.
+Input Format
+The first line consists of
+T, the number of test cases. Description of the test cases follow.
+The first line of each test case will contain
+N, the number of Titans.
+The second line of each test case will contain a string
+S of length
+N, where the
+i
+th
+character represents the directions faced by the
+i
+th
+Titan.
+The third line of each test case will contain two space-separated integers, the values of
+X and
+Y.
+Output Format
+For each test case, output a single line containing one integer, the answer to that test case.
+Constraints
+1≤T≤1000
+1≤N≤2∗10
+5
+1≤X,Y≤10
+9
+S contains characters from {'N', 'S', 'E', 'W'} only.
+Sum of
+N over all test cases doesn't exceed
+10
+6
+Sample 1:
+Input
+Output
+1
+5
+SENWS
+2 1
+4
+Explanation:
+One valid configuration would be as follows:
+EE⋅WWW, where
+⋅ represents the position of Eren Yeager.
+The first and the second Titans will face Eren at East from the left while the third, fourth, and the fifth Titans will face Eren at West from the right.
+It takes
+1 unit of energy for the first Titan to move towards East by rotating
+90 degrees anticlockwise.
+The second Titan is already facing East, so it costs him
+0 units of energy to stay that way.
+It takes
+1 unit of energy for the third Titan to move towards West by rotating
+90 degrees anticlockwise.
+The fourth Titan is already facing West, so it costs him
+0 units of energy to stay that way.
+It takes
+2 units of energy for the fifth Titan to move towards West by rotating
+90 degrees clockwise.
+So, it takes the Titans
+4 units of energy overall to face Eren Yeager, and activate The Rumbling!

@@ -1,0 +1,132 @@
+Hill Sequence
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef has met up with his friend Isaac recently. Isaac told Chef that his team needs to solve the following problem to win ACPC and qualify to ICPC 2021. However, no one in the team is good at expected value problems ― can you help them qualify?
+A sequence
+a
+1
+,a
+2
+,…,a
+N
+is said to be a hill sequence if there is an integer
+p (
+1≤p≤N) such that
+0≤a
+1
+≤a
+2
+…≤a
+p
+≥a
+p+1
+≥…≥a
+N
+≥0. For example, the sequences
+[1,2,2,3],
+[1,2,5,5,2,0] and
+[5,4,3,3] are hill sequences, but
+[1,2,2,1,3] is not.
+Consider all hill sequences
+a
+1
+,a
+2
+,…,a
+N
+such that
+∑
+i=1
+N
+a
+i
+=M. We choose one of them uniformly randomly. Then, we define
+F(a,K)=∑
+i=1
+N
+a
+i
+K
+. For the purposes of this problem,
+0
+0
+=1. What is the expected value of
+F(a,K) modulo
+10
+9
++7?
+The answer can be expressed as a fraction
+q
+p
+, where
+p and
+q are non-negative integers and
+q is coprime with
+10
+9
++7 for the given constraints. You should compute
+p⋅q
+−1
+modulo
+10
+9
++7, where
+q
+−1
+denotes the multiplicative inverse of
+q modulo
+10
+9
++7.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+N,
+M and
+K.
+Output
+For each test case, print a single line containing one integer
+p⋅q
+−1
+modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+6
+1≤N≤1,000
+0≤M≤1,000
+0≤K≤20
+Sample 1:
+Input
+Output
+2
+4 1 2
+4 2 4
+1
+10
+Explanation:
+Example case 1: There are four hill sequences we can choose:
+[1,0,0,0],
+[0,1,0,0],
+[0,0,1,0] and
+[0,0,0,1]. For each of them,
+F(a,1)=1, so the expected value is
+1.
+Example case 2: There are 7 hill sequences we can choose:
+[2,0,0,0],
+[0,2,0,0],
+[0,0,2,0] and
+[0,0,0,2], each with
+F(a,2)=16
+[1,1,0,0],
+[0,1,1,0] and
+[0,0,1,1], each with
+F(a,2)=2
+The expected value is
+7
+4⋅16+3⋅2
+=10.

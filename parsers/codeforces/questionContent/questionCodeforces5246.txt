@@ -1,0 +1,30 @@
+A. Mike and palindrome
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mike has a string s consisting of only lowercase English letters. He wants to change exactly one character from the string so that the resulting one is a palindrome.
+A palindrome is a string that reads the same backward as forward, for example strings "z", "aaa", "aba", "abccba" are palindromes, but strings "codeforces", "reality", "ab" are not.
+Input
+The first and single line contains string s (1 ≤ |s| ≤ 15).
+Output
+Print "YES" (without quotes) if Mike can change exactly one character so that the resulting string is palindrome or "NO" (without quotes) otherwise.
+Examples
+input
+Copy
+abccaa
+output
+Copy
+YES
+input
+Copy
+abbcca
+output
+Copy
+NO
+input
+Copy
+abcda
+output
+Copy
+YES

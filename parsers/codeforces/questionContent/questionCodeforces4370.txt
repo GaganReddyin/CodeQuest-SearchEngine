@@ -1,0 +1,251 @@
+G. Two-Paths
+time limit per test3.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a weighted tree (undirected connected graph with no cycles, loops or multiple edges) with
+n
+vertices. The edge
+{
+u
+j
+,
+v
+j
+}
+has weight
+w
+j
+. Also each vertex
+i
+has its own value
+a
+i
+assigned to it.
+Let's call a path starting in vertex
+u
+and ending in vertex
+v
+, where each edge can appear no more than twice (regardless of direction), a 2-path. Vertices can appear in the 2-path multiple times (even start and end vertices).
+For some 2-path
+p
+profit
+Pr(p)=
+∑
+v∈distinct vertices in p
+a
+v
+−
+∑
+e∈distinct edges in p
+k
+e
+⋅
+w
+e
+, where
+k
+e
+is the number of times edge
+e
+appears in
+p
+. That is, vertices are counted once, but edges are counted the number of times they appear in
+p
+.
+You are about to answer
+m
+queries. Each query is a pair of vertices
+(qu,qv)
+. For each query find 2-path
+p
+from
+qu
+to
+qv
+with maximal profit
+Pr(p)
+.
+Input
+The first line contains two integers
+n
+and
+q
+(
+2≤n≤3⋅
+10
+5
+,
+1≤q≤4⋅
+10
+5
+) — the number of vertices in the tree and the number of queries.
+The second line contains
+n
+space-separated integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(1≤
+a
+i
+≤
+10
+9
+)
+— the values of the vertices.
+Next
+n−1
+lines contain descriptions of edges: each line contains three space separated integers
+u
+i
+,
+v
+i
+and
+w
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+,
+1≤
+w
+i
+≤
+10
+9
+) — there is edge
+{
+u
+i
+,
+v
+i
+}
+with weight
+w
+i
+in the tree.
+Next
+q
+lines contain queries (one per line). Each query contains two integers
+q
+u
+i
+and
+q
+v
+i
+(1≤q
+u
+i
+,q
+v
+i
+≤n)
+— endpoints of the 2-path you need to find.
+Output
+For each query print one integer per line — maximal profit
+Pr(p)
+of the some 2-path
+p
+with the corresponding endpoints.
+Example
+input
+Copy
+7 6
+6 5 5 3 2 1 2
+1 2 2
+2 3 2
+2 4 1
+4 5 1
+6 4 2
+7 3 25
+1 1
+4 4
+5 6
+6 4
+3 4
+3 7
+output
+Copy
+9
+9
+9
+8
+12
+-14
+Note
+Explanation of queries:
+(1,1)
+— one of the optimal 2-paths is the following:
+1→2→4→5→4→2→3→2→1
+.
+Pr(p)=(
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
++
+a
+5
+)−(2⋅w(1,2)+2⋅w(2,3)+2⋅w(2,4)+2⋅w(4,5))=21−2⋅12=9
+.
+(4,4)
+:
+4→2→1→2→3→2→4
+.
+Pr(p)=(
+a
+1
++
+a
+2
++
+a
+3
++
+a
+4
+)−2⋅(w(1,2)+w(2,3)+w(2,4))=19−2⋅10=9
+.
+(5,6)
+:
+5→4→2→3→2→1→2→4→6
+.
+(6,4)
+:
+6→4→2→1→2→3→2→4
+.
+(3,4)
+:
+3→2→1→2→4
+.
+(3,7)
+:
+3→2→1→2→4→5→4→2→3→7
+.

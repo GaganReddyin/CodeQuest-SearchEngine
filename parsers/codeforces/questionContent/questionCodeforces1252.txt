@@ -1,0 +1,193 @@
+D. Keep the Average High
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+and an integer
+x
+.
+You need to select the maximum number of elements in the array, such that for every subsegment
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+containing strictly more than one element
+(l<r)
+, either:
+At least one element on this subsegment is not selected, or
+a
+l
++
+a
+l+1
++…+
+a
+r
+≥x⋅(r−l+1)
+.
+Input
+The first line of input contains one integer
+t
+(
+1≤t≤10
+): the number of test cases.
+The descriptions of
+t
+test cases follow, three lines per test case.
+In the first line you are given one integer
+n
+(
+1≤n≤50000
+): the number of integers in the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−100000≤
+a
+i
+≤100000
+).
+The third line contains one integer
+x
+(
+−100000≤x≤100000
+).
+Output
+For each test case, print one integer: the maximum number of elements that you can select.
+Example
+input
+Copy
+4
+5
+1 2 3 4 5
+2
+10
+2 4 2 4 2 4 2 4 2 4
+3
+3
+-10 -5 -10
+-8
+3
+9 9 -3
+5
+output
+Copy
+4
+8
+2
+2
+Note
+In the first example, one valid way to select the elements is
+[
+1
+–
+,2,
+3
+–
+,
+4
+–
+,
+5
+–
+]
+. All subsegments satisfy at least one of the criteria. For example, for the subsegment
+l=1
+,
+r=2
+we have that the element
+2
+is not selected, satisfying the first criterion. For the subsegment
+l=3
+,
+r=5
+we have
+3+4+5=12≥2⋅3
+, satisfying the second criterion.
+We can't select all elements, because in this case for
+l=1
+,
+r=2
+all elements are selected and we have
+a
+1
++
+a
+2
+=3<2⋅2
+. Thus, the maximum number of selected elements is
+4
+.
+In the second example, one valid solution is
+[
+2
+–
+,
+4
+–
+,2,
+4
+–
+,
+2
+–
+,
+4
+–
+,2,
+4
+–
+,
+2
+–
+,
+4
+–
+]
+.
+In the third example, one valid solution is
+[
+−10
+–
+–
+–
+–
+,−5,
+−10
+–
+–
+–
+–
+]
+.
+In the fourth example, one valid solution is
+[
+9
+–
+,
+9
+–
+,−3]
+.

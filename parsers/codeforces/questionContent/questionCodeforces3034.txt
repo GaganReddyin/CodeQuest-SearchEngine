@@ -1,0 +1,189 @@
+D. Strange Device
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem is interactive.
+We have hidden an array
+a
+of
+n
+pairwise different numbers (this means that no two numbers are equal). You can get some information about this array using a new device you just ordered on Amazon.
+This device can answer queries of the following form: in response to the positions of
+k
+different elements of the array, it will return the position and value of the
+m
+-th among them in the ascending order.
+Unfortunately, the instruction for the device was lost during delivery. However, you remember
+k
+, but don't remember
+m
+. Your task is to find
+m
+using queries to this device.
+You can ask not more than
+n
+queries.
+Note that the array
+a
+and number
+m
+are fixed before the start of the interaction and don't depend on your queries. In other words, interactor is not adaptive.
+Note that you don't have to minimize the number of queries, and you don't need to guess array
+a
+. You just have to guess
+m
+.
+Input
+The first line contains two integers
+n
+and
+k
+(
+1≤k<n≤500
+) — the length of the array and the number of the elements in the query.
+It is guaranteed that number
+m
+satisfies
+1≤m≤k
+, elements
+a
+1
+,
+a
+2
+,…,
+a
+n
+of the array satisfy
+0≤
+a
+i
+≤
+10
+9
+, and all of them are different.
+Interaction
+You begin the interaction by reading
+n
+and
+k
+.
+To ask a question about elements on positions
+x
+1
+,
+x
+2
+,…,
+x
+k
+, in a separate line output
+?
+x
+1
+x
+2
+x
+3
+...
+x
+k
+Numbers in the query have to satisfy
+1≤
+x
+i
+≤n
+, and all
+x
+i
+have to be different. Don't forget to 'flush', to get the answer.
+In response, you will receive two integers
+pos
+and
+a
+pos
+ — the position in the array
+a
+of the
+m
+-th in ascending order element among
+a
+x
+1
+,
+a
+x
+2
+,…,
+a
+x
+k
+, and the element on this position.
+In case your query is invalid or you asked more than
+n
+queries, the program will print
+−1
+and will finish interaction. You will receive a Wrong answer verdict. Make sure to exit immediately to avoid getting other verdicts.
+When you determine
+m
+, output
+!
+m
+After printing a query do not forget to output end of line and flush the output. Otherwise, you will get Idleness limit exceeded. To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see documentation for other languages.
+Hack format
+For the hacks use the following format:
+The first line has to contain three integers
+n,k,m
+(
+1≤m≤k<n≤500
+) — the length of the array, number of elements in the query, and which in the ascending order number the device returns.
+In the next line output
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+) — the elements of the array. They have to be pairwise different.
+Example
+input
+Copy
+4 3
+4 9
+4 9
+4 9
+1 2
+output
+Copy
+? 2 3 4
+? 1 3 4
+? 1 2 4
+? 1 2 3
+! 3
+Note
+In the example,
+n=4
+,
+k=3
+,
+m=3
+,
+a=[2,0,1,9]
+.

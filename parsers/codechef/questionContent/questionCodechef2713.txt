@@ -1,0 +1,87 @@
+Ways to Work
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef is working at his dream workplace with
+N−1 of his friends! Like any dream workplace, this one also has dream work conditions. To ensure absolute happiness of the employees, there are the following rules at the company:
+Each worker works on exactly one day! You heard it right: no more, no less.
+On each day, at most one worker may work. This provides the perfect work conditions: no crowd, just the work and you.
+Every worker has a deadline; let's denote the deadline of the
+i-th worker by
+d
+i
+. (This means that the day on which the
+i-th worker works must not be later than day
+d
+i
+; the days are numbered starting from
+1.) You thought there weren't any limitations, eh?
+However, sooner or later, all dream workplaces have to fall. The CLO (Chefland Labour Office) demands that there should be exactly
+C ways to schedule the work such that the above conditions are fulfilled. Two schedulings are different if there is an employee that works at different days in these schedulings.
+Chef is asking for your help, since he can't spare any workdays at this company. You should find a sequence of employees' deadlines
+d
+1
+≤d
+2
+≤⋯≤d
+N
+such that there are exactly
+C ways to schedule the work. If there are multiple sequences satisfying this condition, do another little favour for Chef: minimise
+d
+N
+(his deadline).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N and
+C.
+Output
+For each test case, print a single line containing
+N space-separated integers
+d
+1
+,d
+2
+,…,d
+N
+that describe your chosen sequence. If there are multiple sequences satisfying all conditions, you may output any one.
+Constraints
+1≤T≤100
+the sum of
+N over all test cases does not exceed
+10
+7
+1≤C≤10
+9
+Subtasks
+Subtask #1 (10 points):
+1≤N≤10
+1≤C≤100
+Subtask #2 (20 points):
+1≤N≤100
+Subtask #3 (70 points):
+1≤N≤10
+6
+Sample 1:
+Input
+Output
+1
+2 12
+4 4
+Explanation:
+Example case 1: Each worker can work on any day from day
+1 to day
+4. The 12 possible schedulings (pairs of days on which they work) are
+[1,2],
+[1,3],
+[1,4],
+[2,3],
+[2,4],
+[3,4],
+[2,1],
+[3,1],
+[4,1],
+[3,2],
+[4,2],
+[4,3].

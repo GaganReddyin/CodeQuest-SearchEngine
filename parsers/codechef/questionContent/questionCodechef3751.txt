@@ -1,0 +1,73 @@
+Counting manuls
+Problem
+Please note that TLs are different for different subtasks.
+Madoka decided to create her own chat with her friends in it. However, the chat was unmonitored for a while, so her friends started posting pictures of manuls with numbers in it. Coming back to the messy chat, Madoka knows that she cannot suspend it now, because that will make her friends hate her. Instead, she wants to understand the rules her friends are using to post manuls.
+Madoka and her friends all have the same favorite number
+K. After a little investigation, she realized that her friends are posting manuls using the following rules:
+Initially, a picture with only
+1 manul is posted.
+If the last picture posted has
+A manuls in it, then a picture with
+B manuls will be posted next if the following conditions are met:
+lcm(A,B)≤A⋅(A+1)
+A<B≤A+K
+Madoka knows that her friends will stop counting when a picture with at least
+N manuls is posted. Since this chat is hers, Madoka can suggest which picture to be posted each time. To not pollute the chat, Madoka is trying to find a sequence of pictures with the minimum number of pictures used.
+Help Madoka!
+Input Format
+The only line of input contains two space-separated integers
+N and
+K.
+Output Format
+Print the answer to the problem - the minimum number of pictures that can be used.
+Constraints
+3≤N≤10
+18
+3≤K≤10
+4
+Subtasks
+Subtask
+1 (20 points):
+3≤K≤300, TL -
+2 sec
+Subtask
+2 (40 points):
+3≤K≤1900, TL -
+8 sec
+Subtask
+3 (10 points):
+3≤K≤3000, TL -
+3 sec
+Subtask
+4 (30 points): Original constraints, TL -
+3 sec
+Sample 1:
+Input
+Output
+4 3
+3
+Explanation:
+Consider the following sequence, where each element is the number of manuls in each picture:
+[1,2,4].
+For the second picture with
+2 manuls:
+lcm(1,2)=2≤1⋅(1+1)
+1<2≤1+3
+For the third picture with
+4 manuls:
+lcm(2,4)=4≤2⋅(2+1)
+2<4≤2+3
+No shorter sequence of pictures is possible.
+Sample 2:
+Input
+Output
+29 7
+7
+Explanation:
+One of the shortest sequences of pictures is
+[1,2,6,12,18,24,30].
+Sample 3:
+Input
+Output
+228 17
+17

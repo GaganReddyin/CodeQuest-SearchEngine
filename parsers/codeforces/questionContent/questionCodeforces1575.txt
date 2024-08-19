@@ -1,0 +1,183 @@
+I. Organizing a Music Festival
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are the organizer of the famous "Zurich Music Festival". There will be
+n
+singers who will perform at the festival, identified by the integers
+1
+,
+2
+,
+…
+,
+n
+. You must choose in which order they are going to perform on stage.
+You have
+m
+friends and each of them has a set of favourite singers. More precisely, for each
+1≤i≤m
+, the
+i
+-th friend likes singers
+s
+i,1
+,
+s
+i,2
+,…,
+s
+i,
+q
+i
+.
+A friend of yours is happy if the singers he likes perform consecutively (in an arbitrary order). An ordering of the singers is valid if it makes all your friends happy.
+Compute the number of valid orderings modulo
+998244353
+.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤100
+) — the number of singers and the number of friends correspondingly.
+The
+i
+-th of the next
+m
+lines contains the integer
+q
+i
+(
+1≤
+q
+i
+≤n
+) — the number of favorite singers of the
+i
+-th friend – followed by the
+q
+i
+integers
+s
+i,1
+,
+s
+i,2
+,…,
+s
+i,
+q
+i
+(
+1≤
+s
+i,1
+<
+s
+i,2
+<⋯<
+s
+i,
+q
+i
+≤n
+) — the indexes of his favorite singers.
+Output
+Print the number of valid orderings of the singers modulo
+998244353
+.
+Examples
+input
+Copy
+3 1
+2 1 3
+output
+Copy
+4
+input
+Copy
+5 5
+2 1 2
+2 2 3
+2 3 4
+2 4 5
+2 1 5
+output
+Copy
+0
+input
+Copy
+100 1
+1 50
+output
+Copy
+35305197
+input
+Copy
+5 1
+5 1 2 3 4 5
+output
+Copy
+120
+input
+Copy
+2 5
+1 2
+1 2
+1 2
+1 1
+1 1
+output
+Copy
+2
+input
+Copy
+11 4
+5 4 5 7 9 11
+2 2 10
+2 9 11
+7 1 2 3 5 8 10 11
+output
+Copy
+384
+Note
+Explanation of the first sample: There are
+3
+singers and only
+1
+friend. The friend likes the two singers
+1
+and
+3
+. Thus, the
+4
+valid orderings are:
+1 3 2
+2 1 3
+2 3 1
+3 1 2
+Explanation of the second sample: There are
+5
+singers and
+5
+friends. One can show that no ordering is valid.
+Explanation of the third sample: There are
+100
+singers and only
+1
+friend. The friend likes only singer
+50
+, hence all the
+100!
+possible orderings are valid.
+Explanation of the fourth sample: There are
+5
+singers and only
+1
+friend. The friend likes all the singers, hence all the
+5!=120
+possible orderings are valid.

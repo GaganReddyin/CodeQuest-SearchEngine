@@ -1,0 +1,28 @@
+Tandem
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+The chef was recently studying about repeated occurrences of substrings in the strings. In particular, he was studying about a string s.
+He calls a string to be in tandem if it can be represented as concatenation of three equal strings, i.e. it can be represented as AAA where A is a non-empty string. For brevity, he calls such strings tandem strings. For example, "ababab" is a tandem string whereas "abab" is not.
+Now, Chef is studying tandem substrings of string s. He calls a tandem substring an interesting tandem if the character following the substring in string s (if it exists) is different than the first character of the substring. If the character following the tandem substring does not exist (i.e. the substring appears as a suffix of string s), it's also called interesting tandem.
+Chef calls all the tandem substrings which are not interesting tandem as boring tandems.
+Now, chef wants your help in counting number of interesting and boring tandem substrings in string s. Please help him!!
+For example, let s be "abaaabaaabaaabbbb".
+The substring s[3..14] = "aaabaaabaaab" is an interesting tandem, as the substring is a tandem and the character following the substring (i.e. s[15] = 'b') is different than the first character of the substring (i.e. 'a').
+The substring s[1..12] = "abaaabaaabaa" is a boring tandem, as the character following the tandem substring (i.e. s[13] = 'a') is same as the first character of the substring (i.e. 'a').
+The substring s[15..17] = "bbb" is also an interesting tandem as the character following the tandem does not exist (i.e. this tandem substring appears as a suffix of string s).
+In summary, s[1..12], s[2..13], s[3..14], s[3..5], s[7..9], s[11..13], s[14..16], s[15..17] are all tandem substrings. Out of which, s[3..14], s[3..5], s[7..9], s[11..13], s[15..17] are all interesting tandems. Rest tandem substrings, s[1..12], s[2..13], s[14..16] are all boring tandems.
+Input
+There is only a single test case.
+The first line of the input contains a string s.
+Output
+The only line of the output should contain two space separated integers denoting the number of interesting and boring tandems in string, respectively.
+Constraints
+1 ≤ |s| ≤ 200000
+s consists of lower case English alphabets ('a' to 'z')
+Sample 1:
+Input
+Output
+abaaabaaabaaabbbb
+5 3
+Explanation:
+Example case 1. It is already explained in the problem statement.

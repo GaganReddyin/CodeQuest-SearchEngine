@@ -1,0 +1,153 @@
+E. Cost Equilibrium
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+An array is called beautiful if all the elements in the array are equal.
+You can transform an array using the following steps any number of times:
+Choose two indices
+i
+and
+j
+(
+1≤i,j≤n
+), and an integer
+x
+(
+1≤x≤
+a
+i
+). Let
+i
+be the source index and
+j
+be the sink index.
+Decrease the
+i
+-th element by
+x
+, and increase the
+j
+-th element by
+x
+. The resulting values at
+i
+-th and
+j
+-th index are
+a
+i
+−x
+and
+a
+j
++x
+respectively.
+The cost of this operation is
+x⋅|j−i|
+.
+Now the
+i
+-th index can no longer be the sink and the
+j
+-th index can no longer be the source.
+The total cost of a transformation is the sum of all the costs in step
+3
+.
+For example, array
+[0,2,3,3]
+can be transformed into a beautiful array
+[2,2,2,2]
+with total cost
+1⋅|1−3|+1⋅|1−4|=5
+.
+An array is called balanced, if it can be transformed into a beautiful array, and the cost of such transformation is uniquely defined. In other words, the minimum cost of transformation into a beautiful array equals the maximum cost.
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+of length
+n
+, consisting of non-negative integers. Your task is to find the number of balanced arrays which are permutations of the given array. Two arrays are considered different, if elements at some position differ. Since the answer can be large, output it modulo
+10
+9
++7
+.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the size of the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤
+10
+9
+).
+Output
+Output a single integer — the number of balanced permutations modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+3
+1 2 3
+output
+Copy
+6
+input
+Copy
+4
+0 4 0 4
+output
+Copy
+2
+input
+Copy
+5
+0 11 12 13 14
+output
+Copy
+120
+Note
+In the first example,
+[1,2,3]
+is a valid permutation as we can consider the index with value
+3
+as the source and index with value
+1
+as the sink. Thus, after conversion we get a beautiful array
+[2,2,2]
+, and the total cost would be
+2
+. We can show that this is the only transformation of this array that leads to a beautiful array. Similarly, we can check for other permutations too.
+In the second example,
+[0,0,4,4]
+and
+[4,4,0,0]
+are balanced permutations.
+In the third example, all permutations are balanced.

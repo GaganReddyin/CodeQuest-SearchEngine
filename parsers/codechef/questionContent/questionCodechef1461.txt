@@ -1,0 +1,121 @@
+01 Subsequence
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+You are handed a binary string
+S, but not in any ordinary form. Instead of being directly given the value of
+S, you are given an array
+C of size
+N representing the 01-compression representation of
+S. This means
+S first contains
+C
+1
+0 characters, then
+C
+2
+1 characters, then
+C
+3
+0 characters, and so on. For example, the array
+C=[2,3,4,3] corresponds with the binary string
+001110000111.
+You are allowed to modify
+S by swapping elements of
+C. More specifically, you are allowed to swap
+C
+i
+and
+C
+j
+as long as
+C
+i
+and
+C
+j
+both encodes blocks of the same character. For example, from
+C=[2,3,4,3], you can swap
+C
+1
+and
+C
+3
+because both of them encode blocks of
+0's, turning
+C to
+[4,3,2,3] and
+S to
+000011100111. However, you cannot swap
+C
+1
+and
+C
+2
+because
+C
+1
+encodes a block of
+0's, while
+C
+2
+encodes a block of
+1s.
+Perform the swapping operation in any way as many times as you want (including zero times) so that the final string
+S has as many
+01 subsequences as possible. As a reminder, a subsequence of a string is a sequence that can be derived by deleting zero or more characters without changing the order of the remaining characters.
+You need to find any optimal final array
+C, for which the number of
+01 subsequence will be the largest possible.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains a single integer
+N - the size of the array
+C.
+The second line of each test case contains
+N integers
+C
+1
+,C
+2
+,…,C
+N
+- the
+01-compression representation of
+S.
+Output Format
+For each test case, output two lines: the first line contains
+N integers representing the optimal array
+C, and the second line contains the maximum number of
+01 subsequences.
+Constraints
+1≤T≤1000
+1≤N≤100
+1≤C
+i
+≤1000
+Sample 1:
+Input
+Output
+1
+4
+2 3 4 3
+4 3 2 3
+30
+Explanation:
+Test case
+1:
+C=[2,3,4,3], which means
+S corresponds to
+001110000111. The optimal list of operations is to only swap
+C
+1
+and
+C
+3
+, resulting in
+C=[4,3,2,3] and
+S=
+000011100111, which has
+30 subsequences of
+01.

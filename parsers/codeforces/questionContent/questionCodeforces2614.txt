@@ -1,0 +1,51 @@
+B1. Increment
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Implement a unitary operation on a register of
+N
+qubits that increments the number written in the register modulo
+2
+N
+.
+Your operation should take a register of type LittleEndian - an array of qubits that encodes an unsigned integer in little-endian format, with the least significant bit written first (corresponding to the array element with index 0). The "output" of your solution is the state in which it left the input qubits.
+For example, if the qubits passed to your operation are in the state
+1
+2
+√
+(|11⟩+|10⟩)=
+1
+2
+√
+(|3⟩+|1⟩)
+, they should be transformed to the state
+1
+2
+√
+(|(3+1)mod
+2
+2
+⟩+|(1+1)mod
+2
+2
+⟩)=
+1
+2
+√
+(|0⟩+|2⟩)=
+1
+2
+√
+(|00⟩+|01⟩)
+.
+Your code should have the following signature (note that your operation should have Adjoint and Controlled variants defined for it; is Adj+Ctl in the operation signature will generate them automatically based on your code):
+namespace Solution {
+    open Microsoft.Quantum.Arithmetic;
+    open Microsoft.Quantum.Intrinsic;
+
+    operation Solve (register : LittleEndian) : Unit is Adj+Ctl {
+        // your code here
+    }
+}
+Your code is not allowed to use measurements or arbitrary rotation gates (so, for example, using the library operation IncrementByInteger will cause runtime error). This operation can be implemented using just the X gate and its controlled variants.

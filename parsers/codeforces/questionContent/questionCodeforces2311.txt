@@ -1,0 +1,152 @@
+E. Poman Numbers
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You've got a string
+S
+consisting of
+n
+lowercase English letters from your friend. It turned out that this is a number written in poman numerals. The poman numeral system is long forgotten. All that's left is the algorithm to transform number from poman numerals to the numeral system familiar to us. Characters of
+S
+are numbered from
+1
+to
+n
+from left to right. Let's denote the value of
+S
+as
+f(S)
+, it is defined as follows:
+If
+|S|>1
+, an arbitrary integer
+m
+(
+1≤m<|S|
+) is chosen, and it is defined that
+f(S)=−f(S[1,m])+f(S[m+1,|S|])
+, where
+S[l,r]
+denotes the substring of
+S
+from the
+l
+-th to the
+r
+-th position, inclusively.
+Otherwise
+S=c
+, where
+c
+is some English letter. Then
+f(S)=
+2
+pos(c)
+, where
+pos(c)
+is the position of letter
+c
+in the alphabet (
+pos(
+a
+)=0
+,
+pos(
+z
+)=25
+).
+Note that
+m
+is chosen independently on each step.
+Your friend thinks it is possible to get
+f(S)=T
+by choosing the right
+m
+on every step. Is he right?
+Input
+The first line contains two integers
+n
+and
+T
+(
+2≤n≤
+10
+5
+,
+−
+10
+15
+≤T≤
+10
+15
+).
+The second line contains a string
+S
+consisting of
+n
+lowercase English letters.
+Output
+Print "Yes" if it is possible to get the desired value. Otherwise, print "No".
+You can print each letter in any case (upper or lower).
+Examples
+input
+Copy
+2 -1
+ba
+output
+Copy
+Yes
+input
+Copy
+3 -7
+abc
+output
+Copy
+No
+input
+Copy
+7 -475391
+qohshra
+output
+Copy
+Yes
+Note
+In the second example, you cannot get
+−7
+. But you can get
+1
+, for example, as follows:
+First choose
+m=1
+, then
+f(
+abc
+)=−f(
+a
+)+f(
+bc
+)
+f(
+a
+)=
+2
+0
+=1
+f(
+bc
+)=−f(
+b
+)+f(
+c
+)=−
+2
+1
++
+2
+2
+=2
+In the end
+f(
+abc
+)=−1+2=1

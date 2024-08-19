@@ -1,0 +1,111 @@
+F. Bracket Insertion
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Vika likes playing with bracket sequences. Today she wants to create a new bracket sequence using the following algorithm. Initially, Vika's sequence is an empty string, and then she will repeat the following actions
+n
+times:
+Choose a place in the current bracket sequence to insert new brackets uniformly at random. If the length of the current sequence is
+k
+, then there are
+k+1
+such places: before the first bracket, between the first and the second brackets,
+…
+, after the
+k
+-th bracket. In particular, there is one such place in an empty bracket sequence.
+Choose string "()" with probability
+p
+or string ")(" with probability
+1−p
+and insert it into the chosen place. The length of the bracket sequence will increase by
+2
+.
+A bracket sequence is called regular if it is possible to obtain a correct arithmetic expression by inserting characters '+' and '1' into it. For example, sequences "(())()", "()", and "(()(()))" are regular, while ")(", "(()", and "(()))(" are not.
+Vika wants to know the probability that her bracket sequence will be a regular one at the end. Help her and find this probability modulo
+998244353
+(see Output section).
+Input
+The only line contains two integers
+n
+and
+q
+ (
+1≤n≤500
+;
+0≤q≤
+10
+4
+). Here
+n
+is equal to the number of bracket insertion operations, and the probability that Vika chooses string "()" on every step of the algorithm is equal to
+p=q⋅
+10
+−4
+.
+Output
+Print the probability that Vika's final bracket sequence will be regular, modulo
+998244353
+.
+Formally, let
+M=998244353
+. It can be shown that the answer can be expressed as an irreducible fraction
+p
+q
+, where
+p
+and
+q
+are integers and
+q≢0(modM)
+. Output the integer equal to
+p⋅
+q
+−1
+modM
+. In other words, output such an integer
+x
+that
+0≤x<M
+and
+x⋅q≡p(modM)
+.
+Examples
+input
+Copy
+1 7500
+output
+Copy
+249561089
+input
+Copy
+2 6000
+output
+Copy
+519087064
+input
+Copy
+5 4000
+output
+Copy
+119387743
+Note
+In the first example, Vika will get a regular bracket sequence () with probability
+p=
+3
+4
+, and she will get an irregular bracket sequence )( with probability
+1−p=
+1
+4
+. The sought probability is
+3
+4
+, and
+249561089⋅4≡3(mod998244353)
+.
+In the second example, the sought probability is
+11
+25
+.

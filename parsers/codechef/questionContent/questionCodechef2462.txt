@@ -1,0 +1,51 @@
+Ross goes for Shopping
+Problem
+The Big Billion day has arrived and Ross has
+N items in his mind which he wants to purchase.
+After purchasing Ross found that he has total of
+M type items from 1 to
+M.
+Now to distinguish the items from each other he wants to arrange them in such a way that items of same type occur continuously.
+For this he can select any
+K (
+0 <=
+K <=
+N ) number of items and permute them. The other
+N−K elements remain untouched.
+Can you help him to find the minimum value of
+K for which this is possible?
+###Input:
+The first line of the input contains two space separated integer
+N and
+M
+The second line contains N space-separated integers which denotes the type of items he has bought as
+A
+1
+,
+A
+2
+, . . . . .
+A
+N
+.
+###Output:
+Print a single line containing one integer — minimum value of
+K for which items of same type occurs continuously.
+###Constraints
+1≤N≤100000
+1≤M≤20
+1≤A
+i
+≤M
+###Sample Input: 6 3 1 2 3 1 2 3
+###Sample Output: 3
+###EXPLANATION: One of the possible way is to select the items at indexes
+1st ,
+3rd and
+5th. We can permute the selected items by placing the
+1st ,
+3rd and
+5th items at
+3rd ,
+5th and
+1st places respectively to finally get 2 2 1 1 3 3.

@@ -1,0 +1,99 @@
+H. Exam
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+This year a Chunin Selection Exam is held again in Konoha, and taking part in it are
+n
+ninjas named
+s
+1
+,
+s
+2
+, ...,
+s
+n
+. All names are distinct. One of the exam stages consists of fights between the participants. This year the rules determining the ninjas for each fight are the following: ninjas
+i
+and
+j
+fight against each other if the following conditions are held:
+i≠j
+;
+s
+j
+is a substring of
+s
+i
+;
+there is no
+k
+except
+i
+and
+j
+that
+s
+j
+is a substring of
+s
+k
+, and
+s
+k
+is a substring of
+s
+i
+.
+A string
+a
+is a substring of a string
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.
+Your task is to find out how many fights are going to take place this year.
+Input
+The first line consists of the only integer
+n
+(
+1≤n≤
+10
+6
+) standing for the number of examinees.
+The following
+n
+lines contain their names. No two names coincide, all names are non-empty and consist of lowercase English letters. The total length of all names doesn't exceed
+10
+6
+.
+Output
+Print the only integer standing for the number of fights.
+Examples
+input
+Copy
+5
+hidan
+dan
+hanabi
+bi
+nabi
+output
+Copy
+3
+input
+Copy
+4
+abacaba
+abaca
+acaba
+aca
+output
+Copy
+4
+Note
+In the first example hidan fights against dan, and hanabi fights against nabi, who also fights bi. Ninjas named hanabi and bi don't fight each other since there is the ninja called nabi who breaks the third condition for them.
+In the second example the fights are held between abacaba and acaba, abacaba and abaca, acaba and aca, abaca and aca.

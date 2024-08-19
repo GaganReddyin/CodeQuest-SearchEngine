@@ -1,0 +1,361 @@
+E. Train Tracks
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+That's right. I'm a Purdue student, and I shamelessly wrote a problem about trains.
+There are
+n
+stations and
+m
+trains. The stations are connected by
+n−1
+one-directional railroads that form a tree rooted at station
+1
+. All railroads are pointed in the direction from the root station
+1
+to the leaves. A railroad connects a station
+u
+to a station
+v
+, and has a distance
+d
+, meaning it takes
+d
+time to travel from
+u
+to
+v
+. Each station with at least one outgoing railroad has a switch that determines the child station an incoming train will be directed toward. For example, it might look like this:
+Here, stations
+1
+and
+3
+have switches directed toward stations
+2
+and
+4
+, respectively.
+Initially, no trains are at any station. Train
+i
+will enter station
+1
+at time
+t
+i
+. Every unit of time, starting at time
+1
+, the following two steps happen:
+You can switch at most one station to point to a different child station. A switch change takes effect before step
+2
+.
+For every train that is on a station
+u
+, it is directed toward the station
+v
+indicated by
+u
+'s switch. So, if the railroad from
+u
+to
+v
+has distance
+d
+, the train will enter station
+v
+in
+d
+units of time from now.
+Every train has a destination station
+s
+i
+. When it enters
+s
+i
+, it will stop there permanently. If at some point the train is going in the wrong direction, so that it will never be able to reach
+s
+i
+no matter where the switches point, it will immediately explode.
+Find the latest possible time of the first explosion if you change switches optimally, or determine that you can direct every train to its destination so that no explosion occurs. Also, find the minimum number of times you need to change a switch to achieve this.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤
+10
+5
+) — the number of stations and trains, respectively.
+The next
+n−1
+lines describe the railroads. The
+i
+-th line contains three integers
+u,v,d
+(
+1≤u,v≤n
+,
+1≤d≤
+10
+9
+), denoting a railroad from station
+u
+to station
+v
+with distance
+d
+. It is guaranteed that the railroads form a tree rooted at station
+1
+. The switch of a station
+u
+is initially directed towards the last outgoing railroad from
+u
+that appears in the input.
+The next
+m
+lines describe the trains. The
+i
+-th line contains two integers
+s
+i
+,
+t
+i
+(
+1≤
+s
+i
+≤n
+,
+1≤
+t
+1
+<
+t
+2
+<⋯<
+t
+m
+≤
+10
+9
+) — the destination station and the time the
+i
+-th train enters station
+1
+, respectively.
+Output
+Output two integers: the latest possible time of the first explosion (or
+−1
+if it is possible to never have an explosion) and the minimum number of switch changes to achieve it.
+Examples
+input
+Copy
+5 4
+1 2 1
+1 3 2
+3 4 1
+3 5 3
+2 1
+4 2
+2 6
+5 10
+output
+Copy
+-1 6
+input
+Copy
+5 4
+1 2 1
+1 3 2
+3 4 1
+3 5 3
+5 1
+4 2
+4 3
+2 4
+output
+Copy
+4 0
+input
+Copy
+11 6
+1 2 1
+1 3 2
+3 4 1
+3 5 2
+5 6 1
+5 7 2
+7 8 1
+7 9 2
+9 10 1
+9 11 1
+2 1
+8 3
+6 5
+10 7
+4 9
+2 11
+output
+Copy
+11 4
+Note
+For the first test, here's an example timeline:
+At time
+1
+, train
+1
+enters station
+1
+. We switch station
+1
+to point to station
+2
+. Train
+1
+is directed to station
+2
+.
+At time
+2
+, train
+2
+enters station
+1
+, and train
+1
+enters station
+2
+, where it stops permanently. We switch station
+1
+to point to station
+3
+. Train
+2
+is directed to station
+3
+.
+At time
+4
+, train
+2
+enters station
+3
+. We switch station
+3
+to point to station
+4
+. Train
+2
+is directed to station
+4
+.
+At time
+5
+, train
+2
+enters station
+4
+, where it stops permanently.
+At time
+6
+, train
+3
+enters station
+1
+. We switch station
+1
+to point to station
+2
+. Train
+3
+is directed to station
+2
+.
+At time
+7
+, train
+3
+enters station
+2
+, where it stops permanently. We switch station
+3
+to point to station
+5
+.
+At time
+10
+, train
+4
+enters station
+1
+. We switch station
+1
+to point to station
+3
+. Train
+4
+is directed to station
+3
+.
+At time
+12
+, train
+4
+enters station
+3
+. Train
+4
+is directed to station
+5
+.
+At time
+15
+, train
+4
+enters station
+5
+, where it stops permanently.
+For the second test, we switch nothing. At time
+4
+, train
+2
+is directed to station
+5
+and train
+4
+is directed to station
+3
+. They both explode. It is impossible to prevent an explosion by time
+4
+.
+For the third test, denote a switch change by
+(u→v,t)
+if we make station
+u
+point to station
+v
+at time
+t
+. One solution is to make these
+4
+switch changes:
+(1→2,1)
+,
+(1→3,2)
+,
+(7→8,5)
+,
+(5→6,8)
+. At time
+11
+, trains
+4
+,
+5
+, and
+6
+explode. It is impossible to prevent an explosion by time
+11
+.

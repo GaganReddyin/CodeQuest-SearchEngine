@@ -1,0 +1,76 @@
+E. Vlad and a Pair of Numbers
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vlad found two positive numbers
+a
+and
+b
+(
+a,b>0
+). He discovered that
+a⊕b=
+a+b
+2
+, where
+⊕
+means the bitwise exclusive OR , and division is performed without rounding..
+Since it is easier to remember one number than two, Vlad remembered only
+a⊕b
+, let's denote this number as
+x
+. Help him find any suitable
+a
+and
+b
+or tell him that they do not exist.
+Input
+The first line of the input data contains the single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases in the test.
+Each test case is described by a single integer
+x
+(
+1≤x≤
+2
+29
+) — the number that Vlad remembered.
+Output
+Output
+t
+lines, each of which is the answer to the corresponding test case. As the answer, output
+a
+and
+b
+(
+0<a,b≤
+2
+32
+), such that
+x=a⊕b=
+a+b
+2
+. If there are several answers, output any of them. If there are no matching pairs, output -1.
+Example
+input
+Copy
+6
+2
+5
+10
+6
+18
+36
+output
+Copy
+3 1
+-1
+13 7
+-1
+25 11
+50 22

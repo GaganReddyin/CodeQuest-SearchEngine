@@ -1,0 +1,38 @@
+Lucky Edge
+Problem
+Read problems statements in mandarin chinese, russian and vietnamese as well.
+In an undirected unweighted graph, an edge of the graph is said to be lucky if it is a part of some cycle of the graph.
+You are given a list E of M edges. We define f(i) as the number of intervals [l, r] (1 ≤ l ≤ i ≤ r ≤ M) such that if you build a graph from edges El, El+1, ..., Er, the edge Ei will be a lucky edge in this graph.
+Your task is to calculate the values of f(1), f(2), ..., f(M).
+Input
+The first line of the input contains an integer T denoting the number of test cases.
+The first line of each test case contains a single integer M denoting the number of edges.
+Each of the next M lines contains two space-separated integers ui and vi denoting that i-th edge connects nodes ui and vi.
+Output
+For each test case, output a single line containing M integers, i-th of which should be value of f(i).
+Constraints
+1 ≤ T ≤ 50
+1 ≤ M ≤ 5,000
+1 ≤ sum of M over all test-cases ≤ 20,000
+1 ≤ ui, vi ≤ 10,000
+ui ≠ vi
+Subtasks
+Subtask #1 (10 points): M ≤ 200 and sum of M ≤ 2,300
+Subtask #2 (20 points): M ≤ 1,000 and sum of M ≤ 4,000
+Subtask #3 (70 points): Original constraints
+Sample 1:
+Input
+Output
+2
+3
+1 2
+3 4
+2 1
+5
+1 2
+2 3
+3 4
+1 4
+4 2
+1 0 1
+2 3 3 2 2

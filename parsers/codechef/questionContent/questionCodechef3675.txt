@@ -1,0 +1,58 @@
+Cumulative Palindrome Count
+Problem
+Gru has been ordering the minions to do a lot of work lately. Minions don't want to trust Gru anymore. So, they propose a problem to Gru. They will only help Gru if he can answer the problem correctly. The minions generate an endless string
+s by following these steps:
+Let
+s be an empty string.
+i=1.
+Append
+i a s to the back of
+s.
+Append
+i b s to the back of
+s.
+Multiply
+i by
+2 and go back to the third step.
+So
+s will be abaabbaaaabbbb.... Now let's define
+f(x) as number of distinct palindrome substring segments in
+s[1…x]. For example,
+f(3)=4 because a (which is
+s[1…1]), b (which is
+s[2…2]), a (which is
+s[3…3]) and aba (which is
+s[1…3]) are possible palindrome substrings of
+s[1…3].
+The minions will give an integer
+N. Help Gru calculate (
+∑
+i=1
+N
+f(i))mod(10
+9
++7).
+Note: We are using 1-indexing.
+###Input:
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains a single line of input, which has one integer,
+N.
+###Output:
+For each testcase, output in a single line, the answer modulo
+(10
+9
++7).
+###Constraints
+1≤T≤10
+3
+1≤N≤10
+18
+###Sample Input: 1 3
+###Sample Output: 7
+###EXPLANATION:
+f(1)=1,
+f(2)=2,
+f(3)=4. And so, the answer for
+N=3 is
+1+2+4=7.

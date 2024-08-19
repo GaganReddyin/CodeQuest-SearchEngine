@@ -1,0 +1,103 @@
+Bitwise swaps
+Problem
+Given an array
+A consisting of
+N integers
+A
+1
+,A
+2
+,…,A
+N
+, determine if you can sort this array by applying the following operation several times (possibly, zero):
+Pick a pair of indices
+(i,j) with
+i
+
+=j and
+A
+i
+&A
+j
+
+=0, and swap the values of
+A
+i
+and
+A
+j
+. Here,
+& denotes the bitwise AND operation.
+For example, if
+A=[6,4,2], the two possible operations are
+(1,2) and
+(1,3).
+(2,3) cannot be performed because
+A
+2
+&A
+3
+=4&2=0.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+Output Format
+For each test case, output the answer on a new line — YES if the given array can be sorted by repeatedly applying the given operation, and NO otherwise.
+You may print each character of the answer string in either uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+Constraints
+1≤T≤10
+4
+1≤N≤3⋅10
+5
+0≤A
+i
+<2
+31
+for each
+1≤i≤N
+The sum of
+N over all test cases does not exceed
+3⋅10
+5
+Subtasks
+Subtask #1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+4
+3
+6 4 2
+6
+9 34 4 24 1 6
+6
+9 34 24 4 1 6
+2
+1 0
+Yes
+Yes
+No
+No
+Explanation:
+Test case
+1:
+A can be sorted by applying the single operation
+(1,3).
+Test case
+2:
+A can be sorted by applying the following operations in order:
+(1,5),(2,6),(2,3),(4,5).
+Test cases
+3 and
+4: It can be shown that no sequence of operations will sort
+A.

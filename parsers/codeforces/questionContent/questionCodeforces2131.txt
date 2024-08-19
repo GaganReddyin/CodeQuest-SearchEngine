@@ -1,0 +1,163 @@
+B. Balls of Steel
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have
+n
+distinct points
+(
+x
+1
+,
+y
+1
+),…,(
+x
+n
+,
+y
+n
+)
+on the plane and a non-negative integer parameter
+k
+. Each point is a microscopic steel ball and
+k
+is the attract power of a ball when it's charged. The attract power is the same for all balls.
+In one operation, you can select a ball
+i
+to charge it. Once charged, all balls with Manhattan distance at most
+k
+from ball
+i
+move to the position of ball
+i
+. Many balls may have the same coordinate after an operation.
+More formally, for all balls
+j
+such that
+|
+x
+i
+−
+x
+j
+|+|
+y
+i
+−
+y
+j
+|≤k
+, we assign
+x
+j
+:=
+x
+i
+and
+y
+j
+:=
+y
+i
+.
+An example of an operation. After charging the ball in the center, two other balls move to its position. On the right side, the red dot in the center is the common position of those balls.
+Your task is to find the minimum number of operations to move all balls to the same position, or report that this is impossible.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+,
+k
+(
+2≤n≤100
+,
+0≤k≤
+10
+6
+) — the number of balls and the attract power of all balls, respectively.
+The following
+n
+lines describe the balls' coordinates. The
+i
+-th of these lines contains two integers
+x
+i
+,
+y
+i
+(
+0≤
+x
+i
+,
+y
+i
+≤
+10
+5
+) — the coordinates of the
+i
+-th ball.
+It is guaranteed that all points are distinct.
+Output
+For each test case print a single integer — the minimum number of operations to move all balls to the same position, or
+−1
+if it is impossible.
+Example
+input
+Copy
+3
+3 2
+0 0
+3 3
+1 1
+3 3
+6 7
+8 8
+6 9
+4 1
+0 0
+0 1
+0 2
+0 3
+output
+Copy
+-1
+1
+-1
+Note
+In the first test case, there are three balls at
+(0,0)
+,
+(3,3)
+, and
+(1,1)
+and the attract power is
+2
+. It is possible to move two balls together with one operation, but not all three balls together with any number of operations.
+In the second test case, there are three balls at
+(6,7)
+,
+(8,8)
+, and
+(6,9)
+and the attract power is
+3
+. If we charge any ball, the other two will move to the same position, so we only require one operation.
+In the third test case, there are four balls at
+(0,0)
+,
+(0,1)
+,
+(0,2)
+, and
+(0,3)
+, and the attract power is
+1
+. We can show that it is impossible to move all balls to the same position with a sequence of operations.

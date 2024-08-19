@@ -1,0 +1,346 @@
+H. Xor-quiz
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem.
+You are given two integers
+c
+and
+n
+. The jury has a randomly generated set
+A
+of distinct positive integers not greater than
+c
+(it is generated from all such possible sets with equal probability). The size of
+A
+is equal to
+n
+.
+Your task is to guess the set
+A
+. In order to guess it, you can ask at most
+⌈0.65⋅c⌉
+queries.
+In each query, you choose a single integer
+1≤x≤c
+. As the answer to this query you will be given the bitwise xor sum of all
+y
+, such that
+y∈A
+and
+gcd(x,y)=1
+(i.e.
+x
+and
+y
+are coprime). If there is no such
+y
+this xor sum is equal to
+0
+.
+You can ask all queries at the beginning and you will receive the answers to all your queries. After that, you won't have the possibility to ask queries.
+You should find any set
+A
+′
+, such that
+|
+A
+′
+|=n
+and
+A
+′
+and
+A
+have the same answers for all
+c
+possible queries.
+Input
+Firstly you are given two integers
+c
+and
+n
+(
+100≤c≤
+10
+6
+,
+0≤n≤c
+).
+Interaction
+In the first line you should print an integer
+q
+(0≤q≤⌈0.65⋅c⌉)
+ — the number of queries you want to ask. After that in the same line print
+q
+integers
+x
+1
+,
+x
+2
+,…,
+x
+q
+(1≤
+x
+i
+≤c)
+ — the queries.
+For these queries you should read
+q
+integers,
+i
+-th of them is the answer to the described query for
+x=
+x
+i
+.
+After that you should print
+n
+distinct integers
+A
+′
+1
+,
+A
+′
+2
+,…,
+A
+′
+n
+ — the set
+A
+′
+you found.
+If there are different sets
+A
+′
+that have the same answers for all possible queries, print any of them.
+If you will ask more than
+⌈0.65⋅c⌉
+queries or if the queries will be invalid, the interactor will terminate immediately and your program will receive verdict Wrong Answer.
+After printing the queries and answers do not forget to output end of line and flush the output buffer. Otherwise, you will get the Idleness limit exceeded verdict. To do flush use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+Read documentation for other languages.
+Hacks
+You cannot make hacks in this problem.
+Example
+input
+Copy
+10 6
+
+1 4 2 11 4 4 4
+output
+Copy
+7 10 2 3 5 7 1 6
+
+1 4 5 6 8 10
+Note
+The sample is made only for you to understand the interaction protocol. Your solution will not be tested on the sample.
+In the sample
+A={1,4,5,6,8,10}
+.
+7
+queries are made,
+7≤⌈0.65⋅10⌉=7
+, so the query limit is not exceeded.
+Answers for the queries:
+For
+10
+:
+1
+is the only number in the set
+A
+coprime with
+10
+, so the answer is
+1
+For
+2
+:
+1
+10
+⊕
+5
+10
+=
+001
+2
+⊕
+101
+2
+=
+4
+10
+, where
+⊕
+is the bitwise xor
+For
+3
+:
+1
+10
+⊕
+4
+10
+⊕
+5
+10
+⊕
+8
+10
+⊕
+10
+10
+=
+0001
+2
+⊕
+0100
+2
+⊕
+0101
+2
+⊕
+1000
+2
+⊕
+1010
+2
+=
+2
+10
+For
+5
+:
+1
+10
+⊕
+4
+10
+⊕
+6
+10
+⊕
+8
+10
+=
+0001
+2
+⊕
+0100
+2
+⊕
+0110
+2
+⊕
+1000
+2
+=
+11
+10
+For
+7
+:
+1
+10
+⊕
+4
+10
+⊕
+5
+10
+⊕
+6
+10
+⊕
+8
+10
+⊕
+10
+10
+=
+0001
+2
+⊕
+0100
+2
+⊕
+0101
+2
+⊕
+0110
+2
+⊕
+1000
+2
+⊕
+1010
+2
+=
+4
+10
+For
+1
+:
+1
+10
+⊕
+4
+10
+⊕
+5
+10
+⊕
+6
+10
+⊕
+8
+10
+⊕
+10
+10
+=
+0001
+2
+⊕
+0100
+2
+⊕
+0101
+2
+⊕
+0110
+2
+⊕
+1000
+2
+⊕
+1010
+2
+=
+4
+10
+For
+6
+:
+1
+10
+⊕
+5
+10
+=
+0001
+2
+⊕
+0101
+2
+=
+4
+10

@@ -1,0 +1,273 @@
+C1. Converging Array (Easy Version)
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is the easy version of the problem. The only difference is that in this version
+q=1
+. You can make hacks only if both versions of the problem are solved.
+There is a process that takes place on arrays
+a
+and
+b
+of length
+n
+and length
+n−1
+respectively.
+The process is an infinite sequence of operations. Each operation is as follows:
+First, choose a random integer
+i
+(
+1≤i≤n−1
+).
+Then, simultaneously set
+a
+i
+=min(
+a
+i
+,
+a
+i
++
+a
+i+1
+−
+b
+i
+2
+)
+and
+a
+i+1
+=max(
+a
+i+1
+,
+a
+i
++
+a
+i+1
++
+b
+i
+2
+)
+without any rounding (so values may become non-integer).
+See notes for an example of an operation.
+It can be proven that array
+a
+converges, i. e. for each
+i
+there exists a limit
+a
+i
+converges to. Let function
+F(a,b)
+return the value
+a
+1
+converges to after a process on
+a
+and
+b
+.
+You are given array
+b
+, but not array
+a
+. However, you are given a third array
+c
+. Array
+a
+is good if it contains only integers and satisfies
+0≤
+a
+i
+≤
+c
+i
+for
+1≤i≤n
+.
+Your task is to count the number of good arrays
+a
+where
+F(a,b)≥x
+for
+q
+values of
+x
+. Since the number of arrays can be very large, print it modulo
+10
+9
++7
+.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤100
+).
+The second line contains
+n
+integers
+c
+1
+,
+c
+2
+…,
+c
+n
+(
+0≤
+c
+i
+≤100
+).
+The third line contains
+n−1
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n−1
+(
+0≤
+b
+i
+≤100
+).
+The fourth line contains a single integer
+q
+(
+q=1
+).
+The fifth line contains
+q
+space separated integers
+x
+1
+,
+x
+2
+,…,
+x
+q
+(
+−
+10
+5
+≤
+x
+i
+≤
+10
+5
+).
+Output
+Output
+q
+integers, where the
+i
+-th integer is the answer to the
+i
+-th query, i. e. the number of good arrays
+a
+where
+F(a,b)≥
+x
+i
+modulo
+10
+9
++7
+.
+Example
+input
+Copy
+3
+2 3 4
+2 1
+1
+-1
+output
+Copy
+56
+Note
+The following explanation assumes
+b=[2,1]
+and
+c=[2,3,4]
+(as in the sample).
+Examples of arrays
+a
+that are not good:
+a=[3,2,3]
+is not good because
+a
+1
+>
+c
+1
+;
+a=[0,−1,3]
+is not good because
+a
+2
+<0
+.
+One possible good array
+a
+is
+[0,2,4]
+. We can show that no operation has any effect on this array, so
+F(a,b)=
+a
+1
+=0
+.
+Another possible good array
+a
+is
+[0,1,4]
+. In a single operation with
+i=1
+, we set
+a
+1
+=min(
+0+1−2
+2
+,0)
+and
+a
+2
+=max(
+0+1+2
+2
+,1)
+. So, after a single operation with
+i=1
+,
+a
+becomes equal to
+[−
+1
+2
+,
+3
+2
+,4]
+. We can show that no operation has any effect on this array, so
+F(a,b)=−
+1
+2
+.

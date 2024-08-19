@@ -1,0 +1,86 @@
+Permutation Xor
+Problem
+A sequence of
+N integers is called a permutation if it contains all integers from
+1 to
+N exactly once.
+For a permutation
+P of length
+N (where
+N is an even integer), we define the function
+F(P) as:
+F(P)=
+(P
+1
+⊕P
+2
+)+(P
+3
+⊕P
+4
+)+…+(P
+n−1
+⊕P
+n
+). Here,
+⊕ denotes the bitwise XOR operation.
+For Example: If
+P=[1,3,4,2] then
+F(P)=(1⊕3)+(4⊕2)=8.
+Given an even integer
+N, construct a permutation
+P of length
+N, such that
+F(P) is minimum.
+If multiple such permutations exist, output any one of them.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains one even integer
+N - the length of the permutation to be constructed.
+Output Format
+For each test case, print any permutation
+P of length
+N such that
+F(P) is minimum.
+Constraints
+1≤T≤1000
+2≤N≤10
+5
+N is an even integer
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+2
+4
+2
+1 4 2 3
+1 2
+Explanation:
+Test Case - 1: Out of all the possible permutations of size
+4, the smallest possible value of
+F(P) is
+6. One of the possible permutations with
+F(P)=6 is
+P=[1,4,2,3]. Other possible permutations having
+F(P)=6 are
+[2,3,4,1],
+[3,2,1,4],
+[3,2,4,1],
+[2,3,1,4],
+[4,1,2,3],
+[1,4,3,2] and
+[4,1,3,2].
+Test Case - 2: The smallest possible value of
+F(P) is
+3. For both permutations of size
+2 , i.e.,
+[1,2] and
+[2,1], the value of
+F(P)=3.

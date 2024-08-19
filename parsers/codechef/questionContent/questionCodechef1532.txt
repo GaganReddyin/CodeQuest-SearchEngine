@@ -1,0 +1,92 @@
+Air Blimp
+Problem
+There are
+N cities in a row. The
+i-th city from the left has a sadness of
+A
+i
+.
+In an attempt to reduce the sadness of the cities, you can send blimps from the left of city
+1 that move rightwards (i.e, a blimp crosses cities
+1,2,… in order)
+You are given two integers
+X and
+Y. For each blimp sent, you can make one of the following choices:
+Let the blimp fly over every city, in which case the sadness of every city will decrease by
+Y, or,
+Choose a city
+i
+(1≤i≤N), and shower confetti over city
+i. In this case, the sadness of cities
+1,2,…,i−1 will decrease by
+Y, the sadness of city
+i will decrease by
+X, and cities
+i+1,…,N see no change in sadness.
+Find the minimum number of blimps needed such that, by making the above choice optimally for each blimp, you can ensure that no city is sad (i.e, in the end every city has sadness
+≤0).
+Input Format
+The first line of input contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains three space-separated integers
+N,X,Y — the size of the array, and the parameters mentioned in the statement.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, denoting the sadness of the
+N cities.
+Output Format
+For each test case, output on a new line the minimum number of blimps needed such that no city is sad.
+Constraints
+1≤T≤10
+4
+1≤N≤3⋅10
+5
+1≤X,Y≤10
+9
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+3
+4 4 4
+1 5 4 4
+5 4 3
+1 4 3 3 5
+4 3 1
+3 1 3 9
+2
+2
+3
+Explanation:
+Test case
+1: One way of using two blimps is as follows:
+Initially,
+A=[1,5,4,4]
+Shower confetti on city
+2. Now,
+A=[−3,1,4,4].
+Shower confetti on city
+4. Now,
+A=[−7,−3,0,0] and we are done.
+Test case
+2: One way of using two blimps is as follows:
+Initially,
+A=[1,4,3,3,5]
+Let a blimp fly over every city. Now,
+A=[−2,1,0,0,2].
+Shower confetti on city
+5. Now,
+A=[−5,−2,−3,−3,−2], and we are done.

@@ -1,0 +1,161 @@
+E. Two Chess Pieces
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Cirno_9baka has a tree with
+n
+nodes. He is willing to share it with you, which means you can operate on it.
+Initially, there are two chess pieces on the node
+1
+of the tree. In one step, you can choose any piece, and move it to the neighboring node. You are also given an integer
+d
+. You need to ensure that the distance between the two pieces doesn't ever exceed
+d
+.
+Each of these two pieces has a sequence of nodes which they need to pass in any order, and eventually, they have to return to the root. As a curious boy, he wants to know the minimum steps you need to take.
+Input
+The first line contains two integers
+n
+and
+d
+(
+2≤d≤n≤2⋅
+10
+5
+).
+The
+i
+-th of the following
+n−1
+lines contains two integers
+u
+i
+,
+v
+i
+(1≤
+u
+i
+,
+v
+i
+≤n)
+, denoting the edge between the nodes
+u
+i
+,
+v
+i
+of the tree.
+It's guaranteed that these edges form a tree.
+The next line contains an integer
+m
+1
+(
+1≤
+m
+1
+≤n
+) and
+m
+1
+integers
+a
+1
+,
+a
+2
+,…,
+a
+m
+1
+(
+1≤
+a
+i
+≤n
+, all
+a
+i
+are distinct)  — the sequence of nodes that the first piece needs to pass.
+The second line contains an integer
+m
+2
+(
+1≤
+m
+2
+≤n
+) and
+m
+2
+integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+2
+(
+1≤
+b
+i
+≤n
+, all
+b
+i
+are distinct)  — the sequence of nodes that the second piece needs to pass.
+Output
+Output a single integer  — the minimum steps you need to take.
+Examples
+input
+Copy
+4 2
+1 2
+1 3
+2 4
+1 3
+1 4
+output
+Copy
+6
+input
+Copy
+4 2
+1 2
+2 3
+3 4
+4 1 2 3 4
+1 1
+output
+Copy
+8
+Note
+In the first sample, here is one possible sequence of steps of length
+6
+.
+The second piece moves by the route
+1→2→4→2→1
+.
+Then, the first piece moves by the route
+1→3→1
+.
+In the second sample, here is one possible sequence of steps of length
+8
+:
+The first piece moves by the route
+1→2→3
+.
+Then, the second piece moves by the route
+1→2
+.
+Then, the first piece moves by the route
+3→4→3→2→1
+.
+Then, the second piece moves by the route
+2→1
+.

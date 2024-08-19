@@ -1,0 +1,21 @@
+E. A rectangle
+time limit per test0.5 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Developing tools for creation of locations maps for turn-based fights in a new game, Petya faced the following problem.
+A field map consists of hexagonal cells. Since locations sizes are going to be big, a game designer wants to have a tool for quick filling of a field part with identical enemy units. This action will look like following: a game designer will select a rectangular area on the map, and each cell whose center belongs to the selected rectangle will be filled with the enemy unit.
+More formally, if a game designer selected cells having coordinates (x1, y1) and (x2, y2), where x1 ≤ x2 and y1 ≤ y2, then all cells having center coordinates (x, y) such that x1 ≤ x ≤ x2 and y1 ≤ y ≤ y2 will be filled. Orthogonal coordinates system is set up so that one of cell sides is parallel to OX axis, all hexagon centers have integer coordinates and for each integer x there are cells having center with such x coordinate and for each integer y there are cells having center with such y coordinate. It is guaranteed that difference x2 - x1 is divisible by 2.
+Working on the problem Petya decided that before painting selected units he wants to output number of units that will be painted on the map.
+Help him implement counting of these units before painting.
+Input
+The only line of input contains four integers x1, y1, x2, y2 ( - 109 ≤ x1 ≤ x2 ≤ 109,  - 109 ≤ y1 ≤ y2 ≤ 109) — the coordinates of the centers of two cells.
+Output
+Output one integer — the number of cells to be filled.
+Examples
+input
+Copy
+1 1 5 5
+output
+Copy
+13

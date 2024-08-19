@@ -1,0 +1,111 @@
+Equal Median
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a sequence of integers
+A
+1
+,A
+2
+,…,A
+N
+. You should process
+Q queries. In each query:
+You are given two integer parameters
+id and
+v.
+Change the value of
+A
+id
+to
+v.
+Then, consider all ways to partition the sequence
+A
+1
+,A
+2
+,…,A
+N
+into multisets
+M
+1
+,M
+2
+,…,M
+K
+(for an arbitrary
+K≥1) such that:
+Each element of
+A is assigned to exactly one multiset.
+The medians of all multisets are the same.
+Find the maximum possible value of
+K, i.e. the maximum number of multisets in such a partition.
+The median of a multiset is defined as follows: Consider the multiset as a sequence sorted in non-decreasing order. If its size is odd, the median is the middle element. If it is even, there are two integers in the middle and the median is the smaller one (either one if they are equal).
+Note that a multiset may contain duplicate elements, so if
+x elements of
+A with identical values are assigned to the same multiset, that multiset will contain the same integer
+x times.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Each of the next
+Q lines contains two space-separated integers
+id and
+v describing a query.
+Output
+For each query, print a single line containing one integer ― the maximum number of multisets.
+Constraints
+1≤T≤1,000
+1≤N,Q≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+1≤id≤N
+1≤v≤10
+9
+the sum of
+N over all test cases does not exceed
+10
+6
+the sum of
+Q over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (50 points):
+N,Q≤1,000
+the sum of
+N over all test cases does not exceed
+10,000
+the sum of
+Q over all test cases does not exceed
+10,000
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+4 3
+1 1 1 2
+4 1
+4 2
+3 2
+4
+3
+2

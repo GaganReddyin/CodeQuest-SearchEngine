@@ -1,0 +1,37 @@
+Tree Expectancy
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Consider an ordered tree with N vertices. Your task is to calculate the expected value of the number of vertices having exactly one child in such tree assuming that it is uniformly chosen from the set of all ordered trees of size N.
+Input
+The first line of the input contains an integer T denoting the number of test cases. The description of T test cases follows.
+Each testcase contains a single integer N for which you should calculate the answer.
+Output
+For each test case, output a single line containing two integers, which are explained below.
+Consider the answer to be a proper fraction P/Q, where gcd(P, Q) = 1. Then your task is to output two integers PQ-1 mod 109+7 and PQ-1 mod 109+9.
+Constraints
+1 ≤ T ≤ 105
+It is guaranteed that Q will be invertible with respect to both the modulos.
+Subtasks
+Subtask #1 (10 points)
+1 ≤ N ≤ 103
+Subtask #2 (20 points)
+1 ≤ N ≤ 106
+Subtask #3 (30 points)
+1 ≤ N ≤ 109
+Subtask #4 (40 points)
+1 ≤ N ≤ 1018
+Sample 1:
+Input
+Output
+4
+1
+2
+3
+4
+0 0
+1 1
+1 1
+400000004 200000003
+Explanation:
+You can see every possible tree with 1, 2, 3 or 4 vertices on the diagram below.
+From this you can see that answers for these inputs are 0/1 = 0, 1/1 = 1, (2+0)/2 = 1 and (3+1+1+1+0)/5 = 6/5 correspondingly.

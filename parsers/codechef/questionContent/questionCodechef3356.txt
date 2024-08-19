@@ -1,0 +1,152 @@
+Not a Real World Problem
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider a grid with
+H rows (numbered
+1 through
+H) and
+W columns (numbered
+1 through
+W). Let's denote the value in a cell in row
+i and column
+j by
+h
+i,j
+.
+N particles (numbered
+1 through
+N) are distributed in the cells in such a way that there is at most one particle in each cell. For each valid
+i, the
+i-th particle has a value
+p
+i
+and it is placed in the cell in row
+y
+i
+and column
+x
+i
+.
+Let's denote the set of all particles by
+P and the set of all unordered pairs of particles that are located in side-adjacent cells by
+E. We define the value of the grid as
+V=∑
+i∈P
+p
+i
+⋅h
+y
+i
+,x
+i
++∑
+(i,j)∈E
+p
+i
+⋅p
+j
+.
+You are given the grid and the locations of all particles, but not their exact values ― only
+∣p
+1
+∣,∣p
+2
+∣,…,∣p
+N
+∣. Your task is to choose the sign of each value
+p
+i
+in such a way that the value
+V is maximum possible. Each sign may be chosen independently from all other signs.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains three space-separated integers
+H,
+W and
+N.
+H lines follow. For each valid
+i, the
+i-th of these lines contains
+W space-separated integers
+h
+i,1
+,h
+i,2
+,…,h
+i,W
+.
+N more lines follow. For each valid
+i, the
+i-th of these lines contains three space-separated integers
+y
+i
+,
+x
+i
+and
+∣p
+i
+∣.
+Output
+For each test case, print two lines.
+The first of these lines should contain a single integer ― the maximum value of
+V.
+The second line should contain
+N space-separated integers. For each valid
+i, the
+i-th of these integers should be
+1 if you choose a positive sign for the value of the
+i-th particle (i.e. its value should be
+∣p
+i
+∣) or
+−1 if you choose a negative sign (i.e. its value should be
+−∣p
+i
+∣).
+If there are multiple solutions, you may find any one.
+Constraints
+1≤T≤10
+1≤H,W≤1,000
+1≤N≤200
+∣h
+i,j
+∣≤1,000 for each valid
+i,j
+1≤y
+i
+≤H for each valid
+i
+1≤x
+i
+≤W for each valid
+i
+∣p
+i
+∣≤100 for each valid
+i
+no two particles are located in the same cell
+the sum of
+H⋅W over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (10 points):
+N≤15
+Subtask #2 (20 points):
+H≤2
+Subtask #3 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+2 2 3
+1 4
+-1 -2
+1 1 3
+1 2 1
+2 2 2
+12
+1 1 -1

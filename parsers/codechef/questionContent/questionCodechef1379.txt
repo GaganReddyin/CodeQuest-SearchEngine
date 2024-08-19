@@ -1,0 +1,51 @@
+Xor and Multiply
+Problem
+JJ has three integers
+N,
+A and
+B where
+0≤A,B<2
+N
+. He wants to find a third integer
+X such that:
+0≤X<2
+N
+the value of
+(A⊕X)×(B⊕X) is maximum.
+Here
+⊕ represents the Bitwise XOR operator.
+Can you help him find such an integer
+X? If there are multiple integers which satisfy the given conditions, print any.
+Input Format
+The first line will contain
+T - number of test cases. Then the test cases follow.
+The first and only line of each test case contains three integers
+N,
+A and
+B - the integers mentioned in the problem statement.
+Output Format
+For each test case, output an integer
+X which satisfies the given conditions.
+If multiple answers exist, print any.
+Constraints
+1≤T≤5000
+1≤N≤30
+0≤A,B<2
+N
+Sample 1:
+Input
+Output
+3
+1 0 0
+3 4 6
+2 2 1
+1
+3
+0
+Explanation:
+Test case 1: For
+X=1,
+(0⊕1)×(0⊕1)=1 which can be proven to be the maximum value of this expression.
+Test case 2: For
+X=3,
+(4⊕3)×(6⊕3)=35 which can be proven to be the maximum value of this expression.

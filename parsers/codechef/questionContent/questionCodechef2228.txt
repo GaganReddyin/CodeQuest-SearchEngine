@@ -1,0 +1,126 @@
+A Bit Easy
+Problem
+Chef was impressed by an array
+A of
+N non-negative integers. But, he was asked to solve the following problem in order to get this array.
+Given a non-negative integer
+k, find the number of pairs
+(i,j)
+(1≤i<j≤N) such that the following condition holds true:
+(A
+i
+∣
+A
+j
+)
++
+(A
+i
+⊕A
+j
+)
++
+(A
+i
+&
+A
+j
+)
+=k
++A
+j
+, where
+(A
+i
+∣A
+j
+) denotes Bitwise OR operation,
+(A
+i
+⊕
+A
+j
+) denotes Bitwise XOR operation,
+(A
+i
+&
+A
+j
+) denotes Bitwise AND operation.
+You, being Chef's friend, help him get this array by solving the above problem.
+Input Format
+The first line contains an integer
+T, the number of test cases.
+The first line of each test case contains two space-separated integers
+N and
+k, the number of integers in the array
+A and the non-negative integer
+k respectively.
+The next line contains
+N space-separated non-negative integers
+A
+1
+,A
+2
+,…,A
+N
+, the elements of the array
+A.
+Output Format
+For each test case, print a single line containing the number of pairs satisfying the mentioned condition.
+Constraints
+1≤T≤200
+1≤N≤10
+5
+0≤k≤10
+18
+0≤A
+i
+≤10
+18
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+1 8
+7
+3 8
+1 6 4
+0
+2
+Explanation:
+Test case
+1: The input array contains only a single integer. Thus, no pairs are possible.
+Test case
+2: There are two pairs satisfying the condition -
+(i,j)=(1,2):
+A
+1
+=1 and
+A
+2
+=6. Thus,
+(1∣6)+(1⊕6)+(1
+&
+6)=7+7+0=14. Also,
+k+A
+2
+=8+6=14.
+(i,j)=(2,3):
+A
+2
+=6 and
+A
+3
+=4. Thus,
+(6∣4)+(6⊕4)+(6
+&
+4)=6+2+4=12. Also,
+k+A
+3
+=8+4=12.

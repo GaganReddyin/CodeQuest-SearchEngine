@@ -1,0 +1,34 @@
+Count Nodes
+Problem
+  A segment tree is built to perform queries in the range 1 to N. The following pseudo code counts the number of nodes which return a value when the tree is queried from l to r:
+
+cnt = 0
+query(node, start, end, l, r):
+if(start > r or end < l):
+return
+if(start >= l and end <=r):
+cnt = cnt + 1
+return
+mid = (start + end)/2
+query(2*node, start, mid, l, r)
+query(2*node+1, mid+1, end, l, r)
+
+Now, for a given N, find the array A1, A2 .... Ak where Ai is the number of distinct segments(l,r) when
+cnt = i.
+  Input:
+The first line of input contains a single integer T denoting the number of test cases. The only line of each test case contains a single integer N denoting the range
+Output:
+For each test case, print two lines. First line contains the value of k, where k is the maximum index such that A[k] != 0 . Next line contains k space separated integers denoting the elements of array A.
+Constraint:
+1 <= T <= 10
+1 <= N <= 50000
+Sample test:
+Input
+2
+3
+5
+Output
+2
+5 1
+3
+9 4 2

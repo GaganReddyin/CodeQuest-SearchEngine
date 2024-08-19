@@ -1,0 +1,241 @@
+B. Universal Solution
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Recently, you found a bot to play "Rock paper scissors" with. Unfortunately, the bot uses quite a simple algorithm to play: he has a string
+s=
+s
+1
+s
+2
+…
+s
+n
+of length
+n
+where each letter is either R, S or P.
+While initializing, the bot is choosing a starting index
+pos
+(
+1≤pos≤n
+), and then it can play any number of rounds. In the first round, he chooses "Rock", "Scissors" or "Paper" based on the value of
+s
+pos
+:
+if
+s
+pos
+is equal to R the bot chooses "Rock";
+if
+s
+pos
+is equal to S the bot chooses "Scissors";
+if
+s
+pos
+is equal to P the bot chooses "Paper";
+In the second round, the bot's choice is based on the value of
+s
+pos+1
+. In the third round — on
+s
+pos+2
+and so on. After
+s
+n
+the bot returns to
+s
+1
+and continues his game.
+You plan to play
+n
+rounds and you've already figured out the string
+s
+but still don't know what is the starting index
+pos
+. But since the bot's tactic is so boring, you've decided to find
+n
+choices to each round to maximize the average number of wins.
+In other words, let's suggest your choices are
+c
+1
+c
+2
+…
+c
+n
+and if the bot starts from index
+pos
+then you'll win in
+win(pos)
+rounds. Find
+c
+1
+c
+2
+…
+c
+n
+such that
+win(1)+win(2)+⋯+win(n)
+n
+is maximum possible.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤1000
+) — the number of test cases.
+Next
+t
+lines contain test cases — one per line. The first and only line of each test case contains string
+s=
+s
+1
+s
+2
+…
+s
+n
+(
+1≤n≤2⋅
+10
+5
+;
+s
+i
+∈{R,S,P}
+) — the string of the bot.
+It's guaranteed that the total length of all strings in one test doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print
+n
+choices
+c
+1
+c
+2
+…
+c
+n
+to maximize the average number of wins. Print them in the same manner as the string
+s
+.
+If there are multiple optimal answers, print any of them.
+Example
+input
+Copy
+3
+RRRR
+RSP
+S
+output
+Copy
+PPPP
+RSP
+R
+Note
+In the first test case, the bot (wherever it starts) will always choose "Rock", so we can always choose "Paper". So, in any case, we will win all
+n=4
+rounds, so the average is also equal to
+4
+.
+In the second test case:
+if bot will start from
+pos=1
+, then
+(
+s
+1
+,
+c
+1
+)
+is draw,
+(
+s
+2
+,
+c
+2
+)
+is draw and
+(
+s
+3
+,
+c
+3
+)
+is draw, so
+win(1)=0
+;
+if bot will start from
+pos=2
+, then
+(
+s
+2
+,
+c
+1
+)
+is win,
+(
+s
+3
+,
+c
+2
+)
+is win and
+(
+s
+1
+,
+c
+3
+)
+is win, so
+win(2)=3
+;
+if bot will start from
+pos=3
+, then
+(
+s
+3
+,
+c
+1
+)
+is lose,
+(
+s
+1
+,
+c
+2
+)
+is lose and
+(
+s
+2
+,
+c
+3
+)
+is lose, so
+win(3)=0
+;
+The average is equal to
+0+3+0
+3
+=1
+and it can be proven that it's the maximum possible average.
+A picture from Wikipedia explaining "Rock paper scissors" game:

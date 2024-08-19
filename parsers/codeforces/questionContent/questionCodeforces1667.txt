@@ -1,0 +1,128 @@
+F. String Distance
+time limit per test2 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Suppose you are given two strings
+a
+and
+b
+. You can apply the following operation any number of times: choose any contiguous substring of
+a
+or
+b
+, and sort the characters in it in non-descending order. Let
+f(a,b)
+the minimum number of operations you have to apply in order to make them equal (or
+f(a,b)=1337
+if it is impossible to make
+a
+and
+b
+equal using these operations).
+For example:
+f(ab,ab)=0
+;
+f(ba,ab)=1
+(in one operation, we can sort the whole first string);
+f(ebcda,ecdba)=1
+(in one operation, we can sort the substring of the second string starting from the
+2
+-nd character and ending with the
+4
+-th character);
+f(a,b)=1337
+.
+You are given
+n
+strings
+s
+1
+,
+s
+2
+,…,
+s
+k
+having equal length. Calculate
+∑
+i=1
+n
+∑
+j=i+1
+n
+f(
+s
+i
+,
+s
+j
+)
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of strings.
+Then
+n
+lines follow, each line contains one of the strings
+s
+i
+, consisting of lowercase Latin letters.
+|
+s
+1
+|=|
+s
+2
+|=…=|
+s
+n
+|
+, and
+n⋅|
+s
+1
+|≤2⋅
+10
+5
+. All these strings are pairwise distinct.
+Output
+Print one integer:
+∑
+i=1
+n
+∑
+j=i+1
+n
+f(
+s
+i
+,
+s
+j
+)
+.
+Examples
+input
+Copy
+4
+zzz
+bac
+abc
+acb
+output
+Copy
+4015
+input
+Copy
+2
+a
+b
+output
+Copy
+1337

@@ -1,0 +1,8 @@
+D. I'm Feeling Lucky!
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have one chip and one chance to play roulette. Are you feeling lucky?
+Output
+Print your bet. Your chip must be placed entirely within some square (not on an edge or a corner shared by adjacent squares).

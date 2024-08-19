@@ -1,0 +1,110 @@
+F. Gardening Friends
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Two friends, Alisa and Yuki, planted a tree with
+n
+vertices in their garden. A tree is an undirected graph without cycles, loops, or multiple edges. Each edge in this tree has a length of
+k
+. Initially, vertex
+1
+is the root of the tree.
+Alisa and Yuki are growing the tree not just for fun, they want to sell it. The cost of the tree is defined as the maximum distance from the root to a vertex among all vertices of the tree. The distance between two vertices
+u
+and
+v
+is the sum of the lengths of the edges on the path from
+u
+to
+v
+.
+The girls took a course in gardening, so they know how to modify the tree. Alisa and Yuki can spend
+c
+coins to shift the root of the tree to one of the neighbors of the current root. This operation can be performed any number of times (possibly zero). Note that the structure of the tree is left unchanged; the only change is which vertex is the root.
+The friends want to sell the tree with the maximum profit. The profit is defined as the difference between the cost of the tree and the total cost of operations. The profit is cost of the tree minus the total cost of operations.
+Help the girls and find the maximum profit they can get by applying operations to the tree any number of times (possibly zero).
+Input
+The first line of the input contains one integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The description of the test cases follows.
+The first line of each test case contains integers
+n
+,
+k
+,
+c
+(
+2≤n≤2⋅
+10
+5
+;
+1≤k,c≤
+10
+9
+) — the number of vertices in the tree, the length of each edge, and the cost of the operation.
+The next
+n−1
+lines of the test case contain pairs of integers
+u
+i
+,
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+) — the edges of the graph. These edges form a tree.
+The sum of the values of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer — the maximum profit that Yuki and Alisa can get.
+Example
+input
+Copy
+4
+3 2 3
+2 1
+3 1
+5 4 1
+2 1
+4 2
+5 4
+3 4
+6 5 3
+4 1
+6 1
+2 6
+5 1
+3 2
+10 6 4
+1 3
+1 9
+9 7
+7 6
+6 4
+9 2
+2 8
+8 5
+5 10
+output
+Copy
+2
+12
+17
+32

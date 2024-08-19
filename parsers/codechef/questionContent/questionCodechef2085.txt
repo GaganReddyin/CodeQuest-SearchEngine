@@ -1,0 +1,29 @@
+Chef and Numbers
+Problem
+Read problems statements in Russian also.
+Chef plays with the sequence of N numbers. During a single move Chef is able to choose a non-decreasing subsequence of the sequence and to remove it from the sequence. Help him to remove all the numbers in the minimal number of moves.
+Input
+The first line of each test case contains a single N denoting the number of integers in the given sequence. The second line contains N space-separated integers A1, A2, ..., AN denoting the given sequence
+Output
+Output a single line containing the minimal number of moves required to remove all the numbers from the sequence.
+Constraints
+1 ≤ N ≤ 100000.
+1 ≤ Ai ≤ 100000.
+  Scoring
+Subtask 1 (10 points): N = 10
+
+Subtask 2 (40 points): N = 2000
+
+Subtask 2 (50 points): N = 100000
+Sample 1:
+Input
+Output
+3 
+1 2 3
+1
+Sample 2:
+Input
+Output
+4
+4 1 2 3
+2

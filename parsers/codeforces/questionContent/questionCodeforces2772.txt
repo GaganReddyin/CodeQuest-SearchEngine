@@ -1,0 +1,343 @@
+G. Spiderweb Trees
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let's call a graph with
+n
+vertices, each of which has it's own point
+A
+i
+=(
+x
+i
+,
+y
+i
+)
+with integer coordinates, a planar tree if:
+All points
+A
+1
+,
+A
+2
+,…,
+A
+n
+are different and no three points lie on the same line.
+The graph is a tree, i.e. there are exactly
+n−1
+edges there exists a path between any pair of vertices.
+For all pairs of edges
+(
+s
+1
+,
+f
+1
+)
+and
+(
+s
+2
+,
+f
+2
+)
+, such that
+s
+1
+≠
+s
+2
+,
+s
+1
+≠
+f
+2
+,
+f
+1
+≠
+s
+2
+, and
+f
+1
+≠
+f
+2
+, the segments
+A
+s
+1
+A
+f
+1
+and
+A
+s
+2
+A
+f
+2
+don't intersect.
+Imagine a planar tree with
+n
+vertices. Consider the convex hull of points
+A
+1
+,
+A
+2
+,…,
+A
+n
+. Let's call this tree a spiderweb tree if for all
+1≤i≤n
+the following statements are true:
+All leaves (vertices with degree
+≤1
+) of the tree lie on the border of the convex hull.
+All vertices on the border of the convex hull are leaves.
+An example of a spiderweb tree:
+The points
+A
+3
+,
+A
+6
+,
+A
+7
+,
+A
+4
+lie on the convex hull and the leaf vertices of the tree are
+3,6,7,4
+.
+Refer to the notes for more examples.
+Let's call the subset
+S⊂{1,2,…,n}
+of vertices a subtree of the tree if for all pairs of vertices in
+S
+, there exists a path that contains only vertices from
+S
+. Note that any subtree of the planar tree is a planar tree.
+You are given a planar tree with
+n
+vertexes. Let's call a partition of the set
+{1,2,…,n}
+into non-empty subsets
+A
+1
+,
+A
+2
+,…,
+A
+k
+(i.e.
+A
+i
+∩
+A
+j
+=∅
+for all
+1≤i<j≤k
+and
+A
+1
+∪
+A
+2
+∪…∪
+A
+k
+={1,2,…,n}
+) good if for all
+1≤i≤k
+, the subtree
+A
+i
+is a spiderweb tree. Two partitions are different if there exists some set that lies in one parition, but not the other.
+Find the number of good partitions. Since this number can be very large, find it modulo
+998244353
+.
+Input
+The first line contains an integer
+n
+(
+1≤n≤100
+) — the number of vertices in the tree.
+The next
+n
+lines each contain two integers
+x
+i
+,
+y
+i
+(
+−
+10
+9
+≤
+x
+i
+,
+y
+i
+≤
+10
+9
+)  — the coordinates of
+i
+-th vertex,
+A
+i
+.
+The next
+n−1
+lines contain two integers
+s,f
+(
+1≤s,f≤n
+) — the edges
+(s,f)
+of the tree.
+It is guaranteed that all given points are different and that no three of them lie at the same line. Additionally, it is guaranteed that the given edges and coordinates of the points describe a planar tree.
+Output
+Print one integer  — the number of good partitions of vertices of the given planar tree, modulo
+998244353
+.
+Examples
+input
+Copy
+4
+0 0
+0 1
+-1 -1
+1 -1
+1 2
+1 3
+1 4
+output
+Copy
+5
+input
+Copy
+5
+3 2
+0 -3
+-5 -3
+5 -5
+4 5
+4 2
+4 1
+5 2
+2 3
+output
+Copy
+8
+input
+Copy
+6
+4 -5
+0 1
+-2 8
+3 -10
+0 -1
+-4 -5
+2 5
+3 2
+1 2
+4 6
+4 2
+output
+Copy
+13
+input
+Copy
+8
+0 0
+-1 2
+-2 5
+-5 1
+1 3
+0 3
+2 4
+-1 -4
+1 2
+3 2
+5 6
+4 2
+1 5
+5 7
+5 8
+output
+Copy
+36
+Note
+The picture for the first sample.
+In the first test case, all good partitions are:
+{1}
+,
+{2}
+,
+{3}
+,
+{4}
+;
+{1,2}
+,
+{3}
+,
+{4}
+;
+{1,3}
+,
+{2}
+,
+{4}
+;
+{1,4}
+,
+{2}
+,
+{3}
+;
+{1,2,3,4}
+.
+The partition
+{1,2,3}
+,
+{4}
+isn't good, because the subtree
+{1,2,3}
+isn't spiderweb tree, since the non-leaf vertex
+1
+lies on the convex hull.
+The partition
+{2,3,4}
+,
+{1}
+isn't good, because the subset
+{2,3,4}
+isn't a subtree.
+The picture for the second sample.
+In the second test case, the given tree isn't a spiderweb tree, because the leaf vertex
+1
+doesn't lie on the convex hull. However, the subtree
+{2,3,4,5}
+is a spiderweb tree.
+The picture for the third sample.
+The picture for the fourth sample.
+In the fourth test case, the partition
+{1,2,3,4}
+,
+{5,6,7,8}
+is good because all subsets are spiderweb subtrees.

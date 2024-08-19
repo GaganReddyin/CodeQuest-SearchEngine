@@ -1,0 +1,137 @@
+Fitness Exercises 
+Problem
+Recently, Chef has noticed that he is becoming fatter than ever. It is not surprising, as Chef is eating a lot of the food he is cooking. Therefore, he has been doing exercises for the last
+N days (numbered
+1 through
+N). For some of these days, Chef remembers for how many minutes he exercised. You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+. For each valid
+i, if
+A
+i
+≥0, then Chef exercised for
+A
+i
+minutes on the
+i-th day; otherwise, Chef forgot how long he exercised on the
+i-th day and
+A
+i
+=−1. Note that Chef could only have exercised for an integer non-negative number of minutes on each day, including the days he does not remember.
+Chef can also compare how long he exercised on each two consecutive days. You are given a string
+S with length
+N−1. For each valid
+i, the
+i-th character of
+S is one of the following:
+'>' if Chef exercised for strictly more minutes on the
+i-th day than on the
+(i+1)-th day
+'=' if Chef exercised for an equally long time on the
+i-th day and on the
+(i+1)-th day
+'<' if Chef exercised for strictly more minutes on the
+(i+1)-th day than on the
+i-th day
+Chef is doubting his memory, so he wants you to check if the information is consistent, i.e. if there is a way to determine for how many minutes Chef exercised on each day he does not remember such that the string
+S describes the correct comparison operators.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+The third line contains a single string
+S.
+Output
+For each test case, if the information on the input is inconsistent, print a single line containing the string "NO", otherwise output "YES"
+Constraints
+1≤T≤1,000
+2≤N≤10
+5
+−1≤A
+i
+≤10
+6
+for each valid
+i
+∣S∣=N−1
+S contains only characters '<', '>' and '='
+for each valid
+i, if
+A
+i
+
+=−1 and
+A
+i+1
+
+=−1, then the
+i-th character of
+S is consistent with
+A
+i
+and
+A
+i+1
+the sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+5
+6
+7 5 -1 -1 -1 10
+>>=>>
+6
+7 5 -1 -1 -1 10
+>>=<>
+2
+0 -1
+>
+5
+5 -1 -1 -1 10
+<<<<
+5
+5 -1 -1 -1 8
+<<<<
+NO
+YES
+NO
+YES
+NO
+Explanation:
+Example case 1: The number of minutes Chef spent exercising on day
+5 must be bigger than
+10 and smaller than
+5, which is impossible.
+Example case 3: Chef must have exercised for a negative number of minutes on day
+2, which is not allowed.
+Example case 5: The information is inconsistent because Chef only exercises for an integer number of minutes on each day. Since the number of minutes he spent exercising on each day must be increasing, he must have spent at least
+6 minutes on day
+2, at least
+7 minutes on day
+3, at least
+8 on day
+4 and at least
+9 on day
+5, but
+A
+5
+=8.

@@ -1,0 +1,182 @@
+I. PermutationForces
+time limit per test5 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You have a permutation
+p
+of integers from
+1
+to
+n
+.
+You have a strength of
+s
+and will perform the following operation some times:
+Choose an index
+i
+such that
+1≤i≤|p|
+and
+|i−
+p
+i
+|≤s
+.
+For all
+j
+such that
+1≤j≤|p|
+and
+p
+i
+<
+p
+j
+, update
+p
+j
+to
+p
+j
+−1
+.
+Delete the
+i
+-th element from
+p
+. Formally, update
+p
+to
+[
+p
+1
+,…,
+p
+i−1
+,
+p
+i+1
+,…,
+p
+n
+]
+.
+It can be shown that no matter what
+i
+you have chosen,
+p
+will be a permutation of integers from
+1
+to
+|p|
+after all operations.
+You want to be able to transform
+p
+into the empty permutation. Find the minimum strength
+s
+that will allow you to do so.
+Input
+The first line of input contains a single integer
+n
+(
+1≤n≤5⋅
+10
+5
+)  — the length of the permutation
+p
+.
+The second line of input conatains
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+(
+1≤
+p
+i
+≤n
+)  — the elements of the permutation
+p
+.
+It is guaranteed that all elements in
+p
+are distinct.
+Output
+Print the minimum strength
+s
+required.
+Examples
+input
+Copy
+3
+3 2 1
+output
+Copy
+1
+input
+Copy
+1
+1
+output
+Copy
+0
+input
+Copy
+10
+1 8 4 3 7 10 6 5 9 2
+output
+Copy
+1
+Note
+In the first test case, the minimum
+s
+required is
+1
+.
+Here is how we can transform
+p
+into the empty permutation with
+s=1
+:
+In the first move, you can only choose
+i=2
+as choosing any other value of
+i
+will result in
+|i−
+p
+i
+|≤s
+being false. With
+i=2
+,
+p
+will be changed to
+[2,1]
+.
+In the second move, you choose
+i=1
+, then
+p
+will be changed to
+[1]
+.
+In the third move, you choose
+i=1
+, then
+p
+will be changed to
+[ ]
+.
+It can be shown that with
+s=0
+, it is impossible to transform
+p
+into the empty permutation.

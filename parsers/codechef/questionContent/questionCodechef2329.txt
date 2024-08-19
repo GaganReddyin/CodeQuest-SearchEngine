@@ -1,0 +1,88 @@
+Sed Max
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+JJ has a magical sequence
+A
+1
+,A
+2
+,…,A
+N
+. The group of high magicians Sed wants to buy this sequence from him. They calculate its cost as follows:
+Choose a subarray of length atleast
+2, i.e. a contiguous subsequence
+A
+l
+,A
+l+1
+,…,A
+r
+such that
+1≤l<r≤N.
+The cost is the difference between the largest and the second largest element in this subarray (note that if there is more than one element with the maximum value, the cost is
+0).
+Clearly, the cost is not uniquely determined, but depends on the choice of the subarray in the first step. JJ is careful, so he wants to find the number of different possible amounts of money he can obtain, i.e. the size of the set of all possible costs for all valid choices of this subarray.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-seperated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the number of possible costs.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (30 points): the sum of
+N over all test cases does not exceed
+5⋅10
+3
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+2
+2
+1 2
+3
+5 1 3
+1
+2
+Explanation:
+Example case 1:
+[1,2] is the only possible subarray that satisfies
+l<r. For this subarray, the cost is
+2−1=1. The set of all possible costs is
+{1} and the answer is its size,
+1.
+Example case 2: There are three subarray that can be chosen:
+[5,1],
+[1,3] and
+[5,1,3]. The costs for them are
+4,
+2 and
+2 respectively. Hence, the set of possible costs is
+{2,4} and the answer is its size,
+2.

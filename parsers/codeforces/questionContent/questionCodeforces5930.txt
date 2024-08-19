@@ -1,0 +1,43 @@
+C. The Smallest String Concatenation
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You're given a list of n strings a1, a2, ..., an. You'd like to concatenate them together in some order such that the resulting string would be lexicographically smallest.
+Given the list of strings, output the lexicographically smallest concatenation.
+Input
+The first line contains integer n — the number of strings (1 ≤ n ≤ 5·104).
+Each of the next n lines contains one string ai (1 ≤ |ai| ≤ 50) consisting of only lowercase English letters. The sum of string lengths will not exceed 5·104.
+Output
+Print the only string a — the lexicographically smallest string concatenation.
+Examples
+input
+Copy
+4
+abba
+abacaba
+bcd
+er
+output
+Copy
+abacabaabbabcder
+input
+Copy
+5
+x
+xx
+xxa
+xxaa
+xxaaa
+output
+Copy
+xxaaaxxaaxxaxxx
+input
+Copy
+3
+c
+cb
+cba
+output
+Copy
+cbacbc

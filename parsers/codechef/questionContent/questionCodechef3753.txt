@@ -1,0 +1,108 @@
+Tree Retrieval
+Problem
+There is a hidden tree with
+N vertices labeled
+1,2,…,N.
+Your task is to recover the edges of the tree. You can ask queries, where you give a set
+S of size at least
+2 to the judge.
+Call a vertex
+x∈S isolable, if there exists an edge in the tree such that if we remove this edge, no other vertex
+y∈S is reachable from
+x.
+The judge returns two integers, the first one being some isolable vertex of set
+S, and the second one being the sum of the labels of all the isolable vertices of set
+S.
+There are multiple testcases. The sum of the number of queries asked over all the testcases should not exceed
+10
+4
+.
+The judge is not adaptive, which means that the tree is fixed before you ask any queries. Also, the judge is not guaranteed to be deterministic, that is, when queried twice for the same set
+S, the isolable vertex returned might be different, but the sum of all isolable vertices will be the same.
+Note: Reminder that the score you receive for a problem at the end of the contest, is the maximum total score amongst all your submissions for this problem. In particular, it is not the sum of your best scores for each subtask over all submissions.
+Input Format
+First, you should read a single integer
+T, the number of test cases.
+For each test case, first read the value of
+N.
+To query for a set
+S={s
+1
+,s
+2
+,…,s
+k
+}, print ? followed by
+k, followed by
+k space-separated integers
+s
+1
+,s
+2
+,…,s
+k
+.
+If the query format is incorrect or the total number of queries asked over all the testcases till now exceeds
+10
+4
+, the judge prints -1, and exits with a wrong answer verdict. In this case, you must also terminate your program.
+Otherwise, the judge prints two integers, as described in the problem statement.
+Once you know all the edges of the tree, print ! on one line. On each of the next
+N−1 lines, print the endpoints of an edge of the tree. The edges can be printed in any order.
+If the edges printed by you match those of the hidden tree, the judge prints 1, and you should move to the next testcase (if any), else the judge prints -1, and exists with a wrong answer verdict. In the latter case, you must terminate your program as well.
+Interaction Example
+You                     Grader
+                        3           # 3 test cases
+                        6           # N = 6
+? 3 1 6 3
+                        6 9         # The isolable vertices in
+                                    # S = {1, 3, 6} are 3 and 6
+
+? 2 2 5
+                        2 7         # Both 2 and 5 are isolable
+
+!
+1 2
+2 5
+3 2
+4 1
+4 6
+
+                        1           # Correct answer! 
+
+                        3           # Next test case, N = 3
+
+? 3 1 2 3
+                        1 3         # 1 and 2 are isolable
+!
+1 2
+2 3
+                        -1          # Incorrect output! Judge exits
+
+You should also
+terminate here
+without reading
+the next test case
+Explanation
+The first testcase is the following:
+The second testcase has
+3 vertices, with edges
+(1,3) and
+(2,3).
+Constraints
+2≤N≤1000
+The sum of
+N over all testcases doesn't exceed
+1000
+Subtasks
+Subtask 1 (13 points): The tree is a path.
+Subtask 2 (20 points): The sum of
+N over all testcases doesn't exceed
+100.
+Subtask 3 (23 points):
+The number of leaves in the tree doesn't exceed
+10.
+The sum of
+N over all testcases doesn't exceed
+500.
+Subtask 4 (44 points): No additional constraints.

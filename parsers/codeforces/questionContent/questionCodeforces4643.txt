@@ -1,0 +1,35 @@
+E. Team Work
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a team of N people. For a particular task, you can pick any non-empty subset of people. The cost of having x people for the task is xk.
+Output the sum of costs over all non-empty subsets of people.
+Input
+Only line of input contains two integers N (1 ≤ N ≤ 109) representing total number of people and k (1 ≤ k ≤ 5000).
+Output
+Output the sum of costs for all non empty subsets modulo 109 + 7.
+Examples
+input
+Copy
+1 1
+output
+Copy
+1
+input
+Copy
+3 2
+output
+Copy
+24
+Note
+In the first example, there is only one non-empty subset {1} with cost 11 = 1.
+In the second example, there are seven non-empty subsets.
+- {1} with cost 12 = 1
+- {2} with cost 12 = 1
+- {1, 2} with cost 22 = 4
+- {3} with cost 12 = 1
+- {1, 3} with cost 22 = 4
+- {2, 3} with cost 22 = 4
+- {1, 2, 3} with cost 32 = 9
+The total cost is 1 + 1 + 4 + 1 + 4 + 4 + 9 = 24.

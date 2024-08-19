@@ -1,0 +1,198 @@
+G. Pisces
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+A group of researchers are studying fish population in a natural system of lakes and rivers. The system contains
+n
+lakes connected by
+n−1
+rivers. Each river has integer length (in kilometers) and can be traversed in both directions. It is possible to travel between any pair of lakes by traversing the rivers (that is, the network of lakes and rivers form a tree).
+There is an unknown number of indistinguishable fish living in the lakes. On day
+1
+, fish can be at arbitrary lakes. Fish can travel between lakes by swimming the rivers. Each fish can swim a river
+l
+kilometers long in any direction in
+l
+days. Further, each fish can stay any number of days in any particular lake it visits. No fish ever appear or disappear from the lake system. Each lake can accomodate any number of fish at any time.
+The researchers made several observations. The
+j
+-th of these observations is "on day
+d
+j
+there were at least
+f
+j
+distinct fish in the lake
+p
+j
+". Help the researchers in determining the smallest possible total number of fish living in the lake system that doesn't contradict the observations.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤
+10
+5
+) — the number of lakes in the system.
+The next
+n−1
+lines describe the rivers. The
+i
+-th of these lines contains three integers
+u
+i
+,
+v
+i
+,
+l
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+,
+u
+i
+≠
+v
+i
+,
+1≤
+l
+i
+≤
+10
+3
+) —
+1
+-based indices of lakes connected by the
+i
+-th river, and the length of this river.
+The next line contains a single integer
+k
+(
+1≤k≤
+10
+5
+) — the number of observations.
+The next
+k
+lines describe the observations. The
+j
+-th of these lines contains three integers
+d
+j
+,
+f
+j
+,
+p
+j
+(
+1≤
+d
+j
+≤
+10
+8
+,
+1≤
+f
+j
+≤
+10
+4
+,
+1≤
+p
+j
+≤n
+) — the day, the number of fish, and the lake index of the
+j
+-th observation. No two observations happen on the same day at the same lake simultaneously.
+Output
+Print one integer — the smallest total number of fish not contradicting the observations.
+Examples
+input
+Copy
+4
+1 2 1
+1 3 1
+1 4 1
+5
+1 1 2
+1 1 3
+2 2 1
+3 1 4
+3 1 2
+output
+Copy
+2
+input
+Copy
+5
+1 2 1
+1 3 1
+1 4 1
+1 5 1
+4
+1 1 2
+2 1 3
+3 1 4
+4 1 5
+output
+Copy
+2
+input
+Copy
+5
+2 5 1
+5 1 1
+2 4 1
+5 3 3
+6
+5 2 4
+2 1 1
+2 1 3
+2 2 4
+4 7 5
+4 1 2
+output
+Copy
+10
+Note
+In the first example, there could be one fish swimming through lakes
+2
+,
+1
+, and
+4
+, and the second fish swimming through lakes
+3
+,
+1
+, and
+2
+.
+In the second example a single fish can not possibly be part of all observations simultaneously, but two fish swimming
+2→1→4
+and
+3→1→5
+can.
+In the third example one fish can move from lake
+1
+to lake
+5
+, others staying in their lakes during all time: two fish in lake
+4
+, six fish in lake
+5
+, one fish in lake
+3
+. The system of lakes is shown on the picture.

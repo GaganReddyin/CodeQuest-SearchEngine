@@ -1,0 +1,31 @@
+C. Maximal GCD
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given positive integer number n. You should create such strictly increasing sequence of k positive numbers a1, a2, ..., ak, that their sum is equal to n and greatest common divisor is maximal.
+Greatest common divisor of sequence is maximum of such numbers that every element of sequence is divisible by them.
+If there is no possible sequence then output -1.
+Input
+The first line consists of two numbers n and k (1 ≤ n, k ≤ 1010).
+Output
+If the answer exists then output k numbers — resulting sequence. Otherwise output -1. If there are multiple answers, print any of them.
+Examples
+input
+Copy
+6 3
+output
+Copy
+1 2 3
+input
+Copy
+8 2
+output
+Copy
+2 6
+input
+Copy
+5 3
+output
+Copy
+-1

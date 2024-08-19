@@ -1,0 +1,119 @@
+Coin Denominations
+Problem
+You are given an integer
+C and an array
+A =
+A
+1
+,A
+2
+,…,A
+N
+which has distinct positive integers. It is guaranteed that
+A
+i
+≤C for
+1≤i≤N. You have an infinite supply of coins of denomination
+A
+i
+for
+1≤i≤N. You have another array
+W=W
+1
+,W
+2
+,…W
+N
+. This denotes that a single coin of denomination
+A
+i
+has a weight of
+W
+i
+.
+You are given
+M queries:
+Q
+1
+,Q
+2
+,…,Q
+M
+. You need to get a collection of coins, such that their values add up to exactly
+Q
+i
+(ie. sum of denominations), and the sum of their weights is minimized. Output this minimum weight, or say that it is impossible to get exactly a sum of
+Q
+i
+. As the minimum weight could be huge, output it module
+10
+9
++7.
+###Input:
+The first line of the input contains three integers:
+N,
+C and
+M.
+The i-th of the next
+N lines contains two numbers
+A
+i
+and
+W
+i
+, which have been described above.
+The i-th of the next
+M lines contains a single integer:
+Q
+i
+.
+###Output:
+M lines, each of which should contain a single integer. If it is possible to achieve the queried value, then your output should be the remainder when the minimum total weight is divided by
+10
+9
++7.
+If it is not possible to achieve the exact value in the query, print
+−1. Note that we do not take modulo anything here.
+###Constraints
+1≤N≤C≤100
+1≤M≤10
+6
+1≤A
+i
+≤C
+A
+i
+
+=A
+j
+, if
+i
+
+=j
+1≤W
+i
+≤10
+9
+1≤Q
+i
+≤10
+18
+###Subtasks
+12 points :
+1≤Q
+i
+≤10
+6
+88 points : No further constraints.
+###Sample Input: 3 100 2 2 50 8 1 3 40 9 7
+###Sample Output: 120 140
+###Explanation: You can get a total value of
+9 by taking three coins of denomination
+3. Their total weight comes to
+3∗40=120. You can check that you cannot do better than this.
+You can get a total value of
+7 by taking two coins of denomination
+2 and one coin of denomination
+3 (
+(2∗2)+3=7). Their total weight comes to
+(2∗50)+40=140. You can check that you cannot do better than this.

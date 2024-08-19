@@ -1,0 +1,264 @@
+A. Cut and Paste
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+We start with a string
+s
+consisting only of the digits
+1
+,
+2
+, or
+3
+. The length of
+s
+is denoted by
+|s|
+. For each
+i
+from
+1
+to
+|s|
+, the
+i
+-th character of
+s
+is denoted by
+s
+i
+.
+There is one cursor. The cursor's location
+ℓ
+is denoted by an integer in
+{0,…,|s|}
+, with the following meaning:
+If
+ℓ=0
+, then the cursor is located before the first character of
+s
+.
+If
+ℓ=|s|
+, then the cursor is located right after the last character of
+s
+.
+If
+0<ℓ<|s|
+, then the cursor is located between
+s
+ℓ
+and
+s
+ℓ+1
+.
+We denote by
+s
+left
+the string to the left of the cursor and
+s
+right
+the string to the right of the cursor.
+We also have a string
+c
+, which we call our clipboard, which starts out as empty. There are three types of actions:
+The Move action. Move the cursor one step to the right. This increments
+ℓ
+once.
+The Cut action. Set
+c←
+s
+right
+, then set
+s←
+s
+left
+.
+The Paste action. Append the value of
+c
+to the end of the string
+s
+. Note that this doesn't modify
+c
+.
+The cursor initially starts at
+ℓ=0
+. Then, we perform the following procedure:
+Perform the Move action once.
+Perform the Cut action once.
+Perform the Paste action
+s
+ℓ
+times.
+If
+ℓ=x
+, stop. Otherwise, return to step 1.
+You're given the initial string
+s
+and the integer
+x
+. What is the length of
+s
+when the procedure stops? Since this value may be very large, only find it modulo
+10
+9
++7
+.
+It is guaranteed that
+ℓ≤|s|
+at any time.
+Input
+The first line of input contains a single integer
+t
+(
+1≤t≤1000
+) denoting the number of test cases. The next lines contain descriptions of the test cases.
+The first line of each test case contains a single integer
+x
+(
+1≤x≤
+10
+6
+). The second line of each test case consists of the initial string
+s
+(
+1≤|s|≤500
+). It is guaranteed, that
+s
+consists of the characters "1", "2", "3".
+It is guaranteed that the sum of
+x
+in a single file is at most
+10
+6
+. It is guaranteed that in each test case before the procedure will stop it will be true that
+ℓ≤|s|
+at any time.
+Output
+For each test case, output a single line containing a single integer denoting the answer for that test case modulo
+10
+9
++7
+.
+Example
+input
+Copy
+4
+5
+231
+7
+2323
+6
+333
+24
+133321333
+output
+Copy
+25
+1438
+1101
+686531475
+Note
+Let's illustrate what happens with the first test case. Initially, we have
+s=
+231. Initially,
+ℓ=0
+and
+c=ε
+(the empty string). The following things happen if we follow the procedure above:
+Step 1, Move once: we get
+ℓ=1
+.
+Step 2, Cut once: we get
+s=
+2 and
+c=
+31.
+Step 3, Paste
+s
+ℓ
+=
+2 times: we get
+s=
+23131.
+Step 4:
+ℓ=1≠x=5
+, so we return to step 1.
+Step 1, Move once: we get
+ℓ=2
+.
+Step 2, Cut once: we get
+s=
+23 and
+c=
+131.
+Step 3, Paste
+s
+ℓ
+=
+3 times: we get
+s=
+23131131131.
+Step 4:
+ℓ=2≠x=5
+, so we return to step 1.
+Step 1, Move once: we get
+ℓ=3
+.
+Step 2, Cut once: we get
+s=
+231 and
+c=
+31131131.
+Step 3, Paste
+s
+ℓ
+=
+1 time: we get
+s=
+23131131131.
+Step 4:
+ℓ=3≠x=5
+, so we return to step 1.
+Step 1, Move once: we get
+ℓ=4
+.
+Step 2, Cut once: we get
+s=
+2313 and
+c=
+1131131.
+Step 3, Paste
+s
+ℓ
+=
+3 times: we get
+s=
+2313113113111311311131131.
+Step 4:
+ℓ=4≠x=5
+, so we return to step 1.
+Step 1, Move once: we get
+ℓ=5
+.
+Step 2, Cut once: we get
+s=
+23131 and
+c=
+13113111311311131131.
+Step 3, Paste
+s
+ℓ
+=
+1 times: we get
+s=
+2313113113111311311131131.
+Step 4:
+ℓ=5=x
+, so we stop.
+At the end of the procedure,
+s
+has length
+25
+.

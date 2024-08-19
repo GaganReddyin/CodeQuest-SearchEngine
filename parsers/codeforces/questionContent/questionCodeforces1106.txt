@@ -1,0 +1,123 @@
+C. Anonymity Is Important
+time limit per test1.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In the work of a doctor, it is important to maintain the anonymity of clients and the results of tests. The test results are sent to everyone personally by email, but people are very impatient and they want to know the results right away.
+That's why in the testing lab "De-vitro" doctors came up with an experimental way to report the results. Let's assume that
+n
+people took the tests in the order of the queue. Then the chief doctor Sam can make several statements, in each telling if there is a sick person among the people in the queue from
+l
+-th to
+r
+-th (inclusive), for some values
+l
+and
+r
+.
+During the process, Sam will check how well this scheme works and will be interested in whether it is possible to find out the test result of
+i
+-th person from the information he announced. And if it can be done, then is that patient sick or not.
+Help Sam to test his scheme.
+Input
+The first line contains two integers
+n
+,
+q
+(
+1≤n,q≤2⋅
+10
+5
+) — the number of people and the number of queries.
+In each of the next
+q
+lines, the description of the query is given. The first number in the line is
+t
+(
+t=0
+or
+t=1
+) — the type of the query.
+If
+t=0
+, the line contains three more integers
+l,r,x
+(
+1≤l≤r≤n
+,
+x=0
+or
+x=1
+). This query means that Sam tells that among the people in the queue from
+l
+-th to
+r
+-th (inclusive):
+there was at least one sick person, if
+x=1
+,
+there is no sick people, if
+x=0
+.
+If
+t=1
+, the line contains one more integer
+j
+(
+1≤j≤n
+) — the position of the patient in the queue, for which Sam wants to know the status.
+All queries are correct, that means that there always exists an example of the queue of length
+n
+for which all reported results (statements from queries with
+t=0
+) are true.
+Output
+After each Sam question (query with
+t=1
+) print:
+"NO", if the patient is definitely not sick,
+"YES", if the patient is definitely sick.
+"N/A", if it is impossible to definitely identify the status of patient having the given information.
+Example
+input
+Copy
+6 9
+0 4 5 0
+1 5
+1 6
+0 4 6 1
+1 6
+0 2 5 1
+0 2 2 0
+1 3
+1 2
+output
+Copy
+NO
+N/A
+YES
+YES
+NO
+Note
+In the first test for the five first queries:
+Initially Sam tells that people
+4
+,
+5
+are not sick.
+In the next query Sam asks the status of the patient
+5
+. From the previous query, we know that the patient is definitely not sick.
+In the next query Sam asks the status of the patient
+6
+. We don't know any information about that patient now.
+After that Sam tells that there exists a sick patient among
+4
+,
+5
+,
+6
+.
+In the next query Sam asks the status of the patient
+6
+. Now we can tell that this patient is definitely sick.

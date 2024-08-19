@@ -1,0 +1,132 @@
+Positive Spewing
+Problem
+A circular array of length
+N is defined as follows:
+N integers
+A
+1
+,A
+2
+,…,A
+N
+are placed in a circle in such a way that for each
+1≤i<N,
+A
+i
+and
+A
+i+1
+are adjacent, and
+A
+1
+and
+A
+N
+are also adjacent.
+You are given a circular array
+A of length
+N. At the end of each second, the following changes are executed in the array: If
+A
+i
+>0 then the elements which are adjacent to
+A
+i
+, will get incremented by
+1, for all
+1≤i≤N.
+For example, consider the array
+A=[0,0,0,2,0,0,0,5].
+Initially
+A
+4
+and
+A
+8
+are greater than zero. So after one second,
+A
+3
+,
+A
+5
+,
+A
+1
+and
+A
+7
+will get incremented by
+1. Hence the array will become
+A=[1,0,1,2,1,0,1,5].
+After two seconds, the array becomes
+A=[2,2,2,4,2,2,2,7]. Note that the value of
+A
+4
+has become
+4, because both,
+A
+3
+and
+A
+5
+were greater than zero after one second.
+What will be the sum of elements present in the array
+A after
+K seconds?
+Input Format
+The first line will contain
+T, number of testcases. Then
+T testcases follow.
+The first line of each testcase contains 2 space separated integers
+N and
+K.
+The second line of each testcase line contains
+N integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each testcase, output in a single line containing the sum of the all the elements present in the array
+A after
+K seconds.
+Constraints
+1≤T≤10
+4
+3≤N≤10
+5
+0≤A
+i
+≤10
+6
+0≤K≤10
+9
+Sum of
+N over all test cases does not exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+4
+6 1
+0 1 0 1 0 0
+3 0
+0 1 2
+8 2
+0 0 0 2 0 0 0 5
+3 10
+1 2 3
+6
+3
+23
+66
+Explanation:
+Test Case 1: After one second, the array will become
+A=[1,1,2,1,1,0]. So the sum of elements present in the array is =
+1+1+2+1+1+0=6.
+Test Case 2: No change will be executed in the array as
+K=0. So the required sum will be equal to 3.

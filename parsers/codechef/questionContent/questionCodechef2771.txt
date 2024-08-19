@@ -1,0 +1,68 @@
+Anti-knapsack
+Problem
+You are given two integers
+N and
+K.
+Construct an array
+A consisting of
+N distinct positive integers such that the following conditions are met:
+1≤A
+i
+≤2⋅10
+4
+;
+There exists no subsequence of
+A with sum
+K.
+It can be shown that the answer always exists.
+Input Format
+The first line contains a single integer
+T: the number of test cases.
+The only line of each test case contains two integers
+N and
+K - as mentioned in the statement.
+Output Format
+For each test case, print a single line containing
+N space-separated elements:
+A
+1
+,A
+2
+,…,A
+N
+. If there are multiple answers, you may print any.
+Constraints
+1≤T≤20
+1≤N≤1000
+1≤K≤10
+6
+Sample 1:
+Input
+Output
+2
+4 10
+10 1000000
+1 2 5 6
+327 8695 4 19852 14 736 46 15 37 928
+Explanation:
+Test case
+1:
+A=[1,2,5,6]. All elements of the array are distinct. Also,
+1≤A
+i
+≤2⋅10
+4
+, and there isn't any subsequence of the array with sum
+10.
+Some other valid answers are:
+[2,6,5,1] and
+[3,27,869,541].
+Test case
+2:
+A=[327,8695,4,19852,14,736,46,15,37,928]. All elements of the array are distinct. Also,
+1≤A
+i
+≤2⋅10
+4
+, and there isn't any subsequence of the array with sum
+1000000.

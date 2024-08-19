@@ -1,0 +1,97 @@
+The One with All the Candy
+Problem
+Monica decides that she would like to get to know the neighbours in the apartment better. She makes a batch of wonderful chocolates and hangs them on the door in a basket hoping that her neighbors will take some and they can meet. The neighbours (including Joey) eventually go crazy over the candy and demand more. Eventually, she keeps a bowl full of chocolates at the door for the last time.
+There are
+N neighbours. The
+i
+th
+neigbhour has initial energy equal to
+A
+i
+. There is one bowl filled with chocolates. The neighbours are made to stand in a row and the bowl is passed around by obeying the following rules:
+Any person can hold the bowl initially.
+If the person holding the bowl has positive energy, he/she passes the bowl to the person on the immediate right of him/her. The rightmost person in the row passes the bowl to the leftmost person in the row.
+The act of passing the bowl takes
+1 second.
+If the person holding the bowl has non-positive energy, he/she drops the bowl.
+After each pass, the energy of the person reduces by
+1.
+Among all possible ways in which the
+N neighbours start the game, find the maximum time until the bowl is dropped.
+Input Format
+First line will contain
+T, number of testcases. Then the testcases follow.
+First line of each testcase contains one integer
+N.
+Second line of each testcase contains of
+N integers, denoting the elements of array
+A.
+Output Format
+For each testcase, output in a single line the maximum time until the bowl is dropped.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+0≤A[i]≤10
+6
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+3
+3
+2 1 1
+3
+0 5 0
+4
+3 0 2 1
+4
+1
+3
+Explanation:
+Test case 1: One of the optimal orders in which all the neighbours can stand in the row is:
+1
+→
+2
+→
+3
+→
+1. The bowl is initially with person
+1.
+Person
+1, in one second, passes the bowl to person
+2 and his/her own energy becomes
+1.
+Person
+2, in one second, passes the bowl to person
+3 and his/her own energy becomes
+0.
+Person
+3, in one second, passes the bowl to person
+1 and his/her own energy becomes
+0.
+Person
+1, in one second, passes the bowl to person
+2 and his/her own energy becomes
+0.
+Person
+2 has
+0 energy, so he/she drops the bowl. Thus, the bowl is dropped after
+4 seconds.
+Test case 2: One of the optimal orders in which all the neighbours can stand in the row is:
+2
+→
+1
+→
+3
+→
+2. The bowl is initially with person
+2. Thus, it would travel as
+2
+→
+1. The bowl can not be passed further due to
+0 energy of person
+1.

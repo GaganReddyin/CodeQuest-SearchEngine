@@ -1,0 +1,77 @@
+G. Fall Down
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a grid with
+n
+rows and
+m
+columns, and three types of cells:
+An empty cell, denoted with '.'.
+A stone, denoted with '*'.
+An obstacle, denoted with the lowercase Latin letter 'o'.
+All stones fall down until they meet the floor (the bottom row), an obstacle, or other stone which is already immovable. (In other words, all the stones just fall down as long as they can fall.)
+Simulate the process. What does the resulting grid look like?
+Input
+The input consists of multiple test cases. The first line contains an integer
+t
+(
+1≤t≤100
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+1≤n,m≤50
+) — the number of rows and the number of columns in the grid, respectively.
+Then
+n
+lines follow, each containing
+m
+characters. Each of these characters is either '.', '*', or 'o' — an empty cell, a stone, or an obstacle, respectively.
+Output
+For each test case, output a grid with
+n
+rows and
+m
+columns, showing the result of the process.
+You don't need to output a new line after each test, it is in the samples just for clarity.
+Example
+input
+Copy
+3
+6 10
+.*.*....*.
+.*.......*
+...o....o.
+.*.*....*.
+..........
+.o......o*
+2 9
+...***ooo
+.*o.*o.*o
+5 5
+*****
+*....
+*****
+....*
+*****
+output
+Copy
+..........
+...*....*.
+.*.o....o.
+.*........
+.*......**
+.o.*....o*
+
+....**ooo
+.*o**o.*o
+
+.....
+*...*
+*****
+*****
+*****

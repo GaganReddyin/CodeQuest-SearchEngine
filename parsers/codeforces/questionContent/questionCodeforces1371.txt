@@ -1,0 +1,60 @@
+F. Ideal Farm
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Theofanis decided to visit his uncle's farm. There are
+s
+animals and
+n
+animal pens on the farm. For utility purpose, animal pens are constructed in one row.
+Uncle told Theofanis that a farm is lucky if you can distribute all animals in all pens in such a way that there are no empty pens and there is at least one continuous segment of pens that has exactly
+k
+animals in total.
+Moreover, a farm is ideal if it's lucky for any distribution without empty pens.
+Neither Theofanis nor his uncle knows if their farm is ideal or not. Can you help them to figure it out?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases.
+The first and only line of each test case contains three integers
+s
+,
+n
+, and
+k
+(
+1≤s,n,k≤
+10
+18
+;
+n≤s
+).
+Output
+For each test case, print YES (case-insensitive), if the farm is ideal, or NO (case-insensitive) otherwise.
+Example
+input
+Copy
+4
+1 1 1
+1 1 2
+100 50 200
+56220 47258 14497
+output
+Copy
+YES
+NO
+NO
+YES
+Note
+For the first and the second test case, the only possible combination is
+[1]
+so there always will be a subsegment with
+1
+animal but not with
+2
+animals.

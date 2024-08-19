@@ -1,0 +1,237 @@
+G. Find a Gift
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an interactive problem. Don't forget to flush output after printing queries using cout.flush() or fflush(stdout) in C++ or similar functions in other programming languages.
+There are
+n
+gift boxes in a row, numbered from
+1
+to
+n
+from left to right. It's known that exactly
+k
+of them contain valuable gifts — other boxes contain just lucky stones. All boxes look the same and differ only in weight. All boxes with stones have the same weight and are strictly heavier than boxes with valuable items. But valuable gifts may be different, so the boxes with valuable items may have different weights.
+You can ask no more than
+50
+queries (printing an answer doesn't count). By each query you can compare total weights of two non-intersecting subsets of boxes
+a
+1
+,
+a
+2
+,…,
+a
+k
+a
+and
+b
+1
+,
+b
+2
+,…,
+b
+k
+b
+. In return you'll get one of four results:
+FIRST, if subset
+a
+1
+,
+a
+2
+,…,
+a
+k
+a
+is strictly heavier;
+SECOND, if subset
+b
+1
+,
+b
+2
+,…,
+b
+k
+b
+is strictly heavier;
+EQUAL, if subsets have equal total weights;
+WASTED, if the query is incorrect or the limit of queries is exceeded.
+Using such queries (or, maybe, intuition) find the box with a valuable gift with the minimum index.
+Input
+The input consists of several cases. In the beginning, you receive the integer
+T
+(
+1≤T≤500
+) — the number of test cases.
+At the beginning of each test case, you receive two integers
+n
+and
+k
+(
+2≤n≤1000
+,
+1≤k≤
+n
+2
+) — the number of boxes in a row and the number of boxes with valuable gifts.
+It's guaranteed that the order of boxes is fixed beforehand and that the sum of
+n
+in one test doesn't exceed
+1000
+.
+Output
+For each test case print the minimum index among all boxes with a valuable gift in the following format: "!
+x
+" where
+x
+(
+1≤x≤n
+) — the index of the box.
+Interaction
+Print each query in three lines. In the first line print the sizes of subset in the following format: "?
+k
+a
+k
+b
+" where
+k
+a
+and
+k
+b
+(
+1≤
+k
+a
+,
+k
+b
+≤n
+;
+k
+a
++
+k
+b
+≤n
+) — the corresponding sizes.
+In the second line print
+k
+a
+integers
+a
+1
+,
+a
+2
+,…,
+a
+k
+a
+(
+1≤
+a
+i
+≤n
+;
+a
+i
+≠
+a
+j
+if
+i≠j
+) — indexes of boxes in the first subset.
+In the third line print
+k
+b
+integers
+b
+1
+,
+b
+2
+,…,
+b
+k
+b
+(
+1≤
+b
+i
+≤n
+;
+b
+i
+≠
+b
+j
+if
+i≠j
+) — indexes of boxes in the second subset.
+The subsets shouldn't intersect, i. e.
+a
+i
+≠
+b
+j
+for all
+i
+and
+j
+.
+You'll receive one of four responses described above. In the case of WASTED stop your program to avoid getting random verdict instead of Wrong Answer.
+Example
+input
+Copy
+2
+2 1
+-
+-
+-
+FIRST
+-
+5 2
+-
+-
+-
+FIRST
+-
+-
+-
+SECOND
+-
+-
+-
+EQUAL
+-
+output
+Copy
+-
+-
+? 1 1
+1
+2
+-
+! 2
+-
+? 1 1
+1
+2
+-
+? 2 3
+4 2
+1 3 5
+-
+? 1 1
+4
+5
+-
+! 1
+Note
+Additional separators "–" in the sample are used only to increase the readability of the sample. Don't print any unnecessary symbols or line breaks in your solution when you send it to the system.
+Hacks are forbidden in this task.

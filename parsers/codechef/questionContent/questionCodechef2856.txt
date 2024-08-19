@@ -1,0 +1,122 @@
+Secret Tree
+Problem
+This is an interactive task
+You are given a positive integer
+N. There is a tree with
+N nodes numbered from
+1 to
+N which is hidden from you.
+You can ask queries of the following format:
+?
+k
+a
+1
+a
+2
+a
+3
+…a
+k
+where:
+3≤k≤N
+1≤a
+i
+≤N
+a
+i
+
+=a
+j
+for all
+1≤i<j≤k
+The judge will return
+1 if {
+a
+1
+,a
+2
+,a
+3
+,…,a
+k
+} is a subsequence of
+P where
+P is some simple path of the tree, else it will return
+0. Refer to the Sample Interaction section below for a better understanding.
+You need to print all the edges of the tree (in any order). You are allowed to ask at most
+N
+2
+queries.
+Interaction
+Begin the interaction by reading a single integer
+T denoting the number of test cases. The test cases follow.
+For each test case, first read a single integer
+N denoting the number of nodes in the tree. After this, you can start making queries.
+To ask a query, output
+?
+k
+a
+1
+a
+2
+a
+3
+…a
+k
+then read a single integer
+0 or
+1.
+To output the answer, output !, and then in the next
+N−1 lines describe the edges of the tree. You can print the edges in any order.
+If at any time you make an invalid query or exceed the query limit, the interaction is terminated and you will receive a Wrong Answer verdict.
+Don't forget to flush the output after printing each line!
+Constraints
+1≤T≤10
+3≤N≤100
+Sum of
+N over all test cases does not exceed
+100
+Sample Interaction
+Grader                You
+2
+3
+                      ? 3 2 1 3
+0
+                      ? 3 3 2 1
+1     
+                      !
+                      2 1
+                      2 3
+5
+                      ? 3 5 1 3
+1         
+                      ? 4 3 1 2 4
+1
+                      ? 4 5 1 2 4
+0
+                      !
+                      2 1
+                      2 5
+                      4 2
+                      1 3
+Explanation
+Test case
+1: The tree has the following edges
+(1,2),(2,3).
+The query ? 3 2 1 3 returns
+0 as it is not a subsequence of any simple path.
+The query ? 3 3 2 1 returns
+1 as it is a subsequence of the path
+{3,2,1}.
+Test case
+2: The tree has the following edges
+(1,2),(2,4),(2,5),(1,3).
+The query ? 3 5 1 3 returns
+1 as it is a subsequence of the path
+{5,2,1,3}.
+The query ? 4 3 1 2 4 returns
+1 as it is a subsequence of the path
+{3,1,2,4}.
+The query ? 4 5 1 2 4 returns
+0 as it is not a subsequence of any simple path.
+NOTE: The above queries are just to demonstrate the interaction. They may or may not be sufficient to deduce the final answer.

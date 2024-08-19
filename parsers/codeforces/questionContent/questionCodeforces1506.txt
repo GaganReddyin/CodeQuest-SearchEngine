@@ -1,0 +1,180 @@
+F. Points Movement
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+points and
+m
+segments on the coordinate line. The initial coordinate of the
+i
+-th point is
+a
+i
+. The endpoints of the
+j
+-th segment are
+l
+j
+and
+r
+j
+ — left and right endpoints, respectively.
+You can move the points. In one move you can move any point from its current coordinate
+x
+to the coordinate
+x−1
+or the coordinate
+x+1
+. The cost of this move is
+1
+.
+You should move the points in such a way that each segment is visited by at least one point. A point visits the segment
+[l,r]
+if there is a moment when its coordinate was on the segment
+[l,r]
+(including endpoints).
+You should find the minimal possible total cost of all moves such that all segments are visited.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+1≤n,m≤2⋅
+10
+5
+) — the number of points and segments respectively.
+The next line contains
+n
+distinct integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−
+10
+9
+≤
+a
+i
+≤
+10
+9
+) — the initial coordinates of the points.
+Each of the next
+m
+lines contains two integers
+l
+j
+,
+r
+j
+(
+−
+10
+9
+≤
+l
+j
+≤
+r
+j
+≤
+10
+9
+) — the left and the right endpoints of the
+j
+-th segment.
+It's guaranteed that the sum of
+n
+and the sum of
+m
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case print a single integer — the minimal total cost of all moves such that all segments are visited.
+Example
+input
+Copy
+2
+4 11
+2 6 14 18
+0 3
+4 5
+11 15
+3 5
+10 13
+16 16
+1 4
+8 12
+17 19
+7 13
+14 19
+4 12
+-9 -16 12 3
+-20 -18
+-14 -13
+-10 -7
+-3 -1
+0 4
+6 11
+7 9
+8 10
+13 15
+14 18
+16 17
+18 19
+output
+Copy
+5
+22
+Note
+In the first test case the points can be moved as follows:
+Move the second point from the coordinate
+6
+to the coordinate
+5
+.
+Move the third point from the coordinate
+14
+to the coordinate
+13
+.
+Move the fourth point from the coordinate
+18
+to the coordinate
+17
+.
+Move the third point from the coordinate
+13
+to the coordinate
+12
+.
+Move the fourth point from the coordinate
+17
+to the coordinate
+16
+.
+The total cost of moves is
+5
+. It is easy to see, that all segments are visited by these movements. For example, the tenth segment (
+[7,13]
+) is visited after the second move by the third point.
+Here is the image that describes the first test case:

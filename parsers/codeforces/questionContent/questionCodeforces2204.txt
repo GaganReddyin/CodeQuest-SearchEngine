@@ -1,0 +1,180 @@
+G. Yet Another DAG Problem
+time limit per test2 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+You are given a directed acyclic graph (a directed graph that does not contain cycles) of
+n
+vertices and
+m
+arcs. The
+i
+-th arc leads from the vertex
+x
+i
+to the vertex
+y
+i
+and has the weight
+w
+i
+.
+Your task is to select an integer
+a
+v
+for each vertex
+v
+, and then write a number
+b
+i
+on each arcs
+i
+such that
+b
+i
+=
+a
+x
+i
+−
+a
+y
+i
+. You must select the numbers so that:
+all
+b
+i
+are positive;
+the value of the expression
+∑
+i=1
+m
+w
+i
+b
+i
+is the lowest possible.
+It can be shown that for any directed acyclic graph with non-negative
+w
+i
+, such a way to choose numbers exists.
+Input
+The first line contains two integers
+n
+and
+m
+(
+2≤n≤18
+;
+0≤m≤
+n(n−1)
+2
+).
+Then
+m
+lines follow, the
+i
+-th of them contains three integers
+x
+i
+,
+y
+i
+and
+w
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤n
+,
+1≤
+w
+i
+≤
+10
+5
+,
+x
+i
+≠
+y
+i
+) — the description of the
+i
+-th arc.
+It is guaranteed that the lines describe
+m
+arcs of a directed acyclic graph without multiple arcs between the same pair of vertices.
+Output
+Print
+n
+integers
+a
+1
+,
+a
+2
+, ...,
+a
+n
+(
+0≤
+a
+v
+≤
+10
+9
+), which must be written on the vertices so that all
+b
+i
+are positive, and the value of the expression
+∑
+i=1
+m
+w
+i
+b
+i
+is the lowest possible. If there are several answers, print any of them. It can be shown that the answer always exists, and at least one of the optimal answers satisfies the constraints
+0≤
+a
+v
+≤
+10
+9
+.
+Examples
+input
+Copy
+3 2
+2 1 4
+1 3 2
+output
+Copy
+1 2 0
+input
+Copy
+5 4
+1 2 1
+2 3 1
+1 3 6
+4 5 8
+output
+Copy
+43 42 41 1337 1336
+input
+Copy
+5 5
+1 2 1
+2 3 1
+3 4 1
+1 5 1
+5 4 10
+output
+Copy
+4 3 2 1 2

@@ -1,0 +1,43 @@
+Sum of Primes
+Problem
+f is a function such that
+f(x) equals the number of ways in which
+x can be expressed as sum of two prime numbers. For example
+f(10)=2, as 10 can be expressed as sum of two primes in two ways:
+3+7=5+5=10. More formally,
+f(x) is the number of pairs
+(a,b) such that
+0≤a≤b<x and
+a and
+b are prime and
+a+b=x.
+Given an integer
+N, find the number of pairs
+(a,b) such that
+0≤a≤b<N and
+f(a)+f(b)=f(N).
+###Input:
+First line will contain
+T, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, a integer
+N.
+###Output: For each testcase, output in a single line, the required answer.
+###Constraints
+1≤T≤5
+0≤N≤10
+6
+###Sample Input: 3 1 5 10
+###Sample Output: 1 4 21
+###Explanation:
+Case 1:
+f(0)=f(1)=0. So the only way to express
+f(1) is as
+f(0)+f(0).
+Case 2:
+f(0)=f(1)=f(2)=f(3)=0, and
+f(4)=f(5)=1. So
+f(5) can be expressed as
+f(0)+f(4),
+f(1)+f(4),
+f(2)+f(4) and
+f(3)+f(4).

@@ -1,0 +1,81 @@
+Minimum and Maximum
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef has a
+permutation
+P
+1
+,P
+2
+,…,P
+N
+of integers
+1 through
+N. He needs you to find the value of the sum
+S=
+i=1
+∑
+N
+j=i
+∑
+N
+getMin(i,j)∧getMax(i,j), where
+∧ denotes the bitwise AND operation and
+getMin(i,j)=min(P
+i
+,P
+i+1
+,…,P
+j−1
+,P
+j
+),
+getMax(i,j)=max(P
+i
+,P
+i+1
+,…,P
+j−1
+,P
+j
+).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output
+For each test case, print a single line containing one integer
+S.
+Constraints
+1≤T≤2
+1≤N≤10
+5
+1≤P
+i
+≤N for each valid
+i
+P
+1
+,P
+2
+,…,P
+N
+is a permutation
+Sample 1:
+Input
+Output
+1
+3
+2 1 3
+8

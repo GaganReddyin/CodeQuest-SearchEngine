@@ -1,0 +1,155 @@
+E. A Perfect Problem
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A sequence of integers
+b
+1
+,
+b
+2
+,…,
+b
+m
+is called good if
+max(
+b
+1
+,
+b
+2
+,…,
+b
+m
+)⋅min(
+b
+1
+,
+b
+2
+,…,
+b
+m
+)≥
+b
+1
++
+b
+2
++…+
+b
+m
+.
+A sequence of integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+is called perfect if every non-empty subsequence of
+a
+is good.
+YouKn0wWho has two integers
+n
+and
+M
+,
+M
+is prime. Help him find the number, modulo
+M
+, of perfect sequences
+a
+1
+,
+a
+2
+,…,
+a
+n
+such that
+1≤
+a
+i
+≤n+1
+for each integer
+i
+from
+1
+to
+n
+.
+A sequence
+d
+is a subsequence of a sequence
+c
+if
+d
+can be obtained from
+c
+by deletion of several (possibly, zero or all) elements.
+Input
+The first and only line of the input contains two space-separated integers
+n
+and
+M
+(
+1≤n≤200
+;
+10
+8
+≤M≤
+10
+9
+). It is guaranteed that
+M
+is prime.
+Output
+Print a single integer  — the number of perfect sequences modulo
+M
+.
+Examples
+input
+Copy
+2 998244353
+output
+Copy
+4
+input
+Copy
+4 100000007
+output
+Copy
+32
+input
+Copy
+69 999999937
+output
+Copy
+456886663
+Note
+In the first test case, the perfect sequences are
+[2,2]
+,
+[2,3]
+,
+[3,2]
+and
+[3,3]
+.
+In the second test case, some of the perfect sequences are
+[3,4,3,5]
+,
+[4,5,4,4]
+,
+[4,5,5,5]
+etc. One example of a sequence which is not perfect is
+[2,3,3,4]
+, because, for example, the subsequence
+[2,3,4]
+is not an good as
+2⋅4<2+3+4
+.

@@ -1,0 +1,59 @@
+Distinct Palindrome
+Problem
+Given integers
+N and
+X, generate a palindrome of length
+N consisting of lowercase English alphabets such that the number of distinct characters in the palindrome is exactly
+X.
+If it is impossible to do so, print
+−1 instead.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, two integers
+N,X, as mentioned in the statement.
+Output Format
+For each test case, output in a single line, a palindrome of length
+N consisting of lowercase English alphabet such that the number of distinct characters in the palindrome is
+X. If it is not possible to do so, print
+−1 instead.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤X≤min(N,26)
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+1 1
+2 1
+3 3
+4 2
+z
+aa
+-1
+xyyx
+Explanation:
+Test case
+1: A possible palindrome of length
+1 having
+1 distinct character is z.
+Test case
+2: A possible palindrome of length
+2 having
+1 distinct character is aa.
+Test case
+3: It can be proven that there exists no possible palindrome of length
+3 having
+3 distinct characters.
+Test case
+4: The palindrome xyyx has length
+4 and contains
+2 distinct characters namely x and y.

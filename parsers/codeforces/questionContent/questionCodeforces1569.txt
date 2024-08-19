@@ -1,0 +1,106 @@
+F. Pairwise Modulo
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have an array
+a
+consisting of
+n
+distinct positive integers, numbered from
+1
+to
+n
+. Define
+p
+k
+as
+p
+k
+=
+∑
+1≤i,j≤k
+a
+i
+mod
+a
+j
+,
+∑
+mod
+where
+xmody
+denotes the remainder when
+x
+is divided by
+y
+. You have to find and print
+p
+1
+,
+p
+2
+,…,
+p
+n
+.
+Input
+The first line contains
+n
+— the length of the array (
+2≤n≤2⋅
+10
+5
+).
+The second line contains
+n
+space-separated distinct integers
+a
+1
+,…,
+a
+n
+(
+1≤
+a
+i
+≤3⋅
+10
+5
+,
+a
+i
+≠
+a
+j
+if
+i≠j
+).
+Output
+Print
+n
+integers
+p
+1
+,
+p
+2
+,…,
+p
+n
+.
+Examples
+input
+Copy
+4
+6 2 7 3
+output
+Copy
+0 2 12 22
+input
+Copy
+3
+3 2 1
+output
+Copy
+0 3 5

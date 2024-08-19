@@ -1,0 +1,185 @@
+I. Falling Blocks
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Recently, Polycarp has invented a new mobile game with falling blocks.
+In the game,
+n
+blocks are falling down, one at a time, towards a flat surface with length
+d
+units. Each block can be represented as a rectangle with coordinates from
+l
+i
+to
+r
+i
+and unit height, dropped downwards from very high up. A block falls until it comes in contact with the flat surface or any other block. Let's define that block
+a
+covers block
+b
+if
+l
+a
+≤
+l
+b
+≤
+r
+b
+≤
+r
+a
+.
+Consider what happens when a new block
+i
+falls. If the new (upper) block
+i
+comes in contact with any block
+j
+such that block
+i
+does not cover block
+j
+, block
+i
+will stick to block
+j
+, and no blocks will disappear. Otherwise, all blocks that block
+i
+covers and is in contact with will be vaporized, and block
+i
+will continue falling with the ability to vaporize lower blocks.
+For example, consider what happens when three blocks
+(1,2)
+,
+(2,3)
+and
+(1,3)
+fall, in that order. The first block will stick to the flat surface. Then, the second block will stick to the first block. Finally, the third block will vaporize the second block, keep falling, vaporize the first block, and stick to the flat surface.
+Here is a graphic for the first example.
+After each block falls, help Polycarp determine how many blocks will remain!
+Input
+The first line contains two integers
+n
+and
+d
+(
+1≤n,d≤
+10
+5
+)  — the number of falling blocks and the length of the flat surface.
+The
+i
+-th of the following
+n
+lines contains integers
+l
+i
+and
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤d
+)  — the coordinates of the
+i
+-th block.
+Output
+Output
+n
+integers. The
+i
+-th integer should be the number of blocks that will be left after the
+i
+-th block falls.
+Examples
+input
+Copy
+3 3
+1 2
+2 3
+1 3
+output
+Copy
+1
+2
+1
+input
+Copy
+8 6
+1 2
+3 3
+2 3
+1 3
+2 4
+3 6
+1 5
+1 5
+output
+Copy
+1
+2
+3
+1
+2
+3
+4
+4
+Note
+The first example is explained above.
+In the second example, this is what happens after each block falls:
+Block
+1
+will stick to the flat surface.
+Block
+2
+will stick to the flat surface.
+Block
+3
+will stick to blocks
+1
+and
+2
+. Note that block
+3
+will not vaporize block
+2
+because it does not cover block
+1
+and is in contact with it.
+Block
+4
+will vaporize all the blocks and stick to the flat surface.
+Block
+5
+will stick to block
+4
+Block
+6
+will stick to block
+5
+.
+Block
+7
+will stick to block
+6
+. Note that no blocks are vaporized because although block
+7
+covers block
+4
+and block
+5
+, they never come in contact.
+Block
+8
+vaporizes block
+7
+and sticks to block
+6
+.

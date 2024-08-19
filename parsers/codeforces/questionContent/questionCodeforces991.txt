@@ -1,0 +1,16 @@
+G. Six Characters
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Aenar should go to the string's home.
+Input
+A string consisting of only
+6
+letters.
+Output
+A string consisting of only
+6
+characters.
+Note
+If many answers are possible, the jury will still only accept one!

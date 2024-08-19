@@ -1,0 +1,79 @@
+Sum Product Segments
+Problem
+A segment is a range of non-negative integers
+L,L+1,L+2,…,R, denoted
+[L,R] where
+L≤R.
+Chef has a set
+S consisting of all segments
+[L,R] such that either
+L+R=X or
+L⋅R=Y.
+For example, if
+X=5 and
+Y=6, then Chef's set is
+S={[0,5],[1,4],[1,6],[2,3]}.
+Given the integers
+X and
+Y, can you help Chef find two non-intersecting segments from his set
+S? If it is not possible to find two such non-intersecting segments, print
+−1. If there are multiple possible answers, you may output any of them.
+Note: Two segments are said to be non-intersecting if they have no number in common. For example,
+[1,4] and
+[10,42] are non-intersecting
+[1,4] and
+[3,10] are intersecting since they have
+3 and
+4 in common.
+[1,4] and
+[4,6] are intersecting since they have
+4 in common.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line containing two space separated integers
+X and
+Y.
+Output Format
+If there are non-intersecting segments, then output two lines:
+In the first line, output two space-separated integers
+L
+1
+,R
+1
+denoting the first segment.
+In the second line, output two space-separated integers
+L
+2
+,R
+2
+denoting the second segment.
+If there are no such segments, print
+−1 on a single line.
+Constraints
+1≤T≤10
+1≤X,Y≤10
+12
+Sample 1:
+Input
+Output
+3
+4 24
+1 1
+3 30
+1 3
+4 6
+-1
+5 6
+0 3
+Explanation:
+Test case
+1:
+1+3=4 and
+4⋅6=24, so
+[1,3] and
+[4,6] are both valid segments. Clearly, they also don't intersect.
+Test case
+2: When
+X=Y=1, we have
+S={[0,1],[1,1]}. The only two segments intersect with each other, so there is no answer.

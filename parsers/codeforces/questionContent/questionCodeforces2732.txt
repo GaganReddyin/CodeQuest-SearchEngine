@@ -1,0 +1,82 @@
+E. Road to 1600
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Egor wants to achieve a rating of 1600 points on the well-known chess portal ChessForces and he needs your help!
+Before you start solving the problem, Egor wants to remind you how the chess pieces move. Chess rook moves along straight lines up and down, left and right, as many squares as it wants. And when it wants, it can stop. The queen walks in all directions vertically and diagonally at any distance. You can see the examples below.
+To reach the goal, Egor should research the next topic:
+There is an
+N×N
+board. Each cell of the board has a number from
+1
+to
+N
+2
+in it and numbers in all cells are distinct.
+In the beginning, some chess figure stands in the cell with the number
+1
+. Note that this cell is already considered as visited. After that every move is determined by the following rules:
+Among all not visited yet cells to which the figure can get in one move, it goes to the cell that has minimal number.
+If all accessible cells were already visited and some cells are not yet visited, then the figure is teleported to the not visited cell that has minimal number. If this step happens, the piece pays a fee of
+1
+vun.
+If all cells are already visited, the process is stopped.
+Egor should find an
+N×N
+board on which the rook pays strictly less vuns than the queen during the round with this numbering. Help him to find such
+N×N
+numbered board, or tell that it doesn't exist.
+Input
+The only line contains one integer
+N
+ — the size of the board,
+1≤N≤500
+.
+Output
+The output should contain
+N
+lines.
+In
+i
+-th line output
+N
+numbers  — numbers on the
+i
+-th row of the board. All numbers from
+1
+to
+N×N
+must be used exactly once.
+On your board rook must pay strictly less vuns than the queen.
+If there are no solutions, print
+−1
+.
+If there are several solutions, you can output any of them.
+Examples
+input
+Copy
+1
+output
+Copy
+-1
+input
+Copy
+4
+output
+Copy
+4 3 6 12 
+7 5 9 15 
+14 1 11 10 
+13 8 16 2 
+Note
+In case we have
+1×1
+board, both rook and queen do not have a chance to pay fees.
+In second sample rook goes through cells
+1→3→4→6→9→5→7→13→2→8→16→11→10→12→15→(1 vun)→14
+.
+Queen goes through
+1→3→4→2→5→6→9→7→13→8→11→10→12→15→(1 vun)→14→(1 vun)→16
+.
+As a result rook pays 1 vun and queen pays 2 vuns.

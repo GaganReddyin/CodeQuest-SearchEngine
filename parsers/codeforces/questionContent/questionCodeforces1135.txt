@@ -1,0 +1,177 @@
+E. Cars
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+cars on a coordinate axis
+OX
+. Each car is located at an integer point initially and no two cars are located at the same point. Also, each car is oriented either left or right, and they can move at any constant positive speed in that direction at any moment.
+More formally, we can describe the
+i
+-th car with a letter and an integer: its orientation
+or
+i
+i
+and its location
+x
+i
+. If
+or
+i
+i
+=L
+, then
+x
+i
+is decreasing at a constant rate with respect to time. Similarly, if
+or
+i
+i
+=R
+, then
+x
+i
+is increasing at a constant rate with respect to time.
+We call two cars irrelevant if they never end up in the same point regardless of their speed. In other words, they won't share the same coordinate at any moment.
+We call two cars destined if they always end up in the same point regardless of their speed. In other words, they must share the same coordinate at some moment.
+Unfortunately, we lost all information about our cars, but we do remember
+m
+relationships. There are two types of relationships:
+1
+i
+j
+—
+i
+-th car and
+j
+-th car are irrelevant.
+2
+i
+j
+—
+i
+-th car and
+j
+-th car are destined.
+Restore the orientations and the locations of the cars satisfying the relationships, or report that it is impossible. If there are multiple solutions, you can output any.
+Note that if two cars share the same coordinate, they will intersect, but at the same moment they will continue their movement in their directions.
+Input
+The first line contains two integers,
+n
+and
+m
+(2≤n≤2⋅
+10
+5
+;1≤m≤min(2⋅
+10
+5
+,
+n(n−1)
+2
+)
+— the number of cars and the number of restrictions respectively.
+Each of the next
+m
+lines contains three integers,
+type
+,
+i
+, and
+j
+(1≤type≤2;1≤i,j≤n;i≠j)
+.
+If
+type
+=
+1
+,
+i
+-th car and
+j
+-th car are irrelevant. Otherwise,
+i
+-th car and
+j
+-th car are destined.
+It is guaranteed that for each pair of cars, there are at most
+1
+relationship between.
+Output
+In the first line, print either "YES" or "NO" (in any case), whether it is possible to restore the orientations and the locations of the cars satisfying the relationships.
+If the answer is "YES", print
+n
+lines each containing a symbol and an integer:
+or
+i
+i
+and
+x
+i
+(or
+i
+i
+∈{L,R};−
+10
+9
+≤
+x
+i
+≤
+10
+9
+)
+— representing the information of the
+i
+-th car.
+If the orientation is left, then
+or
+i
+i
+=
+L
+. Otherwise
+or
+i
+i
+=
+R
+.
+x
+i
+is the where the
+i
+-th car is located. Note that all
+x
+i
+should be distinct.
+We can prove that if there exists a solution, then there must be a solution satisfying the constraints on
+x
+i
+.
+Examples
+input
+Copy
+4 4
+1 1 2
+1 2 3
+2 3 4
+2 4 1
+output
+Copy
+YES
+R 0
+L -3
+R 5
+L 6
+input
+Copy
+3 3
+1 1 2
+1 2 3
+1 1 3
+output
+Copy
+NO

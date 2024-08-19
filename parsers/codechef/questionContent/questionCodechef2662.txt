@@ -1,0 +1,54 @@
+Inverse of a Function
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+The beauty of a sequence of non-negative integers is computed in the following way: for each of its non-empty (not necessarily contiguous) subsequences, compute the XOR of all elements of this subsequence; then, sum up all the XORs you obtained.
+Let
+F(N,B) denotes the number of non-negative integer sequences with length
+N which have beauty
+B. You are given three integers
+N,
+X and
+M. Find the smallest non-negative integer
+B such that
+F(N,B)modM=X, or determine that there is no such
+B. Since even the smallest such
+B might be very large, compute its remainder modulo
+998,244,353.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+N,
+X and
+M.
+Output
+For each test case, print a single line containing one integer ― the smallest valid
+B (modulo
+998,244,353), or
+−1 if there is no valid
+B.
+Constraints
+1≤T≤100
+1≤N≤10
+10,000
+1≤M≤10
+9
+0≤X<M
+Subtasks
+Subtask #1 (45 points):
+N≤10
+9
+M≤10
+5
+Subtask #2 (55 points): original constraints
+Sample 1:
+Input
+Output
+3
+2 2 7
+4 3 17
+3 5 13
+6
+-1
+28

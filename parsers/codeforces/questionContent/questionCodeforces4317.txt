@@ -1,0 +1,166 @@
+D. Ants
+time limit per test3 seconds
+memory limit per test768 megabytes
+inputstandard input
+outputstandard output
+There is a tree with
+n
+vertices. There are also
+m
+ants living on it. Each ant has its own color. The
+i
+-th ant has two favorite pairs of vertices: (
+a
+i
+,
+b
+i
+) and (
+c
+i
+,
+d
+i
+). You need to tell if it is possible to paint the edges of the tree in
+m
+colors so that every ant will be able to walk between vertices from one of its favorite pairs using only edges of his color; if it is possible, you need to print which pair every ant should use.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤
+10
+5
+) — the number of vertices.
+Each of the next
+n−1
+lines contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+,
+v
+i
+≤n
+), meaning that there is an edge between vertices
+u
+i
+and
+v
+i
+.
+The next line contains a single integer
+m
+(
+1≤m≤
+10
+4
+) — the number of ants.
+Each of the next
+m
+lines contains four integers
+a
+i
+,
+b
+i
+,
+c
+i
+, and
+d
+i
+(
+1≤
+a
+i
+,
+b
+i
+,
+c
+i
+,
+d
+i
+≤n
+,
+a
+i
+≠
+b
+i
+,
+c
+i
+≠
+d
+i
+), meaning that pairs (
+a
+i
+,
+b
+i
+) and (
+c
+i
+,
+d
+i
+) are favorite for the
+i
+-th ant.
+Output
+Print "NO" (without quotes) if the wanted painting is impossible.
+Otherwise, print "YES" (without quotes). Print
+m
+lines. On the
+i
+-th line, print
+1
+if the
+i
+-th ant will use the first pair and
+2
+otherwise. If there are multiple answers, print any.
+Examples
+input
+Copy
+6
+1 2
+3 1
+4 1
+5 2
+6 2
+3
+2 6 3 4
+1 6 6 5
+1 4 5 2
+output
+Copy
+YES
+2
+1
+2
+input
+Copy
+5
+1 2
+1 3
+1 4
+1 5
+2
+2 3 4 5
+3 4 5 2
+output
+Copy
+NO
+Note
+In the sample, the second and the third edge should be painted in the first color, the first and the fifth should be painted in the second color, and the fourth should be painted in the third color.

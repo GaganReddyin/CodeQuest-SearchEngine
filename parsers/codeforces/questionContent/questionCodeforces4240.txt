@@ -1,0 +1,75 @@
+A. Find Square
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider a table of size
+n×m
+, initially fully white. Rows are numbered
+1
+through
+n
+from top to bottom, columns
+1
+through
+m
+from left to right. Some square inside the table with odd side length was painted black. Find the center of this square.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤115
+) — the number of rows and the number of columns in the table.
+The
+i
+-th of the next
+n
+lines contains a string of
+m
+characters
+s
+i1
+s
+i2
+…
+s
+im
+(
+s
+ij
+is 'W' for white cells and 'B' for black cells), describing the
+i
+-th row of the table.
+Output
+Output two integers
+r
+and
+c
+(
+1≤r≤n
+,
+1≤c≤m
+) separated by a space — the row and column numbers of the center of the black square.
+Examples
+input
+Copy
+5 6
+WWBBBW
+WWBBBW
+WWBBBW
+WWWWWW
+WWWWWW
+output
+Copy
+2 4
+input
+Copy
+3 3
+WWW
+BWW
+WWW
+output
+Copy
+2 1

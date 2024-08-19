@@ -1,0 +1,110 @@
+A. Palindromic Indices
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a palindromic string
+s
+of length
+n
+.
+You have to count the number of indices
+i
+(1≤i≤n)
+such that the string after removing
+s
+i
+from
+s
+still remains a palindrome.
+For example, consider
+s
+= "aba"
+If we remove
+s
+1
+from
+s
+, the string becomes "ba" which is not a palindrome.
+If we remove
+s
+2
+from
+s
+, the string becomes "aa" which is a palindrome.
+If we remove
+s
+3
+from
+s
+, the string becomes "ab" which is not a palindrome.
+A palindrome is a string that reads the same backward as forward. For example, "abba", "a", "fef" are palindromes whereas "codeforces", "acd", "xy" are not.
+Input
+The input consists of multiple test cases. The first line of the input contains a single integer
+t
+(1≤t≤
+10
+3
+)
+ — the number of test cases. Description of the test cases follows.
+The first line of each testcase contains a single integer
+n
+(2≤n≤
+10
+5
+)
+ — the length of string
+s
+.
+The second line of each test case contains a string
+s
+consisting of lowercase English letters. It is guaranteed that
+s
+is a palindrome.
+It is guaranteed that sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output a single integer  — the number of indices
+i
+(1≤i≤n)
+such that the string after removing
+s
+i
+from
+s
+still remains a palindrome.
+Example
+input
+Copy
+3
+3
+aba
+8
+acaaaaca
+2
+dd
+output
+Copy
+1
+4
+2
+Note
+The first test case is described in the statement.
+In the second test case, the indices
+i
+that result in palindrome after removing
+s
+i
+are
+3,4,5,6
+. Hence the answer is
+4
+.
+In the third test case, removal of any of the indices results in "d" which is a palindrome. Hence the answer is
+2
+.

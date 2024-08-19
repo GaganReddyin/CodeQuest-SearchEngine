@@ -1,0 +1,126 @@
+G. Maximum Adjacent Pairs
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+non-negative integers.
+You have to replace each
+0
+in
+a
+with an integer from
+1
+to
+n
+(different elements equal to
+0
+can be replaced by different integers).
+The value of the array you obtain is the number of integers
+k
+from
+1
+to
+n
+such that the following condition holds: there exist a pair of adjacent elements equal to
+k
+(i. e. there exists some
+i∈[1,n−1]
+such that
+a
+i
+=
+a
+i+1
+=k
+). If there are multiple such pairs for some integer
+k
+, this integer is counted in the value only once.
+Your task is to obtain the array with the maximum possible value.
+Input
+The first line contains one integer
+n
+(
+2≤n≤3⋅
+10
+5
+) — the number of elements in the array.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+≤min(n,600)
+) — the elements of the array.
+Output
+Print
+n
+integers not less than
+1
+and not greater than
+n
+ — the array with the maximum possible value you can obtain.
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+4
+1 1 0 2
+output
+Copy
+1 1 2 2 
+input
+Copy
+5
+0 0 0 0 0
+output
+Copy
+3 1 1 3 3
+input
+Copy
+5
+1 2 3 4 5
+output
+Copy
+1 2 3 4 5 
+input
+Copy
+6
+1 0 0 0 0 1
+output
+Copy
+1 2 3 3 1 1
+input
+Copy
+3
+3 0 2
+output
+Copy
+3 2 2 
+input
+Copy
+5
+1 0 2 0 1
+output
+Copy
+1 2 2 1 1 
+input
+Copy
+7
+1 0 2 3 1 0 2
+output
+Copy
+1 2 2 3 1 1 2 

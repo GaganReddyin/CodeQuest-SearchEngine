@@ -1,0 +1,142 @@
+Min-Max Rotations
+Problem
+Shamili has an array
+A=[A
+0
+,A
+1
+,…,A
+N−1
+] of length
+N. She painted each element of this array in either Black or White.
+She allows you to right rotate the values in array
+A by any value
+k. In other words, let
+B be the resulting array after right rotating
+A by
+k, then
+B
+i
+=A
+(i−k+n)(modN)
+where
+B
+0
+and
+A
+0
+are the first elements in the arrays
+A and
+B respectively). Note that when you rotate the array
+A, their colors won't get rotated and only the values in it get rotated. For example, let the array
+A be
+[3,2,7,6] and their colors be
+[Black, Black, White, White
+]. Right rotating
+A by
+2 will give you the array
+[7,6,3,2] with colors
+[Black, Black, White, White
+].
+Let
+maxb be the maximum value among all the elements that are painted in Black and
+minw be the minimum value among all the elements that are painted in White. Shamili asked you to find the maximum value of
+maxb−minw after right rotating the array
+a at most once.
+It is guaranteed that at least one element in the array is colored in Black and at least one element is colored in White.
+Input Format
+The first line of input contains an integer
+T denoting the number of test cases.
+T test cases follow.
+The first line of each test case contains the integer
+N.
+The second line contains
+N integers
+A
+0
+,A
+1
+,A
+2
+,...,A
+N−1
+. Note that
+A is 0-indexed.
+The third line of each test case contains a string
+C of size
+N representing the color of each element. (
+C
+i
+=‘B‘ if the
+i
+th
+element in array
+A is painted in Black color and
+C
+i
+=‘W‘ if the
+i
+th
+element is painted in White color). Note that
+C is also 0-indexed, i.e. the first character of
+C is
+C
+0
+and the last character is
+C
+N−1
+.
+Output Format
+For each test case, output the maximum possible value of
+maxb−minw.
+Constraints
+1≤T≤10
+5
+2≤N≤15⋅10
+5
+1≤A
+i
+≤10
+9
+C
+i
+∈
+{‘B‘,‘W‘}
+Sum of
+N over all test cases doesn't exceed
+15⋅10
+5
+.
+Subtasks
+Subtask
+1 (25 points):
+1≤∑N≤10
+5
+Subtask
+2 (75 points): original constraints
+Sample 1:
+Input
+Output
+2
+4
+5 1 2 6
+BWBW
+5
+1 8 2 9 3
+BBWBB
+4
+8
+Explanation:
+Test case
+1: When we right rotate the array by
+1, the resulting array will be
+[6,5,1,2]. Now the maximum value in Black elements is
+6 (
+maxb) and minimum value in White elements (
+minw) is
+2. Therefore, the answer will be
+6−2=4. It can be shown that this is the maximum result possible.
+Test case
+2: We can convert the given array to
+[9,3,1,8,2]. So, the maximum value is
+9−1=8.

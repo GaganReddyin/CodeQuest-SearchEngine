@@ -1,0 +1,43 @@
+Harry in the Chamber of Secrets
+Problem
+“Tom Riddle: [in Parseltongue] Kill him! [to Harry] Parseltongue won't save you now, Potter! It only obeys me!”
+Harry was in the Chamber of Secrets. Fawkes blinded the Basilisk and the Sorting Hat eventually produced a sword with which Harry can finally kill the Basilisk. But for Harry to use the Godric Gryffindor's sword he has to prove that he is worth it. The hat poses following problem for Harry to solve.
+Let A and B be 2 matrices of size U * V and W * X respectively.
+Let P be a submatrix of matrix A and Q be a submatrix of matrix B, each of size K * K.
+In how many ways can you select a pair of P and Q such that they are identical? As Harry doesn't have much time. Help him save Hogwarts.
+Input
+First line contains 5 integers U, V, W, X and k.
+Next U lines contains V integers each, denoting matrix A.
+Next W lines contains X integers each, denoting matrix B.
+
+Output
+It contains a single line containing the count of such pairs.
+
+Constraints
+1 ≤ U, V, W, X ≤ 2000
+1 ≤ K ≤ min(U,V,W,X)
+1 ≤ Ai,j, Bi,j ≤ 500
+
+Example
+Input:
+3 3 3 3 2
+1 2 1
+2 1 2
+1 2 1
+1 2 1
+2 1 2
+1 2 1
+Output:
+8
+
+Explanation
+Following pairs of size 2 * 2 submatrices are identical to each other in given Matrix A and B.
+M(TL, BR) denotes a submatrix of Matrix M with top left corner TL and bottom right corner BR.
+A((1,1),(2,2)) and B((1,1),(2,2))
+A((1,1),(2,2)) and B((2,2),(3,3))
+A((2,2),(3,3)) and B((1,1),(2,2))
+A((2,2),(3,3)) and B((2,2),(3,3))
+A((2,1),(3,2)) and B((2,1),(3,2))
+A((2,1),(3,2)) and B((1,2),(2,3))
+A((1,2),(2,3)) and B((2,1),(3,2))
+A((1,2),(2,3)) and B((1,2),(2,3))

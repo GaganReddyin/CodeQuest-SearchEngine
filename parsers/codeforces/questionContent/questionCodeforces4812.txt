@@ -1,0 +1,26 @@
+B. Position in Fraction
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have a fraction . You need to find the first occurrence of digit c into decimal notation of the fraction after decimal point.
+Input
+The first contains three single positive integers a, b, c (1 ≤ a < b ≤ 105, 0 ≤ c ≤ 9).
+Output
+Print position of the first occurrence of digit c into the fraction. Positions are numbered from 1 after decimal point. It there is no such position, print -1.
+Examples
+input
+Copy
+1 2 0
+output
+Copy
+2
+input
+Copy
+2 3 7
+output
+Copy
+-1
+Note
+The fraction in the first example has the following decimal notation: . The first zero stands on second position.
+The fraction in the second example has the following decimal notation: . There is no digit 7 in decimal notation of the fraction.

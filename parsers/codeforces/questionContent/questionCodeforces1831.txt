@@ -1,0 +1,70 @@
+A. Binary Literature
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A bitstring is a string that contains only the characters 0 and 1.
+Koyomi Kanou is working hard towards her dream of becoming a writer. To practice, she decided to participate in the Binary Novel Writing Contest. The writing prompt for the contest consists of three bitstrings of length
+2n
+. A valid novel for the contest is a bitstring of length at most
+3n
+that contains at least two of the three given strings as subsequences.
+Koyomi has just received the three prompt strings from the contest organizers. Help her write a valid novel for the contest.
+A string
+a
+is a subsequence of a string
+b
+if
+a
+can be obtained from
+b
+by deletion of several (possibly, zero) characters.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤
+10
+5
+).
+Each of the following three lines contains a bitstring of length
+2n
+. It is guaranteed that these three strings are pairwise distinct.
+It is guaranteed that the sum of
+n
+across all test cases does not exceed
+10
+5
+.
+Output
+For each test case, print a single line containing a bitstring of length at most
+3n
+that has at least two of the given bitstrings as subsequences.
+It can be proven that under the constraints of the problem, such a bitstring always exists.
+If there are multiple possible answers, you may output any of them.
+Example
+input
+Copy
+2
+1
+00
+11
+01
+3
+011001
+111010
+010001
+output
+Copy
+010
+011001010
+Note
+In the first test case, the bitstrings 00 and 01 are subsequences of the output string: 010 and 010. Note that 11 is not a subsequence of the output string, but this is not required.
+In the second test case all three input strings are subsequences of the output string: 011001010, 011001010 and 011001010.

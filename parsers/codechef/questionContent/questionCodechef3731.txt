@@ -1,0 +1,136 @@
+Prefix Max
+Problem
+Consider an array
+B of length
+M.
+We define the prefix maximum array of array
+B,
+F(B), as an array
+C of length
+M such that
+C
+i
+=max(B
+1
+,B
+2
+,…B
+i
+).
+Stack had a permutation
+P of length
+2⋅N. He deleted the last
+N elements from
+P to obtain an array
+P of size
+N.
+Stack performs the following step for all permutations
+Q of length
+2⋅N :
+Check whether
+Q
+i
+=P
+i
+for all
+1≤i≤N;
+If the above condition is true, insert
+F(Q) in set
+Z.
+Find the resultant size of set
+Z.
+Since the value might be large, please print it modulo
+998244353.
+Note that a permutation of length
+2⋅N contains all integers from
+1 to
+2⋅N exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the current length of permutation
+P.
+The next line contains
+N space-separated integers
+P
+1
+,P
+2
+,…P
+N
+representing the first
+N elements of
+P.
+Output Format
+For each test case, output on a new line the size of set
+Z modulo
+998244353.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+6
+1≤P
+i
+≤2⋅N
+P
+i
+
+=P
+j
+for
+1≤i<j≤N
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+5
+1
+1
+2
+2 3
+3
+4 1 2
+3
+6 3 4
+7
+4 2 7 1 9 8 3
+1
+2
+5
+1
+297
+Explanation:
+Test case
+1: Since
+P=[1], the only possible value of
+Q is
+[1,2].
+Test case
+2: Given
+P=[2,3]. The possible permutations
+Q of length
+4, for which the first
+N elements match
+P are
+Q=[2,3,1,4] and
+Q=[2,3,4,1]. Thus,
+Z={F([2,3,1,4]),F([2,3,4,1])}={[2,3,3,4],[2,3,4,4]}.
+Test case
+3: Given
+P=[4,1,2]. The possible permutations
+Q of length
+6, for which the first
+N elements match
+P are
+[4,1,2,3,5,6],[4,1,2,3,6,5],[4,1,2,5,3,6],[4,1,2,5,6,3],[4,1,2,6,3,5],[4,1,2,6,5,3].
+Thus,
+Z={F([4,1,2,3,5,6]),F([4,1,2,3,6,5]),F([4,1,2,5,3,6]),F([4,1,2,5,6,3]),F([4,1,2,6,3,5]),F([4,1,2,6,5,3])}= {[4,4,4,4,5,6],[4,4,4,4,6,6],[4,4,4,5,5,6],[4,4,4,5,6,6],[4,4,4,6,6,6]}.
+Note that
+F([4,1,2,6,3,5])=F([4,1,2,6,5,3]).

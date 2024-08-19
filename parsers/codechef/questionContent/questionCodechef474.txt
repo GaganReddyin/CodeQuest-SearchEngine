@@ -1,0 +1,77 @@
+Friends Meetup
+Problem
+Chef and his friend is standing on the X-axis at the points
+X
+1
+and
+X
+2
+respectively.
+Chef moves one step forward each second (that is he moves to
+X
+1
++1 after the
+1
+st
+second,
+X
+1
++2 after the
+2
+nd
+second, and so on), whereas his friend moves
+2 steps forward each second (that is he moves to
+X
+2
++2 after the
+1
+st
+second,
+X
+2
++4 after the
+2
+nd
+second, and so on).
+You need to determine if Chef will be able to meet his friend or not. You can assume that Chef and his friend both keep on moving for a long indefinite amount of time and also that they move simultaneously.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contain two space-separated integers
+X
+1
+and
+X
+2
+- the position of Chef and his friend at the start respectively.
+Output Format
+For each test case, output on a single line YES (without quotes) if Chef can meet his friend, and NO otherwise.
+You may print each character of the string in uppercase or lowercase (for example, the strings YeS, YEs, yes and yeS will all be treated as identical).
+Constraints
+1≤T≤10
+5
+1≤X
+1
+,X
+2
+≤10
+9
+Sample 1:
+Input
+Output
+3
+1 1
+1 7
+7 1
+YES
+NO
+YES
+Explanation:
+Test case
+1: Chef and his friend are on the same coordinate initially. Hence, they have already met.
+Test case
+2: No matter for how long they move Chef and his friend will never meet.
+Test case
+3: After
+6 seconds, Chef and his friend both will be at
+X=13.

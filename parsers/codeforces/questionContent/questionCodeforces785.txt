@@ -1,0 +1,126 @@
+D. Almost Triple Deletions
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer
+n
+and an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+.
+In one operation, you can choose an index
+i
+(
+1≤i<n
+) for which
+a
+i
+≠
+a
+i+1
+and delete both
+a
+i
+and
+a
+i+1
+from the array. After deleting
+a
+i
+and
+a
+i+1
+, the remaining parts of the array are concatenated.
+For example, if
+a=[1,4,3,3,6,2]
+, then after performing an operation with
+i=2
+, the resulting array will be
+[1,3,6,2]
+.
+What is the maximum possible length of an array of equal elements obtainable from
+a
+by performing several (perhaps none) of the aforementioned operations?
+Input
+Each test contains multiple test cases. The first line of input contains one integer
+t
+(
+1≤t≤1000
+) — the number of test cases. The following lines contain the descriptions of the test cases.
+The first line of each test case contains a single integer
+n
+(
+1≤n≤5000
+) — the length of array
+a
+.
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — the elements of array
+a
+.
+It is guaranteed that the sum of
+n
+across all test cases does not exceed
+10000
+.
+Output
+For each testcase, print a single integer, the maximum possible length of an array of equal elements obtainable from
+a
+by performing a sequence of operations.
+Example
+input
+Copy
+5
+7
+1 2 3 2 1 3 3
+1
+1
+6
+1 1 1 2 2 2
+8
+1 1 2 2 3 3 1 1
+12
+1 5 2 3 3 3 4 4 4 4 3 3
+output
+Copy
+3
+1
+0
+4
+2
+Note
+For the first testcase, an optimal sequence of operations would be:
+[1,2,3,2,1,3,3]→[3,2,1,3,3]→[3,3,3]
+.
+For the second testcase, all elements in the array are already equal.
+For the third testcase, the only possible sequence of operations is:
+[1,1,1,2,2,2]→[1,1,2,2]→[1,2]→[]
+. Note that, according to the statement, the elements deleted at each step must be different.
+For the fourth testcase, the optimal sequence of operations is:
+[1,1,2,2,3,3,1,1]→[1,1,2,3,1,1]→[1,1,1,1]
+.
+For the fifth testcase, one possible reachable array of two equal elements is
+[4,4]
+.

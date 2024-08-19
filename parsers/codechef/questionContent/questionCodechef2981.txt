@@ -1,0 +1,65 @@
+Sticks
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+Chef and his little brother are playing with sticks. Initially, Chef has
+N sticks with lengths
+A
+1
+,A
+2
+,…,A
+N
+. He should give his little brother at least
+K of these sticks. Afterwards, Chef's brother should choose four sticks and use them to form a rectangle (a square is also a rectangle). Chef does not want his brother to break any of the sticks, so each of the chosen sticks should be one side of the rectangle.
+Chef's little brother wants the rectangle he makes to have the maximum possible area, while Chef wants it to have the minimum possible area. Therefore, Chef wants to choose the sticks to give his brother in such a way that they cannot be used to form a rectangle; if it's impossible, then he wants to choose the sticks in such a way that the maximum area of a rectangle his little brother can form is minimum possible.
+Can you find the area of the resulting rectangle (or determine that it won't be possible to form any) if both Chef and his little brother play optimally?
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+K.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the area of the resulting rectangle or
+−1 if Chef can give his brother sticks that cannot be used to form any rectangle.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+0≤K≤N
+the sum of
+N over all test cases does not exceed
+10
+5
+1≤A
+i
+≤10
+9
+for each valid
+i
+Sample 1:
+Input
+Output
+2
+7 6
+1 2 3 1 2 2 1
+5 4
+1 2 1 2 3
+2
+-1
+Explanation:
+Example case 1: Chef should give his brother all sticks except one. Regardless of the length of that one stick, Chef's brother can choose sticks with lengths
+1,2,1,2 to create a rectangle with area
+1⋅2=2.
+Example case 2: If Chef gives his brother sticks with lengths
+2,1,2,3, then there is no way to form a rectangle.

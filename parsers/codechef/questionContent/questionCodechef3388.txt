@@ -1,0 +1,181 @@
+Chef and Reordering
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N cells (numbered
+1 through
+N). Initially, each cell contains a single Chef.
+You are given
+Q pairs of cell ranges
+[L
+1
+,R
+1
+],[L
+2
+,R
+2
+],…,[L
+Q
+,R
+Q
+]. Consider a sequence of integers
+a
+1
+,a
+2
+,…,a
+N
+, where
+1≤a
+i
+≤N for each valid
+i. For each
+k from
+1 to
+Q, the following process is performed:
+For each
+i (
+L
+k
+≤i≤R
+k
+), the Chef from cell
+i moves to cell
+a
+i
+. All Chefs move at the same time.
+We check if each cell contains exactly one Chef afterwards. If there is a cell which does not contain exactly one Chef, the sequence
+a is invalid and we stop.
+You should find a sequence
+a which is not invalid. (Note that for such a sequence, each cell contains exactly one Chef at any point.) In addition, you are given an integer
+p with the following meaning:
+If
+p=0, you should find the lexicographically smallest sequence
+a.
+If
+p=1, you should find the lexicographically largest sequence
+a.
+Input
+The first line of the input contains two space-separated integers
+T and
+p, where
+T denotes the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+Q lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+L
+i
+and
+R
+i
+.
+Output
+For each test case, print a single line containing
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+If
+p=0, the sequence
+a
+1
+,a
+2
+,…,a
+N
+should be the lexicographically smallest valid sequence.
+If
+p=1, the sequence
+a
+1
+,a
+2
+,…,a
+N
+should be the lexicographically largest valid sequence.
+Constraints
+1≤T≤10
+3
+0≤p≤1
+1≤N,Q≤2⋅10
+5
+1≤L
+i
+≤R
+i
+≤N for each valid
+i
+the sum of
+N over all test cases does not exceed
+2⋅10
+5
+the sum of
+Q over all test cases does not exceed
+2⋅10
+5
+Subtasks
+Subtask #1 (15 points):
+p=0
+Subtask #2 (35 points):
+p=1
+the sum of
+N over all test cases does not exceed
+10
+3
+the sum of
+Q over all test cases does not exceed
+10
+3
+Subtask #3 (50 points):
+p=1
+Example Input 1
+2 0
+7 3
+2 5
+7 7
+3 4
+1 2
+1 1
+1 1
+Example Output 1
+1 2 3 4 5 1 7 
+1
+Explanation
+Example case 1: Whenever a Chef should move from some cell
+i, we have
+a
+i
+=i, so the Chefs do not move. That means the sequence
+[1,2,3,4,5,1,7] is valid and it can be proved that it is lexicographically smallest, too.
+Example Input 2
+2 1
+7 3
+2 5
+7 7
+3 4
+1 2
+1 1
+1 1
+Example Output 2
+7 5 4 3 2 7 7 
+1
+Explanation
+Example case 1: The Chefs move like this:
+first,
+2→5,3→4,4→3,5→2; then, there is still exactly one Chef in each cell
+next, Chef
+7 stays in his cell
+finally, the Chefs in cells
+3 and
+4 swap places
+There is no point when there are two Chefs in a single cell at the same time, so the sequence
+[7,5,4,3,2,7,7] is valid and it can be proved that it is lexicographically largest, too.

@@ -1,0 +1,126 @@
+Crying Colours
+Problem
+You have a total of
+3N balls of colours
+Red,
+Blue and
+Green. There are exactly
+N balls of each colour.
+These
+3N balls are now distributed to
+3 boxes such that each box contains exactly
+N balls. You are given the contents of each box.
+You would like the
+1
+st
+box to contain all the red balls, the
+2
+nd
+box to contain all the green balls, and the
+3
+rd
+box to contain all the blue balls. Note that the given order of boxes is important here — it is not enough for each box to contain only balls of a single colour.
+To achieve this, you can perform the following operation several (possibly, zero) times:
+Pick any two distinct boxes, pick any one ball from each of these two boxes, and swap them.
+Determine the minimum number of operations required to satisfy the given condition.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case consists of
+4 lines of input.
+The first line of each test case contains a single integer
+N, denoting the number of balls of each colour.
+The
+i-th of the next three lines contains three space-separated integers
+R
+i
+,G
+i
+and
+B
+i
+— the number of red, green, and blue balls in the
+i-th box respectively.
+Output Format
+For each test case, output a single line containing one integer — the minimum number of operations required such that the given condition is satisfied.
+Constraints
+1≤T≤1000
+1≤N≤1000
+0≤R
+i
+,G
+i
+,B
+i
+≤N
+R
+1
++G
+1
++B
+1
+=R
+2
++G
+2
++B
+2
+=R
+3
++G
+3
++B
+3
+=N
+R
+1
++R
+2
++R
+3
+=G
+1
++G
+2
++G
+3
+=B
+1
++B
+2
++B
+3
+=N
+Subtasks
+Subtask #1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+2
+3
+3 0 0
+0 3 0
+0 0 3
+5
+2 1 2
+1 4 0
+2 0 3
+0
+3
+Explanation:
+Test case
+1: Initially,
+The first box has
+3 red balls and none of any other colours
+The second box has
+3 green balls and none of any other colours
+The third box has
+3 blue balls and none of any other colours
+The condition is already satisfied, and so no moves are required.
+Test case
+2: One sequence of moves is as follows:
+Swap a green ball from the first box with a red ball from the second box.
+Swap a blue ball from the first box with a red ball from the third box.
+Once again, swap a blue ball from the first box with a red ball from the third box.
+Now the first box has only red balls, the second has only green balls, and the third has only blue ones — as required. It can be verified that no sequence of less than three moves achieves this result.

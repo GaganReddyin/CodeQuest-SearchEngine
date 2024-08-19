@@ -1,0 +1,101 @@
+Subarray permutations
+Problem
+A permutation of length
+N is an array of
+N integers
+P=[P
+1
+,P
+2
+,…,P
+N
+] such that every integer from
+1 to
+N (inclusive) appears in it exactly once. For example,
+[2,3,4,1] is a permutation of length
+4.
+A subsegment of an array
+A[L…R]=[A
+L
+,A
+L+1
+,…,A
+R
+] is called good if the subsegment is a permutation of length
+(R−L+1). For example, the array
+A=[2,3,1,4,2] contains
+3 good subsegments:
+A[3…3]=[1],
+A[1…3]
+=[2,3,1],
+A[2…5]=[3,1,4,2].
+You are given two integers
+N and
+K. Find a permutation of length
+N such that it contains exactly
+K good subsegments. Print -1 if no such permutation exists.
+Input Format
+The first line contains an integer
+T, denoting the number of test cases. The
+T test cases then follow:
+The first and only line of each test case contains two space-separated integers
+N,K.
+Output Format
+For each test case, output a single line containing the answer:
+If no permutation satisfies the given conditions, print −1.
+Otherwise, print
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+, denoting the elements of the permutation. If there are multiple answers, you can output any of them.
+Constraints
+1≤T≤10
+3
+1≤N≤10
+5
+1≤K≤N
+Sum of
+N over all test cases does not exceed
+3⋅10
+5
+.
+Subtasks
+Subtask 1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+4
+1 1
+3 2
+4 1
+5 3
+1
+1 3 2 
+-1
+5 3 1 4 2
+Explanation:
+Test case
+1: The only permutation of length
+1 is
+[1], which contains one good subsegment
+A[1…1].
+Test case
+2: The permutation
+[1,3,2] contains
+2 good subsegments:
+A[1…1],
+A[1…3].
+Test case
+3: There is no way to construct a permutation of length
+4 which contains one good subsegment.
+Test case
+4: The permutation
+[5,3,1,4,2] contains
+3 good subsegments:
+A[3…3],A[2…5],A[1…5]. There are other permutations of length
+5 having
+3 good subsegments.

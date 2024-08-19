@@ -1,0 +1,191 @@
+E. Yet Another Array Counting Problem
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+The position of the leftmost maximum on the segment
+[l;r]
+of array
+x=[
+x
+1
+,
+x
+2
+,…,
+x
+n
+]
+is the smallest integer
+i
+such that
+l≤i≤r
+and
+x
+i
+=max(
+x
+l
+,
+x
+l+1
+,…,
+x
+r
+)
+.
+You are given an array
+a=[
+a
+1
+,
+a
+2
+,…,
+a
+n
+]
+of length
+n
+. Find the number of integer arrays
+b=[
+b
+1
+,
+b
+2
+,…,
+b
+n
+]
+of length
+n
+that satisfy the following conditions:
+1≤
+b
+i
+≤m
+for all
+1≤i≤n
+;
+for all pairs of integers
+1≤l≤r≤n
+, the position of the leftmost maximum on the segment
+[l;r]
+of the array
+b
+is equal to the position of the leftmost maximum on the segment
+[l;r]
+of the array
+a
+.
+Since the answer might be very large, print its remainder modulo
+10
+9
++7
+.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+3
+) — the number of test cases.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n,m≤2⋅
+10
+5
+,
+n⋅m≤
+10
+6
+).
+The second line of each test case contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤m
+) — the array
+a
+.
+It is guaranteed that the sum of
+n⋅m
+over all test cases doesn't exceed
+10
+6
+.
+Output
+For each test case print one integer — the number of arrays
+b
+that satisfy the conditions from the statement, modulo
+10
+9
++7
+.
+Example
+input
+Copy
+4
+3 3
+1 3 2
+4 2
+2 2 2 2
+6 9
+6 9 6 9 6 9
+9 100
+10 40 20 20 100 60 80 60 60
+output
+Copy
+8
+5
+11880
+351025663
+Note
+In the first test case, the following
+8
+arrays satisfy the conditions from the statement:
+[1,2,1]
+;
+[1,2,2]
+;
+[1,3,1]
+;
+[1,3,2]
+;
+[1,3,3]
+;
+[2,3,1]
+;
+[2,3,2]
+;
+[2,3,3]
+.
+In the second test case, the following
+5
+arrays satisfy the conditions from the statement:
+[1,1,1,1]
+;
+[2,1,1,1]
+;
+[2,2,1,1]
+;
+[2,2,2,1]
+;
+[2,2,2,2]
+.

@@ -1,0 +1,86 @@
+H. Submatrices
+time limit per test3.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given matrix
+s
+that contains
+n
+rows and
+m
+columns. Each element of a matrix is one of the
+5
+first Latin letters (in upper case).
+For each
+k
+(
+1≤k≤5
+) calculate the number of submatrices that contain exactly
+k
+different letters. Recall that a submatrix of matrix
+s
+is a matrix that can be obtained from
+s
+after removing several (possibly zero) first rows, several (possibly zero) last rows, several (possibly zero) first columns, and several (possibly zero) last columns. If some submatrix can be obtained from
+s
+in two or more ways, you have to count this submatrix the corresponding number of times.
+Input
+The first line contains two integers
+n
+and
+m
+(
+1≤n,m≤800
+).
+Then
+n
+lines follow, each containing the string
+s
+i
+(
+|
+s
+i
+|=m
+) —
+i
+-th row of the matrix.
+Output
+For each
+k
+(
+1≤k≤5
+) print one integer — the number of submatrices that contain exactly
+k
+different letters.
+Examples
+input
+Copy
+2 3
+ABB
+ABA
+output
+Copy
+9 9 0 0 0 
+input
+Copy
+6 6
+EDCECE
+EDDCEB
+ACCECC
+BAEEDC
+DDDDEC
+DDAEAD
+output
+Copy
+56 94 131 103 57 
+input
+Copy
+3 10
+AEAAEEEEEC
+CEEAAEEEEE
+CEEEEAACAA
+output
+Copy
+78 153 99 0 0 

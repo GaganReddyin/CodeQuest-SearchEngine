@@ -1,0 +1,126 @@
+A. Long Beautiful Integer
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an integer
+x
+of
+n
+digits
+a
+1
+,
+a
+2
+,…,
+a
+n
+, which make up its decimal notation in order from left to right.
+Also, you are given a positive integer
+k<n
+.
+Let's call integer
+b
+1
+,
+b
+2
+,…,
+b
+m
+beautiful if
+b
+i
+=
+b
+i+k
+for each
+i
+, such that
+1≤i≤m−k
+.
+You need to find the smallest beautiful integer
+y
+, such that
+y≥x
+.
+Input
+The first line of input contains two integers
+n,k
+(
+2≤n≤200000,1≤k<n
+): the number of digits in
+x
+and
+k
+.
+The next line of input contains
+n
+digits
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+a
+1
+≠0
+,
+0≤
+a
+i
+≤9
+): digits of
+x
+.
+Output
+In the first line print one integer
+m
+: the number of digits in
+y
+.
+In the next line print
+m
+digits
+b
+1
+,
+b
+2
+,…,
+b
+m
+(
+b
+1
+≠0
+,
+0≤
+b
+i
+≤9
+): digits of
+y
+.
+Examples
+input
+Copy
+3 2
+353
+output
+Copy
+3
+353
+input
+Copy
+4 2
+1234
+output
+Copy
+4
+1313

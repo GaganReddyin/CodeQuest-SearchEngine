@@ -1,0 +1,73 @@
+Distinct Neighbours 
+Problem
+You are given three positive integers
+N,x, and
+y.
+Count the number of arrays
+P of length
+N such that:
+P
+1
+=P
+N
+=1
+There are exactly
+x indices
+i such that
+P
+i
+=1
+There are exactly
+y indices
+i such that
+P
+i
+=2
+There are exactly
+N−x−y indices
+i such that
+P
+i
+=3
+P
+i
+
+=P
+i+1
+for each
+1≤i<N
+Since the answer can be large, output it modulo
+998244353.
+Input Format
+The first and only line of input will contain three space-separated integers
+N,x and
+y.
+Output Format
+Output a single integer: the number of arrays obtained, modulo
+998244353.
+Constraints
+3≤N≤2⋅10
+6
+2≤x≤N−1
+1≤y≤N−2
+x+y≤N
+Sample 1:
+Input
+Output
+5 3 1
+2
+Sample 2:
+Input
+Output
+10 4 3
+44
+Explanation:
+Test case
+1: Only two valid arrays are possible:
+[1,2,1,3,1]
+[1,3,1,2,1]
+Test case
+2: A couple of valid arrays are
+[1,2,3,1,2,3,1,2,3,1] and
+[1,3,2,1,3,1,2,3,2,1]. It can be verified that there are
+44 in total.

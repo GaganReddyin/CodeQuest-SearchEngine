@@ -1,0 +1,97 @@
+Grumpy Granny
+Problem
+After the death of their mother, Alphonse and Edward now live with Pinako and Winry.
+Pinako is worried about their obsession with Alchemy, and that they don't give attention to their studies.
+So to improve their mathematical solving ability, every day she gives a mathematical problem to solve. They can go out to practice Alchemy only after they have solved the problem. Help them by solving the given problem, so that they can go early today for their Alchemy practice.
+Given an array
+A of
+N non-negative integers and two integers
+K and
+M. Find the number of subsequences of array
+A of length
+K which satisfies the following property:
+Suppose the subsequence is
+S=S
+1
+S
+2
+…S
+K
+, then for all
+i such that
+1≤i≤K,
+S
+i
+%M=i%M should hold true, where
+S
+i
+denotes the
+i-th element of the subsequence, using 1-based indexing.
+As the number of subsequences may be very large, output the answer modulo
+1000000007.
+PS: We also proposed the idea of making a look-alike clone through alchemy and keeping it in front of the study table. But it seems impossible to convince Edward to make a clone of his exact same height, and not taller than him. So solving the problem for him was a better choice.
+Input:
+The first line contains
+T, the number of test cases. Then the test cases follow.
+For every test case, the first line contains
+N,
+K and
+M.
+For every test case, the second line contains
+N integers
+A
+i
+(
+1≤i≤N).
+Output:
+For every test case, output in a single line an integer denoting the number of valid subsequences modulo
+10
+9
++7
+Constraints
+1≤T≤100
+1≤N≤10
+4
+1≤K≤N
+⌈
+100
+K
+⌉≤M≤100×K
+0≤A
+i
+≤10
+9
+Sample Input:
+1
+12 4 3
+4 5 6 7 1 4 6 9 0 0 10 2
+Sample Output:
+8
+Explanation:
+The subsequences of length
+4, satisfying the given criteria are
+[4,5,6,7],
+[4,5,6,10],
+[4,5,6,10],
+[4,5,6,1],
+[4,5,9,10] ,
+[4,5,6,4] ,
+[4,5,0,10] and
+[4,5,0,10]. This accounts for a total of
+8 valid subsequences.
+Let us take one subsequence and see why it satisfies the given property. Consider
+[4,5,9,10].
+S
+1
+%M=4%3=1=1%3=1%M
+S
+2
+%M=5%3=2=2%3=2%M
+S
+3
+%M=9%3=0=3%3=3%M
+S
+4
+%M=10%3=1=4%3=4%M
+All the valid
+i satisfy the condition, and hence this is a valid subsequence.

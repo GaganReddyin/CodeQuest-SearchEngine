@@ -1,0 +1,53 @@
+Matrix XOR
+Problem
+Read problems statements in Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef has a tasty ingredient ― an integer
+K. He defines a tasty matrix
+A with
+N rows (numbered
+1 through
+N) and
+M columns (numbered
+1 through
+M) as
+A
+i,j
+=K+i+j for each valid
+i,j.
+Currently, Chef is busy in the kitchen making this tasty matrix. Help him find the bitwise XOR of all elements of this matrix.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+N,
+M and
+K.
+Output
+For each test case, print a single line containing one integer ― the bitwise XOR of all elements of the tasty matrix with the given dimensions made with the given special ingredient.
+Constraints
+1≤T≤10
+5
+1≤N,M≤2⋅10
+6
+1≤K≤10
+9
+the sum of
+N over all test cases does not exceed
+2⋅10
+6
+the sum of
+M over all test cases does not exceed
+2⋅10
+6
+Sample 1:
+Input
+Output
+2
+2 2 5
+2 3 7
+14
+5
+Explanation:
+Example case 1: The matrix is
+5 + 1 + 1 & 5 + 1 + 2\\ 5 + 2 + 1 & 5 + 2 + 2\end{pmatrix} = \begin{pmatrix} 7 & 8 \\ 8 & 9 \end{pmatrix} \,.$$ The XOR of all its elements is $7 \oplus 8 \oplus 8 \oplus 9 = 14$. **Example case 2:** The matrix is $$A = \begin{pmatrix} 7 + 1 + 1 & 7 + 1 + 2 & 7 + 1 + 3\\ 7 + 2 + 1 & 7 + 2 + 2 & 7 + 2 + 3 \end{pmatrix} = \begin{pmatrix} 9 & 10 & 11\\ 10 & 11 & 12 \end{pmatrix} \,.$$ The XOR of all its elements is $9 \oplus 10 \oplus 11 \oplus 10 \oplus 11 \oplus 12 = 5$.

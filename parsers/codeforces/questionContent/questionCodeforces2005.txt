@@ -1,0 +1,148 @@
+G. Tiles
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Consider a road consisting of several rows. Each row is divided into several rectangular tiles, and all tiles in the same row are equal. The first row contains exactly one rectangular tile. Look at the picture below which shows how the tiles are arranged.
+The road is constructed as follows:
+the first row consists of
+1
+tile;
+then
+a
+1
+rows follow; each of these rows contains
+1
+tile greater than the previous row;
+then
+b
+1
+rows follow; each of these rows contains
+1
+tile less than the previous row;
+then
+a
+2
+rows follow; each of these rows contains
+1
+tile greater than the previous row;
+then
+b
+2
+rows follow; each of these rows contains
+1
+tile less than the previous row;
+...
+then
+a
+n
+rows follow; each of these rows contains
+1
+tile greater than the previous row;
+then
+b
+n
+rows follow; each of these rows contains
+1
+tile less than the previous row.
+An example of the road with
+n=2
+,
+a
+1
+=4
+,
+b
+1
+=2
+,
+a
+2
+=2
+,
+b
+2
+=3
+. Rows are arranged from left to right.
+You start from the only tile in the first row and want to reach the last row (any tile of it). From your current tile, you can move to any tile in the next row which touches your current tile.
+Calculate the number of different paths from the first row to the last row. Since it can be large, print it modulo
+998244353
+.
+Input
+The first line contains one integer
+n
+(
+1≤n≤1000
+).
+Then
+n
+lines follow. The
+i
+-th of them contains two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤
+10
+5
+;
+|
+a
+i
+−
+b
+i
+|≤5
+).
+Additional constraint on the input: the sequence of
+a
+i
+and
+b
+i
+never results in a row with non-positive number of tiles.
+Output
+Print one integer — the number of paths from the first row to the last row, taken modulo
+998244353
+.
+Examples
+input
+Copy
+2
+4 2
+2 3
+output
+Copy
+850
+input
+Copy
+3
+4 1
+2 3
+3 1
+output
+Copy
+10150
+input
+Copy
+8
+328 323
+867 868
+715 718
+721 722
+439 435
+868 870
+834 834
+797 796
+output
+Copy
+759099319

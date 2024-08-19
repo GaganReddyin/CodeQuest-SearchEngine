@@ -1,0 +1,103 @@
+E. The Fair Nut and Rectangles
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The Fair Nut got stacked in planar world. He should solve this task to get out.
+You are given
+n
+rectangles with vertexes in
+(0,0)
+,
+(
+x
+i
+,0)
+,
+(
+x
+i
+,
+y
+i
+)
+,
+(0,
+y
+i
+)
+. For each rectangle, you are also given a number
+a
+i
+. Choose some of them that the area of union minus sum of
+a
+i
+of the chosen ones is maximum.
+It is guaranteed that there are no nested rectangles.
+Nut has no idea how to find the answer, so he asked for your help.
+Input
+The first line contains one integer
+n
+(
+1≤n≤
+10
+6
+) — the number of rectangles.
+Each of the next
+n
+lines contains three integers
+x
+i
+,
+y
+i
+and
+a
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤
+10
+9
+,
+0≤
+a
+i
+≤
+x
+i
+⋅
+y
+i
+).
+It is guaranteed that there are no nested rectangles.
+Output
+In a single line print the answer to the problem — the maximum value which you can achieve.
+Examples
+input
+Copy
+3
+4 4 8
+1 5 0
+5 2 10
+output
+Copy
+9
+input
+Copy
+4
+6 2 4
+1 6 2
+2 4 3
+5 3 8
+output
+Copy
+10
+Note
+In the first example, the right answer can be achieved by choosing the first and the second rectangles.
+In the second example, the right answer can also be achieved by choosing the first and the second rectangles.

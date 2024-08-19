@@ -1,0 +1,97 @@
+F. Equidistant Vertices
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A tree is an undirected connected graph without cycles.
+You are given a tree of
+n
+vertices. Find the number of ways to choose exactly
+k
+vertices in this tree (i. e. a
+k
+-element subset of vertices) so that all pairwise distances between the selected vertices are equal (in other words, there exists an integer
+c
+such that for all
+u,v
+(
+u≠v
+,
+u,v
+are in selected vertices)
+d
+u,v
+=c
+, where
+d
+u,v
+is the distance from
+u
+to
+v
+).
+Since the answer may be very large, you need to output it modulo
+10
+9
++7
+.
+Input
+The first line contains one integer
+t
+(
+1≤t≤10
+) — the number of test cases. Then
+t
+test cases follow.
+Each test case is preceded by an empty line.
+Each test case consists of several lines. The first line of the test case contains two integers
+n
+and
+k
+(
+2≤k≤n≤100
+) — the number of vertices in the tree and the number of vertices to be selected, respectively. Then
+n−1
+lines follow, each of them contains two integers
+u
+and
+v
+(
+1≤u,v≤n
+,
+u≠v
+) which describe a pair of vertices connected by an edge. It is guaranteed that the given graph is a tree and has no loops or multiple edges.
+Output
+For each test case output in a separate line a single integer — the number of ways to select exactly
+k
+vertices so that for all pairs of selected vertices the distances between the vertices in the pairs are equal, modulo
+10
+9
++7
+(in other words, print the remainder when divided by
+1000000007
+).
+Example
+input
+Copy
+3
+
+4 2
+1 2
+2 3
+2 4
+
+3 3
+1 2
+2 3
+
+5 3
+1 2
+2 3
+2 4
+4 5
+output
+Copy
+6
+0
+1

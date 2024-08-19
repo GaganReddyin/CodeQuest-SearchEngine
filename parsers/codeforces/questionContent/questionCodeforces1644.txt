@@ -1,0 +1,165 @@
+D. PriceFixed
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Lena is the most economical girl in Moscow. So, when her dad asks her to buy some food for a trip to the country, she goes to the best store  — "PriceFixed". Here are some rules of that store:
+The store has an infinite number of items of every product.
+All products have the same price:
+2
+rubles per item.
+For every product
+i
+there is a discount for experienced buyers: if you buy
+b
+i
+items of products (of any type, not necessarily type
+i
+), then for all future purchases of the
+i
+-th product there is a
+50%
+discount (so you can buy an item of the
+i
+-th product for
+1
+ruble!).
+Lena needs to buy
+n
+products: she must purchase at least
+a
+i
+items of the
+i
+-th product. Help Lena to calculate the minimum amount of money she needs to spend if she optimally chooses the order of purchasing. Note that if she wants, she can buy more items of some product than needed.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤100000
+) — the number of products.
+Each of next
+n
+lines contains a product description. Each description consists of two integers
+a
+i
+and
+b
+i
+(
+1≤
+a
+i
+≤
+10
+14
+,
+1≤
+b
+i
+≤
+10
+14
+) — the required number of the
+i
+-th product and how many products you need to buy to get the discount on the
+i
+-th product.
+The sum of all
+a
+i
+does not exceed
+10
+14
+.
+Output
+Output the minimum sum that Lena needs to make all purchases.
+Examples
+input
+Copy
+3
+3 4
+1 3
+1 5
+output
+Copy
+8
+input
+Copy
+5
+2 7
+2 8
+1 2
+2 4
+1 8
+output
+Copy
+12
+Note
+In the first example, Lena can purchase the products in the following way:
+one item of product
+3
+for
+2
+rubles,
+one item of product
+1
+for
+2
+rubles,
+one item of product
+1
+for
+2
+rubles,
+one item of product
+2
+for
+1
+ruble (she can use the discount because
+3
+items are already purchased),
+one item of product
+1
+for
+1
+ruble (she can use the discount because
+4
+items are already purchased).
+In total, she spends
+8
+rubles. It can be proved that it is impossible to spend less.
+In the second example Lena can purchase the products in the following way:
+one item of product
+1
+for
+2
+rubles,
+two items of product
+2
+for
+2
+rubles for each,
+one item of product
+5
+for
+2
+rubles,
+one item of product
+3
+for
+1
+ruble,
+two items of product
+4
+for
+1
+ruble for each,
+one item of product
+1
+for
+1
+ruble.
+In total, she spends
+12
+rubles.

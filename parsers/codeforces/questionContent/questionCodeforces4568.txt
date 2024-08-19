@@ -1,0 +1,43 @@
+D. Scissors
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Jenya has recently acquired quite a useful tool — k-scissors for cutting strings. They are generally used for cutting out two non-intersecting substrings of length k from an arbitrary string s (its length should be at least 2·k in order to perform this operation) and concatenating them afterwards (preserving the initial order). For example, with the help of 2-scissors you can cut ab and de out of abcde and concatenate them into abde, but not ab and bc since they're intersecting.
+It's a nice idea to test this tool before using it in practice. After looking through the papers, Jenya came up with two strings s and t. His question is whether it is possible to apply his scissors to string s such that the resulting concatenation contains t as a substring?
+Input
+The first line contains three integers n, m, k (2 ≤ m ≤ 2·k ≤ n ≤ 5·105) — length of s, length of t and the aforementioned scissors' parameter correspondingly.
+The next two lines feature s and t consisting of lowercase latin letters.
+Output
+If there is no answer, print «No».
+Otherwise print «Yes» and two integers L and R denoting the indexes where cutted substrings start (1-indexed). If there are several possible answers, output any.
+Examples
+input
+Copy
+7 4 3
+baabaab
+aaaa
+output
+Copy
+Yes
+1 5
+input
+Copy
+6 3 2
+cbcbcb
+bcc
+output
+Copy
+Yes
+2 5
+input
+Copy
+7 5 3
+aabbaaa
+aaaaa
+output
+Copy
+No
+Note
+In the first sample case you can cut out two substrings starting at 1 and 5. The resulting string baaaab contains aaaa as a substring.
+In the second sample case the resulting string is bccb.

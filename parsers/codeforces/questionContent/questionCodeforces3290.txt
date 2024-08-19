@@ -1,0 +1,111 @@
+B. The Number of Products
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a sequence
+a
+1
+,
+a
+2
+,…,
+a
+n
+consisting of
+n
+non-zero integers (i.e.
+a
+i
+≠0
+).
+You have to calculate two following values:
+the number of pairs of indices
+(l,r)
+(l≤r)
+such that
+a
+l
+⋅
+a
+l+1
+…
+a
+r−1
+⋅
+a
+r
+is negative;
+the number of pairs of indices
+(l,r)
+(l≤r)
+such that
+a
+l
+⋅
+a
+l+1
+…
+a
+r−1
+⋅
+a
+r
+is positive;
+Input
+The first line contains one integer
+n
+(1≤n≤2⋅
+10
+5
+)
+— the number of elements in the sequence.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(−
+10
+9
+≤
+a
+i
+≤
+10
+9
+;
+a
+i
+≠0)
+— the elements of the sequence.
+Output
+Print two integers — the number of subsegments with negative product and the number of subsegments with positive product, respectively.
+Examples
+input
+Copy
+5
+5 -3 3 -1 1
+output
+Copy
+8 7
+input
+Copy
+10
+4 2 -4 3 1 2 -4 3 2 3
+output
+Copy
+28 27
+input
+Copy
+5
+-1 -2 -3 -4 -5
+output
+Copy
+9 6

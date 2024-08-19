@@ -1,0 +1,37 @@
+B. Bill Total Value
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Vasily exited from a store and now he wants to recheck the total price of all purchases in his bill. The bill is a string in which the names of the purchases and their prices are printed in a row without any spaces. Check has the format "name1price1name2price2...namenpricen", where namei (name of the i-th purchase) is a non-empty string of length not more than 10, consisting of lowercase English letters, and pricei (the price of the i-th purchase) is a non-empty string, consisting of digits and dots (decimal points). It is possible that purchases with equal names have different prices.
+The price of each purchase is written in the following format. If the price is an integer number of dollars then cents are not written.
+Otherwise, after the number of dollars a dot (decimal point) is written followed by cents in a two-digit format (if number of cents is between 1 and 9 inclusively, there is a leading zero).
+Also, every three digits (from less significant to the most) in dollars are separated by dot (decimal point). No extra leading zeroes are allowed. The price always starts with a digit and ends with a digit.
+For example:
+"234", "1.544", "149.431.10", "0.99" and "123.05" are valid prices,
+".333", "3.33.11", "12.00", ".33", "0.1234" and "1.2" are not valid.
+Write a program that will find the total price of all purchases in the given bill.
+Input
+The only line of the input contains a non-empty string s with length not greater than 1000 — the content of the bill.
+It is guaranteed that the bill meets the format described above. It is guaranteed that each price in the bill is not less than one cent and not greater than 106 dollars.
+Output
+Print the total price exactly in the same format as prices given in the input.
+Examples
+input
+Copy
+chipsy48.32televizor12.390
+output
+Copy
+12.438.32
+input
+Copy
+a1b2c3.38
+output
+Copy
+6.38
+input
+Copy
+aa0.01t0.03
+output
+Copy
+0.04

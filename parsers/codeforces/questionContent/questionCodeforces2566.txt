@@ -1,0 +1,327 @@
+F. Johnny and New Toy
+time limit per test15 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+Johnny has a new toy. As you may guess, it is a little bit extraordinary. The toy is a permutation
+P
+of numbers from
+1
+to
+n
+, written in one row next to each other.
+For each
+i
+from
+1
+to
+n−1
+between
+P
+i
+and
+P
+i+1
+there is a weight
+W
+i
+written, and those weights form a permutation of numbers from
+1
+to
+n−1
+. There are also extra weights
+W
+0
+=
+W
+n
+=0
+.
+The instruction defines subsegment
+[L,R]
+as good if
+W
+L−1
+<
+W
+i
+and
+W
+R
+<
+W
+i
+for any
+i
+in
+{L,L+1,…,R−1}
+. For such subsegment it also defines
+W
+M
+as minimum of set
+{
+W
+L
+,
+W
+L+1
+,…,
+W
+R−1
+}
+.
+Now the fun begins. In one move, the player can choose one of the good subsegments, cut it into
+[L,M]
+and
+[M+1,R]
+and swap the two parts. More precisely, before one move the chosen subsegment of our toy looks like:
+W
+L−1
+,
+P
+L
+,
+W
+L
+,…,
+W
+M−1
+,
+P
+M
+,
+W
+M
+,
+P
+M+1
+,
+W
+M+1
+,…,
+W
+R−1
+,
+P
+R
+,
+W
+R
+W
+P
+W
+W
+P
+W
+P
+W
+W
+P
+W
+and afterwards it looks like this:
+W
+L−1
+,
+P
+M+1
+,
+W
+M+1
+,…,
+W
+R−1
+,
+P
+R
+,
+W
+M
+,
+P
+L
+,
+W
+L
+,…,
+W
+M−1
+,
+P
+M
+,
+W
+R
+W
+P
+W
+W
+P
+W
+P
+W
+W
+P
+W
+Such a move can be performed multiple times (possibly zero), and the goal is to achieve the minimum number of inversions in
+P
+.
+Johnny's younger sister Megan thinks that the rules are too complicated, so she wants to test her brother by choosing some pair of indices
+X
+and
+Y
+, and swapping
+P
+X
+and
+P
+Y
+(
+X
+might be equal
+Y
+). After each sister's swap, Johnny wonders, what is the minimal number of inversions that he can achieve, starting with current
+P
+and making legal moves?
+You can assume that the input is generated randomly.
+P
+and
+W
+were chosen independently and equiprobably over all permutations; also, Megan's requests were chosen independently and equiprobably over all pairs of indices.
+Input
+The first line contains single integer
+n
+(2≤n≤2⋅
+10
+5
+)
+denoting the length of the toy.
+The second line contains
+n
+distinct integers
+P
+1
+,
+P
+2
+,…,
+P
+n
+(1≤
+P
+i
+≤n)
+denoting the initial permutation
+P
+. The third line contains
+n−1
+distinct integers
+W
+1
+,
+W
+2
+,…,
+W
+n−1
+(1≤
+W
+i
+≤n−1)
+denoting the weights.
+The fourth line contains single integer
+q
+(1≤q≤5⋅
+10
+4
+)
+ — the number of Megan's swaps. The following
+q
+lines contain two integers
+X
+and
+Y
+(1≤X,Y≤n)
+ — the indices of elements of
+P
+to swap. The queries aren't independent; after each of them, the permutation is changed.
+Output
+Output
+q
+lines. The
+i
+-th line should contain exactly one integer — the minimum number of inversions in permutation, which can be obtained by starting with the
+P
+after first
+i
+queries and making moves described in the game's instruction.
+Examples
+input
+Copy
+3
+3 2 1
+2 1
+3
+1 3
+3 2
+3 1
+output
+Copy
+0
+1
+0
+input
+Copy
+5
+4 3 2 5 1
+3 2 1 4
+7
+5 4
+5 2
+1 5
+2 4
+2 4
+4 3
+3 3
+output
+Copy
+3
+1
+2
+1
+2
+3
+3
+Note
+Consider the first sample. After the first query,
+P
+is sorted, so we already achieved a permutation with no inversions.
+After the second query,
+P
+is equal to [
+1
+,
+3
+,
+2
+], it has one inversion, it can be proven that it is impossible to achieve
+0
+inversions.
+In the end,
+P
+is equal to [
+2
+,
+3
+,
+1
+]; we can make a move on the whole permutation, as it is a good subsegment itself, which results in
+P
+equal to [
+1
+,
+2
+,
+3
+], which has
+0
+inversions.

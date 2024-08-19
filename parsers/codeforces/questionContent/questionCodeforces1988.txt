@@ -1,0 +1,101 @@
+D. Journey
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+There are
+n+1
+cities, numbered from
+0
+to
+n
+.
+n
+roads connect these cities, the
+i
+-th road connects cities
+i−1
+and
+i
+(
+i∈[1,n]
+).
+Each road has a direction. The directions are given by a string of
+n
+characters such that each character is either L or R. If the
+i
+-th character is L, it means that the
+i
+-th road initially goes from the city
+i
+to the city
+i−1
+; otherwise it goes from the city
+i−1
+to the city
+i
+.
+A traveler would like to visit as many cities of this country as possible. Initially, they will choose some city to start their journey from. Each day, the traveler must go from the city where they currently are to a neighboring city using one of the roads, and they can go along a road only if it is directed in the same direction they are going; i. e., if a road is directed from city
+i
+to the city
+i+1
+, it is possible to travel from
+i
+to
+i+1
+, but not from
+i+1
+to
+i
+. After the traveler moves to a neighboring city, all roads change their directions to the opposite ones. If the traveler cannot go from their current city to a neighboring city, their journey ends; it is also possible to end the journey whenever the traveler wants to.
+The goal of the traveler is to visit as many different cities as possible (they can visit a city multiple times, but only the first visit is counted). For each city
+i
+, calculate the maximum number of different cities the traveler can visit during exactly one journey if they start in the city
+i
+.
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+Each test case consists of two lines. The first line contains one integer
+n
+(
+1≤n≤3⋅
+10
+5
+). The second line contains the string
+s
+consisting of exactly
+n
+characters, each character is either L or R.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+3⋅
+10
+5
+.
+Output
+For each test case, print
+n+1
+integers. The
+i
+-th integer should be equal to the maximum number of different cities the traveler can visit during one journey if this journey starts in the
+i
+-th city.
+Example
+input
+Copy
+2
+6
+LRRRLL
+3
+LRL
+output
+Copy
+1 3 2 3 1 3 2
+1 4 1 4

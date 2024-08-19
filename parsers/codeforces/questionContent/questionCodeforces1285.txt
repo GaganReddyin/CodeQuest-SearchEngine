@@ -1,0 +1,156 @@
+E2. Escape The Maze (hard version)
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference with E1 is the question of the problem.
+Vlad built a maze out of
+n
+rooms and
+n−1
+bidirectional corridors. From any room
+u
+any other room
+v
+can be reached through a sequence of corridors. Thus, the room system forms an undirected tree.
+Vlad invited
+k
+friends to play a game with them.
+Vlad starts the game in the room
+1
+and wins if he reaches a room other than
+1
+, into which exactly one corridor leads. Friends are placed in the maze: the friend with number
+i
+is in the room
+x
+i
+, and no two friends are in the same room (that is,
+x
+i
+≠
+x
+j
+for all
+i≠j
+). Friends win if one of them meets Vlad in any room or corridor before he wins.
+For one unit of time, each participant of the game can go through one corridor. All participants move at the same time. Participants may not move. Each room can fit all participants at the same time.
+Friends know the plan of a maze and intend to win. They don't want to waste too much energy. They ask you to determine if they can win and if they can, what minimum number of friends must remain in the maze so that they can always catch Vlad.
+In other words, you need to determine the size of the minimum (by the number of elements) subset of friends who can catch Vlad or say that such a subset does not exist.
+Input
+The first line of the input contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases in the input. The input contains an empty string before each test case.
+The first line of the test case contains two numbers
+n
+and
+k
+(
+1≤k<n≤2⋅
+10
+5
+) — the number of rooms and friends, respectively.
+The next line of the test case contains
+k
+integers
+x
+1
+,
+x
+2
+,…,
+x
+k
+(
+2≤
+x
+i
+≤n
+) — numbers of rooms with friends. All
+x
+i
+are different.
+The next
+n−1
+lines contain descriptions of the corridors, two numbers per line
+v
+j
+and
+u
+j
+(
+1≤
+u
+j
+,
+v
+j
+≤n
+) — numbers of rooms that connect the
+j
+corridor. All corridors are bidirectional. From any room, you can go to any other by moving along the corridors.
+It is guaranteed that the sum of the values
+n
+over all test cases in the test is not greater than
+2⋅
+10
+5
+.
+Output
+Print
+t
+lines, each line containing the answer to the corresponding test case. The answer to a test case should be
+−1
+if Vlad wins anyway and a minimal number of friends otherwise.
+Example
+input
+Copy
+4
+
+8 2
+5 3
+4 7
+2 5
+1 6
+3 6
+7 2
+1 7
+6 8
+
+8 4
+6 5 7 3
+4 7
+2 5
+1 6
+3 6
+7 2
+1 7
+6 8
+
+3 1
+2
+1 2
+2 3
+
+3 2
+2 3
+3 1
+1 2
+output
+Copy
+-1
+2
+1
+2
+Note
+In the first set of inputs, even if all the friends stay in the maze, Vlad can still win. Therefore, the answer is "-1".
+In the second set of inputs it is enough to leave friends from rooms
+6
+and
+7
+. Then Vlad will not be able to win. The answer is "2".
+In the third and fourth sets of inputs Vlad cannot win only if all his friends stay in the maze. Therefore the answers are "1" and "2".

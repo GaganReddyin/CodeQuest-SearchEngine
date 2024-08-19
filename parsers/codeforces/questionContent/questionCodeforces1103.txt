@@ -1,0 +1,212 @@
+F. Covering Circle
+time limit per test6 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Sam started playing with round buckets in the sandbox, while also scattering pebbles. His mom decided to buy him a new bucket, so she needs to solve the following task.
+You are given
+n
+distinct points with integer coordinates
+A
+1
+,
+A
+2
+,…,
+A
+n
+. All points were generated from the square
+[−
+10
+8
+,
+10
+8
+]×[−
+10
+8
+,
+10
+8
+]
+uniformly and independently.
+You are given positive integers
+k
+,
+l
+, such that
+k≤l≤n
+. You want to select a subsegment
+A
+i
+,
+A
+i+1
+,…,
+A
+i+l−1
+of the points array (for some
+1≤i≤n+1−l
+), and some circle on the plane, containing
+≥k
+points of the selected subsegment (inside or on the border).
+What is the smallest possible radius of that circle?
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Descriptions of test cases follow.
+The first line of each test case contains three integers
+n
+,
+l
+,
+k
+(
+2≤k≤l≤n≤50000
+,
+k≤20
+).
+Each of the next
+n
+lines contains two integers
+x
+i
+,
+y
+i
+(
+−
+10
+8
+≤
+x
+i
+,
+y
+i
+≤
+10
+8
+) — the coordinates of the point
+A
+i
+. It is guaranteed that all points are distinct and were generated independently from uniform distribution on
+[−
+10
+8
+,
+10
+8
+]×[−
+10
+8
+,
+10
+8
+]
+.
+It is guaranteed that the sum of
+n
+for all test cases does not exceed
+50000
+.
+In the first test, points were not generated from the uniform distribution on
+[−
+10
+8
+,
+10
+8
+]×[−
+10
+8
+,
+10
+8
+]
+for simplicity. It is the only such test and your solution must pass it.
+Hacks are disabled in this problem.
+Output
+For each test case print a single real number — the answer to the problem.
+Your answer will be considered correct if its absolute or relative error does not exceed
+10
+−9
+. Formally let your answer be
+a
+, jury answer be
+b
+. Your answer will be considered correct if
+|a−b|
+max(1,|b|)
+≤
+10
+−9
+.
+Example
+input
+Copy
+4
+3 2 2
+0 0
+0 4
+3 0
+5 4 3
+1 1
+0 0
+2 2
+0 2
+2 0
+8 3 2
+0 3
+1 0
+0 2
+1 1
+0 1
+1 2
+0 0
+1 3
+5 4 4
+1 1
+-3 3
+2 2
+5 3
+5 5
+output
+Copy
+2.00000000000000000000
+1.00000000000000000000
+0.50000000000000000000
+4.00000000000000000000
+Note
+In the first test case, we can select subsegment
+A
+1
+,
+A
+2
+and a circle with center
+(0,2)
+and radius
+2
+.
+In the second test case, we can select subsegment
+A
+1
+,
+A
+2
+,
+A
+3
+,
+A
+4
+and a circle with center
+(1,2)
+and radius
+1
+.

@@ -1,0 +1,193 @@
+E. Origami
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+After being discouraged by 13 time-limit-exceeded verdicts on an ugly geometry problem, you decided to take a relaxing break for arts and crafts.
+There is a piece of paper in the shape of a simple polygon with
+n
+vertices. The polygon may be non-convex, but we all know that proper origami paper has the property that any horizontal line intersects the boundary of the polygon in at most two points.
+If you fold the paper along the vertical line
+x=f
+, what will be the area of the resulting shape? When you fold, the part of the paper to the left of the line is symmetrically reflected on the right side.
+Your task is to answer
+q
+independent queries for values
+f
+1
+,…,
+f
+q
+.
+Input
+The first line contains two integers
+n
+,
+q
+(
+3≤n≤
+10
+5
+,1≤q≤
+10
+5
+)  — the number of polygon vertices and queries, respectively.
+Each of the next
+n
+lines contains two integers
+x
+i
+,
+y
+i
+(
+|
+x
+i
+|,|
+y
+i
+|≤
+10
+5
+)  — the coordinates of the
+i
+-th point of the polygon. The polygon has an edge connecting each pair of adjacent points in the input, and also an edge between
+(
+x
+1
+,
+y
+1
+)
+and
+(
+x
+n
+,
+y
+n
+)
+. It is guaranteed that the polygon is non-degenerate and that any horizontal line intersects the boundary of the polygon in at most two points. In particular, no boundary edge is strictly horizontal. Two adjacent sides may be collinear.
+Each of the next
+q
+lines contains a single integer
+f
+i
+(
+min
+j=1
+n
+(
+x
+j
+)<
+f
+i
+<
+max
+j=1
+n
+(
+x
+j
+)
+)  — the
+x
+-coordinate of the
+i
+-th fold query. It is guaranteed that all
+f
+i
+are distinct.
+Output
+For each query, output the area
+A
+i
+of the paper if you fold it along the line
+x=
+f
+i
+.
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−4
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is accepted if and only if
+|a−b|
+max(1,|b|)
+≤
+10
+−4
+.
+Examples
+input
+Copy
+4 7
+0 10
+10 0
+0 -10
+-10 0
+-9
+-5
+-1
+0
+1
+5
+9
+output
+Copy
+199.0000000000
+175.0000000000
+119.0000000000
+100.0000000000
+119.0000000000
+175.0000000000
+199.0000000000
+input
+Copy
+4 1
+0 0
+0 2
+2 4
+2 2
+1
+output
+Copy
+3.0000000000
+input
+Copy
+9 4
+0 -3
+2 -2
+-1 -1
+0 4
+2 5
+1 6
+-2 3
+-1 1
+-3 0
+0
+-2
+-1
+1
+output
+Copy
+11.1250000000
+11.7500000000
+10.3446969697
+11.3333333333
+Note
+The first test, with the fold
+f=−5
+:
+The second test, with the fold
+f=1
+:
+The third test, with the fold
+f=−1
+:

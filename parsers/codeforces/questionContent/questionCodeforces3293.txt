@@ -1,0 +1,313 @@
+G. Feeling Good
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Recently biologists came to a fascinating conclusion about how to find a chameleon mood. Consider chameleon body to be a rectangular table
+n×m
+, each cell of which may be green or blue and may change between these two colors. We will denote as
+(x,y)
+(
+1≤x≤n
+,
+1≤y≤m
+) the cell in row
+x
+and column
+y
+.
+Let us define a chameleon good mood certificate to be four cells which are corners of some subrectangle of the table, such that colors in opposite cells among these four are similar, and at the same time not all of the four cell colors are similar. Formally, it is a group of four cells
+(
+x
+1
+,
+y
+1
+)
+,
+(
+x
+1
+,
+y
+2
+)
+,
+(
+x
+2
+,
+y
+1
+)
+,
+(
+x
+2
+,
+y
+2
+)
+for some
+1≤
+x
+1
+<
+x
+2
+≤n
+,
+1≤
+y
+1
+<
+y
+2
+≤m
+, that colors of
+(
+x
+1
+,
+y
+1
+)
+and
+(
+x
+2
+,
+y
+2
+)
+coincide and colors of
+(
+x
+1
+,
+y
+2
+)
+and
+(
+x
+2
+,
+y
+1
+)
+coincide, but not all of the four cells share the same color. It was found that whenever such four cells are present, chameleon is in good mood, and vice versa: if there are no such four cells, chameleon is in bad mood.
+You are asked to help scientists write a program determining the mood of chameleon. Let us consider that initially all cells of chameleon are green. After that chameleon coloring may change several times. On one change, colors of contiguous segment of some table row are replaced with the opposite. Formally, each color change is defined by three integers
+a
+,
+l
+,
+r
+(
+1≤a≤n
+,
+1≤l≤r≤m
+). On such change colors of all cells
+(a,b)
+such that
+l≤b≤r
+are replaced with the opposite.
+Write a program that reports mood of the chameleon after each change. Additionally, if the chameleon mood is good, program should find out any four numbers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+such that four cells
+(
+x
+1
+,
+y
+1
+)
+,
+(
+x
+1
+,
+y
+2
+)
+,
+(
+x
+2
+,
+y
+1
+)
+,
+(
+x
+2
+,
+y
+2
+)
+are the good mood certificate.
+Input
+The first line of input contains three integers
+n
+,
+m
+,
+q
+(
+1≤n,m≤2000
+,
+1≤q≤500000
+), the sizes of the table and the number of changes respectively.
+Each of the following
+q
+lines contains 3 integers
+a
+i
+,
+l
+i
+,
+r
+i
+(
+1≤
+a
+i
+≤n
+,
+1≤
+l
+i
+≤
+r
+i
+≤m
+), describing
+i
+-th coloring change.
+Output
+Print
+q
+lines. In the
+i
+-th line report the chameleon mood after first
+i
+color changes for all
+1≤i≤q
+.
+If chameleon is in bad mood, print the only integer
+−1
+.
+Otherwise, print four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+(
+1≤
+x
+1
+<
+x
+2
+≤n
+,
+1≤
+y
+1
+<
+y
+2
+≤m
+) such that four cells
+(
+x
+1
+,
+y
+1
+)
+,
+(
+x
+1
+,
+y
+2
+)
+,
+(
+x
+2
+,
+y
+1
+)
+,
+(
+x
+2
+,
+y
+2
+)
+are the good mood certificate. If there are several ways to choose such four integers, print any valid one.
+Examples
+input
+Copy
+2 2 6
+1 1 1
+2 2 2
+2 1 1
+1 2 2
+2 2 2
+1 1 1
+output
+Copy
+-1
+1 1 2 2
+-1
+-1
+-1
+1 1 2 2
+input
+Copy
+4 3 9
+2 2 3
+4 1 2
+2 1 3
+3 2 2
+3 1 3
+1 2 2
+4 2 3
+1 1 3
+3 1 3
+output
+Copy
+-1
+2 1 4 3
+-1
+2 1 3 2
+3 2 4 3
+1 1 2 2
+1 1 2 2
+-1
+2 1 3 2

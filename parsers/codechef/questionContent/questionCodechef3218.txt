@@ -1,0 +1,48 @@
+Raid Systems
+Problem
+Problem Statement
+Geneo loves operating sysytems the most in computer science. While going to one of his lectures, he came accross the following problem.
+Most of you must be familiar with RAID systems which are used to store data in hard disk in redudant form so as to recover data in case of loses. Chosing which RAID to use depends on use case like memory available, frequency of data loses etc. Some RAID use complete duplication, some use parity and so on. In this problem, we consider our own way to store redundant data of hard disks.
+You are provided with N hard disk and N files, each labelled from 1 to N. Initailly each hard disk i contains the corresponding file i stored in it. After every one hour, the hard disk take backup as follows:
+Every hard disk i copies all the files from hard disks (state as in last hour) which have id greater than or equal to it. i.e. from i to N.After this copying, some files might occur multiple times in this hard disk. It deletes all the files which occur even number of times and stores only the files which occurs odd number of times. An example of the above process is below:
+Time Hard Disk 1 Hard Disk 2 Hard Disk 3 Hard Disk 4 Hard Disk 5
+0 f1 f2 f3 f4 f5
+1 f1,f2,f3,f4,f5 f2,f3,f4,f5 f3,f4,f5 f4,f5 f5
+2 f1,f3,f5 f2,f4 f3,f5 f4 f5
+3 f1,f2,f5 f2,f3 f3,f4 f4,f5 f5
+4 f1,f5 f2 f3 f4 f5
+
+and so on, where fi denotes that file i was stored in hard disk. Also, assume that files are stored in hard disk in sorted order of their file number.
+You need to support 2 type of operations:
+Assume every hard disk has initially N slots, where each slot can store one file each. In this space consious world, we would like to know how many slots are available in hard disk x during the yth hour, so that we can utilise this space for some other storage.
+Retrieval of files in efficient manner is also very important. So, we would like to know, which file would be stored in the kth slot in hard disk x during the yth hour. In case, that slot is empty, report -1 as your answer. This will help us develop a quick mechanism to index files in the memory, an important aspect taken care by the operating system
+Input section
+The first line contains 2 integers, N and Q, denoting the number of hard disks (or equivalently files) and the number of queries to process.
+Each of the next Q lines if one of the following type.
+1 x y: Query of type 1, asking us to print the number of empty slots in hard disk x during the yth hour.
+2 x y k: Query of type 2, asking us to find the file number stored in the kth slot in hard disk x during the yth hour.
+Output section
+For query of type 1, print number of slots which are empty in hard disk x during the yth hour.
+For query of type 1, print the file number stored in the kth slot in hard disk x during the yth hour. In case, that slot is empty, report -1 as your answer.
+Input constraints
+1 ≤ N ≤ 50000
+1 ≤ Q ≤ 300000
+1 ≤ x, k ≤ N
+0 ≤ y ≤ 109
+Sample Input
+5 6
+1 3 4
+1 2 1
+1 1 4
+2 4 2 3
+2 4 2 1
+2 3 5 3
+Sample Output
+4
+1
+3
+-1
+4
+5
+Explanation
+For details, refer to the table mentioned in the statement above.

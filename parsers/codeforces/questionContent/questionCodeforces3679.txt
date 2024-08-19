@@ -1,0 +1,52 @@
+F. Neat Words
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Input
+The input consists of a single string of uppercase letters A-Z. The length of the string is between 1 and 10 characters, inclusive.
+Output
+Output "YES" or "NO".
+Examples
+input
+Copy
+NEAT
+output
+Copy
+YES
+input
+Copy
+WORD
+output
+Copy
+NO
+input
+Copy
+CODER
+output
+Copy
+NO
+input
+Copy
+APRILFOOL
+output
+Copy
+NO
+input
+Copy
+AI
+output
+Copy
+YES
+input
+Copy
+JUROR
+output
+Copy
+YES
+input
+Copy
+YES
+output
+Copy
+NO

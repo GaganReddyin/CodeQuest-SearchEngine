@@ -1,0 +1,237 @@
+Maximum of GCDs
+Problem
+Note the unusual time limit in this problem.
+You are given an array
+A of
+N positive integers.
+The power of a subarray
+A[L,R]
+(1≤L≤R≤N) having size
+(R−L+1) is defined as
+gcd(A
+L
+,A
+(L+1)
+,…,A
+R
+), where
+gcd denotes the greatest common divisor.
+Your task is to find the maximum power of a subarray of size
+k, for all
+1≤k≤N.
+A subarray is formed by deleting some (possibly zero) elements from the beginning of the array and some (possibly zero) elements from the end of the array.
+Input Format
+The first line contains a single integer
+T: the number of test cases.
+The first line of each test case contains a positive integer
+N: the size of array
+A.
+The second line of each test case contains
+N positive integers:
+A
+1
+,A
+2
+,A
+3
+,…,A
+N
+.
+Output Format
+For each test case, output
+N space-separated positive integers.
+The
+i
+th
+integer should be the maximum power among all subarrays of
+A with size
+i.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+5
+4
+5 5 5 5
+4
+4 2 3 1
+3
+6 10 15
+5
+2 6 3 9 24
+5
+3 11 7 2 5
+5 5 5 5
+4 2 1 1
+15 5 1
+24 3 3 3 1
+11 1 1 1 1
+Explanation:
+Test case
+1:
+Subarray of size
+1 having maximum power is
+[A
+2
+]. Thus,
+gcd(A
+2
+)=5.
+Subarray of size
+2 having maximum power is
+[A
+3
+,A
+4
+]. Thus,
+gcd(A
+3
+,A
+4
+)=5.
+Subarray of size
+3 having maximum power is
+[A
+1
+,A
+2
+,A
+3
+]. Thus,
+gcd(A
+1
+,A
+2
+,A
+3
+)=5.
+Subarray of size
+4 having maximum power is
+[A
+1
+,A
+2
+,A
+3
+,A
+4
+]. Thus,
+gcd(A
+1
+,A
+2
+,A
+3
+,A
+4
+)=5.
+Test case
+2:
+Subarray of size
+1 having maximum power is
+[A
+1
+]. Thus,
+gcd(A
+1
+)=4.
+Subarray of size
+2 having maximum power is
+[A
+1
+,A
+2
+]. Thus,
+gcd(A
+1
+,A
+2
+)=2.
+Subarray of size
+3 having maximum power is
+[A
+1
+,A
+2
+,A
+3
+]. Thus,
+gcd(A
+1
+,A
+2
+,A
+3
+)=1.
+Subarray of size
+4 having maximum power is
+[A
+1
+,A
+2
+,A
+3
+,A
+4
+]. Thus,
+gcd(A
+1
+,A
+2
+,A
+3
+,A
+4
+)=1.
+Test case
+3:
+Subarray of size
+1 having maximum power is
+[A
+3
+]. Thus,
+gcd(A
+3
+)=15.
+Subarray of size
+2 having maximum power is
+[A
+2
+,A
+3
+]. Thus,
+gcd(A
+2
+,A
+3
+)=5.
+Subarray of size
+3 having maximum power is
+[A
+1
+,A
+2
+,A
+3
+]. Thus,
+gcd(A
+1
+,A
+2
+,A
+3
+)=1.
+Note that there can be multiple subarrays with the same power.

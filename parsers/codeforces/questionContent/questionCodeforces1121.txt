@@ -1,0 +1,128 @@
+E. Colorful Operations
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You have an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+. Each element initially has value
+0
+and color
+1
+. You are also given
+q
+queries to perform:
+Color
+l
+r
+c
+: Change the color of elements
+a
+l
+,
+a
+l+1
+,⋯,
+a
+r
+to
+c
+(
+1≤l≤r≤n
+,
+1≤c≤n
+).
+Add
+c
+x
+: Add
+x
+to values of all elements
+a
+i
+(
+1≤i≤n
+) of color
+c
+(
+1≤c≤n
+,
+−
+10
+9
+≤x≤
+10
+9
+).
+Query
+i
+: Print
+a
+i
+(
+1≤i≤n
+).
+Input
+The first line of input contains two integers
+n
+and
+q
+(
+1≤n,q≤
+10
+6
+) — the length of array
+a
+and the number of queries you have to perform.
+Each of the next
+q
+lines contains the query given in the form described in the problem statement.
+Output
+Print the answers to the queries of the third type on separate lines.
+Examples
+input
+Copy
+5 8
+Color 2 4 2
+Add 2 2
+Query 3
+Color 4 5 3
+Color 2 2 3
+Add 3 3
+Query 2
+Query 5
+output
+Copy
+2
+5
+3
+input
+Copy
+2 7
+Add 1 7
+Query 1
+Add 2 4
+Query 2
+Color 1 1 1
+Add 1 1
+Query 2
+output
+Copy
+7
+7
+8
+Note
+The first sample test is explained below. Blue, red and green represent colors
+1
+,
+2
+and
+3
+respectively.

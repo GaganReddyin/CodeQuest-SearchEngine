@@ -1,0 +1,121 @@
+F. Zeros and Ones
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let
+S
+be the Thue-Morse sequence. In other words,
+S
+is the
+0
+-indexed binary string with infinite length that can be constructed as follows:
+Initially, let
+S
+be "0".
+Then, we perform the following operation infinitely many times: concatenate
+S
+with a copy of itself with flipped bits.
+For example, here are the first four iterations:
+Iteration
+S
+before iteration
+S
+before iteration with flipped bits Concatenated
+S
+1 0 1 01
+2 01 10 0110
+3 0110 1001 01101001
+4 01101001 10010110 0110100110010110
+…
+…
+…
+…
+You are given two positive integers
+n
+and
+m
+. Find the number of positions where the strings
+S
+0
+S
+1
+…
+S
+m−1
+and
+S
+n
+S
+n+1
+…
+S
+n+m−1
+are different.
+Input
+Each test contains multiple test cases. The first line of the input contains a single integer
+t
+(
+1≤t≤100
+) — the number of test cases. The description of the test cases follows.
+The first and only line of each test case contains two positive integers,
+n
+and
+m
+respectively (
+1≤n,m≤
+10
+18
+).
+Output
+For each testcase, output a non-negative integer — the Hamming distance between the two required strings.
+Example
+input
+Copy
+6
+1 1
+5 10
+34 211
+73 34
+19124639 56348772
+12073412269 96221437021
+output
+Copy
+1
+6
+95
+20
+28208137
+48102976088
+Note
+The string
+S
+is equal to 0110100110010110....
+In the first test case,
+S
+0
+is "0", and
+S
+1
+is "1". The Hamming distance between the two strings is
+1
+.
+In the second test case,
+S
+0
+S
+1
+…
+S
+9
+is "0110100110", and
+S
+5
+S
+6
+…
+S
+14
+is "0011001011". The Hamming distance between the two strings is
+6
+.

@@ -1,0 +1,37 @@
+Counting Spaghetti
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+During a boring night at the restaurant, Chef decided to play with spaghetti. He has
+R−L+1 spaghetti: exactly one spaghetti with each length between
+L and
+R inclusive.
+Chef decided to take some of his spaghetti and stick them together to form one very long spaghetti. The length of this spaghetti is the sum of the lengths of the spaghetti he took. In particular, he may take all spaghetti and he may take only one spaghetti as well. How many different spaghetti can he make?
+Two spaghetti are considered different if their lengths are different.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+L and
+R.
+Output
+For each test case, print a single line containing one integer ― the number of different spaghetti Chef can make.
+Constraints
+1≤T≤1,000
+1≤L,R≤10
+9
+Subtasks
+Subtask #1 (25 points):
+L=1
+Subtask #2 (55 points):
+L,R≤10
+4
+Subtask #3 (20 points): original constraints
+Sample 1:
+Input
+Output
+2
+1 2
+3 5
+3
+7

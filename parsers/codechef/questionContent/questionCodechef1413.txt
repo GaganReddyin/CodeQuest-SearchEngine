@@ -1,0 +1,120 @@
+K-Flip
+Problem
+You are given a binary string
+S=S
+1
+S
+2
+…S
+N
+of length
+N. You are also given an integer
+K. You can do the following operation at most
+N−K+1 times:
+First, choose a substring
+S
+i
+S
+i+1
+…S
+i+K−1
+of
+S of length exactly
+K. This substring shouldn't have been chosen in any of the previous operations. That is, the same starting index of the substring can't be chosen twice.
+Then, flip all the characters of the chosen substring (i.e. change every
+0 to
+1 and vice versa).
+Find the lexicographically smallest string possible after the operations if you do them in an optimal way.
+Note:
+A substring is consecutive elements of a string. For eg. in the string "01011", "101" is a substring, but "111" is not a substring.
+A string
+A is lexicographically smaller than string
+B, if
+A
+i
+<B
+i
+, where
+i is the first index where
+A and
+B differ.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first line of each test case contains two space-separated integers:
+N,
+K.
+The second line of each test case contains the string
+S.
+Output Format
+For each test case, output on a new line the lexicographically smallest string that you can achieve.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+1≤K≤N
+Each element of
+S is either
+0 or
+1
+The sum of
+N over all test cases won't exceed
+3×10
+5
+.
+Subtasks
+Subtask 1 (10 points):
+1≤M≤10
+Subtask 2 (20 points): The sum of
+N across all test cases won't exceed
+20.
+Subtask 3 (70 points): No further constraints.
+Sample 1:
+Input
+Output
+4
+3 2
+101
+4 2
+1011
+5 3
+01010
+5 2
+01010
+000
+0001
+00011
+00000
+Explanation:
+Test case
+1: Choose the substring
+101 and flip it. So now
+S becomes
+110. Then choose the substring
+110 and flip it. So now
+S becomes
+000. This is the lexicographically smallest string that can be achieved, and hence this is the answer.
+Test case
+2: Choose the substring
+1011 and flip it. So now
+S becomes
+1101. Then choose the substring
+1101 and flip it. So now
+S becomes
+0001. This is the lexicographically smallest string that can be achieved, and hence this is the answer.
+Test case
+3: Choose the substring
+01010 and flip it. So now
+S becomes
+00100. Then choose the substring
+00100 and flip it. So now
+S becomes
+00011. This is the lexicographically smallest string that can be achieved, and hence this is the answer.
+Test case
+4: Choose the substring
+01010 and flip it. So now
+S becomes
+01100. Then choose the substring
+01100 and flip it. So now
+S becomes
+00000. This is the lexicographically smallest string that can be achieved, and hence this is the answer.

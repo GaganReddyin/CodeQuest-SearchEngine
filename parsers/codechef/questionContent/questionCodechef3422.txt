@@ -1,0 +1,213 @@
+Fat Hut
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are
+N breakfasts in the restaurant “Fat Hut” where the Chef works. The
+i
+th
+breakfast has an attractiveness
+A
+i
+and cost
+C
+i
+.
+The Chef has noticed that nobody takes the
+j
+th
+breakfast if there exists at least one breakfast
+i such that
+A
+i
+≥A
+j
+and
+C
+i
+<C
+j
+.
+In other words, if a breakfast is less attractive and more expensive than any of the other dishes, then nobody is interested in that breakfast.
+The Chef will be happy if all the
+N breakfasts have a chance to be taken. Unfortunately, the Chef has no power over prices. On the other hand, he can change the attractiveness of some breakfasts by some real number. However, after the changes, the attractiveness of the
+i
+th
+breakfast must lie in the interval
+[L
+i
+,R
+i
+].
+He would also like to change the attractiveness of the minimum number of breakfasts. Help the Chef do it.
+Input Format
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+Each testcase contains
+N+1 lines of input.
+The first line of each test case contains a single integer
+N - number of breakfasts.
+N lines follow. For each valid
+i, the
+i
+th
+of these lines contains four space-separated integers
+A
+i
+,
+C
+i
+,
+L
+i
+,
+R
+i
+- current attractiveness, cost, the minimal and maximal allowed attractiveness after change of
+i-th breakfast.
+Output Format
+For each test case, print in a single line containing one integer - minimum number of breakfasts the Chef should change so that all the
+N breakfasts have a chance to be taken. Print "-1"(without quotes) if it is impossible to achieve the goal.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+1≤C
+i
+≤10
+9
+for each valid
+i
+1≤L
+i
+≤A
+i
+≤R
+i
+≤10
+9
+for each valid
+i
+The sum of
+N over all test cases does not exceed
+10
+5
+The initial
+A
+i
+-s are pairwise distinct
+The initial
+C
+i
+-s are pairwise distinct
+Subtasks
+Subtask 1 (5 points):
+1≤N≤10
+3
+L
+i
+=1 for each valid
+i
+R
+i
+=10
+9
+for each valid
+i
+1<A
+i
+<10
+9
+for each valid
+i
+Subtask 2 (10 points):
+L
+i
+=1 for each valid
+i
+R
+i
+=10
+9
+for each valid
+i
+1<A
+i
+<10
+9
+for each valid
+i
+Subtask 3 (10 points):
+1≤N≤10
+3
+R
+i
+=10
+9
+for each valid
+i
+A
+i
+<10
+9
+for each valid
+i
+Subtask 4 (20 points):
+R
+i
+=10
+9
+for each valid
+i
+A
+i
+<10
+9
+for each valid
+i
+Subtask 5 (20 points):
+1≤N≤10
+3
+Subtask 6 (35 points):
+Original constraints
+Sample 1:
+Input
+Output
+2
+4
+5 1 1 5
+4 4 2 5
+2 2 2 5
+3 3 2 5
+4
+5 1 2 5
+4 4 2 5
+2 2 2 5
+3 3 2 5
+1
+2
+Explanation:
+Test case
+1: Chef can change first breakfast's attractiveness to
+1. After that, all the
+3 breakfasts have a chance to be taken. So the answer is
+1.
+Test case
+2: Chef can change first breakfast's attractiveness to
+2 and third breakfast's attractiveness to
+2.5. There is no possible way to change the attractiveness of only one breakfast so that the condition is fulfilled. So the answer is
+2.
+Sample 2:
+Input
+Output
+1
+4
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+0
+Explanation:
+Test case
+1: Everything is fine already, so Chef has no need to change anything, and the answer is
+0.

@@ -1,0 +1,122 @@
+G. Unequal Adjacent Elements
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+consisting of
+n
+positive integers.
+Find any permutation
+p
+of
+[1,2,…,n]
+such that:
+p
+i−2
+<
+p
+i
+for all
+i
+, where
+3≤i≤n
+, and
+a
+p
+i−1
+≠
+a
+p
+i
+for all
+i
+, where
+2≤i≤n
+.
+Or report that no such permutation exists.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+5
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+3≤n≤3⋅
+10
+5
+) — the length of the array
+a
+.
+The second line of each test case contains
+n
+space-separated integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤n
+) — representing the array
+a
+.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+3⋅
+10
+5
+.
+Output
+For each test case, output "NO" if no such permutation exists, otherwise output "YES" in the first line and print the permutation
+p
+in the next line.
+In case there are multiple permutations, print any one of them.
+You can output "YES" and "NO" in any case (for example, the strings "yEs", "yes", "Yes" and "YES" will be recognized as a positive response).
+Example
+input
+Copy
+4
+3
+1 2 1
+4
+1 2 3 4
+3
+1 1 1
+7
+1 2 1 1 3 1 4
+output
+Copy
+YES
+1 2 3
+YES
+3 1 4 2
+NO
+YES
+1 2 3 5 4 7 6
+Note
+In the first test case,
+p=[1,2,3]
+is the only permutation of
+[1,2,3]
+that satisfy the given constraints.
+In the second test case,
+[1,3,2,4]
+,
+[2,1,4,3]
+and some other permutations are also acceptable.
+In the third test case, it can be proved that there does not exist any permutation of
+[1,2,3]
+satisfying the given constraints.

@@ -1,0 +1,188 @@
+G. Long Binary String
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a binary string
+t
+of length
+10
+100
+, and initally all of its bits are
+0
+. You are given a binary string
+s
+, and perform the following operation some times:
+Select some substring of
+t
+, and replace it with its XOR with
+s
+.
+†
+†
+After several operations, the string
+t
+has exactly two bits
+1
+; that is, there are exactly two distinct indices
+p
+and
+q
+such that the
+p
+-th and
+q
+-th bits of
+t
+are
+1
+, and the rest of the bits are
+0
+.
+Find the lexicographically largest
+‡
+‡
+string
+t
+satisfying these constraints, or report that no such string exists.
+†
+†
+Formally, choose an index
+i
+such that
+0≤i≤
+10
+100
+−|s|
+. For all
+1≤j≤|s|
+, if
+s
+j
+=1
+, then toggle
+t
+i+j
+. That is, if
+t
+i+j
+=0
+, set
+t
+i+j
+=1
+. Otherwise if
+t
+i+j
+=1
+, set
+t
+i+j
+=0
+.
+‡
+‡
+A binary string
+a
+is lexicographically larger than a binary string
+b
+of the same length if in the first position where
+a
+and
+b
+differ, the string
+a
+has a bit
+1
+and the corresponding bit in
+b
+is
+0
+.
+Input
+The only line of each test contains a single binary string
+s
+(
+1≤|s|≤35
+).
+Output
+If no string
+t
+exists as described in the statement, output -1. Otherwise, output the integers
+p
+and
+q
+(
+1≤p<q≤
+10
+100
+) such that the
+p
+-th and
+q
+-th bits of the lexicographically maximal
+t
+are
+1
+.
+Examples
+input
+Copy
+1
+output
+Copy
+1 2
+input
+Copy
+001
+output
+Copy
+3 4
+input
+Copy
+1111
+output
+Copy
+1 5
+input
+Copy
+00000
+output
+Copy
+-1
+input
+Copy
+00000111110000011111000001111101010
+output
+Copy
+6 37452687
+Note
+In the first test, you can perform the following operations.
+00000…→10000…→11000…
+00000
+1
+0000
+1
+1
+000
+In the second test, you can perform the following operations.
+00000…→00100…→00110…
+00000
+001
+00
+0
+011
+0
+In the third test, you can perform the following operations.
+00000…→11110…→10001…
+00000
+1111
+0
+1
+0001
+It can be proven that these strings
+t
+are the lexicographically largest ones.
+In the fourth test, you can't make a single bit
+1
+, so it is impossible.

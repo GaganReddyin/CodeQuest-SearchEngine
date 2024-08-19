@@ -1,0 +1,165 @@
+C. Manipulating History
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+As a human, she can erase history of its entirety. As a Bai Ze (Hakutaku), she can create history out of nothingness.
+—Perfect Memento in Strict Sense
+Keine has the ability to manipulate history.
+The history of Gensokyo is a string
+s
+of length
+1
+initially. To fix the chaos caused by Yukari, she needs to do the following operations
+n
+times, for the
+i
+-th time:
+She chooses a non-empty substring
+t
+2i−1
+of
+s
+.
+She replaces
+t
+2i−1
+with a non-empty string,
+t
+2i
+. Note that the lengths of strings
+t
+2i−1
+and
+t
+2i
+can be different.
+Note that if
+t
+2i−1
+occurs more than once in
+s
+, exactly one of them will be replaced.
+For example, let
+s=
+"marisa",
+t
+2i−1
+=
+"a", and
+t
+2i
+=
+"z". After the operation,
+s
+becomes "mzrisa" or "marisz".
+After
+n
+operations, Keine got the final string and an operation sequence
+t
+of length
+2n
+. Just as Keine thinks she has finished, Yukari appears again and shuffles the order of
+t
+. Worse still, Keine forgets the initial history.
+Help Keine find the initial history of Gensokyo!
+Recall that a substring is a sequence of consecutive characters of the string. For example, for string "abc" its substrings are: "ab", "c", "bc" and some others. But the following strings are not its substring: "ac", "cba", "acb".
+Hacks
+You cannot make hacks in this problem.
+Input
+Each test contains multiple test cases. The first line contains a single integer
+T
+(
+1≤T≤
+10
+3
+) — the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+n
+(
+1≤n<
+10
+5
+) — the number of operations.
+The next
+2n
+lines contains one non-empty string
+t
+i
+— the
+i
+-th string of the shuffled sequence
+t
+.
+The next line contains one non-empty string
+s
+— the final string.
+It is guaranteed that the total length of given strings (including
+t
+i
+and
+s
+) over all test cases does not exceed
+2⋅
+10
+5
+. All given strings consist of lowercase English letters only.
+It is guaranteed that the initial string exists. It can be shown that the initial string is unique.
+Output
+For each test case, print the initial string in one line.
+Example
+input
+Copy
+2
+2
+a
+ab
+b
+cd
+acd
+3
+z
+a
+a
+aa
+yakumo
+ran
+yakumoran
+output
+Copy
+a
+z
+Note
+Test case 1:
+Initially
+s
+is "a".
+In the first operation, Keine chooses "a", and replaces it with "ab".
+s
+becomes "ab".
+In the second operation, Keine chooses "b", and replaces it with "cd".
+s
+becomes "acd".
+So the final string is "acd", and
+t=[
+"a", "ab", "b", "cd"
+]
+before being shuffled.
+Test case 2:
+Initially
+s
+is "z".
+In the first operation, Keine chooses "z", and replaces it with "aa".
+s
+becomes "aa".
+In the second operation, Keine chooses "a", and replaces it with "ran".
+s
+becomes "aran".
+In the third operation, Keine chooses "a", and replaces it with "yakumo".
+s
+becomes "yakumoran".
+So the final string is "yakumoran", and
+t=[
+"z", "aa", "a", "ran", "a", "yakumo"
+]
+before being shuffled.

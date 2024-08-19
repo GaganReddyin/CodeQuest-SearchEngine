@@ -1,0 +1,57 @@
+Unpleasant Ones
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+The ugliness of a string is defined as the count of two consecutive ones i.e. "11" in the given string. For example, the ugliness of string "10111" is
+2.
+You are given an array
+A of
+N integers and you have to find any ordering of the array such that the ugliness of the concatenated string of the binary representations of the integers (without leading zeros) is minimum.
+Input
+The first line of the input contains an integer
+T denoting the number of test cases. Then
+T test cases follow.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, output an ordering of
+A such that the ugliness of the array is minimum. If there are multiple answers, you may output any.
+Constraints
+1≤T≤1000
+1≤N≤1000
+1≤A
+i
+≤10
+9
+Subtasks
+Subtask #1 (100 points): Original constraints.
+Sample 1:
+Input
+Output
+2 
+3
+3 6 5
+2
+7 6
+5 6 3
+6 7
+Explanation:
+Test Case 1: The binary representations of
+[5,6,3] are
+[101,110,11] and the concatenated string would be "10111011" which has ugliness
+3. This is the minimum possible.
+[6,5,3] is also valid.
+Test Case 2: The binary representations of
+[6,7] are
+[110,111] and the concatenated string would be "110111" which has ugliness of
+3. This is the minimum possible.
+[7,6] is not valid as it has ugliness of
+4.

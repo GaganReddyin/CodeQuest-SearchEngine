@@ -1,0 +1,135 @@
+D. Maximum AND
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two arrays
+a
+and
+b
+, consisting of
+n
+integers each.
+Let's define a function
+f(a,b)
+as follows:
+let's define an array
+c
+of size
+n
+, where
+c
+i
+=
+a
+i
+⊕
+b
+i
+(
+⊕
+denotes bitwise XOR);
+the value of the function is
+c
+1
+&
+c
+2
+&⋯&
+c
+n
+(i.e. bitwise AND of the entire array
+c
+).
+Find the maximum value of the function
+f(a,b)
+if you can reorder the array
+b
+in an arbitrary way (leaving the initial order is also an option).
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains one integer
+n
+(
+1≤n≤
+10
+5
+) — the size of arrays
+a
+and
+b
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+0≤
+a
+i
+<
+2
+30
+).
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(
+0≤
+b
+i
+<
+2
+30
+).
+The sum of
+n
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case print one integer — the maximum value of the function
+f(a,b)
+if you can reorder the array
+b
+in an arbitrary way.
+Example
+input
+Copy
+3
+5
+1 0 0 3 3
+2 3 2 1 0
+3
+1 1 1
+0 0 3
+8
+0 1 2 3 4 5 6 7
+7 6 5 4 3 2 1 0
+output
+Copy
+2
+0
+7

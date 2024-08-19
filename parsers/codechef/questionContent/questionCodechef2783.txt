@@ -1,0 +1,92 @@
+Binary Strings
+Problem
+###Read problems statements Hindi , Vietnamese , Mandarin Chinese , Russian and Bengali as well.
+In ShareChat, there is a sequence of binary integers
+A
+1
+,A
+2
+,…,A
+N
+. You should answer
+Q queries on this sequence. In each query, you are given two indices
+L and
+R and a binary integer
+X.
+The answer to a query is the smallest index
+i (
+L≤i≤R) such that the value
+A
+i
+⊕X is maximum possible, i.e. equal to
+max(A
+L
+⊕X,A
+L+1
+⊕X,…,A
+R
+⊕X). Here,
+⊕ denotes the bitwise XOR operation.
+Input
+The first line of the input contains two space-separated integers
+N and
+Q.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains a single binary string denoting the number
+A
+i
+(in binary representation).
+The following
+Q lines describe queries. Each of these lines contains two space-separated integers
+L and
+R, followed by a space and a binary string denoting the number
+X (in binary representation).
+Output
+For each query, print a single line containing one integer — the answer to that query.
+Constraints
+1≤N≤10
+5
+1≤Q≤10
+5
+1≤A
+i
+for each valid
+i
+1≤L≤R≤N
+1≤X
+the sum of lengths of strings denoting
+A
+1
+,A
+2
+,…,A
+N
+does not exceed
+10
+6
+the sum of lengths of strings denoting
+X over all queries does not exceed
+10
+6
+Subtasks
+Subtask #1 (33 points): all binary strings on the input have equal lengths
+Subtask #2 (67 points): original constraints
+Sample 1:
+Input
+Output
+5 4
+100
+101
+1
+1011
+11
+2 3 10
+1 5 1100
+3 5 1010
+1 5 11100
+2
+5
+3
+5

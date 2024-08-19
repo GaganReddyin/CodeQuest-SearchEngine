@@ -1,0 +1,41 @@
+High Interview
+Problem
+There are N barmen, given their probabilities Pi for passing the interview of a bar. Each barman has a productivity Bi. If more than one barman work together their productivity adds up. The bar hires exactly K barmen. Find out the expected productivity value of the bar.
+
+If the expected value is of the form p/q where p and q are coprime, print (p*q-1) modulo 786433.
+
+Input Format:
+First line of the input contains two space separated integers N , K
+Next N lines contains 3 space separated integers, where ith line contains Numi, Deni, Bi respectively, where Pi = Numi/Deni.
+Output Format:
+If the expected value is of the form p/q where p and q are coprime, print (p*q-1) modulo 786433.
+Constraints:
+1<= N <=100000
+1<= K <=N
+0<= Numi <=100000
+1<= Deni <=100000
+0<= Bi <=100000
+Sample Input 1:
+3 1
+1 2 4
+1 3 4
+1 3 6
+Sample Output 1:
+2
+Explanation:
+Expected value
+= P1 * (1 - P2) * (1 - P3) * (B1) + P2 * (1 - P1) * (1 - P3)(B2) + P3 * (1 - P1) * (1 - P2) * (B3)
+= 1/2 * (1 - 1/3) * (1 - 1/3) * (4) + 1/3 * (1 - 1/2) * (1 - 1/3) * (4) + 1/3 * (1 - 1/2) * (1 - 1/3) * (6)
+= 2
+Sample Input 2:
+3 2
+1 2 4
+1 3 4
+1 3 6
+Sample Output 2:
+87384
+Explanation:
+Expected value
+= P1 * P2 * (1 - P3) * (B1 + B2) + P2 * P3 * (1 - P1)(B2 + B3) + P3 * P1 * (1 - P2) * (B3 + B1)
+= 1/2 * 1/3 * (1 - 1/3) * (4 + 4) + 1/3 * 1/3 * (1 - 1/2) * (4 + 6) + 1/3 * 1/2 * (1 - 1/3) * (6 + 4)
+= 23/9

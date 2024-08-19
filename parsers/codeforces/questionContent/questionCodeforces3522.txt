@@ -1,0 +1,170 @@
+D. Recover it!
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Authors guessed an array
+a
+consisting of
+n
+integers; each integer is not less than
+2
+and not greater than
+2⋅
+10
+5
+. You don't know the array
+a
+, but you know the array
+b
+which is formed from it with the following sequence of operations:
+Firstly, let the array
+b
+be equal to the array
+a
+;
+Secondly, for each
+i
+from
+1
+to
+n
+:
+if
+a
+i
+is a prime number, then one integer
+p
+a
+i
+is appended to array
+b
+, where
+p
+is an infinite sequence of prime numbers (
+2,3,5,…
+);
+otherwise (if
+a
+i
+is not a prime number), the greatest divisor of
+a
+i
+which is not equal to
+a
+i
+is appended to
+b
+;
+Then the obtained array of length
+2n
+is shuffled and given to you in the input.
+Here
+p
+a
+i
+means the
+a
+i
+-th prime number. The first prime
+p
+1
+=2
+, the second one is
+p
+2
+=3
+, and so on.
+Your task is to recover any suitable array
+a
+that forms the given array
+b
+. It is guaranteed that the answer exists (so the array
+b
+is obtained from some suitable array
+a
+). If there are multiple answers, you can print any.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of elements in
+a
+.
+The second line of the input contains
+2n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+2n
+(
+2≤
+b
+i
+≤2750131
+), where
+b
+i
+is the
+i
+-th element of
+b
+.
+2750131
+is the
+199999
+-th prime number.
+Output
+In the only line of the output print
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+2≤
+a
+i
+≤2⋅
+10
+5
+) in any order — the array
+a
+from which the array
+b
+can be obtained using the sequence of moves given in the problem statement. If there are multiple answers, you can print any.
+Examples
+input
+Copy
+3
+3 5 2 3 2 4
+output
+Copy
+3 4 2 
+input
+Copy
+1
+2750131 199999
+output
+Copy
+199999 
+input
+Copy
+1
+3 6
+output
+Copy
+6 

@@ -1,0 +1,169 @@
+D. Not Quite Lee
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Lee couldn't sleep lately, because he had nightmares. In one of his nightmares (which was about an unbalanced global round), he decided to fight back and propose a problem below (which you should solve) to balance the round, hopefully setting him free from the nightmares.
+A non-empty array
+b
+1
+,
+b
+2
+,…,
+b
+m
+is called good, if there exist
+m
+integer sequences which satisfy the following properties:
+The
+i
+-th sequence consists of
+b
+i
+consecutive integers (for example if
+b
+i
+=3
+then the
+i
+-th sequence can be
+(−1,0,1)
+or
+(−5,−4,−3)
+but not
+(0,−1,1)
+or
+(1,2,3,4)
+).
+Assuming the sum of integers in the
+i
+-th sequence is
+su
+m
+i
+, we want
+su
+m
+1
++su
+m
+2
++…+su
+m
+m
+to be equal to
+0
+.
+You are given an array
+a
+1
+,
+a
+2
+,…,
+a
+n
+. It has
+2
+n
+−1
+nonempty subsequences. Find how many of them are good.
+As this number can be very large, output it modulo
+10
+9
++7
+.
+An array
+c
+is a subsequence of an array
+d
+if
+c
+can be obtained from
+d
+by deletion of several (possibly, zero or all) elements.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤2⋅
+10
+5
+) — the size of array
+a
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+) — elements of the array.
+Output
+Print a single integer — the number of nonempty good subsequences of
+a
+, modulo
+10
+9
++7
+.
+Examples
+input
+Copy
+4
+2 2 4 7
+output
+Copy
+10
+input
+Copy
+10
+12391240 103904 1000000000 4142834 12039 142035823 1032840 49932183 230194823 984293123
+output
+Copy
+996
+Note
+For the first test, two examples of good subsequences are
+[2,7]
+and
+[2,2,4,7]
+:
+For
+b=[2,7]
+we can use
+(−3,−4)
+as the first sequence and
+(−2,−1,…,4)
+as the second. Note that subsequence
+[2,7]
+appears twice in
+[2,2,4,7]
+, so we have to count it twice.
+Green circles denote
+(−3,−4)
+and orange squares denote
+(−2,−1,…,4)
+.
+For
+b=[2,2,4,7]
+the following sequences would satisfy the properties:
+(−1,0)
+,
+(−3,−2)
+,
+(0,1,2,3)
+and
+(−3,−2,…,3)

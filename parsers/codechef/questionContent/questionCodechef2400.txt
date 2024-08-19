@@ -1,0 +1,135 @@
+Chef and Array
+Problem
+Read problems statements in Mandarin Chinese and Russian.
+Chef has an array
+A of
+N elements denoted by
+A
+0
+,A
+1
+,…,A
+N−1
+. He thinks about
+M questions of following kind: "What is the maximum element among
+A
+i
+where
+i lies between
+min(x,y) and
+max(x,y) both inclusive?"
+You have to help Chef to find out sum of answers of all the
+M questions.
+Method of generation of values
+x and
+y for all
+M questions:
+You are given two integers
+x
+1
+and
+y
+1
+denoting values of
+x and
+y for the first question. For the next questions, values of
+x
+i
+and
+y
+i
+are generated in the following way:
+x
+i
+=(x
+i−1
++7)%(N−1)
+y
+i
+=(y
+i−1
++11)%N
+Where
+% represents the modulo operation.
+Input
+The first line contains a single integer
+N, denoting the number of elements in the array.
+The second line contains
+N space-separated integers, denoting
+A
+0
+,A
+1
+,…,A
+N−1
+.
+The third line contains three space-separated integers
+M,
+x
+1
+, and
+y
+1
+.
+Output
+Output a single integer denoting the sum of the answers to the questions.
+Constraints and Subtasks
+2≤N≤10
+5
+1≤M≤10
+8
+1≤A
+i
+≤10
+9
+0≤x
+1
+,y
+1
+≤N−1
+Subtasks
+Subtask 1: (20 points)
+N,M≤10
+3
+1≤A
+i
+≤10
+5
+Subtask 2: (50 points)
+N,M≤10
+5
+Subtask 3: (30 points)
+Original constraints
+Example Input
+3
+1 2 3
+3 0 1
+Example Output
+7
+Explanation
+The first question:
+x
+1
+=0,
+y
+1
+=1. Therefore answer for the first query
+=2.
+The second question:
+x
+2
+=(0+7)%2=1,
+y
+2
+=(1+11)%3=0. Therefore answer for the second query
+=2
+The third question:
+x
+3
+=(1+7)%2=0,
+y
+3
+=(0+11)%3=2 . Therefore answer for the third query
+=3
+Therefore, the sum of answers is
+7.

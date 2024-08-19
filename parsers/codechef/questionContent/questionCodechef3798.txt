@@ -1,0 +1,71 @@
+Equal Gifts
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Although Christmas has long since passed, Mr. and Mrs. J have a pile of
+N unopened gifts with values
+a
+1
+,a
+2
+,…,a
+N
+.
+They wish to distribute some (possibly all) of the gifts amongst their two children Alice and Bob, and give the rest away to charity. They must do so in such a manner that:
+Alice and Bob get at least one gift each
+each gift is given to at most one of the children, as they do not like to share
+the sum of values of the gifts Alice gets is equal to the sum of values of gifts Bob gets
+Given
+N and the values of all gifts, help Mr. and Mrs. J distribute the gifts or state that it is impossible to distribute them in a way that satisfies all conditions.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+The second line contains
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+.
+Output
+For each test case:
+If it is impossible to distribute the gifts in the desired way, print a single line containing the string "NO" (without quotes).
+Otherwise, print two lines. The first of these lines should contain the string "YES" (without quotes). The second line should contain a single string with length
+N. For each valid
+i, the
+i-th character of this string should be:
+'A' if the
+i-th gift is given to Alice
+'B' if the
+i-th gift is given to Bob
+'N' if the
+i-th gift is given to charity
+If there are multiple solutions, you may find any one of them.
+Constraints
+1≤T≤5
+2≤N≤10
+5
+1≤a
+i
+≤10
+8
+for each valid
+i
+Example Input
+2
+5
+3 2 4 5 2
+2
+10 70
+Example Output
+YES
+NABNA
+NO
+Explanation
+Example case 1: Alice receives gifts with total value
+2+2=4. Bob gets a single gift, also with value
+4.

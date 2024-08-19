@@ -1,0 +1,193 @@
+B. Three Sevens
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Lottery "Three Sevens" was held for
+m
+days. On day
+i
+,
+n
+i
+people with the numbers
+a
+i,1
+,…,
+a
+i,
+n
+i
+participated in the lottery.
+It is known that in each of the
+m
+days, only one winner was selected from the lottery participants. The lottery winner on day
+i
+was not allowed to participate in the lottery in the days from
+i+1
+to
+m
+.
+Unfortunately, the information about the lottery winners has been lost. You need to find any possible list of lottery winners on days from
+1
+to
+m
+or determine that no solution exists.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤50000
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+m
+(
+1≤m≤50000
+) — the number of days in which the lottery was held.
+Next, for each
+i
+from
+1
+to
+m
+, follows a two-line block of data.
+The first line of each block contains a single integer
+n
+i
+(
+1≤
+n
+i
+≤50000
+) — the number of lottery participants on day
+i
+.
+The second line of the block contains integers
+a
+i,1
+,…,
+a
+i,
+n
+i
+(
+1≤
+a
+i,j
+≤50000
+) — lottery participants on day
+i
+. It is guaranteed that all the numbers
+a
+i,1
+,…,
+a
+i,
+n
+i
+are pairwise distinct.
+It is guaranteed that the sum of
+n
+i
+over all blocks of all test cases does not exceed
+50000
+.
+Output
+For each test case, if there is no solution, print a single integer
+−1
+.
+Otherwise, print
+m
+integers
+p
+1
+,
+p
+2
+,…,
+p
+m
+(
+1≤
+p
+i
+≤50000
+) — lottery winners on days from
+1
+to
+m
+. If there are multiple solutions, print any of them.
+Example
+input
+Copy
+3
+3
+4
+1 2 4 8
+3
+2 9 1
+2
+1 4
+2
+2
+1 2
+2
+2 1
+4
+4
+1 2 3 4
+1
+1
+1
+4
+1
+3
+output
+Copy
+8 2 1 
+-1
+2 1 4 3 
+Note
+In the first test case, one of the answers is
+[8,2,1]
+since the participant with the number
+8
+participated on day
+1
+, but did not participate on days
+2
+and
+3
+; the participant with the number
+2
+participated on day
+2
+, but did not participate on day
+3
+; and the participant with the number
+1
+participated on day
+3
+. Note that this is not the only possible answer, for example,
+[8,9,4]
+is also a correct answer.
+In the second test case, both lottery participants participated on both days, so any possible lottery winner on the day
+1
+must have participated on the day
+2
+, which is not allowed. Thus, there is no correct answer.
+In the third test case, only one participant participated on days
+2
+,
+3
+,
+4
+, and on day
+1
+there is only one participant who did not participate in the lottery on days
+2,3,4
+ — participant
+2
+, which means
+[2,1,4,3]
+is the only correct answer to this test case.

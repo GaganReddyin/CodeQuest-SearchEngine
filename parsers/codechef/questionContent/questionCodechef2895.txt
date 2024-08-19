@@ -1,0 +1,33 @@
+Deadpool and his COOLEST Problem Ever
+Problem
+  Deadpool: "You’re probably thinking “Whose balls did I have to fondle to get my very own COOL PROBLEM”? I can’t tell you his name, but it rhymes with ‘pullverine' "
+Deadpool and Wolverine go head to head in a crazy game on Crazy Country.
+Let’s first get some details about Crazy country. The Crazy Country has N cities. It is possible to go from one city to any other city in Crazy Country And there is a unique path between every pair of cities. City 1 is the capital city and it located at level 0. Every city in this country is assigned a level which is equal to its distance from the capital city.
+Distance between cities A and B = number of cities encountered while going from city A to city B (excluding both) + 1.
+Every city in this crazy country has a certain number of aircrafts in it. Deadpool has designed these really cool aircrafts. Every aircraft contains some Cool Buttons. Each button has a Coolness associated with it. Initially, each aircraft has exactly 1 button of Coolness C, for all integers C ≥ 1. When a functional button with Coolness X on a aircraft lying in city of level L is pressed, it takes the aircraft to a city of level (L-X) which lies on the path between this city and the capital city (obviously , there is only one such city). Of course , the buttons with Coolness > L are dysfunctional in an aircraft which is in city of level L as the aircrafts are not allowed to go beyond the capital city.
+Plus , there is something really weird about these aircrafts, whenever you press a button with a particular Coolness X then all the buttons of this aircraft become dysfunctional that are of Coolness (I*X) , where I >= 1.
+Now, Deadpool and Wolverine take turns and press a functional Cool button on any one of the aircrafts of their choice. The Player who can’t make a move loses. Being the smart guys that they are, they obviously play optimally.
+Given a crazy country setup, you have to determine who will win this game if Deadpool makes the first move.
+  Input
+First line contains an integer T denoting the number of test cases.
+First line of every test case contains N – The number of cities in the Crazy Country.
+Second line of every test case contains N integers, where ith integer signifies number of aircrafts in ith city.
+Next N-1 lines follow- each line has 2 integers A and B, showing that there is a direct path between city A and city B.
+  Output
+If Deadpool wins then print “Deadpool”(without quotes) else print “Wolverine”(without quotes).
+  Constraints
+1 ≤ T ≤ 100
+1 ≤ N ≤ 10000
+0 ≤ Number of aircrafts in one city of Crazy Country ≤ 50000
+1 ≤ A,B ≤ N
+  Example
+Input:
+1
+3
+0 0 1
+1 2
+1 3
+Output:
+Deadpool
+  Explanation
+Deadpool moves the aircraft from city 3 to city 1 by pressing the button with Coolness 1 in the first move. Now, Wolverine loses as he can’t make any move.

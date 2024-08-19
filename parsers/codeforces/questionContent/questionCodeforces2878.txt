@@ -1,0 +1,60 @@
+D. Dijkstra
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This is an unusual problem in an unusual contest, here is the announcement: http://codeforces.com/blog/entry/73543
+Find the distance between vertices
+1
+and
+n
+in an undirected weighted graph.
+Input
+The first line contains two integers
+n,m
+(
+1≤n,m≤2⋅
+10
+5
+) — the number of vertices and the number of edges.
+Each of the next
+m
+lines contain description of an edge
+a
+i
+ b
+i
+ cos
+t
+i
+(
+1≤
+a
+i
+,
+b
+i
+≤n
+,
+1≤cos
+t
+i
+≤
+10
+9
+).
+Loops and multiple edges? Hmm, why not?
+Output
+Print one integer — the answer to the problem. If there is no path, print
+−1
+instead.
+Example
+input
+Copy
+3 3
+1 2 5
+2 3 1
+1 3 7
+output
+Copy
+6

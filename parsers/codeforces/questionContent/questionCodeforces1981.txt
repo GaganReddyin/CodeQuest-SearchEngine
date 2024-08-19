@@ -1,0 +1,250 @@
+D. Nezzar and Hidden Permutations
+time limit per test5 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Nezzar designs a brand new game "Hidden Permutations" and shares it with his best friend, Nanako.
+At the beginning of the game, Nanako and Nezzar both know integers
+n
+and
+m
+. The game goes in the following way:
+Firstly, Nezzar hides two permutations
+p
+1
+,
+p
+2
+,…,
+p
+n
+and
+q
+1
+,
+q
+2
+,…,
+q
+n
+of integers from
+1
+to
+n
+, and Nanako secretly selects
+m
+unordered pairs
+(
+l
+1
+,
+r
+1
+),(
+l
+2
+,
+r
+2
+),…,(
+l
+m
+,
+r
+m
+)
+;
+After that, Nanako sends his chosen pairs to Nezzar;
+On receiving those
+m
+unordered pairs, Nezzar checks if there exists
+1≤i≤m
+, such that
+(
+p
+l
+i
+−
+p
+r
+i
+)
+and
+(
+q
+l
+i
+−
+q
+r
+i
+)
+have different signs. If so, Nezzar instantly loses the game and gets a score of
+−1
+. Otherwise, the score Nezzar gets is equal to the number of indices
+1≤i≤n
+such that
+p
+i
+≠
+q
+i
+.
+However, Nezzar accidentally knows Nanako's unordered pairs and decides to take advantage of them. Please help Nezzar find out two permutations
+p
+and
+q
+such that the score is maximized.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤5⋅
+10
+5
+) — the number of test cases.
+The first line of each test case contains two integers
+n,m
+(
+1≤n≤5⋅
+10
+5
+,0≤m≤min(
+n(n−1)
+2
+,5⋅
+10
+5
+)
+).
+Then
+m
+lines follow,
+i
+-th of them contains two integers
+l
+i
+,
+r
+i
+(
+1≤
+l
+i
+,
+r
+i
+≤n
+,
+l
+i
+≠
+r
+i
+), describing the
+i
+-th unordered pair Nanako chooses. It is guaranteed that all
+m
+unordered pairs are distinct.
+It is guaranteed that the sum of
+n
+for all test cases does not exceed
+5⋅
+10
+5
+, and the sum of
+m
+for all test cases does not exceed
+5⋅
+10
+5
+.
+Output
+For each test case, print two permutations
+p
+1
+,
+p
+2
+,…,
+p
+n
+and
+q
+1
+,
+q
+2
+,…,
+q
+n
+such that the score Nezzar gets is maximized.
+Example
+input
+Copy
+3
+4 2
+1 2
+3 4
+6 4
+1 2
+1 3
+3 5
+3 6
+2 1
+1 2
+output
+Copy
+1 2 3 4
+3 4 1 2
+2 3 4 1 6 5
+1 4 3 2 5 6
+1 2
+1 2
+Note
+For first test case, for each pair given by Nanako:
+for the first pair
+(1,2)
+:
+p
+1
+−
+p
+2
+=1−2=−1
+,
+q
+1
+−
+q
+2
+=3−4=−1
+, they have the same sign;
+for the second pair
+(3,4)
+:
+p
+3
+−
+p
+4
+=3−4=−1
+,
+q
+3
+−
+q
+4
+=1−2=−1
+, they have the same sign.
+As Nezzar does not lose instantly, Nezzar gains the score of
+4
+as
+p
+i
+≠
+q
+i
+for all
+1≤i≤4
+. Obviously, it is the maximum possible score Nezzar can get.

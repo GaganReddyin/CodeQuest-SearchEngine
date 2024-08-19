@@ -1,0 +1,246 @@
+B. Lost Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Bajtek, known for his unusual gifts, recently got an integer array
+x
+0
+,
+x
+1
+,…,
+x
+k−1
+.
+Unfortunately, after a huge array-party with his extraordinary friends, he realized that he'd lost it. After hours spent on searching for a new toy, Bajtek found on the arrays producer's website another array
+a
+of length
+n+1
+. As a formal description of
+a
+says,
+a
+0
+=0
+and for all other
+i
+ (
+1≤i≤n
+)
+a
+i
+=
+x
+(i−1)modk
++
+a
+i−1
+, where
+pmodq
+denotes the remainder of division
+p
+by
+q
+.
+For example, if the
+x=[1,2,3]
+and
+n=5
+, then:
+a
+0
+=0
+,
+a
+1
+=
+x
+0mod3
++
+a
+0
+=
+x
+0
++0=1
+,
+a
+2
+=
+x
+1mod3
++
+a
+1
+=
+x
+1
++1=3
+,
+a
+3
+=
+x
+2mod3
++
+a
+2
+=
+x
+2
++3=6
+,
+a
+4
+=
+x
+3mod3
++
+a
+3
+=
+x
+0
++6=7
+,
+a
+5
+=
+x
+4mod3
++
+a
+4
+=
+x
+1
++7=9
+.
+So, if the
+x=[1,2,3]
+and
+n=5
+, then
+a=[0,1,3,6,7,9]
+.
+Now the boy hopes that he will be able to restore
+x
+from
+a
+! Knowing that
+1≤k≤n
+, help him and find all possible values of
+k
+ — possible lengths of the lost array.
+Input
+The first line contains exactly one integer
+n
+(
+1≤n≤1000
+) — the length of the array
+a
+, excluding the element
+a
+0
+.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+6
+).
+Note that
+a
+0
+is always
+0
+and is not given in the input.
+Output
+The first line of the output should contain one integer
+l
+denoting the number of correct lengths of the lost array.
+The second line of the output should contain
+l
+integers — possible lengths of the lost array in increasing order.
+Examples
+input
+Copy
+5
+1 2 3 4 5
+output
+Copy
+5
+1 2 3 4 5 
+input
+Copy
+5
+1 3 5 6 8
+output
+Copy
+2
+3 5 
+input
+Copy
+3
+1 5 3
+output
+Copy
+1
+3 
+Note
+In the first example, any
+k
+is suitable, since
+a
+is an arithmetic progression.
+Possible arrays
+x
+:
+[1]
+[1,1]
+[1,1,1]
+[1,1,1,1]
+[1,1,1,1,1]
+In the second example, Bajtek's array can have three or five elements.
+Possible arrays
+x
+:
+[1,2,2]
+[1,2,2,1,2]
+For example,
+k=4
+is bad, since it leads to
+6+
+x
+0
+=8
+and
+0+
+x
+0
+=1
+, which is an obvious contradiction.
+In the third example, only
+k=n
+is good.
+Array
+[1,4,−2]
+satisfies the requirements.
+Note that
+x
+i
+may be negative.

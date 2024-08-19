@@ -1,0 +1,99 @@
+J. Bob's Beautiful Array
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Bob really likes playing with arrays of numbers. That's why for his birthday, his friends bought him a really interesting machine – an array beautifier.
+The array beautifier takes an array
+A
+consisting of
+N
+integers, and it outputs a new array
+B
+of length N that it constructed based on the array given to it. The array beautifier constructs the new array in the following way: it takes two numbers at different indices from the original array and writes their sum to the end of the new array. It does this step
+N
+times - resulting in an output array of length
+N
+. During this process, the machine can take the same index multiple times in different steps.
+Bob was very excited about the gift that his friends gave him, so he put his favorite array in the machine. However, when the machine finished, Bob was not happy with the resulting array. He misses his favorite array very much, and hopes to get it back.
+Given the array that the machine outputted, help Bob find an array that could be the original array that he put in the machine. Sometimes the machine makes mistakes, so it is possible that no appropriate input array exists for the array it has outputted. In such case, let Bob know that his array is forever lost.
+Input
+The first line contains one positive integer
+N
+(
+2≤N≤
+10
+3
+) – the length of Bob's array.
+The second line contains
+N
+integers
+B
+1
+,
+B
+2
+, ...,
+B
+N
+(
+1≤
+B
+i
+≤
+10
+6
+) – the elements of the array the machine outputted.
+Output
+If an appropriate input array exists, print "YES", followed by the input array
+A
+1
+,
+A
+2
+, ...,
+A
+N
+(
+−
+10
+9
+≤
+A
+i
+≤
+10
+9
+) in the next line. Otherwise, print "NO".
+Examples
+input
+Copy
+2
+5 5
+output
+Copy
+YES
+2 3
+input
+Copy
+3
+1 2 3
+output
+Copy
+YES
+0 1 2
+input
+Copy
+3
+2 4 5
+output
+Copy
+NO
+input
+Copy
+4
+1 3 5 7
+output
+Copy
+YES
+6 -3 4 1

@@ -1,0 +1,1 @@
+C. Prepare state |01⟩ + |10⟩ + |11⟩

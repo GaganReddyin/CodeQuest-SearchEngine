@@ -1,0 +1,92 @@
+C. Interesting Sequence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Petya and his friend, robot Petya++, like to solve exciting math problems.
+One day Petya++ came up with the numbers
+n
+and
+x
+and wrote the following equality on the board:
+n & (n+1) & … & m=x,
+&
+(
+1
+)
+&
+&
+where
+&
+denotes the bitwise AND operation. Then he suggested his friend Petya find such a minimal
+m
+(
+m≥n
+) that the equality on the board holds.
+Unfortunately, Petya couldn't solve this problem in his head and decided to ask for computer help. He quickly wrote a program and found the answer.
+Can you solve this difficult problem?
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤2000
+). The description of the test cases follows.
+The only line of each test case contains two integers
+n
+,
+x
+(
+0≤n,x≤
+10
+18
+).
+Output
+For every test case, output the smallest possible value of
+m
+such that equality holds.
+If the equality does not hold for any
+m
+, print
+−1
+instead.
+We can show that if the required
+m
+exists, it does not exceed
+5⋅
+10
+18
+.
+Example
+input
+Copy
+5
+10 8
+10 10
+10 42
+20 16
+1000000000000000000 0
+output
+Copy
+12
+10
+-1
+24
+1152921504606846976
+Note
+In the first example,
+10 & 11=10
+, but
+10 & 11 & 12=8
+, so the answer is
+12
+.
+In the second example,
+10=10
+, so the answer is
+10
+.
+In the third example, we can see that the required
+m
+does not exist, so we have to print
+−1
+.

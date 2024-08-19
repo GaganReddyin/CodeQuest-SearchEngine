@@ -1,0 +1,134 @@
+G. Maximize the Remaining String
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a string
+s
+, consisting of lowercase Latin letters. While there is at least one character in the string
+s
+that is repeated at least twice, you perform the following operation:
+you choose the index
+i
+(
+1≤i≤|s|
+) such that the character at position
+i
+occurs at least two times in the string
+s
+, and delete the character at position
+i
+, that is, replace
+s
+with
+s
+1
+s
+2
+…
+s
+i−1
+s
+i+1
+s
+i+2
+…
+s
+n
+.
+For example, if
+s=
+"codeforces", then you can apply the following sequence of operations:
+i=6⇒s=
+"codefrces";
+i=1⇒s=
+"odefrces";
+i=7⇒s=
+"odefrcs";
+Given a given string
+s
+, find the lexicographically maximum string that can be obtained after applying a certain sequence of operations after which all characters in the string become unique.
+A string
+a
+of length
+n
+is lexicographically less than a string
+b
+of length
+m
+, if:
+there is an index
+i
+(
+1≤i≤min(n,m)
+) such that the first
+i−1
+characters of the strings
+a
+and
+b
+are the same, and the
+i
+-th character of the string
+a
+is less than
+i
+-th character of string
+b
+;
+or the first
+min(n,m)
+characters in the strings
+a
+and
+b
+are the same and
+n<m
+.
+For example, the string
+a=
+"aezakmi" is lexicographically less than the string
+b=
+"aezus".
+Input
+The first line contains one integer
+t
+(
+1≤t≤
+10
+4
+). Then
+t
+test cases follow.
+Each test case is characterized by a string
+s
+, consisting of lowercase Latin letters (
+1≤|s|≤2⋅
+10
+5
+).
+It is guaranteed that the sum of the lengths of the strings in all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, output the lexicographically maximum string that can be obtained after applying a certain sequence of operations after which all characters in the string become unique.
+Example
+input
+Copy
+6
+codeforces
+aezakmi
+abacaba
+convexhull
+swflldjgpaxs
+myneeocktxpqjpz
+output
+Copy
+odfrces
+ezakmi
+cba
+convexhul
+wfldjgpaxs
+myneocktxqjpz

@@ -1,0 +1,249 @@
+L. Road Construction
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+N
+cities in the country of Numbata, numbered from
+1
+to
+N
+. Currently, there is no road connecting them. Therefore, each of these
+N
+cities proposes a road candidate to be constructed.
+City
+i
+likes to connect with city
+A
+i
+, so city
+i
+proposes to add a direct bidirectional road connecting city
+i
+and city
+A
+i
+. It is guaranteed that no two cities like to connect with each other. In other words, there is no pair of integers
+i
+and
+j
+where
+A
+i
+=j
+and
+A
+j
+=i
+. It is also guaranteed that any pair of cities are connected by a sequence of road proposals. In other words, if all proposed roads are constructed, then any pair of cities are connected by a sequence of constructed road.
+City
+i
+also prefers the road to be constructed using a specific material. Each material can be represented by an integer (for example,
+0
+for asphalt,
+1
+for wood, etc.). The material that can be used for the road connecting city
+i
+and city
+A
+i
+is represented by an array
+B
+i
+containing
+M
+i
+integers:
+[(
+B
+i
+)
+1
+,(
+B
+i
+)
+2
+,…,(
+B
+i
+)
+M
+i
+]
+. This means that the road connecting city
+i
+and city
+A
+i
+can be constructed with either of the material in
+B
+i
+.
+There are
+K
+workers to construct the roads. Each worker is only familiar with one material, thus can only construct a road with a specific material. In particular, the
+i
+th
+worker can only construct a road with material
+C
+i
+. Each worker can only construct at most one road. You want to assign each worker to construct a road such that any pair of cities are connected by a sequence of constructed road.
+Input
+Input begins with a line containing two integers:
+N
+K
+(
+3≤N≤2000
+;
+1≤K≤2000
+) representing the number of cities and the number of workers, respectively. The next
+N
+lines each contains several integers:
+A
+i
+M
+i
+(
+B
+i
+)
+1
+,
+(
+B
+i
+)
+2
+,
+⋯
+,
+(
+B
+i
+)
+M
+i
+(
+1≤
+A
+i
+≤N
+;
+A
+i
+≠i
+;
+1≤
+M
+i
+≤10000
+;
+0≤(
+B
+i
+)
+1
+<(
+B
+i
+)
+2
+<⋯<(
+B
+i
+)
+M
+i
+≤
+10
+9
+) representing the bidirectional road that city
+i
+likes to construct. It is guaranteed that the sum of
+M
+i
+does not exceed
+10000
+. It is also guaranteed that no two cities like to connect with each other and any pair of cities are connected by a sequence of road proposals. The next line contains
+K
+integers:
+C
+i
+(
+0≤
+C
+i
+≤
+10
+9
+) representing the material that is familiarized by the workers.
+Output
+If it is not possible to assign each worker to construct a road such that any pair of cities are connected by a sequence of constructed road, simply output -1 in a line. Otherwise, for each worker in the same order as input, output in a line two integers (separated by a single space):
+u
+and
+v
+in any order. This means that the worker constructs a direct bidirectional road connecting city
+u
+and
+v
+. If the worker does not construct any road, output "0 0" (without quotes) instead. Each pair of cities can only be assigned to at most one worker. You may output any assignment as long as any pair of cities are connected by a sequence of constructed road.
+Examples
+input
+Copy
+4 5
+2 2 1 2
+3 2 2 3
+4 2 3 4
+2 2 4 5
+1 2 3 4 5
+output
+Copy
+1 2
+2 3
+3 4
+0 0
+4 2
+input
+Copy
+4 5
+2 2 10 20
+3 2 2 3
+4 2 3 4
+2 2 4 5
+1 2 3 4 5
+output
+Copy
+-1
+Note
+Explanation for the sample input/output #1
+We can assign the workers to construct the following roads:
+The first worker constructs a road connecting city
+1
+and city
+2
+.
+The second worker constructs a road connecting city
+2
+and city
+3
+.
+The third worker constructs a road connecting city
+3
+and city
+4
+.
+The fourth worker does not construct any road.
+The fifth worker constructs a road connecting city
+4
+and city
+2
+.
+Therefore, any pair of cities are now connected by a sequence of constructed road.
+Explanation for the sample input/output #2
+There is no worker that can construct a road connecting city
+1
+, thus city
+1
+is certainly isolated.

@@ -1,0 +1,163 @@
+G. Antifibonacci Cut
+time limit per test12 seconds
+memory limit per test4 megabytes
+inputstandard input
+outputstandard output
+Note that the memory limit is unusual.
+Let's define the sequence of Fibonacci strings as follows:
+f
+0
+is 0,
+f
+1
+is 1,
+f
+i
+is
+f
+i−1
++
+f
+i−2
+for
+i>1
+(
++
+denotes the concatenation of two strings). So, for example,
+f
+2
+is 10,
+f
+3
+is 101,
+f
+4
+is 10110.
+For a given string
+s
+, let's define
+g(s)
+as the number of ways to cut it into several (any number, possibly even just one) strings such that none of these strings are Fibonacci strings. For example, if
+s
+is 10110101,
+g(s)=3
+since there are three ways to cut it:
+101101
++
+01;
+1011
++
+0101;
+1011
++
+01
++
+01.
+You are given a sequence of strings
+s
+1
+,
+s
+2
+,…,
+s
+n
+. Calculate
+g(
+s
+1
+),g(
+s
+1
++
+s
+2
+),…,g(
+s
+1
++
+s
+2
++…+
+s
+n
+)
+. Since these values can be huge, print them modulo
+998244353
+.
+Input
+The first line of the input contains one integer
+n
+(
+1≤n≤3⋅
+10
+3
+).
+Then,
+n
+lines follow. The
+i
+-th line contains the string
+s
+i
+(
+1≤|
+s
+i
+|≤
+10
+3
+), consisting of characters 0 and/or 1.
+Output
+Print
+n
+integers, where the
+i
+-th integer is
+g(
+s
+1
++
+s
+2
++…+
+s
+i
+)mod998244353
+.
+Examples
+input
+Copy
+1
+10110101
+output
+Copy
+3
+input
+Copy
+3
+1111
+1
+0
+output
+Copy
+2
+3
+3
+input
+Copy
+6
+10110101
+100100001110
+0000001100010001
+1111
+1001010100101010101001
+000100000010101111
+output
+Copy
+3
+561
+1466229
+9887505
+972227653
+52128355

@@ -1,0 +1,63 @@
+K Flip
+Problem
+Chef is given a binary string
+S of length
+N.
+In one operation, Chef has to choose exactly
+K indices and flip their values.
+Chef can perform the above operation any number of times. Find the number of distinct binary strings Chef can obtain.
+Since the answer might be large, output it module
+10
+9
++7.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K, as mentioned in statement.
+The next line contains the binary string
+S.
+Output Format
+For each test case, output the number of distinct binary strings Chef can obtain, modulo
+10
+9
++7.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+1≤K≤N
+Sum of
+N over all test cases do not exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+4 1
+0010
+2 2
+00
+16
+2
+Explanation:
+Test case
+1: We can flip
+1 index in an operation. Thus, we can generate all possible binary strings of length
+4. The total number of distinct strings that can be generated are
+2
+4
+=16.
+Test case
+2: We have to flip
+2 indices at once. Thus, we can convert
+00 to
+11. The only possible strings that can be generated are
+00 and
+11. Thus, the answer is
+2.

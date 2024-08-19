@@ -1,0 +1,93 @@
+Count Number of Peaks
+Problem
+You are given an integer
+N where
+N≤10. Consider any array
+A with length
+N where each element can either be
+0,
+1, or
+2, we define
+f(A) as the number of extrema in
+A. You need to find the sum of
+f(A) over all possible arrays
+A.
+Note:
+In an array
+A, we consider
+A
+i
+as an extremum if it is strictly greater than both of its neighbors (i.e.
+A
+i
+>A
+i−1
+and
+A
+i
+>A
+i+1
+), or if it is strictly smaller than both of its neighbors (i.e.
+A
+i
+<A
+i−1
+and
+A
+i
+<A
+i+1
+). Note that first and last elements are not counted as extremum.
+Extrema is the plural of extremum.
+Input Format
+The first line of the input contains an integer
+T - the number of test cases. The test cases then follow.
+The only line of each test case contains one integer
+N.
+Output Format
+For each test case, output on a single the sum of
+f(A) over all possible arrays
+A.
+Constraints
+1≤T≤10
+1≤N≤10
+Sample 1:
+Input
+Output
+3
+1
+3
+5
+0
+10
+270
+Explanation:
+Test case
+1:
+A=[0]. Then
+f(A)=0.
+A=[1]. Then
+f(A)=0.
+A=[2]. Then
+f(A)=0.
+Therefore the answer is
+0.
+Test case
+2: There are
+10 arrays
+A with
+f(A)=1:
+A=[0,1,0].
+A=[0,2,0].
+A=[0,2,1].
+A=[1,2,0].
+A=[1,2,1].
+A=[2,1,2].
+A=[2,0,2].
+A=[2,0,1].
+A=[1,0,2].
+A=[1,0,1].
+The remaining
+A's has
+f(A)=0. Therefore the answer is
+1⋅10=10.

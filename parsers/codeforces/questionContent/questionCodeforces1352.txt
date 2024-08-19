@@ -1,0 +1,86 @@
+F. Party Organization
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+On the great island of Baltia, there live
+N
+people, numbered from
+1
+to
+N
+. There are exactly
+M
+pairs of people that are friends with each other. The people of Baltia want to organize a successful party, but they have very strict rules on what a party is and when the party is successful. On the island of Baltia, a party is a gathering of exactly
+5
+people. The party is considered to be successful if either all the people at the party are friends with each other (so that they can all talk to each other without having to worry about talking to someone they are not friends with) or no two people at the party are friends with each other (so that everyone can just be on their phones without anyone else bothering them). Please help the people of Baltia organize a successful party or tell them that it's impossible to do so.
+Input
+The first line contains two integer numbers,
+N
+(
+5≤N≤2∗
+10
+5
+) and
+M
+(
+0≤M≤2∗
+10
+5
+) – the number of people that live in Baltia, and the number of friendships. The next
+M
+lines each contains two integers
+U
+i
+and
+V
+i
+(
+1≤
+U
+i
+,
+V
+i
+≤N
+) – meaning that person
+U
+i
+is friends with person
+V
+i
+. Two friends can not be in the list of friends twice (no pairs are repeated) and a person can be friends with themselves (
+U
+i
+≠
+V
+i
+).
+Output
+If it's possible to organize a successful party, print
+5
+numbers indicating which
+5
+people should be invited to the party. If it's not possible to organize a successful party, print
+−1
+instead. If there are multiple successful parties possible, print any.
+Examples
+input
+Copy
+6 3
+1 4
+4 2
+5 4
+output
+Copy
+1 2 3 5 6
+input
+Copy
+5 4
+1 2
+2 3
+3 4
+4 5
+output
+Copy
+-1

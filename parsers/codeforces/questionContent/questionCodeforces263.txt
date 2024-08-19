@@ -1,0 +1,161 @@
+D. Game on Axis
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+points
+1,2,…,n
+, each point
+i
+has a number
+a
+i
+on it. You're playing a game on them. Initially, you are at point
+1
+. When you are at point
+i
+, take following steps:
+If
+1≤i≤n
+, go to
+i+
+a
+i
+,
+Otherwise, the game ends.
+Before the game begins, you can choose two integers
+x
+and
+y
+satisfying
+1≤x≤n
+,
+−n≤y≤n
+and replace
+a
+x
+with
+y
+(set
+a
+x
+:=y
+). Find the number of distinct pairs
+(x,y)
+such that the game that you start after making the change ends in a finite number of steps.
+Notice that you do not have to satisfy
+a
+x
+≠y
+.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+)
+— the number of test cases.
+The first line of each test case contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of points.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+−n≤
+a
+i
+≤n
+) — the numbers on the axis.
+It's guaranteed that the sum of
+n
+does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a line containing a single integer — the number of distinct pairs
+(x,y)
+with which the game ends.
+Example
+input
+Copy
+9
+1
+0
+2
+-1 0
+2
+1 -1
+2
+1 1
+3
+-1 -2 -1
+3
+1 -2 -1
+4
+-1 4 -2 1
+5
+1 1 1 1 -4
+5
+1 1 1 1 1
+output
+Copy
+2
+8
+6
+7
+20
+17
+34
+30
+40
+Note
+In the first test case, the pairs
+(x,y)
+with which the game ends are
+(1,−1)
+and
+(1,1)
+, corresponding to the routes
+1→0
+and
+1→2
+. Note that
+(1,2)
+is invalid since when
+n=1
+,
+y=2
+violates
+−n≤y≤n
+.
+(1,0)
+is also invalid since you will go from
+1
+to
+1
+forever.
+In the second test case, the pairs are
+(1,−2),(1,−1),(1,2),(2,−2),(2,−1),(2,0),(2,1),(2,2)
+.
+In the fourth test case, the pairs are
+(1,−2),(1,−1),(1,1),(1,2),(2,−2),(2,1),(2,2)
+.

@@ -1,0 +1,81 @@
+Flip the Prefix
+Problem
+You are given a binary string
+S of length
+N and an integer
+K. You can perform the following operation on the string:
+Select a prefix of the string
+S and flip all the characters of the prefix. A flip corresponds to changing
+0 to
+1 and vice-versa.
+Find the minimum number of operations required to obtain a substring of length
+K such that all characters of the substring are
+1.
+Note:
+A prefix is obtained by deleting some (possibly zero) characters from the end of the string.
+A substring is obtained by deleting some (possibly zero) characters from the beginning of the string and some (possibly zero) characters from the end of the string.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N and
+K — the length of the string and the length length of substring containing all
+1s we want to achieve.
+The next line contains the binary string
+S.
+Output Format
+For each test case, output on a new line, the minimum number of operations required to obtain a substring of length
+K such that all characters of the substring are
+1.
+Constraints
+1≤T≤2000
+1≤K≤N≤3⋅10
+5
+S consists of
+0 and
+1 only.
+The sum of
+N over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+3 3
+000
+4 2
+0110
+5 3
+10101
+1
+0
+2
+Explanation:
+Test case
+1: We need to obtain a substring containing three
+1s. Using one operation, we can select the prefix
+S[1,3] and flip all the characters in the prefix. Thus, the string becomes
+111.
+Test case
+2: The string already contains a substring having two
+1s. Thus, we do not need any operation.
+Test case
+3: We need to obtain a substring containing three
+1s. We can do so using
+2 operations:
+Operation
+1: Select the prefix
+S[1,4] and flip all characters in the prefix. Thus, the string becomes
+01011.
+Operation
+2: Select the prefix
+S[1,3] and flip all characters in the prefix. Thus, the string becomes
+10111.
+Thus, we have a substring
+S[3,5] of length
+3 where all characters of the substring are
+1. It can be shown that we cannot obtain such substring using less than
+2 operations.

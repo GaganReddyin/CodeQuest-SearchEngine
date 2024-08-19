@@ -1,0 +1,63 @@
+Laura and her QUERIES On Tree
+Problem
+  Logan: "Someone will come along"
+Charles: "Someone has come along"
+After much speculation, Logan has decided to escort Laura to a place in North Dakota called "Eden".
+But Laura is in playful mood right now, and wants Logan to play with her an interesting game.
+She gives Logan a tree with N nodes and Q queries. Each query will contain 5 integers R A B X and Y.
+R denotes the root node of the tree for the particular query.
+A denotes the cost of an edge if one traverses from a node to its parent node.
+B denotes the cost of an edge if one traverses from a node to its child node.
+Consider 2 friends are standing at nodes X and Y respectively. They both need to meet and can meet at any node. Logan need to tell Laura what is the minimum cost they both need to pay to meet?
+
+After a person travels through an edge (his current location gets updated), he needs to pay the cost which is equal to C * cost of edge where C is a factor whose value is equal to total edges traveled by a person from his starting location and upto his current location and cost of edge will be either equal to A or B depending upon the person's movement.
+See sample input output for better understanding.
+  Input
+First line contains an integer N denoting number of nodes in tree.
+Next N-1 lines contains two integers U and V denoting that there is an edge between node U and node V.
+Next line contains an integer Q denoting number of queries.
+Next Q lines contains five integers R, A, B, X and Y respectively.
+  Output
+For each query print required answer in a separate line.
+  Constraints
+1 ≤ N ≤ 105
+1 ≤ U, V, R, X, Y ≤ N
+1 ≤ Q ≤ 105
+1 ≤ A, B ≤ 106
+  Example
+Input:
+8
+1 2
+5 6
+5 3
+4 3
+8 2
+3 1
+7 5
+3
+3 5 2 3 2
+5 8 12 8 7
+1 10 2 4 7
+Output:
+6
+80
+20
+  Explanation
+Query 1 : Following will be the tree orientation as root node is given as 3.
+
+Consider both friends meet at node 3 than :
+2nd friend will move from node 2 to node 1. Cost needed to be paid while traversing through this edge will be 1*5 = 5 (total distance traveled by 2nd friend after traversing current edge) * (edge cost which will be equal to 5 as there is a traversal from a node to its parent).
+2nd friend will now move from node 1 to node 3. Cost needed to be paid while traversing through this edge will be 2*5 = 5 (total distance traveled by 2nd friend after traversing current edge) * (edge cost which will be equal to 5 as there is a traversal from a node to its parent).
+Total cost = Total cost paid by 1st friend + Total cost paid by 2nd friend = 0 + 1*5 + 2*5 = 15
+
+Similarly consider both friends meet at node 1 than :
+2nd friend will move from node 2 to node 1. Cost needed to be paid while traversing through this edge will be 1*5 = 5 (total distance traveled by 2nd friend after traversing current edge) * (edge cost which will be equal to 5 as there is a traversal from a node to its parent).
+1st friend will now move from node 3 to node 1. Cost needed to be paid while traversing through this edge will be 1*2 = 2 (total distance traveled by 1st friend after traversing current edge) * (edge cost which will be equal to 2 as there is a traversal from a node to its child).
+Total cost = Total cost paid by 1st friend + Total cost paid by 2nd friend = 1*2 + 1*5 = 7
+
+Similarly consider both friends meet at node 2 than :
+1st friend will move from node 3 to node 1. Cost needed to be paid while traversing through this edge will be 1*2 = 2 (total distance traveled by 1st friend after traversing current edge) * (edge cost which will be equal to 2 as there is a traversal from a node to its child).
+1st friend will now move from node 1 to node 2. Cost needed to be paid while traversing through this edge will be 2*2 = 4 (total distance traveled by 1st friend after traversing current edge) * (edge cost which will be equal to 2 as there is a traversal from a node to its child).
+Total cost = Total cost paid by 1st friend + Total cost paid by 2nd friend = 1*2 + 2*2 + 0 = 6
+
+Hence minimum cost needed to be paid by both the friends to meet is 6.

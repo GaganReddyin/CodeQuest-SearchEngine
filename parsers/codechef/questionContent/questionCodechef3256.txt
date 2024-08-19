@@ -1,0 +1,63 @@
+Yet Another Chef And Numbers
+Problem
+Chef is again playing with numbers.
+He defines the rating of a number as the count of trailing zeros in the product of all the digits of the number.
+Chef wants you to find the sum of ratings of all the numbers between the numbers
+A and
+B (excluding
+A). As the answer can be very large, print it modulo
+10
+9
++7.
+Note: If the product of the digits of a number is
+0, the number's rating is defined to be
+1.
+Input Format
+The first line contains
+2 space-separated integers,
+A and
+B.
+Output Format
+Output a single integer, the sum of ratings of all the numbers between the numbers
+A and
+B (excluding
+A). As the answer can be very large, print it modulo
+10
+9
++7.
+Constraints
+1≤A<B≤10
+1000
+Sample 1:
+Input
+Output
+1 10
+1
+Explanation:
+10 will have rating
+1 as its product of digits =
+1⋅0 =
+0 has
+1 trailing zero. All other numbers have a single digit and thus, no trailing zeroes.
+Sample 2:
+Input
+Output
+10 30
+3
+Explanation:
+Chef will rate
+20,25, and
+30 as
+1 as the product of their digits have
+1 trailing zeros. All other numbers have no trailing zeroes.
+Sample 3:
+Input
+Output
+454 455
+2
+Explanation:
+The product of digits of
+455 is
+4⋅5⋅5=100, which has
+2 trailing zeroes. Thus, the rating is
+2.

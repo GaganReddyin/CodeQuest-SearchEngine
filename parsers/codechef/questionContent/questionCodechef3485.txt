@@ -1,0 +1,108 @@
+Dream and the Multiverse
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Dream abstracts the fabric of spacetime as a directed rooted tree (arborescence) with
+N nodes (numbered
+1 through
+N). Node
+1 is the root and for each
+i (
+1≤i≤N−1), the parent of node
+i+1 is
+f
+i
+. All edges of this tree are directed away from the root.
+Then, Dream employs a magical superpower and adds
+M directed edges to this tree in such a way that the resulting directed graph remains acyclic (a DAG).
+Let's call a node of this DAG an event and further call a simple path on this DAG an era. Dream considers a pair of events
+(i,j) to be plausible if there is an era whose first event is
+i and last event is
+j. Note that
+i<j does not have to hold for a plausible pair.
+Dream now wants you to answer
+Q queries. In each query, he gives you two positive integers
+l and
+r, where
+l≤r, and he wishes to know the number of plausible pairs of events
+(i,j) such that
+l≤i<j≤r.
+Input
+The first line of the input contains two space-separated integers
+N and
+M.
+The second line contains
+N−1 space-separated integers
+f
+1
+,f
+2
+,…,f
+N−1
+.
+M lines follow. Each of these lines contains two space-separated integers
+u and
+v describing an additional edge from node
+u to node
+v.
+The following line contains a single integer
+Q.
+Q lines follow. Each of these lines contains two space-separated integers
+l and
+r describing a query.
+Output
+For each query, print a single line containing one integer ― the number of plausible pairs
+(i,j) such that
+l≤i<j≤r.
+Constraints
+2≤N≤3⋅10
+5
+1≤Q≤3⋅10
+5
+0≤M≤20
+1≤f
+i
+≤N for each valid
+i
+1≤u,v≤N
+the graph described on the input is acyclic
+1≤l≤r≤N
+Subtasks
+Subtask #1 (10 points): the graph is a line ― that is,
+M=0 and there is a permutation
+p
+1
+,p
+2
+,…,p
+N
+such that
+p
+1
+=1 and nodes
+p
+1
+,p
+2
+,…,p
+N
+form a directed path in the tree
+Subtask #2 (20 points):
+M=0
+Subtask #3 (30 points):
+N,Q≤2⋅10
+5
+Subtask #4 (40 points): original constraints
+Sample 1:
+Input
+Output
+8 2
+1 2 5 1 4 3 3
+2 4
+4 7
+3
+4 6
+5 7
+1 8
+2
+2
+18

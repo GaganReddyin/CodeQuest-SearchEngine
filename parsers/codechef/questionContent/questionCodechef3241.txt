@@ -1,0 +1,89 @@
+Hamiltonian Tree
+Problem
+You are given a tree
+T with
+N vertices. Recall that a tree is a connected graph with
+N−1 edges.
+Determine the minimum number of edges you must add to
+T to get a new graph
+G such that
+G has a Hamiltonian path.
+Note: A graph
+G is said to have a hamiltonian path if and only if there exists a simple path in
+G that includes every vertex exactly once.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the number of vertices of the tree.
+The next
+N−1 lines describe the edges. The
+i-th of these
+N−1 lines contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, output the minimum number of edges to add to the tree
+T to get a graph with a hamiltonian path.
+Constraints
+1≤T≤10
+4
+2≤N≤2⋅10
+5
+1≤u
+i
+,v
+i
+≤N
+It is guaranteed that the edges form a tree.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+5
+1 2
+1 3
+3 4
+5 3
+3
+1 2
+2 3
+1
+0
+Explanation:
+For the first test case, the tree is as shown below. We only need to add one edge between
+(4,5) to get a hamiltonian path. The path will be
+2→1→3→4→5. We could have also added the edge
+(2,4) instead to get a different hamiltonian path.
+For the second test case, the given tree itself has a hamiltonian path. So there is no need of adding any edges.
+Sample 2:
+Input
+Output
+1
+10
+8 2
+2 5
+5 6
+2 3
+3 7
+7 1
+1 9
+3 4
+7 10
+2

@@ -1,0 +1,22 @@
+A. Da Vinci Powers
+time limit per test2 seconds
+memory limit per test64 megabytes
+inputstandard input
+outputstandard output
+Input
+The input contains a single integer a (0 ≤ a ≤ 35).
+Output
+Output a single integer.
+Examples
+input
+Copy
+3
+output
+Copy
+8
+input
+Copy
+10
+output
+Copy
+1024

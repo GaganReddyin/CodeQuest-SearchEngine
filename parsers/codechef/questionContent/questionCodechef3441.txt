@@ -1,0 +1,85 @@
+Node Marking
+Problem
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+You are given an integer
+K and a tree of size
+N, rooted at node
+1. In one operation, you can either select a node of the tree and color its entire subtree or create a new (uncolored) copy of the given tree. Find the minimum number of operations required so that the total number of colored nodes among all trees is exactly
+K.
+###Input
+The first line contains an integer
+T, denoting the number of test cases. Then
+T test cases follow.
+For each test case, the first line contains two integers
+N and
+K, the size of the given tree and the number of nodes to be colored, respectively.
+The next line contains
+N−1 integers
+p
+2
+,…,p
+n
+, where
+p
+i
+is the parent of node
+i.
+###Output For each testcase, output a single integer: the minimum number of operations required to color exactly
+K total nodes.
+###Constraints
+1≤T≤400
+1≤N≤5⋅10
+4
+1≤K≤10
+3
+1≤p
+i
+≤N
+The input describes a valid tree rooted at node
+1
+The sum of
+N⋅K over all test cases does not exceed
+10
+7
+###Subtasks
+Subtask 1 (10 points): The tree is a simple path
+Subtask 2 (35 points):
+1≤N,K≤200 and the sum of
+N⋅K does not exceed
+4⋅10
+4
+Subtask 3 (55 points): Original constraints
+###Sample Input
+2
+3 5
+1 1
+4 6
+1 2 2
+###Sample Output
+4
+3
+###Explanation
+For the first test case:
+Operation
+1: The subtree of node
+1 is colored (coloring a total of
+3 nodes).
+Operation
+2: A new copy of tree is generated.
+Operation
+3: The subtree of node
+2 of the new tree is colored.
+Operation
+4: The subtree of node
+3 of the new tree is colored.
+For the second test case:
+Operation
+1: The subtree of node
+2 is colored (coloring a total of
+3 nodes).
+Operation
+2: A new copy of tree is generated.
+Operation
+3: The subtree of node
+2 is colored (coloring a total of
+3 more nodes).

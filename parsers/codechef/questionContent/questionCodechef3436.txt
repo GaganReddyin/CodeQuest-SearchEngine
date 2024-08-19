@@ -1,0 +1,117 @@
+Too Many LIS
+Problem
+You are given
+2 integers
+N and
+M. You also have an empty set
+S.
+Consider an array
+A of length
+N such that
+1≤A
+i
+≤M for each
+1≤i≤N (there are
+M
+N
+such arrays in total).
+For each of these
+M
+N
+arrays, insert all of its longest non-decreasing subsequences into
+S.
+Output the size of
+S. Since the size of
+S might be large, output it modulo
+10
+9
++7.
+Note that since
+S is a set, it stores only distinct values. For example, when
+N=3 and
+M=2, the sequence
+[1,1] is a longest non-decreasing subsequence for both
+A=[1,2,1] and for
+A=[2,1,1] — however, it will only be present once in
+S.
+Please look at the sample cases below for an explained example.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+N and
+M.
+Output Format
+For each test case, output on a new line the size of set
+S, modulo
+10
+9
++7.
+Constraints
+1≤T≤2⋅10
+5
+1≤N,M≤2⋅10
+5
+Sample 1:
+Input
+Output
+4
+3 1
+2 3
+1 5
+4 2
+1
+9
+5
+12
+Explanation:
+Test case
+1: There is only one possible array
+[1,1,1], whose longest non-decreasing subsequence is also unique, namely
+[1,1,1]. So, the size of set
+S is
+1.
+Test case
+2: There are
+3
+2
+=9 possible arrays. These arrays and their corresponding sequences are as follows:
+[1,1] contributes
+[1,1] to
+S
+[1,2] contributes
+[1,2] to
+S
+[1,3] contributes
+[1,3] to
+S
+[2,1] contributes
+[2] and
+[1] to
+S
+[2,2] contributes
+[2,2] to
+S
+[2,3] contributes
+[2,3] to
+S
+[3,1] contributes
+[3] and
+[1] to
+S
+[3,2] contributes
+[3] and
+[2] to
+S
+[3,3] contributes
+[3,3] to
+S
+Finally, it can be seen that
+S={[1],[2],[3],[1,1],[2,2],[3,3],[1,2],[1,3],[2,3]} has a size of
+9.
+Test case
+3: Set
+S contains
+5 elements, one corresponding to each of the
+5 possible arrays.

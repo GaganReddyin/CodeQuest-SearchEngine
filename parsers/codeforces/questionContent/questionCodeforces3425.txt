@@ -1,0 +1,166 @@
+B. Magic Tree
+time limit per test2 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+We have a magic tree: a rooted tree on
+n
+vertices. The vertices are numbered
+1
+through
+n
+. Vertex
+1
+is the root.
+The magic tree gives us magic fruit. The fruit only grows in vertices of the tree other than the root. Each vertex contains at most one piece of fruit.
+It is now day 0 and no fruit is ripe yet. Each fruit will only be ripe for a single day. For each fruit, we are given the vertex
+v
+j
+where it grows, the day
+d
+j
+on which it will be ripe, and the amount
+w
+j
+of magic juice we can extract from it if we harvest it when it is ripe.
+The fruits have to be harvested by cutting some branches of the tree. On each day, you may cut as many branches of the tree as you like. The parts of the tree you cut off will fall to the ground and you can collect all the ripe fruits they contain. All fruits that fall to the ground when they are not ripe are discarded and no magic juice is collected from them.
+Formally, on each day, you may erase some edges of the tree. Whenever you do so, the tree will split into multiple connected components. You then erase all components that do not contain the root and you harvest all ripe fruits those components contained.
+Given is a description of the tree together with the locations, ripening days and juiciness of all
+m
+fruits. Calculate the maximum total amount of magic juice we can harvest from the tree.
+Input
+The first line contains three space-separated integers
+n
+(
+2≤n≤100,000
+),
+m
+(
+1≤m≤n−1
+) and
+k
+(
+1≤k≤100,000
+) – the number of vertices, the number of fruits, and the maximum day on which a fruit may become ripe.
+The following
+n−1
+lines contain the integers
+p
+2
+,…,
+p
+n
+, one per line. For each
+i
+(from
+2
+to
+n
+, inclusive), vertex
+p
+i
+(
+1≤
+p
+i
+≤i−1
+) is the parent of vertex
+i
+.
+Each of the last
+m
+lines describes one fruit. The
+j
+-th of these lines has the form "
+v
+j
+ d
+j
+ w
+j
+" (
+2≤
+v
+j
+≤n
+,
+1≤
+d
+j
+≤k
+,
+1≤
+w
+j
+≤
+10
+9
+).
+It is guaranteed that no vertex contains more than one fruit (i.e., the values
+v
+j
+are distinct).
+Output
+Output a single line with a single integer, the maximum amount of magic juice we can harvest from the tree.
+Scoring
+Subtask 1 (6 points):
+n,k≤20
+, and
+w
+j
+=1
+for all
+j
+Subtask 2 (3 points): fruits only grow in the leaves of the tree
+Subtask 3 (11 points):
+p
+i
+=i−1
+for each
+i
+, and
+w
+j
+=1
+for all
+j
+Subtask 4 (12 points):
+k≤2
+Subtask 5 (16 points):
+k≤20
+, and
+w
+j
+=1
+for all
+j
+Subtask 6 (13 points):
+m≤1,000
+Subtask 7 (22 points):
+w
+j
+=1
+for all
+j
+Subtask 8 (17 points): no additional constraints
+Example
+input
+Copy
+6 4 10
+1
+2
+1
+4
+4
+3 4 5
+4 7 2
+5 4 1
+6 9 3
+output
+Copy
+9
+Note
+In the example input, one optimal solution looks as follows:
+On day 4, cut the edge between vertices 4 and 5 and harvest a ripe fruit with 1 unit of magic juice. On the same day, cut the edge between vertices 1 and 2 and harvest 5 units of magic juice from the ripe fruit in vertex 3.
+On day 7, do nothing. (We could harvest the fruit in vertex 4 that just became ripe, but doing so is not optimal.)
+On day 9, cut the edge between vertices 1 and 4. Discard the fruit in vertex 4 that is no longer ripe, and harvest 3 units of magic juice from the ripe fruit in vertex 6. (Alternately, we could achieve the same effect by cutting the edge between vertices 4 and 6.)

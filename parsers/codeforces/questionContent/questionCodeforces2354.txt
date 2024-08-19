@@ -1,0 +1,236 @@
+F. Reverse and Swap
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+a
+of length
+2
+n
+. You should process
+q
+queries on it. Each query has one of the following
+4
+types:
+Replace(x,k)
+ — change
+a
+x
+to
+k
+;
+Reverse(k)
+ — reverse each subarray
+[(i−1)⋅
+2
+k
++1,i⋅
+2
+k
+]
+for all
+i
+(
+i≥1
+);
+Swap(k)
+ — swap subarrays
+[(2i−2)⋅
+2
+k
++1,(2i−1)⋅
+2
+k
+]
+and
+[(2i−1)⋅
+2
+k
++1,2i⋅
+2
+k
+]
+for all
+i
+(
+i≥1
+);
+Sum(l,r)
+ — print the sum of the elements of subarray
+[l,r]
+.
+Write a program that can quickly process given queries.
+Input
+The first line contains two integers
+n
+,
+q
+(
+0≤n≤18
+;
+1≤q≤
+10
+5
+) — the length of array
+a
+and the number of queries.
+The second line contains
+2
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+2
+n
+(
+0≤
+a
+i
+≤
+10
+9
+).
+Next
+q
+lines contains queries — one per line. Each query has one of
+4
+types:
+"
+1
+x
+k
+" (
+1≤x≤
+2
+n
+;
+0≤k≤
+10
+9
+) —
+Replace(x,k)
+;
+"
+2
+k
+" (
+0≤k≤n
+) —
+Reverse(k)
+;
+"
+3
+k
+" (
+0≤k<n
+) —
+Swap(k)
+;
+"
+4
+l
+r
+" (
+1≤l≤r≤
+2
+n
+) —
+Sum(l,r)
+.
+It is guaranteed that there is at least one
+Sum
+query.
+Output
+Print the answer for each
+Sum
+query.
+Examples
+input
+Copy
+2 3
+7 4 9 9
+1 2 8
+3 1
+4 2 4
+output
+Copy
+24
+input
+Copy
+3 8
+7 0 8 8 7 1 5 2
+4 3 7
+2 1
+3 2
+4 1 6
+2 3
+1 5 16
+4 8 8
+3 0
+output
+Copy
+29
+22
+1
+Note
+In the first sample, initially, the array
+a
+is equal to
+{7,4,9,9}
+.
+After processing the first query. the array
+a
+becomes
+{7,8,9,9}
+.
+After processing the second query, the array
+a
+i
+becomes
+{9,9,7,8}
+Therefore, the answer to the third query is
+9+7+8=24
+.
+In the second sample, initially, the array
+a
+is equal to
+{7,0,8,8,7,1,5,2}
+. What happens next is:
+Sum(3,7)
+→
+8+8+7+1+5=29
+;
+Reverse(1)
+→
+{0,7,8,8,1,7,2,5}
+;
+Swap(2)
+→
+{1,7,2,5,0,7,8,8}
+;
+Sum(1,6)
+→
+1+7+2+5+0+7=22
+;
+Reverse(3)
+→
+{8,8,7,0,5,2,7,1}
+;
+Replace(5,16)
+→
+{8,8,7,0,16,2,7,1}
+;
+Sum(8,8)
+→
+1
+;
+Swap(0)
+→
+{8,8,0,7,2,16,1,7}
+.

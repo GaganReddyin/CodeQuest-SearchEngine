@@ -1,0 +1,149 @@
+Maximal Trigonal Area
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+You are given
+N distinct points
+(P
+1,x
+,P
+1,y
+),(P
+2,x
+,P
+2,y
+),…,(P
+N,x
+,P
+N,y
+) on the coordinate plane, and
+Q queries in the form L R X.
+In each query, consider the polygon formed by the points in the interval
+[L,R] (i.e. the points
+(P
+L,x
+,P
+L,y
+),(P
+L+1,x
+,P
+L+1,y
+),…,(P
+R,x
+,P
+R,y
+)), along with
+(0,0) and
+(X,0).
+If this polygon is not convex, that is the polygon contains an angle greater than
+180
+∘
+, output
+−1.
+Otherwise, the polygon can be dissected into
+R−L+1 triangles that all contain
+(X,0) as a vertex. Out of these triangles, consider the triangle with the maximum area, and let this area be
+A. Output
+2A.
+Input Format
+The first line contains one integer
+N - the number of points.
+The
+i-th line of the next
+N lines contain two integers
+P
+i,x
+and
+P
+i,y
+- the
+x and
+y coordinate of the
+i-th point.
+The next line contains one integer
+Q - the number of queries.
+Each of the next
+Q lines contain three integers
+L,
+R, and
+X representing a query.
+Output Format
+For each query, output on a single line
+−1 if the polygon is not convex, otherwise output
+2A, where
+A is the area of the largest triangle the polygon can be dissected into per the statement's description.
+Constraints
+1≤N≤10000
+1≤Q≤2⋅10
+5
+1≤P
+i,x
+,P
+i,y
+≤10
+5
+1≤L≤R≤N
+1≤X≤10
+9
+Sample 1:
+Input
+Output
+2
+4 2
+1 1
+3
+1 2 6
+1 1 5
+2 2 4
+8
+10
+4
+Explanation:
+Query
+1:
+In the diagram above, note how the polygon can be dissected into
+2 triangles that both include vertex
+(X,0). The purple triangle has an area of
+3 and the blue triangle has an area of
+4.
+Therefore,
+2A=2×4=8.
+Sample 2:
+Input
+Output
+5
+3 7
+3 4
+4 8
+8 7
+2 5
+15
+1 1 8
+1 2 1
+1 3 1
+1 4 3
+1 5 1
+2 2 6
+2 3 10
+2 4 4
+2 5 9
+3 3 7
+3 4 10
+3 5 8
+4 4 1
+4 5 6
+5 5 2
+56
+7
+7
+-1
+-1
+24
+-1
+-1
+-1
+56
+80
+40
+7
+38
+10

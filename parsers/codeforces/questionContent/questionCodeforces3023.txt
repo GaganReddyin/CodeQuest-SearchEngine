@@ -1,0 +1,181 @@
+F. Divide The Students
+time limit per test8 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Recently a lot of students were enrolled in Berland State University. All students were divided into groups according to their education program. Some groups turned out to be too large to attend lessons in the same auditorium, so these groups should be divided into two subgroups. Your task is to help divide the first-year students of the computer science faculty.
+There are
+t
+new groups belonging to this faculty. Students have to attend classes on three different subjects — maths, programming and P. E. All classes are held in different places according to the subject — maths classes are held in auditoriums, programming classes are held in computer labs, and P. E. classes are held in gyms.
+Each group should be divided into two subgroups so that there is enough space in every auditorium, lab or gym for all students of the subgroup. For the first subgroup of the
+i
+-th group, maths classes are held in an auditorium with capacity of
+a
+i,1
+students; programming classes are held in a lab that accomodates up to
+b
+i,1
+students; and P. E. classes are held in a gym having enough place for
+c
+i,1
+students. Analogically, the auditorium, lab and gym for the second subgroup can accept no more than
+a
+i,2
+,
+b
+i,2
+and
+c
+i,2
+students, respectively.
+As usual, some students skip some classes. Each student considers some number of subjects (from
+0
+to
+3
+) to be useless — that means, he skips all classes on these subjects (and attends all other classes). This data is given to you as follows — the
+i
+-th group consists of:
+d
+i,1
+students which attend all classes;
+d
+i,2
+students which attend all classes, except for P. E.;
+d
+i,3
+students which attend all classes, except for programming;
+d
+i,4
+students which attend only maths classes;
+d
+i,5
+students which attend all classes, except for maths;
+d
+i,6
+students which attend only programming classes;
+d
+i,7
+students which attend only P. E.
+There is one more type of students — those who don't attend any classes at all (but they, obviously, don't need any place in auditoriums, labs or gyms, so the number of those students is insignificant in this problem).
+Your task is to divide each group into two subgroups so that every auditorium (or lab, or gym) assigned to each subgroup has enough place for all students from this subgroup attending the corresponding classes (if it is possible). Each student of the
+i
+-th group should belong to exactly one subgroup of the
+i
+-th group; it is forbidden to move students between groups.
+Input
+The first line contains one integer
+t
+(
+1≤t≤300
+) — the number of groups.
+Then the descriptions of groups follow. The description of the
+i
+-th group consists of three lines:
+the first line contains three integers
+a
+i,1
+,
+b
+i,1
+and
+c
+i,1
+(
+1≤
+a
+i,1
+,
+b
+i,1
+,
+c
+i,1
+≤3000
+) — the capacity of the auditorium, lab and gym assigned to the first subgroup of the
+i
+-th group, respectively;
+the second line contains three integers
+a
+i,2
+,
+b
+i,2
+and
+c
+i,2
+(
+1≤
+a
+i,2
+,
+b
+i,2
+,
+c
+i,2
+≤3000
+) — the capacity of the auditorium, lab and gym assigned to the second subgroup of the
+i
+-th group, respectively;
+the third line contains integers
+d
+i,1
+,
+d
+i,2
+, ...,
+d
+i,7
+(
+0≤
+d
+i,j
+≤3000
+) — the number of students belonging to each of the seven aforementioned types in the
+i
+-th group. It is not guaranteed that the sum of these values is positive — a group can consist entirely of students that don't attend classes at all.
+It is guaranteed that the total number of students in all groups is not greater than
+3000
+.
+Output
+For each group, print the result of its division as follows:
+if it is impossible to divide the group, print one integer
+−1
+;
+otherwise print seven integers
+f
+i,1
+,
+f
+i,2
+, ...,
+f
+i,7
+(
+0≤
+f
+i,j
+≤
+d
+i,j
+) — the number of students the first, second, ..., seventh type in the first subgroup of the
+i
+-th group (all other students will be assigned to the second subgroup). If there are multiple answers, print any of them.
+Example
+input
+Copy
+3
+9 4 13
+1 10 3
+1 2 3 4 5 6 7
+9 4 13
+1 10 3
+2 1 3 4 5 6 7
+1 2 3
+4 5 6
+0 0 0 0 0 0 0
+output
+Copy
+1 1 3 4 2 0 7
+-1
+0 0 0 0 0 0 0

@@ -1,0 +1,83 @@
+G. AI robots
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+In the last mission, MDCS has successfully shipped
+N
+AI robots to Mars. Before they start exploring, system initialization is required so they are arranged in a line. Every robot can be described with three numbers: position (
+x
+i
+), radius of sight (
+r
+i
+) and IQ (
+q
+i
+).
+Since they are intelligent robots, some of them will talk if they see each other. Radius of sight is inclusive, so robot can see other all robots in range
+[
+x
+i
+−
+r
+i
+,
+x
+i
++
+r
+i
+]
+. But they don't walk to talk with anybody, but only with robots who have similar IQ. By similar IQ we mean that their absolute difference isn't more than
+K
+.
+Help us and calculate how many pairs of robots are going to talk with each other, so we can timely update their software and avoid any potential quarrel.
+Input
+The first line contains two integers, numbers
+N(1≤N≤
+10
+5
+)
+and
+K(0≤K≤20)
+.
+Next
+N
+lines contain three numbers each
+x
+i
+,
+r
+i
+,
+q
+i
+(0≤
+x
+i
+,
+r
+i
+,
+q
+i
+≤
+10
+9
+)
+— position, radius of sight and IQ of every robot respectively.
+Output
+Output contains only one number — solution to the problem.
+Example
+input
+Copy
+3 2
+3 6 1
+7 3 10
+10 5 8
+output
+Copy
+1
+Note
+The first robot can see the second, but not vice versa. The first robot can't even see the third. The second and the third robot can see each other and their IQs don't differ more than 2 so only one conversation will happen.

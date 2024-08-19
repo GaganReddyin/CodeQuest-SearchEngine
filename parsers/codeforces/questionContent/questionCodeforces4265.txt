@@ -1,0 +1,76 @@
+D. Large Triangle
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a strange peculiarity: if you connect the cities of Rostov, Taganrog and Shakhty, peculiarly, you get a triangle
+«Unbelievable But True»
+Students from many different parts of Russia and abroad come to Summer Informatics School. You marked the hometowns of the SIS participants on a map.
+Now you decided to prepare an interesting infographic based on this map. The first thing you chose to do is to find three cities on this map, such that they form a triangle with area
+S
+.
+Input
+The first line of input contains two integers
+n
+and
+S
+(
+3≤n≤2000
+,
+1≤S≤2⋅
+10
+18
+) — the number of cities on the map and the area of the triangle to be found.
+The next
+n
+lines contain descriptions of the cities, one per line. Each city is described by its integer coordinates
+x
+i
+,
+y
+i
+(
+−
+10
+9
+≤
+x
+i
+,
+y
+i
+≤
+10
+9
+).
+It is guaranteed that all cities are located at distinct points. It is also guaranteed that no three cities lie on the same line.
+Output
+If the solution doesn't exist — print «No».
+Otherwise, print «Yes», followed by three pairs of coordinates
+(x,y)
+ — the locations of the three cities, which form the triangle of area
+S
+.
+Examples
+input
+Copy
+3 7
+0 0
+3 0
+0 4
+output
+Copy
+No
+input
+Copy
+4 3
+0 0
+2 0
+1 2
+1 3
+output
+Copy
+Yes
+0 0
+1 3
+2 0

@@ -1,0 +1,88 @@
+Prefix Ones
+Problem
+Chef has a binary string
+S of length
+N.
+Chef can perform the following operation on the string:
+Choose any substring of
+S;
+Remove the chosen substring from
+S;
+Concatenate the remaining parts of the string
+S, obtained after removing the substring.
+Find the length of the longest prefix having all
+1s you can achieve, by performing the above operation at most once.
+Note: A prefix of a string is obtained by deleting some (possibly zero) characters from the end of string
+S.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains a single integer
+N, the length of the binary string.
+The next line contains the binary string
+S.
+Output Format
+For each test case, print in a new line, the length of the longest prefix having all
+1s you can achieve, by performing the operation at most once.
+Constraints
+1≤T≤1000
+2≤N≤2⋅10
+5
+S contains
+0 and
+1 only.
+The sum of
+N over all test cases won't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+4
+1010
+6
+011011
+11
+01011011101
+2
+2
+3
+Explanation:
+Test case
+1: Chef can choose the substring
+S[2,2]=0. On removal of the substring, the remaining parts are
+1 and
+10. On concatenating these parts, the final string obtained is
+110.
+The longest prefix in the final string having all
+1s is
+11, having a length
+2.
+It can be proven that we cannot obtain a prefix of length greater than
+2 having all
+1s using at most one operation.
+Test case
+2: Chef can choose the substring
+S[1,4]=0110. On removal of the substring, the remaining part is
+11.
+The longest prefix in the final string having all
+1s is
+11, having a length
+2.
+It can be proven that we cannot obtain a prefix of length greater than
+2 having all
+1s using at most one operation.
+Test case
+3: Chef can choose the substring
+S[1,6]=010110. On removal of the substring, the remaining part is
+11101.
+The longest prefix in the final string having all
+1s is
+111, having a length
+3.
+It can be proven that we cannot obtain a prefix of length greater than
+3 having all
+1s using at most one operation.

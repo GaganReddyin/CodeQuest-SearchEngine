@@ -1,0 +1,215 @@
+E. Divisors and Table
+time limit per test2.5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an
+n×n
+multiplication table and a positive integer
+m=
+m
+1
+⋅
+m
+2
+. A
+n×n
+multiplication table is a table with
+n
+rows and
+n
+columns numbered from
+1
+to
+n
+, where
+a
+i,j
+=i⋅j
+.
+For each divisor
+d
+of
+m
+, check: does
+d
+occur in the table at least once, and if it does, what is the minimum row that contains
+d
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤10
+) — the number of test cases.
+The first and only line of each test case contains three integers
+n
+,
+m
+1
+and
+m
+2
+(
+1≤n≤
+10
+9
+;
+1≤
+m
+1
+,
+m
+2
+≤
+10
+9
+) — the size of the multiplication table and the integer
+m
+represented as
+m
+1
+⋅
+m
+2
+.
+Output
+For each test case, let
+d
+1
+,
+d
+2
+,…,
+d
+k
+be all divisors of
+m
+sorted in the increasing order. And let
+a
+1
+,
+a
+2
+,…,
+a
+k
+be an array of answers, where
+a
+i
+is equal to the minimum row index where divisor
+d
+i
+occurs, or
+0
+, if there is no such row.
+Since array
+a
+may be large, first, print an integer
+s
+ — the number of divisors of
+m
+that are present in the
+n×n
+table. Next, print a single value
+X=
+a
+1
+⊕
+a
+2
+⊕⋯⊕
+a
+k
+, where
+⊕
+denotes the bitwise XOR operation.
+Example
+input
+Copy
+3
+3 72 1
+10 10 15
+6 1 210
+output
+Copy
+6 2
+10 0
+8 5
+Note
+In the first test case,
+m=72⋅1=72
+and has
+12
+divisors
+[1,2,3,4,6,8,9,12,18,24,36,72]
+. The
+3×3
+multiplication table looks like that:
+1 2 3
+1 1 2 3
+2 2 4 6
+3 3 6 9
+For each divisor of
+m
+that is present in the table, the position with minimum row index is marked. So the array of answers
+a
+is equal to
+[1,1,1,2,2,0,3,0,0,0,0,0]
+. There are only
+6
+non-zero values, and xor of
+a
+is equal to
+2
+.
+In the second test case,
+m=10⋅15=150
+and has
+12
+divisors
+[1,2,3,5,6,10,15,25,30,50,75,150]
+. All divisors except
+75
+and
+150
+are present in the
+10×10
+table. Array
+a
+=
+[1,1,1,1,1,1,3,5,3,5,0,0]
+. There are
+10
+non-zero values, and xor of
+a
+is equal to
+0
+.
+In the third test case,
+m=1⋅210=210
+and has
+16
+divisors
+[1,2,3,5,6,7,10,14,15,21,30,35,42,70,105,210]
+. The
+6×6
+table with marked divisors is shown below:
+1 2 3 4 5 6
+1 1 2 3 4 5 6
+2 2 4 6 8 10 12
+3 3 6 9 12 15 18
+4 4 8 12 16 20 24
+5 5 10 15 20 25 30
+6 6 12 18 24 30 36
+Array
+a
+=
+[1,1,1,1,1,0,2,0,3,0,5,0,0,0,0,0]
+. There are
+8
+non-zero values, and xor of
+a
+is equal to
+5
+.

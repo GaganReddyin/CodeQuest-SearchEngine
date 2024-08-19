@@ -1,0 +1,36 @@
+E. Mod Mod Mod
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a sequence of integers a1, a2, ..., an. Let , and for 1 ≤ i < n. Here, denotes the modulus operation. Find the maximum value of f(x, 1) over all nonnegative integers x.
+Input
+The first line contains a single integer n (1 ≤ n ≤ 200000) — the length of the sequence.
+The second lines contains n integers a1, a2, ..., an (1 ≤ ai ≤ 1013) — the elements of the sequence.
+Output
+Output a single integer — the maximum value of f(x, 1) over all nonnegative integers x.
+Examples
+input
+Copy
+2
+10 5
+output
+Copy
+13
+input
+Copy
+5
+5 4 3 2 1
+output
+Copy
+6
+input
+Copy
+4
+5 10 5 10
+output
+Copy
+16
+Note
+In the first example you can choose, for example, x = 19.
+In the second example you can choose, for example, x = 3 or x = 2.

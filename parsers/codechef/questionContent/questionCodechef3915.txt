@@ -1,0 +1,172 @@
+K0KALARU47 and CP task
+Problem
+in every century, there is a chosen one. Therefore, we do not live in a society --Last paragraphs of the IZhO 2022 Editorial
+K0Kalaru47 was out with his friends and he started to tell them about a CP Task. Because the statement was informal, his friends quickly parried with "Who Asked", so here is the formal statement:
+Given arrays
+P and
+C of size
+(N+K) each, the beauty of an array
+B of size
+(N+K) is defined as the sum of
+C
+i
+for all
+1≤i≤(N+K) such that
+B
+i
+=P
+i
+.
+More formally, the beauty of an array
+B is equal to
+∑
+i=1
+∣B∣
+C
+i
+[B
+i
+=P
+i
+]
+Given an array
+A of size
+N such that
+(1≤A
+i
+≤M). Your task is to insert
+K elements into the array such that:
+Each inserted element lies in the range
+[1,M].
+The beauty of the final array is maximized.
+Note that, an element can be inserted at any index of the array.
+You should find two values:
+The maximum beauty that can be obtained across all arrays of size
+(N+K).
+The number of distinct arrays of size
+(N+K) having the maximum beauty. Note that, two arrays
+X and
+Y are said to be different if there exists some index
+i such that
+X
+i
+
+=Y
+i
+. Since the number of distinct arrays can be huge, print the value modulo
+MOD.
+Input Format
+The first line of input consists of
+4 integers
+N,K,M and
+MOD
+The second line of input contains
+N space-separated integers - the array
+A.
+The third line of input contains
+(N+K) space-separated integers - the array
+P.
+The fourth line of input contains
+(N+K) space-separated integers - the array
+C.
+Output Format
+Print two integers separated by a single space.
+The first integer corresponds to the maximum beauty that can be obtained across all arrays of size
+(N+K).
+The second integer corresponds to the number of distinct arrays of size
+(N+K) having the maximum beauty. Since the number of distinct arrays can be huge, print the value modulo
+MOD.
+Constraints
+1≤N,K≤2000
+1≤M≤10
+9
+2≤MOD≤10
+9
+1≤A
+i
+,P
+i
+≤M
+−10
+9
+≤C
+i
+≤10
+9
+Subtasks
+Subtask 1 (100 points): Original constraints.
+Sample 1:
+Input
+Output
+2 1 2 427891
+1 1
+1 2 1
+1 1 2
+4 1
+Explanation:
+By inserting one element, we can form the following distinct arrays :
+B=[1,1,1] : The indices where
+B
+i
+=P
+i
+are
+{1,3}.
+Thus, the beauty is
+C
+1
++C
+3
+=1+2=3.
+B=[1,1,2] : The indices where
+B
+i
+=P
+i
+are
+{1}.
+Thus, the beauty is
+C
+1
+=1.
+B=[1,2,1] : The indices where
+B
+i
+=P
+i
+are
+{1,2,3}.
+Thus, the beauty is
+C
+1
++C
+2
++C
+3
+=1+1+2=4.
+B=[2,1,1] : The indices where
+B
+i
+=P
+i
+are
+{3}.
+Thus, the beauty is
+C
+3
+=2.
+Thus, the maximum beauty possible is
+4, and the number of arrays with beauty
+4 is
+1 which is
+[1,2,1].
+Sample 2:
+Input
+Output
+4 7 100 666013
+72 38 27 4
+2 73 48 27 37 27 16 26 38 57 26
+10 10 10 10 10 10 10 30 10 30 30
+140 26
+Explanation:
+This sample has a beautiful explination, but is unfortunately too long to write :(

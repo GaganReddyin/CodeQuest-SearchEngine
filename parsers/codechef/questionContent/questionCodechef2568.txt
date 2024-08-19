@@ -1,0 +1,30 @@
+Bubbles
+Problem
+This problem was part of the CodeChef April Challenge. All user submissions for this contest problem are publicly available here.
+The following a tie breaker problem. The best solution will receive one point. All other successful answers will be scored on a curve and receive a fraction of a point based on how close they come to the best answer.
+Let's have some fun with soap bubbles... We drive several sticks vertically into a flat surface (so that they look like points from above), and spread a thin film of soap over all of them. The soap film tends to minimize the area of its surface, and eventually becomes very thin, with surfaces turning into lines spread over all points. When everything has settled down, we can assume that the "bubble" we have is in fact a set of line segments, which connect all of our sticks into one network (possibly via some intermediate points which can also be the endpoints of lines).
+Input
+First, 1<=n<=1000, the number of starting points to connect. Then, n pairs of numbers follow, representing the coordinates of sticks which the soap film will connect.
+Output
+First, you should output the number m of intermediate points you create. Then, the next m pairs of numbers are coordinates of intermediate points. Then, you should output e, the number of soap-bubble lines you create. Then, the next 2*e numbers represent the indexes of points which are connected by the given line. Each index i should be a number 0<=i < n+m. If i < n, then it represents the i-th input point (stick). If i>=n, then it corresponds to the (i-n)-th intermediate point.
+Scoring
+Your goal is to minimize the score obtained in this problem.
+As longer lines tends to get thinner, for each line segment of length t, you will receive t / max(1, ln(t)) penalty points, where "ln" is the logarithm in the natural base. You will additionally receive ln(m+1) penalty points if your solution uses m intermediate points.
+If the soap film given at output does not span all the input points (connecting them into a network), your solution will be judged as incorrect.
+Example
+Input:
+3
+0.0 0.0
+0.0 3.0
+4.0 0.0
+
+Output:
+1
+1.0 1.0
+3
+0 3
+1 3
+2 3
+
+Score:
+7.090148

@@ -1,0 +1,84 @@
+Average Array
+Problem
+You are given two integers
+N and
+X. Output an array
+A of length
+N such that:
+−1000≤A
+i
+≤1000 for all
+1≤i≤N.
+All
+A
+i
+are distinct.
+mean(A)=X.
+If there are multiple answers, print any. It is guaranteed that under the given constraints at least one array satisfying the given conditions exists.
+As a reminder, the mean of an array
+B of size
+M is defined as:
+mean(B)=
+M
+∑
+i=1
+M
+B
+i
+.
+For example,
+mean([3,1,4,8])=
+4
+3+1+4+8
+=
+4
+16
+=4.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers
+N and
+X - the size of the array
+A and the mean of the array
+A.
+Output Format
+For each test case, output an array
+A of length
+N which satisfies the given conditions.
+Constraints
+1≤T≤100
+1≤N≤1000
+0≤X≤100
+Sample 1:
+Input
+Output
+3
+3 7
+5 1
+1 10
+5 10 6
+1 2 3 4 -5
+10
+Explanation:
+Test case 1:
+mean([5,10,6])=
+3
+5+10+6
+=
+3
+21
+=7.
+Test case 2:
+mean([1,2,3,4,−5])=
+5
+1+2+3+4+(−5)
+=
+5
+5
+=1.
+Test case 3:
+mean([10])=
+1
+10
+=10.

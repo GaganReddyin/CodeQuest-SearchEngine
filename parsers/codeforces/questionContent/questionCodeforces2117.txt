@@ -1,0 +1,137 @@
+E2. Bitwise Queries (Hard Version)
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The only difference between the easy and hard versions is the constraints on the number of queries.
+This is an interactive problem.
+Ridbit has a hidden array
+a
+of
+n
+integers which he wants Ashish to guess. Note that
+n
+is a power of two. Ashish is allowed to ask three different types of queries. They are of the form
+AND
+i
+j
+: ask for the bitwise AND of elements
+a
+i
+and
+a
+j
+(1≤i,j≤n
+,
+i≠j)
+OR
+i
+j
+: ask for the bitwise OR of elements
+a
+i
+and
+a
+j
+(1≤i,j≤n
+,
+i≠j)
+XOR
+i
+j
+: ask for the bitwise XOR of elements
+a
+i
+and
+a
+j
+(1≤i,j≤n
+,
+i≠j)
+Can you help Ashish guess the elements of the array?
+In this version, each element takes a value in the range
+[0,n−1]
+(inclusive) and Ashish can ask no more than
+n+1
+queries.
+Input
+The first line of input contains one integer
+n
+(4≤n≤
+2
+16
+)
+ — the length of the array. It is guaranteed that
+n
+is a power of two.
+Interaction
+To ask a query print a single line containing one of the following (without quotes)
+"AND i j"
+"OR i j"
+"XOR i j"
+where
+i
+and
+j
+(1≤i,j≤n
+,
+i≠j)
+denote the indices being queried.
+For each query, you will receive an integer
+x
+whose value depends on the type of query. If the indices queried are invalid or you exceed the number of queries however, you will get
+x=−1
+. In this case, you should terminate the program immediately.
+When you have guessed the elements of the array, print a single line "! " (without quotes), followed by
+n
+space-separated integers  — the elements of the array.
+Guessing the array does not count towards the number of queries asked.
+The interactor is not adaptive. The array
+a
+does not change with queries.
+After printing a query do not forget to output the end of the line and flush the output. Otherwise, you will get Idleness limit exceeded. To do this, use:
+fflush(stdout) or cout.flush() in C++;
+System.out.flush() in Java;
+flush(output) in Pascal;
+stdout.flush() in Python;
+see the documentation for other languages.
+Hacks
+To hack the solution, use the following test format:
+On the first line print a single integer
+n
+(4≤n≤
+2
+16
+)
+ — the length of the array. It must be a power of 2. The next line should contain
+n
+space-separated integers in the range
+[0,n−1]
+ — the array
+a
+.
+Example
+input
+Copy
+4
+
+0
+
+2
+
+3
+output
+Copy
+OR 1 2
+
+OR 2 3
+
+XOR 2 4
+
+! 0 0 2 3
+Note
+The array
+a
+in the example is
+[0,0,2,3]
+.

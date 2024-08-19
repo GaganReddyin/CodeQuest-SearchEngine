@@ -1,0 +1,146 @@
+F. Red-Blue Graph
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given a bipartite graph: the first part of this graph contains
+n
+1
+vertices, the second part contains
+n
+2
+vertices, and there are
+m
+edges. The graph can contain multiple edges.
+Initially, each edge is colorless. For each edge, you may either leave it uncolored (it is free), paint it red (it costs
+r
+coins) or paint it blue (it costs
+b
+coins). No edge can be painted red and blue simultaneously.
+There are three types of vertices in this graph — colorless, red and blue. Colored vertices impose additional constraints on edges' colours:
+for each red vertex, the number of red edges indicent to it should be strictly greater than the number of blue edges incident to it;
+for each blue vertex, the number of blue edges indicent to it should be strictly greater than the number of red edges incident to it.
+Colorless vertices impose no additional constraints.
+Your goal is to paint some (possibly none) edges so that all constraints are met, and among all ways to do so, you should choose the one with minimum total cost.
+Input
+The first line contains five integers
+n
+1
+,
+n
+2
+,
+m
+,
+r
+and
+b
+(
+1≤
+n
+1
+,
+n
+2
+,m,r,b≤200
+) — the number of vertices in the first part, the number of vertices in the second part, the number of edges, the amount of coins you have to pay to paint an edge red, and the amount of coins you have to pay to paint an edge blue, respectively.
+The second line contains one string consisting of
+n
+1
+characters. Each character is either U, R or B. If the
+i
+-th character is U, then the
+i
+-th vertex of the first part is uncolored; R corresponds to a red vertex, and B corresponds to a blue vertex.
+The third line contains one string consisting of
+n
+2
+characters. Each character is either U, R or B. This string represents the colors of vertices of the second part in the same way.
+Then
+m
+lines follow, the
+i
+-th line contains two integers
+u
+i
+and
+v
+i
+(
+1≤
+u
+i
+≤
+n
+1
+,
+1≤
+v
+i
+≤
+n
+2
+) denoting an edge connecting the vertex
+u
+i
+from the first part and the vertex
+v
+i
+from the second part.
+The graph may contain multiple edges.
+Output
+If there is no coloring that meets all the constraints, print one integer
+−1
+.
+Otherwise, print an integer
+c
+denoting the total cost of coloring, and a string consisting of
+m
+characters. The
+i
+-th character should be U if the
+i
+-th edge should be left uncolored, R if the
+i
+-th edge should be painted red, or B if the
+i
+-th edge should be painted blue. If there are multiple colorings with minimum possible cost, print any of them.
+Examples
+input
+Copy
+3 2 6 10 15
+RRB
+UB
+3 2
+2 2
+1 2
+1 1
+2 1
+1 1
+output
+Copy
+35
+BUURRU
+input
+Copy
+3 1 3 4 5
+RRR
+B
+2 1
+1 1
+3 1
+output
+Copy
+-1
+input
+Copy
+3 1 3 4 5
+URU
+B
+2 1
+1 1
+3 1
+output
+Copy
+14
+RBB

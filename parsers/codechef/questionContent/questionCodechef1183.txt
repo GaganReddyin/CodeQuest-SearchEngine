@@ -1,0 +1,55 @@
+Pairwise Xors
+Problem
+JJ gives Chef a number
+X and challenges Chef to come up with three distinct numbers
+A,
+B, and
+C such that:
+0≤A,B,C<2
+30
+;
+(A⊕B)+(B⊕C)+(C⊕A)=X.
+Help Chef come up with three such numbers or determine that no such tuple exists.
+Here,
+⊕ denotes the bitwise XOR operation.
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains an integer
+X - the number mentioned in the problem statement.
+Output Format
+For each test case, output three distinct numbers
+A,
+B and
+C
+(0≤A,B,C<2
+30
+) such that
+(A⊕B)+(B⊕C)+(C⊕A)=X.
+If multiple such tuples exist, print any. If no such tuple exists, print
+−1.
+Constraints
+1≤T≤1000
+1≤X<2
+30
+Sample 1:
+Input
+Output
+3
+6
+3
+20
+0 1 3
+-1
+3 11 1
+Explanation:
+Test Case
+1:
+A=0,B=1,C=3 is a valid answer because
+(0⊕1)+(1⊕3)+(3⊕0)=1+2+3=6.
+Test Case
+2: It can be proven that no tuple exists that satisfies the given conditions.
+Test Case
+3:
+A=3,B=11,C=1 is a valid answer because
+(3⊕11)+(11⊕1)+(1⊕3)=8+10+2=20.

@@ -1,0 +1,21 @@
+B. Mike's Sequence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You won't find this sequence on OEIS.
+Input
+One integer
+r
+(
+−45≤r≤2999
+).
+Output
+One integer.
+Example
+input
+Copy
+2999
+output
+Copy
+3000

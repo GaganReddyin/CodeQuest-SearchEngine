@@ -1,0 +1,162 @@
+G. Seollal
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+It is only a few days until Seollal (Korean Lunar New Year), and Jaehyun has invited his family to his garden. There are kids among the guests. To make the gathering more fun for the kids, Jaehyun is going to run a game of hide-and-seek.
+The garden can be represented by a
+n×m
+grid of unit cells. Some (possibly zero) cells are blocked by rocks, and the remaining cells are free. Two cells are neighbors if they share an edge. Each cell has up to 4 neighbors: two in the horizontal direction and two in the vertical direction.
+Since the garden is represented as a grid, we can classify the cells in the garden as either "black" or "white". The top-left cell is black, and two cells which are neighbors must be different colors. Cell indices are 1-based, so the top-left corner of the garden is cell
+(1,1)
+.
+Jaehyun wants to turn his garden into a maze by placing some walls between two cells. Walls can only be placed between neighboring cells. If the wall is placed between two neighboring cells
+a
+and
+b
+, then the two cells
+a
+and
+b
+are not neighboring from that point. One can walk directly between two neighboring cells if and only if there is no wall directly between them.
+A maze must have the following property. For each pair of free cells in the maze, there must be exactly one simple path between them. A simple path between cells
+a
+and
+b
+is a sequence of free cells in which the first cell is
+a
+, the last cell is
+b
+, all cells are distinct, and any two consecutive cells are neighbors which are not directly blocked by a wall.
+At first, kids will gather in cell
+(1,1)
+, and start the hide-and-seek game. A kid can hide in a cell if and only if that cell is free, it is not
+(1,1)
+, and has exactly one free neighbor. Jaehyun planted roses in the black cells, so it's dangerous if the kids hide there. So Jaehyun wants to create a maze where the kids can only hide in white cells.
+You are given the map of the garden as input. Your task is to help Jaehyun create a maze.
+Input
+Your program will be judged in multiple test cases.
+The first line contains the number of test cases
+t
+. (
+1≤t≤100
+). Afterward,
+t
+test cases with the described format will be given.
+The first line of a test contains two integers
+n,m
+(
+2≤n,m≤20
+), the size of the grid.
+In the next
+n
+line of a test contains a string of length
+m
+, consisting of the following characters (without any whitespace):
+O: A free cell.
+X: A rock.
+It is guaranteed that the first cell (cell
+(1,1)
+) is free, and every free cell is reachable from
+(1,1)
+.
+If
+t≥2
+is satisfied, then the size of the grid will satisfy
+n≤10,m≤10
+. In other words, if any grid with size
+n>10
+or
+m>10
+is given as an input, then it will be the only input on the test case (
+t=1
+).
+Output
+For each test case, print the following:
+If there are no possible mazes, print a single line NO.
+Otherwise, print a single line YES, followed by a grid of size
+(2n−1)×(2m−1)
+denoting the found maze. The rules for displaying the maze follows. All cells are indexed in 1-base.
+For all
+1≤i≤n,1≤j≤m
+, if the cell
+(i,j)
+is free cell, print 'O' in the cell
+(2i−1,2j−1)
+. Otherwise, print 'X' in the cell
+(2i−1,2j−1)
+.
+For all
+1≤i≤n,1≤j≤m−1
+, if the neighboring cell
+(i,j),(i,j+1)
+have wall blocking it, print ' ' in the cell
+(2i−1,2j)
+. Otherwise, print any printable character except spaces in the cell
+(2i−1,2j)
+. A printable character has an ASCII code in range
+[32,126]
+: This includes spaces and alphanumeric characters.
+For all
+1≤i≤n−1,1≤j≤m
+, if the neighboring cell
+(i,j),(i+1,j)
+have wall blocking it, print ' ' in the cell
+(2i,2j−1)
+. Otherwise, print any printable character except spaces in the cell
+(2i,2j−1)
+For all
+1≤i≤n−1,1≤j≤m−1
+, print any printable character in the cell
+(2i,2j)
+.
+Please, be careful about trailing newline characters or spaces. Each row of the grid should contain exactly
+2m−1
+characters, and rows should be separated by a newline character. Trailing spaces must not be omitted in a row.
+Example
+input
+Copy
+4
+2 2
+OO
+OO
+3 3
+OOO
+XOO
+OOO
+4 4
+OOOX
+XOOX
+OOXO
+OOOO
+5 6
+OOOOOO
+OOOOOO
+OOOOOO
+OOOOOO
+OOOOOO
+output
+Copy
+YES
+OOO
+  O
+OOO
+NO
+YES
+OOOOO X
+  O O  
+X O O X
+  O    
+OOO X O
+O O   O
+O OOOOO
+YES
+OOOOOOOOOOO
+  O   O   O
+OOO OOO OOO
+O   O   O  
+OOO OOO OOO
+  O   O   O
+OOO OOO OOO
+O   O   O  
+OOO OOO OOO

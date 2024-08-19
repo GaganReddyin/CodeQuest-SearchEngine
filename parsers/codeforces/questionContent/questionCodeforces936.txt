@@ -1,0 +1,214 @@
+A. Subtle Substring Subtraction
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Alice and Bob are playing a game with strings. There will be
+t
+rounds in the game. In each round, there will be a string
+s
+consisting of lowercase English letters.
+Alice moves first and both the players take alternate turns. Alice is allowed to remove any substring of even length (possibly empty) and Bob is allowed to remove any substring of odd length from
+s
+.
+More formally, if there was a string
+s=
+s
+1
+s
+2
+…
+s
+k
+the player can choose a substring
+s
+l
+s
+l+1
+…
+s
+r−1
+s
+r
+with length of corresponding parity and remove it. After that the string will become
+s=
+s
+1
+…
+s
+l−1
+s
+r+1
+…
+s
+k
+.
+After the string becomes empty, the round ends and each player calculates his/her score for this round. The score of a player is the sum of values of all characters removed by him/her. The value of
+a
+is
+1
+, the value of
+b
+is
+2
+, the value of
+c
+is
+3
+,
+…
+, and the value of
+z
+is
+26
+. The player with higher score wins the round. For each round, determine the winner and the difference between winner's and loser's scores. Assume that both players play optimally to maximize their score. It can be proved that a draw is impossible.
+Input
+The first line of input contains a single integer
+t
+(
+1≤t≤5⋅
+10
+4
+) denoting the number of rounds.
+Each of the next
+t
+lines contain a single string
+s
+(
+1≤|s|≤2⋅
+10
+5
+) consisting of lowercase English letters, denoting the string used for the round. Here
+|s|
+denotes the length of the string
+s
+.
+It is guaranteed that the sum of
+|s|
+over all rounds does not exceed
+2⋅
+10
+5
+.
+Output
+For each round, print a single line containing a string and an integer. If Alice wins the round, the string must be "Alice". If Bob wins the round, the string must be "Bob". The integer must be the difference between their scores assuming both players play optimally.
+Example
+input
+Copy
+5
+aba
+abc
+cba
+n
+codeforces
+output
+Copy
+Alice 2
+Alice 4
+Alice 4
+Bob 14
+Alice 93
+Note
+For the first round,
+"aba"
+−
+→
+−
+−
+Alice
+"aba"
+→
+"a"
+−
+→
+−
+Bob
+"a"
+→
+""
+. Alice's total score is
+1+2=3
+. Bob's total score is
+1
+.
+For the second round,
+"abc"
+−
+→
+−
+−
+Alice
+"abc"
+→
+"a"
+−
+→
+−
+Bob
+"a"
+→
+""
+. Alice's total score is
+2+3=5
+. Bob's total score is
+1
+.
+For the third round,
+"cba"
+−
+→
+−
+−
+Alice
+"cba"
+→
+"a"
+−
+→
+−
+Bob
+"a"
+→
+""
+. Alice's total score is
+3+2=5
+. Bob's total score is
+1
+.
+For the fourth round,
+"n"
+−
+→
+−
+−
+Alice
+"n"
+→
+"n"
+−
+→
+−
+Bob
+"n"
+→
+""
+. Alice's total score is
+0
+. Bob's total score is
+14
+.
+For the fifth round,
+"codeforces"
+−
+→
+−
+−
+Alice
+"codeforces"
+→
+""
+. Alice's total score is
+3+15+4+5+6+15+18+3+5+19=93
+. Bob's total score is
+0
+.

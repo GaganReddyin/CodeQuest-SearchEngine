@@ -1,0 +1,168 @@
+D. 505
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A binary matrix is called good if every even length square sub-matrix has an odd number of ones.
+Given a binary matrix
+a
+consisting of
+n
+rows and
+m
+columns, determine the minimum number of cells you need to change to make it good, or report that there is no way to make it good at all.
+All the terms above have their usual meanings — refer to the Notes section for their formal definitions.
+Input
+The first line of input contains two integers
+n
+and
+m
+(
+1≤n≤m≤
+10
+6
+and
+n⋅m≤
+10
+6
+)  — the number of rows and columns in
+a
+, respectively.
+The following
+n
+lines each contain
+m
+characters, each of which is one of 0 and 1. If the
+j
+-th character on the
+i
+-th line is 1, then
+a
+i,j
+=1
+. Similarly, if the
+j
+-th character on the
+i
+-th line is 0, then
+a
+i,j
+=0
+.
+Output
+Output the minimum number of cells you need to change to make
+a
+good, or output
+−1
+if it's not possible at all.
+Examples
+input
+Copy
+3 3
+101
+001
+110
+output
+Copy
+2
+input
+Copy
+7 15
+000100001010010
+100111010110001
+101101111100100
+010000111111010
+111010010100001
+000011001111101
+111111011010011
+output
+Copy
+-1
+Note
+In the first case, changing
+a
+1,1
+to
+0
+and
+a
+2,2
+to
+1
+is enough.
+You can verify that there is no way to make the matrix in the second case good.
+Some definitions —
+A binary matrix is one in which every element is either
+1
+or
+0
+.
+A sub-matrix is described by
+4
+parameters —
+r
+1
+,
+r
+2
+,
+c
+1
+, and
+c
+2
+; here,
+1≤
+r
+1
+≤
+r
+2
+≤n
+and
+1≤
+c
+1
+≤
+c
+2
+≤m
+.
+This sub-matrix contains all elements
+a
+i,j
+that satisfy both
+r
+1
+≤i≤
+r
+2
+and
+c
+1
+≤j≤
+c
+2
+.
+A sub-matrix is, further, called an even length square if
+r
+2
+−
+r
+1
+=
+c
+2
+−
+c
+1
+and
+r
+2
+−
+r
+1
++1
+is divisible by
+2
+.

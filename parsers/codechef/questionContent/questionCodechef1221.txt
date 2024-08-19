@@ -1,0 +1,66 @@
+Coprime Range
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a range of positive integers
+L,L+1,…R. Find an integer
+X greater than
+1 which is coprime with all the integers in this range (does not share any common factors greater than
+1 with any of these integers). In addition,
+X must not exceed
+2⋅10
+9
+.
+If there are multiple solutions satisfying these conditions, you may find any one of them. It is guaranteed that for the given constraints, at least one such integer
+X exists.
+For example, if
+L=16 and
+R=17, then
+X=9 is coprime with both
+16 and
+17. However, if
+L=6 and
+R=12 instead, then
+X=9 shares a common factor
+3 with
+6 and
+12 and a common factor
+9 with
+9.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains two space-separated integers
+L and
+R.
+Output
+For each test case, print a single line containing one integer
+X which satisfies the above conditions.
+Constraints
+1≤T≤1,000
+2≤L≤R≤10
+6
+Subtasks
+Subtask #1 (100 points): original constraints
+Sample 1:
+Input
+Output
+3
+16 17
+16 17
+973360 973432
+9
+27
+79
+Explanation:
+Example case 1:
+X=9 does not share any common factors with
+16 and
+17.
+Example case 2:
+X=27 does not share any common factors with
+16 and
+17.
+Example case 3:
+X=79 does not share any common factors with any of the integers
+973360,973361,…,973432.

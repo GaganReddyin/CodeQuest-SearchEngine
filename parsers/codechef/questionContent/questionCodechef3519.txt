@@ -1,0 +1,41 @@
+Logan and his ARRAY Queries
+Problem
+  Charles: "This is what life looks like. People who love each other. Home!! You should take a moment. Feel it ! You still have time"
+Charles is brutally killed by X-24, and it is time for Logan to save and help Laura as soon as possible because even his healing factor is decreasing drastically.
+Dr. Zander Rice reveals that the destruction of mutantkind is due to a genetic dampener created by his corporation, and after getting to know this Logan is extremely agitated.
+Logan needs to increase his healing factor anyhow, and he will get the required serum only when he solves the given question.
+Logan is provided an empty array A followed by Q queries. Each query will be of the following type :
+1 Z : Insert an element Z at the end of array A.
+2 X : Delete an element present at the Xth location in A.
+3 X Z : Replace element present at the Xth location by Z.
+4 L R K : Print Kth minimum number present in A in the range from L to R (inclusive).
+Since Logan doesn't have much time, you need to help him.
+  Input
+First line of the input contains an integer Q denoting number of queries.
+Next Q line contains queries in one of four forms described above.
+  Output
+For each type of 4th query print answer in new line.
+  Constraints
+1 ≤ Q ≤ 105
+1 ≤ Z ≤ 109
+1 ≤ K ≤ R-L+1
+L, R, X will be valid 1-based array indexes.
+  Example
+Input:
+10
+1 5
+1 9
+1 2
+4 1 2 1
+4 1 2 2
+2 2
+3 1 10
+4 1 2 1
+4 1 2 2
+1 6
+Output:
+5
+9
+2
+10
+ 

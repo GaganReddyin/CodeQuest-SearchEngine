@@ -1,0 +1,108 @@
+Can You Reach The End
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+You are given a positive integer
+N. Consider a square grid of size
+N×N, with rows numbered
+1 to
+N from top to bottom and columns numbered
+1 to
+N from left to right. Initially you are at
+(1,1) and you have to reach
+(N,N). From a cell you can either move one cell to the right or one cell down (if possible). Formally, if you are at
+(i,j), then you can either move to
+(i+1,j) if
+i<N, or to
+(i,j+1) if
+j<N.
+There are exactly
+N blocks in the grid, such that each row contains exactly one block and each column contains exactly one block. You can't move to a cell which contains a block. It is guaranteed that blocks will not placed in
+(1,1) and
+(N,N).
+You have to find out whether you can reach
+(N,N).
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains
+N - the size of the square grid.
+The
+i-th line of the next
+N lines contains two integers
+X
+i
+and
+Y
+i
+indicating that
+(X
+i
+,Y
+i
+) is the position of a block in the grid.
+Output Format
+For each test case, if there exists a path from
+(1,1) to
+(N,N), output YES, otherwise output NO.
+You may print each character of the string in uppercase or lowercase (for example, the strings yEs, yes, Yes and YES will all be treated as identical).
+Constraints
+1≤T≤1000
+2≤N≤10
+6
+1≤X
+i
+,Y
+i
+≤N
+(X
+i
+,Y
+i
+)
+
+=(1,1) and
+(X
+i
+,Y
+i
+)
+
+=(N,N) for all
+1≤i≤N
+X
+i
+
+=X
+j
+and
+Y
+i
+
+=Y
+j
+for all
+1≤i<j≤N
+Sum of
+N over all test cases does not exceed
+10
+6
+Sample 1:
+Input
+Output
+2
+3
+1 2
+2 3
+3 1
+2
+1 2
+2 1
+YES
+NO
+Explanation:
+Test case
+1: We can follow the path
+(1,1)→(2,1)→(2,2)→(3,2)→(3,3).
+Test case
+2: We can't move from the starting point, so it is impossible to reach
+(N,N).

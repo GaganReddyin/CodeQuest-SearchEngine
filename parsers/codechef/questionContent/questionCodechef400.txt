@@ -1,0 +1,89 @@
+Dark Light
+Problem
+Tonmoy has a special torch. The torch has
+4 levels numbered
+1 to
+4 and
+2 states (
+On and
+Off). Levels
+1,2, and
+3 correspond to the
+On state while level
+4 corresponds to the
+Off state.
+The levels of the torch can be changed as:
+Level
+1 changes to level
+2.
+Level
+2 changes to level
+3.
+Level
+3 changes to level
+4.
+Level
+4 changes to level
+1.
+Given the initial state as
+K and the number of changes made in the levels as
+N, find the final state of the torch. If the final state cannot be determined, print
+Ambiguous instead.
+Input Format
+First line will contain
+T, the number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, two integers
+N,K - the number of changes made in the levels and initial state of the torch. Here,
+K=0 denotes
+Off state while
+K=1 denotes
+On state.
+Output Format
+For each test case, output in a single line, the final state of the torch, i.e.
+On or
+Off. If the final state cannot be determined, print
+Ambiguous instead.
+You may print each character of the string in uppercase or lowercase (for example, the strings
+On,
+ON,
+on and
+oN will all be treated as identical).
+Constraints
+1≤T≤10
+5
+0≤N≤10
+9
+0≤K≤1
+Sample 1:
+Input
+Output
+3
+4 0
+0 1
+3 1
+Off
+On
+Ambiguous
+Explanation:
+Test Case
+1: Initially, the torch is in
+Off state. Since only level
+4 corresponds to the
+Off state, the torch is at level
+4 initially. After
+4 changes, the final level would be
+4. Level
+4 corresponds to the
+Off state. Hence, finally the torch is
+Off.
+Test Case
+2: Initially, the torch is in
+On state. After
+0 changes, the torch remains in the
+On state.
+Test Case
+3: Initially, the torch is in
+On state. This can correspond to any of the first
+3 levels. Thus, we cannot determine the final level after
+3 changes. Hence, the final state is
+Ambiguous.

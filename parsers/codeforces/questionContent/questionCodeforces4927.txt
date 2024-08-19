@@ -1,0 +1,33 @@
+A. Search for Pretty Integers
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given two lists of non-zero digits.
+Let's call an integer pretty if its (base 10) representation has at least one digit from the first list and at least one digit from the second list. What is the smallest positive pretty integer?
+Input
+The first line contains two integers n and m (1 ≤ n, m ≤ 9) — the lengths of the first and the second lists, respectively.
+The second line contains n distinct digits a1, a2, ..., an (1 ≤ ai ≤ 9) — the elements of the first list.
+The third line contains m distinct digits b1, b2, ..., bm (1 ≤ bi ≤ 9) — the elements of the second list.
+Output
+Print the smallest pretty integer.
+Examples
+input
+Copy
+2 3
+4 2
+5 7 6
+output
+Copy
+25
+input
+Copy
+8 8
+1 2 3 4 5 6 7 8
+8 7 6 5 4 3 2 1
+output
+Copy
+1
+Note
+In the first example 25, 46, 24567 are pretty, as well as many other integers. The smallest among them is 25. 42 and 24 are not pretty because they don't have digits from the second list.
+In the second example all integers that have at least one digit different from 9 are pretty. It's obvious that the smallest among them is 1, because it's the smallest positive integer.

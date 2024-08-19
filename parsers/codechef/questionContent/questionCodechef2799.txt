@@ -1,0 +1,143 @@
+They are COMING
+Problem
+The White Walkers are coming.
+The Winterfell is the first place to be attacked by the Night King and his army of the dead.
+Jon Snow with Khaleesi has to take some important decisions to minimize the damage from the White Walkers.
+Winterfell can be denoted as a graph with
+N nodes.
+There are
+M roads each connecting 2 nodes -
+A
+i
+and
+B
+i
+.
+The road is directed from node
+A
+i
+to
+B
+i
+, and not vice-versa.
+The power required to travel on this road is
+C
+i
+initially.
+Also, Winterfell is built in such a way that it is not possible to visit the same node twice using these roads. That is, you cannot start at a node, follow some of the roads and return back to the same node.
+Jon has to stop the army of the dead.
+All white walkers are standing at node
+1 right now.
+For this, he decided to carry out
+Q steps of two different types -
+1
+K
+Add value
+K to the power required to travel each road in Winterfell. i.e after this operation
+C
+i
+=C
+i
++K
+∀
+i
+ϵ[1,M] . Value
+K can be negative as well.
+2
+Y
+Find the minimum power required for the white walkers to reach node
+Y in Winterfell from node
+1.
+Help Jon is finding out the answer for each query of type
+2.
+###Input:
+First line will contain 2 space separated integers -
+N and
+M, number of nodes , and the number of roads in Winterfell.
+M lines follow. Each of the lines comprises 3 space separated integers -
+A
+i
+,
+B
+i
+and
+C
+i
+, denoting that
+i
+th
+road is directed from node
+A
+i
+to
+B
+i
+with initial power required to travel this road being
+C
+i
+.
+Next line comprises
+Q - the number of queries.
+Q lines follow. Each query is of the type as described above, and will comprise 2 space separated integers. For type
+1, the second integer will be
+K - the amount of power added to each road. For type
+2, the second integer will be
+Y - the node to reach from node
+1.
+###Output: For each query of type
+2, output in a single line answer to the minimum power required for white walkers at node
+1 to reach node
+Y.
+If there is no way to reach node
+Y, output "No Path Exists" (without quotes) .
+###Constraints
+1≤N≤3000
+1≤M≤7000
+1≤Q≤5∗10
+6
+1≤A
+i
+,B
+i
+≤N,A
+i
+!=B
+i
+−10
+9
+≤C
+i
+,K≤10
+9
+1≤Y≤N
+At any point of time, the power required to travel on each road will always be
+[−10
+12
+,10
+12
+]
+###Sample Input:
+3 3
+1 2 1
+1 3 3
+2 3 2
+3
+2 3
+1 2
+2 3
+###Sample Output:
+3
+5
+###EXPLANATION: Initially, the road to reach node
+3 with minimum power is either
+(1→2,2→3) or
+(1→3), each amounting to total power =
+3.
+Then, the power requirement of each edge is increased by
+2.
+So, now the road
+(1→2,2→3) requires total power =
+3+4=7.
+The road
+(1→3) requires total power =
+5.

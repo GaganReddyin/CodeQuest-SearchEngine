@@ -1,0 +1,133 @@
+Minimum Absolute Score
+Problem
+You are given two strings
+A and
+B of length
+N consisting of lowercase English letters. Your objective is to make both the strings equal.
+You can apply one of the following
+2 operations at each index
+i:
+Convert char
+A
+i
+to
+B
+i
+by doing right cyclic shift of character
+A
+i
+. This increases your score by amount equal to cyclic shifts done.
+Convert char
+B
+i
+to
+A
+i
+by doing right cyclic shift of character
+B
+i
+. This decreases your score by amount equal to cyclic shifts done.
+Your starting score is zero.
+If the operations are applied optimally, find the minimum absolute score possible after making both the strings equal.
+Note: A single right cyclic shift converts one character to the next in alphabetical order, except for
+z which goes to
+a. That is, the sequence looks like
+a→b→c→…→y→z→a→b→…
+So, for example converting
+a to
+e requires
+4 right cyclic shifts, and converting
+k to
+i requires
+24.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of three lines of input.
+The first line of each test case contains one integer
+N — the length of strings
+A and
+B.
+The second line contains string
+A.
+The third line contains string
+B.
+Output Format
+For each test case, output on a new line the minimum absolute score possible after making both the strings equal.
+Constraints
+1≤T≤100
+1≤N≤10
+5
+Both strings
+A and
+B have same length
+N and contain only lowercase English letters.
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+4
+3
+abb
+baz
+3
+zzc
+aaa
+4
+fxbs
+dkrc
+5
+eaufq
+drtkn
+2
+0
+11
+9
+Explanation:
+Test case
+1: The minimum absolute score can be obtained as follows:
+Apply operation
+1 at position
+1, converting
+a to
+b for a cost of
++1.
+Apply operation
+2 at position
+2, converting
+a to
+b for a cost of
+−1.
+Apply operation
+2 at position
+3, converting
+z to
+b for a cost of
+−2.
+The score is then
+1−1−2=−2, with absolute value
+2. This is the lowest possible absolute value attainable.
+Test case
+2: Apply operations as follows:
+Operation
+1 at index
+1,
+z→a for a cost of
++1
+Operation
+1 at index
+2,
+z→a for a cost of
++1
+Operation
+2 at index
+3,
+a→c for a cost of
+−2
+This gives us a final score of
+1+1−2=0, which has absolute value
+0. It is not possible to do better than this.

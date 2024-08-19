@@ -1,0 +1,160 @@
+E. Divide Square
+time limit per test2 seconds
+memory limit per test384 megabytes
+inputstandard input
+outputstandard output
+There is a square of size
+10
+6
+×
+10
+6
+on the coordinate plane with four points
+(0,0)
+,
+(0,
+10
+6
+)
+,
+(
+10
+6
+,0)
+, and
+(
+10
+6
+,
+10
+6
+)
+as its vertices.
+You are going to draw segments on the plane. All segments are either horizontal or vertical and intersect with at least one side of the square.
+Now you are wondering how many pieces this square divides into after drawing all segments. Write a program calculating the number of pieces of the square.
+Input
+The first line contains two integers
+n
+and
+m
+(
+0≤n,m≤
+10
+5
+) — the number of horizontal segments and the number of vertical segments.
+The next
+n
+lines contain descriptions of the horizontal segments. The
+i
+-th line contains three integers
+y
+i
+,
+l
+x
+i
+and
+r
+x
+i
+(
+0<
+y
+i
+<
+10
+6
+;
+0≤l
+x
+i
+<r
+x
+i
+≤
+10
+6
+), which means the segment connects
+(l
+x
+i
+,
+y
+i
+)
+and
+(r
+x
+i
+,
+y
+i
+)
+.
+The next
+m
+lines contain descriptions of the vertical segments. The
+i
+-th line contains three integers
+x
+i
+,
+l
+y
+i
+and
+r
+y
+i
+(
+0<
+x
+i
+<
+10
+6
+;
+0≤l
+y
+i
+<r
+y
+i
+≤
+10
+6
+), which means the segment connects
+(
+x
+i
+,l
+y
+i
+)
+and
+(
+x
+i
+,r
+y
+i
+)
+.
+It's guaranteed that there are no two segments on the same line, and each segment intersects with at least one of square's sides.
+Output
+Print the number of pieces the square is divided into after drawing all the segments.
+Example
+input
+Copy
+3 3
+2 3 1000000
+4 0 4
+3 0 1000000
+4 0 1
+2 0 5
+3 1 1000000
+output
+Copy
+7
+Note
+The sample is like this:

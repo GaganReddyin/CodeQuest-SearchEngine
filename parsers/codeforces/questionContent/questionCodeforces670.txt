@@ -1,0 +1,146 @@
+F. Burenka, an Array and Queries
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Eugene got Burenka an array
+a
+of length
+n
+of integers from
+1
+to
+m
+for her birthday. Burenka knows that Eugene really likes coprime integers (integers
+x
+and
+y
+such that they have only one common factor (equal to
+1
+)) so she wants to to ask Eugene
+q
+questions about the present.
+Each time Burenka will choose a subsegment
+a
+l
+,
+a
+l+1
+,…,
+a
+r
+of array
+a
+, and compute the product of these numbers
+p=
+a
+l
+⋅
+a
+l+1
+⋅…⋅
+a
+r
+. Then she will ask Eugene to count the number of integers between
+1
+and
+C
+inclusive which are coprime with
+p
+.
+Help Eugene answer all the questions!
+Input
+In the first line of input there are four integers
+n
+,
+m
+,
+C
+,
+q
+(
+1≤n,q≤
+10
+5
+,
+1≤m≤2⋅
+10
+4
+,
+1≤C≤
+10
+5
+) — the length of the array
+a
+, the maximum possible value of
+a
+i
+, the value
+C
+, and the number of queries.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤m
+) — the array
+a
+.
+In the next
+q
+lines the queries are given. Each query consists of two integers
+l
+and
+r
+(
+1≤l≤r≤n
+).
+Output
+Print
+q
+integers — the answers to Burenka's queries.
+Example
+input
+Copy
+5 5 5 3
+1 2 3 2 5
+1 1
+2 4
+4 5
+output
+Copy
+5
+2
+2
+Note
+Here's an explanation for the example:
+in the first query, the product is equal to
+1
+, which is coprime with
+1,2,3,4,5
+.
+in the second query, the product is equal to
+12
+, which is coprime with
+1
+and
+5
+.
+in the third query, the product is equal to
+10
+, which is coprime with
+1
+and
+3
+.

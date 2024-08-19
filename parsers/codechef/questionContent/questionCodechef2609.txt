@@ -1,0 +1,77 @@
+The Grux Permutation 
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef received a permutation
+P
+1
+,P
+2
+,…,P
+N
+and also an integer
+D from his good friend Grux, because Grux was afraid he would forget them somewhere. However, since Grux was just playing with the permutation, it was all shuffled, and Chef only likes sorted permutations, so he decided to sort it by performing some swaps.
+Chef wants to use the integer
+D he just received, so he is only willing to swap two elements of the permutation whenever their absolute difference is exactly
+D. He has limited time, so you should determine the minimum number of swaps he needs to perform to sort the permutation, or tell him that it is impossible to sort it his way.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+D.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Output
+For each test case, print a single line containing one integer ― the minimum number of swaps, or
+−1 if it is impossible to sort the permutation.
+Constraints
+1≤T≤20
+1≤N≤200,000
+1≤D≤N
+1≤P
+i
+≤N for each valid
+i
+P
+1
+,P
+2
+,…,P
+N
+are pairwise distinct
+the sum of
+N over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (20 points):
+D=1
+Subtask #2 (30 points):
+N≤1,000
+the sum of
+N over all test cases does not exceed
+10,000
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+5 2 
+3 4 5 2 1
+5 2 
+4 3 2 1 5
+3
+-1
+Explanation:
+Example case 1: Chef can perform the following swaps in this order:
+swap the first and fifth element
+swap the third and fifth element
+swap the second and fourth element

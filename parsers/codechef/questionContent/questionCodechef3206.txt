@@ -1,0 +1,129 @@
+Checkpoint
+Problem
+There is a competition with
+N objective questions numbered
+1 to
+N.
+Each question has
+M options, out of which exactly one is correct.
+Two friends Utkarsh and Tejas participate in the competition.
+Neither of the participants know the correct answer to any question and thus, they make random guesses among the options.
+The rules of the competition are as follows:
+Game starts with Utkarsh.
+Questions are asked in order
+1 to
+N.
+Questions are thrown at a participant till he answers a question incorrectly.
+Suppose a participant answers question
+i incorrectly. Then, the turn will switch to the other participant and he will face the question
+i.
+Since he knows the option that was chosen in the earlier turns, he will be left with less options for question
+i.
+The participant who answers the question
+N correctly, wins the competition.
+Since it's Utkarsh's problem, he wants to know the probability with which he wins the competition.
+The probability can be written in the form of
+Q
+P
+such that
+Q is not divisible by
+998244353. Output the value of
+P⋅Q
+−1
+mod
+998244353.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line containing two integers
+N and
+M, the number of questions and the number of options in each question.
+Output Format
+For each test case, output the probability with which Utkarsh wins the game.
+The probability can be written in the form of
+Q
+P
+such that
+Q is not divisible by
+998244353. Output the value of
+P⋅Q
+−1
+mod
+998244353.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+9
+2≤M≤10
+5
+Sample 1:
+Input
+Output
+2
+1 3
+2 2
+665496236
+499122177
+Explanation:
+Test case
+1: There is only one question with
+3 options. Since Utkarsh goes first, the possibilities through which he can win are:
+He answers it correctly, with a probability of
+3
+1
+.
+He answers it incorrectly, with a probability of
+3
+2
+. Then, Tejas answers it incorrectly, with a probability of
+2
+1
+. Then, since Utkarsh has only one option, which is the correct one, he answers it correctly.
+Thus, the probability of Utkarsh winning is
+3
+1
++
+3
+2
+⋅
+2
+1
+=
+3
+2
+≡665496236.
+Test case
+2: There are two questions with
+2 options each. Since Utkarsh goes first, the possibilities through which he can win are:
+He answers the first question correctly with a probability of
+2
+1
+and then answers the second one correctly with a probability of
+2
+1
+.
+He answers the first question incorrectly, with a probability of
+2
+1
+. Then, Tejas answers it correctly.
+Thus, Tejas gets the second question, which he answers incorrectly with a probability of
+2
+1
+. Then, since Utkarsh has only one option, which is the correct one, he answers it correctly.
+Thus, the probability of Utkarsh winning is
+2
+1
+⋅
+2
+1
++
+2
+1
+⋅
+2
+1
+=
+2
+1
+≡499122177.

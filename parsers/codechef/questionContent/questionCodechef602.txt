@@ -1,0 +1,110 @@
+Single Operation Part 1
+Problem
+Chef has the binary representation
+S of a number
+X with him. He can modify the number by applying the following operation exactly once:
+Make
+X:=X⊕⌊
+2
+Y
+X
+⌋, where
+(1≤Y≤∣S∣) and
+⊕ denotes the bitwise XOR operation.
+Chef wants to maximize the value of
+X after performing the operation. Help Chef in determining the value of
+Y which will maximize the value of
+X after the operation.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of two lines of inputs - the first containing the length of binary string
+S.
+The second line of input contains the binary string
+S.
+Output Format
+For each test case, output on a new line, the value of
+Y which will maximize the value of
+X after the operation.
+Constraints
+1≤T≤5⋅10
+4
+1≤∣S∣≤10
+5
+The sum of
+∣S∣ over all test cases won't exceed
+5⋅10
+5
+.
+S contains the characters
+0 and
+1 only.
+Sample 1:
+Input
+Output
+4
+2
+10
+2
+11
+3
+101
+3
+110
+1
+2
+1
+2
+Explanation:
+Test case
+1: Since
+S=10 is the binary representation of
+2, the current value of
+X=2. On choosing
+Y=1,
+X becomes
+2⊕⌊
+2
+1
+2
+⌋=3. We can show that this is the maximum value of
+X we can achieve after one operation.
+Test case
+2: Since
+S=11 is the binary representation of
+3, the current value of
+X=3. On choosing
+Y=2,
+X becomes
+3⊕⌊
+2
+2
+3
+⌋=3. We can show that this is the maximum value of
+X we can achieve after one operation.
+Test case
+3: Since
+S=101 is the binary representation of
+5, the current value of
+X=5. On choosing
+Y=1,
+X becomes
+5⊕⌊
+2
+1
+5
+⌋=7. We can show that this is the maximum value of
+X we can achieve after one operation.
+Test case
+4: Since
+S=110 is the binary representation of
+6, the current value of
+X=6. On choosing
+Y=2,
+X becomes
+6⊕⌊
+2
+2
+6
+⌋=7. We can show that this is the maximum value of
+X we can achieve after one operation.

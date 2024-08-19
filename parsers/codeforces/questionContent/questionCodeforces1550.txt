@@ -1,0 +1,203 @@
+E. Equilibrium
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+William has two arrays
+a
+and
+b
+, each consisting of
+n
+items.
+For some segments
+l..r
+of these arrays William wants to know if it is possible to equalize the values of items in these segments using a balancing operation. Formally, the values are equalized if for each
+i
+from
+l
+to
+r
+holds
+a
+i
+=
+b
+i
+.
+To perform a balancing operation an even number of indices must be selected, such that
+l≤po
+s
+1
+<po
+s
+2
+<⋯<po
+s
+k
+≤r
+. Next the items of array a at positions
+po
+s
+1
+,po
+s
+3
+,po
+s
+5
+,…
+get incremented by one and the items of array b at positions
+po
+s
+2
+,po
+s
+4
+,po
+s
+6
+,…
+get incremented by one.
+William wants to find out if it is possible to equalize the values of elements in two arrays for each segment using some number of balancing operations, and what is the minimal number of operations required for that. Note that for each segment the operations are performed independently.
+Input
+The first line contains a two integers
+n
+and
+q
+(
+2≤n≤
+10
+5
+,
+1≤q≤
+10
+5
+), the size of arrays
+a
+and
+b
+and the number of segments.
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(0≤
+a
+i
+≤
+10
+9
+)
+.
+The third line contains
+n
+integers
+b
+1
+,
+b
+2
+,…,
+b
+n
+(0≤
+b
+i
+≤
+10
+9
+)
+.
+Each of the next
+q
+lines contains two integers
+l
+i
+and
+r
+i
+(1≤
+l
+i
+<
+r
+i
+≤n)
+, the edges of segments.
+Output
+For each segment output a single number — the minimal number of balancing operations needed or "-1" if it is impossible to equalize segments of arrays.
+Example
+input
+Copy
+8 5
+0 1 2 9 3 2 7 5
+2 2 1 9 4 1 5 8
+2 6
+1 7
+2 4
+7 8
+5 8
+output
+Copy
+1
+3
+1
+-1
+-1
+Note
+For the first segment from
+2
+to
+6
+you can do one operation with
+pos=[2,3,5,6]
+, after this operation the arrays will be:
+a=[0,2,2,9,4,2,7,5]
+,
+b=[2,2,2,9,4,2,5,8]
+. Arrays are equal on a segment from
+2
+to
+6
+after this operation.
+For the second segment from
+1
+to
+7
+you can do three following operations:
+pos=[1,3,5,6]
+pos=[1,7]
+pos=[2,7]
+After these operations, the arrays will be:
+a=[2,2,2,9,4,2,7,5]
+,
+b=[2,2,2,9,4,2,7,8]
+. Arrays are equal on a segment from
+1
+to
+7
+after these operations.
+For the third segment from
+2
+to
+4
+you can do one operation with
+pos=[2,3]
+, after the operation arrays will be:
+a=[0,2,2,9,3,2,7,5]
+,
+b=[2,2,2,9,4,1,5,8]
+. Arrays are equal on a segment from
+2
+to
+4
+after this operation.
+It is impossible to equalize the fourth and the fifth segment.

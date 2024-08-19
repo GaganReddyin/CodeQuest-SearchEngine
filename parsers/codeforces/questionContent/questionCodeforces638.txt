@@ -1,0 +1,119 @@
+J. Journey
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+One day, Pak Chanek who is already bored of being alone at home decided to go traveling. While looking for an appropriate place, he found that Londonesia has an interesting structure.
+According to the information gathered by Pak Chanek, there are
+N
+cities numbered from
+1
+to
+N
+. The cities are connected to each other with
+N−1
+two-directional roads, with the
+i
+-th road connecting cities
+U
+i
+and
+V
+i
+, and taking a time of
+W
+i
+hours to be traversed. In other words, Londonesia's structure forms a tree.
+Pak Chanek wants to go on a journey in Londonesia starting and ending in any city (not necessarily the same city) such that each city is visited at least once with the least time possible. In order for the journey to end quicker, Pak Chanek also carries an instant teleportation device for moving from one city to any city that can only be used at most once. Help Pak Chanek for finding the minimum time needed.
+Notes:
+Pak Chanek only needs to visit each city at least once. Pak Chanek does not have to traverse each road.
+In the journey, a city or a road can be visited more than once.
+Input
+The first line contains a single integer
+N
+(
+1≤N≤
+10
+5
+) — the number of cities in Londonesia.
+The
+i
+-th of the next
+N−1
+lines contains three integers
+U
+i
+,
+V
+i
+, and
+W
+i
+(
+1≤
+U
+i
+,
+V
+i
+≤N
+,
+1≤
+W
+i
+≤
+10
+9
+) — a two-directional road that connects cities
+U
+i
+and
+V
+i
+that takes
+W
+i
+hours to be traversed. The roads in Londonesia form a tree.
+Output
+Output one integer, which represents the minimum time in hours that is needed to visit each city at least once.
+Examples
+input
+Copy
+4
+1 2 4
+2 3 5
+3 4 4
+output
+Copy
+8
+input
+Copy
+5
+1 2 45
+1 3 50
+1 4 10
+1 5 65
+output
+Copy
+115
+Note
+In the first example, the journey that has the minimum time is
+2→1
+−
+→
+−
+−
+−
+teleport
+4→3
+.
+In the second example, the journey that has the minimum time is
+3→1→4→1→2
+−
+→
+−
+−
+−
+teleport
+5
+.

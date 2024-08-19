@@ -1,0 +1,122 @@
+Counting Inversions Again!
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a sequence of non-negative integers
+A
+1
+,A
+2
+,…,A
+N
+. A pair
+(x,y), where
+1≤x<y≤N, is an inversion if
+A
+x
+>A
+y
+.
+You should answer
+Q queries (numbered
+1 through
+Q). For each valid
+i, in the
+i-th query:
+You are given a non-negative integer
+K
+i
+.
+Consider a sequence
+B
+1
+,B
+2
+,…,B
+N
+, where
+B
+j
+=A
+j
+⊕K for each valid
+j.
+You should find the number of inversions in the sequence
+B.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+each of the next
+Q lines describes a query with a single integer
+K
+i
+.
+Output
+For each test case, print
+Q lines. For each valid
+i, the
+i-th of these lines should contain a single integer ― the answer to the
+i-th query.
+Constraints
+1≤T≤10
+1≤N,Q≤10
+6
+0≤K
+i
+<2
+31
+for each valid
+i
+0≤A
+i
+<2
+31
+for each valid
+i
+the sum of
+N over all test cases does not exceed
+10
+6
+the sum of
+Q over all test cases does not exceed
+10
+6
+Subtasks
+Subtask #1 (50 points):
+1≤Q≤5
+1≤N≤10
+5
+the sum of
+N over all test cases does not exceed
+10
+5
+the sum of
+Q over all test cases does not exceed
+5
+Subtask #2 (50 points): original constraints
+Sample 1:
+Input
+Output
+1
+4 4
+3 1 2 0
+0
+1
+2
+3
+5
+3
+3
+1

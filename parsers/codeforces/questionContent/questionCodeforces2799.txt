@@ -1,0 +1,162 @@
+B. Present
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Catherine received an array of integers as a gift for March 8. Eventually she grew bored with it, and she started calculated various useless characteristics for it. She succeeded to do it for each one she came up with. But when she came up with another one — xor of all pairwise sums of elements in the array, she realized that she couldn't compute it for a very large array, thus she asked for your help. Can you do it? Formally, you need to compute
+(
+a
+1
++
+a
+2
+)⊕(
+a
+1
++
+a
+3
+)⊕…⊕(
+a
+1
++
+a
+n
+)
+⊕(
+a
+2
++
+a
+3
+)⊕…⊕(
+a
+2
++
+a
+n
+)
+…
+⊕(
+a
+n−1
++
+a
+n
+)
+(
+)
+⊕
+(
+)
+⊕
+⊕
+(
+)
+⊕
+(
+)
+⊕
+⊕
+(
+)
+⊕
+(
+)
+Here
+x⊕y
+is a bitwise XOR operation (i.e.
+x
+^
+y
+in many modern programming languages). You can read about it in Wikipedia: https://en.wikipedia.org/wiki/Exclusive_or#Bitwise_operation.
+Input
+The first line contains a single integer
+n
+(
+2≤n≤400000
+) — the number of integers in the array.
+The second line contains integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+7
+).
+Output
+Print a single integer — xor of all pairwise sums of integers in the given array.
+Examples
+input
+Copy
+2
+1 2
+output
+Copy
+3
+input
+Copy
+3
+1 2 3
+output
+Copy
+2
+Note
+In the first sample case there is only one sum
+1+2=3
+.
+In the second sample case there are three sums:
+1+2=3
+,
+1+3=4
+,
+2+3=5
+. In binary they are represented as
+011
+2
+⊕
+100
+2
+⊕
+101
+2
+=
+010
+2
+, thus the answer is 2.
+⊕
+is the bitwise xor operation. To define
+x⊕y
+, consider binary representations of integers
+x
+and
+y
+. We put the
+i
+-th bit of the result to be 1 when exactly one of the
+i
+-th bits of
+x
+and
+y
+is 1. Otherwise, the
+i
+-th bit of the result is put to be 0. For example,
+0101
+2
+⊕
+0011
+2
+=
+0110
+2
+.

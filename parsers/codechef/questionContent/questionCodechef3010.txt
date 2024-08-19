@@ -1,0 +1,66 @@
+The In-XOR-able Task
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given three integers
+N,
+K and
+X. Is it possible to find a sequence of non-negative integers
+A
+1
+,A
+2
+,…,A
+N
+such that the number of pairs of indices
+(i,j) (
+1≤i≤j≤N) satisfying
+A
+i
+⊕A
+j
+=X is equal to
+K? Here,
+⊕ is the bitwise XOR operator.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains three space-separated integers
+N,
+K and
+X.
+Output
+For each query, print a single line containing the string "YES" if it is possible to find a sequence satisfying the given condition or "NO" if it is impossible (without quotes).
+Constraints
+1≤T≤4⋅10
+5
+1≤N,K,X≤3⋅10
+5
+Sample 1:
+Input
+Output
+5
+4 3 3
+5 8 1
+10 8 2
+19 100 34
+69 100 45
+YES
+NO
+YES
+NO
+YES
+Explanation:
+Example case 1: For example,
+A=[2,2,1,2] satisfies the given condition, since there are exactly
+3 pairs
+(i,j) such that
+A
+i
+⊕A
+j
+=3.
+Example case 3: For example,
+A=[8,12,3,14,8,15,10,10,8,14] satisfies the given condition, since there are exactly
+8 pairs with XOR equal to
+2.

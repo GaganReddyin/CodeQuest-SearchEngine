@@ -1,0 +1,97 @@
+Random Knapsack
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given
+N=240 integers, randomly generated in
+[0;998244353).
+You need to answer
+Q queries, in each query, you are given one integer
+X,
+0≤X<998244353. And you need to find a subset of given integers with sum
+X, modulo
+998244353.
+For each test case, it is guaranteed that at least one such subset exists.
+###Input:
+The first line contains one integer
+N=240.
+The second line contains
+N integers,
+A
+1
+,A
+2
+,…,A
+N
+(
+0≤A
+i
+<998244353).
+The third line contains one integer
+Q.
+The next line contains
+Q integers
+X
+1
+,X
+2
+,…,X
+Q
+(
+0≤X
+i
+<998244353).
+###Output: For each query, assume that you've chosen indices
+1≤i
+1
+<i
+2
+<…<i
+k
+. Then, denote
+Y=2
+i
+1
+−1
++2
+i
+2
+−1
++…+2
+i
+k
+−1
+. You have to print four integers:
+Ymod2
+60
+,(⌊
+2
+60
+Y
+⌋)mod2
+60
+,(⌊
+2
+120
+Y
+⌋)mod2
+60
+,(⌊
+2
+180
+Y
+⌋)mod2
+60
+.
+If there are several possible solutions, you can print any.
+###Constraints
+1≤Q≤300000.
+###Subtasks
+10 points :
+1≤Q≤300
+10 points :
+1≤Q≤3000
+10 points :
+1≤Q≤30000
+70 points :
+1≤Q≤300000
+###Sample: There are no samples for this problem.

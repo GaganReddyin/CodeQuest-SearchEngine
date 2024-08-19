@@ -1,0 +1,77 @@
+Crazy Subsequences
+Problem
+Chef has a binary string
+S. He can modify it by choosing any subsequence of length
+3 from it and deleting the first and last character of the subsequence.
+For example, if
+S=110101, Chef can choose the subsequence marked in red and delete its first and last characters, obtaining the string
+S=1011.
+Chef wonders what is the lexicographically largest string he can obtain by modifying the original string using a finite number of operations. Please help Chef in this task.
+Note: A binary string
+A is said to be lexicographically larger than another binary string
+B if:
+B is a proper prefix of
+A (for example,
+101 is lexicographically larger than
+10); or
+There exists an index
+i such that
+A
+1
+=B
+1
+,A
+2
+=B
+2
+,…,A
+i−1
+=B
+i−1
+and
+A
+i
+>B
+i
+.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of a single line of input containing the original binary string
+S.
+Output Format
+For each test case, output on a new line the lexicographically largest string Chef can obtain.
+Constraints
+1≤T≤2⋅10
+4
+3≤∣S∣≤10
+5
+S is a binary string, i.e, only contains the characters
+0 and
+1 in it
+The sum of
+∣S∣ over all test cases won't exceed
+3⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+101
+1010
+0000
+0001
+101
+11
+0000
+01
+Explanation:
+Test case
+1: It is optimal to not perform any moves.
+Test case
+2: In one move, by choosing the subsequence
+1010, the string can be made into
+11, which is the lexicographically largest possible.
+Test case
+3: It is optimal to not perform any move.

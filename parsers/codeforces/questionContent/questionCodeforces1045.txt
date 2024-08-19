@@ -1,0 +1,215 @@
+I. Neighbour Ordering
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Given an undirected graph
+G
+, we say that a neighbour ordering is an ordered list of all the neighbours of a vertex for each of the vertices of
+G
+. Consider a given neighbour ordering of
+G
+and three vertices
+u
+,
+v
+and
+w
+, such that
+v
+is a neighbor of
+u
+and
+w
+. We write
+u
+<
+v
+w
+if
+u
+comes after
+w
+in
+v
+'s neighbor list.
+A neighbour ordering is said to be good if, for each simple cycle
+v
+1
+,
+v
+2
+,…,
+v
+c
+of the graph, one of the following is satisfied:
+v
+1
+<
+v
+2
+v
+3
+,
+v
+2
+<
+v
+3
+v
+4
+,…,
+v
+c−2
+<
+v
+c−1
+v
+c
+,
+v
+c−1
+<
+v
+c
+v
+1
+,
+v
+c
+<
+v
+1
+v
+2
+.
+v
+1
+>
+v
+2
+v
+3
+,
+v
+2
+>
+v
+3
+v
+4
+,…,
+v
+c−2
+>
+v
+c−1
+v
+c
+,
+v
+c−1
+>
+v
+c
+v
+1
+,
+v
+c
+>
+v
+1
+v
+2
+.
+Given a graph
+G
+, determine whether there exists a good neighbour ordering for it and construct one if it does.
+Input
+The input consists of multiple test cases. The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases. Description of the test cases follows.
+The first line of each test case contains two integers
+n
+and
+m
+(
+2≤n≤3⋅
+10
+5
+,
+1≤m≤3⋅
+10
+5
+), the number of vertices and the number of edges of the graph.
+The next
+m
+lines each contain two integers
+u,v
+(
+0≤u,v<n
+), denoting that there is an edge connecting vertices
+u
+and
+v
+. It is guaranteed that the graph is connected and there are no loops or multiple edges between the same vertices.
+The sum of
+n
+and the sum of
+m
+for all test cases are at most
+3⋅
+10
+5
+.
+Output
+For each test case, output one line with YES if there is a good neighbour ordering, otherwise output one line with NO. You can print each letter in any case (upper or lower).
+If the answer is YES, additionally output
+n
+lines describing a good neighbour ordering. In the
+i
+-th line, output the neighbours of vertex
+i
+in order.
+If there are multiple good neigbour orderings, print any.
+Example
+input
+Copy
+3
+5 6
+0 1
+0 2
+1 2
+2 3
+3 4
+4 1
+2 1
+0 1
+6 10
+0 1
+2 0
+0 3
+0 4
+1 2
+1 4
+2 3
+2 5
+3 5
+4 5
+output
+Copy
+YES
+1 2 
+4 2 0 
+0 1 3 
+2 4 
+3 1 
+YES
+1 
+0 
+NO

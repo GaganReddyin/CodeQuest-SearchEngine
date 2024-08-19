@@ -1,0 +1,83 @@
+E. K Balanced Teams
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are a coach at your local university. There are
+n
+students under your supervision, the programming skill of the
+i
+-th student is
+a
+i
+.
+You have to form
+k
+teams for yet another new programming competition. As you know, the more students are involved in competition the more probable the victory of your university is! So you have to form no more than
+k
+(and at least one) non-empty teams so that the total number of students in them is maximized. But you also know that each team should be balanced. It means that the programming skill of each pair of students in each team should differ by no more than
+5
+. Teams are independent from one another (it means that the difference between programming skills of two students from two different teams does not matter).
+It is possible that some students not be included in any team at all.
+Your task is to report the maximum possible total number of students in no more than
+k
+(and at least one) non-empty balanced teams.
+If you are Python programmer, consider using PyPy instead of Python when you submit your code.
+Input
+The first line of the input contains two integers
+n
+and
+k
+(
+1≤k≤n≤5000
+) — the number of students and the maximum number of teams, correspondingly.
+The second line of the input contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+i
+≤
+10
+9
+), where
+a
+i
+is a programming skill of the
+i
+-th student.
+Output
+Print one integer — the maximum possible total number of students in no more than
+k
+(and at least one) non-empty balanced teams.
+Examples
+input
+Copy
+5 2
+1 2 15 15 15
+output
+Copy
+5
+input
+Copy
+6 1
+36 4 1 25 9 16
+output
+Copy
+2
+input
+Copy
+4 4
+1 10 100 1000
+output
+Copy
+4

@@ -1,0 +1,116 @@
+E. Product Oriented Recurrence
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Let
+f
+x
+=
+c
+2x−6
+⋅
+f
+x−1
+⋅
+f
+x−2
+⋅
+f
+x−3
+for
+x≥4
+.
+You have given integers
+n
+,
+f
+1
+,
+f
+2
+,
+f
+3
+, and
+c
+. Find
+f
+n
+mod(
+10
+9
++7)
+.
+Input
+The only line contains five integers
+n
+,
+f
+1
+,
+f
+2
+,
+f
+3
+, and
+c
+(
+4≤n≤
+10
+18
+,
+1≤
+f
+1
+,
+f
+2
+,
+f
+3
+,
+c≤
+10
+9
+).
+Output
+Print
+f
+n
+mod(
+10
+9
++7)
+.
+Examples
+input
+Copy
+5 1 2 5 3
+output
+Copy
+72900
+input
+Copy
+17 97 41 37 11
+output
+Copy
+317451037
+Note
+In the first example,
+f
+4
+=90
+,
+f
+5
+=72900
+.
+In the second example,
+f
+17
+≈2.28×
+10
+29587
+.

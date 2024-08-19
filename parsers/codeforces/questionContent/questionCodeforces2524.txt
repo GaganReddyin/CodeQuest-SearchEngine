@@ -1,0 +1,61 @@
+G. Shifting Dominoes
+time limit per test2 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Bill likes to play with dominoes. He took an
+n×m
+board divided into equal square cells, and covered it with dominoes. Each domino covers two adjacent cells of the board either horizontally or vertically, and each cell is covered exactly once with a half of one domino (that is, there are no uncovered cells, and no two dominoes cover the same cell twice).
+After that Bill decided to play with the covered board and share some photos of it on social media. First, he removes exactly one domino from the board, freeing two of the cells. Next, he moves dominoes around. A domino can only be moved along the line parallel to its longer side. A move in the chosen direction is possible if the next cell in this direction is currently free. Bill doesn't want to lose track of what the original tiling looks like, so he makes sure that at any point each domino shares at least one cell with its original position.
+After removing a domino and making several (possibly, zero) moves Bill takes a photo of the board and posts it. However, with the amount of filters Bill is using, domino borders are not visible, so only the two free cells of the board can be identified. When the photo is posted, Bill reverts the board to its original state and starts the process again.
+Bill wants to post as many photos as possible, but he will not post any photo twice. How many distinct photos can he take? Recall that photos are different if the pairs of free cells in the photos are different.
+Input
+The first line contains two positive integers
+n
+and
+m
+(
+nm≤2⋅
+10
+5
+) — height and width of the board respectively.
+The next
+n
+lines describe the tiling of the board, row by row from top to bottom. Each of these lines contains
+m
+characters, describing the cells in the corresponding row left to right. Each character is one of U, D, L, or R, meaning that the cell is covered with a top, bottom, left, or right half of a domino respectively.
+It is guaranteed that the described tiling is valid, that is, each half-domino has a counterpart in the relevant location. In particular, since tiling is possible, the number of cells in the board is even.
+Output
+Print a single integer — the number of distinct photos Bill can take.
+Examples
+input
+Copy
+2 4
+UUUU
+DDDD
+output
+Copy
+4
+input
+Copy
+2 3
+ULR
+DLR
+output
+Copy
+6
+input
+Copy
+6 6
+ULRUUU
+DUUDDD
+UDDLRU
+DLRLRD
+ULRULR
+DLRDLR
+output
+Copy
+133
+Note
+In the first sample case, no moves are possible after removing any domino, thus there are four distinct photos.
+In the second sample case, four photos are possible after removing the leftmost domino by independently moving/not moving the remaining two dominoes. Two more different photos are obtained by removing one of the dominoes on the right.

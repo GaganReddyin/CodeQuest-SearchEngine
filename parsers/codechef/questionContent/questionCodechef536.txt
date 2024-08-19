@@ -1,0 +1,104 @@
+Journey of the Knight
+Problem
+Chef has an
+8×8 chessboard. He placed a knight on the square
+(X
+1
+,Y
+1
+). Note that, the square at the intersection of the
+i
+th
+row and
+j
+th
+column is denoted by
+(i,j).
+Chef wants to determine whether the knight can end up at the square
+(X
+2
+,Y
+2
+) in exactly
+100 moves or not.
+For reference, a knight can move to a square which is:
+One square horizontally and two squares vertically away from the current square, or
+One square vertically and two squares horizontally away from the current square
+A visual description of this may be found here.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains
+4 integers
+X
+1
+,Y
+1
+,X
+2
+,Y
+2
+— where
+(X
+1
+,Y
+1
+) denotes the starting square of the knight and
+(X
+2
+,Y
+2
+) denotes the ending square of the knight.
+Output Format
+For each test case, output YES if knight can move from
+(X
+1
+,Y
+1
+) to
+(X
+2
+,Y
+2
+) in exactly
+100 moves. Otherwise, output NO.
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+Constraints
+1≤T≤1000
+1≤X
+1
+,Y
+1
+,X
+2
+,Y
+2
+≤8
+Sample 1:
+Input
+Output
+3
+1 1 1 1
+8 8 7 6
+8 8 8 6
+YES
+NO
+YES
+Explanation:
+Test Case 1: Knight can first move to
+(2,3) and then back to
+(1,1). He can repeat this
+50 times and he will end up at
+(1,1) after
+100 moves.
+Test Case 2: It can be proven that it is not possible for the knight to end at
+(7,6) after
+100 moves.
+Test Case 3: Knight can first move to
+(6,7) and then to
+(8,6). After that, he can alternate between
+(6,7) and
+(8,6) for
+49 times and he will end up at
+(8,6) after
+100 moves.

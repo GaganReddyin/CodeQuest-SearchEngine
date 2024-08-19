@@ -1,0 +1,199 @@
+B. Gardener and the Array
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The gardener Kazimir Kazimirovich has an array of
+n
+integers
+c
+1
+,
+c
+2
+,…,
+c
+n
+.
+He wants to check if there are two different subsequences
+a
+and
+b
+of the original array, for which
+f(a)=f(b)
+, where
+f(x)
+is the bitwise OR of all of the numbers in the sequence
+x
+.
+A sequence
+q
+is a subsequence of
+p
+if
+q
+can be obtained from
+p
+by deleting several (possibly none or all) elements.
+Two subsequences are considered different if the sets of indexes of their elements in the original sequence are different, that is, the values of the elements are not considered when comparing the subsequences.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+5
+). The description of the test cases follows.
+The first line of each test case contains one integer
+n
+(
+1≤n≤
+10
+5
+) — the size of the array
+c
+.
+The description of the array
+c
+in this problem is given implicitly to speed up input.
+The
+(i+1)
+-st of the following
+n
+lines of the test case begins with an integer
+k
+i
+(
+1≤
+k
+i
+≤
+10
+5
+) — the number of set bits in the number
+c
+i
+. Next follow
+k
+i
+distinct integers
+p
+i,1
+,
+p
+i,2
+,…,
+p
+i,
+k
+i
+(
+1≤
+p
+i
+≤2⋅
+10
+5
+) —the numbers of bits that are set to one in number
+c
+i
+. In other words,
+c
+i
+=
+2
+p
+i,1
++
+2
+p
+i,2
++…+
+2
+p
+i,
+k
+i
+.
+It is guaranteed that the total sum of
+k
+i
+in all tests does not exceed
+10
+5
+.
+Output
+For each set of input, print "Yes" if there exist two different subsequences for which
+f(a)=f(b)
+, and "No" otherwise.
+You can output the answer in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Example
+input
+Copy
+5
+3
+2 1 5
+2 2 4
+2 2 3
+2
+2 1 2
+1 2
+4
+3 1 2 4
+2 2 4
+4 1 2 5 6
+2 2 5
+5
+3 3 1 2
+3 2 5 3
+5 7 2 3 1 4
+5 1 2 6 3 5
+3 2 6 3
+2
+1 1
+1 2
+output
+Copy
+No
+Yes
+Yes
+Yes
+No
+Note
+It can be proven that in the first test case there are no two different subsequences
+a
+and
+b
+for which
+f(a)=f(b)
+.
+In the second test case, one of the possible answers are following subsequences: the subsequence
+a
+formed by the element at position
+1
+, and the subsequence
+b
+formed by the elements at positions
+1
+and
+2
+.
+In the third test case, one of the possible answers are following subsequences: the subsequence
+a
+formed by elements at positions
+1
+,
+2
+,
+3
+and
+4
+, and the subsequence
+b
+formed by elements at positions
+2
+,
+3
+and
+4
+.

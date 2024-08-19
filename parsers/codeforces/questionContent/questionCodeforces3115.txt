@@ -1,0 +1,101 @@
+J. Tiling Terrace
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Talia has just bought an abandoned house in the outskirt of Jakarta. The house has a nice and long yard which can be represented as a one-dimensional grid containing
+1×N
+cells. To beautify the house, Talia is going to build a terrace on the yard by tiling the cells. Each cell on the yard contains either soil (represented by the character '.') or rock (represented by the character '#'), and there are at most
+50
+cells containing rocks.
+Being a superstitious person, Talia wants to tile the terrace with mystical tiles that have the power to repel ghosts. There are three types of mystical tiles:
+Type-1: Covers
+1×1
+cell and can only be placed on a soil cell (".").
+Type-2: Covers
+1×2
+cells and can only be placed on two consecutive soil cells ("..").
+Type-3: Covers
+1×3
+cells and can only be placed on consecutive soil-rock-soil cells (".#.").
+Each tile of Type-1, Type-2, and Type-3 has the power to repel
+G
+1
+,
+G
+2
+, and
+G
+3
+ghosts per day, respectively. There are also some mystical rules which must be followed for the power to be effective:
+There should be no overlapping tiles, i.e. each cell is covered by at most one tile.
+There should be at most
+K
+tiles of Type-1, while there are no limitations for tiles of Type-2 and Type-3.
+Talia is scared of ghosts, thus, the terrace (which is tiled by mystical tiles) should be able to repel as many ghosts as possible. Help Talia to find the maximum number of ghosts that can be repelled per day by the terrace. Note that Talia does not need to tile all the cells on the yard as long as the number of ghosts that can be repelled by the terrace is maximum.
+Input
+Input begins with a line containing five integers:
+N
+K
+G
+1
+G
+2
+G
+3
+(
+1≤N≤100000
+;
+0≤K≤N
+;
+0≤
+G
+1
+,
+G
+2
+,
+G
+3
+≤1000
+) representing the number of cells, the maximum number of tiles of Type-1, the number of ghosts repelled per day by a tile of Type-1, the number of ghosts repelled per day by a tile of Type-2, and the number of ghosts repelled by a tile of Type-3, respectively. The next line contains a string of
+N
+characters representing the yard. Each character in the string is either '.' which represents a soil cell or '#' which represents a rock cell. There are at most
+50
+rock cells.
+Output
+Output in a line an integer representing the maximum number of ghosts that can be repelled per day.
+Examples
+input
+Copy
+6 4 10 25 40
+..#...
+output
+Copy
+75
+input
+Copy
+6 4 10 100 40
+..#...
+output
+Copy
+210
+input
+Copy
+7 2 30 10 100
+..#...#
+output
+Copy
+160
+Note
+Explanation for the sample input/output #1
+Let "A" be a tile of Type-1, "BB" be a tile of Type-2, and "CCC" be a tile of Type-3. The tiling "ACCCBB" in this case produces the maximum number of ghosts that can be repelled, i.e.
+10+40+25=75
+Explanation for the sample input/output #2
+This sample input has the same yard with the previous sample input, but each tile of Type-2 can repel more ghosts per day. The tiling "BB#BBA" or "BB#ABB" produces the maximum number of ghosts that can be repelled, i.e.
+100+100+10=210
+. Observe that the third cell is left untiled.
+Explanation for the sample input/output #3
+The tiling "ACCCA.#", "ACCC.A#", or ".CCCAA#" produces the maximum number of ghosts that can be repelled, i.e.
+30+100+30=160
+. Observe that there is no way to tile the last cell.

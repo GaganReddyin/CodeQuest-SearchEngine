@@ -1,0 +1,145 @@
+Maximize the Minimum
+Problem
+JJ has an array
+A of size
+N. He can perform the following operations on the array at most
+K times:
+Set
+A
+i
+:=A
+i+1
+where
+1≤i≤N−1
+Set
+A
+i
+:=A
+i−1
+where
+2≤i≤N
+He wants to maximize the value of the minimum element of the array
+A. Formally, he wants to maximize the value of
+1≤i≤N
+min
+A
+i
+.
+Can you help him do so?
+Input Format
+The first line contains a single integer
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+K - the size of the array
+A and the maximum number of operations allowed respectively.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the maximum value of the minimum element of the array
+A that can be obtained after applying the given operation at most
+K times.
+Constraints
+1≤T≤100
+2≤N≤10
+5
+0≤K≤10
+5
+1≤A
+i
+≤10
+9
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+4
+5 4
+5 4 3 2 1
+6 1
+8 2 3 9 6 10
+5 2
+4 3 4 3 5
+5 1000
+4 3 4 3 5
+5
+3
+4
+5
+Explanation:
+Test Case 1: We can perform the following operations (in the following order):
+Set
+A
+2
+:=A
+1
+. Array
+A becomes
+[5,5,3,2,1]
+Set
+A
+3
+:=A
+2
+. Array
+A becomes
+[5,5,5,2,1]
+Set
+A
+4
+:=A
+3
+. Array
+A becomes
+[5,5,5,5,1]
+Set
+A
+5
+:=A
+4
+. Array
+A becomes
+[5,5,5,5,5]
+Therefore the answer is
+5.
+Test Case 2: We can perform the following operations (in the following order):
+Set
+A
+2
+:=A
+3
+. Array
+A becomes
+[8,3,3,9,6,10]
+Therefore the answer is
+3.
+Test Case 3: We can perform the following operations (in the following order):
+Set
+A
+2
+:=A
+3
+. Array
+A becomes
+[4,4,4,3,5]
+Set
+A
+4
+:=A
+3
+. Array
+A becomes
+[4,4,4,4,5]
+Therefore the answer is
+4.

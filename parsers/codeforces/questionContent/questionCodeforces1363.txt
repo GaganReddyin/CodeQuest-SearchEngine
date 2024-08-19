@@ -1,0 +1,83 @@
+A. Weights
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array
+A
+of length
+N
+weights of masses
+A1
+,
+A2
+...
+AN
+. No two weights have the same mass. You can put every weight on one side of the balance (left or right). You don't have to put weights in order
+A1
+,...,
+AN
+. There is also a string
+S
+consisting of characters "L" and "R", meaning that after putting the
+i−th
+weight (not
+Ai
+, but
+i−th
+weight of your choice) left or right side of the balance should be heavier. Find the order of putting the weights on the balance such that rules of string
+S
+are satisfied.
+Input
+The first line contains one integer
+N
+(
+1≤N≤2∗105
+) - the length of the array
+A
+The second line contains
+N
+distinct integers:
+A1
+,
+A2
+,...,
+AN
+(
+1≤Ai≤109
+) - the weights given The third line contains string
+S
+of length
+N
+consisting only of letters "L" and "R" - string determining which side of the balance should be heavier after putting the
+i−th
+weight of your choice
+Output
+The output contains
+N
+lines. In every line, you should print one integer and one letter - integer representing the weight you are putting on the balance in that move and the letter representing the side of the balance where you are putting the weight. If there is no solution, print
+−1
+.
+Example
+input
+Copy
+5
+3 8 2 13 7
+LLRLL
+output
+Copy
+3 L
+2 R
+8 R
+13 L
+7 L
+Note
+Explanation for the test case:
+after the 1st weight: 3 L (left side is heavier)
+after the 2nd weight: 2 R (left side is heavier)
+after the 3rd weight: 8 R (right side is heavier)
+after the 4th weight: 13 L (left side is heavier)
+after the 5th weight: 7 L (left side is heavier)
+So, the rules given by string
+S
+are fulfilled and our order of putting the weights is correct.

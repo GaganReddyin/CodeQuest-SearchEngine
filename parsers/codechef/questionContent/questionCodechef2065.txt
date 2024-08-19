@@ -1,0 +1,43 @@
+Chef and Divisor Tree
+Problem
+Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+Chef has defined a new type of rooted tree - divisor tree. In this tree, every node has a positive integer written on it. It follows some rules:
+The root can have any positive integer written on it.
+Suppose a node has the integer A written on it, and suppose A has k proper divisors. [Note: Proper divisors of an integer are all its divisors except the integer itself. 1 has no proper divisor] Then this node will have exactly k child nodes, and each of A's proper divisors will be written on exactly one of the child nodes. For example, a node with number 12 written on it would have children with the numbers 1, 2, 3, 4, and 6 written on them.
+You can observe that the nodes have 1 written on them, if and only if, they are leaves.
+The score of a path in this tree is defined as the sum of degrees of all of the nodes in the path. The Score of the tree is defined as the maximum score of a path from the root to one of the leaves.
+You are given two integers A, B. You want to find the sum of Scores of all the divisor trees which have n written on their root, where A ≤ n ≤ B.
+Input
+The only line of the input contains two space separated integers A and B respectively.
+Output
+Output a single integer corresponding to the answer of the problem.
+Constraints
+1 ≤ A ≤ B ≤ 1012
+B - A < 105
+Subtasks
+Subtask #1 (10 points):
+1 ≤ A ≤ B ≤ 50
+Subtask #2 (25 points):
+1 ≤ A ≤ B ≤ 106
+B - A < 105
+Subtask #3 (25 points):
+A = B
+Subtask #4 (40 points):
+Original constraints.
+Sample 1:
+Input
+Output
+11 12
+14
+Sample 2:
+Input
+Output
+932451 935212
+101245
+Explanation:
+Input 1.
+Here we have, A = 11 and B = 12.
+The Score of the divisor tree which has 12 written on its root is 12. This because the path 12 -> 6 -> 3 -> 1 (look at the figure below) has sum of the degrees of all nodes in it = 5 + 4 + 2 + 1 = 12. This is the maximum score of a path among all paths from root to the leaves. Hence, the Score of this tree is 12.
+Note that in the figure, the nodes are denoted by (value written on it, degree of node), and the leaves are marked green.
+You can find that the score of divisor tree which has 11 written on its root is 2.
+Hence, answer will be 12 + 2 = 14.

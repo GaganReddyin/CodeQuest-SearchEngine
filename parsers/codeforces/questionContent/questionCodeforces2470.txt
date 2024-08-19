@@ -1,0 +1,112 @@
+C. Choosing flowers
+time limit per test1 second
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+Vladimir would like to prepare a present for his wife: they have an anniversary! He decided to buy her exactly
+n
+flowers.
+Vladimir went to a flower shop, and he was amazed to see that there are
+m
+types of flowers being sold there, and there is unlimited supply of flowers of each type. Vladimir wants to choose flowers to maximize the happiness of his wife. He knows that after receiving the first flower of the
+i
+-th type happiness of his wife increases by
+a
+i
+and after receiving each consecutive flower of this type her happiness increases by
+b
+i
+. That is, if among the chosen flowers there are
+x
+i
+>0
+flowers of type
+i
+, his wife gets
+a
+i
++(
+x
+i
+−1)⋅
+b
+i
+additional happiness (and if there are no flowers of type
+i
+, she gets nothing for this particular type).
+Please help Vladimir to choose exactly
+n
+flowers to maximize the total happiness of his wife.
+Input
+The first line contains the only integer
+t
+(
+1≤t≤10000
+), the number of test cases. It is followed by
+t
+descriptions of the test cases.
+Each test case description starts with two integers
+n
+and
+m
+(
+1≤n≤
+10
+9
+,
+1≤m≤100000
+), the number of flowers Vladimir needs to choose and the number of types of available flowers.
+The following
+m
+lines describe the types of flowers: each line contains integers
+a
+i
+and
+b
+i
+(
+0≤
+a
+i
+,
+b
+i
+≤
+10
+9
+) for
+i
+-th available type of flowers.
+The test cases are separated by a blank line. It is guaranteed that the sum of values
+m
+among all test cases does not exceed
+100000
+.
+Output
+For each test case output a single integer: the maximum total happiness of Vladimir's wife after choosing exactly
+n
+flowers optimally.
+Example
+input
+Copy
+2
+4 3
+5 0
+1 4
+2 2
+
+5 3
+5 2
+4 2
+3 1
+output
+Copy
+14
+16
+Note
+In the first example case Vladimir can pick 1 flower of the first type and 3 flowers of the second type, in this case the total happiness equals
+5+(1+2⋅4)=14
+.
+In the second example Vladimir can pick 2 flowers of the first type, 2 flowers of the second type, and 1 flower of the third type, in this case the total happiness equals
+(5+1⋅2)+(4+1⋅2)+3=16
+.

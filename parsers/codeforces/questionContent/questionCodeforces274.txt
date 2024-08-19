@@ -1,0 +1,141 @@
+B. Letter Exchange
+time limit per test4 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+A cooperative game is played by
+m
+people. In the game, there are
+3m
+sheets of paper:
+m
+sheets with letter 'w',
+m
+sheets with letter 'i', and
+m
+sheets with letter 'n'.
+Initially, each person is given three sheets (possibly with equal letters).
+The goal of the game is to allow each of the
+m
+people to spell the word "win" using their sheets of paper. In other words, everyone should have one sheet with letter 'w', one sheet with letter 'i', and one sheet with letter 'n'.
+To achieve the goal, people can make exchanges. Two people participate in each exchange. Both of them choose exactly one sheet of paper from the three sheets they own and exchange it with each other.
+Find the shortest sequence of exchanges after which everyone has one 'w', one 'i', and one 'n'.
+Input
+Each test contains multiple test cases. The first line contains the number of test cases
+t
+(
+1≤t≤
+10
+4
+). The description of the test cases follows.
+The first line of each test case contains a single integer
+m
+ (
+2≤m≤
+10
+5
+) — the number of people.
+The
+i
+-th of the next
+m
+lines contains a string
+s
+i
+of length
+3
+consisting of lowercase English letters 'w', 'i', and 'n', denoting the letters person
+i
+has on their sheets of paper at the beginning of the game, in arbitrary order.
+Each of the letters 'w', 'i', and 'n' appears on the sheets of paper exactly
+m
+times in total.
+It is guaranteed that the sum of
+m
+over all test cases does not exceed
+10
+5
+.
+Output
+For each test case, print a non-negative integer
+k
+ — the smallest number of exchanges people need to make everyone have one 'w', one 'i', and one 'n'.
+In each of the next
+k
+lines print four tokens
+a
+1
+c
+1
+a
+2
+c
+2
+, describing the exchanges in chronological order (
+1≤
+a
+1
+,
+a
+2
+≤m
+;
+a
+1
+≠
+a
+2
+;
+c
+1
+,
+c
+2
+are one of
+{w,i,n}
+): person
+a
+1
+gives letter
+c
+1
+to person
+a
+2
+, while person
+a
+2
+gives letter
+c
+2
+to person
+a
+1
+at the same time.
+If there are multiple solutions, print any.
+Example
+input
+Copy
+3
+2
+nwi
+inw
+3
+inn
+nww
+wii
+4
+win
+www
+iii
+nnn
+output
+Copy
+0
+2
+2 w 3 i
+3 w 1 n
+3
+2 w 3 i
+2 w 4 n
+3 i 4 n

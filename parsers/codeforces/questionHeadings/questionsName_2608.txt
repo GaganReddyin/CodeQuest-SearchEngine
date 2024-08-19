@@ -1,0 +1,1 @@
+A2. Distinguish I, CNOTs and SWAP

@@ -1,0 +1,58 @@
+MaxEdges
+Problem
+Tracy gives Charlie a Directed Acyclic Graph with
+N vertices. Among these
+N vertices,
+K vertices are sources, and
+L vertices are sinks.
+Find out the maximum number of edges this graph can have.
+Note:
+A source is a vertex with no incoming edge.
+A sink is a vertex with no outgoing edge.
+A vertex can be both, a source, and a sink.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, three space-separated integers
+N,K, and
+L - the number of vertices, the number of sources and the number of sinks respectively.
+Output Format
+For each test case, output in a single line, the maximum number of edges this graph can have.
+Constraints
+1≤T≤10
+5
+2≤N≤10
+9
+1≤K<N
+1≤L<N
+Sample 1:
+Input
+Output
+2
+3 1 1
+5 3 3
+3
+4
+Explanation:
+Test case
+1: Assume that the vertices are numbered
+1,2, and
+3. Let
+1 be a source and
+3 be a sink. The edges of a possible DAG are
+1→2,2→3, and
+1→3.
+The number of edges in this graph are
+3. It can be shown that this is the maximum number of edges possible under given constraints.
+Test case
+2: Assume that the vertices are numbered
+1,2,3,4, and
+5. Let
+1,2, and
+3 be sources and
+3,4, and
+5 be sinks. The edges of a possible DAG are
+1→4,2→4,1→5 and
+2→5.
+The number of edges in this graph are
+4. It can be shown that this is the maximum number of edges possible under given constraints.

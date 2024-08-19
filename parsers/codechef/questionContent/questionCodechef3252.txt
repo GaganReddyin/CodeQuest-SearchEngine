@@ -1,0 +1,128 @@
+Perfect Imperfections 2
+Problem
+An array of integers is called good if all its elements are perfect squares.
+You are given an array
+A of
+N integers. In one move, you can do the following:
+Pick a subset of indices of the array, say
+{i
+1
+,i
+2
+,…,i
+k
+} where
+1≤i
+1
+<i
+2
+<…<i
+k
+≤N
+Next, pick an integer
+X>0
+Finally, multiply the value at each chosen index by
+X, i.e, set
+A
+i
+j
+to
+A
+i
+j
+⋅X for each
+1≤j≤k
+Find the minimum number of moves required to make the array good.
+Note: The value of
+X is fixed for a given move, but can vary between moves.
+Input Format
+The first line of input contains an integer
+T, denoting the number of test cases. The description of
+T test cases follows.
+Each test case contains two lines of input.
+The first line of each test case contains
+N, the size of the array.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each testcase, output in a single line the minimum number of moves required to make the array good.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+4
+1≤A
+i
+≤10
+8
+The sum of
+N across all testcases won't exceed
+10
+4
+.
+Subtasks
+Subtask #1 (100 points): Original constraints
+Sample 1:
+Input
+Output
+5
+3
+15 2 4
+4
+15 14 4 9
+3
+10 3 6
+2
+4 9
+2
+2 8
+2
+2
+3
+0
+1
+Explanation:
+Test case
+1: One possible sequence of moves is:
+Multiply the first element by
+15
+Multiply the second element by
+2
+The array is now
+[225,4,4]=[15
+2
+,2
+2
+,2
+2
+], which is good.
+Test case
+3: One possible sequence of moves is:
+Multiply the first and third elements by
+8
+Multiply the second and third elements by
+3
+Multiply the first element by
+20
+The array is now
+[1600,9,144]=[40
+2
+,3
+2
+,12
+2
+], which is good.
+Test case
+4: The array is already good, since
+[4,9]=[2
+2
+,3
+2
+], so no moves need to be made.

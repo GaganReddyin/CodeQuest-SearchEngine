@@ -1,0 +1,148 @@
+Sasha and Photos
+Problem
+###Read problems statements Hindi ,Bengali , Mandarin chinese , Russian and Vietnamese as well.
+Sasha is a little girl who likes to view and compare photos. In this problem, a photo is a grid of pixels with
+h rows and
+w columns; each cell of this grid is either black or white. We will call the ordered pair of integers
+(h,w) the shape of a photo.
+Let's define the similarity of two photos
+P and
+R with the same shape
+(h,w) as the number of pairs of indices
+i,j (
+1≤i≤h,
+1≤j≤w) such that
+P
+i,j
+=R
+i,j
+.
+Today, Sasha found two photos with possibly different shapes. She cannot directly compute the similarity of these photos; therefore, she decided to upscale both photos to get two photos with identical shapes. Formally, Sasha can choose two positive integers
+a and
+b and transform a photo with shape
+(h,w) into a photo with shape
+(ah,bw), where each pixel from the original photo is replaced by a rectangle of pixels with shape
+(a,b) and the same color as that pixel. Since Sasha does not like huge photos, the upscaled photos should be as small as possible (specifically, if the original photos have the same shapes, they should not be changed at all).
+Since the resulting photos may be very big, Sasha asks you to help her and compute their similarity.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+h
+1
+and
+w
+1
+denoting the shape of the first photo.
+The second line contains a single string with length
+h
+1
+⋅w
+1
+describing the first photo. For each valid
+i,j, the pixel in the
+i-th row and
+j-th column of the photo is white if the
+(i−1)w
+1
++j-th character of this string is '1' or black if this character is '0'.
+The third line contains two space-separated integers
+h
+2
+and
+w
+2
+denoting the shape of the second photo.
+The fourth line contains a single string describing the second photo in the same format as the first one.
+Output
+For each test case, print a single line containing one integer — the similarity of the upscaled photos.
+Constraints
+1≤T≤10
+1≤h
+1
+⋅w
+1
+≤10
+6
+1≤h
+2
+⋅w
+2
+≤10
+6
+each string contains only characters '0' and '1'
+Subtasks
+Subtask #1 (10 points):
+1≤T≤20
+1≤h
+1
+,w
+1
+,h
+2
+,w
+2
+≤30
+Subtask #2 (40 points):
+1≤h
+1
+,w
+1
+,h
+2
+,w
+2
+≤1,000
+Subtask #3 (50 points): original constraints
+Sample 1:
+Input
+Output
+2
+1 2
+01
+2 1
+01
+2 2
+0111
+3 3
+000000001
+2
+13
+Explanation:
+Example case 1: The initial photos are
+01
+and
+0
+1
+and the upscaled photos are
+01
+01
+and
+00
+11
+with similarity 2, since there are two pairs of equal pixels — pixels
+(0,0) and pixels
+(1,1).
+Example case 2: The initial photos are
+0 1
+1 1
+and
+0 0 0
+0 0 0
+0 0 1
+and the upscaled photos are
+000111
+000111
+000111
+111111
+111111
+111111
+and
+000000
+000000
+000000
+000000
+000011
+000011
+with similarity 13.

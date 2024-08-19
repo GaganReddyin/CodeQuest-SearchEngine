@@ -1,0 +1,48 @@
+C. Helga Hufflepuff's Cup
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Harry, Ron and Hermione have figured out that Helga Hufflepuff's cup is a horcrux. Through her encounter with Bellatrix Lestrange, Hermione came to know that the cup is present in Bellatrix's family vault in Gringott's Wizarding Bank.
+The Wizarding bank is in the form of a tree with total n vaults where each vault has some type, denoted by a number between 1 to m. A tree is an undirected connected graph with no cycles.
+The vaults with the highest security are of type k, and all vaults of type k have the highest security.
+There can be at most x vaults of highest security.
+Also, if a vault is of the highest security, its adjacent vaults are guaranteed to not be of the highest security and their type is guaranteed to be less than k.
+Harry wants to consider every possibility so that he can easily find the best path to reach Bellatrix's vault. So, you have to tell him, given the tree structure of Gringotts, the number of possible ways of giving each vault a type such that the above conditions hold.
+Input
+The first line of input contains two space separated integers, n and m — the number of vaults and the number of different vault types possible. (1 ≤ n ≤ 105, 1 ≤ m ≤ 109).
+Each of the next n - 1 lines contain two space separated integers ui and vi (1 ≤ ui, vi ≤ n) representing the i-th edge, which shows there is a path between the two vaults ui and vi. It is guaranteed that the given graph is a tree.
+The last line of input contains two integers k and x (1 ≤ k ≤ m, 1 ≤ x ≤ 10), the type of the highest security vault and the maximum possible number of vaults of highest security.
+Output
+Output a single integer, the number of ways of giving each vault a type following the conditions modulo 109 + 7.
+Examples
+input
+Copy
+4 2
+1 2
+2 3
+1 4
+1 2
+output
+Copy
+1
+input
+Copy
+3 3
+1 2
+1 3
+2 1
+output
+Copy
+13
+input
+Copy
+3 1
+1 2
+1 3
+1 1
+output
+Copy
+0
+Note
+In test case 1, we cannot have any vault of the highest security as its type is 1 implying that its adjacent vaults would have to have a vault type less than 1, which is not allowed. Thus, there is only one possible combination, in which all the vaults have type 2.

@@ -1,0 +1,124 @@
+Greedy Students
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Rafid is teaching his students plane geometry. Today they are talking about convex polygons. A convex polygon is a simple non-degenerate polygon such that each of its internal angles is strictly smaller than
+180
+∘
+.
+Rafid drew
+N points (numbered
+1 through
+N) on a blackboard (a two-dimensional plane) and told each student to choose some of the points and connect them to obtain a convex polygon. For each valid
+i, the coordinates of the
+i-th point are
+(X
+i
+,Y
+i
+).
+There are
+K students (numbered
+1 through
+K). To prevent the students from choosing the same polygon over and over, Rafid told them that they have to choose polygons one by one in the order from student
+1 to student
+K and each student has to choose a set of points which was not chosen by any earlier student. That means they have to choose
+K different sets of points, resulting in
+K different polygons. As a result, some students may end up unable to choose any polygon.
+To encourage the students, Rafid announced that each student will receive a number of candies proportional to the area of this student's polygon. The students are very greedy, so the first student will choose the polygon with the largest area, the second student will choose the polygon with the largest area which does not use the same set of points as the first student's polygon, and so on.
+For each student, help Rafid find the area of the polygon chosen by this student or determine that this student cannot choose a polygon anymore. Note that while there may be many ways in which the students could choose their polygons, their areas are uniquely determined.
+Input
+The first line of the input contains two space-separated integers
+N and
+K.
+N lines follow. For each valid
+i, the
+i-th of these lines contains two space-separated integers
+X
+i
+and
+Y
+i
+.
+Output
+Print a single line containing
+K space-separated integers
+A
+1
+,A
+2
+,…,A
+K
+. For each valid
+i,
+A
+i
+should be twice the area of a polygon chosen by the
+i-th student, or
+−1 if all possible polygons have already been chosen by students before the
+i-th student.
+Constraints
+3≤N≤120
+1≤K≤10
+6
+∣X
+i
+∣,∣Y
+i
+∣≤10
+6
+for each valid
+i
+the points
+(X
+1
+,Y
+1
+),(X
+2
+,Y
+2
+),…,(X
+N
+,Y
+N
+) are pairwise distinct
+Subtasks
+Subtask #1 (5 points):
+K=2
+it is possible to form at least
+K convex polygons
+Subtask #2 (15 points):
+K≤1,000
+Subtask #3 (80 points): original constraints
+Sample 1:
+Input
+Output
+5 15
+0 0
+10 0
+10 10
+0 10
+5 5
+200 100 100 100 100 50 50 50 50 -1 -1 -1 -1 -1 -1
+Explanation:
+The following figure describes the points and some polygons.
+The first student chooses the largest polygon
+ABCD with area
+100.
+The next four students choose the triangles
+ABC,
+BCD,
+CDA and
+DAB, each with area
+50. Note that for example, the polygon
+AECB is not convex because it has one internal angle equal to
+180
+∘
+.
+The next four students choose the triangles
+AEB,
+BEC,
+CED and
+DEA, each with area
+25.
+There are no more polygons the students can choose, so the remaining six students are left without a polygon.

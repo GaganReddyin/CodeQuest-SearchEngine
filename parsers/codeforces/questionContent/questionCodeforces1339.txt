@@ -1,0 +1,104 @@
+D. Artistic Partition
+time limit per test3 seconds
+memory limit per test1024 megabytes
+inputstandard input
+outputstandard output
+For two positive integers
+l
+and
+r
+(
+l≤r
+) let
+c(l,r)
+denote the number of integer pairs
+(i,j)
+such that
+l≤i≤j≤r
+and
+gcd(i,j)≥l
+. Here,
+gcd(i,j)
+is the greatest common divisor (GCD) of integers
+i
+and
+j
+.
+YouKn0wWho has two integers
+n
+and
+k
+where
+1≤k≤n
+. Let
+f(n,k)
+denote the minimum of
+∑
+i=1
+k
+c(
+x
+i
++1,
+x
+i+1
+)
+over all integer sequences
+0=
+x
+1
+<
+x
+2
+<…<
+x
+k
+<
+x
+k+1
+=n
+.
+Help YouKn0wWho find
+f(n,k)
+.
+Input
+The first line contains a single integer
+t
+(
+1≤t≤3⋅
+10
+5
+) — the number of test cases.
+The first and only line of each test case contains two integers
+n
+and
+k
+(
+1≤k≤n≤
+10
+5
+).
+Output
+For each test case, print a single integer —
+f(n,k)
+.
+Example
+input
+Copy
+4
+6 2
+4 4
+3 1
+10 3
+output
+Copy
+8
+4
+6
+11
+Note
+In the first test case, YouKn0wWho can select the sequence
+[0,2,6]
+. So
+f(6,2)=c(1,2)+c(3,6)=3+5=8
+which is the minimum possible.

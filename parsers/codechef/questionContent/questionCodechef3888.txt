@@ -1,0 +1,142 @@
+Max Min Circle Difference
+Problem
+You are given
+N integers
+A
+1
+,A
+2
+,…,A
+N
+. Find any permutation
+B
+1
+,B
+2
+,…,B
+N
+of these integers, for which the value of
+min(∣B
+1
+−B
+2
+∣,∣B
+2
+−B
+3
+∣,…,∣B
+N
+−B
+1
+∣) is maximized.
+Input Format
+The first line of the input contains a single integer
+T, the number of test cases. The description of the test cases follows.
+The first line of each test case contains a single integer
+N — the number of integers.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, output
+N integers
+B
+1
+,B
+2
+,…,B
+N
+— the permutation of
+A
+1
+,A
+2
+,…,A
+N
+for which the value of
+min(∣B
+1
+−B
+2
+∣,∣B
+2
+−B
+3
+∣,…,∣B
+N
+−B
+1
+∣) is maximized.
+If there are multiple such permutations, you can output any of them.
+Constraints
+1≤T≤10
+4
+3≤N≤10
+5
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases doesn't exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+4
+5
+0 10 0 10 0
+4
+1 5 10 14
+4
+1 6 10 15
+5
+1 2 3 4 5
+0 0 10 0 10 
+1 10 5 14 
+6 15 10 1 
+1 3 5 2 4
+Explanation:
+Test case
+1: For
+B=[0,0,10,0,10], the value of
+min(∣B
+1
+−B
+2
+∣,∣B
+2
+−B
+3
+∣,…,∣B
+N
+−B
+1
+∣) is
+0. It can be shown that this is the maximum possible value. Other permutations also achieve this value, for example
+[0,10,0,10,0], and any such permutation is a valid output.
+Test case
+2: For
+B=[1,10,5,14], the value of
+min(∣B
+1
+−B
+2
+∣,∣B
+2
+−B
+3
+∣,…,∣B
+N
+−B
+1
+∣) is
+5. It can be shown that this is the maximum possible.

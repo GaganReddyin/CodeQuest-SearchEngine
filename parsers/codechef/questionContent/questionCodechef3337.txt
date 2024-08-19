@@ -1,0 +1,128 @@
+Permutation Sorting Game
+Problem
+Read problem statements in Mandarin, Bengali, and Russian as well.
+Alice and Bob have a permutation of size
+N, so they started playing a game on it. They both have their own copies of an initial permutation on which they perform moves in turns. Note that although Bob's and Alice's permutations are initially similar in values, they are the not the same permutation; any move Alice makes only changes her permutation and not Bob's, and vice versa.
+Alice goes first. In one move, they can do the following on their respective permutations:
+Choose two indices
+i and
+j and swap
+P
+i
+and
+P
+j
+.
+The player who sorts their permutation first, wins the game.
+Both players play optimally. But unfortunately, on playing a lot of games, Alice won all of those. Bob realized that something is unfair and told Alice to play with some handicap.
+So they mutually agreed that, Alice is given an extra potential array
+V of size
+N. Now Alice can do the following move only:
+Choose two indices
+i and
+j such that,
+0<V
+i
+AND
+0<V
+j
+.
+If no such indices exist, skip her turn.
+Else swap
+P
+i
+and
+P
+j
+and then decrement
+V
+i
+and
+V
+j
+by
+1.
+Bob plays as usual without any potential array. Alice goes first.
+Report who wins if both play optimally, and find the strategy for the winner. You also need to determine the shortest sequence of moves to victory.
+Input Format
+The first line contains
+T - the number of test cases. Then the test cases follow.
+The first line of each test case contains a single integer
+N - the size of the permutation.
+The next line contains
+N space separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+The next line contains
+N space separated integers
+V
+1
+,V
+2
+,…,V
+N
+.
+Output Format
+For each test case:
+Output on the first line the winner of the match, i.e. Alice or Bob. You may print each character of the string in uppercase or lowercase (for example, the strings Alice, ALICE, alIcE and aLiCe will all be treated as identical).
+Output on the next line an integer
+M - the minimum number of moves taken by the winner.
+Then output
+M lines, where the
+i-th line contains two integers denoting the
+i-th move by the winner.
+Constraints
+1≤T≤1000
+1≤N≤10
+5
+1≤P
+i
+≤N
+1≤V
+i
+≤10
+9
+P
+1
+,P
+2
+,…,P
+N
+form a permutation of values from
+1 to
+N
+∑N over all test cases is at most
+10
+5
+Sample 1:
+Input
+Output
+2
+10
+1 8 10 4 2 5 7 9 3 6
+2 1 2 1 2 1 1 1 1 2
+10
+6 2 9 1 7 8 10 5 3 4
+2 1 1 2 2 2 2 2 1 2
+Bob
+6
+2 8
+2 9
+2 3
+2 10
+2 6
+2 5
+ALiCE
+7
+3 9
+1 4
+4 10
+10 7
+7 5
+5 8
+8 6

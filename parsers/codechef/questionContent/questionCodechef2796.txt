@@ -1,0 +1,77 @@
+XOR & Sum
+Problem
+Given two numbers
+l and
+r, count the number of non-negative integers
+x such that there exists a pair of integers
+(a,b) that satisfy the following requirements:
+x=a⊕b=a+b
+l≤a≤b≤r.
+Here
+⊕ refers to the bitwise operation of XOR.
+Note: You should output the number of
+x. Not the number of pairs
+(a,b).
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases. The test cases follow.
+Each test case consists of a single line of input consisting of two numbers
+l and
+r.
+Output Format
+For each test case, output the number of non-negative integers
+x that satisfy the requirements.
+Constraints
+1≤T≤10
+5
+0≤l≤r≤10
+18
+Subtasks
+Subtask 1 (5 points):
+1≤T≤10,
+0≤l,r≤100.
+Subtask 2 (7 points):
+1≤T≤10
+5
+,
+l=0,
+r=2
+k
+−1≤10
+18
+Subtask 3 (13 points):
+1≤T≤10
+5
+,
+l=0,r≤10
+18
+Subtask 4 (20 points):
+1≤T≤10,
+0≤l,r≤10
+5
+.
+Subtask 5 (55 points): No further constraints.
+Sample 1:
+Input
+Output
+2
+2 2
+1 4
+0
+4
+Explanation:
+In the first case, the only possibility is
+a=2 and
+b=2. But
+a+b=4 and
+a⊕b=0. Hence, there is no
+x which satisfies the requirements, and so the answer is
+0.
+In the second case, we can write
+3=1+2=1⊕2
+5=1+4=1⊕4
+6=2+4=2⊕4
+7=3+4=3⊕4
+It can be shown that these are the non-negative integers which satisfy the requirements. Hence the total number of
+x which satisfies the requirements is
+4.

@@ -1,0 +1,18 @@
+D. Is it rated - 3
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Input
+The first line contains a string
+S
+.
+The second line contains an integer
+X
+.
+Constraints
+|S|=3
+0≤X≤
+10
+9
+The input is guaranteed to be valid.

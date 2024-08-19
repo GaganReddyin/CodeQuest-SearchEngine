@@ -1,0 +1,95 @@
+Doraemon
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Doraemon has a matrix with
+N rows (numbered
+1 through
+N) and
+M columns (numbered
+1 through
+M). Let's denote the element in row
+i and column
+j by
+A
+i,j
+. Next, let's define a sub-row of a row
+r as a sequence
+A
+r,x
+,A
+r,x+1
+,…,A
+r,y
+for some
+x and
+y (
+1≤x≤y≤M) and a sub-column of a column
+c by
+A
+x,c
+,A
+x+1,c
+,…,A
+y,c
+for some
+x and
+y (
+1≤x≤y≤N).
+You need to find the number of pairs (sub-row of some row, sub-column of some column) with the following properties:
+Both sequences (the sub-row and the sub-column) have the same length.
+This length is odd.
+The central elements of both sequences are the same (they correspond to the same element of the matrix).
+Both sequences are palindromes.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+M.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains
+M space-separated integers
+A
+i,1
+,A
+i,2
+,…,A
+i,M
+.
+Output
+For each test case, print a single line containing one integer ― the number of valid pairs.
+Constraints
+1≤T≤100
+1≤N,M
+N⋅M≤10
+5
+1≤A
+i,j
+≤10
+6
+for each valid
+i,j
+the sum of
+N⋅M over all test cases does not exceed
+3⋅10
+5
+Subtasks
+Subtask #1 (30 points):
+T≤10
+N⋅M≤10
+3
+Subtask #2 (70 points): original constraints
+Sample 1:
+Input
+Output
+1
+3 3
+2 1 2
+1 1 1
+2 1 2
+10
+Explanation:
+Example case 1: Each element forms a valid pair (where the sub-row and sub-column contain only this element) and the middle row and middle column also form one valid pair.

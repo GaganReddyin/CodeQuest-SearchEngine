@@ -1,0 +1,178 @@
+Square Root of LCA Convolution
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a rooted tree with
+N vertices (numbered
+1 through
+N) and a prime number
+P. Vertex
+1 is the root of the tree and for each
+v (
+2≤v≤N), the parent of vertex
+v is
+p
+v
+(
+p
+v
+<v).
+A vertex
+s is an ancestor of another vertex
+f if
+s lies on the path between
+1 and
+f (in particular,
+f is its own ancestor). For two vertices
+u and
+v, let's define
+LCA(u,v) as the vertex
+s with the largest number which is an ancestor of both
+u and
+v. Similarly, for two vertices
+v and
+s, let
+L
+v,s
+be the set of all vertices
+u such that
+s=LCA(u,v).
+Let's define a set
+A
+P
+containing all sequences (indexed from
+1) with length
+N whose elements are integers between
+0 and
+P−1 inclusive. For two sequences
+a,b∈A
+P
+, let's define an operation LCA-convolution as a sequence
+c=a∗b such that for each valid
+x,
+c
+x
+=(
+i=1
+∑
+N
+j∈L
+i,x
+∑
+a
+i
+b
+j
+)modP.
+You are also given some sequence
+c∈A
+P
+. You have two tasks:
+Find the number of sequences
+a∈A
+P
+such that
+c=a∗a. Since this number can be large, compute it modulo
+998,244,353.
+Find a sequence
+a∈A
+P
+such that
+c=a∗a (if it exists).
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+P.
+The second line contains
+N−1 space-separated integers
+p
+2
+,p
+3
+,…,p
+N
+.
+The third line contains
+N space-separated integers
+c
+1
+,c
+2
+,…,c
+N
+.
+Output
+For each test case, print two lines:
+The first of these lines should contain a single integer ― the number of sequences from the first task modulo
+998,244,353.
+If there is no sequence
+a∈A
+P
+such that
+c=a∗a, the second line should contain the integer
+−1.
+Otherwise, the second line should contain
+N space-separated integers
+a
+1
+,a
+2
+,…,a
+N
+, where
+a∈A
+P
+and
+c=a∗a should hold. If there is more than one such sequence, you may find any one of them.
+Constraints
+1≤T≤10
+5
+2≤N≤5⋅10
+5
+3≤P≤10
+9
++9
+P is a prime
+1≤p
+i
+<i for each valid
+i
+0≤c
+i
+<P for each valid
+i
+the sum of
+N over all test cases does not exceed
+5⋅10
+5
+Subtasks
+Subtask 1 (10 points, 1 second time limit):
+T≤100
+N≤6
+P=3
+Subtask 2 (30 points, 1 second time limit):
+T≤100
+the sum of
+N over all test cases does not exceed
+1,000
+Subtask 3 (60 points, 5 seconds time limit): original constraints
+Example Input
+3
+6 3
+1 1 2 3 2
+1 2 0 1 1 1
+5 3
+1 1 1 3
+2 1 0 2 1
+9 101
+1 1 2 3 2 4 3 5
+18 77 44 82 4 20 19 43 97
+Example Output
+32
+2 2 0 1 2 2
+0
+-1
+64
+3 70 5 76 20 11 25 12 81

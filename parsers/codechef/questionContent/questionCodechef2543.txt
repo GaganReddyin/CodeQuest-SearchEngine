@@ -1,0 +1,108 @@
+Students-Far From Hostel
+Problem
+It's late at night, and the college students are required to return to their college hostels from the hostel garden.
+The hostel garden is a rectangular field of dimensions
+N×M, with two hostels — one across the left edge and one across the top edge of the field.
+Students are currently in the cells of the field. You are given two matrices of size
+N×M,
+A and
+B.
+A
+i,j
+denotes the number of students currently in the
+i
+th
+row and the
+j
+th
+column of the field who want to reach the hostel along the left edge of the field, and similarly
+B
+i,j
+denotes the number of students currently in the
+i
+th
+row and the
+j
+th
+column of the field who want to reach the hostel along the top edge of the field.
+Students will always move toward their respective hostels as a straight path from their positions (so the students represented by
+A will always move straight left, and those represented by
+B will always move straight up), and are allowed to enter the hostel from any cell adjacent to the edge of the field (i.e., there are no specific entry points for the hostels).
+There is only one restriction: there should not exist two students such that one of them reaches the left-edge hostel, the other one reaches the top-edge hostel, and the paths followed by these two students intersect.
+For example, it is not allowed for a student in cell
+(1,5) to go left and a student in cell
+(28,3) to go up, because their paths would intersect at cell
+(1,3).
+Under this restriction, what is the maximum number of students who can reach their hostels?
+Input Format
+The first line of input will contain a single integer
+T, the number of test cases. Then the testcases follow.
+Each test case consists of multiple lines of input.
+The first line of each test case contains two space-separated integers
+N,M.
+The next
+N lines describe the matrix
+A. The
+i-th of these
+N lines contains
+M space-separated integers
+A
+i,1
+,A
+i,2
+,…,A
+i,M
+The next
+N lines describe the matrix
+B. The
+i-th of these
+N lines contains
+M space-separated integers
+B
+i,1
+,B
+i,2
+,…,B
+i,M
+Output Format
+For each test case, output in a single line the maximum number of students who can reach their hostels.
+Constraints
+1≤T≤10
+6
+1≤N,M≤10
+6
+0≤A
+i,j
+<10
+9
+0≤B
+i,j
+<10
+9
+The sum of
+N×M over all test cases does not exceed
+10
+6
+Subtasks
+Sample 1:
+Input
+Output
+2
+1 3
+6 7 0
+9 1 0
+2 2
+89 0
+67 99
+12 44
+23 54
+13
+299
+Explanation:
+Test case
+1: It is optimal to move all students of the left-edge hostel, hence the answer is
+6+7+0=13.
+Test case
+2: It is optimal to move the students of (row, column)=
+(1,2) to the top-edge hostel, and students from the remaining cells to move to the left-edge hostel, therefore the answer is
+44+89+67+99=299.

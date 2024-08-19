@@ -1,0 +1,122 @@
+Black and White
+Problem
+Arun has a rooted tree of
+N vertices rooted at vertex
+1. Each vertex can either be coloured black or white.
+Initially, the vertices are coloured
+A
+1
+,A
+2
+,…A
+N
+, where
+A
+i
+∈{0,1} denotes the colour of the
+i-th vertex (here
+0 represents white and
+1 represents black). He wants to perform some operations to change the colouring of the vertices to
+B
+1
+,B
+2
+,…B
+N
+respectively.
+Arun can perform the following operation any number of times. In one operation, he can choose any subtree and either paint all its vertices white or all its vertices black.
+Help Arun find the minimum number of operations required to change the colouring of the vertices to
+B
+1
+,B
+2
+,…B
+N
+respectively.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer
+N — the size of the tree.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the initial colouring of the vertices of the tree.
+The third line of each test case contains
+N space-separated integers
+B
+1
+,B
+2
+,…,B
+N
+denoting the final desired colouring of the vertices of the tree.
+The next
+N−1 lines contain two space-separated integers
+u and
+v — denoting an undirected edge between nodes
+u and
+v.
+It is guaranteed that the edges given in the input form a tree.
+Output Format
+For each testcase, output the minimum number of operations required to obtain the desired colouring.
+Constraints
+1≤T≤2⋅10
+4
+1≤N≤3⋅10
+5
+A
+i
+∈{0,1}
+B
+i
+∈{0,1}
+1≤u,v≤N and
+u
+
+=v
+It is guaranteed that the edges given in the input form a tree.
+The sum of
+N over all test cases does not exceed
+3⋅10
+5
+Sample 1:
+Input
+Output
+2
+4
+1 1 0 0
+1 1 1 0
+1 2
+1 3
+1 4
+5
+1 1 1 0 0
+1 0 1 1 1
+5 3
+3 1
+2 1
+4 3
+1
+2
+Explanation:
+Test case
+1: Arun can choose the subtree rooted at
+3 and paint it black in one operation to achieve the desired colouring.
+![sample1_part1](https://s3.amazonaws.com/codechef_shared/download/Images/START41/sample1_pt1.png =200x200)
+→ ![sample1_part2](https://s3.amazonaws.com/codechef_shared/download/Images/START41/sample1_pt2.png =200x200)
+Test case
+2: Consider the following sequence of operations.
+![sample2_part1](https://s3.amazonaws.com/codechef_shared/download/Images/START41/sample2_pt1.png =250x250)
+In the first operation, choose the subtree rooted at
+3 and paint it black.
+![sample2_part2](https://s3.amazonaws.com/codechef_shared/download/Images/START41/sample2_pt2.png =250x250)
+In the second operation, choose the subtree rooted at
+2 and paint it white.
+![sample2_part3](https://s3.amazonaws.com/codechef_shared/download/Images/START41/sample2_pt3.png =250x250)
+It can be shown that the desired colouring cannot be obtained in fewer operations.

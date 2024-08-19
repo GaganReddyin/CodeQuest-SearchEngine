@@ -1,0 +1,57 @@
+Moonwalk
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Heinz has recently learnt to moonwalk! Now he wants to practice it in the central park.
+We know that Danville's central park consists of
+N junctions (numbered
+1 through
+N) and that
+M pairs of these junctions are connected by one-way roads (numbered
+1 through
+M). First, Heinz picks a junction he starts from. Then, he alternately performs the following actions, starting with walking:
+Walk his way out of his current junction to another junction by a one-way road leading to that junction from his current junction.
+Moonwalk his way out of his current junction to another junction by a one-way road leading from that junction to his current junction. When Heinz does this, he is actually breaking the law (since he is using the one-way road in the wrong direction), but since he is moonwalking, no one will notice.
+Heinz plans to end up in the junction where he started after performing an even number of actions. However, he does not want to use any of the one-way roads more than once in any direction (using a road for both walking and moonwalking is not allowed either). It's worth noting that Heinz must walk at least one one-way road. Can he achieve this goal? If he can, find a sequence of roads he should use.
+Input
+The first line of input contains an integer
+T, the number of cases to process.
+The first line of each case contains two space-separated integers
+N and
+M.
+The next
+M lines of each case each contains two space-separated integers
+v and
+u denoting a one-way road from junction
+v to junction
+u.
+Output
+For each case, if Heinz cannot achieve his goal, print a single line containing the string ":(".
+Otherwise, print three lines.
+The first of these lines should contain the string ":)".
+The second line should contain an even integer
+K denoting the number of roads Heinz should use.
+The third line should contain
+K space-separated integers denoting the numbers of the roads Heinz should use, in the correct order.
+If there are multiple solutions, you may output any one of them.
+Constraints
+1≤T≤5
+1≤N,M≤2⋅10
+5
+1≤v,u≤N
+Example Input
+2
+3 3
+1 2
+3 2
+3 1
+4 5
+1 2
+3 2
+1 4
+2 3
+3 4
+Example Output
+:(
+:)
+4
+3 5 2 1 

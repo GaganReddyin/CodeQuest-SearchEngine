@@ -1,0 +1,277 @@
+G. Growing flowers
+time limit per test4 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Sarah has always been a lover of nature, and a couple of years ago she saved up enough money to travel the world and explore all the things built by nature over its lifetime on earth. During this time she visited some truly special places which were left untouched for centuries, from watching icebergs in freezing weather to scuba-diving in oceans and admiring the sea life, residing unseen. These experiences were enhanced with breathtaking views built by mountains over time and left there for visitors to see for years on end. Over time, all these expeditions took a toll on Sarah and culminated in her decision to settle down in the suburbs and live a quiet life.
+However, as Sarah's love for nature never faded, she started growing flowers in her garden in an attempt to stay connected with nature. At the beginning she planted only blue orchids, but over time she started using different flower types to add variety to her collection of flowers. This collection of flowers can be represented as an array of
+N
+flowers and the
+i
+-th of them has a type associated with it, denoted as
+A
+i
+. Each resident, passing by her collection and limited by the width of his view, can only see
+K
+contiguous flowers at each moment in time. To see the whole collection, the resident will look at the first
+K
+contiguous flowers
+A
+1
+,
+A
+2
+,...,
+A
+K
+, then shift his view by one flower and look at the next section of K contiguous flowers
+A
+2
+,
+A
+3
+,...,
+A
+K+1
+and so on until they scan the whole collection, ending with section
+A
+N−K+1
+,...,
+A
+N−1
+,
+A
+N
+.
+Each resident determines the beautiness of a section of
+K
+flowers as the number of distinct flower types in that section. Furthermore, the beautiness of the whole collection is calculated by summing the beautiness values of each contiguous section. Formally, beautiness
+B
+i
+of a section starting at the
+i
+-th position is calculated as
+B
+i
+=distinct(
+A
+i
+,
+A
+i+1
+,...,
+A
+i+K−1
+)
+, and beautiness of the collection
+B
+is calculated as
+B=
+B
+1
++
+B
+2
++...+
+B
+N−K+1
+.
+In addition, as Sarah wants to keep her collection of flowers have a fresh feel, she can also pick two points
+L
+and
+R
+, dispose flowers between those two points and plant new flowers, all of them being the same type.
+You will be given
+Q
+queries and each of those queries will be of the following two types:
+You will be given three integers
+L,R,X
+describing that Sarah has planted flowers of type
+X
+between positions
+L
+and
+R
+inclusive. Formally collection is changed such that
+A[i]=X
+for all
+i
+in range
+[L..R]
+.
+You will be given integer
+K
+, width of the resident's view and you have to determine the beautiness value
+B
+resident has associated with the collection
+For each query of second type print the result – beautiness
+B
+of the collection.
+Input
+First line contains two integers
+N
+and
+Q(1≤N,Q≤
+10
+5
+)
+— number of flowers and the number of queries, respectively.
+The second line contains
+N
+integers
+A
+1
+,
+A
+2
+,...,
+A
+N
+(1≤
+A
+i
+≤
+10
+9
+)
+— where
+A
+i
+represents type of the
+i
+-th flower.
+Each of the next
+Q
+lines describe queries and start with integer
+T∈{1,2}
+.
+If
+T=1
+, there will be three more integers in the line
+L,R,X(1≤L,R≤N;1≤X≤
+10
+9
+)
+—
+L
+and
+R
+describing boundaries and
+X
+describing the flower type
+If
+T=2
+, there will be one more integer in the line
+K(1≤K≤N)
+— resident's width of view
+Output
+For each query of the second type print the beautiness
+B
+of the collection.
+Example
+input
+Copy
+5 5
+1 2 3 4 5
+2 3
+1 1 2 5
+2 4
+1 2 4 5
+2 2
+output
+Copy
+9
+6
+4
+Note
+Let's look at the example.
+Initially the collection is
+[1,2,3,4,5]
+. In the first query
+K=3
+, we consider sections of three flowers with the first being
+[1,2,3]
+. Since beautiness of the section is the number of distinct flower types in that section,
+B
+1
+=3
+. Second section is
+[2,3,4]
+and
+B
+2
+=3
+. Third section is
+[3,4,5]
+and
+B
+3
+=3
+, since the flower types are all distinct. The beautiness value resident has associated with the collection is
+B=
+B
+1
++
+B
+2
++
+B
+3
+=3+3+3=9
+.
+After the second query, the collection becomes
+[5,5,3,4,5]
+.
+For the third query
+K=4
+, so we consider sections of four flowers with the first being
+[5,5,3,4]
+. There are three distinct flower types
+[5,3,4]
+in this section, so
+B
+1
+=3
+. Second section
+[5,3,4,5]
+also has
+3
+distinct flower types, so
+B
+2
+=3
+. The beautiness value resident has associated with the collection is
+B=
+B
+1
++
+B
+2
+=3+3=6
+After the fourth query, the collection becomes
+[5,5,5,5,5]
+.
+For the fifth query
+K=2
+and in this case all the four sections are same with each of them being
+[5,5]
+. Beautiness of
+[5,5]
+is
+1
+since there is only one distinct element in this section
+[5]
+. Beautiness of the whole collection is
+B=
+B
+1
++
+B
+2
++
+B
+3
++
+B
+4
+=1+1+1+1=4

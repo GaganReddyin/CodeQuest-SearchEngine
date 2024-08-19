@@ -1,0 +1,1 @@
+E1. Median on Segments (Permutations Edition)

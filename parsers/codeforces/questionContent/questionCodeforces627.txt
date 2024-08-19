@@ -1,0 +1,178 @@
+H. Mainak and the Bleeding Polygon
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Mainak has a convex polygon
+P
+with
+n
+vertices labelled as
+A
+1
+,
+A
+2
+,…,
+A
+n
+in a counter-clockwise fashion. The coordinates of the
+i
+-th point
+A
+i
+are given by
+(
+x
+i
+,
+y
+i
+)
+, where
+x
+i
+and
+y
+i
+are both integers.
+Further, it is known that the interior angle at
+A
+i
+is either a right angle or a proper obtuse angle. Formally it is known that:
+90
+∘
+≤∠
+A
+i−1
+A
+i
+A
+i+1
+<
+180
+∘
+,
+∀i∈{1,2,…,n}
+where we conventionally consider
+A
+0
+=
+A
+n
+and
+A
+n+1
+=
+A
+1
+.
+Mainak's friend insisted that all points
+Q
+such that there exists a chord of the polygon
+P
+passing through
+Q
+with length not exceeding
+1
+, must be coloured
+red
+.
+Mainak wants you to find the area of the coloured region formed by the
+red
+points.
+Formally, determine the area of the region
+S={Q∈P
+|
+Q is coloured red}
+.
+Recall that a chord of a polygon is a line segment between two points lying on the boundary (i.e. vertices or points on edges) of the polygon.
+Input
+The first line contains an integer
+n
+(
+4≤n≤5000
+) — the number of vertices of a polygon
+P
+.
+The
+i
+-th line of the next
+n
+lines contain two integers
+x
+i
+and
+y
+i
+(
+−
+10
+9
+≤
+x
+i
+,
+y
+i
+≤
+10
+9
+) — the coordinates of
+A
+i
+.
+Additional constraint on the input: The vertices form a convex polygon and are listed in counter-clockwise order. It is also guaranteed that all interior angles are in the range
+[
+90
+∘
+;
+180
+∘
+)
+.
+Output
+Print the area of the region coloured in
+red
+.
+Your answer is considered correct if its absolute or relative error does not exceed
+10
+−4
+.
+Formally, let your answer be
+a
+, and the jury's answer be
+b
+. Your answer is accepted if and only if
+|a−b|
+max(1,|b|)
+≤
+10
+−4
+.
+Examples
+input
+Copy
+4
+4 5
+4 1
+7 1
+7 5
+output
+Copy
+1.17809724510
+input
+Copy
+5
+-3 3
+3 1
+4 2
+-1 9
+-2 9
+output
+Copy
+1.07823651333
+Note
+In the first example, the polygon
+P
+can be visualised on the Cartesian Plane as:

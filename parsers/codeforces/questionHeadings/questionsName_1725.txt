@@ -1,0 +1,1 @@
+B2. Palindrome Game (hard version)

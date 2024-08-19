@@ -1,0 +1,52 @@
+Chef And Salary Pay
+Problem
+Given the schedule of Chef for
+30 days (A binary string of length
+30 where '0' denotes that Chef was on leave and '1' denotes Chef was working on that day). Chef gets
+X− Rs for every day he worked. As working continuously for a long time is hectic so Company introduced the following policy to give a bonus to its employees.
+The company will check the longest streak for which an employee has worked and will award
+Y− Rs for every day of that streak as a bonus. Calculate the salary received by Chef (including the bonus).
+Note: Rs represents the currency of Chefland, and if there are two or more longest streaks of the same length, only one is counted for the bonus.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The first line of each test case contains
+X and
+Y.
+Second line contains a binary string (i.e it contains only ‘0’ / ‘1’), where '0' denotes that Chef was on leave and '1' denotes Chef was working on that day.
+Output Format
+For each testcase, output in a single line answer to the problem. i.e The salary received by Chef (including the bonus).
+Constraints
+1≤T≤10
+4
+1≤X≤999
+1≤Y≤999
+∣S∣=30
+Sample 1:
+Input
+Output
+3
+6 3
+111100110101100000101100011111
+8 2
+111010111101001010100100111101
+5 6
+011101010100101000001101000010
+117
+152
+78
+Explanation:
+Testcase
+1: Chef's actual pay comes out
+17⋅6=102− Rs and the length of longest continuous working streak comes out
+5 (the last
+5 working days), so bonus reward becomes
+5⋅3=15− Rs. Hence Chef's salary comes out to be
+102+15=117− Rs.
+Testcase
+2: Chef's actual pay comes out
+144− Rs and the length of longest continuous working streak comes out
+4 (here there are multiple occurrences of the longest working streak, so company selects any one of them), so bonus reward becomes
+8− Rs. Hence Chef's salary comes out to be
+152− Rs.

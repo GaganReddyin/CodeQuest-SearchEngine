@@ -1,0 +1,112 @@
+Xor Travellers
+Problem
+There are
+K travellers who want to travel through a country one after the other. The country is in the form of a
+2-d grid and is divided into
+N rows and
+M columns, such that each cell of the grid can be considered to be a city.
+Each city is initially marked with either 0 or 1. Let city
+(i,j) (the city at the intersection of the
+i
+th
+row and
+j
+th
+column) be marked with number
+C
+ij
+. If a traveller is in the city
+(i,j), then
+If
+C
+ij
+=0 and
+j<M, then the traveller moves to city
+(i,j+1) and at the same time
+C
+ij
+is changed to
+1.
+If
+C
+ij
+=1 and
+i<N, then the traveller moves to city
+(i+1,j) and at the same time
+C
+ij
+is changed to
+0.
+If the traveller cannot make a move from a city
+(i,j), then this city is considered to be the destination of that traveller. Note that the marking (
+C
+ij
+) of the destination cell is unchanged — please see the third sample test for an explained example.
+Each traveller starts their journey from city
+(1,1), and all travellers (apart from the first) start their journey only once the previous one has reached their destination. Find the destination city of the
+K-th traveller.
+Input Format
+The first line of input contains a single integer
+T, denoting the number of testcases. The description of
+T test cases follows.
+The first line of each testcase contains three space-separated integers
+N,M, and
+K — the number of rows, number of columns, and number of travellers, respectively.
+The following
+N lines each contain a binary string of length
+M, such that
+j-th character of the
+i-th string denotes the initial marking of city
+(i,j),
+C
+ij
+.
+Output Format
+For each testcase, output in a single line two space-separated integers
+x and
+y, where city
+(x,y) is the destination city of the
+K-th traveller.
+Constraints
+1≤T≤1000
+2≤N,M≤10
+5
+N⋅M≤4⋅10
+5
+1≤K≤10
+9
+Sum of
+N⋅M over all tescases does not exceed
+4⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2 2 1
+10
+01
+2 2 1
+10
+10
+2 2 2
+11
+10
+2 2
+2 1
+2 2
+Explanation:
+Test case
+1: The first (and only) traveller moves along the following path:
+(1,1)→(2,1)→(2,2).
+Test case
+2: The traveller moves along the following path:
+(1,1)→(2,1). Note that no move can be made from
+(2,1) by the first traveller.
+Test case
+3: The first traveller moves along the path
+(1,1)→(2,1). After this, the state of city
+(1,1) changes to
+0 while the states of the other cities remain unchanged. The second traveller then moves along the path
+(1,1)→(1,2)→(2,2).

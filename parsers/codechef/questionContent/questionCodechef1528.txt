@@ -1,0 +1,101 @@
+Adjacent Xors
+Problem
+JJ has an array
+A of length
+N and an integer
+X. JJ can perform the following operation at most once:
+Select a subsequence of
+A and add
+X to all the elements of that subsequence.
+For example, if
+A=[2,1,6,3,5] and
+X=7, we can select the subsequence
+[2,3,5] and add
+X to all the elements. Now the array
+A becomes
+[2+7,1,6,3+7,5+7]=[9,1,6,10,12].
+JJ wants to maximize the value of
+i=2
+∑
+N
+(A
+i−1
+⊕A
+i
+). Can you help him to do so?
+Here,
+⊕ denotes the bitwise XOR operation.
+& & kya &
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two space-separated integers
+N and
+X — the size of the array
+A and the parameter
+X mentioned in the statement.
+The second line of each test case contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+denoting the array
+A.
+Output Format
+For each test case, output the maximum value of
+i=2
+∑
+n
+(A
+i−1
+⊕A
+i
+) which can be obtained after applying the given operation at most once.
+Constraints
+1≤T≤10
+5
+1≤N≤10
+5
+1≤X≤10
+9
+1≤A
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+2 1
+1 2
+4 1
+2 2 3 3
+5 2
+5 3 6 2 8
+3
+15
+43
+Explanation:
+Test case
+1: It is optimal to not perform the given operation. So the answer will equal
+1⊕2=3.
+Test case
+2: It is optimal to add
+X=1 to the
+2
+nd
+and the
+3
+rd
+element. So
+A will become
+[2,3,4,3] and the answer will be
+(2⊕3)+(3⊕4)+(4⊕3)=15.

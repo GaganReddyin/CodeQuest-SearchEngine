@@ -1,0 +1,47 @@
+Plus Equation
+Problem
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+You are given a string
+S containing only decimal digits ('0' through '9') and a number
+N. Your task is to insert an arbitrary number (including zero) of plus signs '+' into
+S in order to form a valid expression whose value is equal to
+N.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first and only line of each test case contains a string
+S, followed by a space and an integer
+N.
+Output
+For each test case, print a single line containing one string — your solution, i.e. the expression obtained after inserting some plus signs into
+S. If there are multiple solutions, you may output any one. It is guaranteed that at least one solution exists.
+Constraints
+T≤5
+1≤∣S∣≤120
+N<=int(S). Notes:
+int(S) is the integer value of
+S, if we consider
+S as an integer.
+Subtasks
+Subtask #1 (20 points):
+N<10
+6
+Subtask #2 (80 points): original constraints
+Example Input
+4
+15112 28
+120012 33
+123 123
+15489001 10549
+Example Output
+15+11+2
+1+20+012
+123
+1548+9001
+Explanation
+Example case 1:
+S is "15112" and
+N=28. We can put a plus sign before the third character and another plus sign before the last character of this string to form the expression
+15+11+2, which is equal to
+28.

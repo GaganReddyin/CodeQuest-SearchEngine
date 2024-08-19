@@ -1,0 +1,43 @@
+E. Cutting the Line
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given a non-empty line s and an integer k. The following operation is performed with this line exactly once:
+A line is split into at most k non-empty substrings, i.e. string s is represented as a concatenation of a set of strings s = t1 + t2 + ... + tm, 1 ≤ m ≤ k.
+Some of strings ti are replaced by strings tir, that is, their record from right to left.
+The lines are concatenated back in the same order, we get string s' = t'1t'2... t'm, where t'i equals ti or tir.
+Your task is to determine the lexicographically smallest string that could be the result of applying the given operation to the string s.
+Input
+The first line of the input contains string s (1 ≤ |s| ≤ 5 000 000), consisting of lowercase English letters. The second line contains integer k (1 ≤ k ≤ |s|) — the maximum number of parts in the partition.
+Output
+In the single line print the lexicographically minimum string s' which can be obtained as a result of performing the described operation.
+Examples
+input
+Copy
+aba
+2
+output
+Copy
+aab
+input
+Copy
+aaaabacaba
+2
+output
+Copy
+aaaaabacab
+input
+Copy
+bababa
+1
+output
+Copy
+ababab
+input
+Copy
+abacabadabacaba
+4
+output
+Copy
+aababacabacabad

@@ -1,0 +1,120 @@
+C. Circular Mirror
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Pak Chanek has a mirror in the shape of a circle. There are
+N
+lamps on the circumference numbered from
+1
+to
+N
+in clockwise order. The length of the arc from lamp
+i
+to lamp
+i+1
+is
+D
+i
+for
+1≤i≤N−1
+. Meanwhile, the length of the arc between lamp
+N
+and lamp
+1
+is
+D
+N
+.
+Pak Chanek wants to colour the lamps with
+M
+different colours. Each lamp can be coloured with one of the
+M
+colours. However, there cannot be three different lamps such that the colours of the three lamps are the same and the triangle made by considering the three lamps as vertices is a right triangle (triangle with one of its angles being exactly
+90
+degrees).
+The following are examples of lamp colouring configurations on the circular mirror.
+Figure 1. an example of an incorrect colouring because lamps
+1
+,
+2
+, and
+3
+form a right triangle Figure 2. an example of a correct colouring Figure 3. an example of a correct colouring
+Before colouring the lamps, Pak Chanek wants to know the number of distinct colouring configurations he can make. Count the number of distinct possible lamp colouring configurations, modulo
+998244353
+.
+Input
+The first line contains two integers
+N
+and
+M
+(
+1≤N≤3⋅
+10
+5
+,
+2≤M≤3⋅
+10
+5
+) — the number of lamps in the mirror and the number of different colours used.
+The second line contains
+N
+integers
+D
+1
+,
+D
+2
+,…,
+D
+N
+(
+1≤
+D
+i
+≤
+10
+9
+) — the lengths of the arcs between the lamps in the mirror.
+Output
+An integer representing the number of possible lamp colouring configurations, modulo
+998244353
+.
+Examples
+input
+Copy
+4 2
+10 10 6 14
+output
+Copy
+10
+input
+Copy
+1 2
+10
+output
+Copy
+2
+Note
+In the first example, all correct lamp colouring configurations are
+[1,1,2,1]
+,
+[1,1,2,2]
+,
+[1,2,1,2]
+,
+[1,2,2,1]
+,
+[1,2,2,2]
+,
+[2,1,1,1]
+,
+[2,1,1,2]
+,
+[2,1,2,1]
+,
+[2,2,1,1]
+, and
+[2,2,1,2]
+.

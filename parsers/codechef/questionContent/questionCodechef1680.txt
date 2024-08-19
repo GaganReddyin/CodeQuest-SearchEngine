@@ -1,0 +1,29 @@
+Sam, The Charming Angel
+Problem
+"Ron : Harry!!! Let's go!!"
+Ron and Harry just entered Aragog's Colony. Some hungry children of Aragog come running to them for food. Suddenly they see a bright light emerging from nothingness. From the bright light a tiny, cute and charming angel named Sam emerged. She promised to rescue them, if they make her a wand of exactly length N.
+Sam had K different types of wands having different lengths. Each type of wand having infinite supply. Harry can join/combine any two wands end to end to make a newer wand, i.e. if two wands of length x and y are joined, then the length of the new wand will be x + y. Now Harry is interested in knowing the minimum and the maximum number of wands he can join in order to produce a wand of length N. If it is not possible to produce such wand then print -1 in both cases.
+Input
+The first line of input contains two space separated integers N and K denoting the desired wand length and number of types of wands available.
+The second line contains K space separated integers where ith integer is lengthi, the length of ith type of wand.
+Output
+Print two space separated integers in one line where first and second integer denotes the minimum and maximum number of wands needed to join to form a wand of length N respectively. Print -1 in both cases if wand of length N cannot be formed.
+Constraints
+1 ≤ N < 10000
+1 ≤ K < 10000
+1 ≤ lengthi < 10000
+All values of lengthi are distinct
+Sample 1:
+Input
+Output
+7 3
+5 2 3
+2 3
+Explanation:
+Join wands of length 2 and 5 to produce a wand of length 7. Join wands of length 2, 2 and 3 to produce a wand of length 7.
+Sample 2:
+Input
+Output
+4 3
+3 5 7
+-1 -1

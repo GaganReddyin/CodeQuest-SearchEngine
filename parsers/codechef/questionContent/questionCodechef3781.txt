@@ -1,0 +1,104 @@
+Yet Another XOR Sort 2
+Problem
+You have an array
+A with
+N elements.
+You can perform the following operation at most
+20×N times:
+Select two indices
+i,j satisfying
+A
+i
+
+=A
+j
+, and set both
+A
+i
+and
+A
+j
+to
+A
+i
+⊕A
+j
+.
+Here,
+⊕ denotes the bitwise XOR operation.
+Your goal is to make the final array sorted in non-decreasing order. Find a sequence of operations that achieves this.
+It can be proven that a solution always exists.
+Note that you don't have to minimize the number of operations.
+Input Format
+The first line contains a single integer
+T, denoting the number of test cases. Then the test cases follow.
+Each test case consists of two lines of input.
+The first line of each test case contains an integer
+N — the size of the array
+A.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output Format
+For each test case, first print a single integer
+K, the number of operations you performed.
+Then, print
+K lines each containing two integers. The integers on the
+i-th line should be the indices you selected for the
+i-th operation.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+5
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases won't exceed
+10
+5
+.
+Sample 1:
+Input
+Output
+2
+4
+34 40 20 30
+3
+1 2 3
+2
+1 4
+1 3
+0
+Explanation:
+Test case
+1:
+The array becomes
+[60,40,20,60] after the first operation. (Setting
+A
+1
+and
+A
+4
+to
+34⊕30)
+The array becomes
+[40,40,40,60] after the second operation. (Setting
+A
+1
+and
+A
+3
+to
+60⊕20)
+Test case
+2:
+The array is already sorted, so we don't need to perform any operations.

@@ -1,0 +1,261 @@
+E. The Harmonization of XOR
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an array of exactly
+n
+numbers
+[1,2,3,…,n]
+along with integers
+k
+and
+x
+.
+Partition the array in exactly
+k
+non-empty disjoint subsequences such that the bitwise XOR of all numbers in each subsequence is
+x
+, and each number is in exactly one subsequence. Notice that there are no constraints on the length of each subsequence.
+A sequence
+a
+is a subsequence of a sequence
+b
+if
+a
+can be obtained from
+b
+by the deletion of several (possibly, zero or all) elements.
+For example, for
+n=15
+,
+k=6
+,
+x=7
+, the following scheme is valid:
+[6,10,11]
+,
+6⊕10⊕11=7
+,
+[5,12,14]
+,
+5⊕12⊕14=7
+,
+[3,9,13]
+,
+3⊕9⊕13=7
+,
+[1,2,4]
+,
+1⊕2⊕4=7
+,
+[8,15]
+,
+8⊕15=7
+,
+[7]
+,
+7=7
+,
+where
+⊕
+represents the bitwise XOR operation.
+The following scheme is invalid, since
+8
+,
+15
+do not appear:
+[6,10,11]
+,
+6⊕10⊕11=7
+,
+[5,12,14]
+,
+5⊕12⊕14=7
+,
+[3,9,13]
+,
+3⊕9⊕13=7
+,
+[1,2,4]
+,
+1⊕2⊕4=7
+,
+[7]
+,
+7=7
+.
+The following scheme is invalid, since
+3
+appears twice, and
+1
+,
+2
+do not appear:
+[6,10,11]
+,
+6⊕10⊕11=7
+,
+[5,12,14]
+,
+5⊕12⊕14=7
+,
+[3,9,13]
+,
+3⊕9⊕13=7
+,
+[3,4]
+,
+3⊕4=7
+,
+[8,15]
+,
+8⊕15=7
+,
+[7]
+,
+7=7
+.
+Input
+Each test contains multiple test cases. The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first and the only line of each test case contains three integers
+n
+,
+k
+,
+x
+(
+1≤k≤n≤2⋅
+10
+5
+;
+1≤x≤
+10
+9
+) — the length of the array, the number of subsequences and the required XOR.
+It's guaranteed that the sum of
+n
+does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, if it is possible to partition the sequence, print "YES" in the first line. In the
+i
+-th of the following
+k
+lines first print the length
+s
+i
+of the
+i
+-th subsequence, then print
+s
+i
+integers, representing the elements in the
+i
+-th subsequence. If there are multiple answers, print any. Note that you can print a subsequence in any order.
+If it is not possible to partition the sequence, print "NO".
+Example
+input
+Copy
+7
+15 6 7
+11 4 5
+5 3 2
+4 1 4
+6 1 7
+11 5 5
+11 6 5
+output
+Copy
+YES
+3 6 10 11
+3 5 12 14
+3 3 9 13
+3 1 2 4
+2 8 15
+1 7
+YES
+2 1 4
+2 2 7
+2 3 6
+5 5 8 9 10 11
+NO
+YES
+4 1 2 3 4
+YES
+6 1 2 3 4 5 6
+NO
+NO
+Note
+In the first test case, we construct the following
+6
+subsequences:
+[6,10,11]
+,
+6⊕10⊕11=7
+,
+[5,12,14]
+,
+5⊕12⊕14=7
+,
+[3,9,13]
+,
+3⊕9⊕13=7
+,
+[1,2,4]
+,
+1⊕2⊕4=7
+,
+[8,15]
+,
+8⊕15=7
+,
+[7]
+,
+7=7
+.
+In the second test case, we construct the following
+4
+subsequences:
+[1,4]
+,
+1⊕4=5
+,
+[2,7]
+,
+2⊕7=5
+,
+[3,6]
+,
+3⊕6=5
+,
+[5,8,9,10,11]
+,
+5⊕8⊕9⊕10⊕11=5
+.
+The following solution is considered correct in this test case as well:
+[1,4]
+,
+1⊕4=5
+,
+[2,7]
+,
+2⊕7=5
+,
+[5]
+,
+5=5
+,
+[3,6,8,9,10,11]
+,
+3⊕6⊕8⊕9⊕10⊕11=5
+.

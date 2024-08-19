@@ -1,0 +1,194 @@
+Equal Subsequences
+Problem
+Chef has a sequence
+A of
+2⋅N integers containing all natural numbers from
+1 to
+N exactly twice.
+Let a sequence
+B containing
+K elements be a subsequence of
+A. We define a strictly increasing index sequence
+I(B)=[I
+1
+,I
+2
+,…,I
+K
+] such that,
+B can be written as
+[A
+I
+1
+,A
+I
+2
+,…,A
+I
+K
+].
+A pair of subsequences
+(P,Q) is said to be good if all of the following conditions satisfy:
+Both subsequences have the same length. In other words,
+∣P∣=∣Q∣, where
+∣P∣ and
+∣Q∣ denote the lengths of
+P and
+Q respectively;
+The subsequences
+P and
+Q are disjoint. In other words, there are no common elements between
+I(P) and
+I(Q);
+The subsequences are equal. In other words,
+P
+j
+=Q
+j
+for all
+(1≤j≤∣P∣).
+Find the total number of distinct ordered pairs of subsequences
+(P,Q) that are good.
+Two ordered pairs
+(P
+1
+,Q
+1
+) and
+(P
+2
+,Q
+2
+) are considered different iff
+I(P
+1
+)
+
+=I(P
+2
+) or
+I(Q
+1
+)
+
+=I(Q
+2
+).
+Since the answer can be very large, print it modulo
+998244353.
+Input Format
+First line contains
+T − the number of test cases. The description of the test cases is as follows.
+The first line of each test case contains a single integer
+N − the value of
+N.
+The second line of each test case contains
+2⋅N integers
+A
+1
+,A
+2
+,…,A
+2⋅N
+.
+Output Format
+For each test case, output a single integer − the total number of distinct ordered pairs of subsequences
+(P,Q) that are good modulo
+998244353.
+Constraints
+1≤T≤2⋅10
+5
+1≤N≤2⋅10
+5
+1≤A
+i
+≤N
+Sum of
+N over all test cases does not exceed
+6⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+1
+1 1
+2
+1 1 2 2
+2
+1 2 1 2
+2
+8
+6
+Explanation:
+Test case
+1: Possible ordered pairs are:
+([A
+1
+],[A
+2
+]),
+([A
+2
+],[A
+1
+]).
+Test case
+2: Possible ordered pairs are:
+([A
+1
+],[A
+2
+]),
+([A
+2
+],[A
+1
+]),
+([A
+3
+],[A
+4
+]),
+([A
+4
+],[A
+3
+]),
+([A
+1
+,A
+3
+],[A
+2
+,A
+4
+]),
+([A
+2
+,A
+4
+],[A
+1
+,A
+3
+]),
+([A
+1
+,A
+4
+],[A
+2
+,A
+3
+]),
+([A
+2
+,A
+3
+],[A
+1
+,A
+4
+]).

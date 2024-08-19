@@ -1,0 +1,39 @@
+Game Of Life
+Problem
+Joseph is captured along with N-1 of his soldier friends. The enemy has decided to play the following game.
+These N soldiers are seated in a circle. The seats are numbered from 1 to N in clockwise order. The enemy chooses a nonzero integer K.
+If K is positive the enemy kills the Kth guy in clockwise direction starting from 1 (the 1st guy starting from 1 is 1 itself). Then the (2K)th alive guy in anticlockwise direction from the position of first killing, then (3K)th alive guy in clockwise direction from position of second killing and so on until only one guy survives.
+Similarly, if K is negative the enemy kills the |K|th guy in anticlockwise direction starting from 1. Then the (|2K|)th guy in clockwise direction from the position of first killing, then (|3K|)th guy in anticlockwise direction from the position of second killing and so on until only one guy survives.
+That is, after every killing the enemy reverses its direction and increases the number of soldiers skipped before next killing by K.
+Note that the starting direction is clockwise if K>0 and anticlockwise if K<0 and the counting for the next killing starts from the position of previous killing.
+You have to determine the index at which Joseph should sit in order to survive.
+Input
+The first line of the input contains an integer T denoting the number of test cases.
+Each of the following T lines contain two integers each: N and K.
+Output
+For each test case, output a single integer in a new line: the index where Joseph must choose to survive.
+Constraints
+1 ≤ T ≤ 104
+1 ≤ N ≤ 106
+-109 ≤ K ≤ 109
+K is non-zero.
+Sum of N over all testcases is less than or equal to 106 for each input file 
+Example
+Input:
+2
+4 2
+4 -1
+Output:
+3
+4
+  Explanation
+Test Case 1.
+Step 1: Enemy kills the 2nd person clockwise starting from 1. That is, 2 is killed. [Going clockwise]
+Step 2: Enemy skips (1,4,3) and kills (1) [Going anticlockwise]
+Step 3: Enemy skips (3,4,3,4,3) and kills (4) [Going clockwise]
+3 survives
+Test case 2:
+Step 1: Enemy kills first person starting from 1. That is, enemy skips (none) and kills (1) [Going anticlockwise]
+Step 2: Enemy skips (2) and kills (3) [Going clockwise]
+Step 3: Enemy skips (2,4) and kills (2) [Going anticlockwise]
+4 survives

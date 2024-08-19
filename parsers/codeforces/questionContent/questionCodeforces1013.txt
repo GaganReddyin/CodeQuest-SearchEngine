@@ -1,0 +1,126 @@
+F. Teleporters
+time limit per test7 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+There are
+n+1
+teleporters on a straight line, located in points
+0
+,
+a
+1
+,
+a
+2
+,
+a
+3
+, ...,
+a
+n
+. It's possible to teleport from point
+x
+to point
+y
+if there are teleporters in both of those points, and it costs
+(x−y
+)
+2
+energy.
+You want to install some additional teleporters so that it is possible to get from the point
+0
+to the point
+a
+n
+(possibly through some other teleporters) spending no more than
+m
+energy in total. Each teleporter you install must be located in an integer point.
+What is the minimum number of teleporters you have to install?
+Input
+The first line contains one integer
+n
+(
+1≤n≤2⋅
+10
+5
+).
+The second line contains
+n
+integers
+a
+1
+,
+a
+2
+,…,
+a
+n
+(
+1≤
+a
+1
+<
+a
+2
+<
+a
+3
+<⋯<
+a
+n
+≤
+10
+9
+).
+The third line contains one integer
+m
+(
+a
+n
+≤m≤
+10
+18
+).
+Output
+Print one integer — the minimum number of teleporters you have to install so that it is possible to get from
+0
+to
+a
+n
+spending at most
+m
+energy. It can be shown that it's always possible under the constraints from the input format.
+Examples
+input
+Copy
+2
+1 5
+7
+output
+Copy
+2
+input
+Copy
+2
+1 5
+6
+output
+Copy
+3
+input
+Copy
+1
+5
+5
+output
+Copy
+4
+input
+Copy
+1
+1000000000
+1000000043
+output
+Copy
+999999978

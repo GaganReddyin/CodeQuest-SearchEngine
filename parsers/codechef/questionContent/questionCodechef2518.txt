@@ -1,0 +1,98 @@
+Row Bombing
+Problem
+There is an
+N×M grid, with rows numbered
+1 to
+N from top to bottom, and columns
+1 to
+M from left to right.
+Chef starts at cell
+(1,1) and wants to reach cell
+(N,M). However, some cells contain walls. Chef can move from their current cell to any adjacent cell (a cell which shares an edge) within the grid that does not contain a wall. So it may be possible initially that all of Chef's paths to
+(N,M) are blocked by walls.
+To get around this, Chef can call an airstrike on any row and annihilate all walls present in that row. More formally, if Chef chooses row
+i
+(1≤i≤N), then any walls in cells
+(i,1),(i,2)…(i,M) are destroyed. Once a wall is destroyed, the cell becomes freely passable.
+Since airstrikes are expensive, help Chef find the minimum number of airstrikes Chef must call to guarantee that Chef can reach
+(N,M) from
+(1,1).
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers
+N and
+M — the number of rows and the number of columns in the grid.
+The next
+N lines contain
+M characters each, describing the grid. The character at the
+i-th row and
+j-th column
+S
+i,j
+is
+’.’ if the cell
+(i,j) is empty and
+’#’ if there is a wall.
+Output Format
+For each test case, output on a new line the minimum number of airstrikes Chef must call to guarantee that Chef can reach
+(N,M) from
+(1,1).
+Constraints
+1≤T≤2⋅10
+5
+2≤N×M≤5⋅10
+5
+S
+i,j
+∈{’.’,’#’}
+The sum of
+N×M over all test cases does not exceed
+5⋅10
+5
+.
+It is guaranteed that the starting cell
+(1,1) is not blocked by a wall.
+Sample 1:
+Input
+Output
+5
+1 2
+..
+1 4
+.##.
+4 1
+.
+#
+#
+.
+3 2
+.#
+##
+##
+3 3
+.##
+#.#
+##.
+0
+1
+2
+2
+1
+Explanation:
+Test case 1:
+Chef does not need to call any airstrikes. Chef can follow the path
+(1,1)→(1,2).
+Test case 2:
+Chef must call an airstrike on row
+1. This will destroy the walls at
+(1,2) and
+(1,3). Chef can then follow the path
+(1,1)→(1,2)→(1,3)→(1,4).
+Test case 3:
+Chef must call airstrikes on rows
+2 and
+3. This will destroy the walls at
+(2,1) and
+(3,1) respectively. Chef can then follow the path
+(1,1)→(2,1)→(3,1)→(4,1).

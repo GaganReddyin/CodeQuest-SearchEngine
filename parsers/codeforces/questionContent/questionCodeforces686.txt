@@ -1,0 +1,120 @@
+C. Robot in a Hallway
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There is a grid, consisting of
+2
+rows and
+m
+columns. The rows are numbered from
+1
+to
+2
+from top to bottom. The columns are numbered from
+1
+to
+m
+from left to right.
+The robot starts in a cell
+(1,1)
+. In one second, it can perform either of two actions:
+move into a cell adjacent by a side: up, right, down or left;
+remain in the same cell.
+The robot is not allowed to move outside the grid.
+Initially, all cells, except for the cell
+(1,1)
+, are locked. Each cell
+(i,j)
+contains a value
+a
+i,j
+ — the moment that this cell gets unlocked. The robot can only move into a cell
+(i,j)
+if at least
+a
+i,j
+seconds have passed before the move.
+The robot should visit all cells without entering any cell twice or more (cell
+(1,1)
+is considered entered at the start). It can finish in any cell.
+What is the fastest the robot can achieve that?
+Input
+The first line contains a single integer
+t
+(
+1≤t≤
+10
+4
+) — the number of testcases.
+The first line of each testcase contains a single integer
+m
+(
+2≤m≤2⋅
+10
+5
+) — the number of columns of the grid.
+The
+i
+-th of the next
+2
+lines contains
+m
+integers
+a
+i,1
+,
+a
+i,2
+,…,
+a
+i,m
+(
+0≤
+a
+i,j
+≤
+10
+9
+) — the moment of time each cell gets unlocked.
+a
+1,1
+=0
+. If
+a
+i,j
+=0
+, then cell
+(i,j)
+is unlocked from the start.
+The sum of
+m
+over all testcases doesn't exceed
+2⋅
+10
+5
+.
+Output
+For each testcase, print a single integer — the minimum amount of seconds that the robot can take to visit all cells without entering any cell twice or more.
+Example
+input
+Copy
+4
+3
+0 0 1
+4 3 2
+5
+0 4 8 12 16
+2 6 10 14 18
+4
+0 10 10 10
+10 10 10 10
+2
+0 0
+0 0
+output
+Copy
+5
+19
+17
+3

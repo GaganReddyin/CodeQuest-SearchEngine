@@ -1,0 +1,70 @@
+Warriors
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are a warrior and you have to fight
+N enemy warriors (numbered
+1 through
+N) one by one, in any order you choose. You have to win as many of these fights as possible.
+Each warrior has some amount of power, which changes when the warrior fights. For each
+i, the
+i-th enemy warrior has power
+P
+i
+. When you have power
+x and you fight an enemy warrior with power
+y, the following happens:
+if
+x>y, you kill the enemy warrior and your power changes to
+2(x−y)
+otherwise (if
+x≤y), the enemy warrior kills you
+You should answer
+Q queries. In each query, you are given your initial power
+X and you should find the maximum number of warriors you can kill if you are starting with power
+X.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Q.
+The second line contains
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+Q lines follow. Each of these lines contains a single integer
+X describing a query.
+Output
+For each query, print a single line containing one integer — the maximum number of warriors you can kill.
+Constraints
+1≤T≤10
+1≤N,Q≤10
+5
+1≤P
+i
+≤10
+9
+for each valid
+i
+1≤X≤10
+9
+Sample 1:
+Input
+Output
+1
+3 4
+1 2 1
+10
+2
+3
+1
+3
+2
+3
+0

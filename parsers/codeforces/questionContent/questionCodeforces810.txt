@@ -1,0 +1,177 @@
+E. Ambiguous Dominoes
+time limit per test8 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Polycarp and Monocarp are both solving the same puzzle with dominoes. They are given the same set of
+n
+dominoes, the
+i
+-th of which contains two numbers
+x
+i
+and
+y
+i
+. They are also both given the same
+m
+by
+k
+grid of values
+a
+ij
+such that
+m⋅k=2n
+.
+The puzzle asks them to place the
+n
+dominoes on the grid in such a way that none of them overlap, and the values on each domino match the
+a
+ij
+values that domino covers. Dominoes can be rotated arbitrarily before being placed on the grid, so the domino
+(
+x
+i
+,
+y
+i
+)
+is equivalent to the domino
+(
+y
+i
+,
+x
+i
+)
+.
+They have both solved the puzzle, and compared their answers, but noticed that not only did their solutions not match, but none of the
+n
+dominoes were in the same location in both solutions! Formally, if two squares were covered by the same domino in Polycarp's solution, they were covered by different dominoes in Monocarp's solution. The diagram below shows one potential
+a
+grid, along with the two players' solutions.
+Polycarp and Monocarp remember the set of dominoes they started with, but they have lost the grid
+a
+. Help them reconstruct one possible grid
+a
+, along with both of their solutions, or determine that no such grid exists.
+Input
+The first line contains a single integer
+n
+(
+1≤n≤3⋅
+10
+5
+).
+The
+i
+-th of the next
+n
+lines contains two integers
+x
+i
+and
+y
+i
+(
+1≤
+x
+i
+,
+y
+i
+≤2n
+).
+Output
+If there is no solution, print a single integer
+−1
+.
+Otherwise, print
+m
+and
+k
+, the height and width of the puzzle grid, on the first line of output. These should satisfy
+m⋅k=2n
+.
+The
+i
+-th of the next
+m
+lines should contain
+k
+integers, the
+j
+-th of which is
+a
+ij
+.
+The next
+m
+lines describe Polycarp's solution. Print
+m
+lines of
+k
+characters each. For each square, if it is covered by the upper half of a domino in Polycarp's solution, it should contain a "U". Similarly, if it is covered by the bottom, left, or right half of a domino, it should contain "D", "L", or "R", respectively.
+The next
+m
+lines should describe Monocarp's solution, in the same format as Polycarp's solution.
+If there are multiple answers, print any.
+Examples
+input
+Copy
+1
+1 2
+output
+Copy
+-1
+input
+Copy
+2
+1 1
+1 2
+output
+Copy
+2 2
+
+2 1
+1 1
+
+LR
+LR
+
+UU
+DD
+input
+Copy
+10
+1 3
+1 1
+2 1
+3 4
+1 5
+1 5
+3 1
+2 4
+3 3
+4 1
+output
+Copy
+4 5
+
+1 2 5 1 5
+3 4 1 3 1
+1 2 4 4 1
+1 3 3 3 1
+
+LRULR
+LRDLR
+ULRLR
+DLRLR
+
+UULRU
+DDUUD
+LRDDU
+LRLRD
+Note
+Extra blank lines are added to the output for clarity, but are not required.
+The third sample case corresponds to the image from the statement.

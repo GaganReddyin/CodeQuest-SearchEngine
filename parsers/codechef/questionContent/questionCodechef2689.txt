@@ -1,0 +1,108 @@
+Chef and Pepperoni Pizza Again
+Problem
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef is fond of pepperoni pizza, as we saw here. Once again, he has a pepperoni pizza in the shape of a grid with
+N rows (numbered
+1 through
+N from top to bottom) and
+N columns (numbered
+1 through
+N from left to right). Some cells of this grid contain pepperoni, while other ones do not.
+Chef wants to cut the pizza vertically in half and give the two halves to two of his friends. Formally, one friend should get everything in columns
+1 through
+N/2 and the other friend should get everything in the columns
+N/2+1 through
+N.
+Before cutting the pizza, Chef may perform the following operation any number of times (including zero): choose an integer
+x (
+1≤x≤N) and reverse the
+x-th row of the grid ― in other words, for each valid
+i, the cell in the
+i-th column and
+x-th row is moved to the
+N+1−i-th column in the same row.
+After the pizza is cut, let's denote the number of cells containing pepperoni in the first half and in the second half by
+p
+1
+and
+p
+2
+respectively. Chef wants to minimise their absolute difference
+∣p
+1
+−p
+2
+∣, but he is lazy, so he just wants you to perform any valid sequence of operations such that the absolute difference in the final grid is minimized.
+You need to find a final grid (the grid after performing all operations) such that
+∣p
+1
+−p
+2
+∣ for this grid is the smallest possible. If there are multiple final grids that minimise
+∣p
+1
+−p
+2
+∣, you may find any one.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains a single integer
+N.
+N lines follow. For each
+i (
+1≤i≤N), the
+i-th of these lines contains a string with length
+N describing the
+i-th row of the grid; for each valid
+j, the
+j-th character of this string is '1' if the cell in the
+i-th row and
+j-th column contains pepperoni or '0' if it does not.
+Output
+For each test case, print
+N lines. For each valid
+i, the
+i-th of these lines should contain a string with length
+N describing the
+i-th row of the grid after performing all operations, in the same format as on the input. It must be possible to obtain this grid from the initial grid using some valid sequence of operations.
+Constraints
+1≤T≤30
+2≤N≤150
+N is even
+the sum of
+N over all test cases does not exceed
+300
+Sample 1:
+Input
+Output
+2
+2
+01
+01
+4
+0111
+0001
+1010
+1010
+10
+01
+1110
+0001
+1010
+1010
+Explanation:
+Example case 1: We need to reverse either of the rows, leading to
+∣p
+1
+−p
+2
+∣=0. Either of these solutions would be accepted.
+Example case 2: It is optimal to reverse the first row, leading to exactly
+4 pepperoni on each side (and
+∣p
+1
+−p
+2
+∣=0 again).

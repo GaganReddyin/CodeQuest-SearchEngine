@@ -1,0 +1,212 @@
+H. Banquet Preparations 2
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+The chef has cooked
+n
+dishes yet again: the
+i
+-th dish consists of
+a
+i
+grams of fish and
+b
+i
+grams of meat.
+Banquet organizers consider two dishes
+i
+and
+j
+equal if
+a
+i
+=
+a
+j
+and
+b
+i
+=
+b
+j
+at the same time.
+The banquet organizers estimate the variety of
+n
+dishes as follows. The variety of a set of dishes is equal to the number of different dishes in it. The less variety is, the better.
+In order to reduce the variety, a taster was invited. He will eat exactly
+m
+i
+grams of food from each dish. For each dish, the taster determines separately how much fish and how much meat he will eat. The only condition is that he will eat exactly
+m
+i
+grams of the
+i
+-th dish in total.
+Determine how much of what type of food the taster should eat from each dish so that the value of variety is the minimum possible. If there are several correct answers, you may output any of them.
+Input
+The first line of input data contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+Each test case's description is preceded by a blank line. Next comes a line that contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of dishes. Then follows
+n
+lines,
+i
+-th of which contains three integers
+a
+i
+,
+b
+i
+and
+m
+i
+(
+0≤
+a
+i
+,
+b
+i
+≤
+10
+6
+;
+0≤
+m
+i
+≤
+a
+i
++
+b
+i
+) — the mass of fish in
+i
+-th dish, the mass of meat in
+i
+-th dish and how many grams in total the taster should eat in
+i
+-th dish.
+The sum of all
+n
+values for all input data sets in the test does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print on the first line the minimum value of variety that can be achieved by eating exactly
+m
+i
+grams of food (for all
+i
+from
+1
+to
+n
+) from a dish
+i
+.
+Then print
+n
+lines that describe a way to do this: the
+i
+-th line should contain two integers
+x
+i
+and
+y
+i
+(
+0≤
+x
+i
+≤
+a
+i
+;
+0≤
+y
+i
+≤
+b
+i
+;
+x
+i
++
+y
+i
+=
+m
+i
+), where
+x
+i
+is how many grams of fish the taster should eat from
+i
+-th dish, and
+y
+i
+is how many grams of meat.
+If there are several ways to achieve a minimum balance, print any of them.
+Example
+input
+Copy
+5
+
+3
+10 10 2
+9 9 0
+10 9 1
+
+2
+3 4 1
+5 1 2
+
+3
+7 2 5
+6 5 4
+5 5 6
+
+1
+13 42 50
+
+5
+5 7 12
+3 1 4
+7 3 7
+0 0 0
+4 1 5
+output
+Copy
+1
+1 1
+0 0
+1 0
+2
+0 1
+1 1
+2
+3 2
+0 4
+1 5
+1
+8 42
+2
+5 7
+3 1
+4 3
+0 0
+4 1

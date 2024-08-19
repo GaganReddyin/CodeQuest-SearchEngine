@@ -1,0 +1,158 @@
+F. Build a Tree and That Is It
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+A tree is a connected undirected graph without cycles. Note that in this problem, we are talking about not rooted trees.
+You are given four positive integers
+n,
+d
+12
+,
+d
+23
+and
+d
+31
+. Construct a tree such that:
+it contains
+n
+vertices numbered from
+1
+to
+n
+,
+the distance (length of the shortest path) from vertex
+1
+to vertex
+2
+is
+d
+12
+,
+distance from vertex
+2
+to vertex
+3
+is
+d
+23
+,
+the distance from vertex
+3
+to vertex
+1
+is
+d
+31
+.
+Output any tree that satisfies all the requirements above, or determine that no such tree exists.
+Input
+The first line of the input contains an integer
+t
+(
+1≤t≤
+10
+4
+) —the number of test cases in the test.
+This is followed by
+t
+test cases, each written on a separate line.
+Each test case consists of four positive integers
+n,
+d
+12
+,
+d
+23
+and
+d
+31
+(
+3≤n≤2⋅
+10
+5
+;1≤
+d
+12
+,
+d
+23
+,
+d
+31
+≤n−1
+).
+It is guaranteed that the sum of
+n
+values for all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print YES if the suitable tree exists, and NO otherwise.
+If the answer is positive, print another
+n−1
+line each containing a description of an edge of the tree — a pair of positive integers
+x
+i
+,
+y
+i
+, which means that the
+i
+th edge connects vertices
+x
+i
+and
+y
+i
+.
+The edges and vertices of the edges can be printed in any order. If there are several suitable trees, output any of them.
+Example
+input
+Copy
+9
+5 1 2 1
+5 2 2 2
+5 2 2 3
+5 2 2 4
+5 3 2 3
+4 2 1 1
+4 3 1 1
+4 1 2 3
+7 1 4 1
+output
+Copy
+YES
+1 2
+4 1
+3 1
+2 5
+YES
+4 3
+2 5
+1 5
+5 3
+NO
+YES
+2 4
+4 1
+2 5
+5 3
+YES
+5 4
+4 1
+2 5
+3 5
+YES
+2 3
+3 4
+1 3
+NO
+YES
+4 3
+1 2
+2 4
+NO

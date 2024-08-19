@@ -1,0 +1,135 @@
+D. Big Brush
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You found a painting on a canvas of size
+n×m
+. The canvas can be represented as a grid with
+n
+rows and
+m
+columns. Each cell has some color. Cell
+(i,j)
+has color
+c
+i,j
+.
+Near the painting you also found a brush in the shape of a
+2×2
+square, so the canvas was surely painted in the following way: initially, no cell was painted. Then, the following painting operation has been performed some number of times:
+Choose two integers
+i
+and
+j
+(
+1≤i<n
+,
+1≤j<m
+) and some color
+k
+(
+1≤k≤nm
+).
+Paint cells
+(i,j)
+,
+(i+1,j)
+,
+(i,j+1)
+,
+(i+1,j+1)
+in color
+k
+.
+All cells must be painted at least once. A cell can be painted multiple times. In this case, its final color will be the last one.
+Find any sequence of at most
+nm
+operations that could have led to the painting you found or state that it's impossible.
+Input
+The first line of input contains two integers
+n
+and
+m
+(
+2≤n,m≤1000
+) — the dimensions of the canvas.
+On the
+i
+-th of the next
+n
+lines of input, there will be
+m
+integers. The
+j
+-th of them is
+a
+i,j
+(
+1≤
+a
+i,j
+≤nm
+) — the color of cell
+(i,j)
+.
+Output
+If there is no solution, print a single integer
+−1
+.
+Otherwise, on the first line, print one integer
+q
+(
+1≤q≤nm
+) — the number of operations.
+Next, print the operations in order. On the
+k
+-th of the next
+q
+lines, print three integers
+i
+,
+j
+,
+c
+(
+1≤i<n
+,
+1≤j<m
+,
+1≤c≤nm
+) — the description of the
+k
+-th operation.
+If there are multiple solutions, print any.
+Examples
+input
+Copy
+4 4
+5 5 3 3
+1 1 5 3
+2 2 5 4
+2 2 4 4
+output
+Copy
+6
+1 3 3
+3 3 4
+2 2 5
+1 1 5
+2 1 1
+3 1 2
+input
+Copy
+3 4
+1 1 1 1
+2 2 3 1
+2 2 1 1
+output
+Copy
+-1
+Note
+In the first test case, the solution is not unique. Here's one of them:
+In the second test case, there is no way one could obtain the given painting, thus the answer is
+−1
+.

@@ -1,0 +1,101 @@
+F. Eating Candies
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+There are
+n
+candies put from left to right on a table. The candies are numbered from left to right. The
+i
+-th candy has weight
+w
+i
+. Alice and Bob eat candies.
+Alice can eat any number of candies from the left (she can't skip candies, she eats them in a row).
+Bob can eat any number of candies from the right (he can't skip candies, he eats them in a row).
+Of course, if Alice ate a candy, Bob can't eat it (and vice versa).
+They want to be fair. Their goal is to eat the same total weight of candies. What is the most number of candies they can eat in total?
+Input
+The first line contains an integer
+t
+(
+1≤t≤
+10
+4
+) — the number of test cases.
+The first line of each test case contains an integer
+n
+(
+1≤n≤2⋅
+10
+5
+) — the number of candies on the table.
+The second line of each test case contains
+n
+integers
+w
+1
+,
+w
+2
+,…,
+w
+n
+(
+1≤
+w
+i
+≤
+10
+4
+) — the weights of candies from left to right.
+It is guaranteed that the sum of
+n
+over all test cases does not exceed
+2⋅
+10
+5
+.
+Output
+For each test case, print a single integer — the maximum number of candies Alice and Bob can eat in total while satisfying the condition.
+Example
+input
+Copy
+4
+3
+10 20 10
+6
+2 1 4 2 4 1
+5
+1 2 4 8 16
+9
+7 3 20 5 15 1 11 8 10
+output
+Copy
+2
+6
+0
+7
+Note
+For the first test case, Alice will eat one candy from the left and Bob will eat one candy from the right. There is no better way for them to eat the same total amount of weight. The answer is
+2
+because they eat two candies in total.
+For the second test case, Alice will eat the first three candies from the left (with total weight
+7
+) and Bob will eat the first three candies from the right (with total weight
+7
+). They cannot eat more candies since all the candies have been eaten, so the answer is
+6
+(because they eat six candies in total).
+For the third test case, there is no way Alice and Bob will eat the same non-zero weight so the answer is
+0
+.
+For the fourth test case, Alice will eat candies with weights
+[7,3,20]
+and Bob will eat candies with weights
+[10,8,11,1]
+, they each eat
+30
+weight. There is no better partition so the answer is
+7
+.

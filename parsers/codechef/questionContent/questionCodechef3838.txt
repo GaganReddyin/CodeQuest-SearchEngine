@@ -1,0 +1,139 @@
+Key-bored
+Problem
+This is an interactive problem (as always).
+Alice and Bob were getting bored and decided to play a game with keyboards. The configuration of the keyboard is:
+The keyboard consists of
+36 keys arranged in
+3 rows having
+13,
+12 and
+11 keys respectively.
+Each key has dimensions
+2×2 and there is no space between any two adjacent keys.
+The
+i
+th
+key of the first row is
+1 unit to the left of the
+i
+th
+key of the second row and similarly for the keys of the second and the third row.
+Each key corresponds to either a Lowercase English Alphabet or a Numeric Digit.
+No two keys correspond to the same character. The order in which the characters are distributed among the keys is not fixed.
+For example, the keyboard may look as follows:
+The time required by Bob to move his fingers between two keys is equal to the Manhattan distance between their centers.
+The time required by him to type a word is equal to the total time required by him to move his fingers between the keys corresponding to the consecutive characters of the word.
+For example, if the characters are arranged in way shown in the image above, the time required by Bob to type the word
+adh0c will be equal to
+4+8+13+8=33.
+Alice doesn't know which key corresponds to which character and her task is to guess it. For this, Bob is willing to answer at most
+180 queries of Type
+1 and at most
+1 query of Type
+2 as described below -
+Type
+1: Alice will provide a word of length at least
+2 and at most
+36 to Bob. Bob will respond with the time taken by him to type the word.
+Type
+2: Alice will provide a single character to Bob. Bob will respond with the location of the key which corresponds to this character.
+Alice and Bob will play this game
+T times with different keyboards. Play as Alice and win the games.
+Interaction
+First read a single line containing a single integer
+T denoting the number of test cases.
+For each test case, you may ask up to
+180 queries of Type
+1 and up to
+1 query of Type
+2.
+To ask a query of Type
+1, print
+? s where
+s is the word you want to query satisfying
+2≤∣s∣≤36. Then, read a single integer denoting the time taken by Bob to type this word.
+To ask a query of Type
+2, print
+? c where
+c is the character you want to query. Then, read two integers
+X and
+Y denoting that the
+Y
+th
+key of the
+X
+th
+row corresponds to this character.
+Once you know the configuration of the keyboard, print a single line containing the character
+! followed by three lines containing strings of length
+13,
+12 and
+11 respectively denoting the characters in the first, second and third row respectively. Then, you must continue solving the remaining test cases.
+If you exceed
+180 queries of Type
+1 or
+1 query of Type
+2 or ask an invalid query, the judge will give you
+Wrong Answer verdict and stop the interaction. Make sure to terminate your program in such cases.
+Also, make sure to strictly follow the interaction format and flush your output after printing each line otherwise you may get unexpected verdicts like
+Judge Error.
+Note that some of the testcases use an adaptive judge while some use a non-adaptive judge. So, the hidden configuration might change depending on your queries.
+Scoring
+The score you will get, depends on the number of Type
+1 queries you ask in the worst case. There are
+20 test files each containing multiple test cases. Let
+Q denote the maximum number of Type
+1 queries asked over all test cases over all test files.
+If you get a non-AC verdict for any of the test files, you will get
+0 points. Otherwise, the number of points you will get is given by:
+P=100×3
+24
+−max(0,Q−60)
+In other words,
+If
+Q≤60, you will get
+100 points.
+If
+Q=180, you will get around
+0.41 points.
+For every
+24 queries asked, your points will be reduced to one-third.
+Constraints
+1≤T≤105
+Explanation:
+Let
+d(c
+1
+,c
+2
+) denote the distance between the keys corresponding to the characters
+c
+1
+and
+c
+2
+.
+For the sample test case, the hidden keyboard configuration is the one given in the problem statement.
+The first query is a Type
+1 query. The time required to type the word
+codechef is equal to
+d(c,o)+d(o,d)+d(d,e)+d(e,c)+d(c,h)+d(h,e)+d(e,f)
+=18+17+3+6+9+11+5=69
+The second query is also a Type
+1 query and the time required to type the word
+jay1048576 is equal to
+14+13+2+8+11+3+11+15+6=83.
+The third query is a Type
+2 query. The
+9
+th
+key of the
+3
+rd
+row corresponds to the character
+n. So, the judge returns
+3 9.
+The fourth query is a Type
+1 query. The time required to type the word
+adh0c is equal to
+33 as mentioned in the problem statement.

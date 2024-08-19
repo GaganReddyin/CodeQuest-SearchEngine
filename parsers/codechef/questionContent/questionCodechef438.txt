@@ -1,0 +1,48 @@
+Easy Permutation
+Problem
+You are given an integer
+N.
+Construct any permutation
+A of
+N integers such that the value
+LCM(1+A
+1
+,2+A
+2
+,…,N+A
+N
+) is minimised.
+Note:
+LCM denotes the least common multiple of the integers.
+A permutation of
+N integers contains all integers from
+1 to
+N exactly once.
+Input Format
+First line will contain
+T, number of test cases. Then the test cases follow.
+Each test case contains a single line of input, one integer
+N.
+Output Format
+For each test case, output a permutation that minimises the value
+LCM(1+A
+1
+,2+A
+2
+,…,N+A
+N
+).
+Constraints
+1≤T≤1000
+2≤N≤1000
+Sample 1:
+Input
+Output
+1
+2
+2 1
+Explanation:
+Test case
+1: The permutation for which the value is minimised is
+[2,1]. The minimum value is
+LCM(1+2,2+1)=LCM(3,3)=3.

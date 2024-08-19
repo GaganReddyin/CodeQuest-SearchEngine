@@ -1,0 +1,58 @@
+F - Random Strings
+Problem
+You are given
+2 string
+A and
+B and an integer
+K. You have to find a substring of length
+K such that it is common in both the strings i.e. present in both String
+A and
+B.
+A substring of a string is a contiguous subsequence of that string. For Example, string "bite" is substring of string "biteration", but string "bion" is not.
+If there are multiple such
+K length substrings which are present in both
+A and
+B, then you have to find the one which occurs maximum no of times in both strings combined i.e. the sum of occurrences in both the strings is maximum.
+If still, there are multiple such
+K length substrings with max Occurrence and common in both, then u have to find the one which is lexicographically smallest among them.
+###Input:
+First line contains number of Test Cases
+T.
+First line of each Test Case contains
+3 integers
+N,
+M and
+K, denoting Length of string
+A, length of string
+B and Length of Common Substring respectively.
+Next
+2 lines contains the strings
+A and
+B respectively consisting only of lowercase Latin characters.
+###Output: For each testcase, in a single line, you have to output the required common substring, or if no such substring exists, output "-1"(without quotes).
+###Constraints
+1≤T≤20
+1≤N,M≤2∗10
+5
+1≤K≤min(N,M)
+Sum of
+N over all test cases does not exceed
+2∗10
+5
+Sum of
+M over all test cases does not exceed
+2∗10
+5
+###Subtasks
+15 points :
+1≤N,M≤100
+36 points :
+1≤N,M≤1000
+99 points : Original Constraints
+###Sample Input: 3 7 6 4 abababc bababa 3 4 1 abb aabb 4 4 3 aabb abab
+###Sample Output: abab b -1
+###EXPLANATION: In the first example, "abab" and "baba" are
+2 substrings which are common while "babc" is not. Sum of occurrences of "abab" is 3(2 in A + 1 in B) and of "baba" is also 3(1 in A and 2 in B). So, we need to take the lexicographically smaller among them, which is abab
+In the second example, "a" and "b" are common substrings, but since string "b" has greater sum of occurrences, ans is "b".
+In the third example, since there is no common substring of length
+3, the ans is "-1".

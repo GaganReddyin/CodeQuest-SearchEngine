@@ -1,0 +1,93 @@
+C. Connect the Points
+time limit per test3 seconds
+memory limit per test512 megabytes
+inputstandard input
+outputstandard output
+You are given three points on a plane. You should choose some segments on the plane that are parallel to coordinate axes, so that all three points become connected. The total length of the chosen segments should be the minimal possible.
+Two points
+a
+and
+b
+are considered connected if there is a sequence of points
+p
+0
+=a,
+p
+1
+,…,
+p
+k
+=b
+such that points
+p
+i
+and
+p
+i+1
+lie on the same segment.
+Input
+The input consists of three lines describing three points. Each line contains two integers
+x
+and
+y
+separated by a space — the coordinates of the point (
+−
+10
+9
+≤x,y≤
+10
+9
+). The points are pairwise distinct.
+Output
+On the first line output
+n
+ — the number of segments, at most 100.
+The next
+n
+lines should contain descriptions of segments. Output four integers
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+on a line — the coordinates of the endpoints of the corresponding segment (
+−
+10
+9
+≤
+x
+1
+,
+y
+1
+,
+x
+2
+,
+y
+2
+≤
+10
+9
+). Each segment should be either horizontal or vertical.
+It is guaranteed that the solution with the given constraints exists.
+Example
+input
+Copy
+1 1
+3 5
+8 6
+output
+Copy
+3
+1 1 1 5
+1 5 8 5
+8 5 8 6
+Note
+The points and the segments from the example are shown below.

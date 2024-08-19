@@ -1,0 +1,40 @@
+Counter Test For CHEFSUM
+Problem
+Read problems statements in mandarin chinese and vietnamese as well.
+Once Chef was writing test data for the problem CHEFSUM . For your convenience, the summary of this problem is provided as below.
+You are given an array a of size n. Let prefSum[i] denote the sum of first i elements and sufSum[i] denote the sum of last n - i + 1 elements of the array a. You have to find the least index i such that value of prefSum[i] + sufSum[i] is the minimum possible. The bounds/constraints on n could be as large as 105.
+A newbie programmer was trying to solve this problem. He didn't take care of the fact that the values of prefSum[i] + sufSum[i] might not fit into unsigned int data type. He wrote the following C++ code to solve the problem.
+int wrongSolver(std::vector  a) {
+ int n = a.size();
+ std::vector prefSum(n), sufSum(n);
+ prefSum[0] = a[0];
+ for (int i = 1; i < n; i++) {
+  prefSum[i] = prefSum[i - 1] + a[i];
+ }
+ sufSum[n - 1] = a[n - 1];
+ for (int i = n - 2; i >= 0; i--) {
+  sufSum[i] = sufSum[i + 1] + a[i];
+ }
+ unsigned int mn = prefSum[0] + sufSum[0];
+ int where = 1;
+ for (int i = 1; i < n; i++) {
+  unsigned int val = prefSum[i] + sufSum[i];
+  if (val < mn) {
+   mn = val;
+   where = i + 1;
+  }
+ }
+ return where;
+}
+Assume that an unsigned int is 4 bytes long, i.e. it stores values from 0 up to 232 - 1. Addition of two unsigned int's x and y is done as (x + y) modulo 232. This way, you can see that whenever the value of an unsigned int exceeds the maximum possible value (232 - 1), it wraps around.
+Chef as a problem setter knows that the above program should not get an AC. Hence, he wants to generate a counter case to fail this solution. He asks your help in generating such a counter case.
+Input
+The first line of the input contains an integer T denoting the number of test cases.
+The only line of each test case contains a single integer n denoting the number of integers in the array a.
+Output
+For each test case, output n space separated integers in a line denoting the content of array a for which the above program will give a wrong answer.
+Constraints
+1 ≤ T ≤ 10
+Subtasks
+Subtask #1 : (50 points) 99991 ≤ n ≤ 105, 1 ≤ ai ≤ 2 * 109
+Subtask #2 : (50 points) 99991 ≤ n ≤ 105, 1 ≤ ai ≤ 105

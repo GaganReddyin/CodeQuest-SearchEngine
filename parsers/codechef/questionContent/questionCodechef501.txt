@@ -1,0 +1,91 @@
+Stick Break
+Problem
+Chef has a stick of length
+L. Chef wants to break the stick into
+K parts such that each part has a non-zero length.
+Let the lengths of the
+K parts be
+A
+1
+,A
+2
+,…,A
+K
+(Note that
+A
+1
++A
+2
++…+A
+K
+=L and
+A
+i
+is a positive integer for all
+i). Chef wants to minimize the value of
+i=1
+∑
+K−1
+∣A
+i+1
+−A
+i
+∣. Can you help Chef? (Here
+∣x∣ denotes the absolute value of
+x)
+Under the given constraints it will always be possible to break the stick into
+K parts of non-zero lengths.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space-separated integers
+L and
+K — the initial length of the stick and the number of parts Chef wants to break the stick into.
+Output Format
+For each test case, output the minimum value of
+i=1
+∑
+K−1
+∣A
+i+1
+−A
+i
+∣.
+Constraints
+1≤T≤10
+4
+2≤K≤L≤10
+9
+Sample 1:
+Input
+Output
+2
+4 3
+2 2
+1
+0
+Explanation:
+Test Case 1: It is optimal to break the stick of length
+4 into
+3 parts in the following manner:
+[2,1,1]. The value of
+i=1
+∑
+K−1
+∣A
+i+1
+−A
+i
+∣=∣1−2∣+∣1−1∣=1.
+Test Case 2: It is optimal to break the stick of length
+2 into
+2 parts in the following manner:
+[1,1]. The value of
+i=1
+∑
+K−1
+∣A
+i+1
+−A
+i
+∣=∣1−1∣=0.

@@ -1,0 +1,69 @@
+Seven-Segment Factoring
+Problem
+You have an infinitely long digital panel. Using various combinations of
+7 segments, we can represent each digit. The picture shows how all
+10 decimal digits are displayed.
+Initially, all segments in the panel are off. You are given seven integers
+A,B,C,D,E,F and
+G representing the number of coins required to turn on the respective segment, as shown above.
+Given an integer
+N, find the minimum number of coins you need to spend to display some factor of
+N on the panel.
+Input Format
+The first line contains an integer
+T denoting the number of test cases. The
+T test cases then follow.
+The only line of each test case contains eight space-separated integers
+N,A,B,C,D,E,F and
+G, denoting the integer
+N and the number of coins required to turn on each of the seven segments.
+Output Format
+For each test case, output a single integer - the minimum number of coins you need to spend to display some factor of
+N on the panel.
+Constraints
+1≤T≤1000
+1≤N<10
+100
+1≤A,B,C,D,E,F,G≤50
+Sample 1:
+Input
+Output
+3
+10 1 31 21 5 3 12 9
+69697 1 2 3 4 5 6 7
+3964083074239146524786 1 41 31 21 11 1 41
+48
+5
+72
+Explanation:
+Test case
+1:
+10 has four factors:
+1,
+2,
+5, and
+10. Their costs are:
+Display
+1:
+31+21=52.
+Display
+2:
+1+31+5+3+9=49.
+Display
+5:
+1+21+5+12+9=48.
+Display
+10:
+31+21+1+31+21+5+3+12=125.
+The minimum number of coins are required to display
+5, which costs
+48 coins.
+Test case
+2:
+69697 has two factors:
+1 and
+69697. The cost to display
+1 is only
+5 coins, while the cost to display
+69697 is much larger, so the answer is
+5.

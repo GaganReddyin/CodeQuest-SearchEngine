@@ -1,0 +1,104 @@
+XxOoRr
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Given an array
+A
+1
+,A
+2
+…A
+N
+, find the minimum number of operations (possibly zero) required to convert all integers in
+A to
+0.
+In one operation, you
+choose a non-negative integer
+p (
+p≥0),
+select at most
+K indices in the array
+A, and
+for each selected index
+i, replace
+A
+i
+with
+A
+i
+⊕2
+p
+. Here,
+⊕ denotes bitwise XOR.
+Subtasks
+Subtask #1 (100 points): Original Constraints
+Input Format
+The first line contains an integer
+T - the number of test cases. Then
+T test cases follow.
+The first line of each test case contains two integers
+N,
+K - the size of the array and the maximum number of elements you can select in an operation.
+The second line of each test case contains
+N integers
+A
+1
+,A
+2
+…A
+N
+.
+Output Format
+For each test case, output the minimum number of operations to make all elements of the array
+0.
+Constraints
+1≤T≤10
+5
+1≤N,K≤10
+5
+0≤A
+i
+≤10
+9
+The sum of
+N over all test cases does not exceed
+2⋅10
+5
+Sample 1:
+Input
+Output
+1
+3 2
+3 6 10
+5
+Explanation:
+Here is one way to achieve
+[0,0,0] from
+[3,6,10] in
+5 operations:
+Choose
+p=0 and indices
+{1}. Now
+A becomes
+[2,6,10].
+Choose
+p=1 and indices
+{1,2}. Now
+A becomes
+[0,4,10].
+Choose
+p=1 and indices
+{3}. Now
+A becomes
+[0,4,8].
+Choose
+p=2 and indices
+{2}. Now
+A becomes
+[0,0,8].
+Choose
+p=3 and indices
+{3}. Now
+A becomes
+[0,0,0].
+It can be shown that at least
+5 operations are required.

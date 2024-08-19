@@ -1,0 +1,37 @@
+C. Timofey and remoduling
+time limit per test2 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Little Timofey likes integers a lot. Unfortunately, he is very young and can't work with very big integers, so he does all the operations modulo his favorite prime m. Also, Timofey likes to look for arithmetical progressions everywhere.
+One of his birthday presents was a sequence of distinct integers a1, a2, ..., an. Timofey wants to know whether he can rearrange the elements of the sequence so that is will be an arithmetical progression modulo m, or not.
+Arithmetical progression modulo m of length n with first element x and difference d is sequence of integers x, x + d, x + 2d, ..., x + (n - 1)·d, each taken modulo m.
+Input
+The first line contains two integers m and n (2 ≤ m ≤ 109 + 7, 1 ≤ n ≤ 105, m is prime) — Timofey's favorite prime module and the length of the sequence.
+The second line contains n distinct integers a1, a2, ..., an (0 ≤ ai < m) — the elements of the sequence.
+Output
+Print -1 if it is not possible to rearrange the elements of the sequence so that is will be an arithmetical progression modulo m.
+Otherwise, print two integers — the first element of the obtained progression x (0 ≤ x < m) and its difference d (0 ≤ d < m).
+If there are multiple answers, print any of them.
+Examples
+input
+Copy
+17 5
+0 2 4 13 15
+output
+Copy
+13 2
+input
+Copy
+17 5
+0 2 4 13 14
+output
+Copy
+-1
+input
+Copy
+5 3
+1 2 3
+output
+Copy
+3 4

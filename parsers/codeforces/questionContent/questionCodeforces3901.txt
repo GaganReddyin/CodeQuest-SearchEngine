@@ -1,0 +1,51 @@
+B. Nice table
+time limit per test1 second
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+You are given an
+n×m
+table, consisting of characters «A», «G», «C», «T». Let's call a table nice, if every
+2×2
+square contains all four distinct characters. Your task is to find a nice table (also consisting of «A», «G», «C», «T»), that differs from the given table in the minimum number of characters.
+Input
+First line contains two positive integers
+n
+and
+m
+ — number of rows and columns in the table you are given (
+2≤n,m,n×m≤300000
+). Then,
+n
+lines describing the table follow. Each line contains exactly
+m
+characters «A», «G», «C», «T».
+Output
+Output
+n
+lines,
+m
+characters each. This table must be nice and differ from the input table in the minimum number of characters.
+Examples
+input
+Copy
+2 2
+AG
+CT
+output
+Copy
+AG
+CT
+input
+Copy
+3 5
+AGCAG
+AGCAG
+AGCAG
+output
+Copy
+TGCAT
+CATGC
+TGCAT
+Note
+In the first sample, the table is already nice. In the second sample, you can change 9 elements to make the table nice.

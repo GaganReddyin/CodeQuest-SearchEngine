@@ -1,0 +1,235 @@
+F2. Same Sum Blocks (Hard)
+time limit per test3 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+This problem is given in two editions, which differ exclusively in the constraints on the number
+n
+.
+You are given an array of integers
+a[1],a[2],…,a[n].
+A block is a sequence of contiguous (consecutive) elements
+a[l],a[l+1],…,a[r]
+(
+1≤l≤r≤n
+). Thus, a block is defined by a pair of indices
+(l,r)
+.
+Find a set of blocks
+(
+l
+1
+,
+r
+1
+),(
+l
+2
+,
+r
+2
+),…,(
+l
+k
+,
+r
+k
+)
+such that:
+They do not intersect (i.e. they are disjoint). Formally, for each pair of blocks
+(
+l
+i
+,
+r
+i
+)
+and
+(
+l
+j
+,
+r
+j
+) where
+i≠j
+either
+r
+i
+<
+l
+j
+or
+r
+j
+<
+l
+i
+.
+For each block the sum of its elements is the same. Formally,
+a[
+l
+1
+]+a[
+l
+1
++1]+⋯+a[
+r
+1
+]=a[
+l
+2
+]+a[
+l
+2
++1]+⋯+a[
+r
+2
+]=
+[
+l
+]
+[
+l
+1
+]
+[
+]
+[
+l
+]
+[
+l
+1
+]
+[
+]
+⋯=
+=
+a[
+l
+k
+]+a[
+l
+k
++1]+⋯+a[
+r
+k
+].
+[
+l
+]
+[
+l
+1
+]
+[
+]
+The number of the blocks in the set is maximum. Formally, there does not exist a set of blocks
+(
+l
+′
+1
+,
+r
+′
+1
+),(
+l
+′
+2
+,
+r
+′
+2
+),…,(
+l
+′
+k
+′
+,
+r
+′
+k
+′
+)
+satisfying the above two requirements with
+k
+′
+>k
+.
+The picture corresponds to the first example. Blue boxes illustrate blocks.
+Write a program to find such a set of blocks.
+Input
+The first line contains integer
+n
+(
+1≤n≤1500
+) — the length of the given array. The second line contains the sequence of elements
+a[1],a[2],…,a[n]
+(
+−
+10
+5
+≤
+a
+i
+≤
+10
+5
+).
+Output
+In the first line print the integer
+k
+(
+1≤k≤n
+). The following
+k
+lines should contain blocks, one per line. In each line print a pair of indices
+l
+i
+,
+r
+i
+(
+1≤
+l
+i
+≤
+r
+i
+≤n
+) — the bounds of the
+i
+-th block. You can print blocks in any order. If there are multiple answers, print any of them.
+Examples
+input
+Copy
+7
+4 1 2 2 1 5 3
+output
+Copy
+3
+7 7
+2 3
+4 5
+input
+Copy
+11
+-5 -4 -3 -2 -1 0 1 2 3 4 5
+output
+Copy
+2
+3 4
+1 1
+input
+Copy
+4
+1 1 1 1
+output
+Copy
+4
+4 4
+1 1
+2 2
+3 3

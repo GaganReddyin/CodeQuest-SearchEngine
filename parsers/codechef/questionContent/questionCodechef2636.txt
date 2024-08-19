@@ -1,0 +1,92 @@
+Hit the Coconuts
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Nikki has
+N coconuts, she wants to prepare a special coconut soup for her best friend Mansi. In order to make this soup, she has to break
+Z coconuts. For each coconut, there is a fixed number of times Nikki needs to hit it if she wants it to break. Nikki can only hit one coconut at the same time.
+Their friend Sakshi is a troublemaker. This time, Sakshi shuffled the coconuts in some (unknown) way. You are given a sequence
+A
+1
+,A
+2
+,…,A
+N
+with the following meaning: it is possible to label the coconuts
+1 through
+N in such a way that for each valid
+i, the
+i-th coconut needs to be hit exactly
+A
+i
+times to break.
+Nikki wants to prepare the soup as soon as possible, so she wants to minimise the number of times she has to hit coconuts in the worst case in order to break
+Z coconuts. Formally, she wants to find a strategy of hitting coconuts, possibly depending on which coconuts broke after which hits, such that no matter which coconuts broke and when, it is guaranteed that after
+H hits, there will be
+Z broken coconuts, and there is no strategy with smaller
+H. Help Nikki find
+H — the minimum required number of hits.
+Input
+The first line of the input contains a single integer
+T denoting the number of test cases. The description of
+T test cases follows.
+The first line of each test case contains two space-separated integers
+N and
+Z.
+The second line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+.
+Output
+For each test case, print a single line containing one integer — the minimum required number of hits.
+Constraints
+1≤T≤1,000
+1≤Z≤N≤10
+3
+1≤A
+i
+≤10
+6
+for each valid
+i
+the sum of
+N⋅Z over all test cases does not exceed
+3⋅10
+6
+Subtasks
+Subtask #1 (10 points):
+1≤T≤100
+1≤N≤500
+Z=1
+1≤A
+i
+≤1,000 for each valid
+i
+the sum of
+N⋅Z over all test cases does not exceed
+3,000
+Subtask #2 (90 points): original constraints
+Sample 1:
+Input
+Output
+2
+2 1
+50 55 
+2 1
+40 100
+55
+80
+Explanation:
+Example case 1: Nikki can choose one coconut and try to hit it
+55 times. It will break either after the
+50-th hit or after the
+55-th hit.
+Example case 2: Nikki can choose one coconut and hit it
+40 times. If it does not break, the other coconut must be the one that takes
+40 hits to break, so she should hit the other coconut
+40 times. In total, she needs to hit coconuts at most
+80 times.

@@ -1,0 +1,81 @@
+The Faulty Tree
+Problem
+Alice and Bob will play a game on an array
+A, consisting of
+N numbers. The rules of the games are:
+Alice and Bob will construct a binary tree of exactly
+N leaves.
+Each node of the tree is given a value:
+If the node is a leaf, its value will be one of the unused array's elements.
+Else, the node's value will be the sum of its two children.
+The ugliness of the tree is defined as the sum of all the nodes' values.
+Bob wins the game if the ugliness of Bob's tree is strictly lower than that of Alice's tree. Otherwise, Alice wins the game.
+Note that each array’s elements,
+A
+i
+ (1≤i≤N), will correspond to one and only one leaf.
+Alice, after a lot of mindboggling, found that the optimal structure of a binary tree will be such that each non-leaf node has at least one child which is a leaf.
+Bob is too eager to win the game. Before the game starts he can do the following operations any number of times (possibly 0):
+Select two integers
+x,i (1≤X≤10
+12
+,1≤i≤N), change
+A
+i
+to
+x.
+After performing all the operations, he draws all possible binary trees and chooses the best one.
+Note that Alice and Bob will play on the modified array
+A.
+Find the minimum number of operations Bob must perform to win the game or state that Bob can't win the game.
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+Each test case consists of multiple lines of input.
+The first line of each test case contains an integer
+N — the number of elements in the array
+A.
+The second line of input contains
+N space-separated integers
+A
+1
+,A
+2
+,...,A
+N
+— the elements of the array
+A.
+Output Format
+For each testcase - print "YES", if it is possible for Bob to win the game, followed by
+N integers in the next line denoting the elements of the modified array
+A, after performing all the operations. Otherwise, print "No".
+You can output the answer "YES" (and "NO") in any case (upper or lower). For example, the strings "yEs", "yes", "Yes", and "YES" will be recognized as positive responses.
+Constraints
+1≤T≤10
+4
+1≤N≤10
+6
+1≤A
+i
+≤10
+12
+The sum of
+N over all test cases won't exceed
+10
+6
+.
+Sample 1:
+Input
+Output
+2
+3
+1 2 4
+4
+1 2 1 1
+NO
+YES
+1 1 1 1
+Explanation:
+In the first testcase, getting the ugliness less than that of Alice's tree is impossible. Alice's tree will have the node values: 1, 2, 3, 4, and 7.
+In the second testcase, Alice's tree will have the nodes' values: 1, 1, 1, 1, 2, 3, and 4. Bob can make the binary tree with nodes' values: 1, 1, 1, 1, 2, 2, and 4.
+Bob can't win from Alice in zero operations.

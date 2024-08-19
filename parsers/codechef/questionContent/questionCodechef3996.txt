@@ -1,0 +1,155 @@
+(Challenge) Cubical Virus
+Problem
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is working on a small project ― he is building a cyberorganism. In his current design, the cyberorganism is an
+N×N×N cube consisting of
+N
+3
+cells. Let's denote the cells by
+(x,y,z), where
+1≤x,y,z≤N.
+Chef is currently working on the cyberorganism's self-defense mechanism against viruses. So far, he has figured out that viruses behave in the following way:
+When the cyberorganism is infected by a virus, some of its cells immediately become infected, while the remaining ones stay healthy (so far).
+Afterwards, the virus spreads itself. Whenever there is an infected cell
+(x,y,z), the cells
+(x+1,y,z),
+(x,y+1,z) and
+(x,y,z+1) become infected as well (if they exist, i.e. the infection does not propagate outside the cyberorganism).
+The virus continues spreading itself until there are no more cells that can be infected this way.
+Chef noticed that it is possible for the cyberorganism to reorganise itself right after the initial infection (before the virus starts spreading). The cyberorganism can use this opportunity to make itself less vulnerable to the virus (i.e. minimise the number of infected cells after the virus finishes spreading).
+The cyberorganism can reorganise itself by changing the order of the rows, columns and layers of its cells. In other words, it can choose three permutations
+P,Q,R of the integers
+1 through
+N (each permutation can be chosen independently from the other two) and reorganise itself in such a way that for each valid
+x,y,z, the cell
+(P
+x
+,Q
+y
+,R
+z
+) before the reorganisation becomes the cell
+(x,y,z) afterwards. If this cell was infected before the reorganisation, then it remains infected afterwards, and if it was healthy, it remains healthy afterwards ― only the coordinates of the infected and healthy cells change.
+Chef has struggled for some time with an efficient self-defense mechanism and now, he has decided to ask for your help. You are given the coordinates of the cells that are infected initially. Determine how to reorganise the cyberorganism in order to minimise the number of cells that are infected after the virus finishes spreading.
+Input
+The first line of the input contains a single integer
+N.
+N
+2
+lines follow, where each block of
+N lines describes a layer of the cube. Each of these lines contains a string with length
+N. For each valid
+x,y,z, the
+x-th character on the
+(z−1)N+y-th line is '1' if the cell
+(x,y,z) is initially infected or '0' if this cell is initially healthy.
+Output
+Print three lines.
+The first line should contain
+N space-separated integers
+P
+1
+,P
+2
+,…,P
+N
+.
+The second line should contain
+N space-separated integers
+Q
+1
+,Q
+2
+,…,Q
+N
+.
+Finally, the third line should contain
+N space-separated integers
+R
+1
+,R
+2
+,…,R
+N
+.
+Constraints
+3≤N≤100
+all strings on the input contain only characters '0' and '1'
+initially, there is at least one healthy cell
+Scoring
+In each test case (and therefore each test file), let
+C be the number of initially infected cells and
+K be the number of healthy cells after the virus stops spreading. If
+K=0, your submission will receive the Wrong Answer verdict. Otherwise, your score for this test case is equal to
+K⋅(
+N
+3
+C
+)
+1.5
+. The score of a submission is equal to the sum of its scores over all test cases. The goal is to maximise the score of your submission.
+There are 20 test files. During the contest, the displayed score will account for exactly four test files (numbered 2, 7, 12 and 17, see the Test Generation section), i.e. your score reflects your submission's performance on 20% (4 / 20) of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other 16 test files.
+Example Input
+3
+011
+100
+010
+011
+010
+100
+000
+000
+010
+Example Output
+1 3 2
+1 2 3
+3 2 1
+Explanation
+After reorganising, the state of the cyberorganism is (using the same format as on the input, with an extra line between each two blocks of
+N lines)
+000
+000
+001
+
+011
+001
+100
+
+011
+100
+001
+After the virus spreads, the state of the cyberorganism becomes
+000
+000
+001
+
+011
+011
+111
+
+011
+111
+111
+There are
+9 infected cells in the initial state and
+11 healthy cells in the final state, so the score of this output is
+11⋅(
+3
+3
+9
+)
+1.5
+≈2.117.
+Test generation
+N=100 in all test cases (except for the example).
+There are 20 test cases (numbered
+0 through
+19). In all test cases, the strings describing the initial state are generated independently and randomly.
+For each valid
+k, each cell in the
+k-th test case is initially infected with probability
+P or healthy with probability
+1−P, where
+P=0.8
+k+3
+is fixed.

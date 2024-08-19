@@ -1,0 +1,59 @@
+Reduce to zero
+Problem
+Chef has two integers
+X and
+Y. Chef wants to perform some operations to make both
+X and
+Y zero simultaneously. In one operation, Chef can either:
+set
+X:=2⋅X
+or set
+Y:=2⋅Y
+or set
+X:=X−1 and
+Y:=Y−1
+Chef is a little busy with preparing the contest. Help him find the minimum number of operations required to make both
+X and
+Y equal to
+0 simultaneously. If it is impossible to do so after any number of operations, print
+−1.
+Input Format
+The first line contains a single integer
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space separated integers
+X and
+Y.
+Output Format
+For each test case, print the minimum number of operations required to make
+X and
+Y zero simultaneously. If it is impossible to do so after any number of operations, print
+−1 instead.
+Constraints
+1≤T≤3⋅10
+5
+0≤X,Y≤10
+18
+Sample 1:
+Input
+Output
+2
+1 2
+99999999999999999 99999999999999999
+3
+99999999999999999
+Explanation:
+Let
+(x,y) denote the values of
+X and
+Y respectively.
+Test case 1: Three operations are required:
+(1,2)
+X:=X⋅2
+(2,2)
+X:=X−1
+Y:=Y−1
+(1,1)
+X:=X−1
+Y:=Y−1
+(0,0)
+It can be proven that it is impossible in fewer operations.

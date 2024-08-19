@@ -1,0 +1,63 @@
+Gormint Aunty
+Problem
+Gormint aunty is very upset with the government and Imran wants to prove that his government is not sold out. Gormint aunty gives an ethical problem which only an honest person could solve. Help Imran solve this question.
+You are given two integers
+N and
+K. Find the minimum number of colors needed to color a circular array of size
+N such that the following condition is satisfied:
+For any subarray of size
+K, there should not be any repeating colors.
+Also construct one such array. If there are many possible arrays, you may print any one of them. Each color will be represented by a unique number between
+1 and
+X, where
+X is the number of distinct colors needed to build this array.
+Note: A circular array is one wherein the first element is adjacent to the last. For example, given the circular array
+[1,2,3], all possible subarrays of size 2 are:
+[1,2],[2,3],[3,1].
+Input Format
+The first line of input will contain a single integer
+T, denoting the number of test cases.
+The first and only line of each test case contains two space-separated integers
+N and
+K, as described in the statement.
+Output Format
+For each test case, output two lines:
+The first line should contain a single integer
+X, denoting the minimum number of colors needed to build the array.
+The second line should contain
+N space-separated integers denoting the elements of the array. Each element of the array should be an integer between
+1 and
+X, denoting the color of this element; and no subarray of this array of length
+K should contain repeated colors. If there are multiple such arrays, print any of them.
+Constraints
+1≤T≤10
+4
+1≤N≤5⋅10
+5
+1≤K≤N
+The sum of
+N over all test cases won't exceed
+5⋅10
+5
+.
+Sample 1:
+Input
+Output
+3
+5 4
+3 1
+6 3
+5
+1 2 3 4 5
+1
+1 1 1
+3
+1 2 3 1 2 3
+Explanation:
+Test case
+1: All elements of the given array are distinct, so it obviously satisfies the condition.
+It can be shown that in this case,
+4 colors is not enough to construct a solution.
+Test case
+2: Every subarray of length
+1 contains a single element, and hence no repeated colors.

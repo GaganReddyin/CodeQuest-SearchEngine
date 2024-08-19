@@ -1,0 +1,222 @@
+K Forests
+Problem
+Chef is given a tree with
+N nodes and a positive integer
+K. Each node is assigned a value
+A
+i
+.
+Chef has to divide the tree into a forest of exactly
+K trees, numbered from
+1 to
+K, such that each node belongs to exactly one tree.
+Let
+B
+i
+denote the bitwise XOR of the values of all nodes belonging to the
+i
+th
+tree.
+Find the maximum possible value of
+B
+1
+&
+B
+2
+&…
+&
+B
+K
+, where
+& denotes the bitwise AND operation.
+Input Format
+The first line contains a single integer
+T, the number of test cases.
+Each test case consists of multiple lines:
+The first line contains two space-separated integers
+N and
+K — the number of nodes in the tree and a positive integer as mentioned in the statement, respectively.
+The next line contains
+N space-separated integers
+A
+1
+,A
+2
+,…,A
+N
+, the values assigned to each node.
+The next
+(N−1) lines describe the edges. The
+i
+th
+of these
+(N−1) lines contains two space-separated integers
+u
+i
+and
+v
+i
+, denoting an edge between nodes
+u
+i
+and
+v
+i
+.
+Output Format
+For each test case, print a single integer, the maximum possible value of
+B
+1
+&
+B
+2
+&…
+&
+B
+K
+Constraints
+1≤T≤5⋅10
+4
+1≤K≤N≤2⋅10
+5
+0≤A
+i
+≤10
+9
+1≤u
+i
+,v
+i
+≤N,
+(u
+i
+
+=v
+i
+)
+Sum of
+N over all test cases does not exceed
+2⋅10
+5
+.
+Sample 1:
+Input
+Output
+2
+6 2
+1 4 2 2 1 5
+1 2
+1 3
+2 4
+2 5
+3 6
+8 3
+1 13 5 14 2 9 0 8
+1 2
+1 3
+1 4
+2 5
+3 6
+3 7
+6 8
+6
+4
+Explanation:
+Test case
+1: A possible way of dividing the nodes into
+2 trees is
+[1,3,6] and
+[2,4,5].
+B
+1
+=A
+1
+⊕A
+3
+⊕A
+6
+=1⊕2⊕5=6
+B
+2
+=A
+2
+⊕A
+4
+⊕A
+5
+=4⊕2⊕1=7
+Thus,
+B
+1
+&
+B
+2
+=6
+&
+7=6.
+Note that this is the maximum possible value of
+B
+1
+&
+B
+2
+you can obtain.
+Another way of dividing is
+[1,2,4,5] and
+[3,6], which leads to the same answer.
+Test case
+2: A possible way of dividing the nodes into
+3 trees is
+[1,3,6,7,8],
+[4], and
+[2,5]
+B
+1
+=A
+1
+⊕A
+3
+⊕A
+6
+⊕A
+7
+⊕A
+8
+=1⊕5⊕9⊕0⊕8=5
+B
+2
+=A
+4
+=14
+B
+3
+=A
+2
+⊕A
+5
+=13⊕2=15.
+Thus,
+B
+1
+&
+B
+2
+&
+B
+3
+=5
+&
+14
+&
+&
+15=4.
+Note that this is the maximum possible value of
+B
+1
+&
+B
+2
+&
+B
+3
+you can obtain.

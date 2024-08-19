@@ -1,0 +1,92 @@
+G. Koxia and Bracket
+time limit per test5 seconds
+memory limit per test256 megabytes
+inputstandard input
+outputstandard output
+Chiyuu has a bracket sequence
+†
+†
+s
+of length
+n
+. Let
+k
+be the minimum number of characters that Chiyuu has to remove from
+s
+to make
+s
+balanced
+‡
+‡
+.
+Now, Koxia wants you to count the number of ways to remove
+k
+characters from
+s
+so that
+s
+becomes balanced, modulo
+998244353
+.
+Note that two ways of removing characters are considered distinct if and only if the set of indices removed is different.
+†
+†
+A bracket sequence is a string containing only the characters "(" and ")".
+‡
+‡
+A bracket sequence is called balanced if one can turn it into a valid math expression by adding characters + and 1. For example, sequences (())(), (), (()(())) and the empty string are balanced, while )(, ((), and (()))( are not.
+Input
+The first line of input contains a string
+s
+(
+1≤|s|≤5⋅
+10
+5
+) — the bracket sequence.
+It is guaranteed that
+s
+only contains the characters "(" and ")".
+Output
+Output a single integer — the number of ways to remove
+k
+characters from
+s
+so that
+s
+becomes balanced, modulo
+998244353
+.
+Examples
+input
+Copy
+())(()
+output
+Copy
+4
+input
+Copy
+(
+output
+Copy
+1
+Note
+In the first test case, it can be proved that the minimum number of characters that Chiyuu has to remove is
+2
+. There are
+4
+ways to remove
+2
+characters to make
+s
+balanced as follows. Deleted characters are noted as red.
+())(()
+,
+())(()
+,
+())(()
+,
+())(()
+.
+In the second test case, the only way to make
+s
+balanced is by deleting the only character to get an empty bracket sequence, which is considered balanced.
