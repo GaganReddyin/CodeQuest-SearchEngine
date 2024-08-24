@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";          
 
-function App() {
+function App() {  
   const [query, setQuery] = useState("");
   const [response, setResponse] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
