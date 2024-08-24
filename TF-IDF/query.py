@@ -9,7 +9,7 @@ def main(TF_IDF_map, document_links, document_names, document):
         query = input("Enter your query: ")
         
     query = query.lower()
-    query = query.split()
+    query = query.split() 
 
     potential_documents = {}
     results = []
