@@ -214,7 +214,7 @@ def TF(document, inverse_vocab_map , IDF_map):
     
     return TF_map
     
-def IDF(document):
+def IDF(document): 
     IDF_map = {}
     inverse_vocab_map = {}
     index = 0
