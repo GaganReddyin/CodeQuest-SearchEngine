@@ -3,7 +3,7 @@ import sys
 import os
 
 def main(TF_IDF_map, document_links, document_names, document):
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 1: 
         query = sys.argv[1]
     else:
         query = input("Enter your query: ")
