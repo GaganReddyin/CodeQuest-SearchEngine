@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 import time
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 
 # # Define the chromedriver service
 # s = Service('chromedriver.exe')
